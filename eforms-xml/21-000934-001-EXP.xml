@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
+                xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
+                xmlns:efext="http://eforms/v1.0/Extensions"
+                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubtype>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubtype>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FI</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>IT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>PT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CS</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ET</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>PL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BG</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RO</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <element xmlns="" name="LEGAL_BASIS" VALUE="32018R1046"/>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>EU_INSTITUTION</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cbc:WebsiteURI>http://ec.europa.eu/environment/funding/calls_en.htm</cbc:WebsiteURI>
+         <cac:PartyName>
+            <cbc:Name>European Commission, Directorate General Environment</cbc:Name>
+         </cac:PartyName>
+         <cac:PostalAddress>
+            <cbc:StreetName>ENV.A.5 – Finance, BU 9 01/005</cbc:StreetName>
+            <cbc:CityName>Brussels</cbc:CityName>
+            <cbc:PostalZone>B-1049</cbc:PostalZone>
+            <cbc:CountrySubentityCode listName="nuts">BE10</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:PostalAddress>
+      </cac:Party>
+   </cac:ContractingParty>
+   <element xmlns="" name="OBJECT_CONTRACT">
+      <element name="TITLE">
+         <element name="P">Assessment Support of Draft cap Strategic Plans with Respect to Environmental Requirements</element>
+      </element>
+      <element name="REFERENCE_NUMBER">ENV/2020/OP/0030</element>
+      <element name="CPV_MAIN">
+         <element name="CPV_CODE" CODE="90700000"/>
+      </element>
+      <element name="TYPE_CONTRACT" CTYPE="SERVICES"/>
+      <element name="SHORT_DESCR">
+         <element name="P">This contract will aim to support the European Commission with the environment-related knowledge needed to engage in constructive conversation with the Member States during the preparation of their CAP strategic plans (CAP SP).</element>
+         <element name="P">This contract aims to complement the work to be carried out within the European Commission that will be screening, assessing and providing feedback on the drafts of CAP SP.</element>
+         <element name="P">The contract entails providing detailed support relative to the ex-ante analysis of country-specific of environmental objectives by preparing individual fiches per Member State. It will also provide an analysis of the current needs/challenges for the environmental objectives and in light of the Commission’s Recommendations for environmental related specific objectives and taking into account the European Green Deal. Following the submission of the draft CAP strategic plans, this contract will support DG Environment in the assessment of the environmental-relevant parts of the draft CAP SP.</element>
+      </element>
+      <element name="VAL_TOTAL" CURRENCY="EUR">1490000.00</element>
+      <element name="NO_LOT_DIVISION"/>
+      <element name="OBJECT_DESCR" ITEM="1">
+         <element name="CPV_ADDITIONAL">
+            <element name="CPV_CODE" CODE="90700000"/>
+         </element>
+         <cbc:CountrySubentityCode listName="nuts">00</cbc:CountrySubentityCode>
+         <element name="MAIN_SITE">
+            <element name="P">The contractor's premises.</element>
+         </element>
+         <element name="SHORT_DESCR">
+            <element name="P">Assessment support of draft CAP strategic plans with respect to environmental requirements.</element>
+         </element>
+         <cac:AwardingCriterion><!--May need cbc:Description here -->
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-fixed">fix-tot</efbc:ParameterCode>
+                              <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-fixed">fix-tot</efbc:ParameterCode>
+                              <efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-fixed">fix-tot</efbc:ParameterCode>
+                              <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <element name="AC_PRICE">
+               <element name="AC_WEIGHTING">50/50</element>
+            </element>
+         </cac:AwardingCriterion>
+         <element name="NO_OPTIONS"/>
+         <element name="EU_PROGR_RELATED">
+            <element name="P">07 02 02 (Life Op.) Halting and reversing biodiversity loss.</element>
+         </element>
+      </element>
+   </element>
+   <element xmlns="" name="PROCEDURE">
+      <element name="PT_OPEN"/>
+      <element name="CONTRACT_COVERED_GPA"/>
+      <element name="NOTICE_NUMBER_OJ">2020/S 161-391292</element>
+   </element>
+   <element xmlns="" name="AWARD_CONTRACT" ITEM="1">
+      <element name="CONTRACT_NO">07.0202/2020/839227/ETU/ENV.D.1</element>
+      <element name="TITLE">
+         <element name="P">Assessment Support of draft CAP Strategic Plans with Respect to Environmental Requirements</element>
+      </element>
+      <element name="AWARDED_CONTRACT">
+         <element name="DATE_CONCLUSION_CONTRACT">2020-12-15</element>
+         <element name="TENDERS">
+            <element name="NB_TENDERS_RECEIVED">1</element>
+         </element>
+         <element name="CONTRACTORS">
+            <element name="AWARDED_TO_GROUP"/>
+            <element name="CONTRACTOR">
+               <element name="ADDRESS_CONTRACTOR">
+                  <cac:PartyName>
+                     <cbc:Name>Ecorys Europe EEIG-GEIE</cbc:Name>
+                  </cac:PartyName>
+                  <cbc:StreetName>Rue Belliard 12</cbc:StreetName>
+                  <cbc:CityName>Brussels</cbc:CityName>
+                  <cbc:PostalZone>1040</cbc:PostalZone>
+                  <cac:Country>
+                     <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                  </cac:Country>
+                  <cbc:CountrySubentityCode listName="nuts">BE</cbc:CountrySubentityCode>
+               </element>
+               <element name="NO_SME"/>
+            </element>
+            <element name="CONTRACTOR">
+               <element name="ADDRESS_CONTRACTOR">
+                  <cac:PartyName>
+                     <cbc:Name>Ecologics Institute GmbH</cbc:Name>
+                  </cac:PartyName>
+                  <cbc:StreetName>Pfalzburger Straße 42-44</cbc:StreetName>
+                  <cbc:CityName>Berlin</cbc:CityName>
+                  <cbc:PostalZone>10717</cbc:PostalZone>
+                  <cac:Country>
+                     <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                  </cac:Country>
+                  <cbc:CountrySubentityCode listName="nuts">DE</cbc:CountrySubentityCode>
+               </element>
+               <element name="SME"/>
+            </element>
+            <element name="CONTRACTOR">
+               <element name="ADDRESS_CONTRACTOR">
+                  <cac:PartyName>
+                     <cbc:Name>Milieu Consulting SPRL</cbc:Name>
+                  </cac:PartyName>
+                  <cbc:StreetName>Chaussée de Charleroi 112</cbc:StreetName>
+                  <cbc:CityName>Brussels</cbc:CityName>
+                  <cbc:PostalZone>1060</cbc:PostalZone>
+                  <cac:Country>
+                     <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                  </cac:Country>
+                  <cbc:CountrySubentityCode listName="nuts">BE</cbc:CountrySubentityCode>
+               </element>
+               <element name="SME"/>
+            </element>
+         </element>
+         <element name="VALUES">
+            <element name="VAL_ESTIMATED_TOTAL" CURRENCY="EUR">1500000.00</element>
+            <element name="VAL_TOTAL" CURRENCY="EUR">1490000.00</element>
+         </element>
+         <element name="LIKELY_SUBCONTRACTED"/>
+         <element name="PCT_SUBCONTRACTING">41</element>
+      </element>
+   </element>
+   <element xmlns="" name="COMPLEMENTARY_INFO">
+      <element name="INFO_ADD">
+         <element name="P">See internet address provided in section I.3).</element>
+      </element>
+      <element name="ADDRESS_REVIEW_BODY">
+         <cac:PartyName>
+            <cbc:Name>General Court of the European Union</cbc:Name>
+         </cac:PartyName>
+         <cbc:StreetName>rue du Fort Niedergrünewald</cbc:StreetName>
+         <cbc:CityName>Luxembourg</cbc:CityName>
+         <cbc:PostalZone>2925</cbc:PostalZone>
+         <cac:Country>
+            <cbc:IdentificationCode>LU</cbc:IdentificationCode>
+         </cac:Country>
+         <element name="PHONE">+352 4303-1</element>
+         <element name="E_MAIL">GC.Registry@curia.europa.eu</element>
+         <element name="URL">http://curia.europa.eu</element>
+      </element>
+      <element name="REVIEW_PROCEDURE">
+         <element name="P">See internet address provided in section I.3).</element>
+      </element>
+      <element name="DATE_DISPATCH_NOTICE">2021-01-04</element>
+   </element>
+</ContractNotice>

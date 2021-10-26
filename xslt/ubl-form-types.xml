@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form-types>
+	<form-type>
+		<abbreviation>PIN</abbreviation>
+		<element-name>PriorInformationNotice</element-name>
+		<xmlns>urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2</xmlns>
+	</form-type>
+	<form-type>
+		<abbreviation>CN</abbreviation>
+		<element-name>ContractNotice</element-name>
+		<xmlns>urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2</xmlns>
+	</form-type>
+	<form-type>
+		<abbreviation>CAN</abbreviation>
+		<element-name>ContractAwardNotice</element-name>
+		<xmlns>urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2</xmlns>
+	</form-type>
+	<form-type>
+		<abbreviation>BRIN</abbreviation>
+		<element-name></element-name>
+		<xmlns></xmlns>
+	</form-type>
+</form-types>

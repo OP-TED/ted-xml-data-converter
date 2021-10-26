@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
+                xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
+                xmlns:efext="http://eforms/v1.0/Extensions"
+                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubtype>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubtype>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FI</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>IT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>PT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CS</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ET</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>PL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BG</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RO</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <element xmlns="" name="LEGAL_BASIS" VALUE="32018R1046"/>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>EU_INSTITUTION</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:Party>
+         <cbc:WebsiteURI>https://www.enisa.europa.eu</cbc:WebsiteURI>
+         <cac:PartyName>
+            <cbc:Name>European Union Agency for Cybersecurity</cbc:Name>
+         </cac:PartyName>
+         <cac:PostalAddress>
+            <cbc:StreetName>1 Vasilissis Sofias Street</cbc:StreetName>
+            <cbc:CityName>Maroussi</cbc:CityName>
+            <cbc:PostalZone>15124</cbc:PostalZone>
+            <cbc:CountrySubentityCode listName="nuts">EL</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode>GR</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:PostalAddress>
+      </cac:Party>
+      <element xmlns="" name="CA_ACTIVITY_OTHER">Cybersecurity</element>
+   </cac:ContractingParty>
+   <element xmlns="" name="OBJECT_CONTRACT">
+      <element name="TITLE">
+         <element name="P">Production and Supply of Branded Promotional Material</element>
+      </element>
+      <element name="REFERENCE_NUMBER">ENISA F-EDO-20-T32</element>
+      <element name="CPV_MAIN">
+         <element name="CPV_CODE" CODE="39294100"/>
+      </element>
+      <element name="TYPE_CONTRACT" CTYPE="SUPPLIES"/>
+      <element name="SHORT_DESCR">
+         <element name="P">The scope of this call for tenders is the production and supply of high-quality and environmentally friendly, branded promotional material including merchandised clothing and textile products with ENISA’s corporate visual identity (by including e.g. ENISA’s logo, website address, tag line, graphic motif, etc.), in an efficient, timely and dependable manner. Materials fully/partly manufactured in Europe will be preferred. Where possible, items made of recycled materials should be offered.</element>
+      </element>
+      <element name="VAL_TOTAL" CURRENCY="EUR">200000.00</element>
+      <element name="NO_LOT_DIVISION"/>
+      <element name="OBJECT_DESCR" ITEM="1">
+         <element name="CPV_ADDITIONAL">
+            <element name="CPV_CODE" CODE="79342200"/>
+         </element>
+         <element name="CPV_ADDITIONAL">
+            <element name="CPV_CODE" CODE="79800000"/>
+         </element>
+         <cbc:CountrySubentityCode listName="nuts">EL</cbc:CountrySubentityCode>
+         <element name="SHORT_DESCR">
+            <element name="P">It is anticipated that orders will be placed in early 2021, immediately following the signature of framework contract.</element>
+         </element>
+         <cac:AwardingCriterion><!--May need cbc:Description here -->
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-fixed">fix-tot</efbc:ParameterCode>
+                              <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">As per tender specification</element>
+               <element name="AC_WEIGHTING">30</element>
+            </element>
+         </cac:AwardingCriterion>
+         <element name="NO_OPTIONS"/>
+         <element name="NO_EU_PROGR_RELATED"/>
+      </element>
+   </element>
+   <element xmlns="" name="PROCEDURE">
+      <element name="PT_OPEN"/>
+      <element name="FRAMEWORK"/>
+      <element name="NO_CONTRACT_COVERED_GPA"/>
+      <element name="NOTICE_NUMBER_OJ">2020/S 219-536631</element>
+   </element>
+   <element xmlns="" name="AWARD_CONTRACT" ITEM="1">
+      <element name="CONTRACT_NO">ENISA F-EDO-20-C32</element>
+      <element name="TITLE">
+         <element name="P">Production and Supply of Branded Promotional Material</element>
+      </element>
+      <element name="AWARDED_CONTRACT">
+         <element name="TENDERS">
+            <element name="NB_TENDERS_RECEIVED">7</element>
+            <element name="NB_TENDERS_RECEIVED_SME">7</element>
+            <element name="NB_TENDERS_RECEIVED_OTHER_EU">5</element>
+            <element name="NB_TENDERS_RECEIVED_NON_EU">0</element>
+            <element name="NB_TENDERS_RECEIVED_EMEANS">7</element>
+         </element>
+         <element name="CONTRACTORS">
+            <element name="NO_AWARDED_TO_GROUP"/>
+            <element name="CONTRACTOR">
+               <element name="ADDRESS_CONTRACTOR">
+                  <cac:PartyName>
+                     <cbc:Name>Triple A and C Trading SPRL</cbc:Name>
+                  </cac:PartyName>
+                  <cbc:StreetName>119/13, Rue Dupre</cbc:StreetName>
+                  <cbc:CityName>Brussels</cbc:CityName>
+                  <cbc:PostalZone>1090</cbc:PostalZone>
+                  <cac:Country>
+                     <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                  </cac:Country>
+                  <cbc:CountrySubentityCode listName="nuts">BE1</cbc:CountrySubentityCode>
+               </element>
+               <element name="SME"/>
+            </element>
+         </element>
+         <element name="VALUES">
+            <element name="VAL_ESTIMATED_TOTAL" CURRENCY="EUR">200000.00</element>
+            <element name="VAL_TOTAL" CURRENCY="EUR">200000.00</element>
+         </element>
+      </element>
+   </element>
+   <element xmlns="" name="COMPLEMENTARY_INFO">
+      <element name="ADDRESS_REVIEW_BODY">
+         <cac:PartyName>
+            <cbc:Name>Court of Justice of the European Union</cbc:Name>
+         </cac:PartyName>
+         <cbc:StreetName>boulevard Konrad Adenauer, Kirchberg</cbc:StreetName>
+         <cbc:CityName>Luxembourg</cbc:CityName>
+         <cbc:PostalZone>2925</cbc:PostalZone>
+         <cac:Country>
+            <cbc:IdentificationCode>LU</cbc:IdentificationCode>
+         </cac:Country>
+         <element name="PHONE">+352 4303-1</element>
+         <element name="E_MAIL">cfi.registry@curia.europa.eu</element>
+         <element name="FAX">+352 4303-2600</element>
+      </element>
+      <element name="ADDRESS_MEDIATION_BODY">
+         <cac:PartyName>
+            <cbc:Name>The European Ombudsman</cbc:Name>
+         </cac:PartyName>
+         <cbc:StreetName>1 avenue du Président Robert Schuman, PO Box 403</cbc:StreetName>
+         <cbc:CityName>Strasbourg</cbc:CityName>
+         <cbc:PostalZone>67001</cbc:PostalZone>
+         <cac:Country>
+            <cbc:IdentificationCode>FR</cbc:IdentificationCode>
+         </cac:Country>
+         <element name="PHONE">+33 388172313</element>
+         <element name="E_MAIL">eo@ombudsman.europa.eu</element>
+         <element name="FAX">+33 388179062</element>
+      </element>
+      <element name="DATE_DISPATCH_NOTICE">2021-01-28</element>
+   </element>
+</ContractNotice>

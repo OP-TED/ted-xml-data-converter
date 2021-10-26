@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
+                xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
+                xmlns:efext="http://eforms/v1.0/Extensions"
+                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubtype>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubtype>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <element xmlns="" name="LEGAL_BASIS_OTHER">
+      <element name="P">This contract will be financed by the European Investment Bank (EIB) and subject to EIB's Guide to Procurement.</element>
+   </element>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>BODY_PUBLIC</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:Party>
+         <cbc:WebsiteURI>www.mwsc.com.zm</cbc:WebsiteURI>
+         <cac:PartyName>
+            <cbc:Name>Mulonga Water Supply and Sanitation Company Ltd</cbc:Name>
+         </cac:PartyName>
+         <cac:PostalAddress>
+            <cbc:StreetName>P. O Box 11712</cbc:StreetName>
+            <cbc:CityName>Chingola</cbc:CityName>
+            <cbc:PostalZone>10101</cbc:PostalZone>
+            <cbc:CountrySubentityCode listName="nuts">ZM</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode>ZM</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:PostalAddress>
+      </cac:Party>
+      <element xmlns="" name="CA_ACTIVITY_OTHER">Water</element>
+   </cac:ContractingParty>
+   <element xmlns="" name="OBJECT_CONTRACT">
+      <element name="TITLE">
+         <element name="P">Design Review and Construction Supervision Services in relation to the Design and Build of Water and Wastewater Treatment Facilities</element>
+      </element>
+      <element name="REFERENCE_NUMBER">EIB-GtP/ZWS2-C4XD-C-002</element>
+      <element name="CPV_MAIN">
+         <element name="CPV_CODE" CODE="71242000"/>
+      </element>
+      <element name="TYPE_CONTRACT" CTYPE="SERVICES"/>
+      <element name="SHORT_DESCR">
+         <element name="P">The design review and construction supervision consultant’s role shall include:</element>
+         <element name="P">1) assist MWSC in undertaking contract negotiation and award with the D&amp;B contractor;</element>
+         <element name="P">2) review detailed designs prepared by the D&amp;B contractor in accordance with the design criteria and functional/performance requirements specified in the bid and contract documents to ensure long term stability and operating life of all facilities;</element>
+         <element name="P">3) monitor and supervise the construction activities;</element>
+         <element name="P">4) monitor ‘Tests after Completion’ and the D&amp;B Contractor’s assisted operations and training activities:</element>
+         <element name="P">5) support MWSC’s Project Implementation Unit in the overall project management and implementation as agreed with MWSC’s Director for Infrastructure Development.</element>
+      </element>
+      <element name="VAL_RANGE_TOTAL" CURRENCY="EUR">
+         <element name="LOW">1900000.00</element>
+         <element name="HIGH">2491930.00</element>
+      </element>
+      <element name="NO_LOT_DIVISION"/>
+      <element name="OBJECT_DESCR" ITEM="1">
+         <cbc:CountrySubentityCode listName="nuts">ZM</cbc:CountrySubentityCode>
+         <element name="MAIN_SITE">
+            <element name="P">Chingola Water Treatment Plant, Chililabombwe Treatment Plant, Mufulira Water Treatment Plants and some selected Sewer Ponds.</element>
+         </element>
+         <element name="SHORT_DESCR">
+            <element name="P">A Design and Build (D&amp;B) contractor procured by MWSC will undertake designs and subsequent rehabilitation and/or upgrade of water and wastewater sewage treatment facilities to enable sustainable provision of services within the towns of Mufulira, Chingola and Chililabombwe.</element>
+            <element name="P">MWSC therefore requires the services of a design review and Construction Supervision Consultant (DRCS) to ensure that the D&amp;B contractor adheres to the specifications and performance requirements set out in the D&amp;B Contract with MWSC.</element>
+         </element>
+         <cac:AwardingCriterion><!--May need cbc:Description here -->
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                              <efbc:ParameterNumeric/>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                              <efbc:ParameterNumeric/>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                              <efbc:ParameterNumeric/>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                              <efbc:ParameterNumeric/>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <cac:SubordinateAwardingCriterion>
+               <ext:UBLExtensions>
+                  <ext:UBLExtension>
+                     <ext:ExtensionContent>
+                        <efext:EformsExtension>
+                           <efac:AwardCriterionParameter>
+                              <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                              <efbc:ParameterNumeric>79.98</efbc:ParameterNumeric>
+                           </efac:AwardCriterionParameter>
+                        </efext:EformsExtension>
+                     </ext:ExtensionContent>
+                  </ext:UBLExtension>
+               </ext:UBLExtensions>
+               <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+               <cbc:Description languageID="ENG">The price score contributes for 60 % ...</cbc:Description>
+            </cac:SubordinateAwardingCriterion>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">Proposal price under consideration (EUR)</element>
+               <element name="AC_WEIGHTING">1,900,000.000</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">Fm (Lowest financial proposal following arithmetic corrections)</element>
+               <element name="AC_WEIGHTING">1,900,000.000</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">Sf (Bidder with the lowest financial proposal following arithmetic corrections)</element>
+               <element name="AC_WEIGHTING">100.00</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">F (Price of proposal under consideration)</element>
+               <element name="AC_WEIGHTING">1,900,000.000</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">Sf bidder</element>
+               <element name="AC_WEIGHTING">100.00</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">St bidder (Technical score)</element>
+               <element name="AC_WEIGHTING">79.98</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">Weighted technical score</element>
+               <element name="AC_WEIGHTING">63.98</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">Weighted financial score</element>
+               <element name="AC_WEIGHTING">20.00</element>
+            </element>
+            <element name="AC_COST">
+               <element name="AC_CRITERION">S: Combined weighted technical and financial score</element>
+               <element name="AC_WEIGHTING">83.98</element>
+            </element>
+         </cac:AwardingCriterion>
+         <element name="NO_OPTIONS"/>
+         <element name="NO_EU_PROGR_RELATED"/>
+      </element>
+   </element>
+   <element xmlns="" name="PROCEDURE">
+      <element name="PT_RESTRICTED"/>
+      <element name="NO_CONTRACT_COVERED_GPA"/>
+      <element name="NOTICE_NUMBER_OJ">2017/S 129-262839</element>
+      <element name="TERMINATION_PIN"/>
+   </element>
+   <element xmlns="" name="AWARD_CONTRACT" ITEM="1">
+      <element name="CONTRACT_NO">ZWS2-C4XD-C-002</element>
+      <element name="LOT_NO">N/A</element>
+      <element name="TITLE">
+         <element name="P">Design Review and Construction Supervision Services in Relation to the Design and Build of Water and Wastewater Treatment Facilities</element>
+      </element>
+      <element name="AWARDED_CONTRACT">
+         <element name="DATE_CONCLUSION_CONTRACT">2020-07-10</element>
+         <element name="TENDERS">
+            <element name="NB_TENDERS_RECEIVED">4</element>
+            <element name="NB_TENDERS_RECEIVED_OTHER_EU">3</element>
+            <element name="NB_TENDERS_RECEIVED_NON_EU">1</element>
+         </element>
+         <element name="CONTRACTORS">
+            <element name="NO_AWARDED_TO_GROUP"/>
+            <element name="CONTRACTOR">
+               <element name="ADDRESS_CONTRACTOR">
+                  <cac:PartyName>
+                     <cbc:Name>Nicholas Odwyer</cbc:Name>
+                  </cac:PartyName>
+                  <cbc:CityName>Dublin</cbc:CityName>
+                  <cac:Country>
+                     <cbc:IdentificationCode>IE</cbc:IdentificationCode>
+                  </cac:Country>
+                  <element name="PHONE">+353 12969000</element>
+                  <element name="E_MAIL">int@nodwyer.com</element>
+                  <element name="FAX">+353 12969001</element>
+                  <cbc:CountrySubentityCode listName="nuts">IE</cbc:CountrySubentityCode>
+                  <element name="URL">www.nodwyer.com</element>
+               </element>
+               <element name="NO_SME"/>
+            </element>
+         </element>
+         <element name="VALUES">
+            <element name="VAL_ESTIMATED_TOTAL" CURRENCY="EUR">2500000.00</element>
+            <element name="VAL_RANGE_TOTAL" CURRENCY="EUR">
+               <element name="LOW">1900000.00</element>
+               <element name="HIGH">2491930.00</element>
+            </element>
+         </element>
+      </element>
+   </element>
+   <element xmlns="" name="COMPLEMENTARY_INFO">
+      <element name="ADDRESS_REVIEW_BODY">
+         <cac:PartyName>
+            <cbc:Name>Zambia Public Procurement Authority</cbc:Name>
+         </cac:PartyName>
+         <cbc:StreetName>P O Box 31009</cbc:StreetName>
+         <cbc:CityName>Lusaka</cbc:CityName>
+         <cbc:PostalZone>10101</cbc:PostalZone>
+         <cac:Country>
+            <cbc:IdentificationCode>ZM</cbc:IdentificationCode>
+         </cac:Country>
+      </element>
+      <element name="DATE_DISPATCH_NOTICE">2021-01-08</element>
+   </element>
+</ContractNotice>
