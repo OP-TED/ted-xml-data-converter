@@ -32,7 +32,10 @@ Currently, the `xslt` folder contains these files:
 
 The conversion is currently being tested using the Saxon-HE 9.9.1.7J Java processor, available here: https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. Documentation is available here: https://saxonica.com/documentation9.9/index.html#!using-xsl
 
-A typical 
-Unix command-line command to convert a file is:
+A typical Unix command-line command to convert a file is:
 
 `java  -Xms6291456  -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform  -dtd:off -expand:off -strip:all  -s:ted-xml/21-000061-001-EXP.xml -xsl:xslt/ted-to-eforms.xslt -o:eforms-xml/21-000061-001-EXP.xml`
+
+To convert all the test TED XML files use:
+
+`find ted-xml -type f -name "*.xml" | while read -r file; do outfile=${file/ted-xml/eforms-xml}; java -Xms6291456 -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform -dtd:off -expand:off -strip:all  -s:"$file" -xsl:xslt/ted-to-eforms.xslt -o:"$outfile"; done `
