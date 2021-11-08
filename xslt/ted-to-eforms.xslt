@@ -71,6 +71,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</xsl:choose>
 	</xsl:variable>
 	
+	<xsl:variable name="ubl-notice-subtype">
+		<xsl:value-of select="'16'"/><!-- TBD: hard-coded for now -->
+	</xsl:variable>
 	<doc:doc> Form Language </doc:doc>
 	
 	<!-- TODO : currently only catering for one form , one language -->
@@ -112,6 +115,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 <xsl:template match="*:CODED_DATA_SECTION"/>
 <xsl:template match="*:TRANSLATION_SECTION"/>
 
+<!-- ROOT ELEMENT -->
 
 <xsl:template match="*[@CATEGORY='ORIGINAL']">
 	<xsl:element name="{opfun:get-eforms-element-name($ubl-xsd-type)}" namespace="{opfun:get-eforms-xmlns($ubl-xsd-type)}">
@@ -122,25 +126,68 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<xsl:namespace name="efbc" select="'http://eforms/v1.0/ExtensionBasicComponents'"/>
 		<xsl:namespace name="efext" select="'http://eforms/v1.0/Extensions'"/>
 		<xsl:namespace name="ccts" select="'urn:un:unece:uncefact:documentation:2'"/>
+		<xsl:call-template name="root-extensions"/>
 		<xsl:call-template name="notice-information"/>
 		<xsl:apply-templates/>
 	</xsl:element>
 
 </xsl:template>
 
-<xsl:template name="notice-information">
+<xsl:template name="root-extensions">
 	<ext:UBLExtensions>
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
+<!--
+			<xsd:sequence>
+				<xsd:element ref="efbc:AccessToolName" minOccurs="0" maxOccurs="unbounded"/> Not relevant for Root (and contradiction in documentation)
+				<xsd:element ref="efbc:ProcedureRelaunchIndicator" minOccurs="0" maxOccurs="1"/> Not relevant for Root (relevancy still to be decided)
+				<xsd:element ref="efac:AnswerReceptionPeriod" minOccurs="0" maxOccurs="1"/> Not in documentation
+				<xsd:element ref="efac:AppealRequestsStatistics" minOccurs="0" maxOccurs="unbounded"/> BT-712 BT-636 BT-635 Only relevant for /*/efac:NoticeResult/LotResult
+				<xsd:element ref="efac:AppealsInformation" minOccurs="0" maxOccurs="unbounded"/> Only relevant for ContractAwardNotice
+				<xsd:element ref="efac:AwardCriterionParameter" minOccurs="0" maxOccurs="unbounded"/> Not relevant for Root; Only relevant within cac:AwardingCriterion/cac:SubordinateAwardingCriterion
+				<xsd:element ref="efac:BuyingPartyReference" minOccurs="0" maxOccurs="unbounded"/> Not in documentation
+				<xsd:element ref="efac:Changes" minOccurs="0" maxOccurs="1"/> Only relevant for Root
+				<xsd:element ref="efac:ContractModification" minOccurs="0" maxOccurs="unbounded"/> Only relevant for Root
+				<xsd:element ref="efac:FieldsPrivacy" minOccurs="0" maxOccurs="unbounded"/> Does not exist in TED XML
+				<xsd:element ref="efac:InterestExpressionReceptionPeriod" minOccurs="0" maxOccurs="1"/> Only relevant for Lot
+				<xsd:element ref="efac:NoticeResult" minOccurs="0" maxOccurs="1"/> Only relevant for Root
+				<xsd:element ref="efac:NoticeSubType" minOccurs="0" maxOccurs="1"/> Only relevant for Root
+				<xsd:element ref="efac:Organizations" minOccurs="0" maxOccurs="1"/> Only relevant for Root
+				<xsd:element ref="efac:Publication" minOccurs="0" maxOccurs="1"/> Only relevant for Root
+				<xsd:element ref="efac:SelectionCriteria" minOccurs="0" maxOccurs="unbounded"/> Only relevant for Lot or LotsGroup
+				<xsd:element ref="efac:StrategicProcurementStatistics" minOccurs="0" maxOccurs="unbounded"/> Only relevant within LotResult
+				<xsd:element ref="efac:SubsidiaryClassification" minOccurs="0" maxOccurs="unbounded"/> Only relevant within MainCommodityClassification
+				<xsd:element ref="efac:ReferencedDocumentPart" minOccurs="0" maxOccurs="unbounded"/> Not in documentation
+				<xsd:element ref="efac:TenderSubcontractingRequirements" minOccurs="0" maxOccurs="unbounded"/> Only relevant for Lot in PIN and CN
+			</xsd:sequence>
+-->
+					<xsl:if test="$ubl-form-type eq 'CAN'">
+						<!-- TODO : efac:AppealsInformation : Review Requester Organization requesting for review or  Review Requester Organization that requested a review request. -->
+					</xsl:if>
+					<xsl:if test="$ted-form-notice-type eq '14'">
+						<xsl:call-template name="changes"/>
+					</xsl:if>
+					<xsl:if test="$ubl-notice-subtype = ('38', '39', '40')">
+						<xsl:call-template name="contract-modification"/>
+					</xsl:if>
+					<xsl:if test="$ubl-form-type eq 'CAN'">
+						<xsl:call-template name="notice-result"/>
+					</xsl:if>
 					<efac:NoticeSubtype>
-						<cbc:SubTypeCode>16</cbc:SubTypeCode><!-- TBD: hard-coded for now -->
-						<xsl:call-template name="organizations"/>
+						<cbc:SubTypeCode><xsl:value-of select="$ubl-notice-subtype"/></cbc:SubTypeCode>
 					</efac:NoticeSubtype>
+					<xsl:call-template name="organizations"/>
+					<xsl:call-template name="publication"/>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
+</xsl:template>
+
+
+
+<xsl:template name="notice-information">
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
 	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID><!-- TBD: hard-coded for now -->
 	<!--BT-701-->
@@ -168,7 +215,24 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 </xsl:template>
 
 
-<xsl:template name="organizations">
+<xsl:template name="changes">
+	<xsl:comment> efac:changes here </xsl:comment>
 </xsl:template>
-	
+
+<xsl:template name="contract-modification">
+	<xsl:comment> efac:ContractModification here </xsl:comment>
+</xsl:template>
+
+<xsl:template name="notice-result">
+	<xsl:comment> efac:NoticeResult here </xsl:comment>
+</xsl:template>
+
+<xsl:template name="organizations">
+	<xsl:comment> efac:Organizations here </xsl:comment>
+</xsl:template>
+
+<xsl:template name="publication">
+	<xsl:comment> efac:Publication here </xsl:comment>
+</xsl:template>
+
 </xsl:stylesheet>
