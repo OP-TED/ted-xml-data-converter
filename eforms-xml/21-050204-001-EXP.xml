@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
-                xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
-                xmlns:efext="http://eforms/v1.0/Extensions"
-                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                     xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
+                     xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
+                     xmlns:efext="http://eforms/v1.0/Extensions"
+                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
-            <efext:EformsExtension>
+            <efext:EformsExtension><!-- efac:NoticeResult here -->
                <efac:NoticeSubtype>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode>29</cbc:SubTypeCode>
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
                <!-- efac:Publication here -->
@@ -247,4 +247,4 @@
       </element>
       <element name="DATE_DISPATCH_NOTICE">2021-01-28</element>
    </element>
-</ContractNotice>
+</ContractAwardNotice>
