@@ -1,0 +1,2400 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>DONOHOE Paul (OP-EXT)</Author>
+  <LastAuthor>DONOHOE Paul (OP-EXT)</LastAuthor>
+  <Created>2021-10-13T15:47:41Z</Created>
+  <LastSaved>2021-11-10T08:48:33Z</LastSaved>
+  <Company>European Commission</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>6610</WindowHeight>
+  <WindowWidth>19200</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ActiveSheet>6</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16" ss:Name="Hyperlink">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#0563C1"
+    ss:Underline="Single"/>
+  </Style>
+  <Style ss:ID="s17">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s18">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s19">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="Fixed"/>
+  </Style>
+  <Style ss:ID="s20">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s21">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s22">
+   <NumberFormat ss:Format="Fixed"/>
+  </Style>
+  <Style ss:ID="s23">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s24">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s25">
+   <NumberFormat ss:Format="0.000"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s28">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s29">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s30">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s31" ss:Parent="s16">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s32">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s33">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s34">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="fnld_total" ss:RefersTo="='form-notice-mapping'!R88C7"/>
+  <NamedRange ss:Name="form_name_type_legal_basis_total" ss:RefersTo="=#REF!"/>
+  <NamedRange ss:Name="legal_basis_total" ss:RefersTo="='legal-basis'!R12C2"/>
+  <NamedRange ss:Name="schemas_total" ss:RefersTo="=schemas!R6C2"/>
+  <NamedRange ss:Name="Total_language_files"
+   ss:RefersTo="='form-language-counts'!R2C2"/>
+ </Names>
+ <Worksheet ss:Name="About">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="53" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:AutoFitWidth="0" ss:Width="358"/>
+   <Column ss:AutoFitWidth="0" ss:Width="35"/>
+   <Column ss:AutoFitWidth="0" ss:Width="110.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="365.5"/>
+   <Row>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">About this workbook</Data></Cell>
+    <Cell ss:StyleID="s30"/>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Columns</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">How the data was determined</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Number</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The number of TED XML files that contain the indicated data.</Data></Cell>
+   </Row>
+   <Row ss:Height="29">
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The data in this workbook was derived from analysis of 610.646 TED XML files. </Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Percentage</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The percentage of the Number column divided by the total number of files (601.646)</Data></Cell>
+   </Row>
+   <Row ss:Height="58">
+    <Cell ss:StyleID="s26"><Data ss:Type="String">These files were &quot;TED Export&quot; files downloaded from TED Monitor Archive 2020 and 2021 from these URLs:</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Form element</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The name of the element at XPath /TED_EXPORT/FORM_SECTION/*, excluding NOTICE_UUID&#10;Where multiple such elements existed in one XML file, they all had the same name</Data></Cell>
+   </Row>
+   <Row ss:Height="43.5">
+    <Cell ss:StyleID="s31" ss:HRef="https://intragate.ec.europa.eu/appviewer/tedmonitor/int/data/repo/20/"><Data
+      ss:Type="String">https://intragate.ec.europa.eu/appviewer/tedmonitor/int/data/repo/20/</Data></Cell>
+    <Cell ss:StyleID="s31"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Form number</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The value of the &quot;FORM&quot; attribute in the Form element&#10;Where multiple Form elements existed in one XML file, they all had the same value for the &quot;FORM&quot; attribute</Data></Cell>
+   </Row>
+   <Row ss:Height="43.5">
+    <Cell ss:StyleID="s31" ss:HRef="https://intragate.ec.europa.eu/appviewer/tedmonitor/int/data/repo/21/"><Data
+      ss:Type="String">https://intragate.ec.europa.eu/appviewer/tedmonitor/int/data/repo/21/</Data></Cell>
+    <Cell ss:StyleID="s31"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Number of languages</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The number of different values of the &quot;LG&quot; attribute for the Form elements&#10;Where multiple Form elements existed in one XML file, they all had different values for the &quot;LG&quot; attribute</Data></Cell>
+   </Row>
+   <Row ss:Height="29">
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Schema</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The value of the &quot;VERSION&quot; attribute of the &quot;TED_EXPORT&quot; element, or the value of the &quot;VERSION&quot; attribute of the Form element</Data></Cell>
+   </Row>
+   <Row ss:Height="72.5">
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The data was collated and analysed using Unix Bash, Perl and XQuery.</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Legal basis</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Where Form element was &quot;MOVE&quot; or started with &quot;F&quot;, either the value of the  &quot;VALUE&quot; attribute of the &quot;LEGAL_BASIS&quot; element, or &quot;OTHER&quot; where the element &quot;LEGAL_BASIS_OTHER&quot; existed.&#10;Where the &quot;Schema&quot; started with &quot;R2.0.8&quot;, the value &quot;32009L0081&quot;&#10;Blank for all other cases</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Notice Type</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The value of the &quot;TYPE&quot; attribute of the &quot;NOTICE&quot; element</Data></Cell>
+   </Row>
+   <Row ss:Height="72.5">
+    <Cell ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">The sheet &quot;form-notice-legal-document&quot;, is designed to be used for a mapping of TED data and eForms Notice subtypes. That is, it should be possible using the information in this sheet to determine for any TED XML notice file, which eForms subtype it should be converted to.&#10;</Font><Font
+       html:Color="#FF0000">It is in draft form, and more information is required, and then checked.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Document code</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The value of the &quot;CODE&quot; attribute of the &quot;TD_DOCUMENT_TYPE&quot; element</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Document type</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The value of the content of the &quot;TD_DOCUMENT_TYPE&quot; element</Data></Cell>
+   </Row>
+   <Row ss:Height="29">
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">enotices-form-name</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The name of the form matching the Form number, taken from the eNotices &quot;Start new form&quot; page</Data></Cell>
+   </Row>
+   <Row ss:Height="29">
+    <Cell ss:Index="3" ss:StyleID="s26"><Data ss:Type="String">deloitte-mapping</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The eForms subtype number(s) matching the Form number, taken from the Deloitte &quot;TED XML Mapping&quot; spreadsheets</Data></Cell>
+   </Row>
+   <Row ss:Height="29">
+    <Cell ss:Index="3" ss:StyleID="s26"><Data ss:Type="String">eForms subtype</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Proposed mapping to eForms subtypes. This must be completed and validated.</Data></Cell>
+   </Row>
+   <Row ss:Height="29">
+    <Cell ss:Index="3" ss:StyleID="s26"><Data ss:Type="String">Notice description</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">The notice description for the eForms subtype, taken from the eForms Regulation</Data></Cell>
+   </Row>
+   <Row ss:Index="25">
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Sheets</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">form-element</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">form-legal-basis</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">legal-basis</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">schemas</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">form-language-count</Data></Cell>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">form-notice-legal-document</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+    <Cell ss:Index="3" ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s26"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>10</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="form-element">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="28" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:Width="190.5"/>
+   <Column ss:Width="67.5"/>
+   <Column ss:Index="4" ss:Width="56"/>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Form element</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Form number</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Number</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Percentage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F01</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">11539</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.8896381864451743</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F02</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">197346</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">32.317578433331256</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F03_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F03</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">225517</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">36.930889582507703</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F04_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F04</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">848</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.13886932854714515</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F05_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F05</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">20084</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">3.2889759369585652</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F06_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F06</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">25342</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">4.1500312783511228</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F07_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F07</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">736</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.12052809647488071</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F08_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F08</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1540</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.25219194099363623</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F12_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F12</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1116</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.18275727672006367</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F13_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F13</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">812</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.13297393252391729</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">74628</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">12.221155956151355</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F15</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">7710</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.2625973149746335</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">25756</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">4.217828332618244</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F21_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F21</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">9687</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.5863528132502303</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F22_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F22</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">224</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">3.6682464144528908E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F23_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F23</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">137</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">2.2435257088394913E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F24_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F24</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1228</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.20109850879232813</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">F25_2014</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">F25</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">835</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.13674043553875731</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">PRIOR_INFORMATION_DEFENCE</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">94</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.5393534060650525E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">CONTRACT_DEFENCE</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1552</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.25415707300137885</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">CONTRACT_AWARD_DEFENCE</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1913</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.31327479423430271</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">CONTRACT_CONCESSIONAIRE_DEFENCE</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">MOVE</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">T01</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">582</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">9.5308902375517077E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">MOVE</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">T02</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">6.0591570238730788E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">EEIG</Data></Cell>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">5.4041130212922053E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1349</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.22091358987039955</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3" ss:Formula="=SUM(R[-26]C:R[-1]C)"><Data ss:Type="Number">610646</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>28</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="form-legal-basis">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="57" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:Width="190.5"/>
+   <Column ss:Width="67.5"/>
+   <Column ss:Width="60"/>
+   <Column ss:Index="5" ss:Width="56"/>
+   <Column ss:Index="9" ss:Width="190.5"/>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Form element</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Form number</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Legal basis</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Number</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Percentage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">11371</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.8621263383367777</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell><Data ss:Type="Number">157</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">2.5710477101299277E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.8013710070974016E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">196328</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">32.150869734674423</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell><Data ss:Type="Number">918</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.15033259859231043</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.6376100064521833E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F03_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F03</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">224495</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">36.763525839848292</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F03_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F03</Data></Cell>
+    <Cell><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell><Data ss:Type="Number">947</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.15508166761102177</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F03_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F03</Data></Cell>
+    <Cell><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell><Data ss:Type="Number">75</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.2282075048391374E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F04_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F04</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">848</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.13886932854714515</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F05_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F05</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">20084</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">3.2889759369585652</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F06_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F06</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">25342</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">4.1500312783511228</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F07_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F07</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">736</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.12052809647488071</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F08_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F08</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">6.0591570238730788E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F08_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F08</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">1316</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.21550947684910735</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F08_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F08</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">187</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">3.0623307120655828E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F12_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F12</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">1083</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.17735316369877147</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F12_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F12</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">5.4041130212922053E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F13_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F13</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">781</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.12789734150391552</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F13_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F13</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">5.0765910200017686E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32004L0017</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">9.8256600387130999E-4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32004L0018</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.6376100064521835E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell><Data ss:Type="Number">151</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">2.4727911097427974E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">207</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">3.3898527133560195E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell><Data ss:Type="Number">516</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">8.4500676332932664E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">63470</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">10.393910710952008</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">9826</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.6091155923399154</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell><Data ss:Type="Number">402</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">6.583192225937777E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">6.5504400258087339E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">297</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">4.8637017191629849E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell><Data ss:Type="Number">67</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.0971987043229629E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">6873</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.1255293574345857</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">473</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">7.7458953305188274E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32004L0017</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.96513200774262E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32004L0018</Data></Cell>
+    <Cell><Data ss:Type="Number">56</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">9.1706160361322269E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">2.1288930083878384E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.3100880051617467E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell><Data ss:Type="Number">252</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">4.1267772162595022E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">15700</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">2.5710477101299278</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">9600</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.5721056061940959</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell><Data ss:Type="Number">91</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.4902251058714868E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">3.93026401548524E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F21_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F21</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell><Data ss:Type="Number">9687</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.5863528132502303</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F22_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F22</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell><Data ss:Type="Number">224</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">3.6682464144528908E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F23_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F23</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell><Data ss:Type="Number">137</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">2.2435257088394913E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F24_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F24</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell><Data ss:Type="Number">1228</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.20109850879232813</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F25_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F25</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell><Data ss:Type="Number">835</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.13674043553875731</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CONTRACT_AWARD_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">1913</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.31327479423430271</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CONTRACT_CONCESSIONAIRE_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CONTRACT_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">1552</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.25415707300137885</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PRIOR_INFORMATION_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">94</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">1.5393534060650525E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MOVE</Data></Cell>
+    <Cell><Data ss:Type="String">T01</Data></Cell>
+    <Cell><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell><Data ss:Type="Number">582</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">9.5308902375517077E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MOVE</Data></Cell>
+    <Cell><Data ss:Type="String">T02</Data></Cell>
+    <Cell><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">6.0591570238730788E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">EEIG</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">5.4041130212922053E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell><Data ss:Type="Number">1349</Data></Cell>
+    <Cell ss:StyleID="s22" ss:Formula="=RC[-1]/610646*100"><Data ss:Type="Number">0.22091358987039955</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4" ss:Formula="=SUM(R[-55]C:R[-1]C)"><Data ss:Type="Number">610646</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <TopRowVisible>30</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>56</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="form-language-counts">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="8" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:Width="103"/>
+   <Column ss:Width="75.5"/>
+   <Column ss:Width="89.5"/>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Number of languages</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Number of files</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Percentage of files</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Total</Data></Cell>
+    <Cell ss:StyleID="s18" ss:Formula="=SUM(R[1]C:R[5]C)"><Data ss:Type="Number">610646</Data><NamedCell
+      ss:Name="Total_language_files"/></Cell>
+    <Cell ss:StyleID="s18"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1349</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/Total_language_files*100"><Data
+      ss:Type="Number">0.22091358987039955</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">601551</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/Total_language_files*100"><Data
+      ss:Type="Number">98.510593699131746</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">4914</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/Total_language_files*100"><Data
+      ss:Type="Number">0.80472155717060301</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/Total_language_files*100"><Data
+      ss:Type="Number">1.3100880051617468E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">2752</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/Total_language_files*100"><Data
+      ss:Type="Number">0.45067027377564084</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3" ss:StyleID="s22"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>7</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="schemas">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="6" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:Width="72"/>
+   <Column ss:Width="67.5"/>
+   <Column ss:Width="60.5"/>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Schema</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Number</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Percentages</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">R2.0.8.S04.E01</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">4806</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/schemas_total*100"><Data
+      ss:Type="Number">0.78703536910091942</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">R2.0.8.S05.E01</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">136</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/schemas_total*100"><Data
+      ss:Type="Number">2.2271496087749695E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">R2.0.9.S03.E01</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">587968</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/schemas_total*100"><Data
+      ss:Type="Number">96.286228027367741</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">R2.0.9.S04.E01</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">17736</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/schemas_total*100"><Data
+      ss:Type="Number">2.9044651074435923</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">610646</Data><NamedCell
+      ss:Name="schemas_total"/></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>6</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="legal-basis">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="12" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:Width="101.5"/>
+   <Column ss:Width="64.5"/>
+   <Column ss:Width="56"/>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Legal Basis</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Notice Count</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Percentage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">5.4041130212922053E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32004L0017</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">2.9476980116139302E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32004L0018</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">66</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">1.0808226042584411E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">783</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">0.12822486350520598</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">5458</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">0.89380754152160158</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">3035</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">0.49701463695823767</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">531104</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">86.974122486678041</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">67384</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">11.034871267477394</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">2515</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">0.41185891662272411</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">LEGAL_BASIS_OTHER</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="s19" ss:Formula="=RC[-1]/legal_basis_total*100"><Data
+      ss:Type="Number">4.0940250161304585E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:Formula="=SUM(R[-10]C:R[-1]C)"><Data ss:Type="Number">610646</Data><NamedCell
+      ss:Name="legal_basis_total"/></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>5</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="form-notice-mapping">
+  <Table ss:ExpandedColumnCount="12" ss:ExpandedRowCount="88" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:AutoFitWidth="0" ss:Width="105.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="67.5"/>
+   <Column ss:Width="163.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="60"/>
+   <Column ss:AutoFitWidth="0" ss:Width="77.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="265.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="42"/>
+   <Column ss:AutoFitWidth="0" ss:Width="56"/>
+   <Column ss:AutoFitWidth="0" ss:Width="157.5"/>
+   <Column ss:Width="84.5"/>
+   <Column ss:Width="78.5"/>
+   <Column ss:Width="438"/>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Form element</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Form number</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Notice type</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Legal basis</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">Document code</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">Document type</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Number</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Percentage</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">enotices-form-name</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">deloitte-mapping</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">eForms subtype</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Notice description</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_CALL_COMPETITION</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">A</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice with call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">409</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">6.6978249263894299E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,7,10</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice used as a call for competition - general directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_CALL_COMPETITION</Data></Cell>
+    <Cell><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">A</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice with call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,7,10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_CALL_COMPETITION</Data></Cell>
+    <Cell><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">A</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice with call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">8.1880500322609173E-4</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,7,10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_ONLY</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">7390</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.2101937947681636</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,7,10</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice used only for information – general directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_ONLY</Data></Cell>
+    <Cell><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">156</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">2.5546716100654062E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,7,10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_ONLY</Data></Cell>
+    <Cell><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">9.8256600387130999E-4</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,7,10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F01_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F01</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">PRI_REDUCING_TIME_LIMITS</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">3572</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.5849542943047199</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,7,10</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice used to shorten time limits for receipt of tenders – general directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">195384</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">31.996279350065343</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – general directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Y</Data></Cell>
+    <Cell><Data ss:Type="String">Dynamic purchasing system</Data></Cell>
+    <Cell><Data ss:Type="Number">944</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.15459038460908611</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – general directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">917</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.15016883759166522</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – general directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Y</Data></Cell>
+    <Cell><Data ss:Type="String">Dynamic purchasing system</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – general directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F02_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F02</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521833E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">16</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F03_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F03</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">224495</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">36.763525839848292</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">29</Data></Cell>
+    <Cell><Data ss:Type="Number">29</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice – general directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F03_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F03</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">947</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.15508166761102177</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">29</Data></Cell>
+    <Cell><Data ss:Type="Number">29</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice – general directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F03_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F03</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">75</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.2282075048391374E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">29</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F04_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F04</Data></Cell>
+    <Cell><Data ss:Type="String">PER_CALL_COMPETITION</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">M</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice with call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">107</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.7522427069038362E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,8,11</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice used as a call for competition - sectoral directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F04_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F04</Data></Cell>
+    <Cell><Data ss:Type="String">PER_ONLY</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">P</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">489</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">8.0079129315511768E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,8,11</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice used only for information – sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F04_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F04</Data></Cell>
+    <Cell><Data ss:Type="String">PER_REDUCING_TIME_LIMITS</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">P</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">252</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">4.1267772162595022E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,8,11</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice used to shorten time limits for receipt of tenders – sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F05_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F05</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">19999</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.2750562519037212</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – sectoral directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F05_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F05</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Y</Data></Cell>
+    <Cell><Data ss:Type="String">Dynamic purchasing system</Data></Cell>
+    <Cell><Data ss:Type="Number">85</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.391968505484356E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – sectoral directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F06_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F06</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">25342</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">4.1500312783511228</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">30</Data></Cell>
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice – sectoral directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F07_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F07</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Q</Data></Cell>
+    <Cell><Data ss:Type="String">Qualification system without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">220</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.6027420141948041E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Qualification system – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">Notice on the existence of a qualification system – sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F07_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F07</Data></Cell>
+    <Cell><Data ss:Type="String">QSU_CALL_COMPETITION</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">O</Data></Cell>
+    <Cell><Data ss:Type="String">Qualification system with call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">516</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">8.4500676332932664E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Qualification system – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">Notice on the existence of a qualification system – sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F08_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F08</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">B</Data></Cell>
+    <Cell><Data ss:Type="String">Buyer profile</Data></Cell>
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">6.0591570238730788E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Notice on a buyer profile</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">1,2,3</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Notice of the publication of a prior information notice on a buyer profile - defence directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F08_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F08</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">B</Data></Cell>
+    <Cell><Data ss:Type="String">Buyer profile</Data></Cell>
+    <Cell><Data ss:Type="Number">1316</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.21550947684910735</Data></Cell>
+    <Cell><Data ss:Type="String">Notice on a buyer profile</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">1,2,3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Notice of the publication of a prior information notice on a buyer profile - general directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F08_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F08</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">B</Data></Cell>
+    <Cell><Data ss:Type="String">Buyer profile</Data></Cell>
+    <Cell><Data ss:Type="Number">187</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.0623307120655828E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Notice on a buyer profile</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">1,2,3</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Notice of the publication of a periodic indicative notice on a buyer profile - sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F12_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F12</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">D</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest</Data></Cell>
+    <Cell><Data ss:Type="Number">1083</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.17735316369877147</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">23,24</Data></Cell>
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest notice – general directive, design</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F12_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F12</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">D</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest</Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">5.4041130212922053E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">23,24</Data></Cell>
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest notice – sectoral directive, design</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F13_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F13</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">R</Data></Cell>
+    <Cell><Data ss:Type="String">Results of design contests</Data></Cell>
+    <Cell><Data ss:Type="Number">781</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.12789734150391552</Data></Cell>
+    <Cell><Data ss:Type="String">Results of design contest</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">36,37</Data></Cell>
+    <Cell><Data ss:Type="Number">36</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest result notice – general directive, design</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F13_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F13</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">R</Data></Cell>
+    <Cell><Data ss:Type="String">Results of design contests</Data></Cell>
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">5.0765910200017686E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Results of design contest</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">36,37</Data></Cell>
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell><Data ss:Type="String">Design contest result notice – sectoral directive, design</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32004L0017</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">9.8256600387130999E-4</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32004L0018</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521835E-3</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Corrigendum</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">150</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">2.4564150096782748E-2</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Corrigendum</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.2752200129043668E-4</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">205</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.3571005132269759E-2</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">516</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">8.4500676332932664E-2</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Corrigendum</Data></Cell>
+    <Cell><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">5.731635022582642E-3</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">63435</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">10.388179075929425</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Corrigendum</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.4738490058069651E-3</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">9817</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6076417433341084</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">402</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">6.583192225937777E-2</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F14_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F14</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">6.5504400258087339E-3</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s28"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">V</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell><Data ss:Type="Number">297</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">4.8637017191629849E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">25,26,27,28</Data></Cell>
+    <Cell><Data ss:Type="Number">27</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex-ante transparency notice – defence directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">V</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell><Data ss:Type="Number">67</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.0971987043229629E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">25,26,27,28</Data></Cell>
+    <Cell><Data ss:Type="Number">28</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex-ante transparency notice – concession directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">V</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell><Data ss:Type="Number">6873</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.1255293574345857</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">25,26,27,28</Data></Cell>
+    <Cell><Data ss:Type="Number">25</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex-ante transparency notice – general directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F15_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F15</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">V</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell><Data ss:Type="Number">473</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">7.7458953305188274E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex ante transparency notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">25,26,27,28</Data></Cell>
+    <Cell><Data ss:Type="Number">26</Data></Cell>
+    <Cell><Data ss:Type="String">Voluntary ex-ante transparency notice – sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PRIOR_INFORMATION_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">94</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.5393534060650525E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice for contracts in the field of defence and security</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice used only for information – defence directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CONTRACT_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">1552</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.25415707300137885</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice for contracts in the field of defence and security</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">18</Data></Cell>
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – defence directive, standard regime </Data></Cell>
+   </Row>
+   <Row ss:Height="43.5">
+    <Cell><Data ss:Type="String">CONTRACT_AWARD_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">1913</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.31327479423430271</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String"> Contract award notice for contracts in the field of defence and security</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">31</Data></Cell>
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice – defence directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CONTRACT_CONCESSIONAIRE_DEFENCE</Data></Cell>
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">F</Data></Cell>
+    <Cell><Data ss:Type="String">Subcontract notice (in the fields of defence and security)</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+    <Cell><Data ss:Type="String">Subcontract notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">22</Data></Cell>
+    <Cell><Data ss:Type="Number">22</Data></Cell>
+    <Cell><Data ss:Type="String">Subcontract notice – defence directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32004L0017</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.96513200774262E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32004L0018</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">56</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">9.1706160361322269E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">2.1288930083878384E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.3100880051617467E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">252</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">4.1267772162595022E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+    <Cell><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="String">Contract modification notice – concessions directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">15700</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">2.5710477101299278</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+    <Cell><Data ss:Type="Number">38</Data></Cell>
+    <Cell><Data ss:Type="String">Contract modification notice – general directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">9600</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.5721056061940959</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+    <Cell><Data ss:Type="Number">39</Data></Cell>
+    <Cell><Data ss:Type="String">Contract modification notice – sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32018R1046</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">91</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.4902251058714868E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F20_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F20</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">OTHER</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">K</Data></Cell>
+    <Cell><Data ss:Type="String">Modification of a contract/concession during its term</Data></Cell>
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.93026401548524E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Modification notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">38,39,40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F21_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F21</Data></Cell>
+    <Cell><Data ss:Type="String">AWARD_CONTRACT</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">4475</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.73283047788735212</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – public contracts</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,12,20,33</Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice – general directive, light regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F21_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F21</Data></Cell>
+    <Cell><Data ss:Type="String">CONTRACT</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">4929</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.80717797218028109</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – public contracts</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,12,20,33</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – general directive, light regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F21_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F21</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_CALL_COMPETITION</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">A</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice with call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">76</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.2445836049036594E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – public contracts</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,12,20,33</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice used as a call for competition - general directive, light regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F21_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F21</Data></Cell>
+    <Cell><Data ss:Type="String">PRI_ONLY</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0024</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">207</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.3898527133560195E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – public contracts</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">4,12,20,33</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice used only for information – general directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F22_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F22</Data></Cell>
+    <Cell><Data ss:Type="String">AWARD_CONTRACT</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">115</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.8832515074200109E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,13,21,34</Data></Cell>
+    <Cell><Data ss:Type="Number">34</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice – sectoral directive, light regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F22_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F22</Data></Cell>
+    <Cell><Data ss:Type="String">CONTRACT</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">98</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6048578063231397E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,13,21,34</Data></Cell>
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice – sectoral directive, light regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F22_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F22</Data></Cell>
+    <Cell><Data ss:Type="String">PER_CALL_COMPETITION</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">M</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice with call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,13,21,34</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice used as a call for competition - sectoral directive, light regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F22_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F22</Data></Cell>
+    <Cell><Data ss:Type="String">PER_ONLY</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">P</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.4738490058069651E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,13,21,34</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice used only for information – sectoral directive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F22_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F22</Data></Cell>
+    <Cell><Data ss:Type="String">QSU_ONLY</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0025</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Q</Data></Cell>
+    <Cell><Data ss:Type="String">Qualification system without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – utilities</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">5,13,21,34</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F23_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F23</Data></Cell>
+    <Cell><Data ss:Type="String">CONCESSION_AWARD_CONTRACT</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">J</Data></Cell>
+    <Cell><Data ss:Type="String">Concession award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">34</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">5.5678740219374237E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – concessions</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">35</Data></Cell>
+    <Cell><Data ss:Type="Number">35</Data></Cell>
+    <Cell><Data ss:Type="String">Concession award notice – concessions directive, light regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F23_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F23</Data></Cell>
+    <Cell><Data ss:Type="String">PRI</Data></Cell>
+    <Cell><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">H</Data></Cell>
+    <Cell><Data ss:Type="String">Services concession</Data></Cell>
+    <Cell><Data ss:Type="Number">103</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6867383066457488E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Social and other specific services – concessions</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">35</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F24_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F24</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">C</Data></Cell>
+    <Cell><Data ss:Type="String">Works concession</Data></Cell>
+    <Cell><Data ss:Type="Number">93</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.5229773060005305E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Concession notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="String">Concession notice – concessions directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F24_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F24</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">H</Data></Cell>
+    <Cell><Data ss:Type="String">Services concession</Data></Cell>
+    <Cell><Data ss:Type="Number">1135</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.18586873573232282</Data></Cell>
+    <Cell><Data ss:Type="String">Concession notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="String">Concession notice – concessions directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">F25_2014</Data></Cell>
+    <Cell><Data ss:Type="String">F25</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32014L0023</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">J</Data></Cell>
+    <Cell><Data ss:Type="String">Concession award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">835</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.13674043553875731</Data></Cell>
+    <Cell><Data ss:Type="String">Concession award notice</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">32</Data></Cell>
+    <Cell><Data ss:Type="Number">32</Data></Cell>
+    <Cell><Data ss:Type="String">Concession award notice – concession directive, standard regime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MOVE</Data></Cell>
+    <Cell><Data ss:Type="String">T01</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">582</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">9.5308902375517077E-2</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice for public service contract</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell><Data ss:Type="String">T01</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MOVE</Data></Cell>
+    <Cell><Data ss:Type="String">T02</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32007R1370</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">6.0591570238730788E-3</Data></Cell>
+    <Cell><Data ss:Type="String">Information notice for award of public service contract</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell><Data ss:Type="String">T02</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">EEIG</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s24"><Data ss:Type="String">G</Data></Cell>
+    <Cell><Data ss:Type="String">European economic interest grouping (EEIG)</Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">5.4041130212922053E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Prior information notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">114</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.8668754073554891E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Corrigendum</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.4738490058069651E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="Number">715</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">0.11708911546133112</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Contract notice</Data></Cell>
+    <Cell><Data ss:Type="Number">243</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">3.9793923156788057E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">Request for proposals</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Contract award notice</Data></Cell>
+    <Cell><Data ss:Type="Number">128</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">2.0961408082587948E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="String">Call for expressions of interest</Data></Cell>
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">2.2926540090330567E-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">P</Data></Cell>
+    <Cell><Data ss:Type="String">Periodic indicative notice without call for competition</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">1.6376100064521834E-4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OTH_NOT</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">32009L0081</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">S</Data></Cell>
+    <Cell><Data ss:Type="String">European company</Data></Cell>
+    <Cell><Data ss:Type="Number">124</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=RC[-1]/fnld_total*100"><Data
+      ss:Type="Number">2.0306364080007074E-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="7" ss:Formula="=SUM(R[-86]C:R[-1]C)"><Data ss:Type="Number">610646</Data><NamedCell
+      ss:Name="fnld_total"/></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>71</ActiveRow>
+     <RangeSelection>R72</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
