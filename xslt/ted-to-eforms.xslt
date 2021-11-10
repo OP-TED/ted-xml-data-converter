@@ -36,9 +36,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	<xsl:variable name="ted-form-element-name" select="$ted-form-main-element/fn:local-name()"/> <!-- F06_2014 or CONTRACT_DEFENCE or MOVE or OTH_NOT or ... -->
 	<xsl:variable name="ted-form-name" select="$ted-form-main-element/fn:string(@FORM)"/><!-- F06 or 17 or T02 or ... -->
 	<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(@FORM)"/><!-- F06 or 17 or T02 or ... -->
+	<xsl:variable name="ted-form-document-code" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:CODIF_DATA/*:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 	<xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
 	<xsl:variable name="ted-form-additional-languages" select="$ted-form-additional-elements/fn:string(@LG)"/>
-	
+	 
 	<xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
 	
 	<xsl:variable name="legal-basis-element" select="ted-form-main-element/*[1]"/> <!-- the legal basis element is always the first child of the form element -->
@@ -57,7 +58,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	<!-- TODO draft, needs development -->
 	<!-- TODO requires mapping of TED forms to eForms type, subtype, xsd -->
 	
-	<xsl:variable name="ubl-form-type">
+	<xsl:variable name="eforms-form-type">
 		<xsl:choose>
 			<xsl:when test="$ted-form-name eq 'F03_2014'"><xsl:value-of select="'CAN'"/></xsl:when>
 			<xsl:otherwise><xsl:value-of select="'CN'"/></xsl:otherwise>
@@ -71,8 +72,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</xsl:choose>
 	</xsl:variable>
 	
-	<xsl:variable name="ubl-notice-subtype">
-		<xsl:value-of select="'16'"/><!-- TBD: hard-coded for now -->
+
+	<xsl:variable name="eforms-notice-subtype">
+		<xsl:value-of select="opfun:get-eforms-notice-subtype($ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $ted-form-document-code)"/>
 	</xsl:variable>
 	<doc:doc> Form Language </doc:doc>
 	
@@ -162,20 +164,20 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 				<xsd:element ref="efac:TenderSubcontractingRequirements" minOccurs="0" maxOccurs="unbounded"/> Only relevant for Lot in PIN and CN
 			</xsd:sequence>
 -->
-					<xsl:if test="$ubl-form-type eq 'CAN'">
+					<xsl:if test="$eforms-form-type eq 'CAN'">
 						<!-- TODO : efac:AppealsInformation : Review Requester Organization requesting for review or  Review Requester Organization that requested a review request. -->
 					</xsl:if>
 					<xsl:if test="$ted-form-notice-type eq '14'">
 						<xsl:call-template name="changes"/>
 					</xsl:if>
-					<xsl:if test="$ubl-notice-subtype = ('38', '39', '40')">
+					<xsl:if test="$eforms-notice-subtype = ('38', '39', '40')">
 						<xsl:call-template name="contract-modification"/>
 					</xsl:if>
-					<xsl:if test="$ubl-form-type eq 'CAN'">
+					<xsl:if test="$eforms-form-type eq 'CAN'">
 						<xsl:call-template name="notice-result"/>
 					</xsl:if>
 					<efac:NoticeSubtype>
-						<cbc:SubTypeCode><xsl:value-of select="$ubl-notice-subtype"/></cbc:SubTypeCode>
+						<cbc:SubTypeCode><xsl:value-of select="$eforms-notice-subtype"/></cbc:SubTypeCode>
 					</efac:NoticeSubtype>
 					<xsl:call-template name="organizations"/>
 					<xsl:call-template name="publication"/>
@@ -229,6 +231,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 <xsl:template name="organizations">
 	<xsl:comment> efac:Organizations here </xsl:comment>
+	
 </xsl:template>
 
 <xsl:template name="publication">

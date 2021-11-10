@@ -38,6 +38,25 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" >
 	<xsl:value-of select="if ($mapped-language) then $mapped-language else 'UNKNOWN-LANGUAGE'"/>
 </xsl:function>
 
+<xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">
+	<xsl:param name="ted-form-element"/>
+	<xsl:param name="ted-form-name"/>
+	<xsl:param name="ted-form-notice-type"/>
+	<xsl:param name="ted-form-legal-basis"/>
+	<xsl:param name="ted-form-document-code"/>
+	<xsl:variable name="notice-mapping-file" select="fn:document('ted-notice-mapping.xml')"/>
+	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][legal-basis eq $ted-form-legal-basis][document-code eq $ted-form-document-code]"/>
+	<xsl:if test="fn:count($mapping-row) != 1">
+		<xsl:message terminate="yes">ERROR: found <xsl:value-of select="fn:count($mapping-row)"/> different eForms subtype mappings for this Notice:<xsl:value-of select="$newline"/>
+		<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
+	</xsl:if>
+	<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
+	<xsl:if test="$eforms-subtype eq ''">
+		<xsl:message terminate="yes">ERROR: no eForms subtype mapping available for this Notice</xsl:message>
+	</xsl:if>
+	<xsl:value-of select="$eforms-subtype"/>
+</xsl:function>
+
 <xsl:variable name="form-types" select="fn:document('ubl-form-types.xml')"/>
 
 <xsl:function name="opfun:get-eforms-element-name" as="xs:string">
