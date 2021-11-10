@@ -52,7 +52,8 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" >
 	</xsl:if>
 	<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
 	<xsl:if test="$eforms-subtype eq ''">
-		<xsl:message terminate="yes">ERROR: no eForms subtype mapping available for this Notice</xsl:message>
+		<xsl:message terminate="yes">ERROR: no eForms subtype mapping available for this Notice:<xsl:value-of select="$newline"/>
+		<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
 	</xsl:if>
 	<xsl:value-of select="$eforms-subtype"/>
 </xsl:function>
