@@ -106,12 +106,45 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	</xsl:template>
 	
 <xsl:template match="*:CA_TYPE">
+<!--
+buyer-legal-type codelist
+cga Central government authority
+ra Regional authority
+la Local authority
+body-pl Body governed by public law
+body-pl-cga Body governed by public law, controlled by a central government authority
+body-pl-ra Body governed by public law, controlled by a regional authority
+body-pl-la Body governed by public law, controlled by a local authority
+pub-undert Public undertaking
+pub-undert-cga Public undertaking, controlled by a central government authority
+pub-undert-ra Public undertaking, controlled by a regional authority
+pub-undert-la Public undertaking, controlled by a local authority
+spec-rights-entity Entity with special or exclusive rights
+org-sub Organisation awarding a contract subsidised by a contracting authority
+org-sub-cga Organisation awarding a contract subsidised by a central government authority
+org-sub-ra Organisation awarding a contract subsidised by a regional authority
+org-sub-la Organisation awarding a contract subsidised by a local authority
+def-cont Defence contractor
+int-org International organisation
+eu-ins-bod-ag EU institution, body or agency
+rl-aut Regional or local authority
+eu-int-org European Institution/Agency or International Organisation
+-->
+
 	<cac:ContractingPartyType>
+<!--
+buyer-contracting-type codelist
+Not yet available
+-->
 		<cbc:PartyType><xsl:value-of select="@VALUE"/></cbc:PartyType>
 	</cac:ContractingPartyType>
 </xsl:template>
 
 <xsl:template match="*:CA_ACTIVITY">
+<!--
+authority-activity codelist
+Not yet available
+-->
 	<cac:ContractingActivity>
 		<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
