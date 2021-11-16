@@ -18,6 +18,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 <xsl:include href="functions-and-data.xslt"/>
 <xsl:include href="ted-to-eforms-simple.xslt"/>
+<xsl:include href="ted-to-eforms-suppressed.xslt"/>
 <xsl:include href="ted-to-eforms-award-criteria.xslt"/>
 <xsl:include href="ted-to-eforms-addresses.xslt"/>
 
@@ -130,7 +131,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	
 	
 	
-<!-- TEMPORARILY SUPPRESSED TEMPLATES -->
+<!-- SUPPRESSED TEMPLATES -->
 
 <xsl:template match="*:TECHNICAL_SECTION"/>
 <xsl:template match="*:LINKS_SECTION"/>
@@ -150,7 +151,18 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<xsl:namespace name="ccts" select="'urn:un:unece:uncefact:documentation:2'"/>
 		<xsl:call-template name="root-extensions"/>
 		<xsl:call-template name="notice-information"/>
-		<xsl:apply-templates/>
+		<xsl:call-template name="contracting-party"/>
+		<xsl:call-template name="root-tendering-terms"/>
+		<xsl:call-template name="root-tendering-process"/>
+		<xsl:call-template name="root-procurement-project"/>
+		<xsl:call-template name="procurement-project-lots"/>
+<!--
+cac:ContractingParty
+cac:TenderingTerms
+cac:TenderingProcess
+cac:ProcurementProject
+cac:ProcurementProjectLot
+-->
 	</xsl:element>
 
 </xsl:template>
@@ -211,21 +223,33 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 <xsl:template name="notice-information">
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID><!-- TBD: hard-coded for now -->
+	<!-- TBD: hard-coded for now -->
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
 	<!--BT-701-->
-	<cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID><!-- TBD: hard-coded for now -->
+	<!-- TBD: hard-coded for now -->
+	<cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
 	<!--BT-04-->
-	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID><!-- TBD: hard-coded for now -->
+	<!-- TBD: hard-coded for now -->
+	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
 	<!--BT-05-->
-	<cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate><!-- TBD: hard-coded for now -->
-	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime><!-- TBD: hard-coded for now -->
+	<!-- TBD: hard-coded for now -->
+	<cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+	<!-- TBD: hard-coded for now -->
+	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
 	<!--BT-757-->
-	<cbc:VersionID>01</cbc:VersionID><!-- TBD: hard-coded for now -->
-	<cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate><!-- TBD: hard-coded for now -->
-	<!--BT-01-->
-	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain><!-- TBD: hard-coded for now -->
+	<!-- TBD: hard-coded for now -->
+	<cbc:VersionID>01</cbc:VersionID>
+	<!-- Future Notice (BT-127) TBD: hard-coded for now -->
+	<!-- The "cbc:PlannedDate" is used for planning notices (PIN only excluded) [Notice subtypes 1,2,3, 7,8,9] to specify when the competition notice will be published.  -->
+	<!-- F16 PRIOR_INFORMATION_DEFENCE does not have an equivalent element -->
+	<xsl:if test="$eforms-notice-subtype = ('1', '2', '3', '7', '8', '9')">
+		<cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
+	</xsl:if>
+	<!--BT-01 Legal basis -->
+	<cbc:RegulatoryDomain><xsl:value-of select="$legal-basis"/></cbc:RegulatoryDomain>
 	<!--BT-03--> <!--BT-02-->
-	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode><!-- TBD: hard-coded for now -->
+	<!-- TBD: hard-coded for now; to use tailored codelists -->
+	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
 	<!--BT-702 first language -->
 	<cbc:NoticeLanguageCode><xsl:value-of select="$eforms-first-language"/></cbc:NoticeLanguageCode>
 	<xsl:for-each select="$ted-form-additional-languages">
@@ -233,7 +257,6 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<cbc:ID><xsl:value-of select="."/></cbc:ID>
 		</cac:AdditionalNoticeLanguage>
 	</xsl:for-each>
-
 </xsl:template>
 
 
@@ -251,11 +274,97 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 <xsl:template name="organizations">
 	<xsl:comment> efac:Organizations here </xsl:comment>
-	
 </xsl:template>
 
 <xsl:template name="publication">
 	<xsl:comment> efac:Publication here </xsl:comment>
+	<efac:Publication>
+		<!-- TBD: hard-coded for now -->
+		<efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+		<!-- TBD: hard-coded for now -->
+		<efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+		<!-- TBD: hard-coded for now -->
+		<efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+	</efac:Publication>
 </xsl:template>
+
+<xsl:template name="contracting-party">
+	<xsl:comment> cac:ContractingParty here </xsl:comment>
+	<xsl:apply-templates select="*:CONTRACTING_BODY"/>
+</xsl:template>
+<xsl:template name="root-tendering-terms">
+	<xsl:comment> cac:TenderingTerms here </xsl:comment>
+	<cac:TenderingTerms>
+		<!-- A limited number of BTs are specified for tendering terms at root level -->
+		<!-- no BTs at root level require Extensions -->
+		<!-- Cross Border Law (BT-09) cardinality * -->
+		<!-- BT-01 Legal Basis Local - Code cardinality * -->
+		<!-- BT-01 Legal Basis Local - Text cardinality * -->
+		<!-- Exclusion Grounds (BT-67) cardinality ? -->
+		<!-- Lots Max Awarded (BT-33) cardinality 1 -->
+		<!-- Lots Max Allowed (BT-31) cardinality 1 -->
+		<!-- Group Identifier (BT-330) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
+		<!-- Group Lot Identifier (BT-1375) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
+	</cac:TenderingTerms>
+</xsl:template>
+<xsl:template name="root-tendering-process">
+	<xsl:comment> cac:TenderingProcess here </xsl:comment>
+	<cac:TenderingProcess>
+		<ext:UBLExtensions>
+			<ext:UBLExtension>
+				<ext:ExtensionContent>
+					<efext:EformsExtension>
+						<!-- Procurement Relaunch (BT-634) cardinality > -->
+					</efext:EformsExtension>
+				</ext:ExtensionContent>
+			</ext:UBLExtension>
+		</ext:UBLExtensions>
+		<!-- A limited number of BTs are specified for tendering process at root level -->
+		<!-- Procedure Features (BT-88) cardinality ? -->
+		<!-- Procedure Type (BT-105) cardinality 1 -->
+		<!-- PIN Competition Termination (BT-756) cardinality ? -->
+		<!-- Lots All Required (BT-763) cardinality ? -->
+		<!-- Procedure Accelerated (BT-106) cardinality ? -->
+		<!-- Procedure Accelerated Justification (BT-1351) / Code cardinality ? -->
+		<!-- Procedure Accelerated Justification (BT-1351) ​/ Text cardinality ? -->
+		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? -->
+		<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? -->
+		<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? -->
+	</cac:TenderingProcess>
+</xsl:template>
+<xsl:template name="root-procurement-project">
+	<xsl:comment> cac:ProcurementProject here </xsl:comment>
+	<cac:ProcurementProject>
+		<!-- A limited number of BTs are specified for procurement project at root level -->
+		<!-- Internal Identifier (BT-22) cardinality 1 -->
+		<!-- Title (BT-21) cardinality 1 -->
+		<!-- Description (BT-24) cardinality 1 -->
+		<!-- Main Nature (BT-23) cardinality 1 -->
+		<!-- Additional Nature (different from Main) (BT-531) cardinality * -->
+		<!-- Additional Information (BT-300) (*)* cardinality ? -->
+		<!-- Estimated Value (BT-27) cardinality ? -->
+		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 -->
+		<!-- Main Classification Code (BT-262) cardinality 1 -->
+		<!-- Additional Classification Code (BT-263) cardinality * -->
+		<!-- Place of Performance (*) -> RealizedLocation -->
+			<!-- Place of Performance Additional Information (BT-728) -->
+			<!-- Place Performance City (BT-5131) -->
+			<!-- Place Performance Post Code (BT-5121) -->
+			<!-- Place Performance Country Subdivision (BT-5071) -->
+			<!-- Place Performance Services Other (BT-727) -->
+			<!-- Place Performance Street (BT-5101) -->
+			<!-- Place Performance Country Code (BT-5141) -->
+	</cac:ProcurementProject>
+</xsl:template>
+<xsl:template name="procurement-project-lots">
+	<xsl:comment> multiple cac:ProcurementProjectLot here </xsl:comment>
+</xsl:template>
+
+
+<xsl:template match="LEFTI/SUITABILITY">
+<xsl:apply-templates/>
+</xsl:template>
+
+
 
 </xsl:stylesheet>
