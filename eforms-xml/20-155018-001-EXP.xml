@@ -16,6 +16,11 @@
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
                <!-- efac:Publication here -->
+               <efac:Publication>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
       </ext:UBLExtension>
@@ -27,12 +32,10 @@
    <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <cbc:VersionID>01</cbc:VersionID>
-   <cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
-   <element xmlns="" name="LEGAL_BASIS" VALUE="32014L0024"/>
-   <element xmlns="" name="NOTICE" TYPE="PRI_ONLY"/>
+   <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
       <cac:ContractingPartyType>
          <cbc:PartyType>REGIONAL_AUTHORITY</cbc:PartyType>
@@ -57,47 +60,19 @@
       </cac:Party>
       <element xmlns="" name="ADDRESS_FURTHER_INFO_IDEM"/>
    </cac:ContractingParty>
-   <element xmlns="" name="OBJECT_CONTRACT" ITEM="1">
-      <element name="TITLE">
-         <element name="P">Gemeinde Veitshöchheim, Sportplatzbauarbeiten an der Freisportanlage</element>
-      </element>
-      <element name="CPV_MAIN">
-         <element name="CPV_CODE" CODE="45212200"/>
-      </element>
-      <element name="TYPE_CONTRACT" CTYPE="WORKS"/>
-      <element name="SHORT_DESCR">
-         <element name="P">Gegenstand des Auftrages ist die Vergabe von Sportplatzbauarbeiten bei der Freisportanlage am Schulzentrum in der Günterslebener Str. 41, 97209 Veitshöchheim. Die Arbeiten sollen ab den Sommerferien 2020 stattfinden. Bisher ist die Fertigstellung Mitte 2021 geplant.</element>
-      </element>
-      <element name="NO_LOT_DIVISION"/>
-      <element name="OBJECT_DESCR" ITEM="1">
-         <cbc:CountrySubentityCode listName="nuts">DE26C</cbc:CountrySubentityCode>
-         <element name="MAIN_SITE">
-            <element name="P">Günterslebener Straße 41</element>
-            <element name="P">97209 Veitshöchheim</element>
-         </element>
-         <element name="SHORT_DESCR">
-            <element name="P">Die Gemeinde Veitshöchheim beabsichtigt bei der Freisportanlage am Schulzentrum (Günterslebener Str. 41, 97209 Veitshöchheim) eine Belagssanierung durchzuführen.</element>
-            <element name="P">Folgende Arbeiten sind hauptsächlich notwendig:</element>
-            <element name="P">— Abbruch und Neubau des Kunststoffbelags:</element>
-            <element name="P">—— Belagstyp A ca. 5 200 m<element name="FT" TYPE="SUP">2</element>;</element>
-            <element name="P">—— Belagstyp B ca. 1 200 m<element name="FT" TYPE="SUP">2</element>.</element>
-            <element name="P">— Einbau einer neuen Bitu-Tragschicht in Teilbereichen der Sportflächen;</element>
-            <element name="P">— Tiefenreinigung von zwei Kleinspielfeldern und punktuelle Ausbesserung von Schadstellen;</element>
-            <element name="P">— Abbruch und Neubau von beschädigten Einfassungen;</element>
-            <element name="P">— Abbruch und Neubau von zwei Weitsprunggruben;</element>
-            <element name="P">— Ausbau von beschädigten Kastenrinnen der Rundlaufbahn;</element>
-            <element name="P">— Montage von neuen Sporteinbauteilen wie z. B. Bodenhülsen, Basketballständern, Absprungbalken sowie Aufbringen von Spielfeldlinierungen;</element>
-            <element name="P">— Einbau einer Wurzelschutzbahn seitlich der Weit-/Hochsprungbahn, um das Einwachsen von Wurzeln zu verhindern;</element>
-            <element name="P">— Partieller Austausch von defekten Drainleitungen unter Sportflächen.</element>
-         </element>
-      </element>
-      <element name="DATE_PUBLICATION_NOTICE">2020-03-30</element>
-   </element>
-   <element xmlns="" name="LEFTI"/>
-   <element xmlns="" name="PROCEDURE">
-      <element name="NO_CONTRACT_COVERED_GPA"/>
-   </element>
-   <element xmlns="" name="COMPLEMENTARY_INFO">
-      <element name="DATE_DISPATCH_NOTICE">2020-03-27</element>
-   </element>
+   <!-- cac:TenderingTerms here -->
+   <cac:TenderingTerms/>
+   <!-- cac:TenderingProcess here -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension/>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject here -->
+   <cac:ProcurementProject/>
+   <!-- multiple cac:ProcurementProjectLot here -->
 </PriorInformationNotice>
