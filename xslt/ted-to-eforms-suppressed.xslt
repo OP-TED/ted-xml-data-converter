@@ -10,10 +10,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- LEGAL_BASIS only occurs as direct child of the FORM ELEMENT, and is handled in <xsl:template name="notice-information"> -->
-<xsl:template match="*:LEGAL_BASIS"/>
+<xsl:template match="ted:LEGAL_BASIS"/>
 
 <!-- NOTICE only occurs as direct child of the FORM ELEMENT, and is only used to select the eForms Notice subtype -->
-<xsl:template match="*:NOTICE"/>
+<xsl:template match="ted:NOTICE"/>
 
 
 

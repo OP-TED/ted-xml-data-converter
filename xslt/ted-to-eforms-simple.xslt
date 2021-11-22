@@ -9,37 +9,37 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-<xsl:template match="*:OFFICIALNAME">
+<xsl:template match="ted:OFFICIALNAME">
 	<cac:PartyName>
 		<cbc:Name><xsl:apply-templates/></cbc:Name>
 	</cac:PartyName>
 </xsl:template>
 
-<xsl:template match="*:URL_GENERAL">
+<xsl:template match="ted:URL_GENERAL">
 	<cbc:WebsiteURI><xsl:apply-templates/></cbc:WebsiteURI>
 </xsl:template>
 
-<xsl:template match="*:URL_BUYER">
+<xsl:template match="ted:URL_BUYER">
 	<cbc:EndpointID><xsl:apply-templates/></cbc:EndpointID>
 </xsl:template>
 
-<xsl:template match="*:ADDRESS">
+<xsl:template match="ted:ADDRESS">
 	<cbc:StreetName><xsl:apply-templates/></cbc:StreetName>
 </xsl:template>
 
-<xsl:template match="*:TOWN">
+<xsl:template match="ted:TOWN">
 	<cbc:CityName><xsl:apply-templates/></cbc:CityName>
 </xsl:template>
 
-<xsl:template match="*:POSTAL_CODE">
+<xsl:template match="ted:POSTAL_CODE">
 	<cbc:PostalZone><xsl:apply-templates/></cbc:PostalZone>
 </xsl:template>
 
-<xsl:template match="*:NUTS">
+<xsl:template match="n2016:NUTS">
 	<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="@CODE"/></cbc:CountrySubentityCode>
 </xsl:template>
 
-<xsl:template match="*:COUNTRY">
+<xsl:template match="ted:COUNTRY">
 	<cac:Country>
 		<cbc:IdentificationCode><xsl:value-of select="@VALUE"/></cbc:IdentificationCode>
 	</cac:Country>
@@ -60,4 +60,25 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 					<URL_BUYER>https://ec.europa.eu/info/funding-tenders/tenders/tender-opportunities-department/tender-opportunities-informatics_en</URL_BUYER>
 
 -->
+
+
+
+<xsl:template match="ted:LOT_MAX_ONE_TENDERER">
+	<cbc:MaximumLotsAwardedNumeric><xsl:apply-templates/></cbc:MaximumLotsAwardedNumeric>
+</xsl:template>
+
+<xsl:template match="ted:LOT_ALL">
+	<cbc:MaximumLotsSubmittedNumeric><xsl:value-of select="$number-of-lots"/></cbc:MaximumLotsSubmittedNumeric>
+</xsl:template>
+
+<xsl:template match="ted:LOT_MAX_NUMBER">
+	<cbc:MaximumLotsSubmittedNumeric><xsl:apply-templates/></cbc:MaximumLotsSubmittedNumeric>
+</xsl:template>
+
+<xsl:template match="ted:LOT_ONE_ONLY">
+	<cbc:MaximumLotsSubmittedNumeric>1</cbc:MaximumLotsSubmittedNumeric>
+</xsl:template>
+
+
+
 </xsl:stylesheet>

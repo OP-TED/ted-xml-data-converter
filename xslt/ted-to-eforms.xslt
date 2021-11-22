@@ -29,15 +29,15 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 	<doc:doc> Form Name </doc:doc>
 	<!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
-	<xsl:variable name="ted-form-elements" select="/*:TED_EXPORT/*:FORM_SECTION/*[@CATEGORY]"/> <!-- this is all the TED form elements -->
-	<xsl:variable name="ted-form-main-element" select="/*:TED_EXPORT/*:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/> <!-- this is the TED form element to process -->
-	<xsl:variable name="ted-form-additional-elements" select="/*:TED_EXPORT/*:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/> <!-- these are the other TED form elements -->
+	<xsl:variable name="ted-form-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY]"/> <!-- this is all the TED form elements -->
+	<xsl:variable name="ted-form-main-element" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/> <!-- this is the TED form element to process -->
+	<xsl:variable name="ted-form-additional-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/> <!-- these are the other TED form elements -->
 	
 	<xsl:variable name="ted-form-elements-names" select="fn:distinct-values($ted-form-elements/fn:local-name())"/> <!-- F06_2014 -->
 	<xsl:variable name="ted-form-element-name" select="$ted-form-main-element/fn:local-name()"/> <!-- F06_2014 or CONTRACT_DEFENCE or MOVE or OTH_NOT or ... -->
 	<xsl:variable name="ted-form-name" select="$ted-form-main-element/fn:string(@FORM)"/><!-- F06 or 17 or T02 or ... -->
-	<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(*:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
-	<xsl:variable name="ted-form-document-code" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:CODIF_DATA/*:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+	<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
+	<xsl:variable name="ted-form-document-code" select="/ted:TED_EXPORT/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 	<xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
 	<xsl:variable name="ted-form-additional-languages" select="$ted-form-additional-elements/fn:string(@LG)"/>
 	 
@@ -97,6 +97,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	</xsl:variable>
 	
 
+	<xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
+
+
+
 	<doc:doc> Form Language </doc:doc>
 	
 	<!-- TODO : currently only catering for one form , one language -->
@@ -133,10 +137,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	
 <!-- SUPPRESSED TEMPLATES -->
 
-<xsl:template match="*:TECHNICAL_SECTION"/>
-<xsl:template match="*:LINKS_SECTION"/>
-<xsl:template match="*:CODED_DATA_SECTION"/>
-<xsl:template match="*:TRANSLATION_SECTION"/>
+<xsl:template match="ted:TECHNICAL_SECTION"/>
+<xsl:template match="ted:LINKS_SECTION"/>
+<xsl:template match="ted:CODED_DATA_SECTION"/>
+<xsl:template match="ted:TRANSLATION_SECTION"/>
 
 <!-- ROOT ELEMENT -->
 
@@ -290,7 +294,7 @@ cac:ProcurementProjectLot
 
 <xsl:template name="contracting-party">
 	<xsl:comment> cac:ContractingParty here </xsl:comment>
-	<xsl:apply-templates select="*:CONTRACTING_BODY"/>
+	<xsl:apply-templates select="ted:CONTRACTING_BODY"/>
 </xsl:template>
 <xsl:template name="root-tendering-terms">
 	<xsl:comment> cac:TenderingTerms here </xsl:comment>
@@ -301,7 +305,8 @@ cac:ProcurementProjectLot
 		<!-- BT-01 Legal Basis Local - Code cardinality * -->
 		<!-- BT-01 Legal Basis Local - Text cardinality * -->
 		<!-- Exclusion Grounds (BT-67) cardinality ? -->
-		<!-- Lots Max Awarded (BT-33) cardinality 1 -->
+		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
+		<!-- Lots Max Awarded (BT-33) cardinality 1 TED_EXPORT/FORMS/F01_2014/OBJECT_CONTRACT/LOT_DIVISION/LOT_MAX_ONE_TENDERER -->
 		<!-- Lots Max Allowed (BT-31) cardinality 1 -->
 		<!-- Group Identifier (BT-330) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
 		<!-- Group Lot Identifier (BT-1375) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
@@ -314,7 +319,7 @@ cac:ProcurementProjectLot
 			<ext:UBLExtension>
 				<ext:ExtensionContent>
 					<efext:EformsExtension>
-						<!-- Procurement Relaunch (BT-634) cardinality > -->
+						<!-- Procurement Relaunch (BT-634) cardinality >? Note: review after meeting on BT-634 and email from Carmen -->
 					</efext:EformsExtension>
 				</ext:ExtensionContent>
 			</ext:UBLExtension>
@@ -361,10 +366,32 @@ cac:ProcurementProjectLot
 </xsl:template>
 
 
-<xsl:template match="LEFTI/SUITABILITY">
+<xsl:template match="ted:LEFTI/ted:SUITABILITY">
 <xsl:apply-templates/>
 </xsl:template>
 
+<xsl:template match="ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]">
+	<!-- LOT_DIVISION is a child only of OBJECT_CONTRACT -->
+	<!-- LOT_DIVISION has children: LOT_ALL LOT_COMBINING_CONTRACT_RIGHT LOT_MAX_NUMBER LOT_MAX_ONE_TENDERER LOT_ONE_ONLY -->
+
+	<cac:LotDistribution>
+		<!-- Lots Max Awarded (BT-33), Lots Max Allowed (BT-31)  -->
+		<!-- F01_2014 F02_2014 F04_2014 F05_2014 F21_2014 F22_2014 F23_2014 F24_2014 -->
+		<!-- Lots Max Awarded (BT-33) The maximum number of Lots that can be awarded to one economic operator -->
+		<xsl:apply-templates select="ted:LOT_MAX_ONE_TENDERER"/>
+		<!-- Lots Max Allowed (BT-31) The maximum number of Lots that one economic operator can submit a tender for -->
+		<!-- Tenders may be submmitted for: LOT_ALL LOT_MAX_NUMBER LOT_ONE_ONLY -->
+		<xsl:apply-templates select="ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY"/>
+		
+		<!--
+	<xs:element name="LOT_ALL" type="empty"/>
+	<xs:element name="LOT_ONE_ONLY" type="empty"/>
+	<xs:element name="LOT_MAX_NUMBER" type="nb_lot"/>
+
+-->
+		
+	</cac:LotDistribution>
+</xsl:template>
 
 
 </xsl:stylesheet>

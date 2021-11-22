@@ -36,16 +36,16 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	</xsl:function>
 
 
-<xsl:template match="*:AC">
+<xsl:template match="ted:AC">
 	<cac:AwardingCriterion>
 		<xsl:call-template name="awarding-criterion-description"/>
 		<xsl:apply-templates/>
 	</cac:AwardingCriterion>
 </xsl:template>
 
-<xsl:template match="*:AC_QUALITY">
-	<xsl:variable name="weighting" select="fn:normalize-space(fn:string(*:AC_WEIGHTING))"/>
-	<xsl:variable name="number-codelist-and-code" select="opfun:get-award-criteria-number-codelist-and-code(*:AC_WEIGHTING)"/>
+<xsl:template match="ted:AC_QUALITY">
+	<xsl:variable name="weighting" select="fn:normalize-space(fn:string(ted:AC_WEIGHTING))"/>
+	<xsl:variable name="number-codelist-and-code" select="opfun:get-award-criteria-number-codelist-and-code(ted:AC_WEIGHTING)"/>
 	
     <cac:SubordinateAwardingCriterion>
         <ext:UBLExtensions>

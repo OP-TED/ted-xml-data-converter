@@ -9,11 +9,11 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-	<xsl:template match="*:CONTRACTING_BODY">
+	<xsl:template match="ted:CONTRACTING_BODY">
 		<cac:ContractingParty>
-			<xsl:apply-templates select="*:CA_TYPE"/>
-			<xsl:apply-templates select="*:CA_ACTIVITY"/>
-			<xsl:apply-templates select="*:ADDRESS_CONTRACTING_BODY"/>
+			<xsl:apply-templates select="ted:CA_TYPE"/>
+			<xsl:apply-templates select="ted:CA_ACTIVITY"/>
+			<xsl:apply-templates select="ted:ADDRESS_CONTRACTING_BODY"/>
 			<xsl:apply-templates select="*[not(fn:local-name(.) = ('CA_TYPE', 'CA_ACTIVITY', 'ADDRESS_CONTRACTING_BODY'))]"/>
 		</cac:ContractingParty>
 	</xsl:template>
@@ -57,7 +57,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	</xsd:complexType>
 
 -->	
-	<xsl:template match="*:ADDRESS_CONTRACTING_BODY">
+	<xsl:template match="ted:ADDRESS_CONTRACTING_BODY">
 		<cac:Party>
 			<xsl:call-template name="org-address"/>
 		</cac:Party>
@@ -79,9 +79,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<xs:element ref="URL_GENERAL" minOccurs="0"/>
 		<xs:element ref="URL_BUYER" minOccurs="0"/>
 	-->
-		<xsl:apply-templates select="*:URL_GENERAL"/>
-		<xsl:apply-templates select="*:URL_BUYER"/>
-		<xsl:apply-templates select="*:OFFICIALNAME"/>
+		<xsl:apply-templates select="ted:URL_GENERAL"/>
+		<xsl:apply-templates select="ted:URL_BUYER"/>
+		<xsl:apply-templates select="ted:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
 	<!--
 		<xs:element ref="NATIONALID" minOccurs="0"/>
@@ -97,15 +97,15 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	
 	<xsl:template name="address">
 		<cac:PostalAddress>
-		<xsl:apply-templates select="*:ADDRESS"/>
-		<xsl:apply-templates select="*:TOWN"/>
-		<xsl:apply-templates select="*:POSTAL_CODE"/>
-		<xsl:apply-templates select="*:NUTS"/>
-		<xsl:apply-templates select="*:COUNTRY"/>
+		<xsl:apply-templates select="ted:ADDRESS"/>
+		<xsl:apply-templates select="ted:TOWN"/>
+		<xsl:apply-templates select="ted:POSTAL_CODE"/>
+		<xsl:apply-templates select="n2016:NUTS"/>
+		<xsl:apply-templates select="ted:COUNTRY"/>
 		</cac:PostalAddress>
 	</xsl:template>
 	
-<xsl:template match="*:CA_TYPE">
+<xsl:template match="ted:CA_TYPE">
 <!--
 buyer-legal-type codelist
 cga Central government authority
@@ -140,7 +140,7 @@ Not yet available
 	</cac:ContractingPartyType>
 </xsl:template>
 
-<xsl:template match="*:CA_ACTIVITY">
+<xsl:template match="ted:CA_ACTIVITY">
 <!--
 authority-activity codelist
 Not yet available
