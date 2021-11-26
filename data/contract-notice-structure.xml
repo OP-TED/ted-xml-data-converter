@@ -35,54 +35,56 @@ This XML is intended to include all and only elements permissible by the schema 
 							<efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
 							<efbc:AwardingCPBIndicator>false</efbc:AwardingCPBIndicator>
 							<efac:Company>
-								<!--BT-505-->
+								<!-- Organization Internet Address (BT-505) -->
 								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
-								<!--BT-509-->
+								<!-- Organization eDelivery Gateway (BT-509) -->
 								<cbc:EndpointID>https://endpoint-example.fin-adm.com</cbc:EndpointID>
 								<efbc:CompanySizeCode listName="economic-operator-size">small</efbc:CompanySizeCode>
 								<cac:PartyIdentification>
-									<!--OPT-200-->
+									<!-- Company Technical Identifier (OPT-200) -->
 									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
-								<!--BT-500-->
+								<!-- Organization Name (BT-500) -->
 								<cac:PartyName>
 									<cbc:Name languageID="ENG">Financial Adinistration for ...</cbc:Name>
 								</cac:PartyName>
 								<cac:PostalAddress>
-									<!--BT-510-->
+									<!-- Organization Street (BT-510) (a) -->
 									<!-- Note: cbc:BuildingName is not used for eForms, so the name of a building should be held in cbc:StreetName -->
 									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+									<!-- Organization Street (BT-510) (b) -->
 									<cbc:AdditionalStreetName>2 Bat Square</cbc:AdditionalStreetName>
-									<!--BT-16-->
+									<!-- Organization Part Name (BT-16) -->
 									<cbc:Department>Finance Division</cbc:Department>
-									<!--BT-513-->
+									<!-- Organization City (BT-513) -->
 									<cbc:CityName>London</cbc:CityName>
-									<!--BT-512-->
+									<!-- Organization Post Code (BT-512) -->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
-									<!--BT-507-->
+									<!-- Organization Country Subdivision (BT-507) -->
 									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
-									<!--BT-514-->
-									<cbc:Region>anyw-eea</cbc:Region>
+									<!-- cbc:Region is too vague to be used for an address -->
+									<!-- Organization Street (BT-510) (c) -->
 									<cac:AddressLine>
 										<cbc:Line>Gotham Street</cbc:Line>
 									</cac:AddressLine>
+									<!-- Organization Country Code (BT-514) -->
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<!-- Question: cac:PartyTaxScheme is defined here in EFORMS-ExtensionAggregateComponents-2.3.xsd but is not mentioned in the documentation. Is it allowed? -->
 								<cac:PartyLegalEntity>
-									<!--BT-501-->
+									<!-- Organization Identifier (BT-501) -->
 									<cbc:CompanyID schemeID="002">998298</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
-									<!--BT-502-->
+									<!-- Organization Contact Point (BT-502) -->
 									<cbc:Name>Info desk</cbc:Name>
-									<!--BT-503-->
+									<!-- Organization Contact Telephone Number (BT-503) -->
 									<cbc:Telephone>+44 123456780</cbc:Telephone>
-									<!--BT-739-->
+									<!--Organization Contact Fax (BT-739) -->
 									<cbc:Telefax>+44 123456789</cbc:Telefax>
-									<!--BT-506-->
+									<!-- Organization Contact Email Address (BT-506) -->
 									<cbc:ElectronicMail>info@fin-adm.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -96,30 +98,37 @@ This XML is intended to include all and only elements permissible by the schema 
 									<cbc:Name languageID="ENG">Procurement Department</cbc:Name>
 								</cac:PartyName>
 								<cac:PostalAddress>
-									<!--BT-510-->
+									<!-- Organization Street (BT-510) (a) -->
+									<!-- Note: cbc:BuildingName is not used for eForms, so the name of a building should be held in cbc:StreetName -->
 									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+									<!-- Organization Street (BT-510) (b) -->
 									<cbc:AdditionalStreetName>2 Bat Square</cbc:AdditionalStreetName>
-									<!--BT-16-->
+									<!-- Organization Part Name (BT-16) -->
 									<cbc:Department>Procurement Dpt</cbc:Department>
-									<!--BT-513-->
+									<!-- Organization City (BT-513) -->
 									<cbc:CityName>London</cbc:CityName>
-									<!--BT-512-->
+									<!-- Organization Post Code (BT-512) -->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
 									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
-									<!--BT-514-->
-									<cbc:Region>anyw-eea</cbc:Region>
+									<!-- cbc:Region is too vague to be used for an address -->
+									<!-- Organization Street (BT-510) (c) -->
 									<cac:AddressLine>
 										<cbc:Line>Gotham Street</cbc:Line>
 									</cac:AddressLine>
+									<!-- Organization Country Code (BT-514) -->
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
+									<!-- Organization Contact Point (BT-502) -->
 									<cbc:Name>Head of Procurement Department</cbc:Name>
+									<!-- Organization Contact Telephone Number (BT-503) -->
 									<cbc:Telephone>+123 45678</cbc:Telephone>
+									<!--Organization Contact Fax (BT-739) -->
 									<cbc:Telefax>+44 123456789</cbc:Telefax>
+									<!-- Organization Contact Email Address (BT-506) -->
 									<cbc:ElectronicMail>proc-info@fin-adm.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
@@ -136,35 +145,42 @@ This XML is intended to include all and only elements permissible by the schema 
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
+	<!-- UBL version ID (UBL) -->
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<!-- Customization ID (UBL) -->
 	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<!--BT-701-->
-	<cbc:ID>14549263-b47b-4e59-96a1-2d0d13e19343</cbc:ID>
-	<!--BT-04-->
+	<!-- Notice Identifier (BT-701) -->
+	<cbc:ID>9fe2b9d7-c32a-4dcb-af3f-35bf584d0abb</cbc:ID>
+	<!-- Procedure Identifier (BT-04) -->
 	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
-	<!--BT-05-->
-	<cbc:IssueDate>2023-03-23+01:00</cbc:IssueDate>
+	<!-- Notice Dispatch Date (BT-05) -->
+	<cbc:IssueDate>2023-05-23+01:00</cbc:IssueDate>
 	<cbc:IssueTime>20:59:32+01:00</cbc:IssueTime>
-	<!--BT-757-->
+	<!-- Notice Version (BT-757) -->
 	<cbc:VersionID>03</cbc:VersionID>
-	<!--BT-01-->
+	<!-- Notice Publication Date Preferred (BT-738) -->
+	<cbc:RequestedPublicationDate>2020-03-15+01:00</cbc:RequestedPublicationDate>
+	<!-- Procedure Legal Basis (BT-01) -->
 	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
-	<!--BT-03--> <!--BT-02-->
+	<!-- Form Type (BT-03) --> <!-- Notice Type (BT-02) -->
 	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
-	<!--BT-702-->
+	<!-- Notice Official Language (BT-702) -->
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<!-- Notice Additional Language (BT-702) -->
 	<cac:AdditionalNoticeLanguage>
 		<cbc:ID>FRA</cbc:ID>
 	</cac:AdditionalNoticeLanguage>
 	<cac:ContractingParty>
-		<!--BT-508-->
+		<!-- Buyer Profile URL (BT-508) -->
 		<cbc:BuyerProfileURI>https://profile.example.com</cbc:BuyerProfileURI>
+		<!-- Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740) use the same elements -->
 		<cac:ContractingPartyType>
-			<!--BT-11-->
+			<!-- Buyer Legal Type (BT-11) -->
 			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
 		</cac:ContractingPartyType>
+		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) use the same elements -->
 		<cac:ContractingActivity>
-			<!--BT-10-->
+			<!-- Activity Authority (BT-10) -->
 			<cbc:ActivityTypeCode listName="authority-activity">econ-aff</cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
 		<cac:Party>
@@ -172,10 +188,12 @@ This XML is intended to include all and only elements permissible by the schema 
 			<!-- Note: cbc:EndpointID is excluded here because it is not relevant to a Buyer role. -->
 			<!-- Note: this use of cac:PartyIdentification/cbc:ID is as a Reference to an Organization -->
 			<cac:PartyIdentification>
-				<!--OPT-300-->
+				<!-- Buyer Technical Identifier Reference (OPT-300) -->
 				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 			</cac:PartyIdentification>
+			<!-- Procurement service provider and TED eSender use the same elements -->
 			<cac:ServiceProviderParty>
+				<!-- TED eSender -->
 				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
 				<cac:Party>
 					<!-- Note: this use of cac:PartyIdentification/cbc:ID is as a Reference to an Organization -->
@@ -191,6 +209,7 @@ This XML is intended to include all and only elements permissible by the schema 
 		<!-- no BTs at root level require Extensions -->
 		<!-- Cross Border Law (BT-09), BT-01 Legal Basis (Local) use the same element structures -->
 		<cac:ProcurementLegislationDocumentReference>
+			<!-- Cross Border Law (Procedure) (BT-09) -->
 			<cbc:ID>CrossBorderLaw</cbc:ID>
 			<cbc:DocumentDescription languageID="ENG">Cross border law description ---</cbc:DocumentDescription>
 		</cac:ProcurementLegislationDocumentReference>
@@ -235,8 +254,7 @@ This XML is intended to include all and only elements permissible by the schema 
 		<cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
 		<!-- Lots All Required (BT-763) -->
 		<cbc:PartPresentationCode listName="tenderlot-presentation">all</cbc:PartPresentationCode>
-		<!-- PIN Competition Termination (BT-756) -->
-		<cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
+		<!-- PIN Competition Termination (BT-756) is only valid for CANs -->
 		<cac:ProcessJustification>
 			<!-- Procedure Accelerated (BT-106) -->
 			<!-- Procedure Accelerated Justification (BT-1351) / Code -->
@@ -272,10 +290,6 @@ This XML is intended to include all and only elements permissible by the schema 
 			<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 		</cac:RequestedTenderTotal>
 		<cac:MainCommodityClassification>
-			<!--Classification Type (BT-26), Main Classification Codes (BT-262) -->
-			<cbc:ItemClassificationCode listName="cpv">79710000</cbc:ItemClassificationCode>
-		</cac:MainCommodityClassification>
-		<cac:MainCommodityClassification>
 			<ext:UBLExtensions>
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
@@ -287,6 +301,8 @@ This XML is intended to include all and only elements permissible by the schema 
 					</ext:ExtensionContent>
 				</ext:UBLExtension>
 			</ext:UBLExtensions>
+			<!--Classification Type (BT-26), Main Classification Codes (BT-262) -->
+			<cbc:ItemClassificationCode listName="cpv">79710000</cbc:ItemClassificationCode>
 		</cac:MainCommodityClassification>
 		<!-- Additional Classification Codes (BT-263) -->
 		<cac:AdditionalCommodityClassification>
@@ -334,7 +350,7 @@ This XML is intended to include all and only elements permissible by the schema 
 	<!-- Regarding LotsGroup: There are no BTs or schema elements in a LotsGroup that are not also possible in a Lot -->
 	<!-- So no LotsGroup will be included -->
 	<cac:ProcurementProjectLot>
-	<!-- Purpose Lot Identifier BT-137 -->
+		<!-- Purpose Lot Identifier BT-137 -->
 		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
 		<cac:TenderingTerms>
 			<ext:UBLExtensions>
@@ -790,11 +806,6 @@ This XML is intended to include all and only elements permissible by the schema 
 				<!-- Additional Classification Code (BT-263) -->
 				<cbc:ItemClassificationCode listName="cpv">75121000</cbc:ItemClassificationCode>
 			</cac:AdditionalCommodityClassification>
-			
-
-	
-	
-<!-- STOPPED HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->	
 			<cac:RealizedLocation>
 				<!-- Place of Performance Additional Information (BT-728) -->
 				<cbc:Description languageID="ENG">The main location is ...</cbc:Description>
