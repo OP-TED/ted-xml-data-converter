@@ -100,6 +100,15 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	<xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
 
 
+	<xsl:variable name="ted-organisations" as="element()*">
+		<ted-orgs>
+			<!--<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY|ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY|ted:ADDRESS_MEDIATION_BODY|ted:ADDRESS_REVIEW_INFO))">-->
+			<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY|ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_BODY|ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY|ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_INFO)">
+				<xsl:variable name="path" select="functx:path-to-node(.)"/>
+				<path><xsl:value-of select="$path"/></path>
+			</xsl:for-each>
+		</ted-orgs>
+	</xsl:variable>
 
 	<doc:doc> Form Language </doc:doc>
 	
@@ -278,6 +287,11 @@ cac:ProcurementProjectLot
 
 <xsl:template name="organizations">
 	<xsl:comment> efac:Organizations here </xsl:comment>
+	<efac:Organizations>
+		<xsl:for-each select="$ted-organisations">
+			<xsl:apply-templates select="."/>
+		</xsl:for-each>
+	</efac:Organizations>
 </xsl:template>
 
 <xsl:template name="publication">
