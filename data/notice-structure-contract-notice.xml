@@ -511,7 +511,7 @@ This XML is intended to include all and only elements permissible by the schema 
 				<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
 				<!-- Jury Decision Binding (BT-42) -->
 				<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
-				<!--BT-120-->
+				<!-- No Negotiation Necessary (BT-120) -->
 				<cbc:NoFurtherNegotiationIndicator>false</cbc:NoFurtherNegotiationIndicator>
 				<cac:AwardingCriterion>
 					<!-- Reminder: some elements in this section would not normally coexist -->
@@ -546,6 +546,15 @@ This XML is intended to include all and only elements permissible by the schema 
 					<!-- Jury Member Name (BT-46) -->
 					<cbc:FamilyName>Mrs Pamela Smith</cbc:FamilyName>
 				</cac:TechnicalCommitteePerson>
+				<!-- Prize information is only for notices of type "CN design" -->
+				<cac:Prize>
+					<!-- Prize Rank (BT-44) -->
+					<cbc:RankCode>1</cbc:RankCode>
+					<!-- Value Prize (BT-644) -->
+					<cbc:ValueAmount currencyID="EUR">5000</cbc:ValueAmount>
+					<!-- Rewards Other (BT-45) -->
+					<cbc:Description languageID="ENG">The first prize winner will be awarded ...</cbc:Description>
+				</cac:Prize>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
