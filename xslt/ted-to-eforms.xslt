@@ -112,9 +112,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 	<xsl:template match="*">
 		<xsl:variable name="name" select="opfun:prefix-and-name(.)"/>
-		<element name="{$name}">
+		<tedelement name="{$name}">
 			<xsl:apply-templates select="@*|node()"></xsl:apply-templates>
-		</element>
+		</tedelement>
 	</xsl:template>
 
 	<xsl:template match="@*">
