@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- STATUS: DRAFT
+This XML is intended to include all and only elements permissible by the schema for an eForms Prior Information Notice,
+    that are actually used for eForms. Therefor to exclude elements that are not used in a given context.
+	For example, exclude cbc:PostBox everywhere,
+	And exclude all permitted elements except cbc:ID within cac:AdditionalInformationParty
+	See https://citnet.tech.ec.europa.eu/CITnet/jira/browse/TEDEFO-490 and 
+	https://citnet.tech.ec.europa.eu/CITnet/jira/browse/TEDEFO-491
+	Values used are fictitious, and may be redundant or inconsistent or contradictory
+    XML copied originally from pin-only_24_maximal.xml.
+
+	This also means this XML will fail many Schematron rules which state some elements are not allowed for 
+	some Notice Subtypes, or because of co-constraints or CM or CF rules, or because values are wrong.
+
+	Repeatability. Where elements are repeatable, it is not the purpose of this XML to show that. Only one instance
+	of these elements will usually be present.
+	However, where the schema defines an exclusive choice of child elements for a parent element (meaning that the XML would
+	be schema-invalid if the same parent element contained both child elements), then the parent element will be
+	repeated to allow all possible child elements to be present, and maintain schema validity.
+-->
+<PriorInformationNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>11</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+						<!-- Note: This is a Prior Information Notice, which does not contain information about economic operators -->
+						<!-- So, these elements are not allowed: efbc:NaturalPersonIndicator, 	
+								efbc:ListedOnRegulatedMarketIndicator, efac:UltimateBeneficialOwner -->
+							<efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+							<efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+							<efbc:AwardingCPBIndicator>false</efbc:AwardingCPBIndicator>
+							<efac:Company>
+								<!-- Organization Internet Address (BT-505) -->
+								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
+								<!-- Organization eDelivery Gateway (BT-509) -->
+								<cbc:EndpointID>https://endpoint-example.fin-adm.com</cbc:EndpointID>
+								<efbc:CompanySizeCode listName="economic-operator-size">small</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<!-- Company Technical Identifier (OPT-200) -->
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<!-- Organization Name (BT-500) -->
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Financial Adinistration for ...</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!-- Organization Street (BT-510) (a) -->
+									<!-- Note: cbc:BuildingName is not used for eForms, so the name of a building should be held in cbc:StreetName -->
+									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+									<!-- Organization Street (BT-510) (b) -->
+									<cbc:AdditionalStreetName>2 Bat Square</cbc:AdditionalStreetName>
+									<!-- Organization Part Name (BT-16) -->
+									<cbc:Department>Finance Division</cbc:Department>
+									<!-- Organization City (BT-513) -->
+									<cbc:CityName>London</cbc:CityName>
+									<!-- Organization Post Code (BT-512) -->
+									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
+									<!-- Organization Country Subdivision (BT-507) -->
+									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<!-- cbc:Region is too vague to be used for an address -->
+									<!-- Organization Street (BT-510) (c) -->
+									<cac:AddressLine>
+										<cbc:Line>Gotham Street</cbc:Line>
+									</cac:AddressLine>
+									<!-- Organization Country Code (BT-514) -->
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<!-- Question: cac:PartyTaxScheme is defined here in EFORMS-ExtensionAggregateComponents-2.3.xsd but is not mentioned in the documentation. Is it allowed? -->
+								<cac:PartyLegalEntity>
+									<!-- Organization Identifier (BT-501) -->
+									<cbc:CompanyID schemeID="002">998298</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<!-- Organization Contact Point (BT-502) -->
+									<cbc:Name>Info desk</cbc:Name>
+									<!-- Organization Contact Telephone Number (BT-503) -->
+									<cbc:Telephone>+44 123456780</cbc:Telephone>
+									<!--Organization Contact Fax (BT-739) -->
+									<cbc:Telefax>+44 123456789</cbc:Telefax>
+									<!-- Organization Contact Email Address (BT-506) -->
+									<cbc:ElectronicMail>info@fin-adm.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
+								<cbc:EndpointID>http://tender-submit.fin-adm.com</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Procurement Department</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!-- Organization Street (BT-510) (a) -->
+									<!-- Note: cbc:BuildingName is not used for eForms, so the name of a building should be held in cbc:StreetName -->
+									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+									<!-- Organization Street (BT-510) (b) -->
+									<cbc:AdditionalStreetName>2 Bat Square</cbc:AdditionalStreetName>
+									<!-- Organization Part Name (BT-16) -->
+									<cbc:Department>Procurement Dpt</cbc:Department>
+									<!-- Organization City (BT-513) -->
+									<cbc:CityName>London</cbc:CityName>
+									<!-- Organization Post Code (BT-512) -->
+									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
+									<!--BT-507-->
+									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<!-- cbc:Region is too vague to be used for an address -->
+									<!-- Organization Street (BT-510) (c) -->
+									<cac:AddressLine>
+										<cbc:Line>Gotham Street</cbc:Line>
+									</cac:AddressLine>
+									<!-- Organization Country Code (BT-514) -->
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<!-- Organization Contact Point (BT-502) -->
+									<cbc:Name>Head of Procurement Department</cbc:Name>
+									<!-- Organization Contact Telephone Number (BT-503) -->
+									<cbc:Telephone>+123 45678</cbc:Telephone>
+									<!--Organization Contact Fax (BT-739) -->
+									<cbc:Telefax>+44 123456789</cbc:Telefax>
+									<!-- Organization Contact Email Address (BT-506) -->
+									<cbc:ElectronicMail>proc-info@fin-adm.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<!-- Note: This is a Prior Information Notice, which does not contain information about economic operators -->
+						<!-- So, element efac:UltimateBeneficialOwner is not allowed -->
+					</efac:Organizations>
+					<efac:Publication>
+						<efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+						<efbc:GazetteID schemeName='ojs-id'>123/2023</efbc:GazetteID>
+						<efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+					</efac:Publication>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<!-- UBL version ID (UBL) -->
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<!-- Customization ID (UBL) -->
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<!-- Notice Identifier (BT-701) -->
+	<cbc:ID>9fe2b9d7-c32a-4dcb-af3f-35bf584d0abb</cbc:ID>
+	<!-- Procedure Identifier (BT-04) This exists only for Competition PINs -->
+	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+	<!-- Notice Dispatch Date (BT-05) -->
+	<cbc:IssueDate>2023-05-23+01:00</cbc:IssueDate>
+	<cbc:IssueTime>20:59:32+01:00</cbc:IssueTime>
+	<!-- Notice Version (BT-757) -->
+    <cbc:VersionID>03</cbc:VersionID>
+	<!-- Notice Publication Date Preferred (BT-738) -->
+	<cbc:RequestedPublicationDate>2020-03-15+01:00</cbc:RequestedPublicationDate>
+	<!-- Future Notice (BT-127) -->
+	<cbc:PlannedDate>2020-03-15+01:00</cbc:PlannedDate>
+	<!-- Procedure Legal Basis (BT-01) -->
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<!-- Form Type (BT-03) --> <!-- Notice Type (BT-02) -->
+	<cbc:NoticeTypeCode listName="planning">pin-cfc-standard</cbc:NoticeTypeCode>
+	<!-- Notice Official Language (BT-702) -->
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<!-- Notice Additional Language (BT-702) -->
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>FRA</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:ContractingParty>
+		<!-- Buyer Profile URL (BT-508) -->
+		<cbc:BuyerProfileURI>https://profile.example.com</cbc:BuyerProfileURI>
+		<!-- Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740) use the same elements -->
+		<cac:ContractingPartyType>
+			<!-- Buyer Legal Type (BT-11) -->
+			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) use the same elements -->
+		<cac:ContractingActivity>
+			<!-- Activity Authority (BT-10) -->
+			<cbc:ActivityTypeCode listName="authority-activity">econ-aff</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<!-- Note: cbc:WebsiteURI is excluded here presumably because of cbc:BuyerProfileURI above -->
+			<!-- Note: cbc:EndpointID is excluded here because it is not relevant to a Buyer role. -->
+			<!-- Note: this use of cac:PartyIdentification/cbc:ID is as a Reference to an Organization -->
+			<cac:PartyIdentification>
+				<!-- Buyer Technical Identifier Reference (OPT-300) -->
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<!-- Procurement service provider and TED eSender use the same elements -->
+			<cac:ServiceProviderParty>
+				<!-- TED eSender -->
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<!-- Note: this use of cac:PartyIdentification/cbc:ID is as a Reference to an Organization -->
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0007</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingTerms>
+		<!-- A limited number of BTs are specified for tendering terms at root level -->
+		<!-- no BTs at root level require Extensions -->
+		<!-- Cross Border Law (BT-09), BT-01 Legal Basis (Local) use the same element structures -->
+		<cac:ProcurementLegislationDocumentReference>
+			<!-- Cross Border Law (Procedure) (BT-09) -->
+			<cbc:ID>CrossBorderLaw</cbc:ID>
+			<cbc:DocumentDescription languageID="ENG">Cross border law description ---</cbc:DocumentDescription>
+		</cac:ProcurementLegislationDocumentReference>
+		<!-- Exclusion Grounds (BT-67) -->
+		<cac:TendererQualificationRequest>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ENG">Exclusion Ground description ---</cbc:Description>
+			</cac:SpecificTendererRequirement>
+		</cac:TendererQualificationRequest>
+		<cac:LotDistribution>
+			<!-- Lots Max Awarded (BT-33) -->
+			<cbc:MaximumLotsAwardedNumeric>2</cbc:MaximumLotsAwardedNumeric>
+			<!-- Lots Max Allowed (BT-31) -->
+			<cbc:MaximumLotsSubmittedNumeric>2</cbc:MaximumLotsSubmittedNumeric>
+			<!-- Group of Lots exist for Competition PINs -->
+			<cac:LotsGroup>
+				<!-- Group Identifier (BT-330) -->
+				<cbc:LotsGroupID>GLO-0001</cbc:LotsGroupID>
+				<cac:ProcurementProjectLotReference>
+					<!-- Group Lot Identifier (BT-1375) -->
+					<cbc:ID>LOT-0001</cbc:ID>
+				</cac:ProcurementProjectLotReference>
+			</cac:LotsGroup>
+		</cac:LotDistribution>
+	</cac:TenderingTerms>
+	<cac:TenderingProcess>
+		<!-- A limited number of BTs are specified for tendering process at root level -->
+		<ext:UBLExtensions>
+			<ext:UBLExtension>
+				<ext:ExtensionContent>
+					<efext:EformsExtension>
+					<!-- Procurement Relaunch indicator (BT-634) -->
+						<efbc:ProcedureRelaunchIndicator>true</efbc:ProcedureRelaunchIndicator>
+						<!--Interrupted Mark-up -->
+					</efext:EformsExtension>
+				</ext:ExtensionContent>
+			</ext:UBLExtension>
+		</ext:UBLExtensions>
+		<!-- Procedure Features (BT-88) -->
+		<cbc:Description languageID="ENG">Description of the procedure  ---</cbc:Description>
+		<!-- Procedure Type (BT-105) -->
+		<cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
+		<!-- Lots All Required (BT-763) -->
+		<cbc:PartPresentationCode listName="tenderlot-presentation">all</cbc:PartPresentationCode>
+		<!-- PIN Competition Termination (BT-756) is only valid for CANs -->
+		<cac:ProcessJustification>
+			<!-- Procedure Accelerated (BT-106) -->
+			<!-- Procedure Accelerated Justification (BT-1351) / Code -->
+			<!-- Procedure Accelerated Justification (BT-1351) ​/ Text -->
+			<!-- These all use the same elements as Direct Award Justification (BT-135, BT-136, BT-1252) -->
+			<!-- Direct Award Justification (BT-136) ​/ Code -->
+			<cbc:ProcessReasonCode listName="direct-award-justification">ecom-excl</cbc:ProcessReasonCode>
+			<!-- Direct Award Justification (BT-135) ​/ Text  -->
+			<cbc:ProcessReason languageID="ENG">Direct award is justified ...</cbc:ProcessReason>
+			<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) -->
+			<cbc:Description>123e4567-e89b-12d3-a456-426614174000</cbc:Description>
+		</cac:ProcessJustification>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<!-- A limited number of BTs are specified for procurement project at root level -->
+		<!-- Internal Identifier (BT-22) -->
+		<cbc:ID schemeName="InternalID">2023-P-0001</cbc:ID>
+		<!-- Title (BT-21) -->
+		<cbc:Name languageID="ENG">Procurement Title ---</cbc:Name>
+		<!-- Description (BT-24) -->
+		<cbc:Description languageID="ENG">Description ---</cbc:Description>
+		<!-- Main Nature (BT-23) -->
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<!-- Additional Information (BT-300)  -->
+		<cbc:Note languageID="ENG">Additional information ---</cbc:Note>
+		<cac:ProcurementAdditionalType>
+			<!-- Additional Nature (different from Main) (BT-531) -->
+			<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+			<cbc:ProcurementType languageID="ENG">Description of additional nature</cbc:ProcurementType>
+		</cac:ProcurementAdditionalType>
+		<cac:RequestedTenderTotal>
+			<!-- Estimated Value (BT-27) -->
+			<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
+		</cac:RequestedTenderTotal>
+		<cac:MainCommodityClassification>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SubsidiaryClassification>
+								<cbc:ItemClassificationCode listName="subsidiary-abc">AFGH</cbc:ItemClassificationCode>
+							</efac:SubsidiaryClassification>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<!--Classification Type (BT-26), Main Classification Codes (BT-262) -->
+			<cbc:ItemClassificationCode listName="cpv">79710000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<!-- Additional Classification Codes (BT-263) -->
+		<cac:AdditionalCommodityClassification>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SubsidiaryClassification>
+								<cbc:ItemClassificationCode listName="subsidiary-abc">hdjd</cbc:ItemClassificationCode>
+							</efac:SubsidiaryClassification>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:ItemClassificationCode listName="abc">SCE/548</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<!-- Place of performance (BG-708) -->
+		<cac:RealizedLocation>
+			<!-- Place of Performance Additional Information (BT-728) -->
+			<cbc:Description languageID="ENG">The main location is ...</cbc:Description>
+			<cac:Address>
+				<!-- Place Performance Street (BT-5101 (a)) -->
+				<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+				<!-- Place Performance Street (BT-5101 (b)) -->
+				<cbc:AdditionalStreetName>2 Bat Square</cbc:AdditionalStreetName>
+				<!-- Place Performance City (BT-5131) -->
+				<cbc:CityName>London</cbc:CityName>
+				<!-- Place Performance Post Code (BT-5121) -->
+				<cbc:PostalZone>N1 9FL</cbc:PostalZone>
+				<!-- Place Performance Country Subdivision (BT-5071) -->
+				<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+				<!-- Place Performance Services Other (BT-727) -->
+				<cbc:Region>anyw-eea</cbc:Region>
+				<!-- Place Performance Street (BT-5101 (c)) -->
+				<cac:AddressLine>
+					<cbc:Line>Gotham Street</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<!-- Place Performance Country Code (BT-5141) -->
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<!-- Regarding LotsGroup: There are no BTs or schema elements in a LotsGroup that are not also possible in a Lot -->
+	<!-- So no LotsGroup will be included -->
+	<cac:ProcurementProjectLot>
+		<!-- Purpose Lot Identifier BT-137 -->
+		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<cac:TenderingTerms>
+			<!-- Selection Criteria and Subcontracting obligations are not relevant to Parts -->
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<!-- Selection Criteria Type (BT-747) -->
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<!-- Selection Criteria Name (BT-749) -->
+								<cbc:Name languageID="ENG">Name of the selection criteria---</cbc:Name>
+								<!-- Selection Criteria Description (BT-750) -->
+								<cbc:Description languageID="ENG">Selection Criteria Description ---</cbc:Description>
+								<!-- Selection Criteria Used (BT-748) -->
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+								<!-- Selection Criteria Second Stage Invite (BT-40) -->
+								<efbc:SecondStageIndicator>true</efbc:SecondStageIndicator>
+								<efac:CriterionParameter>
+									<!-- The two types of criterion for Selection Criteria Second Stage use the same element -->
+									<!-- Invite Number Weight (BT-7531) and Invite Number Threshold (BT-7532) -->
+									<!-- Selection Criteria Second Stage Invite Number Threshold (BT-7532) -->
+									<efbc:ParameterCode listName="number-threshold">max-pass</efbc:ParameterCode>
+									<!-- Selection Criteria Second Stage Invite Number (BT-752) -->
+									<efbc:ParameterNumeric>3</efbc:ParameterNumeric>
+								</efac:CriterionParameter>
+							</efac:SelectionCriteria>
+							<efac:TenderSubcontractingRequirements>
+								<!-- Subcontracting Tender Indication (BT-651)-->
+								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">subc-oblig</efbc:TenderSubcontractingRequirementsCode>
+							</efac:TenderSubcontractingRequirements>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<!-- Variants (BT-63) -->
+			<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+			<!-- EU Funds (BT-60) -->
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<!-- Performing Staff Qualification (BT-79) -->
+			<cbc:RequiredCurriculaCode listName="performing-staff-qualification">t-requ</cbc:RequiredCurriculaCode>
+			<!-- Recurrence (BT-94) -->
+			<cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+			<!-- Recurrence Description (BT-95) -->
+			<cbc:RecurringProcurementDescription languageID="ENG">Description of the recurrence ---</cbc:RecurringProcurementDescription>
+			<!-- Security Clearance Deadline (BT-78) -->
+			<cbc:LatestSecurityClearanceDate>2023-05-23+02:00</cbc:LatestSecurityClearanceDate>
+			<!-- Multiple Tenders (BT-769) -->
+			<cbc:MultipleTendersCode listName="permission">allowed</cbc:MultipleTendersCode>
+			<cac:RequiredFinancialGuarantee>
+				<!-- Guarantee Required (BT-751) -->
+				<cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+				<!-- Guarantee Required Description (BT-75) -->
+				<cbc:Description languageID="ENG">Guarantee Required Description ---</cbc:Description>
+			</cac:RequiredFinancialGuarantee>
+			<!-- cac:ProcurementLegisationDocumentReference only relevant at Notice level -->
+			<cac:FiscalLegislationDocumentReference>
+				<!-- cbc:ID is mandatory but not defined in the documentation -->
+				<cbc:ID>FiscalDocID1</cbc:ID>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<!-- URL to the legislation -->
+						<cbc:URI>http:fiscal-legislation.gov.stat</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+				<cac:IssuerParty>
+					<cac:PartyIdentification>
+						<!--OPT-301-->
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:IssuerParty>
+			</cac:FiscalLegislationDocumentReference>
+			<cac:EnvironmentalLegislationDocumentReference>
+				<!-- cbc:ID is mandatory but not defined in the documentation -->
+				<cbc:ID>EnvDocID1</cbc:ID>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<!-- URL to the legislation -->
+						<cbc:URI>http://environmental-legislation.gov.stat</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+				<cac:IssuerParty>
+					<cac:PartyIdentification>
+						<!--OPT-301-->
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:IssuerParty>
+			</cac:EnvironmentalLegislationDocumentReference>
+			<cac:EmploymentLegislationDocumentReference>
+				<!-- cbc:ID is mandatory but not defined in the documentation -->
+				<cbc:ID>EmplDocID1</cbc:ID>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<!-- URL to the legislation -->
+						<cbc:URI>http://employment-legislation.gov.stat</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+				<cac:IssuerParty>
+					<cac:PartyIdentification>
+						<!--OPT-301-->
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:IssuerParty>
+			</cac:EmploymentLegislationDocumentReference>
+			<cac:CallForTendersDocumentReference>
+				<cbc:ID>20210521/CTFD/ENG/7654-02</cbc:ID>
+				<!-- Documents Restricted Justification (BT-707) -->
+				<cbc:DocumentTypeCode listName="communication-justification">ipr-iss</cbc:DocumentTypeCode>
+				<!-- Documents Restricted (BT-14) -->
+				<cbc:DocumentType>restricted-document</cbc:DocumentType>
+				<!-- Documents Official Language (BT-708) -->
+				<cbc:LanguageID>ENG</cbc:LanguageID>
+				<!-- OPT-050 ? -->
+				<cbc:DocumentStatusCode listName="linguistic-status">official</cbc:DocumentStatusCode>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<!-- Documents URL (BT-15) OR Documents Restricted URL (BT-615) -->
+						<cbc:URI>https://mywebsite.com/proc/2019024/accessinfo</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:CallForTendersDocumentReference>
+			<cac:PaymentTerms>
+				<!-- Terms Financial (BT-77) -->
+				<cbc:Note languageID="ENG">Terms Financial ---</cbc:Note>
+			</cac:PaymentTerms>
+			<!-- Exclusion Grounds (BT-67) are not used in Lots etc -->
+			<!-- Reserved Participation (BT-71) uses the same element as in the following -->
+			<cac:TendererQualificationRequest>
+				<!-- Tenderer Legal Form (BT-761) -->
+				<cbc:CompanyLegalFormCode>true</cbc:CompanyLegalFormCode>
+				<!-- Tenderer Legal Form Description (BT-76) -->
+				<cbc:CompanyLegalForm languageID="ENG">Tenderer Legal Form Description ---</cbc:CompanyLegalForm>
+			</cac:TendererQualificationRequest>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<!-- Late Tenderer Information (BT-771) -->
+					<cbc:TendererRequirementTypeCode listName="missing-info-submission">late-all</cbc:TendererRequirementTypeCode>
+					<!-- Late Tenderer Information Description (BT-772) -->
+					<cbc:Description languageID="ENG">Later tender information description ---</cbc:Description>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:AllowedSubcontractTerms>
+				<!-- Subcontracting Obligation (BT-65) -->
+				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">subc-min</cbc:SubcontractingConditionsCode>
+				<!-- Subcontracting Obligation Maximum (BT-729) -->
+				<cbc:MaximumPercent>45.5</cbc:MaximumPercent>
+				<!-- Subcontracting Obligation Minimum (BT-64) -->
+				<cbc:MinimumPercent>25.5</cbc:MinimumPercent>
+			</cac:AllowedSubcontractTerms>
+			<!-- the following BTs all use the same element cbc:ExecutionRequirementCode -->
+			<!-- Reserved Execution (BT-736), Electronic Invoicing (BT-743), Submission Electronic Catalogue (BT-764), Submission Electronic Signature (BT-744) -->
+			<cac:ContractExecutionRequirement>
+				<!-- Terms Performance (BT-70) -->
+				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="ENG">Terms Performance ---</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<!-- Following Contract (BT-41) -->
+				<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+				<!-- Jury Decision Binding (BT-42) -->
+				<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
+				<!--BT-120-->
+				<cbc:NoFurtherNegotiationIndicator>false</cbc:NoFurtherNegotiationIndicator>
+				<cac:AwardingCriterion>
+					<!-- Reminder: some elements in this section would not normally coexist -->
+					<!-- Award Criteria Order Justification (BT-733) -->
+					<cbc:Description languageID="ENG">AC order justification ---</cbc:Description>
+					<!-- Award Criteria Complicated (BT-543) -->
+					<cbc:CalculationExpression languageID="ENG">Price-quality score calculation is based on …</cbc:CalculationExpression>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!-- Award Criterion Number Weight (BT-5421), Award Criterion Number Fixed (BT-5422), Award Criterion Number Threshold (BT-5423) -->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!-- Award Criterion Number (BT-541) -->
+											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!-- Award Criterion Type (BT-539) -->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+						<!-- Award Criterion Name (BT-734) -->
+						<cbc:Name languageID="ENG">Name of AC ---</cbc:Name>
+						<!-- Award Criterion Description (BT-540) -->
+						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+				<cac:TechnicalCommitteePerson>
+					<!-- Jury Member Name (BT-46) -->
+					<cbc:FamilyName>Mrs Pamela Smith</cbc:FamilyName>
+				</cac:TechnicalCommitteePerson>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<!-- Additional Info Provider Technical Identifier Reference OPT-301 -->
+					<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:DocumentProviderParty>
+				<cac:PartyIdentification>
+					<!-- Document Provider Technical Identifier Reference OPT-301 -->
+					<cbc:ID schemeName="organization">TPO-0002</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:DocumentProviderParty>
+			<cac:TenderRecipientParty>
+				<cac:PartyIdentification>
+					<!-- Tender Recipient Technical Identifier Reference OPT-301 -->
+					<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderRecipientParty>
+			<cac:TenderEvaluationParty>
+				<cac:PartyIdentification>
+					<!-- Tender Evaluator Technical Identifier Reference OPT-301 -->
+					<cbc:ID schemeName="organization">TPO-0003</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderEvaluationParty>
+			<cac:TenderValidityPeriod>
+				<!-- Tender Validity Deadline (BT-98) -->
+				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+			</cac:TenderValidityPeriod>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<!-- Review Deadline Description (BT-99) -->
+					<cbc:Description languageID="ENG">Review Deadline Description ---</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<!-- Appeal Information Providing Organization OPT-301 -->
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<!-- Review organization OPT-301 -->
+						<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<!-- Mediation Organization OPT-301 -->
+						<cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<!-- Tendering language BT-97 -->
+				<cbc:ID>ENG</cbc:ID>
+			</cac:Language>
+			<cac:PostAwardProcess>
+				<!-- Electronic Ordering (BT-92) -->
+				<cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+				<!--Electronic Payment (BT-93) -->
+				<cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+			</cac:PostAwardProcess>
+			<!-- Participant Name (BT-47) -->
+			<cac:EconomicOperatorShortList>
+				<cac:PreSelectedParty>
+					<cac:PartyName>
+						<cbc:Name>Mrs L. Hürst</cbc:Name>
+					</cac:PartyName>
+				</cac:PreSelectedParty>
+			</cac:EconomicOperatorShortList>
+			<cac:SecurityClearanceTerm>
+				<!-- Security Clearance (BT-578) -->
+				<cbc:Code listName="required">true</cbc:Code>
+				<!-- Security Clearance Description (BT-732) -->
+				<cbc:Description languageID="ENG">Security Clearance Description ---</cbc:Description>
+			</cac:SecurityClearanceTerm>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<!-- Tool Name (BT-632) -->
+							<efbc:AccessToolName>Access tool ---</efbc:AccessToolName>
+							<!-- Procurement Relaunch (BT-634) -->
+							<efbc:ProcedureRelaunchIndicator>true</efbc:ProcedureRelaunchIndicator>
+							<!-- Deadline Receipt Expressions (BT-630) -->
+							<efac:InterestExpressionReceptionPeriod>
+								<cbc:EndDate>2019-10-28+01:00</cbc:EndDate>
+								<cbc:EndTime>18:00:00+01:00</cbc:EndTime>
+							</efac:InterestExpressionReceptionPeriod>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<!-- SubmissionElectronic (BT-17) -->
+			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+			<!--  Successive Reduction Indicator (Procedure) (BT-52) -->
+			<cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
+			<!-- GPA Coverage (BT-115) -->
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<!-- Tool Atypical URL (BT-124) -->
+			<cbc:AccessToolsURI>https://my-atypical-tool.com/</cbc:AccessToolsURI>
+			<!-- NOTE: For BT-756, there is contradiction in the documentation whether this is used at Lot level. It may need to be removed -->
+			<!-- PIN Competition Termination (BT-756) -->
+			<cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
+			<!-- Deadline Receipt Tenders (BT-131) -->
+			<cac:TenderSubmissionDeadlinePeriod>
+				<cbc:EndDate>2023-05-22+01:00</cbc:EndDate>
+				<cbc:EndTime>20:59:32+01:00</cbc:EndTime>
+			</cac:TenderSubmissionDeadlinePeriod>
+			<!-- Dispatch Invitation Tender (BT-130) -->
+			<cac:InvitationSubmissionPeriod>
+				<cbc:StartDate>2019-11-15+01:00</cbc:StartDate>
+			</cac:InvitationSubmissionPeriod>
+			<!-- Dispatch Invitation Interest (BT-631) -->
+			<cac:ParticipationInvitationPeriod>
+				<cbc:StartDate>2019-11-15+01:00</cbc:StartDate>
+			</cac:ParticipationInvitationPeriod>
+			<!-- Deadline Receipt Requests (BT-1311) -->
+			<cac:ParticipationRequestReceptionPeriod>
+				<cbc:EndDate>2023-05-23+01:00</cbc:EndDate>
+				<cbc:EndTime>20:59:32+01:00</cbc:EndTime>
+			</cac:ParticipationRequestReceptionPeriod>
+			<!-- Additional Information Deadline (BT-13) -->
+			<cac:AdditionalInformationRequestPeriod>
+				<cbc:EndDate>2023-05-20+01:00</cbc:EndDate>
+				<cbc:EndTime>20:59:32+01:00</cbc:EndTime>
+			</cac:AdditionalInformationRequestPeriod>
+			<cac:NoticeDocumentReference>
+				<!-- Previous Planning Identifier (BT-125) -->
+				<cbc:ID>9c0fd704-64d3-4294-a3b6-6df45911ab9f-01</cbc:ID>
+				<!-- Previous Planning Part Identifier (BT-1251) -->
+				<cbc:ReferencedDocumentInternalAddress>PAR-0003</cbc:ReferencedDocumentInternalAddress>
+			</cac:NoticeDocumentReference>
+			<cac:ProcessJustification>
+				<!--BT-19-->
+				<!-- the following BTs all use the same element cbc:ProcessReasonCode -->
+				<!-- Submission Nonelectronic Justification (BT-19), Procedure Accelerated (BT-106), Procedure Accelerated Justification (BT-1351) / Code, -->
+				<!-- Direct Award Justification (BT-136) ​/ Code -->
+				<cbc:ProcessReasonCode listName="direct-award-justification">ecom-excl</cbc:ProcessReasonCode>
+				<!-- Direct Award Justification (BT-135) ​/ Text -->
+				<cbc:ProcessReason languageID="ENG">Direct award is justified ...</cbc:ProcessReason>
+				<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) -->
+				<cbc:Description languageID="ENG">123e4567-e89b-12d3-a456-426614174000</cbc:Description>
+			</cac:ProcessJustification>
+			<cac:EconomicOperatorShortList>
+				<!-- Maximum Candidates Indicator (BT-661) -->
+				<cbc:LimitationDescription>true</cbc:LimitationDescription>
+				<!-- Maximum Candidates (BT-51) -->
+				<cbc:MaximumQuantity>7</cbc:MaximumQuantity>
+				<!-- Minimum Candidates (BT-50) -->
+				<cbc:MinimumQuantity>3</cbc:MinimumQuantity>
+			</cac:EconomicOperatorShortList>
+			<cac:OpenTenderEvent>
+				<!-- Public Opening Date (BT-132) -->
+				<cbc:OccurrenceDate>2023-05-23+01:00</cbc:OccurrenceDate>
+				<cbc:OccurrenceTime>20:59:32+01:00</cbc:OccurrenceTime>
+				<!-- Public Opening Description (BT-134) -->
+				<cbc:Description languageID="ENG">Public Opening Description ---</cbc:Description>
+				<!-- Public Opening Place (BT-133) -->
+				<cac:OccurenceLocation>
+					<cbc:Description languageID="ENG">URL or Address ---</cbc:Description>
+				</cac:OccurenceLocation>
+			</cac:OpenTenderEvent>
+			<cac:AuctionTerms>
+				<!-- Electronic Auction (BT-767) -->
+				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+				<!-- Electronic Auction Description (BT-122) -->
+				<cbc:Description languageID="ENG">Electronic auction description ---</cbc:Description>
+				<!-- Electronic Auction URL (BT-123) BT-132-->
+				<cbc:AuctionURI>https://electronic-auction.com</cbc:AuctionURI>
+			</cac:AuctionTerms>
+			<cac:FrameworkAgreement>
+				<!-- Framework Maximum Participants Number (BT-113) -->
+				<cbc:MaximumOperatorQuantity>10</cbc:MaximumOperatorQuantity>
+				<!-- Framework Duration Justification (BT-109) -->
+				<cbc:Justification languageID="ENG">Framework Duration Justification ---</cbc:Justification>
+				<!-- Group Framework Estimated Maximum Value (BT-157) -->
+				<cbc:EstimatedMaximumValueAmount  currencyID="EUR">10000</cbc:EstimatedMaximumValueAmount>
+				<cac:SubsequentProcessTenderRequirement>
+					<!--OPT-090-->
+					<cbc:Name>buyer-categories</cbc:Name>
+					<!-- Framework Buyer Categories (BT-111) -->
+					<cbc:Description languageID="ENG">Framework Buyer Categories ---</cbc:Description>
+				</cac:SubsequentProcessTenderRequirement>
+			</cac:FrameworkAgreement>
+			<cac:ContractingSystem>
+				<!-- Dynamic Purchasing System (BT-766) -->
+				<cbc:ContractingSystemTypeCode listName="dps-usage">dps-list</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+			<!-- Framework Agreement (BT-765) and Dynamic Purchasing System (BT-766) both use cac:ContractingSystem/cbc:ContractingSystemTypeCode -->
+		<cac:ProcurementProject>
+			<!-- Internal ID (BT-22) -->
+			<cbc:ID schemeName="InternalID">Object Reference Number---</cbc:ID>
+			<!-- Title (BT-21) -->
+			<cbc:Name languageID="ENG">Title ---</cbc:Name>
+			<!-- Description (BT-24) -->
+			<cbc:Description languageID="ENG">Description ---</cbc:Description>
+			<!-- Main Nature (BT-23) -->
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<!-- Quantity (BT-25), Unit (BT-625) -->
+			<cbc:EstimatedOverallContractQuantity unitCode="HUR">1000</cbc:EstimatedOverallContractQuantity>
+			<!-- Additional information (BT-300) -->
+			<cbc:Note languageID="ENG">Additional information for GLO-0001 ProcurementProject ---</cbc:Note>
+			<!-- Suitable for SMEs (BT-726) -->
+			<cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+			<!-- the following BTs all use the same element cac:ProcurementAdditionalType/cbc:ProcurementTypeCode -->
+			<!-- Additional Nature (different from Main) (BT-531), Strategic Procurement (BT-06), Green Procurement (BT-774), -->
+			<!-- Social Procurement (BT-775), Innovative Procurement (BT-776), Accessibility (BT-754) -->
+			<!-- These BTs additionally use element cac:ProcurementAdditionalType/cbc:ProcurementType -->
+			<!-- Strategic Procurement Description (BT-777), Accessibility Justification (BT-755) -->
+			<cac:ProcurementAdditionalType>
+				<!-- Strategic Procurement (BT-06) -->
+				<cbc:ProcurementTypeCode listName="strategic-procurement">env-imp</cbc:ProcurementTypeCode>
+				<!--S trategic Procurement Description (BT-777) -->
+				<cbc:ProcurementType languageID="ENG">Strategic procurement description ---</cbc:ProcurementType>
+			</cac:ProcurementAdditionalType>
+			<cac:RequestedTenderTotal>
+				<!-- Estimated Value (BT-27) -->
+				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
+			</cac:RequestedTenderTotal>
+			<cac:MainCommodityClassification>
+				<!-- Subsidiary Classification Type (e.g. CPV) (BT-26) -->
+				<!-- Subsidiary Classification Code (BT-262) -->
+				<ext:UBLExtensions>
+					<ext:UBLExtension>
+						<ext:ExtensionContent>
+							<efext:EformsExtension>
+								<efac:SubsidiaryClassification>
+									<cbc:ItemClassificationCode listName="subsidiary-clfctn">ABC123</cbc:ItemClassificationCode>
+								</efac:SubsidiaryClassification>
+							</efext:EformsExtension>
+						</ext:ExtensionContent>
+					</ext:UBLExtension>
+				</ext:UBLExtensions>
+				<!-- Classification Type (e.g. CPV) (BT-26) -->
+				<!-- Main Classification Code (BT-262) -->
+				<cbc:ItemClassificationCode listName="cpv">75121000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<!-- Additional Classification Type -->
+				<!-- Additional Classification Code (BT-263) -->
+				<ext:UBLExtensions>
+					<ext:UBLExtension>
+						<ext:ExtensionContent>
+							<efext:EformsExtension>
+								<efac:SubsidiaryClassification>
+									<cbc:ItemClassificationCode listName="subsidiary-clfctn">PQR567</cbc:ItemClassificationCode>
+								</efac:SubsidiaryClassification>
+							</efext:EformsExtension>
+						</ext:ExtensionContent>
+					</ext:UBLExtension>
+				</ext:UBLExtensions>
+				<!-- Additional Classification Type -->
+				<!-- Additional Classification Code (BT-263) -->
+				<cbc:ItemClassificationCode listName="cpv">75121000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:RealizedLocation>
+				<!-- Place of Performance Additional Information (BT-728) -->
+				<cbc:Description languageID="ENG">The main location is ...</cbc:Description>
+				<cac:Address>
+					<!-- Place Performance Street (BT-5101 (a)) -->
+					<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+					<!-- Place Performance Street (BT-5101 (b)) -->
+					<cbc:AdditionalStreetName>2 Bat Square</cbc:AdditionalStreetName>
+					<!-- Place Performance City (BT-5131) -->
+					<cbc:CityName>London</cbc:CityName>
+					<!-- Place Performance Post Code (BT-5121) -->
+					<cbc:PostalZone>N1 9FL</cbc:PostalZone>
+					<!-- Place Performance Country Subdivision (BT-5071) -->
+					<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+					<!-- Place Performance Services Other (BT-727) -->
+					<cbc:Region>anyw-eea</cbc:Region>
+					<!-- Place Performance Street (BT-5101 (c)) -->
+					<cac:AddressLine>
+						<cbc:Line>Gotham Street</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<!-- Place Performance Country Code (BT-5141) -->
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<!-- Duration Start Date (BT-536) -->
+				<cbc:StartDate>2023-01-01+01:00</cbc:StartDate>
+				<!-- Duration End Date (BT-537) -->
+				<cbc:EndDate>2023-05-23+01:00</cbc:EndDate>
+				<!-- Duration Period (BT-36) -->
+				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+				<!-- Duration Other (BT-538) -->
+				<cbc:DescriptionCode listName="Duration">unlimited</cbc:DescriptionCode>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<!-- Options Description (BT-54) -->
+				<cbc:OptionsDescription languageID="ENG">Options description ---</cbc:OptionsDescription>
+				<!-- Renewal maximum (BT-58) -->
+				<cbc:MaximumNumberNumeric>3</cbc:MaximumNumberNumeric>
+				<cac:Renewal>
+					<cac:Period>
+						<!-- Renewal Description (BT-57) -->
+						<cbc:Description languageID="ENG">Renewal description ---</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</PriorInformationNotice>
