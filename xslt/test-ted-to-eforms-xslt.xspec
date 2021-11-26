@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" 
+xmlns:doc="http://www.pnp-software.com/XSLTdoc" xmlns:opfun="http://publications.europa.eu/local/xslt-functions"
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" 
+xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents" xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents" xmlns:efext="http://eforms/v1.0/Extensions" xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+
+               stylesheet="ted-to-eforms.xslt">
+
+   <x:scenario label="test function get-eforms-notice-subtype">
+      <!-- $ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $ted-form-document-code -->
+      <x:call function="opfun:get-eforms-notice-subtype">
+         <x:param select="'F01_2014'"/>
+         <x:param select="'F01'"/>
+         <x:param select="'PRI_ONLY'"/>
+         <x:param select="'32014L0024'"/>
+         <x:param select="'0'"/>
+      </x:call>
+
+      <!-- check the result -->
+      <x:expect label="Must return form subtype 4" select="'4'"/>
+   </x:scenario>
+
+	<x:scenario label="when processing a LOT_DIVISION element with LOT_MAX_ONE_TENDERER and LOT_MAX_NUMBER">
+		<x:context>
+		  <ted:LOT_DIVISION>
+			  <ted:LOT_MAX_NUMBER>22</ted:LOT_MAX_NUMBER>
+			  <ted:LOT_MAX_ONE_TENDERER>6</ted:LOT_MAX_ONE_TENDERER>
+		  </ted:LOT_DIVISION>
+		</x:context>
+		<x:expect label="The result should be a cac:LotDistribution element">
+			<cac:LotDistribution>
+				<cbc:MaximumLotsAwardedNumeric>5</cbc:MaximumLotsAwardedNumeric>
+				<cbc:MaximumLotsSubmittedNumeric>22</cbc:MaximumLotsSubmittedNumeric>
+			</cac:LotDistribution>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="when processing an empty LOT_DIVISION element">
+	   <x:context>
+		  <ted:LOT_DIVISION/>
+	   </x:context>
+	   <x:expect
+		  label="The raw actual result should be a tedelement"
+		  test="($x:result[1] treat as element())/fn:local-name() = 'tedelement'" />
+	   <x:expect
+		  label="The raw actual result should be an empty element"
+		  test="($x:result[1] treat as element())/child::node() => empty()" />
+	</x:scenario>
+</x:description>
