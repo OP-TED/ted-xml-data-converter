@@ -8,10 +8,13 @@ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:sp
 xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" >
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	
+<xsl:include href="functx-1.0.1-doc.xsl"/>
+
 <xsl:variable name="newline" select="'&#10;'"/>
 <xsl:variable name="tab" select="'&#09;'"/>
 
 <xsl:function name="opfun:prefix-and-name" as="xs:string">
+	<!-- function to return the prefix and name of given element, e.g. "cbc:ID" -->
 	<xsl:param name="elem" as="element()"/>
 	<xsl:variable name="name" select="$elem/fn:local-name()"/>
 	<xsl:variable name="prefix" select="fn:prefix-from-QName(fn:node-name($elem))"/>
@@ -19,6 +22,7 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" >
 </xsl:function>
 
 <xsl:variable name="languages">
+	<!-- variable containing XML of map of language codes from TED to eForms from codelist "languages.xml" -->
 	<xsl:variable name="source-language-file" select="fn:document('languages.xml')"/>
 	<languages>
 		<xsl:for-each select="$source-language-file//record[op-mapped-code/@source='TED']">
@@ -33,12 +37,14 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" >
 </xsl:variable>
 
 <xsl:function name="opfun:get-eforms-language" as="xs:string">
+	<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
 	<xsl:param name="ted-language" as="xs:string"/>
 	<xsl:variable name="mapped-language" select="$languages//language[ted eq $ted-language]/fn:string(eforms)"/>
 	<xsl:value-of select="if ($mapped-language) then $mapped-language else 'UNKNOWN-LANGUAGE'"/>
 </xsl:function>
 
 <xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">
+	<!-- function to get eForms Notice Subtype value, given values from TED XML notice -->
 	<xsl:param name="ted-form-element"/>
 	<xsl:param name="ted-form-name"/>
 	<xsl:param name="ted-form-notice-type"/>
@@ -61,14 +67,36 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" >
 <xsl:variable name="form-types" select="fn:document('ubl-form-types.xml')"/>
 
 <xsl:function name="opfun:get-eforms-element-name" as="xs:string">
+	<!-- function to get name of eForms schema root element, given abbreviation, e.g. "CN" to "ContractNotice" -->
 	<xsl:param name="form-abbreviation" as="xs:string"/>
 	<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
 </xsl:function>
 
 <xsl:function name="opfun:get-eforms-xmlns" as="xs:string">
+	<!-- function to get name of eForms schema XML namespace given abbreviation, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
 	<xsl:param name="form-abbreviation" as="xs:string"/>
 	<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
 </xsl:function>
 
+<xsl:function name="opfun:descendants-deep-equal" as="xs:boolean">
+	<!-- function to deep-compare the contents of two nodes, returning TRUE or FALSE. The names of the root node elements are ignored -->
+	<xsl:param name="node1" as="node()"/>
+	<xsl:param name="node2" as="node()"/>
+	<xsl:variable name="out1">
+		<out>
+			<xsl:for-each select="$node1/node()">
+				<xsl:copy-of select="."/>
+			</xsl:for-each>
+		</out>	
+	</xsl:variable>
+	<xsl:variable name="out2">
+		<out>
+			<xsl:for-each select="$node2/node()">
+				<xsl:copy-of select="."/>
+			</xsl:for-each>
+		</out>	
+	</xsl:variable>
+	<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
+</xsl:function>
 	
 </xsl:stylesheet>
