@@ -3,7 +3,7 @@
 This XML is intended to include all and only elements permissible by the schema for an eForms Contract Notice,
     that are actually used for eForms. Therefor to exclude elements that are not used in a given context.
 	For example, exclude cbc:PostBox everywhere,
-	And exclude all permitted elements except cbc:ID within cac:AdditionalInformationParty
+	And exclude all permitted elements except cac:PartyIdentification within cac:AdditionalInformationParty
 	See https://citnet.tech.ec.europa.eu/CITnet/jira/browse/TEDEFO-490 and 
 	https://citnet.tech.ec.europa.eu/CITnet/jira/browse/TEDEFO-491
 	Values used are fictitious, and may be redundant or inconsistent or contradictory
