@@ -15,6 +15,12 @@
                   <cbc:SubTypeCode>29</cbc:SubTypeCode>
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <tedelement xmlns="" name="ted-orgs">
+                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY</tedelement>
+                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</tedelement>
+                  </tedelement>
+               </efac:Organizations>
                <!-- efac:Publication here -->
                <efac:Publication>
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>

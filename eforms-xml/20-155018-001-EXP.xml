@@ -15,6 +15,11 @@
                   <cbc:SubTypeCode>4</cbc:SubTypeCode>
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <tedelement xmlns="" name="ted-orgs">
+                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F01_2014/CONTRACTING_BODY</tedelement>
+                  </tedelement>
+               </efac:Organizations>
                <!-- efac:Publication here -->
                <efac:Publication>
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
@@ -58,7 +63,7 @@
             </cac:Country>
          </cac:PostalAddress>
       </cac:Party>
-      <element xmlns="" name="ADDRESS_FURTHER_INFO_IDEM"/>
+      <tedelement xmlns="" name="ADDRESS_FURTHER_INFO_IDEM"/>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
    <cac:TenderingTerms/>

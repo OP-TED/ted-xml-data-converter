@@ -15,6 +15,13 @@
                   <cbc:SubTypeCode>29</cbc:SubTypeCode>
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <tedelement xmlns="" name="ted-orgs">
+                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY</tedelement>
+                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</tedelement>
+                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY</tedelement>
+                  </tedelement>
+               </efac:Organizations>
                <!-- efac:Publication here -->
                <efac:Publication>
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
@@ -124,7 +131,7 @@
             </cac:Country>
          </cac:PostalAddress>
       </cac:Party>
-      <element xmlns="" name="CA_ACTIVITY_OTHER">Cybersecurity</element>
+      <tedelement xmlns="" name="CA_ACTIVITY_OTHER">Cybersecurity</tedelement>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
    <cac:TenderingTerms/>
