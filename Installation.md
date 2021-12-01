@@ -71,7 +71,7 @@ The Unix command to test the XSLT is:
 
 [path to XSpec folder]/bin/xspec.sh xslt/test-ted-to-eforms-xslt.xspec
 
-
+XSpec compiles the given XSpec test file to XSLT, then executes it. The resulting report is available in XML and HTML format. All these files are placed in an `xspec` folder within the `xslt` folder.
 
 
 
