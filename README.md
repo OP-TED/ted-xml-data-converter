@@ -1,6 +1,8 @@
-## TED XML to eForms XML Converter
+# TED XML to eForms XML Converter
 
-Project to convert notices in TED XML format to eForms XML format
+Project to convert notices in TED XML format to eForms XML format.
+
+Please see [Installation.md](Installation.md) for installation and usage instructions.
 
 ### Summary
 The repository contains the following folders:
@@ -31,34 +33,19 @@ Currently, the `xslt` folder contains these files:
 | Testing |
 | [test-ted-to-eforms-xslt.xspec](xslt/test-ted-to-eforms-xslt.xspec) | XSPec file for testing the XSLT |
 
-
-<br>
 <br>
 
-### Conversion using the command line
+### Analysis files in the `data` folder
 
-The conversion is currently being tested using the Saxon-HE 9.9.1.7J Java processor, available here: https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. Documentation is available here: https://saxonica.com/documentation9.9/index.html#!using-xsl
+These files are in draft status.
 
-A typical Unix command-line command to convert a file is:
+The "structure" files are intended to include all possible elements used in eForms. This excludes elements that are valid according to the relevant eForms schema, but which are not actually used in eForms. Use of the correct attributes and values is not guaranteed. These files will not pass the eForms business rules Schematron validation. Element values used are fictitious, and may be redundant or inconsistent or contradictory.
 
-`java  -Xms6291456  -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform  -dtd:off -expand:off -strip:all  -s:ted-xml/21-000061-001-EXP.xml -xsl:xslt/ted-to-eforms.xslt -o:eforms-xml/21-000061-001-EXP.xml`
-
-To convert all the test TED XML files use:
-
-`find ted-xml -type f -name "*.xml" | while read -r file; do outfile=${file/ted-xml/eforms-xml}; java -Xms6291456 -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform -dtd:off -expand:off -strip:all  -s:"$file" -xsl:xslt/ted-to-eforms.xslt -o:"$outfile"; done `
-
-<br>
-<br>
-
-### Testing the XSLT
-
-The XSLT can be tested using the unit-testing [XSpec framework](https://github.com/xspec/xspec). Tests are written in XML, and reports are output in both XML and HTML. Installation instructions, documentation and a tutorial are available on the [XSpec wiki](https://github.com/xspec/xspec/wiki/Getting-Started).
-
-The Unix command to test the XSLT is:
-
-[path to XSpec folder]/bin/xspec.sh xslt/test-ted-to-eforms-xslt.xspec
+Repeatability. Where elements are repeatable, it is not the purpose of these XML files to show that. Only one instance of these elements will usually be present. However, where the schema defines an exclusive choice of child elements for a parent element (meaning that the XML would be schema-invalid if the same parent element contained both child elements), then the parent element will be repeated to allow all possible child elements to be present, and maintain schema validity.
 
 
-
-
-
+| File | Purpose |
+| --- | --- |
+| notice-structure-CN.xml | XML file containing all possible used elements for any Contract Notice |
+| notice-structure-CAN.xml | XML file containing all possible used elements for any Contract Award Notice |
+| notice-structure-PIN-CFC.xml | XML file containing all possible used elements for any PIN used as a Call for Competition Notice |
