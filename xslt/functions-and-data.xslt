@@ -13,6 +13,104 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" >
 <xsl:variable name="newline" select="'&#10;'"/>
 <xsl:variable name="tab" select="'&#09;'"/>
 
+<!-- GLOBAL VARIABLES -->
+
+	<doc:doc> Form Name </doc:doc>
+	<!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
+	<xsl:variable name="ted-form-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY]"/> <!-- this is all the TED form elements -->
+	<xsl:variable name="ted-form-main-element" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/> <!-- this is the TED form element to process -->
+	<xsl:variable name="ted-form-additional-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/> <!-- these are the other TED form elements -->
+	
+	<xsl:variable name="ted-form-elements-names" select="fn:distinct-values($ted-form-elements/fn:local-name())"/> <!-- F06_2014 -->
+	<xsl:variable name="ted-form-element-name" select="$ted-form-main-element/fn:local-name()"/> <!-- F06_2014 or CONTRACT_DEFENCE or MOVE or OTH_NOT or ... -->
+	<xsl:variable name="ted-form-name" select="$ted-form-main-element/fn:string(@FORM)"/><!-- F06 or 17 or T02 or ... -->
+	<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
+	<xsl:variable name="ted-form-document-code" select="/ted:TED_EXPORT/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+	<xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
+	<xsl:variable name="ted-form-additional-languages" select="$ted-form-additional-elements/fn:string(@LG)"/>
+	 
+	<xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
+	
+	<xsl:variable name="legal-basis-element" select="$ted-form-main-element/*[1]"/> <!-- the legal basis element is always the first child of the form element -->
+	
+	<doc:doc> Legal basis </doc:doc>
+	<xsl:variable name="legal-basis">
+		<xsl:choose>
+			<xsl:when test="$legal-basis-element/fn:local-name() eq 'LEGAL_BASIS_OTHER'">OTHER</xsl:when>
+			<xsl:otherwise><xsl:value-of select="$legal-basis-element/@VALUE"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
+	<xsl:variable name="legal-basis-other-text" select="if ($legal-basis eq 'OTHER') then $legal-basis-element/fn:string(P) else ''"/>
+	
+	<doc:doc> Form Types </doc:doc>
+	<!-- TODO draft, needs development -->
+	<!-- TODO requires mapping of TED forms to eForms type, subtype, xsd -->
+	
+	<xsl:variable name="eforms-notice-subtype">
+		<xsl:value-of select="opfun:get-eforms-notice-subtype($ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $ted-form-document-code)"/>
+	</xsl:variable>
+	
+	<xsl:variable name="eforms-subtypes-pin" as="xs:string*">
+		<xsl:for-each select="1 to 9"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
+		<xsl:sequence select="('E1', 'E2')"/>
+	</xsl:variable>
+
+	<xsl:variable name="eforms-subtypes-cn" as="xs:string*">
+		<xsl:for-each select="10 to 24"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
+		<xsl:sequence select="('E3')"/>
+	</xsl:variable>
+
+	<xsl:variable name="eforms-subtypes-can" as="xs:string*">
+		<xsl:for-each select="25 to 40"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
+		<xsl:sequence select="('E4')"/>
+	</xsl:variable>
+	
+	<xsl:variable name="eforms-form-type">
+		<xsl:choose>
+			<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-pin"><xsl:value-of select="'PIN'"/></xsl:when>
+			<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-cn"><xsl:value-of select="'CN'"/></xsl:when>
+			<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-can"><xsl:value-of select="'CAN'"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
+	<xsl:variable name="ubl-xsd-type">
+		<xsl:choose>
+			<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-pin"><xsl:value-of select="'PIN'"/></xsl:when>
+			<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-cn"><xsl:value-of select="'CN'"/></xsl:when>
+			<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-can"><xsl:value-of select="'CAN'"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
+
+	<xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
+
+
+
+<xsl:variable name="tedaddresses" as="element()*">
+<!--
+All F forms XPaths that contain element COUNTRY
+AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR/COUNTRY
+AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_PARTY/COUNTRY
+COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY/COUNTRY
+COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY/COUNTRY
+COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO/COUNTRY
+CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY/COUNTRY
+CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL/COUNTRY
+CONTRACTING_BODY/ADDRESS_FURTHER_INFO/COUNTRY
+CONTRACTING_BODY/ADDRESS_PARTICIPATION/COUNTRY
+-->
+	<ted-orgs>
+		<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY/(ted:ADDRESS_CONTRACTING_BODY | ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL | ted:ADDRESS_FURTHER_INFO | ted:ADDRESS_PARTICIPATION) | ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY | ted:ADDRESS_MEDIATION_BODY | ted:ADDRESS_REVIEW_INFO) | ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS/ted:CONTRACTOR/(ted:ADDRESS_CONTRACTOR | ted:ADDRESS_PARTY))">
+			<xsl:variable name="path" select="functx:path-to-node(.)"/>
+			<path><xsl:value-of select="$path"/></path>
+		</xsl:for-each>
+	</ted-orgs>
+</xsl:variable>
+
+
 <xsl:function name="opfun:prefix-and-name" as="xs:string">
 	<!-- function to return the prefix and name of given element, e.g. "cbc:ID" -->
 	<xsl:param name="elem" as="element()"/>
