@@ -18,11 +18,12 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 <xsl:template match="ted:URL_GENERAL">
 	<cbc:WebsiteURI><xsl:apply-templates/></cbc:WebsiteURI>
 </xsl:template>
-
+<!-- Need to investigate purpose and meaning of element URL_BUYER in addresses not CONTRACTING_BODY -->
+<!--
 <xsl:template match="ted:URL_BUYER">
 	<cbc:EndpointID><xsl:apply-templates/></cbc:EndpointID>
 </xsl:template>
-
+-->
 <xsl:template match="ted:ADDRESS">
 	<cbc:StreetName><xsl:apply-templates/></cbc:StreetName>
 </xsl:template>
@@ -45,6 +46,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	</cac:Country>
 </xsl:template>
 
+<xsl:template match="ted:URL_BUYER">
+	<cbc:BuyerProfileURI><xsl:apply-templates/></cbc:BuyerProfileURI>
+</xsl:template>
 
 
 <!-- 

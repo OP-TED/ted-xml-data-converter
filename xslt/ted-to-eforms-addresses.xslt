@@ -12,10 +12,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 	<xsl:template match="ted:CONTRACTING_BODY">
 		<cac:ContractingParty>
-			<xsl:apply-templates select="ted:CA_TYPE"/>
+			<xsl:apply-templates select="ted:ADDRESS_CONTRACTING_BODY/ted:URL_BUYER"/>
+			<xsl:apply-templates select="ted:CA_TYPE|CA_TYPE_OTHER"/>
 			<xsl:apply-templates select="ted:CA_ACTIVITY"/>
-			<xsl:apply-templates select="ted:ADDRESS_CONTRACTING_BODY"/>
-			<xsl:apply-templates select="*[not(fn:local-name(.) = ('CA_TYPE', 'CA_ACTIVITY', 'ADDRESS_CONTRACTING_BODY'))]"/>
+			<cac:Party>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization"><xsl:value-of select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(.,'ADDRESS_CONTRACTING_BODY')]/../orgid"/></cbc:ID>
+				</cac:PartyIdentification>
+			</cac:Party>
 		</cac:ContractingParty>
 	</xsl:template>
 
@@ -81,7 +85,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xs:element ref="URL_BUYER" minOccurs="0"/>
 	-->
 		<xsl:apply-templates select="ted:URL_GENERAL"/>
-		<xsl:apply-templates select="ted:URL_BUYER"/>
+		<!-- Need to investigate purpose and meaning of element URL_BUYER in addresses not CONTRACTING_BODY -->
+		<!--<xsl:apply-templates select="ted:URL_BUYER"/>-->
 		<cac:PartyIdentification><cbc:ID schemeName="organization"><xsl:value-of select="../orgid"/></cbc:ID></cac:PartyIdentification>
 		<xsl:apply-templates select="ted:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
@@ -107,7 +112,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</cac:PostalAddress>
 	</xsl:template>
 	
-<xsl:template match="ted:CA_TYPE">
+	<xsl:template match="ted:CA_TYPE">
 <!--
 buyer-legal-type codelist
 cga Central government authority
@@ -131,25 +136,25 @@ int-org International organisation
 eu-ins-bod-ag EU institution, body or agency
 rl-aut Regional or local authority
 eu-int-org European Institution/Agency or International Organisation
--->
 
-	<cac:ContractingPartyType>
-<!--
-buyer-contracting-type codelist
-Not yet available
--->
-		<cbc:PartyType><xsl:value-of select="@VALUE"/></cbc:PartyType>
-	</cac:ContractingPartyType>
-</xsl:template>
 
-<xsl:template match="ted:CA_ACTIVITY">
-<!--
-authority-activity codelist
-Not yet available
 -->
-	<cac:ContractingActivity>
-		<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
-	</cac:ContractingActivity>
-</xsl:template>
+		<xsl:variable name="ca-type" select="@VALUE"/>
+		<xsl:variable name="buyer-legal-type" select="$ca-types//mapping[ca-type=$ca-type]/fn:string(buyer-legal-type)"/>
+		<cac:ContractingPartyType>
+			<cbc:PartyType><xsl:value-of select="$buyer-legal-type"/></cbc:PartyType>
+		</cac:ContractingPartyType>
+	<!-- buyer-contracting-type codelist Not yet available -->
+		<cac:ContractingPartyType>
+			<cbc:PartyType><xsl:value-of select="'buyer-contracting-type'"/></cbc:PartyType>
+		</cac:ContractingPartyType>
+	</xsl:template>
+
+	<xsl:template match="ted:CA_ACTIVITY">
+	<!-- authority-activity codelist not yet available -->
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+	</xsl:template>
 
 </xsl:stylesheet>
