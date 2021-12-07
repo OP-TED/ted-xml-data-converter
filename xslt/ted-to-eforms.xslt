@@ -205,6 +205,7 @@ cac:ProcurementProjectLot
 <xsl:template name="organizations">
 	<xsl:comment> efac:Organizations here </xsl:comment>
 	<efac:Organizations>
+		<xsl:sequence select="$tedaddressesuniquewithid"/>
 		<!-- there are no F##_2014 forms that do not have ADDRESS_CONTRACTING_BODY -->
 		<!-- need to investigate elements efbc:GroupLeadIndicator, efbc:AcquiringCPBIndicator, efbc:AwardingCPBIndicator here -->
 		<xsl:variable name="ismorethanonebuyer" select="$tedaddressesuniquewithid//ted-org/path[fn:contains(.,'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]"/>
