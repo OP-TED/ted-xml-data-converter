@@ -90,166 +90,186 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
 
 
+<!-- ADDRESSES -->
 
-<xsl:variable name="tedaddresses" as="element()">
-<!--
-All F forms XPaths that contain element COUNTRY
-AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR/COUNTRY
-AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_PARTY/COUNTRY
-COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY/COUNTRY
-COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY/COUNTRY
-COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO/COUNTRY
-CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY/COUNTRY
-CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL/COUNTRY
-CONTRACTING_BODY/ADDRESS_FURTHER_INFO/COUNTRY
-CONTRACTING_BODY/ADDRESS_PARTICIPATION/COUNTRY
--->
-	<ted-orgs>
-		<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY/(ted:ADDRESS_CONTRACTING_BODY | ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL | ted:ADDRESS_FURTHER_INFO | ted:ADDRESS_PARTICIPATION) | ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY | ted:ADDRESS_MEDIATION_BODY | ted:ADDRESS_REVIEW_INFO) | ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS/ted:CONTRACTOR/(ted:ADDRESS_CONTRACTOR | ted:ADDRESS_PARTY))">
+	<xsl:variable name="tedaddresses" as="element()">
+	<!--
+	All F forms XPaths that contain element COUNTRY
+	AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR/COUNTRY
+	AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_PARTY/COUNTRY
+	COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY/COUNTRY
+	COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY/COUNTRY
+	COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO/COUNTRY
+	CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY/COUNTRY
+	CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL/COUNTRY
+	CONTRACTING_BODY/ADDRESS_FURTHER_INFO/COUNTRY
+	CONTRACTING_BODY/ADDRESS_PARTICIPATION/COUNTRY
+	-->
+		<ted-orgs>
+			<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY/(ted:ADDRESS_CONTRACTING_BODY | ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL | ted:ADDRESS_FURTHER_INFO | ted:ADDRESS_PARTICIPATION) | ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY | ted:ADDRESS_MEDIATION_BODY | ted:ADDRESS_REVIEW_INFO) | ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS/ted:CONTRACTOR/(ted:ADDRESS_CONTRACTOR | ted:ADDRESS_PARTY))">
+				<ted-org>
+					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+					<path><xsl:value-of select="$path"/></path>
+					<tedaddress>
+						<xsl:for-each select="*">
+							<xsl:copy-of select="." copy-namespaces="no"/>
+						</xsl:for-each>
+					</tedaddress>
+				</ted-org>
+			</xsl:for-each>
+		</ted-orgs>
+	</xsl:variable>
+
+	<xsl:variable name="tedaddressesunique" as="element()">
+		<ted-orgs>
+		<xsl:for-each select="$tedaddresses//ted-org">
+			<xsl:variable name="pos" select="fn:position()"/>
+			<xsl:variable name="address" as="element()" select="tedaddress"/>
+			<!-- find if any preceding addresses are deep-equal to this one -->
+			<xsl:variable name="prevsame">
+				<xsl:for-each select="./preceding-sibling::ted-org">
+					<xsl:if test="fn:deep-equal(tedaddress, $address)">
+						<xsl:value-of select="'same'"/>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:variable>
+			<data><xsl:value-of select="$pos"/><xsl:text>:</xsl:text><xsl:value-of select="$prevsame"/></data>
+			<!-- if no preceding addresses are deep-equal to this one, then ... -->
+			<xsl:if test="$prevsame = ''">
+				<ted-org>
+				<!-- get list of paths of addresses, this one and following, that are deep-equal to this one -->
+				<path><xsl:sequence select="fn:string(path)"/></path>
+				<xsl:for-each select="./following-sibling::ted-org">
+					<xsl:if test="fn:deep-equal(tedaddress, $address)">
+						<path><xsl:sequence select="fn:string(path)"/></path>
+					</xsl:if>
+				</xsl:for-each>
+				<!-- copy the address -->
+				<xsl:copy-of select="tedaddress"/>
+				</ted-org>
+			</xsl:if>
+		</xsl:for-each>
+		</ted-orgs>
+	</xsl:variable>
+	
+	<xsl:variable name="tedaddressesuniquewithid" as="element()">
+		<ted-orgs>
+		<xsl:for-each select="$tedaddressesunique//ted-org">
 			<ted-org>
-				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
-				<path><xsl:value-of select="$path"/></path>
-				<tedaddress>
-					<xsl:for-each select="*">
-						<xsl:copy-of select="." copy-namespaces="no"/>
-					</xsl:for-each>
-				</tedaddress>
+				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-org) + 1), 3)"/>
+				<orgid><xsl:text>ORG-</xsl:text><xsl:value-of select="$typepos"/></orgid>
+				<xsl:copy-of select="type"/>
+				<xsl:copy-of select="path"/>
+				<xsl:copy-of select="tedaddress"/>
 			</ted-org>
 		</xsl:for-each>
-	</ted-orgs>
-</xsl:variable>
+		</ted-orgs>
+	</xsl:variable>
 
-<xsl:variable name="tedaddressesunique" as="element()">
-	<ted-orgs>
-	<xsl:for-each select="$tedaddresses//ted-org">
-		<xsl:variable name="pos" select="fn:position()"/>
-		<xsl:variable name="address" as="element()" select="tedaddress"/>
-		<!-- find if any preceding addresses are deep-equal to this one -->
-		<xsl:variable name="prevsame">
-			<xsl:for-each select="./preceding-sibling::ted-org">
-				<xsl:if test="fn:deep-equal(tedaddress, $address)">
-					<xsl:value-of select="'same'"/>
-				</xsl:if>
+
+	<xsl:variable name="languages">
+		<!-- variable containing XML of map of language codes from TED to eForms from codelist "languages.xml" -->
+		<xsl:variable name="source-language-file" select="fn:document('languages.xml')"/>
+		<languages>
+			<xsl:for-each select="$source-language-file//record[op-mapped-code/@source='TED']">
+				<language>
+					<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
+					<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
+					<ted><xsl:value-of select="$ted-form"/></ted>
+					<eforms><xsl:value-of select="$eforms-form"/></eforms>
+				</language>
 			</xsl:for-each>
-		</xsl:variable>
-		<data><xsl:value-of select="$pos"/><xsl:text>:</xsl:text><xsl:value-of select="$prevsame"/></data>
-		<!-- if no preceding addresses are deep-equal to this one, then ... -->
-		<xsl:if test="$prevsame = ''">
-			<ted-org>
-			<!-- get list of paths of addresses, this one and following, that are deep-equal to this one -->
-			<path><xsl:sequence select="fn:string(path)"/></path>
-			<xsl:for-each select="./following-sibling::ted-org">
-				<xsl:if test="fn:deep-equal(tedaddress, $address)">
-					<path><xsl:sequence select="fn:string(path)"/></path>
-				</xsl:if>
-			</xsl:for-each>
-			<!-- copy the address -->
-			<xsl:copy-of select="tedaddress"/>
-			</ted-org>
+		</languages>
+	</xsl:variable>
+
+
+
+<!-- LANGUAGES -->
+
+	<xsl:function name="opfun:get-eforms-language" as="xs:string">
+		<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
+		<xsl:param name="ted-language" as="xs:string"/>
+		<xsl:variable name="mapped-language" select="$languages//language[ted eq $ted-language]/fn:string(eforms)"/>
+		<xsl:value-of select="if ($mapped-language) then $mapped-language else 'UNKNOWN-LANGUAGE'"/>
+	</xsl:function>
+
+
+
+<!-- MAPPING FILES -->
+	
+	<xsl:variable name="form-types" select="fn:document('ubl-form-types.xml')"/>
+
+	<xsl:variable name="ca-types" select="fn:document('ca-types-mapping.xml')"/>
+
+
+
+<!-- FORM TYPES AND SUBTYPES -->
+
+	
+	<xsl:function name="opfun:get-eforms-element-name" as="xs:string">
+		<!-- function to get name of eForms schema root element, given abbreviation, e.g. "CN" to "ContractNotice" -->
+		<xsl:param name="form-abbreviation" as="xs:string"/>
+		<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
+	</xsl:function>
+	
+	<xsl:function name="opfun:get-eforms-xmlns" as="xs:string">
+		<!-- function to get name of eForms schema XML namespace given abbreviation, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
+		<xsl:param name="form-abbreviation" as="xs:string"/>
+		<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
+	</xsl:function>
+
+	<xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">
+		<!-- function to get eForms Notice Subtype value, given values from TED XML notice -->
+		<xsl:param name="ted-form-element"/>
+		<xsl:param name="ted-form-name"/>
+		<xsl:param name="ted-form-notice-type"/>
+		<xsl:param name="ted-form-legal-basis"/>
+		<xsl:param name="ted-form-document-code"/>
+		<xsl:variable name="notice-mapping-file" select="fn:document('ted-notice-mapping.xml')"/>
+		<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][legal-basis eq $ted-form-legal-basis][document-code eq $ted-form-document-code]"/>
+		<xsl:if test="fn:count($mapping-row) != 1">
+			<xsl:message terminate="yes">ERROR: found <xsl:value-of select="fn:count($mapping-row)"/> different eForms subtype mappings for this Notice:<xsl:value-of select="$newline"/>
+			<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
 		</xsl:if>
-	</xsl:for-each>
-	</ted-orgs>
-</xsl:variable>
-
-<xsl:variable name="tedaddressesuniquewithid" as="element()">
-	<ted-orgs>
-	<xsl:for-each select="$tedaddressesunique//ted-org">
-		<ted-org>
-			<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-org) + 1), 3)"/>
-			<orgid><xsl:text>ORG-</xsl:text><xsl:value-of select="$typepos"/></orgid>
-			<xsl:copy-of select="type"/>
-			<xsl:copy-of select="path"/>
-			<xsl:copy-of select="tedaddress"/>
-		</ted-org>
-	</xsl:for-each>
-	</ted-orgs>
-</xsl:variable>
+		<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
+		<xsl:if test="$eforms-subtype eq ''">
+			<xsl:message terminate="yes">ERROR: no eForms subtype mapping available for this Notice:<xsl:value-of select="$newline"/>
+			<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
+		</xsl:if>
+		<xsl:value-of select="$eforms-subtype"/>
+	</xsl:function>
 
 
-<xsl:function name="opfun:prefix-and-name" as="xs:string">
-	<!-- function to return the prefix and name of given element, e.g. "cbc:ID" -->
-	<xsl:param name="elem" as="element()"/>
-	<xsl:variable name="name" select="$elem/fn:local-name()"/>
-	<xsl:variable name="prefix" select="fn:prefix-from-QName(fn:node-name($elem))"/>
-	<xsl:value-of select="fn:string-join(($prefix,$name),':')"/>
-</xsl:function>
 
-<xsl:variable name="languages">
-	<!-- variable containing XML of map of language codes from TED to eForms from codelist "languages.xml" -->
-	<xsl:variable name="source-language-file" select="fn:document('languages.xml')"/>
-	<languages>
-		<xsl:for-each select="$source-language-file//record[op-mapped-code/@source='TED']">
-			<language>
-				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
-				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
-				<ted><xsl:value-of select="$ted-form"/></ted>
-				<eforms><xsl:value-of select="$eforms-form"/></eforms>
-			</language>
-		</xsl:for-each>
-	</languages>
-</xsl:variable>
+<!-- GENERAL FUNCTIONS -->
+	
+	<xsl:function name="opfun:descendants-deep-equal" as="xs:boolean">
+		<!-- function to deep-compare the contents of two nodes, returning TRUE or FALSE. The names of the root node elements are ignored -->
+		<xsl:param name="node1" as="node()"/>
+		<xsl:param name="node2" as="node()"/>
+		<xsl:variable name="out1">
+			<out>
+				<xsl:for-each select="$node1/node()">
+					<xsl:copy-of select="."/>
+				</xsl:for-each>
+			</out>	
+		</xsl:variable>
+		<xsl:variable name="out2">
+			<out>
+				<xsl:for-each select="$node2/node()">
+					<xsl:copy-of select="."/>
+				</xsl:for-each>
+			</out>	
+		</xsl:variable>
+		<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
+	</xsl:function>
 
-<xsl:function name="opfun:get-eforms-language" as="xs:string">
-	<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
-	<xsl:param name="ted-language" as="xs:string"/>
-	<xsl:variable name="mapped-language" select="$languages//language[ted eq $ted-language]/fn:string(eforms)"/>
-	<xsl:value-of select="if ($mapped-language) then $mapped-language else 'UNKNOWN-LANGUAGE'"/>
-</xsl:function>
-
-<xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">
-	<!-- function to get eForms Notice Subtype value, given values from TED XML notice -->
-	<xsl:param name="ted-form-element"/>
-	<xsl:param name="ted-form-name"/>
-	<xsl:param name="ted-form-notice-type"/>
-	<xsl:param name="ted-form-legal-basis"/>
-	<xsl:param name="ted-form-document-code"/>
-	<xsl:variable name="notice-mapping-file" select="fn:document('ted-notice-mapping.xml')"/>
-	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][legal-basis eq $ted-form-legal-basis][document-code eq $ted-form-document-code]"/>
-	<xsl:if test="fn:count($mapping-row) != 1">
-		<xsl:message terminate="yes">ERROR: found <xsl:value-of select="fn:count($mapping-row)"/> different eForms subtype mappings for this Notice:<xsl:value-of select="$newline"/>
-		<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
-	</xsl:if>
-	<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
-	<xsl:if test="$eforms-subtype eq ''">
-		<xsl:message terminate="yes">ERROR: no eForms subtype mapping available for this Notice:<xsl:value-of select="$newline"/>
-		<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
-	</xsl:if>
-	<xsl:value-of select="$eforms-subtype"/>
-</xsl:function>
-
-<xsl:variable name="form-types" select="fn:document('ubl-form-types.xml')"/>
-
-<xsl:function name="opfun:get-eforms-element-name" as="xs:string">
-	<!-- function to get name of eForms schema root element, given abbreviation, e.g. "CN" to "ContractNotice" -->
-	<xsl:param name="form-abbreviation" as="xs:string"/>
-	<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
-</xsl:function>
-
-<xsl:function name="opfun:get-eforms-xmlns" as="xs:string">
-	<!-- function to get name of eForms schema XML namespace given abbreviation, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
-	<xsl:param name="form-abbreviation" as="xs:string"/>
-	<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
-</xsl:function>
-
-<xsl:function name="opfun:descendants-deep-equal" as="xs:boolean">
-	<!-- function to deep-compare the contents of two nodes, returning TRUE or FALSE. The names of the root node elements are ignored -->
-	<xsl:param name="node1" as="node()"/>
-	<xsl:param name="node2" as="node()"/>
-	<xsl:variable name="out1">
-		<out>
-			<xsl:for-each select="$node1/node()">
-				<xsl:copy-of select="."/>
-			</xsl:for-each>
-		</out>	
-	</xsl:variable>
-	<xsl:variable name="out2">
-		<out>
-			<xsl:for-each select="$node2/node()">
-				<xsl:copy-of select="."/>
-			</xsl:for-each>
-		</out>	
-	</xsl:variable>
-	<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
-</xsl:function>
+	<xsl:function name="opfun:prefix-and-name" as="xs:string">
+		<!-- function to return the prefix and name of given element, e.g. "cbc:ID" -->
+		<xsl:param name="elem" as="element()"/>
+		<xsl:variable name="name" select="$elem/fn:local-name()"/>
+		<xsl:variable name="prefix" select="fn:prefix-from-QName(fn:node-name($elem))"/>
+		<xsl:value-of select="fn:string-join(($prefix,$name),':')"/>
+	</xsl:function>
 	
 </xsl:stylesheet>
