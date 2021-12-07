@@ -6,14 +6,15 @@
 # TESTING VERSION                                     
 ####################################################################################
  -->
-<xsl:stylesheet version="2.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<xsl:stylesheet version="2.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" 
 xmlns:doc="http://www.pnp-software.com/XSLTdoc" xmlns:opfun="http://publications.europa.eu/local/xslt-functions"
 xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" 
 xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents" xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents" xmlns:efext="http://eforms/v1.0/Extensions" xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " >
+exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " 
+>
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <xsl:include href="functions-and-data.xslt"/>
@@ -204,8 +205,24 @@ cac:ProcurementProjectLot
 <xsl:template name="organizations">
 	<xsl:comment> efac:Organizations here </xsl:comment>
 	<efac:Organizations>
-		<xsl:for-each select="$tedaddresses">
-			<xsl:apply-templates select="."/>
+		<!-- there are no F##_2014 forms that do not have ADDRESS_CONTRACTING_BODY -->
+		<!-- need to investigate elements efbc:GroupLeadIndicator, efbc:AcquiringCPBIndicator, efbc:AwardingCPBIndicator here -->
+		<xsl:variable name="ismorethanonebuyer" select="$tedaddressesuniquewithid//ted-org/path[fn:contains(.,'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]"/>
+		<xsl:for-each select="$tedaddressesuniquewithid//ted-org/tedaddress">
+			<efac:Organization>
+				<!-- efbc:GroupLeadIndicator -->
+				<xsl:if test="$ismorethanonebuyer and (../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY')])">
+					<efbc:GroupLeadIndicator>
+						<xsl:choose>
+							<xsl:when test="../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]">false</xsl:when>
+							<xsl:otherwise>true</xsl:otherwise>
+						</xsl:choose>
+					</efbc:GroupLeadIndicator>
+				</xsl:if>
+				<efac:Company>
+					<xsl:call-template name="org-address"/>
+				</efac:Company>
+			</efac:Organization>
 		</xsl:for-each>
 	</efac:Organizations>
 </xsl:template>
