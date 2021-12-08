@@ -83,6 +83,16 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	<cbc:MaximumLotsSubmittedNumeric>1</cbc:MaximumLotsSubmittedNumeric>
 </xsl:template>
 
+<xsl:template match="ted:PROCUREMENT_LAW">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:if test="$text ne ''">
+		<cac:ProcurementLegislationDocumentReference>
+			<cbc:ID>LocalLegalBasis</cbc:ID>
+			<cbc:DocumentDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:DocumentDescription>
+		</cac:ProcurementLegislationDocumentReference>
+	</xsl:if>
+</xsl:template>
+
 
 
 </xsl:stylesheet>

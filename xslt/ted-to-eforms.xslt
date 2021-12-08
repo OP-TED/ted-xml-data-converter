@@ -205,7 +205,6 @@ cac:ProcurementProjectLot
 <xsl:template name="organizations">
 	<xsl:comment> efac:Organizations here </xsl:comment>
 	<efac:Organizations>
-		<xsl:sequence select="$tedaddressesuniquewithid"/>
 		<!-- there are no F##_2014 forms that do not have ADDRESS_CONTRACTING_BODY -->
 		<!-- need to investigate elements efbc:GroupLeadIndicator, efbc:AcquiringCPBIndicator, efbc:AwardingCPBIndicator here -->
 		<xsl:variable name="ismorethanonebuyer" select="$tedaddressesuniquewithid//ted-org/path[fn:contains(.,'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]"/>
@@ -249,9 +248,10 @@ cac:ProcurementProjectLot
 	<cac:TenderingTerms>
 		<!-- A limited number of BTs are specified for tendering terms at root level -->
 		<!-- no BTs at root level require Extensions -->
-		<!-- Cross Border Law (BT-09) cardinality * -->
-		<!-- BT-01 Legal Basis Local - Code cardinality * -->
-		<!-- BT-01 Legal Basis Local - Text cardinality * -->
+		<!-- Cross Border Law (BT-09) cardinality * No equivalent element in TED XML -->
+		<!-- BT-01 Legal Basis Local - Code cardinality * No equivalent element in TED XML -->
+		<!-- BT-01 Legal Basis Local - Text cardinality * Element PROCUREMENT_LAW -->
+		<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:PROCUREMENT_LAW"/>
 		<!-- Exclusion Grounds (BT-67) cardinality ? -->
 		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
 		<!-- Lots Max Awarded (BT-33) cardinality 1 TED_EXPORT/FORMS/F01_2014/OBJECT_CONTRACT/LOT_DIVISION/LOT_MAX_ONE_TENDERER -->

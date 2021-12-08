@@ -16,10 +16,101 @@
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <tedelement xmlns="" name="ted-orgs">
-                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY</tedelement>
-                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</tedelement>
-                  </tedelement>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>http://ec.europa.eu/environment/funding/calls_en.htm</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>European Commission, Directorate General Environment</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ENV.A.5 – Finance, BU 9 01/005</cbc:StreetName>
+                           <cbc:CityName>Brussels</cbc:CityName>
+                           <cbc:PostalZone>B-1049</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">BE10</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Ecorys Europe EEIG-GEIE</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Rue Belliard 12</cbc:StreetName>
+                           <cbc:CityName>Brussels</cbc:CityName>
+                           <cbc:PostalZone>1040</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">BE</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Ecologics Institute GmbH</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Pfalzburger Straße 42-44</cbc:StreetName>
+                           <cbc:CityName>Berlin</cbc:CityName>
+                           <cbc:PostalZone>10717</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">DE</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Milieu Consulting SPRL</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Chaussée de Charleroi 112</cbc:StreetName>
+                           <cbc:CityName>Brussels</cbc:CityName>
+                           <cbc:PostalZone>1060</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">BE</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>General Court of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>rue du Fort Niedergrünewald</cbc:StreetName>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2925</cbc:PostalZone>
+                           <cac:Country>
+                              <cbc:IdentificationCode>LU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication here -->
                <efac:Publication>
@@ -113,25 +204,18 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
       <cac:ContractingPartyType>
-         <cbc:PartyType>EU_INSTITUTION</cbc:PartyType>
+         <cbc:PartyType>eu-ins-bod-ag</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
       </cac:ContractingPartyType>
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party>
-         <cbc:WebsiteURI>http://ec.europa.eu/environment/funding/calls_en.htm</cbc:WebsiteURI>
-         <cac:PartyName>
-            <cbc:Name>European Commission, Directorate General Environment</cbc:Name>
-         </cac:PartyName>
-         <cac:PostalAddress>
-            <cbc:StreetName>ENV.A.5 – Finance, BU 9 01/005</cbc:StreetName>
-            <cbc:CityName>Brussels</cbc:CityName>
-            <cbc:PostalZone>B-1049</cbc:PostalZone>
-            <cbc:CountrySubentityCode listName="nuts">BE10</cbc:CountrySubentityCode>
-            <cac:Country>
-               <cbc:IdentificationCode>BE</cbc:IdentificationCode>
-            </cac:Country>
-         </cac:PostalAddress>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->

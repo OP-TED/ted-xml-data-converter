@@ -19,19 +19,21 @@ Currently, the `xslt` folder contains these files:
 
 | File | Purpose |
 | --- | --- |
+| XSLT |
 |  [ted-to-eforms.xslt](xslt/ted-to-eforms.xslt) | The main (starting) XSLT file |
 |  [functions-and-data.xslt](xslt/functions-and-data.xslt) | An XSLT file for retrieving data from other files, and common functions |
 |  [ted-to-eforms-simple.xslt](xslt/ted-to-eforms-simple.xslt) | An XSLT file containing simple templates (one-to-one mappings) |
 |  [ted-to-eforms-addresses.xslt](xslt/ted-to-eforms-addresses.xslt) | An XSLT file containing templates for converting addresses |
 |  [ted-to-eforms-award-criteria.xslt](xslt/ted-to-eforms-award-criteria.xslt) | An XSLT file containing templates for converting Award Criteria (BG-38) |
+| XSpec testing |
+| [test-ted-to-eforms-xslt.xspec](xslt/test-ted-to-eforms-xslt.xspec) | XSPec file for testing the XSLT |
+| Mapping files |
 |  [ubl-form-types.xml](xslt/ubl-form-types.xml) | An XML file containing mappings data for eForms form element names and XML namespaces |
 |  [languages.xml](xslt/languages.xml) | The "Language" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
-| XML Support files |
 | [ted-notice-mapping.xml](xslt/ted-notice-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
-| [ubl-form-types.xml](xslt/ubl-form-types.xml) | Mapping file from Notice Tyep abbreviation (eg CAN) to root element name and namespace |
+| [ubl-form-types.xml](xslt/ubl-form-types.xml) | Mapping file from Notice Type abbreviation (eg CAN) to root element name and namespace |
 | [languages.xml](xslt/languages.xml) | Authority codelist for languages, to map from TED abbreviations to eForms abbreviations |
-| Testing |
-| [test-ted-to-eforms-xslt.xspec](xslt/test-ted-to-eforms-xslt.xspec) | XSPec file for testing the XSLT |
+| [ca-types-mapping.xml](xslt/ca-types-mapping.xml) | Mapping file between CA_TYPE and buyer-legal-type |
 
 <br>
 

@@ -16,11 +16,81 @@
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <tedelement xmlns="" name="ted-orgs">
-                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY</tedelement>
-                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</tedelement>
-                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY</tedelement>
-                  </tedelement>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.enisa.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>European Union Agency for Cybersecurity</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>1 Vasilissis Sofias Street</cbc:StreetName>
+                           <cbc:CityName>Maroussi</cbc:CityName>
+                           <cbc:PostalZone>15124</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>GR</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Triple A and C Trading SPRL</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>119/13, Rue Dupre</cbc:StreetName>
+                           <cbc:CityName>Brussels</cbc:CityName>
+                           <cbc:PostalZone>1090</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">BE1</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Court of Justice of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>boulevard Konrad Adenauer, Kirchberg</cbc:StreetName>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2925</cbc:PostalZone>
+                           <cac:Country>
+                              <cbc:IdentificationCode>LU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>The European Ombudsman</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>1 avenue du Président Robert Schuman, PO Box 403</cbc:StreetName>
+                           <cbc:CityName>Strasbourg</cbc:CityName>
+                           <cbc:PostalZone>67001</cbc:PostalZone>
+                           <cac:Country>
+                              <cbc:IdentificationCode>FR</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication here -->
                <efac:Publication>
@@ -114,24 +184,16 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
       <cac:ContractingPartyType>
-         <cbc:PartyType>EU_INSTITUTION</cbc:PartyType>
+         <cbc:PartyType>eu-ins-bod-ag</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
       </cac:ContractingPartyType>
       <cac:Party>
-         <cbc:WebsiteURI>https://www.enisa.europa.eu</cbc:WebsiteURI>
-         <cac:PartyName>
-            <cbc:Name>European Union Agency for Cybersecurity</cbc:Name>
-         </cac:PartyName>
-         <cac:PostalAddress>
-            <cbc:StreetName>1 Vasilissis Sofias Street</cbc:StreetName>
-            <cbc:CityName>Maroussi</cbc:CityName>
-            <cbc:PostalZone>15124</cbc:PostalZone>
-            <cbc:CountrySubentityCode listName="nuts">EL</cbc:CountrySubentityCode>
-            <cac:Country>
-               <cbc:IdentificationCode>GR</cbc:IdentificationCode>
-            </cac:Country>
-         </cac:PostalAddress>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
       </cac:Party>
-      <tedelement xmlns="" name="CA_ACTIVITY_OTHER">Cybersecurity</tedelement>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
    <cac:TenderingTerms/>

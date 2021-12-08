@@ -16,9 +16,26 @@
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <tedelement xmlns="" name="ted-orgs">
-                     <tedelement name="path">TED_EXPORT/FORM_SECTION/F01_2014/CONTRACTING_BODY</tedelement>
-                  </tedelement>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>www.veitshoechheim.de</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Gemeinde Veitshöchheim</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Erwin-Vornberger-Platz 1</cbc:StreetName>
+                           <cbc:CityName>Veitshöchheim</cbc:CityName>
+                           <cbc:PostalZone>97209</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">DE26C</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication here -->
                <efac:Publication>
@@ -43,27 +60,19 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
       <cac:ContractingPartyType>
-         <cbc:PartyType>REGIONAL_AUTHORITY</cbc:PartyType>
+         <cbc:PartyType>ra</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
       </cac:ContractingPartyType>
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party>
-         <cbc:WebsiteURI>www.veitshoechheim.de</cbc:WebsiteURI>
-         <cac:PartyName>
-            <cbc:Name>Gemeinde Veitshöchheim</cbc:Name>
-         </cac:PartyName>
-         <cac:PostalAddress>
-            <cbc:StreetName>Erwin-Vornberger-Platz 1</cbc:StreetName>
-            <cbc:CityName>Veitshöchheim</cbc:CityName>
-            <cbc:PostalZone>97209</cbc:PostalZone>
-            <cbc:CountrySubentityCode listName="nuts">DE26C</cbc:CountrySubentityCode>
-            <cac:Country>
-               <cbc:IdentificationCode>DE</cbc:IdentificationCode>
-            </cac:Country>
-         </cac:PostalAddress>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
       </cac:Party>
-      <tedelement xmlns="" name="ADDRESS_FURTHER_INFO_IDEM"/>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
    <cac:TenderingTerms/>

@@ -10,3 +10,4 @@ This table lists the TED XML files chosen to test the Converter, and the reasons
 | 21-010961-001-EXP.xml | F03_2014 | CAN | Legal Basis | Other Legal Basis for EIB - no eForms subtype mapping available for this Notice |
 | 21-050204-001-EXP.xml | F03_2014 | CAN | Translations | One original English, 23 translations |
 | 21-064844-001-EXP.xml | F02_2014 | CN | Addresses | All 7 Address elements, 1 duplicated address |
+| 20-587026-001-EXP.xml | F02_2014 | CN | Addresses | PROCUREMENT_LAW -> BT-01 Legal Basis Local - Text |

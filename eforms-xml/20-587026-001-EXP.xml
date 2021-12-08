@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
+                xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
+                xmlns:efext="http://eforms/v1.0/Extensions"
+                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubtype>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubtype>
+               <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>http://www.regionsjaelland.dk</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Region Sjælland</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Alleen 15</cbc:StreetName>
+                           <cbc:CityName>Sorø</cbc:CityName>
+                           <cbc:PostalZone>4180</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">DK02</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.regionh.dk</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Region Hovedstaden</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Kongens Vænge 2</cbc:StreetName>
+                           <cbc:CityName>Hillerød</cbc:CityName>
+                           <cbc:PostalZone>3400</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">DK01</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.rn.dk</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Region Nordjylland</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Niels Bohrs Vej 30</cbc:StreetName>
+                           <cbc:CityName>Aalborg Øst</cbc:CityName>
+                           <cbc:PostalZone>9220</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">DK05</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.rm.dk</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Region Midtjylland</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Skottenborg 26</cbc:StreetName>
+                           <cbc:CityName>Viborg</cbc:CityName>
+                           <cbc:PostalZone>8800</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">DK04</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Klagenævnet for Udbud</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Nævnerens Hus, Toldboden 2</cbc:StreetName>
+                           <cbc:CityName>Viborg</cbc:CityName>
+                           <cbc:PostalZone>8800</cbc:PostalZone>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-006</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Konkurrence- og Forbrugerstyrelsen</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Carl Jacobsens Vej 35</cbc:StreetName>
+                           <cbc:CityName>Valby</cbc:CityName>
+                           <cbc:PostalZone>2500</cbc:PostalZone>
+                           <cac:Country>
+                              <cbc:IdentificationCode>DK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication here -->
+               <efac:Publication>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode>DAN</cbc:NoticeLanguageCode>
+   <!-- cac:ContractingParty here -->
+   <cac:ContractingParty>
+      <cbc:BuyerProfileURI>https://eu.eu-supply.com/ctm/Company/CompanyInformation/Index/137394</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>ra</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>HEALTH</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms here -->
+   <cac:TenderingTerms>
+      <cac:ProcurementLegislationDocumentReference>
+         <cbc:ID>LocalLegalBasis</cbc:ID>
+         <cbc:DocumentDescription languageID="DAN">Udbud for: - Region Sjælland - Region Hovedstaden - Region Nordjylland - Region Midtjylland. Region Sjælland er udbudsansvarlig.</cbc:DocumentDescription>
+      </cac:ProcurementLegislationDocumentReference>
+   </cac:TenderingTerms>
+   <!-- cac:TenderingProcess here -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension/>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject here -->
+   <cac:ProcurementProject/>
+   <!-- multiple cac:ProcurementProjectLot here -->
+</ContractNotice>
