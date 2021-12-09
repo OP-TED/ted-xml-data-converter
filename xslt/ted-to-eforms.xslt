@@ -22,6 +22,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:include href="ted-to-eforms-suppressed.xslt"/>
 <xsl:include href="ted-to-eforms-award-criteria.xslt"/>
 <xsl:include href="ted-to-eforms-addresses.xslt"/>
+<xsl:include href="ted-to-eforms-procedure.xslt"/>
 
 <!-- FUNCTIONS -->
 
@@ -291,9 +292,11 @@ cac:ProcurementProjectLot
 	<xsl:comment> cac:ProcurementProject here </xsl:comment>
 	<cac:ProcurementProject>
 		<!-- A limited number of BTs are specified for procurement project at root level -->
-		<!-- Internal Identifier (BT-22) cardinality 1 -->
+		<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
 		<!-- Title (BT-21) cardinality 1 -->
+		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TITLE"/>
 		<!-- Description (BT-24) cardinality 1 -->
+		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>
 		<!-- Main Nature (BT-23) cardinality 1 -->
 		<!-- Additional Nature (different from Main) (BT-531) cardinality * -->
 		<!-- Additional Information (BT-300) (*)* cardinality ? -->

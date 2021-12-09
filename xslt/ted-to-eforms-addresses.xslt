@@ -10,6 +10,84 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
+
+<!-- ADDRESSES -->
+
+	<xsl:variable name="tedaddresses" as="element()">
+	<!--
+	All F forms XPaths that contain element COUNTRY
+	AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR/COUNTRY
+	AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_PARTY/COUNTRY
+	COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY/COUNTRY
+	COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY/COUNTRY
+	COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO/COUNTRY
+	CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY/COUNTRY
+	CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL/COUNTRY
+	CONTRACTING_BODY/ADDRESS_FURTHER_INFO/COUNTRY
+	CONTRACTING_BODY/ADDRESS_PARTICIPATION/COUNTRY
+	-->
+		<ted-orgs>
+			<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY/(ted:ADDRESS_CONTRACTING_BODY | ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL | ted:ADDRESS_FURTHER_INFO | ted:ADDRESS_PARTICIPATION) | ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY | ted:ADDRESS_MEDIATION_BODY | ted:ADDRESS_REVIEW_INFO) | ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS/ted:CONTRACTOR/(ted:ADDRESS_CONTRACTOR | ted:ADDRESS_PARTY))">
+				<ted-org>
+					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+					<path><xsl:value-of select="$path"/></path>
+					<tedaddress>
+						<xsl:for-each select="*">
+							<xsl:copy-of select="." copy-namespaces="no"/>
+						</xsl:for-each>
+					</tedaddress>
+				</ted-org>
+			</xsl:for-each>
+		</ted-orgs>
+	</xsl:variable>
+
+	<xsl:variable name="tedaddressesunique" as="element()">
+		<ted-orgs>
+		<xsl:for-each select="$tedaddresses//ted-org">
+			<xsl:variable name="pos" select="fn:position()"/>
+			<xsl:variable name="address" as="element()" select="tedaddress"/>
+			<!-- find if any preceding addresses are deep-equal to this one -->
+			<xsl:variable name="prevsame">
+				<xsl:for-each select="./preceding-sibling::ted-org">
+					<xsl:if test="fn:deep-equal(tedaddress, $address)">
+						<xsl:value-of select="'same'"/>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:variable>
+			<data><xsl:value-of select="$pos"/><xsl:text>:</xsl:text><xsl:value-of select="$prevsame"/></data>
+			<!-- if no preceding addresses are deep-equal to this one, then ... -->
+			<xsl:if test="$prevsame = ''">
+				<ted-org>
+				<!-- get list of paths of addresses, this one and following, that are deep-equal to this one -->
+				<path><xsl:sequence select="fn:string(path)"/></path>
+				<xsl:for-each select="./following-sibling::ted-org">
+					<xsl:if test="fn:deep-equal(tedaddress, $address)">
+						<path><xsl:sequence select="fn:string(path)"/></path>
+					</xsl:if>
+				</xsl:for-each>
+				<!-- copy the address -->
+				<xsl:copy-of select="tedaddress"/>
+				</ted-org>
+			</xsl:if>
+		</xsl:for-each>
+		</ted-orgs>
+	</xsl:variable>
+	
+	<xsl:variable name="tedaddressesuniquewithid" as="element()">
+		<ted-orgs>
+		<xsl:for-each select="$tedaddressesunique//ted-org">
+			<ted-org>
+				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-org) + 1), 3)"/>
+				<orgid><xsl:text>ORG-</xsl:text><xsl:value-of select="$typepos"/></orgid>
+				<xsl:copy-of select="type"/>
+				<xsl:copy-of select="path"/>
+				<xsl:copy-of select="tedaddress"/>
+			</ted-org>
+		</xsl:for-each>
+		</ted-orgs>
+	</xsl:variable>
+
+
 	<xsl:template match="ted:CONTRACTING_BODY">
 		<cac:ContractingParty>
 			<xsl:apply-templates select="ted:ADDRESS_CONTRACTING_BODY/ted:URL_BUYER"/>
@@ -155,22 +233,6 @@ eu-int-org European Institution/Agency or International Organisation
 		<cac:ContractingActivity>
 			<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
-	</xsl:template>
-	
-	<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP">
-		<xsl:variable name="element-name" select="fn:local-name(.)"/>
-		<xsl:variable name="eforms-procedure-type" select="$procedure-types//mapping[ted-element-name eq $element-name]/fn:string(procurement-procedure-type)"/>
-		<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
-	</xsl:template>
-
-	<xsl:template match="ted:ACCELERATED_PROC">
-		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-		<cac:ProcessJustification>
-			<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
-			<xsl:if test="$text ne ''">
-				<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
-			</xsl:if>
-		</cac:ProcessJustification>
 	</xsl:template>
 
 </xsl:stylesheet>
