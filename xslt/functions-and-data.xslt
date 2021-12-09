@@ -201,6 +201,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 	<xsl:variable name="ca-types" select="fn:document('ca-types-mapping.xml')"/>
 
+	<xsl:variable name="procedure-types" select="fn:document('procedure-types-mapping.xml')"/>
 
 
 <!-- FORM TYPES AND SUBTYPES -->

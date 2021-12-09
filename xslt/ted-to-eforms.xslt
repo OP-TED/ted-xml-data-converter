@@ -273,14 +273,16 @@ cac:ProcurementProjectLot
 			</ext:UBLExtension>
 		</ext:UBLExtensions>
 		<!-- A limited number of BTs are specified for tendering process at root level -->
-		<!-- Procedure Features (BT-88) cardinality ? -->
-		<!-- Procedure Type (BT-105) cardinality 1 -->
-		<!-- PIN Competition Termination (BT-756) cardinality ? -->
-		<!-- Lots All Required (BT-763) cardinality ? -->
-		<!-- Procedure Accelerated (BT-106) cardinality ? -->
+		<!-- Procedure Features (BT-88) cardinality ? No equivalent element in TED XML -->
+		<!-- Procedure Type (BT-105) cardinality 1 Maps from elements: PT_OPEN, PT_RESTRICTED, PT_COMPETITIVE_NEGOTIATION, PT_COMPETITIVE_DIALOGUE, PT_INNOVATION_PARTNERSHIP -->
+		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP)"/>
+		<!-- PIN Competition Termination (BT-756) cardinality ? This BT only allowed for CAN notice subtypes 29, 30, 33, 34 -->
+		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
+		<!-- Procedure Accelerated (BT-106) cardinality ? this BT only allowed for CN and CAN notice subtypes 16, 17, 18, E3, 29, 30, 31, E4, E5 -->
 		<!-- Procedure Accelerated Justification (BT-1351) / Code cardinality ? -->
 		<!-- Procedure Accelerated Justification (BT-1351) ​/ Text cardinality ? -->
-		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? -->
+		<xsl:apply-templates select="ted:PROCEDURE/ted:ACCELERATED_PROC"/>
+		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? this BT only allowed for CAN notice subtypes 25 to 35 and E4, E5 -->
 		<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? -->
 		<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? -->
 	</cac:TenderingProcess>

@@ -156,5 +156,21 @@ eu-int-org European Institution/Agency or International Organisation
 			<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
 	</xsl:template>
+	
+	<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP">
+		<xsl:variable name="element-name" select="fn:local-name(.)"/>
+		<xsl:variable name="eforms-procedure-type" select="$procedure-types//mapping[ted-element-name eq $element-name]/fn:string(procurement-procedure-type)"/>
+		<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
+	</xsl:template>
+
+	<xsl:template match="ted:ACCELERATED_PROC">
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+		<cac:ProcessJustification>
+			<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
+			<xsl:if test="$text ne ''">
+				<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
+			</xsl:if>
+		</cac:ProcessJustification>
+	</xsl:template>
 
 </xsl:stylesheet>
