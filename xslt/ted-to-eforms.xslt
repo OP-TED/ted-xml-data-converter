@@ -304,9 +304,11 @@ cac:ProcurementProjectLot
 		<!-- Estimated Value (BT-27) cardinality ? -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>
 		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 -->
+		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>
 		<!-- Main Classification Code (BT-262) cardinality 1 -->
-		<!-- Additional Classification Code (BT-263) cardinality * -->
-		<!-- Place of Performance (*) -> RealizedLocation -->
+		<!-- Additional Classification Code (BT-263) cardinality * No equivalent element in TED XML at Procedure level -->
+		<!-- Place of Performance (*) -> RealizedLocation No equivalent element in TED XML at Procedure level -->
+		<!-- No location elements exist in TED F02 schema at Procedure level. Question: if NO_LOT_DIVISION, should we copy the location details from the single Lot in OBJECT_DESCR? -->
 			<!-- Place of Performance Additional Information (BT-728) -->
 			<!-- Place Performance City (BT-5131) -->
 			<!-- Place Performance Post Code (BT-5121) -->
