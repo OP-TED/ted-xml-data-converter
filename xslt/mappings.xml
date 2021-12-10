@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mappings>
 <ca-types>
-	<mapping><ca-type>BODY_PUBLIC</ca-type><buyer-legal-type>body-pl</buyer-legal-type><buyer-legal-type-name>Body governed by public law</buyer-legal-type-name></mapping>
-	<mapping><ca-type>EU_INSTITUTION</ca-type><buyer-legal-type>eu-ins-bod-ag</buyer-legal-type><buyer-legal-type-name>EU institution, body or agency</buyer-legal-type-name></mapping>
-	<mapping><ca-type>MINISTRY</ca-type><buyer-legal-type>cga</buyer-legal-type><buyer-legal-type-name>Central government authority</buyer-legal-type-name></mapping>
-	<mapping><ca-type>NATIONAL_AGENCY</ca-type><buyer-legal-type>cga</buyer-legal-type><buyer-legal-type-name>Central government authority</buyer-legal-type-name></mapping>
-	<mapping><ca-type>REGIONAL_AGENCY</ca-type><buyer-legal-type>body-pl-ra</buyer-legal-type><buyer-legal-type-name>Body governed by public law, controlled by a regional authority</buyer-legal-type-name></mapping>
-	<mapping><ca-type>REGIONAL_AUTHORITY</ca-type><buyer-legal-type>ra</buyer-legal-type><buyer-legal-type-name>Regional authority</buyer-legal-type-name></mapping>
+	<mapping>
+		<ca-type>BODY_PUBLIC</ca-type>
+		<buyer-legal-type>body-pl</buyer-legal-type>
+		<buyer-legal-type-name>Body governed by public law</buyer-legal-type-name>
+	</mapping>
+	<mapping>
+		<ca-type>EU_INSTITUTION</ca-type>
+		<buyer-legal-type>eu-ins-bod-ag</buyer-legal-type>
+		<buyer-legal-type-name>EU institution, body or agency</buyer-legal-type-name>
+	</mapping>
+	<mapping>
+		<ca-type>MINISTRY</ca-type>
+		<buyer-legal-type>cga</buyer-legal-type>
+		<buyer-legal-type-name>Central government authority</buyer-legal-type-name>
+	</mapping>
+	<mapping>
+		<ca-type>NATIONAL_AGENCY</ca-type>
+		<buyer-legal-type>cga</buyer-legal-type>
+		<buyer-legal-type-name>Central government authority</buyer-legal-type-name>
+	</mapping>
+	<mapping>
+		<ca-type>REGIONAL_AGENCY</ca-type>
+		<buyer-legal-type>body-pl-ra</buyer-legal-type>
+		<buyer-legal-type-name>Body governed by public law, controlled by a regional authority</buyer-legal-type-name>
+	</mapping>
+	<mapping>
+		<ca-type>REGIONAL_AUTHORITY</ca-type>
+		<buyer-legal-type>ra</buyer-legal-type>
+		<buyer-legal-type-name>Regional authority</buyer-legal-type-name>
+	</mapping>
 </ca-types>
 
 <procedure-types>
