@@ -298,9 +298,11 @@ cac:ProcurementProjectLot
 		<!-- Description (BT-24) cardinality 1 -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>
 		<!-- Main Nature (BT-23) cardinality 1 -->
-		<!-- Additional Nature (different from Main) (BT-531) cardinality * -->
-		<!-- Additional Information (BT-300) (*)* cardinality ? -->
+		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>
+		<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
+		<!-- Additional Information (BT-300) (*)* cardinality ? No equivalent element in TED XML -->
 		<!-- Estimated Value (BT-27) cardinality ? -->
+		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>
 		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 -->
 		<!-- Main Classification Code (BT-262) cardinality 1 -->
 		<!-- Additional Classification Code (BT-263) cardinality * -->
@@ -321,29 +323,6 @@ cac:ProcurementProjectLot
 
 <xsl:template match="ted:LEFTI/ted:SUITABILITY">
 <xsl:apply-templates/>
-</xsl:template>
-
-<xsl:template match="ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]">
-	<!-- LOT_DIVISION is a child only of OBJECT_CONTRACT -->
-	<!-- LOT_DIVISION has children: LOT_ALL LOT_COMBINING_CONTRACT_RIGHT LOT_MAX_NUMBER LOT_MAX_ONE_TENDERER LOT_ONE_ONLY -->
-
-	<cac:LotDistribution>
-		<!-- Lots Max Awarded (BT-33), Lots Max Allowed (BT-31)  -->
-		<!-- F01_2014 F02_2014 F04_2014 F05_2014 F21_2014 F22_2014 F23_2014 F24_2014 -->
-		<!-- Lots Max Awarded (BT-33) The maximum number of Lots that can be awarded to one economic operator -->
-		<xsl:apply-templates select="ted:LOT_MAX_ONE_TENDERER"/>
-		<!-- Lots Max Allowed (BT-31) The maximum number of Lots that one economic operator can submit a tender for -->
-		<!-- Tenders may be submmitted for: LOT_ALL LOT_MAX_NUMBER LOT_ONE_ONLY -->
-		<xsl:apply-templates select="ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY"/>
-		
-		<!--
-	<xs:element name="LOT_ALL" type="empty"/>
-	<xs:element name="LOT_ONE_ONLY" type="empty"/>
-	<xs:element name="LOT_MAX_NUMBER" type="nb_lot"/>
-
--->
-		
-	</cac:LotDistribution>
 </xsl:template>
 
 

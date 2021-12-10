@@ -120,11 +120,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <!-- MAPPING FILES -->
 	
-	<xsl:variable name="form-types" select="fn:document('ubl-form-types.xml')"/>
-
-	<xsl:variable name="ca-types" select="fn:document('ca-types-mapping.xml')"/>
-
-	<xsl:variable name="procedure-types" select="fn:document('procedure-types-mapping.xml')"/>
+	<xsl:variable name="mappings" select="fn:document('mappings.xml')"/>
 
 
 <!-- FORM TYPES AND SUBTYPES -->
@@ -133,13 +129,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:function name="opfun:get-eforms-element-name" as="xs:string">
 		<!-- function to get name of eForms schema root element, given abbreviation, e.g. "CN" to "ContractNotice" -->
 		<xsl:param name="form-abbreviation" as="xs:string"/>
-		<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
+		<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
 	</xsl:function>
 	
 	<xsl:function name="opfun:get-eforms-xmlns" as="xs:string">
 		<!-- function to get name of eForms schema XML namespace given abbreviation, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
 		<xsl:param name="form-abbreviation" as="xs:string"/>
-		<xsl:value-of select="$form-types//form-type[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
+		<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
 	</xsl:function>
 
 	<xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">

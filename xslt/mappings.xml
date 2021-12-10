@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+<ca-types>
+	<mapping><ca-type>BODY_PUBLIC</ca-type><buyer-legal-type>body-pl</buyer-legal-type><buyer-legal-type-name>Body governed by public law</buyer-legal-type-name></mapping>
+	<mapping><ca-type>EU_INSTITUTION</ca-type><buyer-legal-type>eu-ins-bod-ag</buyer-legal-type><buyer-legal-type-name>EU institution, body or agency</buyer-legal-type-name></mapping>
+	<mapping><ca-type>MINISTRY</ca-type><buyer-legal-type>cga</buyer-legal-type><buyer-legal-type-name>Central government authority</buyer-legal-type-name></mapping>
+	<mapping><ca-type>NATIONAL_AGENCY</ca-type><buyer-legal-type>cga</buyer-legal-type><buyer-legal-type-name>Central government authority</buyer-legal-type-name></mapping>
+	<mapping><ca-type>REGIONAL_AGENCY</ca-type><buyer-legal-type>body-pl-ra</buyer-legal-type><buyer-legal-type-name>Body governed by public law, controlled by a regional authority</buyer-legal-type-name></mapping>
+	<mapping><ca-type>REGIONAL_AUTHORITY</ca-type><buyer-legal-type>ra</buyer-legal-type><buyer-legal-type-name>Regional authority</buyer-legal-type-name></mapping>
+</ca-types>
+
+<procedure-types>
+	<mapping>
+		<ted-element-name>PT_OPEN</ted-element-name>
+		<procurement-procedure-type>open</procurement-procedure-type>
+		<label>Open</label>
+	</mapping>
+	<mapping>
+		<ted-element-name>PT_RESTRICTED</ted-element-name>
+		<procurement-procedure-type>restricted</procurement-procedure-type>
+		<label>Restricted</label>
+	</mapping>
+	<mapping>
+		<ted-element-name>PT_COMPETITIVE_NEGOTIATION</ted-element-name>
+		<procurement-procedure-type>neg-w-call</procurement-procedure-type>
+		<label>Negotiated with prior publication of a call for competition / competitive with negotiation</label>
+	</mapping>
+	<mapping>
+		<ted-element-name>PT_COMPETITIVE_DIALOGUE</ted-element-name>
+		<procurement-procedure-type>comp-dial</procurement-procedure-type>
+		<label>Competitive dialogue</label>
+	</mapping>
+	<mapping>
+		<ted-element-name>PT_INNOVATION_PARTNERSHIP</ted-element-name>
+		<procurement-procedure-type>innovation</procurement-procedure-type>
+		<label>Innovation partnership</label>
+	</mapping>
+</procedure-types>
+
+<contract-nature-types>
+	<mapping><type-contract>SERVICES</type-contract><contract-nature>services</contract-nature></mapping>
+	<mapping><type-contract>SUPPLIES</type-contract><contract-nature>supplies</contract-nature></mapping>
+	<mapping><type-contract>WORKS</type-contract><contract-nature>works</contract-nature></mapping>
+</contract-nature-types>
+
+<form-types>
+	<mapping>
+		<abbreviation>PIN</abbreviation>
+		<element-name>PriorInformationNotice</element-name>
+		<xmlns>urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2</xmlns>
+	</mapping>
+	<mapping>
+		<abbreviation>CN</abbreviation>
+		<element-name>ContractNotice</element-name>
+		<xmlns>urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2</xmlns>
+	</mapping>
+	<mapping>
+		<abbreviation>CAN</abbreviation>
+		<element-name>ContractAwardNotice</element-name>
+		<xmlns>urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2</xmlns>
+	</mapping>
+	<mapping>
+		<abbreviation>BRIN</abbreviation>
+		<element-name></element-name>
+		<xmlns></xmlns>
+	</mapping>
+</form-types>
+
+</mappings>
