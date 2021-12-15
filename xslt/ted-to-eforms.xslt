@@ -23,6 +23,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:include href="ted-to-eforms-award-criteria.xslt"/>
 <xsl:include href="ted-to-eforms-addresses.xslt"/>
 <xsl:include href="ted-to-eforms-procedure.xslt"/>
+<xsl:include href="ted-to-eforms-lot.xslt"/>
 
 <!-- FUNCTIONS -->
 
@@ -244,6 +245,7 @@ cac:ProcurementProjectLot
 	<xsl:comment> cac:ContractingParty here </xsl:comment>
 	<xsl:apply-templates select="ted:CONTRACTING_BODY"/>
 </xsl:template>
+
 <xsl:template name="root-tendering-terms">
 	<xsl:comment> cac:TenderingTerms here </xsl:comment>
 	<cac:TenderingTerms>
@@ -320,11 +322,7 @@ cac:ProcurementProjectLot
 </xsl:template>
 <xsl:template name="procurement-project-lots">
 	<xsl:comment> multiple cac:ProcurementProjectLot here </xsl:comment>
-</xsl:template>
-
-
-<xsl:template match="ted:LEFTI/ted:SUITABILITY">
-<xsl:apply-templates/>
+			<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:OBJECT_DESCR"/>
 </xsl:template>
 
 
