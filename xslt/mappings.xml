@@ -1,73 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mappings>
-<ca-types>
-	<mapping>
-		<ca-type>BODY_PUBLIC</ca-type>
-		<buyer-legal-type>body-pl</buyer-legal-type>
-		<buyer-legal-type-name>Body governed by public law</buyer-legal-type-name>
-	</mapping>
-	<mapping>
-		<ca-type>EU_INSTITUTION</ca-type>
-		<buyer-legal-type>eu-ins-bod-ag</buyer-legal-type>
-		<buyer-legal-type-name>EU institution, body or agency</buyer-legal-type-name>
-	</mapping>
-	<mapping>
-		<ca-type>MINISTRY</ca-type>
-		<buyer-legal-type>cga</buyer-legal-type>
-		<buyer-legal-type-name>Central government authority</buyer-legal-type-name>
-	</mapping>
-	<mapping>
-		<ca-type>NATIONAL_AGENCY</ca-type>
-		<buyer-legal-type>cga</buyer-legal-type>
-		<buyer-legal-type-name>Central government authority</buyer-legal-type-name>
-	</mapping>
-	<mapping>
-		<ca-type>REGIONAL_AGENCY</ca-type>
-		<buyer-legal-type>body-pl-ra</buyer-legal-type>
-		<buyer-legal-type-name>Body governed by public law, controlled by a regional authority</buyer-legal-type-name>
-	</mapping>
-	<mapping>
-		<ca-type>REGIONAL_AUTHORITY</ca-type>
-		<buyer-legal-type>ra</buyer-legal-type>
-		<buyer-legal-type-name>Regional authority</buyer-legal-type-name>
-	</mapping>
-</ca-types>
-
-<procedure-types>
-	<mapping>
-		<ted-element-name>PT_OPEN</ted-element-name>
-		<procurement-procedure-type>open</procurement-procedure-type>
-		<label>Open</label>
-	</mapping>
-	<mapping>
-		<ted-element-name>PT_RESTRICTED</ted-element-name>
-		<procurement-procedure-type>restricted</procurement-procedure-type>
-		<label>Restricted</label>
-	</mapping>
-	<mapping>
-		<ted-element-name>PT_COMPETITIVE_NEGOTIATION</ted-element-name>
-		<procurement-procedure-type>neg-w-call</procurement-procedure-type>
-		<label>Negotiated with prior publication of a call for competition / competitive with negotiation</label>
-	</mapping>
-	<mapping>
-		<ted-element-name>PT_COMPETITIVE_DIALOGUE</ted-element-name>
-		<procurement-procedure-type>comp-dial</procurement-procedure-type>
-		<label>Competitive dialogue</label>
-	</mapping>
-	<mapping>
-		<ted-element-name>PT_INNOVATION_PARTNERSHIP</ted-element-name>
-		<procurement-procedure-type>innovation</procurement-procedure-type>
-		<label>Innovation partnership</label>
-	</mapping>
-</procedure-types>
-
-<contract-nature-types>
-	<mapping><type-contract>SERVICES</type-contract><contract-nature>services</contract-nature></mapping>
-	<mapping><type-contract>SUPPLIES</type-contract><contract-nature>supplies</contract-nature></mapping>
-	<mapping><type-contract>WORKS</type-contract><contract-nature>works</contract-nature></mapping>
-</contract-nature-types>
 
 <form-types>
+	<description>Mapping for eForms schema documents root element name and namespace</description>
 	<mapping>
 		<abbreviation>PIN</abbreviation>
 		<element-name>PriorInformationNotice</element-name>
@@ -90,4 +25,117 @@
 	</mapping>
 </form-types>
 
+<ca-types>
+	<description>Mapping for Buyer Legal Type (BT-11)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/CONTRACTING_BODY/CA_TYPE/@VALUE</ted-context>
+	<eforms-context>/*/cac:ContractingParty/cac:ContractingPartyType/cbc:PartyType</eforms-context>
+	<eforms-codelist>buyer-legal-type</eforms-codelist>
+	<mapping>
+		<ted-value>BODY_PUBLIC</ted-value>
+		<eforms-value>body-pl</eforms-value>
+		<label>Body governed by public law</label>
+	</mapping>
+	<mapping>
+		<ted-value>EU_INSTITUTION</ted-value>
+		<eforms-value>eu-ins-bod-ag</eforms-value>
+		<label>EU institution, body or agency</label>
+	</mapping>
+	<mapping>
+		<ted-value>MINISTRY</ted-value>
+		<eforms-value>cga</eforms-value>
+		<label>Central government authority</label>
+	</mapping>
+	<mapping>
+		<ted-value>NATIONAL_AGENCY</ted-value>
+		<eforms-value>cga</eforms-value>
+		<label>Central government authority</label>
+	</mapping>
+	<mapping>
+		<ted-value>REGIONAL_AGENCY</ted-value>
+		<eforms-value>body-pl-ra</eforms-value>
+		<label>Body governed by public law, controlled by a regional authority</label>
+	</mapping>
+	<mapping>
+		<ted-value>REGIONAL_AUTHORITY</ted-value>
+		<eforms-value>ra</eforms-value>
+		<label>Regional authority</label>
+	</mapping>
+</ca-types>
+
+<procedure-types>
+	<description>Mapping for Procedure Type (BT-105)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/(PT_OPEN|PT_RESTRICTED|PT_COMPETITIVE_NEGOTIATION|PT_COMPETITIVE_DIALOGUE|PT_INNOVATION_PARTNERSHIP)/fn:local-name()</ted-context>
+	<eforms-context>/*/cac:TenderingProcess/cbc:ProcedureCode</eforms-context>
+	<eforms-codelist>procurement-procedure-type</eforms-codelist>
+	<mapping>
+		<ted-value>PT_OPEN</ted-value>
+		<eforms-value>open</eforms-value>
+		<label>Open</label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_RESTRICTED</ted-value>
+		<eforms-value>restricted</eforms-value>
+		<label>Restricted</label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_COMPETITIVE_NEGOTIATION</ted-value>
+		<eforms-value>neg-w-call</eforms-value>
+		<label>Negotiated with prior publication of a call for competition / competitive with negotiation</label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_COMPETITIVE_DIALOGUE</ted-value>
+		<eforms-value>comp-dial</eforms-value>
+		<label>Competitive dialogue</label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_INNOVATION_PARTNERSHIP</ted-value>
+		<eforms-value>innovation</eforms-value>
+		<label>Innovation partnership</label>
+	</mapping>
+</procedure-types>
+
+<contract-nature-types>
+	<description>Mapping for Main and Additional Nature (BT-23, BT-531)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/OBJECT_CONTRACT/TYPE_CONTRACT/@CTYPE</ted-context>
+	<eforms-context>/*/cac:ProcurementProject/cbc:ProcurementTypeCode</eforms-context>
+	<eforms-codelist>contract-nature</eforms-codelist>
+	<mapping><ted-value>SERVICES</ted-value><eforms-value>services</eforms-value></mapping>
+	<mapping><ted-value>SUPPLIES</ted-value><eforms-value>supplies</eforms-value></mapping>
+	<mapping><ted-value>WORKS</ted-value><eforms-value>works</eforms-value></mapping>
+</contract-nature-types>
+
+<selection-criterion-types>
+	<description>Mapping for Main and Additional Nature (BT-23, BT-531)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/LEFTI/(SUITABILITY|ECONOMIC_FINANCIAL_INFO|ECONOMIC_FINANCIAL_MIN_LEVEL|TECHNICAL_PROFESSIONAL_INFO|TECHNICAL_PROFESSIONAL_MIN_LEVEL)/fn:local-name()</ted-context>
+	<eforms-context>/*/cac:ProcurementProjectLot/cac:SelectionCriteria/cbc:CriterionTypeCode</eforms-context>
+	<eforms-codelist>selection-criterion</eforms-codelist>
+	<mapping>
+		<ted-value>SUITABILITY</ted-value>
+		<eforms-value>sui-act</eforms-value>
+		<label>Suitability to pursue the professional activity</label>
+	</mapping>
+	<mapping>
+		<ted-value>ECONOMIC_FINANCIAL_INFO</ted-value>
+		<eforms-value>ef-stand</eforms-value>
+		<label>Economic and financial standing</label>
+	</mapping>
+	<mapping>
+		<ted-value>ECONOMIC_FINANCIAL_MIN_LEVEL</ted-value>
+		<eforms-value>ef-stand</eforms-value>
+		<label>Economic and financial standing</label>
+	</mapping>
+	<mapping>
+		<ted-value>TECHNICAL_PROFESSIONAL_INFO</ted-value>
+		<eforms-value>tp-abil</eforms-value>
+		<label>Technical and professional ability</label>
+	</mapping>
+	<mapping>
+		<ted-value>TECHNICAL_PROFESSIONAL_MIN_LEVEL</ted-value>
+		<eforms-value>tp-abil</eforms-value>
+		<label>Technical and professional ability</label>
+	</mapping>
+</selection-criterion-types>
+
+ 
+ 
 </mappings>

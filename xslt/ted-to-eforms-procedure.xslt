@@ -45,7 +45,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	
 	<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP">
 		<xsl:variable name="element-name" select="fn:local-name(.)"/>
-		<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-element-name eq $element-name]/fn:string(procurement-procedure-type)"/>
+		<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 		<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
 	</xsl:template>
 
@@ -71,7 +71,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	
 	<xsl:template match="ted:TYPE_CONTRACT">
 		<xsl:variable name="ted-value" select="fn:normalize-space(@CTYPE)"/>
-		<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[type-contract eq $ted-value]/fn:string(contract-nature)"/>
+		<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[ted-value eq $ted-value]/fn:string(eforms-value)"/>
 		<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
 	</xsl:template>
 	

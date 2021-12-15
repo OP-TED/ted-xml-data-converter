@@ -218,7 +218,7 @@ eu-int-org European Institution/Agency or International Organisation
 
 -->
 		<xsl:variable name="ca-type" select="@VALUE"/>
-		<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ca-type=$ca-type]/fn:string(buyer-legal-type)"/>
+		<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
 		<cac:ContractingPartyType>
 			<cbc:PartyType><xsl:value-of select="$buyer-legal-type"/></cbc:PartyType>
 		</cac:ContractingPartyType>
