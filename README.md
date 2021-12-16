@@ -2,6 +2,8 @@
 
 Project to convert notices in TED XML format to eForms XML format.
 
+Please see [Conversion-Methodology.md](Conversion-Methodology.md) for the approach and methodology for developing the conversion XSLT.
+
 Please see [Installation.md](Installation.md) for installation and usage instructions.
 
 ### Summary
