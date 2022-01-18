@@ -62,7 +62,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:apply-templates select="../../ted:LEFTI/PERFORMANCE_STAFF_QUALIFICATION"/>
 			<!-- Recurrence (BT-94) cardinality ? -->
 			<!-- Recurrence is a procurement that is likely to be included later in another procedure. -->
-			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/(ted:RECURRENT_PROCUREMENT|ted:NO_RECURRENT_PROCUREMENT)"/>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/(ted:NO_RECURRENT_PROCUREMENT|ted:RECURRENT_PROCUREMENT)"/>
 			<!-- Recurrence Description (BT-95) cardinality ? -->
 			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ESTIMATED_TIMING"/>
 			<!-- Security Clearance Deadline (BT-78) cardinality ? No equivalent element in TED XML -->
@@ -74,52 +74,31 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Employment legislation information provider No equivalent element in TED XML -->
 			
 			<!-- Documents Restricted Justification (BT-707) cardinality ? No equivalent element in TED XML -->
-			<!-- Documents Official Language (BT-708) cardinality ? -->
-			<!-- Documents Unofficial Language (BT-737) cardinality ? -->
-			<!-- Documents Restricted (BT-14) cardinality ? -->
-			<!-- Documents URL (BT-15) cardinality ? -->
-			<!-- Documents Restricted URL (BT-615) cardinality ? -->
+			<!-- Documents Official Language (BT-708) cardinality ? No equivalent element in TED XML -->
+			<!-- Documents Unofficial Language (BT-737) cardinality ? No equivalent element in TED XML -->
+			<!-- Documents Restricted (BT-14) cardinality ?, Documents URL (BT-15) cardinality ?, Documents Restricted URL (BT-615) cardinality ? -->
 			<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:DOCUMENT_RESTRICTED|ted:DOCUMENT_FULL)"/>
 			<!-- Terms Financial (BT-77) cardinality ? No equivalent element in TED XML -->
-			<!-- Reserved Participation (BT-71) cardinality + -->
-<!-- 
-eForms 
-res-ws Participation is reserved to sheltered workshops and economic operators aiming at the social and professional integration of disabled or disadvantaged persons.
-res-pub-ser Participation is reserved to organisations pursuing a public service mission and fulfilling other relevant conditions in the legislation.
-none None
+			<!-- Reserved Participation (BT-71) cardinality + Mandatory in eForms Contract Notice -->
+			<xsl:call-template name="reserved-participation"/>
 
-TED elements
-RESTRICTED_SHELTERED_PROGRAM	The execution of the contract/concession is restricted to the framework of sheltered employment programmes
-RESTRICTED_SHELTERED_WORKSHOP	The contract/concession is reserved to sheltered workshops and economic operators aiming at the social and professional integration of disabled or disadvantaged persons
-
--->
-			<!-- Tenderer Legal Form (BT-761) cardinality ? -->
-			<!-- Tenderer Legal Form Description (BT-76) cardinality ? -->
-			<!-- Late Tenderer Information (BT-771) cardinality ? -->
-			<!-- Subcontracting Tender Indication (BT-651) cardinality + -->
-			<!-- Subcontracting Obligation (BT-65) cardinality ? -->
-			<!-- Subcontracting Obligation Maximum (BT-729) cardinality ? -->
-			<!-- Subcontracting Obligation Minimum (BT-64) cardinality ? -->
-			<!-- Reserved Execution (BT-736) cardinality 1 -->
-			<!-- Electronic Invoicing (BT-743) cardinality ? -->
-			<!-- Terms Performance (BT-70) cardinality ? -->
-			<!-- Submission Electronic Signature (BT-744) cardinality ? -->
-			<!-- Following Contract (BT-41) cardinality + -->
-			<!-- Jury Decision Binding (BT-42) cardinality + -->
-			<!-- No Negotiation Necessary (BT-120) cardinality + -->
-			<!-- Award Criteria Order Justification (BT-733) cardinality ? -->
-			<!-- Award Criteria Complicated (BT-543) cardinality ? -->
-			<!-- Award Criterion Number Weight (BT-5421) cardinality ? -->
-			<!-- Award Criterion Number Fixed (BT-5422) cardinality ? -->
-			<!-- Award Criterion Number Threshold (BT-5423) cardinality ? -->
-			<!-- Award Criterion Type (BT-539) cardinality ? -->
-			<!-- Award Criterion Name (BT-734) cardinality ? -->
-			<!-- Award Criterion Description (BT-540) cardinality ? -->
-			<!-- Jury Member Name (BT-46) cardinality + -->
-			<!-- Prize Rank (BT-44) cardinality ? -->
-			<!-- Value Prize (BT-644) cardinality ? -->
-			<!-- Rewards Other (BT-45) cardinality ? -->
+			<!-- Tenderer Legal Form (BT-761) cardinality ? Element LEGAL_FORM only exists in form F05 -->
+			<!-- Tenderer Legal Form Description (BT-76) cardinality ? Element LEGAL_FORM only exists in form F05 -->
+			<!-- Late Tenderer Information (BT-771) cardinality ? No equivalent element in TED XML -->
+			<!-- Subcontracting Tender Indication (BT-651) cardinality + Only relevant for D81 Defense or OTHER -->
+			<!-- Subcontracting Obligation (BT-65) cardinality ? Only relevant for D81 Defense or OTHER -->
+			<!-- Subcontracting Obligation Maximum (BT-729) cardinality ? Only relevant for D81 Defense or OTHER -->
+			<!-- Subcontracting Obligation Minimum (BT-64) cardinality ? Only relevant for D81 Defense or OTHER -->
+			<!-- Reserved Execution (BT-736) cardinality 1 Mandatory in eForms Contract Notice -->
+			<xsl:call-template name="reserved-execution"/>
+			<!-- Electronic Invoicing (BT-743) cardinality ? Mandatory for eForms Contract Notice subtype 16 -->
+			<xsl:call-template name="e-invoicing"/>
+			<!-- Terms Performance (BT-70) cardinality ? Mandatory for eForms Contract Notice subtypes 17 (F05), 18 and 22 PERFORMANCE_CONDITIONS -->
+			<xsl:call-template name="terms-performance"/>
+			<!-- Submission Electronic Signature (BT-744) cardinality ? No equivalent element in TED XML -->
+			<xsl:call-template name="awarding-terms"/>
 			<!-- Organization providing additional information cardinality ? -->
+			
 			<!-- Organization providing offline access to the procurement documents cardinality ? -->
 			<!-- Organization receiving tenders ​/ Requests to participate cardinality ? -->
 			<!-- Submission URL (BT-18) cardinality ? -->
@@ -143,7 +122,7 @@ RESTRICTED_SHELTERED_WORKSHOP	The contract/concession is reserved to sheltered w
 	<xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL">
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 		<xsl:variable name="element-name" select="fn:local-name(.)"/>
-		<xsl:variable name="selection-criterion-type" select="$mappings//selection-criterion-types/mapping[ted-element-name eq $element-name]/fn:string(eforms-value)"/>
+		<xsl:variable name="selection-criterion-type" select="$mappings//selection-criterion-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 		<xsl:if test="$text ne ''">
 			<cac:SelectionCriteria>
 				<cbc:CriterionTypeCode listName="selection-criterion"><xsl:value-of select="$selection-criterion-type"/></cbc:CriterionTypeCode>
@@ -170,14 +149,230 @@ RESTRICTED_SHELTERED_WORKSHOP	The contract/concession is reserved to sheltered w
 	</xsl:template>
 	
 	<xsl:template match="ted:URL_DOCUMENT">
-    <cac:Attachment>
-        <cac:ExternalReference>
-            <cbc:URI><xsl:value-of select="."/></cbc:URI>
-        </cac:ExternalReference>
-    </cac:Attachment>
+		<cac:Attachment>
+			<cac:ExternalReference>
+				<cbc:URI><xsl:value-of select="."/></cbc:URI>
+			</cac:ExternalReference>
+		</cac:Attachment>
 	</xsl:template>
 	
+<!-- 
+eForms reserved-procurement codelist
+res-ws Participation is reserved to sheltered workshops and economic operators aiming at the social and professional integration of disabled or disadvantaged persons.
+res-pub-ser Participation is reserved to organisations pursuing a public service mission and fulfilling other relevant conditions in the legislation.
+none None
+
+TED elements
+RESTRICTED_SHELTERED_WORKSHOP	The contract/concession is reserved to sheltered workshops and economic operators aiming at the social and professional integration of disabled or disadvantaged persons
+RESERVED_ORGANISATIONS_SERVICE_MISSION	Participation in the procedure is reserved to organisations pursuing a public service mission and fulfilling the conditions set in Article 77(2) of Directive 2014/24/EU
+RESERVED_ORGANISATIONS_SERVICE_MISSION	Participation in the procedure is reserved to organisations pursuing a public service mission and fulfilling the conditions set in Article 94(2) of Directive 2014/25/EU
+
+-->
+	<xsl:template name="reserved-participation">
+		<!-- Reserved Participation (BT-71) is Mandatory for notice subtypes 7-9 (PIN) and 10-22 (CN) -->
+		<!-- reserved-procurement code res-pub-ser is RESERVED_ORGANISATIONS_SERVICE_MISSION in TED XML, used only in F21 -->
+		<xsl:choose>
+			<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">
+				<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 	
+	<xsl:template match="ted:RESTRICTED_SHELTERED_WORKSHOP">
+		<cac:SpecificTendererRequirement>
+			<cbc:TendererRequirementTypeCode listName="reserved-procurement">res-ws</cbc:TendererRequirementTypeCode>
+		</cac:SpecificTendererRequirement>
+	</xsl:template>
+
+	<xsl:template match="ted:RESERVED_ORGANISATIONS_SERVICE_MISSION">
+		<cac:SpecificTendererRequirement>
+			<cbc:TendererRequirementTypeCode listName="reserved-procurement">res-pub-ser</cbc:TendererRequirementTypeCode>
+		</cac:SpecificTendererRequirement>
+	</xsl:template>
+
+<!-- 
+TED elements
+RESTRICTED_SHELTERED_PROGRAM	The execution of the contract/concession is restricted to the framework of sheltered employment programmes
+-->
+	<xsl:template name="reserved-execution">
+		<!-- Reserved Execution (BT-736) is Mandatory for notice subtypes 7-9 (PIN) and 10-22 (CN) -->
+		<xsl:variable name="is-reserved-execution">
+			<xsl:choose>
+				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/ted:RESTRICTED_SHELTERED_PROGRAM)">true</xsl:when>
+				<xsl:otherwise>false</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<cac:ContractExecutionRequirement>
+			<cbc:ExecutionRequirementCode listName="reserved-execution"><xsl:value-of select="$is-reserved-execution"/></cbc:ExecutionRequirementCode>
+		</cac:ContractExecutionRequirement>
+	</xsl:template>
+
+<!--
+eForms permission codelist
+not-allowed Not allowed
+allowed Allowed
+required Required
+TED element
+EINVOICING	Electronic invoicing will be accepted
+-->
+	<xsl:template name="e-invoicing">
+		<!-- Electronic Invoicing (BT-743) is Mandatory for notice subtype 16 (CN) -->
+		<xsl:variable name="is-e-invoicing">
+			<xsl:choose>
+				<xsl:when test="fn:boolean($ted-form-main-element/ted:COMPLEMENTARY_INFO/ted:EINVOICING)">allowed</xsl:when>
+				<xsl:otherwise>not-allowed</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<cac:ContractExecutionRequirement>
+			<cbc:ExecutionRequirementCode listName="einvoicing"><xsl:value-of select="$is-e-invoicing"/></cbc:ExecutionRequirementCode>
+		</cac:ContractExecutionRequirement>
+	</xsl:template>
+
+	<xsl:template name="terms-performance">
+		<!-- Terms Performance (BT-70) is Mandatory for eForms Contract Notice subtypes 17 (F05), 18 (CONTRACT_DEFENCE) and 22 (CONTRACT_CONCESSIONAIRE_DEFENCE) -->
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:LEFTI/ted:PERFORMANCE_CONDITIONS/ted:P, ' '))"/>
+		<xsl:if test="$eforms-notice-subtype = ('17', '18', '22') or $text ne ''">
+			<xsl:variable name="text-or-default" select="if ($text ne '') then $text else 'PERFORMANCE CONDITIONS NOT FOUND'"/>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text-or-default"/></cbc:Description>
+			</cac:ContractExecutionRequirement>
+		</xsl:if>
+	</xsl:template>
+
+
+
+
+	<xsl:template name="awarding-terms">
+		<!-- will need to determine rules for including main element cac:AwardingTerms -->
+		<cac:AwardingTerms>
+			<!-- Following Contract (BT-41) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
+			<!-- Jury Decision Binding (BT-42) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
+			<!-- No Negotiation Necessary (BT-120) cardinality + Forbidden for all Forms except CM for Contract Notice subtype 16 and Optional for Contract Notice subtype 20 RIGHT_CONTRACT_INITIAL_TENDERS -->
+			<xsl:apply-templates select="../../ted:RIGHT_CONTRACT_INITIAL_TENDERS"/>
+			<!-- Award Criteria Order Justification (BT-733) cardinality ? No equivalent element in TED XML -->
+			<!-- Award Criteria Complicated (BT-543) cardinality ? No equivalent element in TED XML -->
+			
+			<!-- Award Criterion Number Weight (BT-5421) cardinality ? -->
+			<!-- Award Criterion Number Fixed (BT-5422) cardinality ? -->
+			<!-- Award Criterion Number Threshold (BT-5423) cardinality ? -->
+			<!-- Award Criterion Type (BT-539) cardinality ? -->
+			<!-- Award Criterion Name (BT-734) cardinality ? -->
+			<!-- Award Criterion Description (BT-540) cardinality ? -->
+			<xsl:apply-templates select="ted:AC"/>
+			
+			<!-- Jury Member Name (BT-46) cardinality + -->
+			<!-- TBD: no equivalent element in TED XML identified -->
+			<cac:TechnicalCommitteePerson>
+				<cbc:FamilyName></cbc:FamilyName>
+			</cac:TechnicalCommitteePerson>
+			<!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
+			<!-- Prize Rank (BT-44) cardinality ? -->
+			<!-- Value Prize (BT-644) cardinality ? -->
+			<!-- Rewards Other (BT-45) cardinality ? -->
+	
+		</cac:AwardingTerms>
+	</xsl:template>
+
+	<xsl:template match="ted:AC">
+		<cac:AwardingCriterion>
+			<xsl:apply-templates select="*"/>
+		</cac:AwardingCriterion>
+	</xsl:template>
+
+	<xsl:template match="ted:AC_QUALITY">
+		<cac:SubordinateAwardingCriterion>
+			<xsl:apply-templates select="AC_WEIGHTING"/>
+			<xsl:apply-templates select="AC_CRITERION"/>
+		</cac:SubordinateAwardingCriterion>
+	</xsl:template>
+
+	<xsl:template match="ted:AC_COST">
+		<cac:SubordinateAwardingCriterion>
+			<xsl:apply-templates select="AC_WEIGHTING"/>
+			<xsl:apply-templates select="AC_CRITERION"/>
+		</cac:SubordinateAwardingCriterion>
+	</xsl:template>
+
+	<xsl:template match="ted:AC_PRICE">
+		<cac:SubordinateAwardingCriterion>
+			<xsl:apply-templates select="AC_WEIGHTING"/>
+		</cac:SubordinateAwardingCriterion>
+	</xsl:template>
+
+	<xsl:template match="ted:AC_PROCUREMENT_DOC">
+		<cac:SubordinateAwardingCriterion>
+			<cbc:Description languageID="{$eforms-first-language}"><xsl:text>Price is not the only award criterion and all criteria are stated only in the procurement documents.</xsl:text></cbc:Description>
+		</cac:SubordinateAwardingCriterion>
+	</xsl:template>
+	
+	<xsl:template match="ted:AC_CRITERION">
+		<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Description>
+	</xsl:template>
+<!--
+eForms number-fixed codelist
+fix-tot Fixed (total)
+fix-unit Fixed (per unit)
+
+eForms number-weight codelist
+per-exa Weight (percentage, exact)
+per-mid Weight (percentage, middle of a range)
+dec-exa Weight (decimal, exact)
+dec-mid Weight (decimal, middle of a range)
+poi-exa Weight (points, exact)
+poi-mid Weight (points, middle of a range)
+ord-imp Order of importance
+
+eForms number-threshold codelist
+min-score Minimum score
+max-pass Maximum number of tenders passing
+-->	
+	<xsl:template match="ted:AC_WEIGHTING">
+		<xsl:variable name="text" select="fn:normalize-space(.)"/>
+		<xsl:variable name="part1" select="fn:substring-before($text, ' ')"/>
+		<xsl:variable name="rest" select="fn:lower-case(fn:substring-after($text, ' '))"/>
+		<ext:UBLExtensions>
+			<ext:UBLExtension>
+				<ext:ExtensionContent>
+					<efext:EformsExtension>
+						<efac:AwardCriterionParameter>
+							<xsl:choose>
+								<xsl:when test="matches($text, '^[0-9]+$')">
+									<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+									<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
+								</xsl:when>
+								<xsl:when test="fn:matches($text,'^[0-9]+(,[0-9]{3})+$') or fn:matches($text,'^[0-9]+(\.[0-9]{3})+$')">
+									<xsl:variable name="number" select="fn:replace($text, '[,.]', '')"/>
+									<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+									<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
+								</xsl:when>
+								<xsl:when test="fn:matches($text, '^[0-9]+ *%$')">
+									<xsl:variable name="number" select="fn:replace($text, '% *', '')"/>
+									<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+									<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
+								</xsl:when>
+								<xsl:when test="fn:matches($part1, '^[0-9]+$') and fn:matches($rest, '^(points|punkte|punten|puntos|bodova|punti|punkts|pointes|pts)$')">
+									<efbc:ParameterCode listName="number-weight">poi-exa</efbc:ParameterCode>
+									<efbc:ParameterNumeric><xsl:value-of select="$part1"/></efbc:ParameterNumeric>
+								</xsl:when>
+								<!-- miscellaneous unparseable values here -->
+								<xsl:otherwise>
+									<efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+									<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
+								</xsl:otherwise>
+							</xsl:choose>
+						</efac:AwardCriterionParameter>
+					</efext:EformsExtension>
+				</ext:ExtensionContent>
+			</ext:UBLExtension>
+		</ext:UBLExtensions>
+	</xsl:template>
+
 	<xsl:template name="lot-tendering-process">
 		<xsl:comment> cac:TenderingProcess here </xsl:comment>
 		<cac:TenderingProcess>

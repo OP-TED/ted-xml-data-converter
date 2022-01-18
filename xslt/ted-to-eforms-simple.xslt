@@ -125,4 +125,8 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</xsl:if>
 	</xsl:template>
 
+	<xsl:template match="ted:RIGHT_CONTRACT_INITIAL_TENDERS">
+		<cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
+	</xsl:template>
+
 </xsl:stylesheet>
