@@ -67,14 +67,14 @@ There are multiple dimensions to this conversion:
    * R.2.0.9 - "Standard" forms
    * R.2.0.8 - "Defence" forms
 * 22 TED Forms map to 45 eForms Forms
-* eForms schema well written, consistent and well documented (but incomplete)
-* TED schema poorly written, inconsistent and poorly documented
+* eForms schema is well written, consistent and well documented (but incomplete)
+* TED schema is poorly written, inconsistent and poorly documented
 * Organisation of information differs between the schemas
 * TED XML schemas evolved over time -> differences in published TED notices
 * eForms schema has more information points than TED schemas
-* Element occurrence rules defined differently between eForms and TED
+* Element occurrence rules are defined differently between eForms and TED
 * Millions of published TED XML notices can be used as examples
-* Less than 20 eForms example XML notices, not complete, not fully definitive
+* Less than 20 eForms example XML notices, these are not complete and not fully definitive
 
 ### Information sources
 
@@ -84,6 +84,7 @@ There are multiple dimensions to this conversion:
 * Millions of published XML notices <sup>[1](footnote1)</sup>
 * Validation Rules spreadsheets
 * Deloitte mapping spreadsheets
+* TED procurement PDF forms
 
 #### eForms
 
@@ -97,7 +98,7 @@ There are multiple dimensions to this conversion:
 | --- | --- | --- |
 | Document structure | **TED XML schemas** <br/> Published notices | **eForms XML Schemas** <br/> **eForms documentation**  |
 | Element occurrence <br/> variations | **TED XML schemas** <br/> Published notices <br/> Validation Rules spreadsheets <br/> Deloitte mapping spreadsheets | **eForms documentation** <br/> *eForms Regulation Annex spreadsheet* |
-| Element purpose, <br/> definitions, documentation | Element names *partly* <br/> Validation Rules spreadsheets *poor and incomplete* <br/> Deloitte mapping spreadsheets *unreliable* | **eForms XML Schemas** <br/> **eForms documentation** <br/> *eForms Regulation Annex spreadsheet* |
+| Element purpose, <br/> definitions, documentation | Element names *partly* <br/> Validation Rules spreadsheets *poor and incomplete* <br/> Deloitte mapping spreadsheets *unreliable* <br/> TED PDF forms | **eForms XML Schemas** <br/> **eForms documentation** <br/> *eForms Regulation Annex spreadsheet* <br/> eForms codelists |
 
 ## Occurrence and Priority
 
@@ -114,8 +115,7 @@ These notices were analysed to determine the relative occurrence of:
 * Languages
 * Legal basis
 
-More details and the results of these analysis are available in the ["
-TED to eForms Converter" Teams channel](https://teams.microsoft.com/l/channel/19%3ad422031f501349fbad5b2e49d90980ac%40thread.tacv2/TED%2520to%2520eForms%2520Converter?groupId=debf29ba-857a-4fda-8ee9-6303c7d7848b&tenantId=b24c8b06-522c-46fe-9080-70926f8dddb1), in the "TED XML Analysis.docx" document and the "ted-eforms-notice-type-mapping.xlsx" spreadsheet. 
+More details and the results of these analysis are available in the ["TED to eForms Converter" Teams channel](https://teams.microsoft.com/l/channel/19%3ad422031f501349fbad5b2e49d90980ac%40thread.tacv2/TED%2520to%2520eForms%2520Converter?groupId=debf29ba-857a-4fda-8ee9-6303c7d7848b&tenantId=b24c8b06-522c-46fe-9080-70926f8dddb1), in the "TED XML Analysis.docx" document and the "ted-eforms-notice-type-mapping.xlsx" spreadsheet. 
 
 Forms F02 (maps to eForms subtype 16) and F03 (maps to eForms subtype 29) of the R.2.0.9 schema are used by two-thirds of all the analysed notice sets. So these two forms will be focussed on during the first phase of conversion development. As Form F02 (Contract Notice) is easier to convert, it has been handled first.
 
@@ -151,7 +151,7 @@ Check that the order matches with the element order defined in the eForms schema
 Review the Annex spreadsheet for the related BTs, determining which Forms they are allowed / forbidden / mandatory for. Document this in a comment in the XSLT file. If they are allowed for form 16, proceed with the next steps. 
 
 ### 3. Determine the cardinality(-ies) of the structure
-Examine all the related BTs for the structure, reviewing the cardinalities of all the elements involved.
+Examine the documentation for all the related BTs for the structure, reviewing the cardinalities of all the elements involved. If the structure is repeated, either for the current BT or for other BTs, check which element which should be repeated by reviewing the documentation and the schema.
 
 ### 4. Determine the use / purpose of the structure
 Review the documentation and Annex spreadsheet to understand what information the structure is used for.
@@ -162,11 +162,11 @@ If the structure uses a codelist, extract the codes and labels for consideration
 Review the information sources listed above for the TED XML to find the appropriate structures used for the same information. If none are found, document this in a comment in the XSLT.
 
 ### 6. Analyse text content of the TED structure
-If the identified TED XML structure contains text, write a script to extract and collate all the text variations. 
+If the identified TED XML structure contains text, write a script to extract and collate all the text variations from the downloaded TED XML data set. 
 
 If the text is an enumerated set (either an attribute with an enumerated set of values, or a set of empty elements (the element names are considerered values)), list them. Determine the meaning behind each, and map to the equivalent eForms codelist code.
 
-If the text is expressed in the language of the form, consider only the English versions. Read enough to confirm your understanding of the meaning / use of the structure.
+If the text is expressed in the language of the form, consider only the English versions. Read enough to confirm understanding of the meaning / use of the structure.
 
 ### Choose the appropriate conversion approach (processing model, template structure)
 
