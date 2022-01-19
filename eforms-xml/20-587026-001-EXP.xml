@@ -371,6 +371,29 @@
                <cbc:ID schemeName="organization">ORG-001</cbc:ID>
             </cac:PartyIdentification>
          </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="DAN">Ved et udbud med prækvalifikation efter udbudsloven, forsyningsvirksomhedsdirektivet eller tilbudsloven skal en klage over ikke at være blevet prækvalificeret indgives inden 20 kalenderdage regnet fra dagen efter ordregiverens afsendelse af underretning om prækvalifikation. Andre klager over udbud eller beslutninger, f.eks. tildeling af kontrakter, omfattet af udbudslovens afsnit II eller III eller forsyningsvirksomhedsdirektivet skal være indgivet til Klagenævnet inden 45 kalenderdage regnet fra dagen efter ordregiverens offentliggørelse af en bekendtgørelse i EU-Tidende om indgåelse af kontrakt. Klager over indgåelse af en rammeaftale efter udbudsloven (afsnit II, III og § § 191 og 192), forsyningsvirksomhedsdirektivet eller tilbudsloven skal være indgivet til Klagenævnet inden 6 måneder regnet fra dagen efter ordregiverens underretning om tildelingsbeslutningen. Klager over indgåelse af en kontrakt baseret på en rammeaftale med genåbning af konkurrencen eller et dynamisk indkøbssystem omfattet af udbudslovens afsnit II eller III eller forsyningsvirksomhedsdirektivet skal være indgivet til Klagenævnet inden 30 kalenderdage regnet fra dagen efter ordregiverens underretning om tildelingsbeslutningen. Samtidig med klagens fremsendelse til Klagenævnet for Udbud skal klageren sende en kopi af klagen med bilag til ordregiveren, gerne pr. e-mail.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+            <cac:MediationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:MediationParty>
+         </cac:AppealTerms>
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>

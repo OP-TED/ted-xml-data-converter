@@ -341,6 +341,16 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">See internet address provided in section I.3).</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>

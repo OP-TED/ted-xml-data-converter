@@ -305,6 +305,18 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+            <cac:MediationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:MediationParty>
+         </cac:AppealTerms>
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>

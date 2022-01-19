@@ -194,6 +194,16 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>
@@ -252,6 +262,16 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>
