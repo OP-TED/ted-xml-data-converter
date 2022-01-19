@@ -92,6 +92,70 @@
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
+               <ted-orgs xmlns="">
+                  <ted-org>
+                     <orgid>ORG-001</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014[3]/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">European Union Agency for Cybersecurity</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1 Vasilissis Sofias Street</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Maroussi</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">15124</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="GR"/>
+                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Procurement Officer</CONTACT_POINT>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+30 2814409711</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">procurement@enisa.europa.eu</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="EL"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.enisa.europa.eu</URL_GENERAL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-002</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014[3]/AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Triple A and C Trading SPRL</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">119/13, Rue Dupre</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Brussels</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1090</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="BE"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="BE1"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-003</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014[3]/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Court of Justice of the European Union</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">boulevard Konrad Adenauer, Kirchberg</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Luxembourg</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">2925</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="LU"/>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+352 4303-1</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">cfi.registry@curia.europa.eu</E_MAIL>
+                        <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+352 4303-2600</FAX>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-004</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014[3]/COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">The European Ombudsman</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1 avenue du Président Robert Schuman, PO Box 403</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Strasbourg</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">67001</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="FR"/>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+33 388172313</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">eo@ombudsman.europa.eu</E_MAIL>
+                        <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+33 388179062</FAX>
+                     </tedaddress>
+                  </ted-org>
+               </ted-orgs>
                <!-- efac:Publication here -->
                <efac:Publication>
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
@@ -206,8 +270,53 @@
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject/>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ENG">Production and Supply of Branded Promotional Material</cbc:Name>
+      <cbc:Description languageID="ENG">The scope of this call for tenders is the production and supply of high-quality and environmentally friendly, branded promotional material including merchandised clothing and textile products with ENISA’s corporate visual identity (by including e.g. ENISA’s logo, website address, tag line, graphic motif, etc.), in an efficient, timely and dependable manner. Materials fully/partly manufactured in Europe will be preferred. Where possible, items made of recycled materials should be offered.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">39294100</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+   </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension/>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject/>
+   </cac:ProcurementProjectLot>
 </ContractAwardNotice>

@@ -281,6 +281,205 @@
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
+               <ted-orgs xmlns="">
+                  <ted-org>
+                     <orgid>ORG-001</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Highways England</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">The Cube, 199 Wharfside Street</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Birmingham</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">B1 1RN</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">James.mayer@highwaysengland.co.uk</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.gov.uk/government/organisations/highways-england</URL_GENERAL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-002</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[1]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Amey OW Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Chancery Exchange, 10 Furnival Street</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">London</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">EC4A 1AB</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-003</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[2]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR[1]/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ATKINS Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Woodcote Grove, Ashley Road</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Epsom</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">KT18 5BW</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-004</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[2]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR[2]/ADDRESS_CONTRACTOR</path>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[8]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Jacobs UK Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1180 Eskdale Road, Winnersh</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Wokingham</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">RG41 5TU</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-005</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[3]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Costain Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Costain House, Vanwall Business Park</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Maidenhead</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">SL6 4UB</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-006</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR[1]/ADDRESS_CONTRACTOR</path>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[7]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Arcadis Consulting (UK) Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Arcadis House, 34 York Way</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">London</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">N1 9AB</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-007</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR[2]/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Pell Frischmann Consulting Engineers Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">5 Manchester Square</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">London</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">W1U 3PD</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-008</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR[3]/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">TRL Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Crowthorne House, Nine Mile Ride</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Wokingham</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">RG40 3GA</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-009</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[5]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[9]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Ove Arup and Partners Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">13 Fitzroy Street</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">London</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">W1T 4BQ</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-010</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[6]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">WSP UK Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">WSP House, 70 Chancery Lane</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">London</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">WC2A 1AF</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-011</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[10]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Pricewaterhousecoopers LLP</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1 Embankment Place</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">London</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">WC2N 6RH</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-012</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[11]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Rowsell Wright Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">3 Greengate, Cardale Park</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Harrogate</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">HG3 1GY</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-013</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[12]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Turner and Townsend Contract Services Ltd</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Low Hall, Calverley Lane, Horsforth</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Leeds</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">LS18 4GH</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-014</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">See details at VI.4.3)</OFFICIALNAME>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">See details at VI.4.3)</TOWN>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="UK"/>
+                     </tedaddress>
+                  </ted-org>
+               </ted-orgs>
                <!-- efac:Publication here -->
                <efac:Publication>
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
@@ -304,7 +503,7 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
       <cac:ContractingPartyType>
-         <cbc:PartyType/>
+         <cbc:PartyType>cga</cbc:PartyType>
       </cac:ContractingPartyType>
       <cac:ContractingPartyType>
          <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
@@ -329,8 +528,102 @@
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject/>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ENG">Specialist Professional and Technical Services 2 (SPaTS 2) Framework</cbc:Name>
+      <cbc:Description languageID="ENG">The contract was previously advertised under the name Specialist Professional, Environmental, Customer Insight, Technical, Research and Engineering Services (SPECTRE) Framework. Appointed suppliers will provide specialist, professional, technical consultancy, engineering advice, research, innovation and procurement advice services across a range of transport related topics. The framework will be divided into two lots and will be for a duration of 4 years.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">73000000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+   </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension/>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject/>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-002</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension/>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject/>
+   </cac:ProcurementProjectLot>
 </ContractAwardNotice>

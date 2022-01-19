@@ -55,6 +55,40 @@
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
+               <ted-orgs xmlns="">
+                  <ted-org>
+                     <orgid>ORG-001</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Financial Sector Deepening Trust (Kenya)</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Box 11353</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Nairobi</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">00100</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="KE"/>
+                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Lydiah Kioko</CONTACT_POINT>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+254 205137300</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">tenders@fsdkenya.org</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="00"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">www.fsdkenya.org</URL_GENERAL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-002</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Financial Sector Deepening Trust (FSD Kenya)</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">11353</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Nairobi</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">00100</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="KE"/>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+254 205137300</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">info@fsdkenya.org</E_MAIL>
+                     </tedaddress>
+                  </ted-org>
+               </ted-orgs>
                <!-- efac:Publication here -->
                <efac:Publication>
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
@@ -101,6 +135,70 @@
       </cac:ProcessJustification>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject/>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ENG">Government of Kenya Collections Strategy</cbc:Name>
+      <cbc:Description languageID="ENG">Governments are the largest payer and receiver of cash in any economy and Kenya is no exception. It is estimated that GoK represents 60 % of payments and collections in the economy. Following a presidential directive to digitise all government collections in the country which would effectively eliminate cash from Government offices a Government Digital Payments (GDP) task force was set up to oversee the implementation of this key project which saw the deployment of e-Citizen, a single sign-on platform that allows citizens to access, apply and pay for government services. To date about three hundred out of a possible five thousand government services have been fully digitised and the revenue collected through the platform has been growing steadily since 2015. Currently, over eight million citizens are registered on the e-citizen platform.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">66170000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+   </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+            <cbc:Description languageID="ENG">The consulting firm or team of consultants should have: — strong understanding of government collections landscape in Kenya and globally; — demonstrable deep knowledge and understanding of the global payments market with a bias on government payments; — reputation, market position and record of implementing similar assignments; — relevant technical and commercial skills; — ability to work flexibly, including availability on short notice.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+            <cbc:Description languageID="ENG">Expressions of interest must include a capability statement, of no more than four (4) A4 pages, which shows evidence of relevant skills and experience in providing the services required under this contract notice. Abridged CVs of key personnel only, each of not more than three (3) pages in length, should also be included. These CVs can be submitted in addition to the four page capability statement. Expressions of interest should be submitted preferably by email to tenders@fsdkenya.org (reference: Government Collection Strategy). Following assessment of expressions of interest, FSD Kenya will invite short-listed applicants to submit full technical and commercial proposals.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://fsdkenya.org/about-us/opportunities/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension/>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject/>
+   </cac:ProcurementProjectLot>
 </ContractNotice>

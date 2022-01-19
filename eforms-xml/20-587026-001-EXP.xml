@@ -137,6 +137,110 @@
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
+               <ted-orgs xmlns="">
+                  <ted-org>
+                     <orgid>ORG-001</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Region Sjælland</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">29190658</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Alleen 15</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Sorø</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">4180</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="DK"/>
+                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Per Thomsen</CONTACT_POINT>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+45 93576602</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">perht@regionsjaelland.dk</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="DK02"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.regionsjaelland.dk</URL_GENERAL>
+                        <URL_BUYER xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://eu.eu-supply.com/ctm/Company/CompanyInformation/Index/137394</URL_BUYER>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-002</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL[1]</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Region Hovedstaden</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">29190623</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Kongens Vænge 2</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Hillerød</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">3400</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="DK"/>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">regionh@regionh.dk</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="DK01"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.regionh.dk</URL_GENERAL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-003</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL[2]</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Region Nordjylland</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">29190941</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Niels Bohrs Vej 30</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Aalborg Øst</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">9220</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="DK"/>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">region@rn.dk</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="DK05"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.rn.dk</URL_GENERAL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-004</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL[3]</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Region Midtjylland</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">29190925</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skottenborg 26</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Viborg</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">8800</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="DK"/>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">kontakt@regionmidtjylland.dk</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="DK04"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.rm.dk</URL_GENERAL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-005</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Klagenævnet for Udbud</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Nævnerens Hus, Toldboden 2</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Viborg</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">8800</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="DK"/>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+45 35291095</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">klfu@erst.dk</E_MAIL>
+                        <URL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://erhvervsstyrelsen.dk/klagenaevnet-for-udbud</URL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-006</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Konkurrence- og Forbrugerstyrelsen</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Carl Jacobsens Vej 35</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Valby</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">2500</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="DK"/>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+45 41715000</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">kfst@kfst.dk</E_MAIL>
+                        <URL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.kfst.dk</URL>
+                     </tedaddress>
+                  </ted-org>
+               </ted-orgs>
                <!-- efac:Publication here -->
                <efac:Publication>
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
@@ -191,8 +295,94 @@
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
+      <cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject/>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="DAN">IT-klientudstyr 2021-2025</cbc:Name>
+      <cbc:Description languageID="DAN">Rammeaftale vedrørende IT-klientudstyr. Udbud omfatter: Bærbar Pc'er, stationære Pc'er, tyndeklienter, Pc skærme, monitorer, tablets, små printere, digitale infostandere, klinisk stuegangsvogne, telefoner og IT-tilbehør samt indsamling og bortskaffelse af udtjent IT-hardware.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="DKK">860000000.00</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">30200000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+   </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+            <cbc:Description languageID="DAN">For at blive erklæret egnet, skal ansøger opfylde nedenstående vedrørende økonomisk og finansiel formåen: - Tilbudsgiver skal oplyse den samlede gennemsnitlige årsomsætning i de tre (3) seneste afsluttede regnskabsår. - Tilbudsgiver skal oplyse den gennemsnitlige soliditetsgrad for de tre (3) seneste afsluttede regnskabsår. - Soliditetsgraden skal beregnes som soliditetsgrad = egenkapital / aktiver i alt * 100.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+            <cbc:Description languageID="DAN">- Tilbudsgiver gennemsnitligt har haft en årlig omsætning på minimum 300 mio. DKK baseret på de seneste 3 afsluttede regnskabsår. - Tilbudsgiver gennemsnitligt har haft en soliditetsgrad på minimum 10 % baseret på de seneste 3 afsluttede regnskabsår.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+            <cbc:Description languageID="DAN">For at blive erklæret egnet, skal ansøger opfylde nedenstående vedrørende teknisk og faglig formåen: - Ansøger skal anføre to (2) forskellige leverancer som er (eller har været) igangværende indenfor de seneste tre (3) år før ansøgningsfristen – der skal have været realitet på levering i henhold til leverancen. Referencerne bedes indeholde: - Angivelse af kunden. - Beskrivelse af indholdet af opgaven, herunder varekøb, service- og supportaftale, vedligeholdelse og tjenesteydelser. - Beskrivelse af kompleksiteten i mængden af produkter som er blevet leveret, driftsstatus (igangværende/ophørt). - Kontraktens varighed (dato for ikrafttræden og slutdato) - Årlig kontraktværdi: — For rammeaftaler angives det estimerede årlige kontraktværdi.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+            <cbc:Description languageID="DAN">1) Ansøger skal have minimum to (2) sammenlignelige leverancer. - En reference anses for sammenlignelig når den har lighed med den udbudte kontrakt og kunde. 2) Med lighed med kontrakten forstås opgaver, som i indhold af kontrakten og kompleksitet i mængden af produkter eller løsning bedst svarer til den udbudte kontrakt. 3) Med lighed med kunden forstås en offentlig/privat større virksomhed med et betydeligt antal ansatte og en geografisk fordeling på flere lokationer over et større område.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <cbc:RecurringProcurementDescription languageID="DAN">Ca. 9 måneder før udløbsdato.</cbc:RecurringProcurementDescription>
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=286788&amp;B=RS</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="DAN">Kontrakt punkt 7.3 - Miljø: Leverandøren skal aktivt medvirke til fortsatte forbedringer af miljø, teknologi og økonomi i forbindelse med kontrakten, herunder til at mængden af emballage mindskes mest muligt. Leverandøren skal sørge for at afhjælpe såvel miljø- som arbejdsmiljøproblemer, f.eks. med hensyn til emballagens udformning, materiale og vægt. Kontrakt punkt 22 - Socialt ansvar: Leverandøren skal i forbindelse med gennemførelsen af kontrakten respektere og overholde nationale og internationale love og regler vedrørende menneskerettigheder, arbejdstagerrettigheder, miljø og antikorruption, det vil sige: FN’s deklaration om menneskerettigheder, ILO’s deklaration om arbejdstagerrettigheder, Rio-deklarationen om miljø og udvikling, FN’s konvention mod korruption. Dette indebærer bl.a., at hverken leverandøren eller dennes eventuelle underleverandører må benytte sig af konventionsstridig børne- og voksenarbejdskraft.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=286788&amp;B=RS</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension/>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject/>
+   </cac:ProcurementProjectLot>
 </ContractNotice>
