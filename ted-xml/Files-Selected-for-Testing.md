@@ -13,4 +13,5 @@ This table lists the TED XML files chosen to test the Converter, and the reasons
 | 20-587026-001-EXP.xml | F02_2014 | CN | Procurement | PROCUREMENT_LAW -> BT-01 Legal Basis Local - Text |
 | 20-260117-001-EXP.xml | F02_2014 | CN | Procurement | ACCELERATED_PROC -> BT-106 Procedure Accelerated |
 | 20-213571-001-EXP.xml | F02_2014 | CN | Procurement | CPV_CODE -> BT-262 Main Classification Codes |
+| 21-120407-001-EXP.xml | F02_2014 | CN | Lot | DATE_TENDER_VALID |
 
