@@ -111,13 +111,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Submission URL (BT-18) cardinality ? -->
 			<!-- Organization processing tenders ​/ Requests to participate cardinality ? -->
 			<xsl:call-template name="address-participation-url-participation"/>
-			
-<!-- CONTINUE HERE -->
-			<!-- Tender Validity Deadline (BT-98) cardinality ? -->
+			<!-- Tender Validity Deadline (BT-98) cardinality ? Only relevant for eForms Contract Notice subtypes 16, 17 (F02, F05) and 20, 21 (F21, F22) and E3 -->
+			<xsl:apply-templates select="../../ted:PROCEDURE/(ted:DATE_TENDER_VALID|ted:DURATION_TENDER_VALID)"/>
 			<!-- Review Deadline Description (BT-99) cardinality ? -->
 			<!-- Review organization cardinality ? -->
 			<!-- Organization providing more information on the time limits for review cardinality ? -->
 			<!-- Mediation Organization cardinality ? -->
+			<xsl:call-template name="appeal-terms"/>
+			
+<!-- CONTINUE HERE -->
 			<!-- Submission Language (BT-97) cardinality + -->
 	
 	
@@ -266,8 +268,44 @@ EINVOICING	Electronic invoicing will be accepted
 		</xsl:if>
 	</xsl:template>
 
+	<xsl:template match="ted:DATE_TENDER_VALID">
+		<!-- need to calculate an integer value of days from DATE_TENDER_VALID minus DATE_RECEIPT_TENDERS -->
+		<xsl:variable name="date-receipt-tenders" select="xs:date(../ted:DATE_RECEIPT_TENDERS)"/>
+		<xsl:variable name="date-tender-valid" select="xs:date(.)"/>
+		<xsl:variable name="days" select="($date-tender-valid - $date-receipt-tenders) div xs:dayTimeDuration('P1D')"/>
+		<cac:TenderValidityPeriod>
+			<cbc:DurationMeasure unitCode="DAY"><xsl:value-of select="$days"/></cbc:DurationMeasure>
+		</cac:TenderValidityPeriod>
+	</xsl:template>
 
+	<xsl:template match="ted:DURATION_TENDER_VALID">
+		<!-- Duration in months (from the date stated for receipt of tender) -->
+		<!-- TYPE attribute is FIXED to "MONTH" -->		
+		<cac:TenderValidityPeriod>
+			<cbc:DurationMeasure unitCode="MONTH"><xsl:value-of select="fn:number(.)"/></cbc:DurationMeasure>
+		</cac:TenderValidityPeriod>
+	</xsl:template>
 
+	<xsl:template name="appeal-terms">
+		<cac:AppealTerms>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE"/>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_INFO"/>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_BODY"/>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY"/>
+		</cac:AppealTerms>
+	</xsl:template>
+	
+	<xsl:template match="ted:REVIEW_PROCEDURE">
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+		<xsl:if test="$text ne ''">
+			<cac:PresentationPeriod>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			</cac:PresentationPeriod>
+		</xsl:if>
+	</xsl:template>
+
+	
+	
 	<xsl:template name="lot-tendering-process">
 		<xsl:comment> cac:TenderingProcess here </xsl:comment>
 		<cac:TenderingProcess>

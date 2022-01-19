@@ -246,6 +246,34 @@ eu-int-org European Institution/Agency or International Organisation
 		</cac:AdditionalInformationParty>
 	</xsl:template>
 	
+		<xsl:template match="ted:ADDRESS_REVIEW_INFO">
+		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_REVIEW_INFO')]/../orgid"/>
+		<cac:AppealInformationParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
+			</cac:PartyIdentification>
+		</cac:AppealInformationParty>
+	</xsl:template>
+
+		<xsl:template match="ted:ADDRESS_REVIEW_BODY">
+		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_REVIEW_BODY')]/../orgid"/>
+		<cac:AppealReceiverParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
+			</cac:PartyIdentification>
+		</cac:AppealReceiverParty>
+	</xsl:template>
+
+		<xsl:template match="ted:ADDRESS_MEDIATION_BODY">
+		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_MEDIATION_BODY')]/../orgid"/>
+		<cac:MediationParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
+			</cac:PartyIdentification>
+		</cac:MediationParty>
+	</xsl:template>
+
+	
 	<xsl:template match="ted:ADDRESS_PARTICIPATION">
 		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_PARTICIPATION')]/../orgid"/>
 		<cac:PartyIdentification>
