@@ -97,12 +97,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:call-template name="terms-performance"/>
 			<!-- Submission Electronic Signature (BT-744) cardinality ? No equivalent element in TED XML -->
 			<xsl:call-template name="awarding-terms"/>
-			<!-- Organization providing additional information cardinality ? -->
+			<!-- Organization providing additional information cardinality BT-18 ? -->
+			
+			<!-- In TED, within element CONTRACTING_BODY, the elements ADDRESS_FURTHER_INFO_IDEM and ADDRESS_PARTICIPATION_IDEM are used to represent options for "to the abovementioned address" in the PDF forms. -->
+			<!-- These indicate that for the functions of "Additional information can be obtained from" and "Tenders or requests to participate must be submitted to", the Contracting Authority address should be used. -->
+			<!-- in eForms, such a direction is implicit, and no such elements are used. So the element ADDRESS_FURTHER_INFO_IDEM will not be mapped. -->
+			<!-- However, the element ADDRESS_PARTICIPATION_IDEM may exist with a sibling element URL_PARTICIPATION, which is mapped to the element cbc:EndpointID within cac:TenderRecipientParty. -->
+			<!-- In this case, it does not make sense to include cac:TenderRecipientParty without pointing to the correct address, so ADDRESS_PARTICIPATION_IDEM will be mapped if it has a URL_PARTICIPATION sibling -->
 			
 			<!-- Organization providing offline access to the procurement documents cardinality ? -->
-			<!-- Organization receiving tenders ​/ Requests to participate cardinality ? -->
+			<xsl:apply-templates select="../../ted:CONTRACTING_BODY/ted:ADDRESS_FURTHER_INFO"/>
+			<!-- Organization receiving tenders ​/ Requests to participate cardinality ? No equivalent element in TED XML -->
 			<!-- Submission URL (BT-18) cardinality ? -->
 			<!-- Organization processing tenders ​/ Requests to participate cardinality ? -->
+			<xsl:call-template name="address-participation-url-participation"/>
+			
+<!-- CONTINUE HERE -->
 			<!-- Tender Validity Deadline (BT-98) cardinality ? -->
 			<!-- Review Deadline Description (BT-99) cardinality ? -->
 			<!-- Review organization cardinality ? -->
@@ -244,134 +254,19 @@ EINVOICING	Electronic invoicing will be accepted
 			</cac:ContractExecutionRequirement>
 		</xsl:if>
 	</xsl:template>
-
-
-
-
-	<xsl:template name="awarding-terms">
-		<!-- will need to determine rules for including main element cac:AwardingTerms -->
-		<cac:AwardingTerms>
-			<!-- Following Contract (BT-41) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
-			<!-- Jury Decision Binding (BT-42) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
-			<!-- No Negotiation Necessary (BT-120) cardinality + Forbidden for all Forms except CM for Contract Notice subtype 16 and Optional for Contract Notice subtype 20 RIGHT_CONTRACT_INITIAL_TENDERS -->
-			<xsl:apply-templates select="../../ted:RIGHT_CONTRACT_INITIAL_TENDERS"/>
-			<!-- Award Criteria Order Justification (BT-733) cardinality ? No equivalent element in TED XML -->
-			<!-- Award Criteria Complicated (BT-543) cardinality ? No equivalent element in TED XML -->
-			
-			<!-- Award Criterion Number Weight (BT-5421) cardinality ? -->
-			<!-- Award Criterion Number Fixed (BT-5422) cardinality ? -->
-			<!-- Award Criterion Number Threshold (BT-5423) cardinality ? -->
-			<!-- Award Criterion Type (BT-539) cardinality ? -->
-			<!-- Award Criterion Name (BT-734) cardinality ? -->
-			<!-- Award Criterion Description (BT-540) cardinality ? -->
-			<xsl:apply-templates select="ted:AC"/>
-			
-			<!-- Jury Member Name (BT-46) cardinality + -->
-			<!-- TBD: no equivalent element in TED XML identified -->
-			<cac:TechnicalCommitteePerson>
-				<cbc:FamilyName></cbc:FamilyName>
-			</cac:TechnicalCommitteePerson>
-			<!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
-			<!-- Prize Rank (BT-44) cardinality ? -->
-			<!-- Value Prize (BT-644) cardinality ? -->
-			<!-- Rewards Other (BT-45) cardinality ? -->
 	
-		</cac:AwardingTerms>
+	<xsl:template name="address-participation-url-participation">
+		<!-- if either ADDRESS_PARTICIPATION or URL_PARTICIPATION is present, cac:TenderRecipientParty must be used. -->
+		<!-- if ADDRESS_PARTICIPATION_IDEM is present alone, cac:TenderRecipientParty is not output -->
+		<xsl:if test="../../ted:CONTRACTING_BODY/(ted:ADDRESS_PARTICIPATION|ted:URL_PARTICIPATION)">
+			<cac:TenderRecipientParty>
+				<xsl:apply-templates select="../../ted:CONTRACTING_BODY/ted:URL_PARTICIPATION"/>
+				<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:ADDRESS_PARTICIPATION|ted:ADDRESS_PARTICIPATION_IDEM)"/>
+			</cac:TenderRecipientParty>
+		</xsl:if>
 	</xsl:template>
 
-	<xsl:template match="ted:AC">
-		<cac:AwardingCriterion>
-			<xsl:apply-templates select="*"/>
-		</cac:AwardingCriterion>
-	</xsl:template>
 
-	<xsl:template match="ted:AC_QUALITY">
-		<cac:SubordinateAwardingCriterion>
-			<xsl:apply-templates select="AC_WEIGHTING"/>
-			<xsl:apply-templates select="AC_CRITERION"/>
-		</cac:SubordinateAwardingCriterion>
-	</xsl:template>
-
-	<xsl:template match="ted:AC_COST">
-		<cac:SubordinateAwardingCriterion>
-			<xsl:apply-templates select="AC_WEIGHTING"/>
-			<xsl:apply-templates select="AC_CRITERION"/>
-		</cac:SubordinateAwardingCriterion>
-	</xsl:template>
-
-	<xsl:template match="ted:AC_PRICE">
-		<cac:SubordinateAwardingCriterion>
-			<xsl:apply-templates select="AC_WEIGHTING"/>
-		</cac:SubordinateAwardingCriterion>
-	</xsl:template>
-
-	<xsl:template match="ted:AC_PROCUREMENT_DOC">
-		<cac:SubordinateAwardingCriterion>
-			<cbc:Description languageID="{$eforms-first-language}"><xsl:text>Price is not the only award criterion and all criteria are stated only in the procurement documents.</xsl:text></cbc:Description>
-		</cac:SubordinateAwardingCriterion>
-	</xsl:template>
-	
-	<xsl:template match="ted:AC_CRITERION">
-		<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Description>
-	</xsl:template>
-<!--
-eForms number-fixed codelist
-fix-tot Fixed (total)
-fix-unit Fixed (per unit)
-
-eForms number-weight codelist
-per-exa Weight (percentage, exact)
-per-mid Weight (percentage, middle of a range)
-dec-exa Weight (decimal, exact)
-dec-mid Weight (decimal, middle of a range)
-poi-exa Weight (points, exact)
-poi-mid Weight (points, middle of a range)
-ord-imp Order of importance
-
-eForms number-threshold codelist
-min-score Minimum score
-max-pass Maximum number of tenders passing
--->	
-	<xsl:template match="ted:AC_WEIGHTING">
-		<xsl:variable name="text" select="fn:normalize-space(.)"/>
-		<xsl:variable name="part1" select="fn:substring-before($text, ' ')"/>
-		<xsl:variable name="rest" select="fn:lower-case(fn:substring-after($text, ' '))"/>
-		<ext:UBLExtensions>
-			<ext:UBLExtension>
-				<ext:ExtensionContent>
-					<efext:EformsExtension>
-						<efac:AwardCriterionParameter>
-							<xsl:choose>
-								<xsl:when test="matches($text, '^[0-9]+$')">
-									<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-									<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
-								</xsl:when>
-								<xsl:when test="fn:matches($text,'^[0-9]+(,[0-9]{3})+$') or fn:matches($text,'^[0-9]+(\.[0-9]{3})+$')">
-									<xsl:variable name="number" select="fn:replace($text, '[,.]', '')"/>
-									<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-									<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
-								</xsl:when>
-								<xsl:when test="fn:matches($text, '^[0-9]+ *%$')">
-									<xsl:variable name="number" select="fn:replace($text, '% *', '')"/>
-									<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-									<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
-								</xsl:when>
-								<xsl:when test="fn:matches($part1, '^[0-9]+$') and fn:matches($rest, '^(points|punkte|punten|puntos|bodova|punti|punkts|pointes|pts)$')">
-									<efbc:ParameterCode listName="number-weight">poi-exa</efbc:ParameterCode>
-									<efbc:ParameterNumeric><xsl:value-of select="$part1"/></efbc:ParameterNumeric>
-								</xsl:when>
-								<!-- miscellaneous unparseable values here -->
-								<xsl:otherwise>
-									<efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-									<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
-								</xsl:otherwise>
-							</xsl:choose>
-						</efac:AwardCriterionParameter>
-					</efext:EformsExtension>
-				</ext:ExtensionContent>
-			</ext:UBLExtension>
-		</ext:UBLExtensions>
-	</xsl:template>
 
 	<xsl:template name="lot-tendering-process">
 		<xsl:comment> cac:TenderingProcess here </xsl:comment>
