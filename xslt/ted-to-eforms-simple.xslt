@@ -129,4 +129,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
 	</xsl:template>
 
+	<xsl:template match="ted:URL_PARTICIPATION">
+		<cbc:EndpointID><xsl:apply-templates/></cbc:EndpointID>
+	</xsl:template>
+	
+
 </xsl:stylesheet>

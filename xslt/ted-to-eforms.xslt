@@ -227,6 +227,7 @@ cac:ProcurementProjectLot
 			</efac:Organization>
 		</xsl:for-each>
 	</efac:Organizations>
+	<xsl:copy-of select="$tedaddressesuniquewithid"/>
 </xsl:template>
 
 <xsl:template name="publication">
@@ -255,10 +256,10 @@ cac:ProcurementProjectLot
 		<!-- BT-01 Legal Basis Local - Code cardinality * No equivalent element in TED XML -->
 		<!-- BT-01 Legal Basis Local - Text cardinality * Element PROCUREMENT_LAW -->
 		<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:PROCUREMENT_LAW"/>
-		<!-- Exclusion Grounds (BT-67) cardinality ? -->
-		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
+		<!-- Exclusion Grounds (BT-67) cardinality ? No Exclusion Grounds in TED XML-->
 		<!-- Lots Max Awarded (BT-33) cardinality 1 TED_EXPORT/FORMS/F01_2014/OBJECT_CONTRACT/LOT_DIVISION/LOT_MAX_ONE_TENDERER -->
 		<!-- Lots Max Allowed (BT-31) cardinality 1 -->
+		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
 		<!-- Group Identifier (BT-330) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
 		<!-- Group Lot Identifier (BT-1375) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
 	</cac:TenderingTerms>

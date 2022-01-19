@@ -236,5 +236,28 @@ eu-int-org European Institution/Agency or International Organisation
 			<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
 	</xsl:template>
+	
+	<xsl:template match="ted:ADDRESS_FURTHER_INFO">
+		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_FURTHER_INFO')]/../orgid"/>
+		<cac:AdditionalInformationParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
+			</cac:PartyIdentification>
+		</cac:AdditionalInformationParty>
+	</xsl:template>
+	
+	<xsl:template match="ted:ADDRESS_PARTICIPATION">
+		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_PARTICIPATION')]/../orgid"/>
+		<cac:PartyIdentification>
+			<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
+		</cac:PartyIdentification>
+	</xsl:template>
+
+	<xsl:template match="ted:ADDRESS_PARTICIPATION_IDEM">
+		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_CONTRACTING_BODY')]/../orgid"/>
+		<cac:PartyIdentification>
+			<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
+		</cac:PartyIdentification>
+	</xsl:template>
 
 </xsl:stylesheet>
