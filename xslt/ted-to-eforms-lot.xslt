@@ -118,18 +118,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Organization providing more information on the time limits for review cardinality ? -->
 			<!-- Mediation Organization cardinality ? -->
 			<xsl:call-template name="appeal-terms"/>
-			
-<!-- CONTINUE HERE -->
 			<!-- Submission Language (BT-97) cardinality + Mandatory for PIN Notice subtypes 7, 8 and 9, and CN Notice subtypes 10-14, 16-22; Optional for CN Notice subtypes 15, 23, 24 and E3 -->
 			<!-- Forbidden for all other Notice subtypes -->
 			<xsl:apply-templates select="../../ted:PROCEDURE/ted:LANGUAGES/ted:LANGUAGE"/>
-	
-	
-			<!-- Electronic Ordering (BT-92) cardinality ? -->
-			<!-- Electronic Payment (BT-93) cardinality ? -->
-			<!-- Participant Name (BT-47) cardinality ? -->
-			<!-- Security Clearance Code (BT-578) cardinality 1 -->
-			<!-- Security Clearance Description (BT-732) cardinality 1 -->
+			<!-- Electronic Ordering (BT-92) cardinality ? Mandatory for CN subtype 16, Optional for CN subtypes 7-15 and 17-22 -->
+			<!-- Electronic Payment (BT-93) cardinality ? Mandatory for CN subtype 16, Optional for CN subtypes 7-15 and 17-22 -->
+			<xsl:call-template name="post-award-processing"/>
+			<!-- Participant Name (BT-47) cardinality ? Optional for CN Design subtypes 23 and 24; Forbidden for all other Notice subtypes -->
+			<!-- Security Clearance Code (BT-578) cardinality ? No equivalent element in TED XML -->
+			<!-- Security Clearance Description (BT-732) cardinality ? No equivalent element in TED XML -->
 		</cac:TenderingTerms>
 	</xsl:template>
 	
@@ -312,9 +309,21 @@ EINVOICING	Electronic invoicing will be accepted
 			<cbc:ID><xsl:value-of select="$lang"/></cbc:ID>
 		</cac:Language>
 	</xsl:template>
-	
+
+	<xsl:template name="post-award-processing">
+		<xsl:if test="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EINVOICING) or $eforms-notice-subtype eq '16'">
+			<cac:PostAwardProcess>
+				<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EINVOICING)"/>
+			</cac:PostAwardProcess>
+		</xsl:if>
+	</xsl:template>
+
 	<xsl:template name="lot-tendering-process">
 		<xsl:comment> cac:TenderingProcess here </xsl:comment>
+	
+	
+			
+<!-- CONTINUE HERE -->
 		<cac:TenderingProcess>
 			<ext:UBLExtensions>
 				<ext:UBLExtension>
