@@ -14,6 +14,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <!-- ADDRESSES -->
 
 	<xsl:variable name="tedaddresses" as="element()">
+	<!-- create temporary XML structure to hold all the TED address elements -->
 	<!--
 	All TED XML address elements
 	AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR	Name and address of the contractor/concessionaire
@@ -44,6 +45,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:variable>
 
 	<xsl:variable name="tedaddressesunique" as="element()">
+		<!-- create temporary XML structure to hold the UNIQUE (using deep-equal) addresses in TED XML. Each xml structure includes the XPATH of all source TED addresses that are the same address -->
 		<ted-orgs>
 		<xsl:for-each select="$tedaddresses//ted-org">
 			<xsl:variable name="pos" select="fn:position()"/>
@@ -76,6 +78,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:variable>
 	
 	<xsl:variable name="tedaddressesuniquewithid" as="element()">
+		<!-- create temporary XML structure that is a copy of the UNIQUE addresses in TED XML, and assign a unique identifier to each (OPT-200, "Organization Technical Identifier") -->
 		<ted-orgs>
 		<xsl:for-each select="$tedaddressesunique//ted-org">
 			<ted-org>
@@ -103,7 +106,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</cac:ContractingParty>
 	</xsl:template>
 
-<!--
+<!-- eForms ContractNotice schema definition of cac:ContractingParty 
 		<xsd:sequence>
 			<xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:BuyerProfileURI" minOccurs="0" maxOccurs="1"/>

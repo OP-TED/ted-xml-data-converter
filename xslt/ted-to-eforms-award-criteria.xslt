@@ -10,7 +10,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 
-<!-- 
+<!-- Example of AC TED element
                <AC>
                   <AC_QUALITY>
                      <AC_CRITERION>Health, safety and wellbeing (HS&amp;W)</AC_CRITERION>
@@ -47,7 +47,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Award Criterion Description (BT-540) cardinality ? -->
 			<xsl:apply-templates select="ted:AC"/>
 			
-			<!-- Jury Member Name (BT-46) cardinality + -->
+			<!-- Jury Member Name (BT-46) cardinality + (Is this correct? Conflict between documentation and Annex spreadsheet) Only used in Contract Notice subtypes 23 and 24 -->
 			<!-- TBD: no equivalent element in TED XML identified -->
 			<cac:TechnicalCommitteePerson>
 				<cbc:FamilyName></cbc:FamilyName>

@@ -173,20 +173,21 @@ cac:ProcurementProjectLot
 	<cbc:VersionID>01</cbc:VersionID>
 	<!-- Future Notice (BT-127) TBD: hard-coded for now -->
 	<!-- The "cbc:PlannedDate" is used for planning notices (PIN only excluded) [Notice subtypes 1,2,3, 7,8,9] to specify when the competition notice will be published.  -->
+	<!-- F01, F04 element is TED_EXPORT/FORM_SECTION/F01_2014/OBJECT_CONTRACT/DATE_PUBLICATION_NOTICE -->
 	<!-- F16 PRIOR_INFORMATION_DEFENCE does not have an equivalent element -->
 	<xsl:if test="$eforms-notice-subtype = ('1', '2', '3', '7', '8', '9')">
 		<cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
 	</xsl:if>
-	<!--BT-01 Legal basis -->
+	<!-- BT-01 Legal basis -->
 	<cbc:RegulatoryDomain><xsl:value-of select="$legal-basis"/></cbc:RegulatoryDomain>
-	<!--BT-03--> <!--BT-02-->
+	<!-- BT-03 --> <!-- BT-02 -->
 	<!-- TBD: hard-coded for now; to use tailored codelists -->
 	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
-	<!--BT-702 first language -->
+	<!-- BT-702 first language -->
 	<cbc:NoticeLanguageCode><xsl:value-of select="$eforms-first-language"/></cbc:NoticeLanguageCode>
 	<xsl:for-each select="$ted-form-additional-languages">
 		<cac:AdditionalNoticeLanguage>
-			<cbc:ID><xsl:value-of select="."/></cbc:ID>
+			<cbc:ID><xsl:value-of select="opfun:get-eforms-language(.)"/></cbc:ID>
 		</cac:AdditionalNoticeLanguage>
 	</xsl:for-each>
 </xsl:template>
