@@ -245,7 +245,8 @@ cac:ProcurementProjectLot
 
 <xsl:template name="contracting-party">
 	<xsl:comment> cac:ContractingParty here </xsl:comment>
-	<xsl:apply-templates select="ted:CONTRACTING_BODY"/>
+	<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY"/>
+	<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL"/>
 </xsl:template>
 
 <xsl:template name="root-tendering-terms">
