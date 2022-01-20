@@ -120,7 +120,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:call-template name="appeal-terms"/>
 			
 <!-- CONTINUE HERE -->
-			<!-- Submission Language (BT-97) cardinality + -->
+			<!-- Submission Language (BT-97) cardinality + Mandatory for PIN Notice subtypes 7, 8 and 9, and CN Notice subtypes 10-14, 16-22; Optional for CN Notice subtypes 15, 23, 24 and E3 -->
+			<!-- Forbidden for all other Notice subtypes -->
+			<xsl:apply-templates select="../../ted:PROCEDURE/ted:LANGUAGES/ted:LANGUAGE"/>
 	
 	
 			<!-- Electronic Ordering (BT-92) cardinality ? -->
@@ -304,7 +306,12 @@ EINVOICING	Electronic invoicing will be accepted
 		</xsl:if>
 	</xsl:template>
 
-	
+	<xsl:template match="ted:LANGUAGE">
+		<xsl:variable name="lang" select="opfun:get-eforms-language(@VALUE)"/>
+		<cac:Language>
+			<cbc:ID><xsl:value-of select="$lang"/></cbc:ID>
+		</cac:Language>
+	</xsl:template>
 	
 	<xsl:template name="lot-tendering-process">
 		<xsl:comment> cac:TenderingProcess here </xsl:comment>
