@@ -15,4 +15,8 @@ This table lists the TED XML files chosen to test the Converter, and the reasons
 | 20-213571-001-EXP.xml | F02_2014 | CN | Procurement | CPV_CODE -> BT-262 Main Classification Codes |
 | 21-120407-001-EXP.xml | F02_2014 | CN | Lot | DATE_TENDER_VALID |
 | 20-162034-001-EXP.xml | F02_2014 | CN | Lot | Multiple Tendering languages |
+| 20-156049-001-EXP.xml | F02_2014 | CN | Addresses | multiple URL_BUYER |
+| 20-377805-001-EXP.xml | F02_2014 | CN | Lot | TIME_RECEIPT_TENDERS with one digit for hour |
+| 21-119240-001-EXP.xml | F02_2014 | CN | Lot | REDUCTION_RECOURSE |
+| 20-566267-001-EXP.xml | F02_2014 | CN | Lot | FRAMEWORK and DPS_ADDITIONAL_PURCHASERS |
 
