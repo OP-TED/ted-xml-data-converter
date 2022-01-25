@@ -259,7 +259,7 @@ cac:ProcurementProjectLot
 		<!-- BT-01 Legal Basis Local - Text cardinality * Element PROCUREMENT_LAW -->
 		<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:PROCUREMENT_LAW"/>
 		<!-- Exclusion Grounds (BT-67) cardinality ? No Exclusion Grounds in TED XML-->
-		<!-- Lots Max Awarded (BT-33) cardinality 1 TED_EXPORT/FORMS/F01_2014/OBJECT_CONTRACT/LOT_DIVISION/LOT_MAX_ONE_TENDERER -->
+		<!-- Lots Max Awarded (BT-33) cardinality 1 Optional for subtypes PIN 7,8,9, CN 10-14, 16-24. Forbidden for all other Notice subtype -->
 		<!-- Lots Max Allowed (BT-31) cardinality 1 -->
 		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
 		<!-- Group Identifier (BT-330) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
