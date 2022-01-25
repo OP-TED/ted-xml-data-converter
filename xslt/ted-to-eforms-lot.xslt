@@ -379,9 +379,6 @@ EINVOICING	Electronic invoicing will be accepted
 			<!-- Additional Information Deadline (BT-13) cardinality ? No equivalent element in TED XML -->
 			<!-- Previous Planning Identifier (BT-125) cardinality ? The equivalent element(s) in TED are at TED_EXPORT/CODED_DATA_SECTION/NOTICE_DATA/REF_NOTICE/NO_DOC_OJS -->
 			<!-- They are not at Lot level, but at the level of the Notice. This will need discussion on what is required and how to implement it. -->
-
-			
-<!-- CONTINUE HERE -->
 			<!-- Submission Nonelectronic Justification (BT-19) cardinality ? No equivalent element in TED XML -->
 			<!-- Submission Nonelectronic Description (BT-745) cardinality ? No equivalent element in TED XML -->
 			
@@ -390,17 +387,22 @@ EINVOICING	Electronic invoicing will be accepted
 			<!-- Maximum Candidates (BT-51) cardinality ? Optional for subtypes PIN 7-9; CN 10-14, 16-18, 20-24 and E3; Forbidden for other Notice subtypes -->
 			<!-- Minimum Candidates (BT-50) cardinality ? Mandatory for subtypes CN 16; Optional for subtypes PIN 7-9; CN 10-14, 17, 18, 20-24 and E3; Forbidden for other Notice subtypes -->
 			<xsl:call-template name="limit-candidate"/>
-			<!-- Public Opening Date (BT-132) cardinality ? -->
-			<!-- Public Opening Description (BT-134) cardinality ? -->
-			<!-- Public Opening Place (BT-133) cardinality ? -->
-			<!-- Electronic Auction (BT-767) cardinality ? -->
-			<!-- Electronic Auction Description (BT-122) cardinality ? -->
-			<!-- Electronic Auction URL (BT-123) cardinality ? -->
-			<!-- Framework Maximum Participants Number (BT-113) cardinality ? -->
-			<!-- Framework Duration Justification (BT-109) cardinality ? -->
-			<!-- Framework Buyer Categories (BT-111) cardinality ? -->
-			<!-- Framework Agreement (BT-765) cardinality ? -->
-			<!-- Dynamic Purchasing System (BT-766) cardinality ? -->
+			<!-- Public Opening Date (BT-132) cardinality ? Optional for subtypes CN 16, 17, 20, 21 and E3; Forbidden for other Notice subtypes TED_EXPORT/FORM_SECTION/F02_2014/PROCEDURE/OPENING_CONDITION/DATE_OPENING_TENDERS -->
+			<!-- Public Opening Description (BT-134) cardinality ? Optional for subtypes CN 16, 17, 20, 21 and E3; Forbidden for other Notice subtypes -->
+			<!-- Public Opening Place (BT-133) cardinality ? Optional for subtypes CN 16, 17, 20, 21 and E3; Forbidden for other Notice subtypes -->
+			<xsl:apply-templates select="../../ted:PROCEDURE/ted:OPENING_CONDITION"/>
+			<!-- Electronic Auction (BT-767) cardinality ? Mandatory for subtypes CN 16-18, 22; Optional for subtypes PIN 7-9; CN 10-14, 19-21 and E3; Forbidden for other Notice subtypes -->
+			<!-- Electronic Auction Description (BT-122) cardinality ? Optional for subtypes PIN 7-9; CN 10-14, 16-22 and E3; Forbidden for other Notice subtypes -->
+			<!-- Electronic Auction URL (BT-123) cardinality ? Optional for subtypes PIN 7-9; CN 10-14, 16-22 and E3; Forbidden for other Notice subtypes -->
+			<xsl:call-template name="eauction-used"/>
+			<!-- Framework Maximum Participants Number (BT-113) cardinality ? Optional for subtypes PIN 7-9; CN 10-13, 16-18, 20-22 and E3; Forbidden for other Notice subtypes -->
+			<!-- Framework Duration Justification (BT-109) cardinality ? Optional for subtypes PIN 7-9; CN 10-13, 16-18, 20-22 and E3; Forbidden for other Notice subtypes -->
+			<!-- Group Framework Estimated Maximum Value (BT-157) ? No equivalent element in TED XML -->
+			<!-- Framework Buyer Categories (BT-111) cardinality ? No equivalent element in TED XML -->
+			<!-- Framework Agreement (BT-765) cardinality ? Mandatory for subtypes PIN 7-9, CN 10-11, 16-18, 22; CAN 29-31; Optional for subtypes PIN 4-6 and E2; CN 12-13, 20-21 and E3; CAN 25-27, 33-34 and E4; Forbidden for other Notice subtypes -->
+			<xsl:call-template name="framework-agreement"/>
+			<!-- Dynamic Purchasing System (BT-766) cardinality ? Mandatory for subtypes PIN 7-8, CN 10-11, 16-17; CAN 29-30; Optional for subtypes CN 12-13, 20-22 and E3; CAN 25-27, 33-34 and E4; Forbidden for other Notice subtypes -->
+			<xsl:call-template name="dps"/>
 		</cac:TenderingProcess>
 	</xsl:template>
 	
@@ -435,31 +437,144 @@ EINVOICING	Electronic invoicing will be accepted
 	</xsl:template>
 
 	<xsl:template name="limit-candidate">
-			<xsl:if test="ted:NB_MAX_LIMIT_CANDIDATE or ted:NB_MIN_LIMIT_CANDIDATE or $eforms-notice-subtype = '16'">
-				<cac:EconomicOperatorShortList>
-					<xsl:choose>
-						<xsl:when test="ted:NB_MAX_LIMIT_CANDIDATE">
-							<cbc:LimitationDescription>true</cbc:LimitationDescription>
-							<cbc:MaximumQuantity><xsl:value-of select="ted:NB_MAX_LIMIT_CANDIDATE"/></cbc:MaximumQuantity>
-						</xsl:when>
-						<xsl:otherwise>
-							<cbc:LimitationDescription>false</cbc:LimitationDescription>
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:choose>
-						<xsl:when test="ted:NB_MIN_LIMIT_CANDIDATE">
-							<cbc:MinimumQuantity><xsl:value-of select="ted:NB_MIN_LIMIT_CANDIDATE"/></cbc:MinimumQuantity>
-						</xsl:when>
-						<xsl:when test="$eforms-notice-subtype = '16'">
-							<cbc:MinimumQuantity>TEDERR_NO_MINIMUM_QUANTITY</cbc:MinimumQuantity>
-						</xsl:when>
-					</xsl:choose>
-				</cac:EconomicOperatorShortList>
-			</xsl:if>
+		<xsl:if test="ted:NB_MAX_LIMIT_CANDIDATE or ted:NB_MIN_LIMIT_CANDIDATE or $eforms-notice-subtype = '16'">
+			<cac:EconomicOperatorShortList>
+				<xsl:choose>
+					<xsl:when test="ted:NB_MAX_LIMIT_CANDIDATE">
+						<cbc:LimitationDescription>true</cbc:LimitationDescription>
+						<cbc:MaximumQuantity><xsl:value-of select="ted:NB_MAX_LIMIT_CANDIDATE"/></cbc:MaximumQuantity>
+					</xsl:when>
+					<xsl:otherwise>
+						<cbc:LimitationDescription>false</cbc:LimitationDescription>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="ted:NB_MIN_LIMIT_CANDIDATE">
+						<cbc:MinimumQuantity><xsl:value-of select="ted:NB_MIN_LIMIT_CANDIDATE"/></cbc:MinimumQuantity>
+					</xsl:when>
+					<xsl:when test="$eforms-notice-subtype = '16'">
+						<cbc:MinimumQuantity>TEDERR_NO_MINIMUM_QUANTITY</cbc:MinimumQuantity>
+					</xsl:when>
+				</xsl:choose>
+			</cac:EconomicOperatorShortList>
+		</xsl:if>
 	</xsl:template>
+
+	<xsl:template match="ted:OPENING_CONDITION">
+		<!-- NOTE: cbc:OccurrenceDate and cbc:OccurrenceTime should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
+		<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
+		<!-- Therfore for complete accuracy, a mapping of country codes to UTC timezone offsets is required -->
+		<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
+		<cac:OpenTenderEvent>
+			<cbc:OccurrenceDate><xsl:value-of select="ted:DATE_OPENING_TENDERS"/><xsl:text>+01:00</xsl:text></cbc:OccurrenceDate>
+			<cbc:OccurrenceTime><xsl:value-of select="fn:replace(ted:TIME_OPENING_TENDERS, '^([0-9]):', '0$1:')"/><xsl:text>+01:00</xsl:text></cbc:OccurrenceTime>
+			<xsl:apply-templates select="ted:INFO_ADD"/>
+			<xsl:apply-templates select="ted:PLACE"/>
+		</cac:OpenTenderEvent>
+	</xsl:template>
+	
+	<xsl:template match="ted:OPENING_CONDITION/ted:INFO_ADD">
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+		<xsl:if test="$text ne ''">
+			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+		</xsl:if>
+	</xsl:template>
+	
+	<xsl:template match="ted:OPENING_CONDITION/ted:PLACE">
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+		<xsl:if test="$text ne ''">
+			<cac:OccurenceLocation>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			</cac:OccurenceLocation>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="eauction-used">
+		<xsl:if test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = '16'">
+			<cac:AuctionTerms>
+				<xsl:choose>
+					<xsl:when test="../../ted:PROCEDURE/ted:EAUCTION_USED">
+						<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+						<cbc:Description languageID="{$eforms-first-language}">
+							<xsl:variable name="text" select="fn:normalize-space(fn:string-join(../../ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
+							<xsl:choose>
+								<xsl:when test="$text ne ''"><xsl:value-of select="$text"/></xsl:when>
+								<xsl:otherwise><xsl:text>TEDERR_NO_INFO_ADD_EAUCTION</xsl:text></xsl:otherwise>
+							</xsl:choose>
+						</cbc:Description>
+						<cbc:AuctionURI><xsl:text>TEDERR_NO_AuctionURI_ELEMENT</xsl:text></cbc:AuctionURI>
+					</xsl:when>
+					<xsl:otherwise>
+						<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+					</xsl:otherwise>
+				</xsl:choose>
+			</cac:AuctionTerms>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="framework-agreement">
+		<xsl:if test="../../ted:PROCEDURE/ted:FRAMEWORK or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
+			<xsl:choose>
+				<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
+					<xsl:apply-templates select="../../ted:PROCEDURE/ted:FRAMEWORK"/>
+					<cac:ContractingSystem>
+						<cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+					</cac:ContractingSystem>
+				</xsl:when>
+				<xsl:otherwise>
+					<cac:ContractingSystem>
+						<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+					</cac:ContractingSystem>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+	</xsl:template>
+	
+	<xsl:template match="ted:FRAMEWORK">
+		<cac:FrameworkAgreement>
+			<cbc:MaximumOperatorQuantity>
+				<xsl:choose>
+					<xsl:when test="ted:SINGLE_OPERATOR"><xsl:text>1</xsl:text></xsl:when>
+					<xsl:when test="ted:NB_PARTICIPANTS"><xsl:value-of select="ted:NB_PARTICIPANTS"/></xsl:when>
+					<xsl:otherwise><xsl:text>TEDERR_NO_NB_PARTICIPANTS</xsl:text></xsl:otherwise>
+				</xsl:choose>
+			</cbc:MaximumOperatorQuantity>
+			<xsl:apply-templates select="ted:JUSTIFICATION"/>
+		</cac:FrameworkAgreement>
+	</xsl:template>
+	
+	<xsl:template match="ted:JUSTIFICATION">
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+		<xsl:if test="$text ne ''">
+			<cbc:Justification languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Justification>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="dps">
+<!-- dps-usage codelist:
+dps-list Dynamic purchasing system, only usable by buyers listed in this notice
+dps-nlist Dynamic purchasing system, also usable by buyers not listed in this notice
+none None
+-->
+		<xsl:if test="../../ted:PROCEDURE/ted:DPS or $eforms-notice-subtype = ('7', '8', '10', '11', '16', '17', '29', '30')">
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">
+					<xsl:choose>
+						<xsl:when test="../../ted:PROCEDURE/ted:DPS_ADDITIONAL_PURCHASERS"><xsl:text>dps-nlist</xsl:text></xsl:when>
+						<xsl:when test="../../ted:PROCEDURE/ted:DPS"><xsl:text>dps-list</xsl:text></xsl:when>
+						<xsl:otherwise><xsl:text>none</xsl:text></xsl:otherwise>
+					</xsl:choose>
+				</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</xsl:if>
+	</xsl:template>
+
 	<xsl:template name="lot-procurement-project">
 		<xsl:comment> cac:ProcurementProject here </xsl:comment>
 		<cac:ProcurementProject>
+			
+<!-- CONTINUE HERE -->
+			
 	
 			<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
 			<!-- Title (BT-21) cardinality 1 -->
