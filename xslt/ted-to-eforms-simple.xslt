@@ -133,5 +133,16 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cbc:EndpointID><xsl:apply-templates/></cbc:EndpointID>
 	</xsl:template>
 	
+	<xsl:template match="ted:EORDERING">
+		<cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+	</xsl:template>
+	
+	<xsl:template match="ted:EINVOICING">
+		<cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+	</xsl:template>
 
+	<xsl:template match="ted:URL_TOOL">
+		<cbc:AccessToolsURI><xsl:apply-templates/></cbc:AccessToolsURI>
+	</xsl:template>
+	
 </xsl:stylesheet>

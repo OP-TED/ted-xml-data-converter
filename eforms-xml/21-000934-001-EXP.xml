@@ -208,73 +208,73 @@
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>DA</cbc:ID>
+      <cbc:ID>DAN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>DE</cbc:ID>
+      <cbc:ID>DEU</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>ES</cbc:ID>
+      <cbc:ID>SPA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>FI</cbc:ID>
+      <cbc:ID>FIN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>FR</cbc:ID>
+      <cbc:ID>FRA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>EL</cbc:ID>
+      <cbc:ID>ELL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>IT</cbc:ID>
+      <cbc:ID>ITA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>NL</cbc:ID>
+      <cbc:ID>NLD</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>PT</cbc:ID>
+      <cbc:ID>POR</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>SV</cbc:ID>
+      <cbc:ID>SWE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>CS</cbc:ID>
+      <cbc:ID>CES</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>ET</cbc:ID>
+      <cbc:ID>EST</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>HU</cbc:ID>
+      <cbc:ID>HUN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>LT</cbc:ID>
+      <cbc:ID>LIT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>LV</cbc:ID>
+      <cbc:ID>LAV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>MT</cbc:ID>
+      <cbc:ID>MLT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>PL</cbc:ID>
+      <cbc:ID>POL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>SK</cbc:ID>
+      <cbc:ID>SLK</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>SL</cbc:ID>
+      <cbc:ID>SLV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>GA</cbc:ID>
+      <cbc:ID>GLE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>BG</cbc:ID>
+      <cbc:ID>BUL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>RO</cbc:ID>
+      <cbc:ID>RON</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <cac:AdditionalNoticeLanguage>
-      <cbc:ID>HR</cbc:ID>
+      <cbc:ID>HRV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
@@ -308,6 +308,7 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject>
+      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <cbc:Name languageID="ENG">Assessment Support of Draft cap Strategic Plans with Respect to Environmental Requirements</cbc:Name>
       <cbc:Description languageID="ENG">This contract will aim to support the European Commission with the environment-related knowledge needed to engage in constructive conversation with the Member States during the preparation of their CAP strategic plans (CAP SP). This contract aims to complement the work to be carried out within the European Commission that will be screening, assessing and providing feedback on the drafts of CAP SP. The contract entails providing detailed support relative to the ex-ante analysis of country-specific of environmental objectives by preparing individual fiches per Member State. It will also provide an analysis of the current needs/challenges for the environmental objectives and in light of the Commission’s Recommendations for environmental related specific objectives and taking into account the European Green Deal. Following the submission of the draft CAP strategic plans, this contract will support DG Environment in the assessment of the environmental-relevant parts of the draft CAP SP.</cbc:Description>
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
@@ -332,10 +333,65 @@
          </cac:ContractExecutionRequirement>
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion/>
-               <cac:SubordinateAwardingCriterion/>
-               <cac:SubordinateAwardingCriterion/>
-               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:Description languageID="ENG">Quality of the proposed methodology</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:Description languageID="ENG">Organisation of the work and allocation of resources</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:Description languageID="ENG">Quality control measures</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>50/50</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+               </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
@@ -361,8 +417,30 @@
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2021-01-04+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject/>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+         <cbc:Name languageID="ENG">Assessment Support of Draft cap Strategic Plans with Respect to Environmental Requirements</cbc:Name>
+         <cbc:Description languageID="ENG">Assessment support of draft CAP strategic plans with respect to environmental requirements.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cac:AddressLine>
+                  <cbc:Line>The contractor's premises.</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+      </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractAwardNotice>

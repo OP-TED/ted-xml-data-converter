@@ -92,7 +92,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</ted-orgs>
 	</xsl:variable>
 
-
+<!-- original template for only one cac:ContractingParty
 	<xsl:template match="ted:CONTRACTING_BODY">
 		<cac:ContractingParty>
 			<xsl:apply-templates select="ted:ADDRESS_CONTRACTING_BODY/ted:URL_BUYER"/>
@@ -105,6 +105,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			</cac:Party>
 		</cac:ContractingParty>
 	</xsl:template>
+-->
+
+
+	<xsl:template match="ted:ADDRESS_CONTRACTING_BODY|ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
+		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+		<cac:ContractingParty>
+			<xsl:apply-templates select="ted:URL_BUYER"/>
+			<xsl:apply-templates select="../(ted:CA_TYPE|CA_TYPE_OTHER)"/>
+			<xsl:apply-templates select="../ted:CA_ACTIVITY"/>
+			<cac:Party>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization"><xsl:value-of select="$tedaddressesuniquewithid//ted-org/path[.=$path]/../orgid"/></cbc:ID>
+				</cac:PartyIdentification>
+			</cac:Party>
+		</cac:ContractingParty>
+	</xsl:template>
+
 
 <!-- eForms ContractNotice schema definition of cac:ContractingParty 
 		<xsd:sequence>
@@ -145,12 +162,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsd:complexType>
 
 -->	
-	<xsl:template match="ted:ADDRESS_CONTRACTING_BODY">
-		<cac:Party>
-			<xsl:call-template name="org-address"/>
-		</cac:Party>
-	</xsl:template>
-	
 	<xsl:template name="org-address">
 	<!--
 		<xs:element ref="OFFICIALNAME"/>

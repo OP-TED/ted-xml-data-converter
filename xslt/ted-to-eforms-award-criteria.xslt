@@ -71,21 +71,21 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 	<xsl:template match="ted:AC_QUALITY">
 		<cac:SubordinateAwardingCriterion>
-			<xsl:apply-templates select="AC_WEIGHTING"/>
-			<xsl:apply-templates select="AC_CRITERION"/>
+			<xsl:apply-templates select="ted:AC_WEIGHTING"/>
+			<xsl:apply-templates select="ted:AC_CRITERION"/>
 		</cac:SubordinateAwardingCriterion>
 	</xsl:template>
 
 	<xsl:template match="ted:AC_COST">
 		<cac:SubordinateAwardingCriterion>
-			<xsl:apply-templates select="AC_WEIGHTING"/>
-			<xsl:apply-templates select="AC_CRITERION"/>
+			<xsl:apply-templates select="ted:AC_WEIGHTING"/>
+			<xsl:apply-templates select="ted:AC_CRITERION"/>
 		</cac:SubordinateAwardingCriterion>
 	</xsl:template>
 
 	<xsl:template match="ted:AC_PRICE">
 		<cac:SubordinateAwardingCriterion>
-			<xsl:apply-templates select="AC_WEIGHTING"/>
+			<xsl:apply-templates select="ted:AC_WEIGHTING"/>
 		</cac:SubordinateAwardingCriterion>
 	</xsl:template>
 

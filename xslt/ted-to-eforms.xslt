@@ -245,7 +245,8 @@ cac:ProcurementProjectLot
 
 <xsl:template name="contracting-party">
 	<xsl:comment> cac:ContractingParty here </xsl:comment>
-	<xsl:apply-templates select="ted:CONTRACTING_BODY"/>
+	<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY"/>
+	<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL"/>
 </xsl:template>
 
 <xsl:template name="root-tendering-terms">
@@ -258,7 +259,7 @@ cac:ProcurementProjectLot
 		<!-- BT-01 Legal Basis Local - Text cardinality * Element PROCUREMENT_LAW -->
 		<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:PROCUREMENT_LAW"/>
 		<!-- Exclusion Grounds (BT-67) cardinality ? No Exclusion Grounds in TED XML-->
-		<!-- Lots Max Awarded (BT-33) cardinality 1 TED_EXPORT/FORMS/F01_2014/OBJECT_CONTRACT/LOT_DIVISION/LOT_MAX_ONE_TENDERER -->
+		<!-- Lots Max Awarded (BT-33) cardinality 1 Optional for subtypes PIN 7,8,9, CN 10-14, 16-24. Forbidden for all other Notice subtype -->
 		<!-- Lots Max Allowed (BT-31) cardinality 1 -->
 		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
 		<!-- Group Identifier (BT-330) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
@@ -297,19 +298,20 @@ cac:ProcurementProjectLot
 	<cac:ProcurementProject>
 		<!-- A limited number of BTs are specified for procurement project at root level -->
 		<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
-		<!-- Title (BT-21) cardinality 1 -->
+		<cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+		<!-- Title (BT-21) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TITLE"/>
-		<!-- Description (BT-24) cardinality 1 -->
+		<!-- Description (BT-24) cardinality 1 Mandatory for ALL Notice subtypes -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>
-		<!-- Main Nature (BT-23) cardinality 1 -->
+		<!-- Main Nature (BT-23) cardinality 1 Optional for ALL Notice subtypes -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>
 		<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
 		<!-- Additional Information (BT-300) (*)* cardinality ? No equivalent element in TED XML -->
 		<!-- Estimated Value (BT-27) cardinality ? -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>
-		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 -->
+		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>
-		<!-- Main Classification Code (BT-262) cardinality 1 -->
+		<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Additional Classification Code (BT-263) cardinality * No equivalent element in TED XML at Procedure level -->
 		<!-- Place of Performance (*) -> RealizedLocation No equivalent element in TED XML at Procedure level -->
 		<!-- No location elements exist in TED F02 schema at Procedure level. Question: if NO_LOT_DIVISION, should we copy the location details from the single Lot in OBJECT_DESCR? -->
