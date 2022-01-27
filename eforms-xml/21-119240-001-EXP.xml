@@ -12,26 +12,24 @@
          <ext:ExtensionContent>
             <efext:EformsExtension>
                <efac:NoticeSubtype>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode>17</cbc:SubTypeCode>
                </efac:NoticeSubtype>
                <!-- efac:Organizations here -->
                <efac:Organizations>
                   <efac:Organization>
                      <efac:Company>
-                        <cbc:WebsiteURI>http://www.eis2win.co.uk</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>http://www.daa.ie</cbc:WebsiteURI>
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
                         </cac:PartyIdentification>
                         <cac:PartyName>
-                           <cbc:Name>English Institute of Sport Ltd</cbc:Name>
+                           <cbc:Name>DAA plc</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress>
-                           <cbc:StreetName>The Manchester Institute of Health and Performance, 299 Alan Turing Way</cbc:StreetName>
-                           <cbc:CityName>Manchester</cbc:CityName>
-                           <cbc:PostalZone>M11 3BS</cbc:PostalZone>
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+                           <cbc:StreetName>Dublin Airport, Co. Dublin</cbc:StreetName>
+                           <cbc:CityName>Dublin</cbc:CityName>
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                      </efac:Company>
@@ -42,14 +40,12 @@
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
                         </cac:PartyIdentification>
                         <cac:PartyName>
-                           <cbc:Name>English Institute of Sport</cbc:Name>
+                           <cbc:Name>Martin Acton</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress>
-                           <cbc:StreetName>Manchester Institute of Health and Performance, 299 Alan Turing Way</cbc:StreetName>
-                           <cbc:CityName>Manchester</cbc:CityName>
-                           <cbc:PostalZone>M11 3BS</cbc:PostalZone>
+                           <cbc:CityName>Dublin Airport</cbc:CityName>
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                      </efac:Company>
@@ -58,31 +54,29 @@
                <ted-orgs xmlns="">
                   <ted-org>
                      <orgid>ORG-001</orgid>
-                     <path>TED_EXPORT/FORM_SECTION/F02_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+                     <path>TED_EXPORT/FORM_SECTION/F05_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
                      <tedaddress>
-                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">English Institute of Sport Ltd</OFFICIALNAME>
-                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">The Manchester Institute of Health and Performance, 299 Alan Turing Way</ADDRESS>
-                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Manchester</TOWN>
-                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">M11 3BS</POSTAL_CODE>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">DAA plc</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">N/A</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Dublin Airport, Co. Dublin</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Dublin</TOWN>
                         <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
-                                 VALUE="UK"/>
-                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Mark Richards (Head of Information Systems)</CONTACT_POINT>
-                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">mark.richards@eis2win.co.uk</E_MAIL>
-                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
-                                    CODE="UK"/>
-                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.eis2win.co.uk</URL_GENERAL>
+                                 VALUE="IE"/>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">brian.collier@daa.ie</E_MAIL>
+                        <n2021:NUTS xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+                                    CODE="IE"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.daa.ie</URL_GENERAL>
+                        <URL_BUYER xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://irl.eu-supply.com/ctm/Company/CompanyInformation/Index/227</URL_BUYER>
                      </tedaddress>
                   </ted-org>
                   <ted-org>
                      <orgid>ORG-002</orgid>
-                     <path>TED_EXPORT/FORM_SECTION/F02_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+                     <path>TED_EXPORT/FORM_SECTION/F05_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
                      <tedaddress>
-                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">English Institute of Sport</OFFICIALNAME>
-                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Manchester Institute of Health and Performance, 299 Alan Turing Way</ADDRESS>
-                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Manchester</TOWN>
-                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">M11 3BS</POSTAL_CODE>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Martin Acton</OFFICIALNAME>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Dublin Airport</TOWN>
                         <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
-                                 VALUE="UK"/>
+                                 VALUE="IE"/>
                      </tedaddress>
                   </ted-org>
                </ted-orgs>
@@ -103,17 +97,12 @@
    <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <cbc:VersionID>01</cbc:VersionID>
-   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
-      <cac:ContractingPartyType>
-         <cbc:PartyType>body-pl</cbc:PartyType>
-      </cac:ContractingPartyType>
-      <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
-      </cac:ContractingPartyType>
+      <cbc:BuyerProfileURI>https://irl.eu-supply.com/ctm/Company/CompanyInformation/Index/227</cbc:BuyerProfileURI>
       <cac:Party>
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-001</cbc:ID>
@@ -123,7 +112,8 @@
    <!-- cac:TenderingTerms here -->
    <cac:TenderingTerms>
       <cac:LotDistribution>
-         <cbc:MaximumLotsSubmittedNumeric>2</cbc:MaximumLotsSubmittedNumeric>
+         <cbc:MaximumLotsAwardedNumeric>1</cbc:MaximumLotsAwardedNumeric>
+         <cbc:MaximumLotsSubmittedNumeric>1</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
    </cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
@@ -135,19 +125,18 @@
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
-      <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject>
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-      <cbc:Name languageID="ENG">Information and Communications Technology Services</cbc:Name>
-      <cbc:Description languageID="ENG">English Institute of Sport (‘the EIS’) is seeking to appoint through a restricted procedure a suitably qualified and experienced provider of ICT support services. The services will compromise provision and support of Wide Area Network, Local Area Network including Wireless at our regional high performance centres, and provision of a dedicated 24-hour service desk for our 450 users. The staff are based at several performance centres in the UK, but most of the workforce regularly work away from their centres and have work patterns that are mobile and remote. A large number of staff work abroad as required by the sports we work with; their overseas travel may cover periods up to several months. As a publicly funded organisation EIS is seeking to maximise value for money, and wishes to minimise one-offset up costs as well as ongoing revenue costs.</cbc:Description>
-      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cbc:Name languageID="ENG">Airside and Landside Civil Works Framework</cbc:Name>
+      <cbc:Description languageID="ENG">The contracting authority, wishes to put in place two (2) bespoke framework agreement’s with two (2) suitably qualified civil contractor’s to act on behalf of the contracting authority in carrying out: 1) Airside and Landside Civil works (including pavement, concrete and all associated works to successfully deliver a civil works contract) at Dublin Airport; and 2) Construction of a Underpass (including all associated works to successfully deliver the contract) at Dublin Airport, as described in the attached RFI, and other associated works as required by the contracting authority.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
       <cac:RequestedTenderTotal>
-         <cbc:EstimatedOverallContractAmount currencyID="GBP">1530376.00</cbc:EstimatedOverallContractAmount>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">425000000.00</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">72600000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">45235100</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
@@ -157,18 +146,17 @@
       <cac:TenderingTerms>
          <cac:SelectionCriteria>
             <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
-            <cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+            <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
          </cac:SelectionCriteria>
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:VariantConstraintCode listName="permission">allowed</cbc:VariantConstraintCode>
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <cac:CallForTendersDocumentReference>
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
-            <cbc:DocumentTypeCode listName="communication-justification">CODE_FOR_RESTRICTED_DOCUMENT_JUSTIFICATION_REQUIRED_HERE</cbc:DocumentTypeCode>
-            <cbc:DocumentType>restricted-document</cbc:DocumentType>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://www.eis2win.co.uk/register-interest-to-tender/</cbc:URI>
+                  <cbc:URI>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
@@ -179,11 +167,11 @@
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-            <cbc:Description languageID="ENG">Please see tender documentation.</cbc:Description>
+            <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
          </cac:ContractExecutionRequirement>
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
@@ -195,8 +183,14 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
          <cac:TenderValidityPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
@@ -208,7 +202,10 @@
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
          </cac:Language>
-         <cac:PostAwardProcess/>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>
@@ -219,25 +216,20 @@
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
-         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
-         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2020-06-05+01:00</cbc:EndDate>
-            <cbc:EndTime>12:00+01:00</cbc:EndTime>
+            <cbc:EndDate>2021-04-22+01:00</cbc:EndDate>
+            <cbc:EndTime>15:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2020-05-01+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-03-04+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
-         <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>true</cbc:LimitationDescription>
-            <cbc:MaximumQuantity>5</cbc:MaximumQuantity>
-            <cbc:MinimumQuantity>3</cbc:MinimumQuantity>
-         </cac:EconomicOperatorShortList>
-         <cac:AuctionTerms>
-            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
-         </cac:AuctionTerms>
+         <cac:FrameworkAgreement>
+            <cbc:MaximumOperatorQuantity>1</cbc:MaximumOperatorQuantity>
+         </cac:FrameworkAgreement>
          <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
@@ -246,9 +238,17 @@
       <!-- cac:ProcurementProject here -->
       <cac:ProcurementProject>
          <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-         <cbc:Name languageID="ENG">Managed Services</cbc:Name>
-         <cbc:Description languageID="ENG">English Institute of Sport (‘the EIS’) is seeking to appoint through a restricted procedure a suitably qualified and experienced provider of ICT Managed support services. The services will compromise support of Wide Area Network, Local Area Network including Wireless at our regional high performance centres, and provision of a dedicated 24-hour service desk for our 450 users. The service desk will respond to service requests and problems from users, and perform agreed scheduled support activities, as detailed in the EIS operations manual. The service desk will comprise a minimum of two dedicated staff providing two full time equivalent roles. The service desk will operate 24/7/365 with the bulk of user activity during normal business hours. The Wide Area Network will comprise circuits to up to 10 sites. The EIS pioneers the delivery of science, medicine and technology services to drive medal success at olympic, paralympic and international competition, supporting elite athletes through its nationwide network of expertise and facilities. It strives to be the world-leading high performance institute. Staff are based at nine high performance centres across the UK but they deliver EIS services at different sporting locations including swimming pools, lakes, velodromes and athletic tracks. EIS delivers services to athletes while competing or training overseas. To receive a copy of the invitation to tender (ITT) please contact mark.richards@eis2win.co.uk. The ITT will be issued to selected suppliers after 8 June 2020.</cbc:Description>
-         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:Name languageID="ENG">Airside and Landside Civil Works</cbc:Name>
+         <cbc:Description languageID="ENG">Will manage and deliver all civil and associated works at Dublin Airport Campus (see attached RFI for further information). The contracting authority reserves the right to use this framework partner to undertake associated civil works at Cork Airport.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <cbc:Note languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Note>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cac:AddressLine>
+                  <cbc:Line>Dublin Airport.</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot>
@@ -257,18 +257,17 @@
       <cac:TenderingTerms>
          <cac:SelectionCriteria>
             <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
-            <cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+            <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
          </cac:SelectionCriteria>
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:VariantConstraintCode listName="permission">allowed</cbc:VariantConstraintCode>
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <cac:CallForTendersDocumentReference>
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
-            <cbc:DocumentTypeCode listName="communication-justification">CODE_FOR_RESTRICTED_DOCUMENT_JUSTIFICATION_REQUIRED_HERE</cbc:DocumentTypeCode>
-            <cbc:DocumentType>restricted-document</cbc:DocumentType>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://www.eis2win.co.uk/register-interest-to-tender/</cbc:URI>
+                  <cbc:URI>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
@@ -279,11 +278,11 @@
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-            <cbc:Description languageID="ENG">Please see tender documentation.</cbc:Description>
+            <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
          </cac:ContractExecutionRequirement>
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
@@ -295,8 +294,14 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
          <cac:TenderValidityPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
@@ -308,7 +313,10 @@
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
          </cac:Language>
-         <cac:PostAwardProcess/>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>
@@ -319,25 +327,20 @@
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
-         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
-         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2020-06-05+01:00</cbc:EndDate>
-            <cbc:EndTime>12:00+01:00</cbc:EndTime>
+            <cbc:EndDate>2021-04-22+01:00</cbc:EndDate>
+            <cbc:EndTime>15:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2020-05-01+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-03-04+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
-         <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>true</cbc:LimitationDescription>
-            <cbc:MaximumQuantity>5</cbc:MaximumQuantity>
-            <cbc:MinimumQuantity>3</cbc:MinimumQuantity>
-         </cac:EconomicOperatorShortList>
-         <cac:AuctionTerms>
-            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
-         </cac:AuctionTerms>
+         <cac:FrameworkAgreement>
+            <cbc:MaximumOperatorQuantity>1</cbc:MaximumOperatorQuantity>
+         </cac:FrameworkAgreement>
          <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
@@ -346,9 +349,17 @@
       <!-- cac:ProcurementProject here -->
       <cac:ProcurementProject>
          <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-         <cbc:Name languageID="ENG">Wide Area Network</cbc:Name>
-         <cbc:Description languageID="ENG">Provision of circuit rental services up to 10 high performance centre sites in England. The current circuits range from 50 to 100 mbps.</cbc:Description>
-         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:Name languageID="ENG">Underpass Construction</cbc:Name>
+         <cbc:Description languageID="ENG">Will manage and deliver all civil and associated work with the Underpass construction at Dublin Airport Campus (see attached RFI for further details). The contracting authority reserves the right to use this framework partner to undertake associated civil works at Cork Airport.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <cbc:Note languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Note>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cac:AddressLine>
+                  <cbc:Line>Dublin Airport.</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

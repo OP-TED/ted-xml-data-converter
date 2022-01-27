@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
+                xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
+                xmlns:efext="http://eforms/v1.0/Extensions"
+                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubtype>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubtype>
+               <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.simap.ch</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Armasuisse Kompetenzbereich Einkauf und Kooperationen CC WTO</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Guisanplatz 1</cbc:StreetName>
+                           <cbc:CityName>Berne</cbc:CityName>
+                           <cbc:PostalZone>CH 3003</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">CH0</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>CH</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Bundesverwaltungsgericht</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Postfach</cbc:StreetName>
+                           <cbc:CityName>St. Gallen</cbc:CityName>
+                           <cbc:PostalZone>9023</cbc:PostalZone>
+                           <cac:Country>
+                              <cbc:IdentificationCode>CH</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <ted-orgs xmlns="">
+                  <ted-org>
+                     <orgid>ORG-001</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014[1]/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014[1]/CONTRACTING_BODY/ADDRESS_PARTICIPATION</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Armasuisse Kompetenzbereich Einkauf und Kooperationen CC WTO</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Guisanplatz 1</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Berne</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">CH 3003</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="CH"/>
+                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Projekt «LTE Mobilfunktester»</CONTACT_POINT>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">wto@armasuisse.ch</E_MAIL>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="CH0"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.simap.ch</URL_GENERAL>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-002</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F02_2014[1]/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bundesverwaltungsgericht</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Postfach</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">St. Gallen</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">9023</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="CH"/>
+                     </tedaddress>
+                  </ted-org>
+               </ted-orgs>
+               <!-- efac:Publication here -->
+               <efac:Publication>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DEU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!-- cac:ContractingParty here -->
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>cga</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms here -->
+   <cac:TenderingTerms/>
+   <!-- cac:TenderingProcess here -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension/>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject here -->
+   <cac:ProcurementProject>
+      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <cbc:Name languageID="FRA">Testeur de radiocommunication LTE pour 3.9G et 4.xG</cbc:Name>
+      <cbc:Description languageID="FRA">La section accès au marché et conformité (MK) de la division radio monitoring et installations (RA) de l’Office fédéral de la communication (OFCOM) vérifie, dans le cadre de son mandat légal (chapitre 8 de l’ordonnance du 25.11.2015 sur les installations de télécommunication [RS 784.101.2; OIT]), la conformité technique des installations de télécommunication qui ont été ou sont mises à disposition, mises en service, mises en place ou exploitées sur le marché suisse (article 36, alinéa 1, OIT). Le testeur de radiocommunication à acquérir doit prendre en charge la mesure des terminaux 3.9G et 4.xG.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">32250000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+            <cbc:Description languageID="FRA">Les preuves et justificatifs de l'aptitude énumérés ci-après doivent être fournis intégralement avec l'offre, sans restrictions ni modifications, sans quoi il ne sera pas entré en matière sur l'offre. — E1: extrait du registre des poursuites et du registre du commerce ou acte officiel équivalent délivré par une autorité étrangère qui atteste que le soumissionnaire n’a pas de dettes fiscales ou liées à des cotisations sociales non payées (pas plus ancien que trois mois, la date de dépôt de l’offre étant déterminante); — E2: déclaration du soumissionnaire; — E3: a) Respect des principes régissant la procédure Le soumissionnaire atteste que lui-même ainsi que les tiers qu’il sollicite (sous-traitants et fournisseurs) respectent les conditions régissant la procédure conformément au document « Déclaration du soumissionnaire » (annexe 1.1.1) de la Conférence des achats de la Confédération (CA); b) Preuve supplémentaire du respect de l’égalité salariale entre femmes et hommes Les soumissionnaires et leurs sous-traitants de premier rang qui comptent chacun plus de 50 collaborateurs/trices doivent démontrer, au-delà du document «déclaration du soumissionnaire», comment ils ont examiné leur pratique salariale; — E4: le soumissionnaire atteste qu’il endosse la responsabilité globale du présent projet, c'est-à-dire en particulier que le soumissionnaire est le seul partenaire contractuel de l’organe d’adjudication. Les éventuelles personnes impliquées doivent être indiquées avec les rôles/fonctions qui leur sont attribués; — E5: le soumissionnaire atteste qu’il est en mesure de traiter le projet en allemand ou en anglais (oral et écrit) pendant toute la durée contractuelle; — E6: le soumissionnaire et/ou le fabricant dispose d’un système de gestion de la qualité certifié ISO 9001 valable ou au moins d’un certificat ou manuel équivalent; — E7: le soumissionnaire atteste que toutes les factures seront envoyées par voie électronique; — E8: le soumissionnaire atteste que le type d’appareil qu’il propose est disponible sur le marché dans la configuration proposée; — E9: le soumissionnaire atteste que l’appareil qu’il propose est à la pointe de la technologie et qu’il n’a pas plus de trois ans; — E10: le soumissionnaire (individuel ou communauté de soumissionnaire, y compris éventuels sous-traitants) atteste qu’il procédera à un étalonnage d’usine/final (selon règle de contrôle du fabricant) sur l’appareil avant sa réception définitive. — E11: le soumissionnaire atteste qu’il accepte sans restriction le modèle de contrat. — E12 Le soumissionnaire atteste qu’il est en mesure de respecter un délai de livraison de quatre mois à compter de la réception de la commande.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cac:SelectionCriteria>
+            <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+            <cbc:Description languageID="FRA">Toute entreprise économiquement performante et en mesure de remplir les critères d'aptitude ci-après (chiffre 3.8) et de produire les justificatifs correspondants est invitée à soumettre une offre en CHF.</cbc:Description>
+         </cac:SelectionCriteria>
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <cbc:DocumentTypeCode listName="communication-justification">CODE_FOR_RESTRICTED_DOCUMENT_JUSTIFICATION_REQUIRED_HERE</cbc:DocumentTypeCode>
+            <cbc:DocumentType>restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.simap.ch/shabforms/servlet/Search?NOTICE_NR=1120749</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>70 </efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:Description languageID="FRA">Performance</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>30 </efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:Description languageID="FRA">Prix</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>DEU</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>FRA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ITA</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess/>
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension/>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-25+01:00</cbc:EndDate>
+            <cbc:EndTime>23:59+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-04-01+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>false</cbc:LimitationDescription>
+            <cbc:MinimumQuantity>TEDERR_NO_MINIMUM_QUANTITY</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2020-05-26+01:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>23:59+01:00</cbc:OccurrenceTime>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+         <cbc:Name languageID="FRA">Testeur de radiocommunication LTE pour 3.9G et 4.xG</cbc:Name>
+         <cbc:Description languageID="FRA">La section accès au marché et conformité (MK) de la division radio monitoring et installations (RA) de l’Office fédéral de la communication (OFCOM) vérifie, dans le cadre de son mandat légal (chapitre 8 de l’ordonnance du 25.11.2015 sur les installations de télécommunication [RS 784.101.2; OIT]), la conformité technique des installations de télécommunication qui ont été ou sont mises à disposition, mises en service, mises en place ou exploitées sur le marché suisse (article 36, alinéa 1, OIT). Le testeur de radiocommunication à acquérir doit prendre en charge la mesure des terminaux 3.9G et 4.xG.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">32250000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cac:AddressLine>
+                  <cbc:Line>2501 Bienne.</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

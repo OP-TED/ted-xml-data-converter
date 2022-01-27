@@ -108,6 +108,7 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject>
+      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <cbc:Name languageID="DEU">Gemeinde Veitshöchheim, Sportplatzbauarbeiten an der Freisportanlage</cbc:Name>
       <cbc:Description languageID="DEU">Gegenstand des Auftrages ist die Vergabe von Sportplatzbauarbeiten bei der Freisportanlage am Schulzentrum in der Günterslebener Str. 41, 97209 Veitshöchheim. Die Arbeiten sollen ab den Sommerferien 2020 stattfinden. Bisher ist die Fertigstellung Mitte 2021 geplant.</cbc:Description>
       <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
@@ -145,8 +146,30 @@
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-03-27+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject/>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+         <cbc:Name languageID="DEU">Gemeinde Veitshöchheim, Sportplatzbauarbeiten an der Freisportanlage</cbc:Name>
+         <cbc:Description languageID="DEU">Die Gemeinde Veitshöchheim beabsichtigt bei der Freisportanlage am Schulzentrum (Günterslebener Str. 41, 97209 Veitshöchheim) eine Belagssanierung durchzuführen. Folgende Arbeiten sind hauptsächlich notwendig: — Abbruch und Neubau des Kunststoffbelags: —— Belagstyp A ca. 5 200 m2; —— Belagstyp B ca. 1 200 m2. — Einbau einer neuen Bitu-Tragschicht in Teilbereichen der Sportflächen; — Tiefenreinigung von zwei Kleinspielfeldern und punktuelle Ausbesserung von Schadstellen; — Abbruch und Neubau von beschädigten Einfassungen; — Abbruch und Neubau von zwei Weitsprunggruben; — Ausbau von beschädigten Kastenrinnen der Rundlaufbahn; — Montage von neuen Sporteinbauteilen wie z. B. Bodenhülsen, Basketballständern, Absprungbalken sowie Aufbringen von Spielfeldlinierungen; — Einbau einer Wurzelschutzbahn seitlich der Weit-/Hochsprungbahn, um das Einwachsen von Wurzeln zu verhindern; — Partieller Austausch von defekten Drainleitungen unter Sportflächen.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45212200</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cac:AddressLine>
+                  <cbc:Line>Günterslebener Straße 41</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>97209 Veitshöchheim</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+      </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </PriorInformationNotice>

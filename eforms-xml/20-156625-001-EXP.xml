@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                     xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
+                     xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
+                     xmlns:efext="http://eforms/v1.0/Extensions"
+                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!-- efac:NoticeResult here -->
+               <efac:NoticeSubtype>
+                  <cbc:SubTypeCode>29</cbc:SubTypeCode>
+               </efac:NoticeSubtype>
+               <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>http://www.gabrovo.bg/bg</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Община Габрово</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>пл. „Възраждане“ № 3</cbc:StreetName>
+                           <cbc:CityName>Габрово</cbc:CityName>
+                           <cbc:PostalZone>5300</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">BG322</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BG</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>http://www.tryavna.bg</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Община Трявна</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ул. „Ангел Кънчев“ № 21</cbc:StreetName>
+                           <cbc:CityName>Трявна</cbc:CityName>
+                           <cbc:PostalZone>5350</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">BG322</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BG</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>„Мит и ко“ ЕООД</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ул. „Милеви скали“ № 6, ап. 35</cbc:StreetName>
+                           <cbc:CityName>Пловдив</cbc:CityName>
+                           <cbc:PostalZone>4003</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">BG421</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BG</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name>Комисия за защита на конкуренцията</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>бул. „Витоша“ № 18</cbc:StreetName>
+                           <cbc:CityName>София</cbc:CityName>
+                           <cbc:PostalZone>1000</cbc:PostalZone>
+                           <cac:Country>
+                              <cbc:IdentificationCode>BG</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <ted-orgs xmlns="">
+                  <ted-org>
+                     <orgid>ORG-001</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Община Габрово</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">000215630</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">пл. „Възраждане“ № 3</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Габрово</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">5300</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="BG"/>
+                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Янка Здравкова</CONTACT_POINT>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 66818382</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">poruchki@gabrovo.bg</E_MAIL>
+                        <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 66809371</FAX>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="BG322"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.gabrovo.bg/bg</URL_GENERAL>
+                        <URL_BUYER xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://op.gabrovo.bg/</URL_BUYER>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-002</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Община Трявна</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">000215946</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ул. „Ангел Кънчев“ № 21</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Трявна</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">5350</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="BG"/>
+                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Кристина Йорданова</CONTACT_POINT>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 896694286</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">kriss_y@abv.bg</E_MAIL>
+                        <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 67762149</FAX>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="BG322"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.tryavna.bg</URL_GENERAL>
+                        <URL_BUYER xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.tryavna.bg/profilnakupuvach/</URL_BUYER>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-003</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">„Мит и ко“ ЕООД</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">200021701</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ул. „Милеви скали“ № 6, ап. 35</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Пловдив</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">4003</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="BG"/>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 899855958</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">office@evasto2000.com</E_MAIL>
+                        <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 32594031</FAX>
+                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                                    CODE="BG421"/>
+                     </tedaddress>
+                  </ted-org>
+                  <ted-org>
+                     <orgid>ORG-004</orgid>
+                     <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+                     <tedaddress>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Комисия за защита на конкуренцията</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">бул. „Витоша“ № 18</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">София</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1000</POSTAL_CODE>
+                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                                 VALUE="BG"/>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 29884070</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">cpcadmin@cpc.bg</E_MAIL>
+                        <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+359 29807315</FAX>
+                        <URL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.cpc.bg</URL>
+                     </tedaddress>
+                  </ted-org>
+               </ted-orgs>
+               <!-- efac:Publication here -->
+               <efac:Publication>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode>BUL</cbc:NoticeLanguageCode>
+   <!-- cac:ContractingParty here -->
+   <cac:ContractingParty>
+      <cbc:BuyerProfileURI>http://op.gabrovo.bg/</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>ra</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:ContractingParty>
+      <cbc:BuyerProfileURI>https://www.tryavna.bg/profilnakupuvach/</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>ra</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+         </cac:PartyIdentification>
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms here -->
+   <cac:TenderingTerms/>
+   <!-- cac:TenderingProcess here -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension/>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject here -->
+   <cac:ProcurementProject>
+      <cbc:Name languageID="BUL">Предоставяне на услуга по предварително третиране/сепариране на битови отпадъци, генерирани на територията на регион Габрово</cbc:Name>
+      <cbc:Description languageID="BUL">Предмет на дейността по поръчката е предварително третиране/сепариране на битови отпадъци с код 20 03 01 (домакински отпадъци и сходни с тях отпадъци от търговски, промишлени и административни дейности), вкл. разделно събирани фракции от група 20 съгласно Наредба № 2 за класификация на отпадъците (издадена от министъра на околната среда и водите и министъра на здравеопазването, като следва да се има предвид, че в нея влизат отпадъци със сл. кодове: 20 01 01 — хартия и картон; 20 01 02 — стъкло; 20 01 10 — облекла; 20 01 11 — текстилни материали; 20 01 38 — дървесина, различна от упоменатата в 20 01 37; 20 01 39 — пластмаси, вкл. каучук; 20 01 40 — метали; 20 03 07 — обемни отпадъци, които се събират и доставят на РДНО — Габрово разделно събрани от физ. лица, разл. от тези, предназначени за отпадъци от опаковки, разположени на територията на регион Габрово. Прогнозните количества битови отпадъци, генерирани от регион Габрово са 19 000 т/средногод. Пълният обхват на дейностите е съгл. Техн. спец.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">90500000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion/>
+               <cac:SubordinateAwardingCriterion/>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="BUL">Чл. 197 от ЗОП</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension/>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject/>
+   </cac:ProcurementProjectLot>
+</ContractAwardNotice>

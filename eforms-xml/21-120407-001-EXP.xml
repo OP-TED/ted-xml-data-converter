@@ -18,20 +18,19 @@
                <efac:Organizations>
                   <efac:Organization>
                      <efac:Company>
-                        <cbc:WebsiteURI>www.fsdkenya.org</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>https://permalink.mercell.com/149974429.aspx</cbc:WebsiteURI>
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
                         </cac:PartyIdentification>
                         <cac:PartyName>
-                           <cbc:Name>Financial Sector Deepening Trust (Kenya)</cbc:Name>
+                           <cbc:Name>Bergen kommune — Innkjøp konsern</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress>
-                           <cbc:StreetName>Box 11353</cbc:StreetName>
-                           <cbc:CityName>Nairobi</cbc:CityName>
-                           <cbc:PostalZone>00100</cbc:PostalZone>
-                           <cbc:CountrySubentityCode listName="nuts">00</cbc:CountrySubentityCode>
+                           <cbc:StreetName>Fortunen 3</cbc:StreetName>
+                           <cbc:CityName>Bergen</cbc:CityName>
+                           <cbc:PostalZone>5013</cbc:PostalZone>
                            <cac:Country>
-                              <cbc:IdentificationCode>KE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode>NO</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                      </efac:Company>
@@ -42,14 +41,14 @@
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
                         </cac:PartyIdentification>
                         <cac:PartyName>
-                           <cbc:Name>Financial Sector Deepening Trust (FSD Kenya)</cbc:Name>
+                           <cbc:Name>Bergen Tingrett</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress>
-                           <cbc:StreetName>11353</cbc:StreetName>
-                           <cbc:CityName>Nairobi</cbc:CityName>
-                           <cbc:PostalZone>00100</cbc:PostalZone>
+                           <cbc:StreetName>Postboks 7412</cbc:StreetName>
+                           <cbc:CityName>Bergen</cbc:CityName>
+                           <cbc:PostalZone>5020</cbc:PostalZone>
                            <cac:Country>
-                              <cbc:IdentificationCode>KE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode>NO</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                      </efac:Company>
@@ -60,32 +59,32 @@
                      <orgid>ORG-001</orgid>
                      <path>TED_EXPORT/FORM_SECTION/F02_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
                      <tedaddress>
-                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Financial Sector Deepening Trust (Kenya)</OFFICIALNAME>
-                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Box 11353</ADDRESS>
-                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Nairobi</TOWN>
-                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">00100</POSTAL_CODE>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bergen kommune — Innkjøp konsern</OFFICIALNAME>
+                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">964338531</NATIONALID>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Fortunen 3</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bergen</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">5013</POSTAL_CODE>
                         <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
-                                 VALUE="KE"/>
-                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Lydiah Kioko</CONTACT_POINT>
-                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+254 205137300</PHONE>
-                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">tenders@fsdkenya.org</E_MAIL>
-                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
-                                    CODE="00"/>
-                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">www.fsdkenya.org</URL_GENERAL>
+                                 VALUE="NO"/>
+                        <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Ståle Otto Hopland</CONTACT_POINT>
+                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+47 05556</PHONE>
+                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">stale.hopland@bergen.kommune.no</E_MAIL>
+                        <n2021:NUTS xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+                                    CODE="NO"/>
+                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://permalink.mercell.com/149974429.aspx</URL_GENERAL>
+                        <URL_BUYER xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://www.bergen.kommune.no/</URL_BUYER>
                      </tedaddress>
                   </ted-org>
                   <ted-org>
                      <orgid>ORG-002</orgid>
                      <path>TED_EXPORT/FORM_SECTION/F02_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
                      <tedaddress>
-                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Financial Sector Deepening Trust (FSD Kenya)</OFFICIALNAME>
-                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">11353</ADDRESS>
-                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Nairobi</TOWN>
-                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">00100</POSTAL_CODE>
+                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bergen Tingrett</OFFICIALNAME>
+                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Postboks 7412</ADDRESS>
+                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bergen</TOWN>
+                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">5020</POSTAL_CODE>
                         <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
-                                 VALUE="KE"/>
-                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+254 205137300</PHONE>
-                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">info@fsdkenya.org</E_MAIL>
+                                 VALUE="NO"/>
                      </tedaddress>
                   </ted-org>
                </ted-orgs>
@@ -111,6 +110,16 @@
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty>
+      <cbc:BuyerProfileURI>https://www.bergen.kommune.no/</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>ra</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
       <cac:Party>
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-001</cbc:ID>
@@ -129,19 +138,15 @@
          </ext:UBLExtension>
       </ext:UBLExtensions>
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
-      <cac:ProcessJustification>
-         <cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
-         <cbc:ProcessReason languageID="ENG">Two distinct workstreams whose findings are critical to its development are currently underway and timetabled for completion in July. These are: (a) a landscape review which will provide a detailed analysis of the implementation of different government collection initiatives in Kenya; (b) the legal and regulatory review which will provide an analysis of the legislative and regulatory framework currently in place to support the successful implementation of the programme. Acceleration of timeline is therefore sought on the basis that: (a) the strategy development provider should be identified in advance and undertake the foundational work prior to submission of the two critical pieces so as to keep the momentum going and ensure the work is in alignment with the agreed timelines (b) there is a strong desire by the Government of Kenya and other stakeholders to complete the assignment at the earliest to allow for planning and implementation of specific policies in the next fiscal year.</cbc:ProcessReason>
-      </cac:ProcessJustification>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject>
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-      <cbc:Name languageID="ENG">Government of Kenya Collections Strategy</cbc:Name>
-      <cbc:Description languageID="ENG">Governments are the largest payer and receiver of cash in any economy and Kenya is no exception. It is estimated that GoK represents 60 % of payments and collections in the economy. Following a presidential directive to digitise all government collections in the country which would effectively eliminate cash from Government offices a Government Digital Payments (GDP) task force was set up to oversee the implementation of this key project which saw the deployment of e-Citizen, a single sign-on platform that allows citizens to access, apply and pay for government services. To date about three hundred out of a possible five thousand government services have been fully digitised and the revenue collected through the platform has been growing steadily since 2015. Currently, over eight million citizens are registered on the e-citizen platform.</cbc:Description>
+      <cbc:Name languageID="ENG">EEA 018-2021 Development Plan Slettebakken (NEW)</cbc:Name>
+      <cbc:Description languageID="ENG">Area development plan for Slettebakken.</cbc:Description>
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">66170000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
@@ -150,22 +155,22 @@
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
          <cac:SelectionCriteria>
-            <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
-            <cbc:Description languageID="ENG">The consulting firm or team of consultants should have: — strong understanding of government collections landscape in Kenya and globally; — demonstrable deep knowledge and understanding of the global payments market with a bias on government payments; — reputation, market position and record of implementing similar assignments; — relevant technical and commercial skills; — ability to work flexibly, including availability on short notice.</cbc:Description>
+            <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+            <cbc:Description languageID="ENG">Registered in a trade register or company register. Documentation requirement: Tenderers must be registered in a company register or a trade register in the country where the tenderer is established. As described in annex XI of directive 2014/24/EU; suppliers from certain member countries can be required to fulfil other requirements in the mentioned annex.</cbc:Description>
          </cac:SelectionCriteria>
          <cac:SelectionCriteria>
             <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
-            <cbc:Description languageID="ENG">Expressions of interest must include a capability statement, of no more than four (4) A4 pages, which shows evidence of relevant skills and experience in providing the services required under this contract notice. Abridged CVs of key personnel only, each of not more than three (3) pages in length, should also be included. These CVs can be submitted in addition to the four page capability statement. Expressions of interest should be submitted preferably by email to tenders@fsdkenya.org (reference: Government Collection Strategy). Following assessment of expressions of interest, FSD Kenya will invite short-listed applicants to submit full technical and commercial proposals.</cbc:Description>
+            <cbc:Description languageID="ENG">Only for services: during the reference period, the tenderer has carried out the following important goods deliveries of the requested type, or the following important services of the requested type. The contracting authority can require up to 3 years experience and can take experience from the period before the last 3 years into consideration. Education and professional qualifications The following education and professional qualifications are held by the tenderer and/or (depending on the requirements given in the notice or in the procurement documents) by the senior executives.</cbc:Description>
          </cac:SelectionCriteria>
          <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
-         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <cac:CallForTendersDocumentReference>
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://fsdkenya.org/about-us/opportunities/</cbc:URI>
+                  <cbc:URI>https://permalink.mercell.com/149974429.aspx</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
@@ -188,8 +193,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://permalink.mercell.com/149974429.aspx</cbc:EndpointID>
+         </cac:TenderRecipientParty>
          <cac:TenderValidityPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="DAY">91</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
@@ -199,7 +207,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <cac:Language>
-            <cbc:ID>ENG</cbc:ID>
+            <cbc:ID>NOR</cbc:ID>
          </cac:Language>
          <cac:PostAwardProcess/>
       </cac:TenderingTerms>
@@ -212,25 +220,22 @@
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
-         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2020-06-12+01:00</cbc:EndDate>
-            <cbc:EndTime>16:00+01:00</cbc:EndTime>
+            <cbc:EndDate>2021-04-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2020-05-28+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-03-04+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
             <cbc:MinimumQuantity>TEDERR_NO_MINIMUM_QUANTITY</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <cac:OpenTenderEvent>
-            <cbc:OccurrenceDate>2020-06-15+01:00</cbc:OccurrenceDate>
-            <cbc:OccurrenceTime>08:00+01:00</cbc:OccurrenceTime>
-            <cac:OccurenceLocation>
-               <cbc:Description languageID="ENG">Nairobi — KENYA.</cbc:Description>
-            </cac:OccurenceLocation>
+            <cbc:OccurrenceDate>2021-04-08+01:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>12:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
          <cac:AuctionTerms>
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
@@ -245,12 +250,9 @@
       <!-- cac:ProcurementProject here -->
       <cac:ProcurementProject>
          <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-         <cbc:Name languageID="ENG">Government of Kenya Collections Strategy</cbc:Name>
-         <cbc:Description languageID="ENG">In 2019, FSD Kenya re-engaged with the GDP team which continues to work to digitise the remaining government services. FSD Kenya initially supported the development of a proof of concept, securing the platform against cyber-attacks as well as development of an agency model that would efficiently implement this initiative. Based on recommendations from the first phase, it was agreed that FSD Kenya would continue to support the GDP team to undertake a market analysis, a legal and regulatory review and the development of a strategy and business case. Work on the first two activities is going on although has recently slowed due to effects of Covid-19. FSD Kenya is now looking for a consultancy firm or team of consultants to support the GDP in developing the strategy. The work will focus on the following key areas: — identify the key strategic objectives and key indicators for success; — develop a business case for GDP including costs and benefits to be accrued on full digitization of government collections. This will include the necessary incentives to drive the implementation of the strategy; — a detailed implementation plan including sustainability options such as private and public management of the platform and onboarding of remaining services on the platform.</cbc:Description>
+         <cbc:Name languageID="ENG">EEA 018-2021 Development Plan Slettebakken (NEW)</cbc:Name>
+         <cbc:Description languageID="ENG">Bergen Municipality, the Agency for Planning and Building, would like a consultant team with interdisciplinary breadth and competence within planning and architecture, water and sewage, landscape and sports installations for the preparation of an area development plan for Slettebakken.</cbc:Description>
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">66170000</cbc:ItemClassificationCode>
-         </cac:MainCommodityClassification>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>
