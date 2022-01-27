@@ -298,19 +298,20 @@ cac:ProcurementProjectLot
 	<cac:ProcurementProject>
 		<!-- A limited number of BTs are specified for procurement project at root level -->
 		<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
-		<!-- Title (BT-21) cardinality 1 -->
+		<cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+		<!-- Title (BT-21) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TITLE"/>
-		<!-- Description (BT-24) cardinality 1 -->
+		<!-- Description (BT-24) cardinality 1 Mandatory for ALL Notice subtypes -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>
-		<!-- Main Nature (BT-23) cardinality 1 -->
+		<!-- Main Nature (BT-23) cardinality 1 Optional for ALL Notice subtypes -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>
 		<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
 		<!-- Additional Information (BT-300) (*)* cardinality ? No equivalent element in TED XML -->
 		<!-- Estimated Value (BT-27) cardinality ? -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>
-		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 -->
+		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>
-		<!-- Main Classification Code (BT-262) cardinality 1 -->
+		<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Additional Classification Code (BT-263) cardinality * No equivalent element in TED XML at Procedure level -->
 		<!-- Place of Performance (*) -> RealizedLocation No equivalent element in TED XML at Procedure level -->
 		<!-- No location elements exist in TED F02 schema at Procedure level. Question: if NO_LOT_DIVISION, should we copy the location details from the single Lot in OBJECT_DESCR? -->

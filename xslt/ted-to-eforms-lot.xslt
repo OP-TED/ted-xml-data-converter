@@ -572,38 +572,47 @@ none None
 	<xsl:template name="lot-procurement-project">
 		<xsl:comment> cac:ProcurementProject here </xsl:comment>
 		<cac:ProcurementProject>
+			<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
+			<cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+			<!-- Title (BT-21) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40-->
+			<!-- if TITLE exists in OBJ_DESCR, use that, otherwise use TITLE in OBJECT_CONTRACT parent -->
+			<xsl:choose>
+				<xsl:when test="fn:normalize-space(fn:string(ted:TITLE))"><xsl:apply-templates select="ted:TITLE"/></xsl:when>
+				<xsl:otherwise><xsl:apply-templates select="../ted:TITLE"/></xsl:otherwise>
+			</xsl:choose>
+			<!-- Description (BT-24) cardinality 1 Mandatory for ALL Notice subtypes -->
+			<xsl:apply-templates select="ted:SHORT_DESCR"/>
+			<!-- Main Nature (BT-23) cardinality 1 Optional for ALL Notice subtypes Equivalent element TYPE_CONTRACT in TED does not exist in OBJ_DESCR, so use TYPE_CONTRACT in OBJECT_CONTRACT parent -->
+			<xsl:apply-templates select="../ted:TYPE_CONTRACT"/>
+			<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
+			<!-- Strategic Procurement (BT-06) cardinality * No equivalent element in TED XML -->
+			<!-- Strategic Procurement Description (BT-777) cardinality * No equivalent element in TED XML -->
+			<!-- Green Procurement (BT-774) cardinality * No equivalent element in TED XML -->
+			<!-- Social Procurement (BT-775) cardinality * No equivalent element in TED XML -->
+			<!-- Innovative Procurement (BT-776) cardinality * No equivalent element in TED XML -->
+			<!-- Accessibility Justification (BT-755) cardinality ? No equivalent element in TED XML -->
+			<!-- Accessibility (BT-754) cardinality ? No equivalent element in TED XML -->
+			<!-- Quantity (BT-25) cardinality ? Optional for subtypes PIN 7-9; CN 10-14, 16-24 and E3; CAN 25-37 and E4; CM 38-40 and E5; Forbidden for other Notice subtypes. No equivalent element in TED XML -->
+			<!-- Unit (BT-625) cardinality ? Optional for subtypes PIN 7-9; CN 10-14, 16-24 and E3; CAN 25-37 and E4; CM 38-40 and E5; Forbidden for other Notice subtypes. No equivalent element in TED XML -->
+			<!-- Suitable for SMEs (BT-726) cardinality ? Optional for subtypes PIN 4-9 and E2; CN 10-24 and E3; Forbidden for other Notice subtypes. No equivalent element in TED XML -->
+	
+			<!-- Additional Information (BT-300) cardinality ? Optional for ALL Notice subtypes. TED_EXPORT/FORM_SECTION/F02_2014/OBJECT_CONTRACT/OBJECT_DESCR/INFO_ADD -->
+			<xsl:apply-templates select="ted:INFO_ADD"/>
+			<!-- Estimated Value (BT-27) cardinality ? Optional for subtypes PIN 4-9, E1 and E2; CN 10-14, 16-22 and E3; CAN 29-35 and E4; E5; Forbidden for other Notice subtypes. -->
+			<xsl:apply-templates select="ted:VAL_ESTIMATED_TOTAL"/>
+			<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 			
 <!-- CONTINUE HERE -->
 			
-	
-			<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
-			<!-- Title (BT-21) cardinality 1 -->
-			<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TITLE"/>
-			<!-- Description (BT-24) cardinality 1 -->
-			<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>
-			<!-- Main Nature (BT-23) cardinality 1 -->
-			<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>
-			<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
-			<!-- Strategic Procurement (BT-06) cardinality * -->
-			<!-- Strategic Procurement Description (BT-777) cardinality * -->
-			<!-- Green Procurement (BT-774) cardinality * -->
-			<!-- Social Procurement (BT-775) cardinality * -->
-			<!-- Innovative Procurement (BT-776) cardinality * -->
-			<!-- Accessibility Justification (BT-755) cardinality ? -->
-			<!-- Accessibility (BT-754) cardinality ? -->
-			<!-- Quantity (BT-25) cardinality ? -->
-			<!-- Unit (BT-625) cardinality ? -->
-			<!-- Suitable for SMEs (BT-726) cardinality ? -->
-	
-			<!-- Additional Information (BT-300) (*)* cardinality ? -->
-			<!-- Estimated Value (BT-27) cardinality ? -->
-			<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>
-			<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 -->
-			<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>
-			<!-- Main Classification Code (BT-262) cardinality 1 -->
-			<!-- Additional Classification Code (BT-263) cardinality * -->
-			<!-- Place of Performance (*) -> RealizedLocation -->
-	
+			
+			<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
+			<!-- Additional Classification Code (BT-263) cardinality * No equivalent element in TED XML at Lot level -->
+			<!-- If this Lot OBJECT_DESCR does not have a CPV code, use that from the parent OBJECT_CONTRACT -->
+			<xsl:choose>
+				<xsl:when test="ted:CPV_ADDITIONAL"><xsl:apply-templates select="ted:CPV_ADDITIONAL/ted:CPV_MAIN"/></xsl:when>
+				<xsl:otherwise><xsl:apply-templates select="../ted:CPV_MAIN"/></xsl:otherwise>
+			</xsl:choose>
+			<!-- Place of Performance (*) -> RealizedLocation cardinality ? -->
 				<!-- Place of Performance Additional Information (BT-728) -->
 				<!-- Place Performance City (BT-5131) -->
 				<!-- Place Performance Post Code (BT-5121) -->
@@ -611,14 +620,41 @@ none None
 				<!-- Place Performance Services Other (BT-727) -->
 				<!-- Place Performance Street (BT-5101) -->
 				<!-- Place Performance Country Code (BT-5141) -->
-				<!-- Duration Start Date (BT-536) -->
-				<!-- Duration End Date (BT-537) -->
-				<!-- Duration Period (BT-36) -->
-				<!-- Duration Other (BT-538) -->
-				<!-- Options Description (BT-54) -->
-				<!-- Renewal maximum (BT-58) -->
-				<!-- Renewal Description (BT-57) -->
+			<xsl:apply-templates select="ted:MAIN_SITE"/>
+			<!-- Duration Start Date (BT-536) cardinality ? -->
+			<!-- Duration End Date (BT-537) cardinality ? -->
+			<!-- Duration Period (BT-36) cardinality ? -->
+			<!-- Duration Other (BT-538) cardinality ? -->
+			<!-- Options Description (BT-54) cardinality ? -->
+			<!-- Renewal maximum (BT-58) cardinality ? -->
+			<!-- Renewal Description (BT-57) cardinality ? -->
 		</cac:ProcurementProject>
 	</xsl:template>
 
+	<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD">
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+		<xsl:if test="$text ne ''">
+			<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template match="ted:MAIN_SITE">
+		<!-- Note: it is not possible to convert the content of MAIN_SITE to any eForms elements that will pass the business rules validation. -->
+		<!-- It is also not possible to recognise any part of the content of MAIN_SITE and assign it to a particular eForms BT -->
+		<!-- To maintain any existing separation of the address in P elements, each P element will be converted to a separate cac:AddressLine/cbc:Line element -->
+		<!-- MAIN_SITE might contain no text! -->
+		<xsl:if test="fn:normalize-space(.) != ''">
+			<cac:RealizedLocation>
+				<cac:Address>
+					<xsl:apply-templates select="ted:P"/>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template match="ted:MAIN_SITE/ted:P">
+		<cac:AddressLine>
+            <cbc:Line><xsl:value-of select="fn:normalize-space(.)"/></cbc:Line>
+        </cac:AddressLine>
+	</xsl:template>
 </xsl:stylesheet>
