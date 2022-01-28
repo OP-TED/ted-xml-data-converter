@@ -46,6 +46,18 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</cac:Country>
 	</xsl:template>
 	
+	<xsl:template match="ted:PHONE">
+		<cbc:Telephone><xsl:apply-templates/></cbc:Telephone>
+	</xsl:template>
+
+	<xsl:template match="ted:FAX">
+		<cbc:Telefax><xsl:apply-templates/></cbc:Telefax>
+	</xsl:template>
+
+	<xsl:template match="ted:E_MAIL">
+		<cbc:ElectronicMail><xsl:apply-templates/></cbc:ElectronicMail>
+	</xsl:template>
+	
 	<xsl:template match="ted:URL_BUYER">
 		<cbc:BuyerProfileURI><xsl:apply-templates/></cbc:BuyerProfileURI>
 	</xsl:template>

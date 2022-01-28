@@ -184,6 +184,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<cac:PartyIdentification><cbc:ID schemeName="organization"><xsl:value-of select="../orgid"/></cbc:ID></cac:PartyIdentification>
 		<xsl:apply-templates select="ted:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
+		<xsl:call-template name="contact"/>
+
 	<!--
 		<xs:element ref="NATIONALID" minOccurs="0"/>
 		<xs:element ref="CONTACT_POINT" minOccurs="0"/>
@@ -204,6 +206,20 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:apply-templates select="n2016:NUTS"/>
 		<xsl:apply-templates select="ted:COUNTRY"/>
 		</cac:PostalAddress>
+	</xsl:template>
+	
+	<xsl:template name="contact">
+		<!-- Organization Contact Point (BT-502) cardinality ? No equivalent element in TED XML -->
+		<xsl:if test="ted:PHONE|ted:FAX|ted:E_MAIL">
+			<cac:Contact>
+				<!-- Organization Contact Telephone Number (BT-503) cardinality ? -->
+				<xsl:apply-templates select="ted:PHONE"/>
+				<!-- Organization Contact Fax (BT-739) cardinality ? -->
+				<xsl:apply-templates select="ted:FAX"/>
+				<!-- Organization Contact Email Address (BT-506) cardinality ? -->
+				<xsl:apply-templates select="ted:E_MAIL"/>
+			</cac:Contact>
+		</xsl:if>
 	</xsl:template>
 	
 	<xsl:template match="ted:CA_TYPE">

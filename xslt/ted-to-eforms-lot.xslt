@@ -58,6 +58,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:apply-templates select="ted:NO_ACCEPTED_VARIANTS|ted:ACCEPTED_VARIANTS"/>
 			<!-- EU Funds (BT-60) cardinality ? -->
 			<xsl:apply-templates select="ted:NO_EU_PROGR_RELATED|ted:EU_PROGR_RELATED"/>
+			<!-- In TED, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->
 			<!-- Performing Staff Qualification (BT-79) cardinality ? -->
 			<xsl:apply-templates select="../../ted:LEFTI/PERFORMANCE_STAFF_QUALIFICATION"/>
 			<!-- Recurrence (BT-94) cardinality ? -->
