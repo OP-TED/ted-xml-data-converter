@@ -83,13 +83,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</cac:RequestedTenderTotal>
 	</xsl:template>
 
-	<xsl:template match="ted:CPV_MAIN">
+	<xsl:template match="ted:CPV_MAIN|ted:CPV_ADDITIONAL">
 		<xsl:variable name="ted-value" select="fn:normalize-space(ted:CPV_CODE/@CODE)"/>
 		<cac:MainCommodityClassification>
 			<cbc:ItemClassificationCode listName="cpv"><xsl:value-of select="$ted-value"/></cbc:ItemClassificationCode>
 		</cac:MainCommodityClassification>
 		<!-- "Supplementary CPV" (CPV_MAIN/CPV_SUPPLEMENTARY_CODE) are not implemented for eForms -->
 	</xsl:template>
-
 
 </xsl:stylesheet>

@@ -67,6 +67,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Recurrence Description (BT-95) cardinality ? -->
 			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ESTIMATED_TIMING"/>
 			<!-- Security Clearance Deadline (BT-78) cardinality ? No equivalent element in TED XML -->
+			<!-- One mapping for SF17->eForm 18 TED_EXPORT/FORM_SECTION/CONTRACT_DEFENCE/FD_CONTRACT_DEFENCE/LEFTI_CONTRACT_DEFENCE/CONTRACT_RELATING_CONDITIONS/CLEARING_LAST_DATE -->
 			<!-- Multiple Tenders (BT-769) cardinality ? No equivalent element in TED XML -->
 			<!-- Guarantee Required (BT-751) cardinality ? Only exists in TED form F05 -->
 			<!-- Guarantee Required Description (BT-75) cardinality ? Only exists in TED form F05 -->
@@ -234,15 +235,17 @@ EINVOICING	Electronic invoicing will be accepted
 -->
 	<xsl:template name="e-invoicing">
 		<!-- Electronic Invoicing (BT-743) is Mandatory for notice subtype 16 (CN) -->
-		<xsl:variable name="is-e-invoicing">
-			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:COMPLEMENTARY_INFO/ted:EINVOICING)">allowed</xsl:when>
-				<xsl:otherwise>not-allowed</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		<cac:ContractExecutionRequirement>
-			<cbc:ExecutionRequirementCode listName="einvoicing"><xsl:value-of select="$is-e-invoicing"/></cbc:ExecutionRequirementCode>
-		</cac:ContractExecutionRequirement>
+		<xsl:if test="$eforms-notice-subtype = ('16') or $ted-form-main-element/ted:COMPLEMENTARY_INFO/ted:EINVOICING">
+			<xsl:variable name="is-e-invoicing">
+				<xsl:choose>
+					<xsl:when test="fn:boolean($ted-form-main-element/ted:COMPLEMENTARY_INFO/ted:EINVOICING)">allowed</xsl:when>
+					<xsl:otherwise>not-allowed</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing"><xsl:value-of select="$is-e-invoicing"/></cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+		</xsl:if>
 	</xsl:template>
 
 	<xsl:template name="terms-performance">
@@ -602,17 +605,17 @@ none None
 			<!-- Estimated Value (BT-27) cardinality ? Optional for subtypes PIN 4-9, E1 and E2; CN 10-14, 16-22 and E3; CAN 29-35 and E4; E5; Forbidden for other Notice subtypes. -->
 			<xsl:apply-templates select="ted:VAL_ESTIMATED_TOTAL"/>
 			<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
+			<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
+			<!-- Additional Classification Code (BT-263) cardinality * Optional for ALL Notice subtypes, No equivalent element in TED XML at Lot level -->
+			<!-- If this Lot OBJECT_DESCR does not have a CPV code, use that from the parent OBJECT_CONTRACT -->
+			<xsl:choose>
+				<xsl:when test="ted:CPV_ADDITIONAL"><xsl:apply-templates select="ted:CPV_ADDITIONAL[1]"/></xsl:when>
+				<xsl:otherwise><xsl:apply-templates select="../ted:CPV_MAIN"/></xsl:otherwise>
+			</xsl:choose>
 			
 <!-- CONTINUE HERE -->
 			
 			
-			<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
-			<!-- Additional Classification Code (BT-263) cardinality * No equivalent element in TED XML at Lot level -->
-			<!-- If this Lot OBJECT_DESCR does not have a CPV code, use that from the parent OBJECT_CONTRACT -->
-			<xsl:choose>
-				<xsl:when test="ted:CPV_ADDITIONAL"><xsl:apply-templates select="ted:CPV_ADDITIONAL/ted:CPV_MAIN"/></xsl:when>
-				<xsl:otherwise><xsl:apply-templates select="../ted:CPV_MAIN"/></xsl:otherwise>
-			</xsl:choose>
 			<!-- Place of Performance (*) -> RealizedLocation cardinality ? -->
 				<!-- Place of Performance Additional Information (BT-728) -->
 				<!-- Place Performance City (BT-5131) -->
@@ -658,4 +661,6 @@ none None
             <cbc:Line><xsl:value-of select="fn:normalize-space(.)"/></cbc:Line>
         </cac:AddressLine>
 	</xsl:template>
+
+
 </xsl:stylesheet>
