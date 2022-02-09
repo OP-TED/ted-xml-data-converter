@@ -143,8 +143,8 @@ Thus the main structures (of the first form to be analysed, the Contract Notice 
 
 Within each structure, the steps taken are:
 
-### 1. Identify the next structure to work on
-In the eForms documentation for the section, read the table at the beginning of the section, which lists all the Business Terms used. Read the occurrence symbol for that BT to ensure that it is relevant in the section context.
+### 1. Identify the next structure in eForms to work on
+In the eForms documentation for the section, read the table at the beginning of the section, which lists all the Business Terms used. Read the occurrence symbol for that BT to ensure that it is relevant in the section context. Document this in a comment in the XSLT file.
 Check that the order matches with the element order defined in the eForms schema.
 
 ### 2. Check the Annex spreadsheet for Form relevance
@@ -159,9 +159,13 @@ Review the documentation and Annex spreadsheet to understand what information th
 If the structure uses a codelist, extract the codes and labels for consideration.
 
 ### 5. Identify the structure used in TED XML for the same purpose
-Review the information sources listed above for the TED XML to find the appropriate structures used for the same information. If none are found, document this in a comment in the XSLT.
+Review the information sources listed above for the TED XML to find the appropriate structures used for the same information. If none are found, document this in a comment in the XSLT, and move on to the next eForms structure.
+If an equivalent TED XML structure is found, check:
+-- If the structure is used in only one, or more, locations in the TED schema
+-- If the structure is an enumerated set of alternatives, consider an eForms codelist
+-- Which TED forms allow the structure, and for each the cardinality and requirement (Optional or Mandatory)
 
-### 6. Analyse text content of the TED structure
+### 6. Optional: Analyse text content of the TED structure
 If the identified TED XML structure contains text, write a script to extract and collate all the text variations from the downloaded TED XML data set. 
 
 If the text is an enumerated set (either an attribute with an enumerated set of values, or a set of empty elements (the element names are considerered values)), list them. Determine the meaning behind each, and map to the equivalent eForms codelist code.
@@ -172,7 +176,7 @@ If the text is expressed in the language of the form, consider only the English 
 
 *This is more of a guide than definitive*
 
-* If the mapping is simple, and there is no mapping required for "missing" TED elements, choose the Push model, and write \<xsl:apply-templates select\> and \<xsl:template match\> templates.
+* If the mapping is simple, and there is no mapping required for "missing" TED elements (that is, no eForms subtypes have this BT as mandatory), choose the Push model, and write \<xsl:apply-templates select\> and \<xsl:template match\> templates.
 
 * If the eForms element is mandatory, and the TED XML element is not always present, choose the Pull model, and write \<xsl:call-template name\> and \<xsl:template name\> templates.
 
