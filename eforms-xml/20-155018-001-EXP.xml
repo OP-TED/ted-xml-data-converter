@@ -34,6 +34,11 @@
                               <cbc:IdentificationCode>DE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:Telephone>+49 9319802732</cbc:Telephone>
+                           <cbc:Telefax>+49 93198028530</cbc:Telefax>
+                           <cbc:ElectronicMail>hochbau@veitshoechheim.de</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -127,9 +132,6 @@
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
-         </cac:ContractExecutionRequirement>
          <cac:AwardingTerms>
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
@@ -160,6 +162,16 @@
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45212200</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cac:AddressLine>
+                  <cbc:Line>Günterslebener Straße 41</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>97209 Veitshöchheim</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
          <cac:RealizedLocation>
             <cac:Address>
                <cac:AddressLine>

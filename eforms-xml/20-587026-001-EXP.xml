@@ -35,6 +35,10 @@
                               <cbc:IdentificationCode>DK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:Telephone>+45 93576602</cbc:Telephone>
+                           <cbc:ElectronicMail>perht@regionsjaelland.dk</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization>
@@ -56,6 +60,9 @@
                               <cbc:IdentificationCode>DK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:ElectronicMail>regionh@regionh.dk</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization>
@@ -77,6 +84,9 @@
                               <cbc:IdentificationCode>DK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:ElectronicMail>region@rn.dk</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization>
@@ -98,6 +108,9 @@
                               <cbc:IdentificationCode>DK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:ElectronicMail>kontakt@regionmidtjylland.dk</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization>
@@ -116,6 +129,10 @@
                               <cbc:IdentificationCode>DK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:Telephone>+45 35291095</cbc:Telephone>
+                           <cbc:ElectronicMail>klfu@erst.dk</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization>
@@ -134,6 +151,10 @@
                               <cbc:IdentificationCode>DK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:Telephone>+45 41715000</cbc:Telephone>
+                           <cbc:ElectronicMail>kfst@kfst.dk</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -520,6 +541,9 @@
          <cbc:Description languageID="DAN">Udbuddet gennemføres som et udbud med forhandling, jf. udbudslovens § § 61-66, hvilket betyder, at enhver økonomisk aktør kan ansøge om at deltage, men kun ansøgere som ordregiver opfordrer hertil, kan deltage i den videre proces. Ordregiver har til hensigt at prækvalificere 5 ansøgere. Når prækvalifikationsfasen er afsluttet, underretter ordregiver skriftligt tilbudsgiverne herom med samtidig oplysning om, at udbudsforretningens anden fase - tilbudsfasen - indledes. Herefter opfordres tilbudsgiverne til at afgive det indledende tilbud. Derefter kan ordregiver vælge at enten tildele rammeaftalen på baggrund af indledende tilbud eller indlede en forhandlingsfase. Ordregiver påtænker at tildele rammeaftale til 3 tilbudsgivere. Rammeaftale vedrører indkøb af IT-Klientudstyr, herunder bærbar Pc'er, stationære Pc'er, tyndeklienter, Pc skærme, monitorer, tablets, små printere, digitale infostandere, klinisk stuegangsvogne, telefoner og IT-tilbehør samt indsamling og bortskaffelse af udtjent IT-hardware.</cbc:Description>
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
          <cbc:Note languageID="DAN">1) Ordregiver forbeholder sig retten til at tildele rammeaftalen på grundlag af indledende tilbud uden at indgå forhandling. 2) Forhandlingen forventes gennemført som et kortvarigt forløb, hvor der forhandles om forbedringer og præciseringer på baggrund af de indledende tilbud samt muligheden for at optimere udbudsmaterialet. 3) Ordregiver vil ikke yde vederlag til deltagerne i forhandlingerne.</cbc:Note>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">30213000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
          <cac:RealizedLocation>
             <cac:Address>
                <cac:AddressLine>

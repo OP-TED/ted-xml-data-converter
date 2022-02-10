@@ -34,6 +34,10 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:Telephone>+31 317-480095</cbc:Telephone>
+                           <cbc:ElectronicMail>rene.Hartgers@wur.nl</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization>
@@ -52,6 +56,10 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:Telephone>+31 31748081</cbc:Telephone>
+                           <cbc:ElectronicMail>henriette.huisinga@wur.nl</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -250,6 +258,12 @@
          <cbc:Name languageID="ENG">Dynamic Purchasing System (DPS) Sequencing</cbc:Name>
          <cbc:Description languageID="ENG">This Dynamic Procurement System and the selection guidelines aim to inform interested prospective candidates with regard to the rules of procedure and criteria applicable to the Dynamic Procurement System for sequencing services. The suitability of a prospective candidate for each or all of the categories is determined during this first stage.</cbc:Description>
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71610000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
+         </cac:RealizedLocation>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

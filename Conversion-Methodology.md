@@ -148,7 +148,7 @@ In the eForms documentation for the section, read the table at the beginning of 
 Check that the order matches with the element order defined in the eForms schema.
 
 ### 2. Check the Annex spreadsheet for Form relevance
-Review the Annex spreadsheet for the related BTs, determining which Forms they are allowed / forbidden / mandatory for. Document this in a comment in the XSLT file. If they are allowed for form 16, proceed with the next steps. 
+Review the Annex spreadsheet for the related BTs **and BGs**, determining which Forms they are allowed / forbidden / mandatory for. Document this in a comment in the XSLT file. If they are allowed for form 16, proceed with the next steps. 
 
 ### 3. Determine the cardinality(-ies) of the structure
 Examine the documentation for all the related BTs for the structure, reviewing the cardinalities of all the elements involved. If the structure is repeated, either for the current BT or for other BTs, check which element which should be repeated by reviewing the documentation and the schema.
@@ -161,12 +161,12 @@ If the structure uses a codelist, extract the codes and labels for consideration
 ### 5. Identify the structure used in TED XML for the same purpose
 Review the information sources listed above for the TED XML to find the appropriate structures used for the same information. If none are found, document this in a comment in the XSLT, and move on to the next eForms structure.
 If an equivalent TED XML structure is found, check:
--- If the structure is used in only one, or more, locations in the TED schema
--- If the structure is an enumerated set of alternatives, consider an eForms codelist
--- Which TED forms allow the structure, and for each the cardinality and requirement (Optional or Mandatory)
+* If the structure is used in only one, or more, locations in the TED schema
+* If the structure is an enumerated set of alternatives, consider an eForms codelist
+* Which TED forms allow the structure, and for each the cardinality and requirement (Optional or Mandatory)
 
 ### 6. Optional: Analyse text content of the TED structure
-If the identified TED XML structure contains text, write a script to extract and collate all the text variations from the downloaded TED XML data set. 
+If the identified TED XML structure contains text (such as a \<P\> element), write a script to extract and collate all the text variations from the downloaded TED XML data set. 
 
 If the text is an enumerated set (either an attribute with an enumerated set of values, or a set of empty elements (the element names are considerered values)), list them. Determine the meaning behind each, and map to the equivalent eForms codelist code.
 
@@ -178,7 +178,7 @@ If the text is expressed in the language of the form, consider only the English 
 
 * If the mapping is simple, and there is no mapping required for "missing" TED elements (that is, no eForms subtypes have this BT as mandatory), choose the Push model, and write \<xsl:apply-templates select\> and \<xsl:template match\> templates.
 
-* If the eForms element is mandatory, and the TED XML element is not always present, choose the Pull model, and write \<xsl:call-template name\> and \<xsl:template name\> templates.
+* If the eForms element is mandatory according to either the Annex or the documentation (also consider the parent BG), and the TED XML element is not always present, choose the Pull model, and write \<xsl:call-template name\> and \<xsl:template name\> templates.
 
 
 

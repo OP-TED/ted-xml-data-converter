@@ -662,19 +662,19 @@ none None
 				<xsl:when test="ted:CPV_ADDITIONAL"><xsl:apply-templates select="ted:CPV_ADDITIONAL[1]"/></xsl:when>
 				<xsl:otherwise><xsl:apply-templates select="../ted:CPV_MAIN"/></xsl:otherwise>
 			</xsl:choose>
+			<!-- Place of Performance (*) -> RealizedLocation cardinality ? Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
+			<!-- Place of Performance Additional Information (BT-728) -->
+			<!-- Place Performance City (BT-5131) -->
+			<!-- Place Performance Post Code (BT-5121) -->
+			<!-- Place Performance Country Subdivision (BT-5071) -->
+			<!-- Place Performance Services Other (BT-727) -->
+			<!-- Place Performance Street (BT-5101) -->
+			<!-- Place Performance Country Code (BT-5141) -->
+			<xsl:call-template name="place-performance"/>
 			
 <!-- CONTINUE HERE -->
 			
 			
-			<!-- Place of Performance (*) -> RealizedLocation cardinality ? -->
-				<!-- Place of Performance Additional Information (BT-728) -->
-				<!-- Place Performance City (BT-5131) -->
-				<!-- Place Performance Post Code (BT-5121) -->
-				<!-- Place Performance Country Subdivision (BT-5071) -->
-				<!-- Place Performance Services Other (BT-727) -->
-				<!-- Place Performance Street (BT-5101) -->
-				<!-- Place Performance Country Code (BT-5141) -->
-			<xsl:apply-templates select="ted:MAIN_SITE"/>
 			<!-- Duration Start Date (BT-536) cardinality ? -->
 			<!-- Duration End Date (BT-537) cardinality ? -->
 			<!-- Duration Period (BT-36) cardinality ? -->
@@ -685,6 +685,31 @@ none None
 		</cac:ProcurementProject>
 	</xsl:template>
 
+	<xsl:template name="place-performance">
+		<!-- the BG-708 Place of Performance is Mandatory for most form subypes, but none of its child BTs are Mandatory -->
+		<!-- Note: it is not possible to convert the content of MAIN_SITE to any eForms elements that will pass the business rules validation. -->
+		<!-- It is also not possible to recognise any part of the content of MAIN_SITE and assign it to a particular eForms BT -->
+		<!-- To maintain any existing separation of the address in P elements, each P element will be converted to a separate cac:AddressLine/cbc:Line element -->
+		<!-- Note this will violate the business rules where BT-5101(c) Place Performance Streetline 2 is not allowed unless BT-5101(b) Place Performance Streetline 1 is present; -->
+		<!--         and BT-5101(b) Place Performance Streetline 1 is not allowed unless BT-5101(a) Place Performance Street is present -->
+		<!-- MAIN_SITE might contain no text! -->
+		<xsl:if test="fn:normalize-space(ted:MAIN_SITE) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
+			<cac:RealizedLocation>
+				<xsl:choose>
+					<xsl:when test="fn:normalize-space(ted:MAIN_SITE)">
+						<cac:Address>
+							<xsl:apply-templates select="ted:MAIN_SITE/ted:P"/>
+						</cac:Address>
+					</xsl:when>
+					<xsl:otherwise>
+						<cbc:Description languageID="ENG"><xsl:text>The source TED notice does not have an address for this Lot</xsl:text></cbc:Description>
+					</xsl:otherwise>
+				</xsl:choose>
+			</cac:RealizedLocation>
+		</xsl:if>
+	</xsl:template>
+	
+	
 	<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD">
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 		<xsl:if test="$text ne ''">
@@ -692,19 +717,6 @@ none None
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template match="ted:MAIN_SITE">
-		<!-- Note: it is not possible to convert the content of MAIN_SITE to any eForms elements that will pass the business rules validation. -->
-		<!-- It is also not possible to recognise any part of the content of MAIN_SITE and assign it to a particular eForms BT -->
-		<!-- To maintain any existing separation of the address in P elements, each P element will be converted to a separate cac:AddressLine/cbc:Line element -->
-		<!-- MAIN_SITE might contain no text! -->
-		<xsl:if test="fn:normalize-space(.) != ''">
-			<cac:RealizedLocation>
-				<cac:Address>
-					<xsl:apply-templates select="ted:P"/>
-				</cac:Address>
-			</cac:RealizedLocation>
-		</xsl:if>
-	</xsl:template>
 
 	<xsl:template match="ted:MAIN_SITE/ted:P">
 		<cac:AddressLine>
