@@ -22,6 +22,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</cac:ProcurementProjectLot>
 	</xsl:template>
 
+
+
+
+
+
+
+
+
+
+	<!-- Lot Tendering Terms templates -->
+
+
 	<xsl:template name="lot-tendering-terms">
 		<xsl:comment> Lot cac:TenderingTerms here </xsl:comment>
 		<cac:TenderingTerms>
@@ -322,6 +334,26 @@ EINVOICING	Electronic invoicing will be accepted
 		</xsl:if>
 	</xsl:template>
 
+
+	<!-- Lot Tendering Terms templates end here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Lot Tendering Process templates -->
+
 	
 	<xsl:template name="lot-tendering-process">
 		<xsl:comment> cac:TenderingProcess here </xsl:comment>
@@ -573,6 +605,24 @@ none None
 		</xsl:if>
 	</xsl:template>
 
+	<!-- Lot Tendering Process templates end here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Lot Procurement Process templates -->
+
 	<xsl:template name="lot-procurement-project">
 		<xsl:comment> cac:ProcurementProject here </xsl:comment>
 		<cac:ProcurementProject>
@@ -661,6 +711,9 @@ none None
             <cbc:Line><xsl:value-of select="fn:normalize-space(.)"/></cbc:Line>
         </cac:AddressLine>
 	</xsl:template>
+
+
+	<!-- Lot Procurement Process templates  end here -->
 
 
 </xsl:stylesheet>

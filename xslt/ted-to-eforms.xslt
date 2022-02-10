@@ -99,6 +99,18 @@ cac:ProcurementProjectLot
 
 </xsl:template>
 
+
+
+
+
+
+
+
+
+
+
+<!-- Procedure-level templates for Notice information -->
+
 <xsl:template name="root-extensions">
 	<ext:UBLExtensions>
 		<ext:UBLExtension>
@@ -193,6 +205,7 @@ cac:ProcurementProjectLot
 </xsl:template>
 
 
+
 <xsl:template name="changes">
 	<xsl:comment> efac:changes here </xsl:comment>
 </xsl:template>
@@ -249,6 +262,18 @@ cac:ProcurementProjectLot
 	<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL"/>
 </xsl:template>
 
+<!-- Procedure-level templates for Notice information end here-->
+
+
+
+
+
+
+
+
+
+<!-- Procedure-level templates for Tendering Terms -->
+
 <xsl:template name="root-tendering-terms">
 	<xsl:comment> cac:TenderingTerms here </xsl:comment>
 	<cac:TenderingTerms>
@@ -266,6 +291,36 @@ cac:ProcurementProjectLot
 		<!-- Group Lot Identifier (BT-1375) cardinality 1 --> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
 	</cac:TenderingTerms>
 </xsl:template>
+
+
+
+<!-- Procedure-level templates for Tendering Terms  end here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Procedure-level templates for Tendering Process -->
+
+
+
 <xsl:template name="root-tendering-process">
 	<xsl:comment> cac:TenderingProcess here </xsl:comment>
 	<cac:TenderingProcess>
@@ -293,6 +348,26 @@ cac:ProcurementProjectLot
 		<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? -->
 	</cac:TenderingProcess>
 </xsl:template>
+
+
+<!-- Procedure-level templates for Tendering Process end here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Procedure-level templates for Procurement Project -->
+
+
 <xsl:template name="root-procurement-project">
 	<xsl:comment> cac:ProcurementProject here </xsl:comment>
 	<cac:ProcurementProject>
@@ -324,6 +399,22 @@ cac:ProcurementProjectLot
 			<!-- Place Performance Country Code (BT-5141) -->
 	</cac:ProcurementProject>
 </xsl:template>
+
+
+<!-- Procedure-level templates for Procurement Project end here -->
+
+
+
+
+
+
+
+
+
+
+<!-- Initial template for all Lots -->
+
+
 <xsl:template name="procurement-project-lots">
 	<xsl:comment> multiple cac:ProcurementProjectLot here </xsl:comment>
 			<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:OBJECT_DESCR"/>
