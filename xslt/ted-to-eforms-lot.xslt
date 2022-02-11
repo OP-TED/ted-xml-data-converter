@@ -521,7 +521,7 @@ EINVOICING	Electronic invoicing will be accepted
 			<!-- Framework Buyer Categories (BT-111) cardinality ? No equivalent element in TED XML -->
 			<xsl:comment>Framework Buyer Categories (BT-111)</xsl:comment>
 			<!-- Framework Agreement (BT-765) cardinality ? Mandatory for subtypes PIN 7-9, CN 10-11, 16-18, 22; CAN 29-31; Optional for subtypes PIN 4-6 and E2; CN 12-13, 20-21 and E3; CAN 25-27, 33-34 and E4; Forbidden for other Notice subtypes -->
-			<xsl:comment>Framework Agreement (BT-765)</xsl:comment>
+			<!-- Framework Agreement (BT-765), Framework Maximum Participants Number (BT-113), Framework Duration Justification (BT-109) -->
 			<xsl:call-template name="framework-agreement"/>
 			<!-- Dynamic Purchasing System (BT-766) cardinality ? Mandatory for subtypes PIN 7-8, CN 10-11, 16-17; CAN 29-30; Optional for subtypes CN 12-13, 20-22 and E3; CAN 25-27, 33-34 and E4; Forbidden for other Notice subtypes -->
 			<xsl:comment>Dynamic Purchasing System (BT-766)</xsl:comment>
@@ -577,7 +577,8 @@ EINVOICING	Electronic invoicing will be accepted
 						<cbc:MinimumQuantity><xsl:value-of select="ted:NB_MIN_LIMIT_CANDIDATE"/></cbc:MinimumQuantity>
 					</xsl:when>
 					<xsl:when test="$eforms-notice-subtype = '16'">
-						<cbc:MinimumQuantity>TEDERR_NO_MINIMUM_QUANTITY</cbc:MinimumQuantity>
+						<xsl:comment>ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.</xsl:comment>
+						<cbc:MinimumQuantity>0</cbc:MinimumQuantity>
 					</xsl:when>
 				</xsl:choose>
 			</cac:EconomicOperatorShortList>
@@ -621,21 +622,25 @@ EINVOICING	Electronic invoicing will be accepted
 			</cac:OccurenceLocation>
 		</xsl:if>
 	</xsl:template>
-
+			
 	<xsl:template name="eauction-used">
-		<xsl:if test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = '16'">
+		<xsl:if test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = ('16', '17', '18', '22')">
 			<cac:AuctionTerms>
+				<!-- Electronic Auction (BT-767) cardinality ? Mandatory for subtypes CN 16-18, 22; Optional for subtypes PIN 7-9; CN 10-14, 19-21 and E3; Forbidden for other Notice subtypes -->
+				<xsl:comment>Electronic Auction (BT-767)</xsl:comment>
 				<xsl:choose>
 					<xsl:when test="../../ted:PROCEDURE/ted:EAUCTION_USED">
 						<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+						<!-- Electronic Auction Description (BT-122) cardinality ? Optional for subtypes PIN 7-9; CN 10-14, 16-22 and E3; Forbidden for other Notice subtypes -->
+						<xsl:comment>Electronic Auction Description (BT-122)</xsl:comment>
 						<cbc:Description languageID="{$eforms-first-language}">
 							<xsl:variable name="text" select="fn:normalize-space(fn:string-join(../../ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
 							<xsl:choose>
 								<xsl:when test="$text ne ''"><xsl:value-of select="$text"/></xsl:when>
-								<xsl:otherwise><xsl:text>TEDERR_NO_INFO_ADD_EAUCTION</xsl:text></xsl:otherwise>
+								<xsl:otherwise><xsl:text>Warning: source TED XML notice does not contain information for Electronic Auction Description (BT-122)</xsl:text></xsl:otherwise>
 							</xsl:choose>
 						</cbc:Description>
-						<cbc:AuctionURI><xsl:text>TEDERR_NO_AuctionURI_ELEMENT</xsl:text></cbc:AuctionURI>
+						<cbc:AuctionURI><xsl:text>Warning: source TED XML notice does not contain information for Electronic Auction URL (BT-123)</xsl:text></cbc:AuctionURI>
 					</xsl:when>
 					<xsl:otherwise>
 						<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
@@ -645,7 +650,9 @@ EINVOICING	Electronic invoicing will be accepted
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template name="framework-agreement">
+<xsl:template name="framework-agreement">
+		<!-- Framework Agreement (BT-765) -->
+		<xsl:comment>Framework Agreement (BT-765)</xsl:comment>
 		<xsl:if test="../../ted:PROCEDURE/ted:FRAMEWORK or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
 			<xsl:choose>
 				<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
@@ -665,13 +672,21 @@ EINVOICING	Electronic invoicing will be accepted
 	
 	<xsl:template match="ted:FRAMEWORK">
 		<cac:FrameworkAgreement>
-			<cbc:MaximumOperatorQuantity>
-				<xsl:choose>
-					<xsl:when test="ted:SINGLE_OPERATOR"><xsl:text>1</xsl:text></xsl:when>
-					<xsl:when test="ted:NB_PARTICIPANTS"><xsl:value-of select="ted:NB_PARTICIPANTS"/></xsl:when>
-					<xsl:otherwise><xsl:text>TEDERR_NO_NB_PARTICIPANTS</xsl:text></xsl:otherwise>
-				</xsl:choose>
-			</cbc:MaximumOperatorQuantity>
+			<!-- Framework Maximum Participants Number (BT-113) -->
+			<xsl:comment>Framework Maximum Participants Number (BT-113)</xsl:comment>
+			<xsl:choose>
+				<xsl:when test="ted:SINGLE_OPERATOR">
+					<cbc:MaximumOperatorQuantity><xsl:text>1</xsl:text></cbc:MaximumOperatorQuantity>
+				</xsl:when>
+				<xsl:when test="ted:NB_PARTICIPANTS">
+					<cbc:MaximumOperatorQuantity><xsl:value-of select="ted:NB_PARTICIPANTS"/></cbc:MaximumOperatorQuantity>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:comment>ERROR: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113)</xsl:comment>
+				</xsl:otherwise>
+			</xsl:choose>
+			<!-- Framework Duration Justification (BT-109) -->
+			<xsl:comment>Framework Duration Justification (BT-109)</xsl:comment>
 			<xsl:apply-templates select="ted:JUSTIFICATION"/>
 		</cac:FrameworkAgreement>
 	</xsl:template>
