@@ -474,9 +474,7 @@
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:FrameworkAgreement>
-            <cbc:MaximumOperatorQuantity>TEDERR_NO_NB_PARTICIPANTS</cbc:MaximumOperatorQuantity>
-         </cac:FrameworkAgreement>
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--ERROR: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113)--><!--Framework Duration Justification (BT-109)--></cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>

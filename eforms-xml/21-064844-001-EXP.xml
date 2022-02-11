@@ -532,7 +532,8 @@
          <!--Minimum Candidates (BT-50)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <cbc:MinimumQuantity>TEDERR_NO_MINIMUM_QUANTITY</cbc:MinimumQuantity>
+            <!--ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
@@ -544,7 +545,7 @@
          <!--Electronic Auction (BT-767)-->
          <!--Electronic Auction Description (BT-122)-->
          <!--Electronic Auction URL (BT-123)-->
-         <cac:AuctionTerms>
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
@@ -552,8 +553,9 @@
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:FrameworkAgreement>
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)-->
             <cbc:MaximumOperatorQuantity>1</cbc:MaximumOperatorQuantity>
+            <!--Framework Duration Justification (BT-109)-->
          </cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
