@@ -19,4 +19,7 @@ This table lists the TED XML files chosen to test the Converter, and the reasons
 | 20-377805-001-EXP.xml | F02_2014 | CN | Lot | TIME_RECEIPT_TENDERS with one digit for hour |
 | 21-119240-001-EXP.xml | F02_2014 | CN | Lot | REDUCTION_RECOURSE |
 | 20-566267-001-EXP.xml | F02_2014 | CN | Lot | FRAMEWORK and DPS_ADDITIONAL_PURCHASERS |
+| 21-120407-001-EXP.xml | | | | |
+| 20-156625-001-EXP.xml | | | | |
+
 
