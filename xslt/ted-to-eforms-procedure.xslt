@@ -26,10 +26,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	
 		<cac:LotDistribution>
 			<!-- Lots Max Awarded (BT-33), Lots Max Allowed (BT-31)  -->
+			<xsl:comment>Lots Max Awarded (BT-33)</xsl:comment>
 			<!-- F01_2014 F02_2014 F04_2014 F05_2014 F21_2014 F22_2014 F23_2014 F24_2014 -->
 			<!-- Lots Max Awarded (BT-33) The maximum number of Lots that can be awarded to one economic operator -->
+			<xsl:comment>Lots Max Awarded (BT-33)</xsl:comment>
 			<xsl:apply-templates select="ted:LOT_MAX_ONE_TENDERER"/>
 			<!-- Lots Max Allowed (BT-31) The maximum number of Lots that one economic operator can submit a tender for -->
+			<xsl:comment>Lots Max Allowed (BT-31)</xsl:comment>
 			<!-- Tenders may be submmitted for: LOT_ALL LOT_MAX_NUMBER LOT_ONE_ONLY -->
 			<xsl:apply-templates select="ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY"/>
 			
@@ -52,7 +55,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:template match="ted:ACCELERATED_PROC">
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 		<cac:ProcessJustification>
+			<!-- Procedure Accelerated (BT-106) cardinality ? Optional for Notice subtypes CN 16-18, CAN  29-33, E3 and E5; Forbidden for other Notice subtypes -->
+			<xsl:comment>Procedure Accelerated (BT-106)</xsl:comment>
 			<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
+			<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for Notice subtypes CN 16-18, CAN  29-33, E3 and E5; Forbidden for other Notice subtypes -->
+			<xsl:comment>Procedure Accelerated Justification (BT-1351)</xsl:comment>
 			<xsl:if test="$text ne ''">
 				<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
 			</xsl:if>

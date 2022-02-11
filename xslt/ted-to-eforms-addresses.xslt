@@ -111,13 +111,36 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:template match="ted:ADDRESS_CONTRACTING_BODY|ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<cac:ContractingParty>
+			<!-- Buyer Profile URL (BT-508) -->
+			<xsl:comment>Buyer Profile URL (BT-508)</xsl:comment>
 			<xsl:apply-templates select="ted:URL_BUYER"/>
+			<!-- Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740) -->
+			<xsl:comment>Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)</xsl:comment>
 			<xsl:apply-templates select="../(ted:CA_TYPE|CA_TYPE_OTHER)"/>
+			<!-- Activity Authority (BT-10)  and Activity Entity (BT-610)-->
+			<xsl:comment>Activity Authority (BT-10) and Activity Entity (BT-610)</xsl:comment>
 			<xsl:apply-templates select="../ted:CA_ACTIVITY"/>
 			<cac:Party>
+				<!-- Buyer Technical Identifier Reference (OPT-300) -->
+				<xsl:comment>Buyer Technical Identifier Reference (OPT-300)</xsl:comment>
+				<!-- Reference (Technical ID) to the legal organization acting as a Buyer. -->
 				<cac:PartyIdentification>
 					<cbc:ID schemeName="organization"><xsl:value-of select="$tedaddressesuniquewithid//ted-org/path[.=$path]/../orgid"/></cbc:ID>
 				</cac:PartyIdentification>
+				<!-- The service provider is a Procurement Service Provider -->
+				<!-- Reference (Technical ID) to the legal organization acting as a PSP. -->
+				<xsl:comment>Reference (Technical ID) to the legal organization acting as a PSP.</xsl:comment>
+				<!-- The service provider is an eSender -->
+				<xsl:comment>The service provider is an eSender</xsl:comment>
+				<!-- Reference (Tech. ID) to the legal organization acting as an eSender. -->
+				<xsl:comment>Reference (Tech. ID) to the legal organization acting as an eSender.</xsl:comment>
+				<xsl:comment>Service Provider Technical Identifier Reference (OPT-300)</xsl:comment>
+				<!-- Reference (Technical ID) to the legal organization acting as a Buyer. -->
+				<xsl:comment>Reference (Technical ID) to the legal organization acting as a Buyer.</xsl:comment>
+				<!-- Service Provider Technical Identifier Reference (OPT-300) -->
+				<xsl:comment>Service Provider Technical Identifier Reference (OPT-300)</xsl:comment>
+				<!-- Reference (Technical ID) to the legal organization acting as a Buyer. -->
+				<xsl:comment>Reference (Technical ID) to the legal organization acting as a Buyer.</xsl:comment>
 			</cac:Party>
 		</cac:ContractingParty>
 	</xsl:template>
@@ -178,10 +201,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xs:element ref="URL_GENERAL" minOccurs="0"/>
 		<xs:element ref="URL_BUYER" minOccurs="0"/>
 	-->
+		<!-- Organization Internet Address (BT-505) cardinality ? -->
+		<xsl:comment>Organization Internet Address (BT-505)</xsl:comment>
 		<xsl:apply-templates select="ted:URL_GENERAL"/>
 		<!-- Need to investigate purpose and meaning of element URL_BUYER in addresses not CONTRACTING_BODY -->
-		<!--<xsl:apply-templates select="ted:URL_BUYER"/>-->
+		<!-- Organization Technical Identifier (OPT-200) cardinality ? -->
+		<xsl:comment>Organization Technical Identifier (OPT-200)</xsl:comment>
 		<cac:PartyIdentification><cbc:ID schemeName="organization"><xsl:value-of select="../orgid"/></cbc:ID></cac:PartyIdentification>
+		<!-- Organization Name (BT-500) cardinality ? -->
+		<xsl:comment>Organization Name (BT-500)</xsl:comment>
 		<xsl:apply-templates select="ted:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
 		<xsl:call-template name="contact"/>
@@ -200,23 +228,37 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	
 	<xsl:template name="address">
 		<cac:PostalAddress>
-		<xsl:apply-templates select="ted:ADDRESS"/>
-		<xsl:apply-templates select="ted:TOWN"/>
-		<xsl:apply-templates select="ted:POSTAL_CODE"/>
-		<xsl:apply-templates select="n2016:NUTS"/>
-		<xsl:apply-templates select="ted:COUNTRY"/>
+			<!-- Organization Street (BT-510) cardinality ? -->
+			<xsl:comment>Organization Street (BT-510)</xsl:comment>
+			<xsl:apply-templates select="ted:ADDRESS"/>
+			<!-- Organization City (BT-513) cardinality ? -->
+			<xsl:comment>Organization City (BT-513)</xsl:comment>
+			<xsl:apply-templates select="ted:TOWN"/>
+			<!-- Organization Post Code (BT-512) cardinality ? -->
+			<xsl:comment>Organization Post Code (BT-512)</xsl:comment>
+			<xsl:apply-templates select="ted:POSTAL_CODE"/>
+			<!-- Organization Country Subdivision (BT-507) cardinality ? -->
+			<xsl:comment>Organization Country Subdivision (BT-507)</xsl:comment>
+			<xsl:apply-templates select="n2016:NUTS"/>
+			<!-- Organization Country Code (BT-514) cardinality ? -->
+			<xsl:comment>Organization Country Code (BT-514)</xsl:comment>
+			<xsl:apply-templates select="ted:COUNTRY"/>
 		</cac:PostalAddress>
 	</xsl:template>
 	
 	<xsl:template name="contact">
 		<!-- Organization Contact Point (BT-502) cardinality ? No equivalent element in TED XML -->
+		<xsl:comment>Organization Contact Point (BT-502)</xsl:comment>
 		<xsl:if test="ted:PHONE|ted:FAX|ted:E_MAIL">
 			<cac:Contact>
 				<!-- Organization Contact Telephone Number (BT-503) cardinality ? -->
+				<xsl:comment>Organization Contact Telephone Number (BT-503)</xsl:comment>
 				<xsl:apply-templates select="ted:PHONE"/>
 				<!-- Organization Contact Fax (BT-739) cardinality ? -->
+				<xsl:comment>Organization Contact Fax (BT-739)</xsl:comment>
 				<xsl:apply-templates select="ted:FAX"/>
 				<!-- Organization Contact Email Address (BT-506) cardinality ? -->
+				<xsl:comment>Organization Contact Email Address (BT-506)</xsl:comment>
 				<xsl:apply-templates select="ted:E_MAIL"/>
 			</cac:Contact>
 		</xsl:if>
@@ -251,9 +293,13 @@ eu-int-org European Institution/Agency or International Organisation
 -->
 		<xsl:variable name="ca-type" select="@VALUE"/>
 		<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
+		<!-- Buyer Legal Type (BT-11) -->
+		<xsl:comment>Buyer Legal Type (BT-11)</xsl:comment>
 		<cac:ContractingPartyType>
 			<cbc:PartyType><xsl:value-of select="$buyer-legal-type"/></cbc:PartyType>
 		</cac:ContractingPartyType>
+		<!-- Buyer Contracting Entity (BT-740) -->
+		<xsl:comment>Buyer Contracting Entity (BT-740)</xsl:comment>
 	<!-- buyer-contracting-type codelist Not yet available -->
 		<cac:ContractingPartyType>
 			<cbc:PartyType><xsl:value-of select="'buyer-contracting-type'"/></cbc:PartyType>
