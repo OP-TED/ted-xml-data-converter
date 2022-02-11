@@ -2,166 +2,293 @@
 <PriorInformationNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                        xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
-                        xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
-                        xmlns:efext="http://eforms/v1.0/Extensions"
+                        xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                        xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                        xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
                         xmlns:ccts="urn:un:unece:uncefact:documentation:2"
                         xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
-            <efext:EformsExtension>
-               <efac:NoticeSubtype>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
                   <cbc:SubTypeCode>4</cbc:SubTypeCode>
-               </efac:NoticeSubtype>
+               </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization>
-                     <efac:Company>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>www.veitshoechheim.de</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
                         </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
                         <cac:PartyName>
                            <cbc:Name>Gemeinde Veitshöchheim</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Erwin-Vornberger-Platz 1</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
                            <cbc:CityName>Veitshöchheim</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>97209</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
                            <cbc:CountrySubentityCode listName="nuts">DE26C</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode>DE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
-                        <cac:Contact>
+                        <!--Organization Contact Point (BT-502)-->
+                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+49 9319802732</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+49 93198028530</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>hochbau@veitshoechheim.de</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
-               <ted-orgs xmlns="">
-                  <ted-org>
-                     <orgid>ORG-001</orgid>
-                     <path>TED_EXPORT/FORM_SECTION/F01_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
-                     <tedaddress>
-                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Gemeinde Veitshöchheim</OFFICIALNAME>
-                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Erwin-Vornberger-Platz 1</ADDRESS>
-                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Veitshöchheim</TOWN>
-                        <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">97209</POSTAL_CODE>
-                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
-                                 VALUE="DE"/>
-                        <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+49 9319802732</PHONE>
-                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">hochbau@veitshoechheim.de</E_MAIL>
-                        <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+49 93198028530</FAX>
-                        <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
-                                    CODE="DE26C"/>
-                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">www.veitshoechheim.de</URL_GENERAL>
-                     </tedaddress>
-                  </ted-org>
-               </ted-orgs>
                <!-- efac:Publication here -->
-               <efac:Publication>
+               <efac:Publication><!--Notice Publication ID (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
                   <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
       </ext:UBLExtension>
    </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
    <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
    <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty>
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyType>ra</cbc:PartyType>
       </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
          <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
       </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
-      <cac:Party>
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-001</cbc:ID>
          </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms/>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension/>
+               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Lots All Required (BT-763)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <!--Title (BT-21)-->
       <cbc:Name languageID="DEU">Gemeinde Veitshöchheim, Sportplatzbauarbeiten an der Freisportanlage</cbc:Name>
+      <!--Description (BT-24)-->
       <cbc:Description languageID="DEU">Gegenstand des Auftrages ist die Vergabe von Sportplatzbauarbeiten bei der Freisportanlage am Schulzentrum in der Günterslebener Str. 41, 97209 Veitshöchheim. Die Arbeiten sollen ab den Sommerferien 2020 stattfinden. Bisher ist die Fertigstellung Mitte 2021 geplant.</cbc:Description>
+      <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <!--Estimated Value (BT-27)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">45212200</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
+      <!--Main Classification Code (BT-262)-->
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
    <cac:ProcurementProjectLot>
       <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
-         <cac:SpecificTendererRequirement>
-            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-         </cac:SpecificTendererRequirement>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <!--EU Funds (BT-60)-->
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
          <cac:AppealTerms/>
+         <!--Submission Language (BT-97)-->
+         <!--Electronic Ordering (BT-92)-->
+         <!--Electronic Payment (BT-93)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension/>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
             <cbc:StartDate>2020-03-27+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
          <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+         <!--Title (BT-21)-->
          <cbc:Name languageID="DEU">Gemeinde Veitshöchheim, Sportplatzbauarbeiten an der Freisportanlage</cbc:Name>
+         <!--Description (BT-24)-->
          <cbc:Description languageID="DEU">Die Gemeinde Veitshöchheim beabsichtigt bei der Freisportanlage am Schulzentrum (Günterslebener Str. 41, 97209 Veitshöchheim) eine Belagssanierung durchzuführen. Folgende Arbeiten sind hauptsächlich notwendig: — Abbruch und Neubau des Kunststoffbelags: —— Belagstyp A ca. 5 200 m2; —— Belagstyp B ca. 1 200 m2. — Einbau einer neuen Bitu-Tragschicht in Teilbereichen der Sportflächen; — Tiefenreinigung von zwei Kleinspielfeldern und punktuelle Ausbesserung von Schadstellen; — Abbruch und Neubau von beschädigten Einfassungen; — Abbruch und Neubau von zwei Weitsprunggruben; — Ausbau von beschädigten Kastenrinnen der Rundlaufbahn; — Montage von neuen Sporteinbauteilen wie z. B. Bodenhülsen, Basketballständern, Absprungbalken sowie Aufbringen von Spielfeldlinierungen; — Einbau einer Wurzelschutzbahn seitlich der Weit-/Hochsprungbahn, um das Einwachsen von Wurzeln zu verhindern; — Partieller Austausch von defekten Drainleitungen unter Sportflächen.</cbc:Description>
+         <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45212200</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
                <cac:AddressLine>
@@ -172,16 +299,13 @@
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
-         <cac:RealizedLocation>
-            <cac:Address>
-               <cac:AddressLine>
-                  <cbc:Line>Günterslebener Straße 41</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>97209 Veitshöchheim</cbc:Line>
-               </cac:AddressLine>
-            </cac:Address>
-         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </PriorInformationNotice>

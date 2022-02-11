@@ -2,177 +2,256 @@
 <ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents"
-                xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents"
-                xmlns:efext="http://eforms/v1.0/Extensions"
+                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
-            <efext:EformsExtension>
-               <efac:NoticeSubtype>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
                   <cbc:SubTypeCode>17</cbc:SubTypeCode>
-               </efac:NoticeSubtype>
+               </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization>
-                     <efac:Company>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.daa.ie</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
                         </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
                         <cac:PartyName>
                            <cbc:Name>DAA plc</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Dublin Airport, Co. Dublin</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
                            <cbc:CityName>Dublin</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode>IE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Contact Point (BT-502)-->
+                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>brian.collier@daa.ie</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization>
-                     <efac:Company>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
                         </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
                         <cac:PartyName>
                            <cbc:Name>Martin Acton</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Dublin Airport</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode>IE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
-               <ted-orgs xmlns="">
-                  <ted-org>
-                     <orgid>ORG-001</orgid>
-                     <path>TED_EXPORT/FORM_SECTION/F05_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
-                     <tedaddress>
-                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">DAA plc</OFFICIALNAME>
-                        <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">N/A</NATIONALID>
-                        <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Dublin Airport, Co. Dublin</ADDRESS>
-                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Dublin</TOWN>
-                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
-                                 VALUE="IE"/>
-                        <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">brian.collier@daa.ie</E_MAIL>
-                        <n2021:NUTS xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
-                                    CODE="IE"/>
-                        <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">http://www.daa.ie</URL_GENERAL>
-                        <URL_BUYER xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://irl.eu-supply.com/ctm/Company/CompanyInformation/Index/227</URL_BUYER>
-                     </tedaddress>
-                  </ted-org>
-                  <ted-org>
-                     <orgid>ORG-002</orgid>
-                     <path>TED_EXPORT/FORM_SECTION/F05_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
-                     <tedaddress>
-                        <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Martin Acton</OFFICIALNAME>
-                        <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Dublin Airport</TOWN>
-                        <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
-                                 VALUE="IE"/>
-                     </tedaddress>
-                  </ted-org>
-               </ted-orgs>
                <!-- efac:Publication here -->
-               <efac:Publication>
+               <efac:Publication><!--Notice Publication ID (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
                   <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
       </ext:UBLExtension>
    </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
    <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
    <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty>
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://irl.eu-supply.com/ctm/Company/CompanyInformation/Index/227</cbc:BuyerProfileURI>
-      <cac:Party>
+      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-001</cbc:ID>
          </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms>
-      <cac:LotDistribution>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+      <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Awarded (BT-33)-->
          <cbc:MaximumLotsAwardedNumeric>1</cbc:MaximumLotsAwardedNumeric>
+         <!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>1</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
+      <!--Group Identifier (BT-330)-->
+      <!--Group Lot Identifier (BT-1375)-->
    </cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension/>
+               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Lots All Required (BT-763)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Airside and Landside Civil Works Framework</cbc:Name>
+      <!--Description (BT-24)-->
       <cbc:Description languageID="ENG">The contracting authority, wishes to put in place two (2) bespoke framework agreement’s with two (2) suitably qualified civil contractor’s to act on behalf of the contracting authority in carrying out: 1) Airside and Landside Civil works (including pavement, concrete and all associated works to successfully deliver a civil works contract) at Dublin Airport; and 2) Construction of a Underpass (including all associated works to successfully deliver the contract) at Dublin Airport, as described in the attached RFI, and other associated works as required by the contracting authority.</cbc:Description>
+      <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <!--Estimated Value (BT-27)-->
       <cac:RequestedTenderTotal>
          <cbc:EstimatedOverallContractAmount currencyID="EUR">425000000.00</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">45235100</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
+      <!--Main Classification Code (BT-262)-->
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
    <cac:ProcurementProjectLot>
       <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
-         <cac:SelectionCriteria>
-            <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
-            <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
-         </cac:SelectionCriteria>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
          <cbc:VariantConstraintCode listName="permission">allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
          <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
          <cac:CallForTendersDocumentReference>
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
-         <cac:SpecificTendererRequirement>
-            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-         </cac:SpecificTendererRequirement>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <!--Terms Performance (BT-70)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
             <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
          </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion>
@@ -183,15 +262,18 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:EndpointID>
             <cac:PartyIdentification>
                <cbc:ID schemeName="organization">ORG-001</cbc:ID>
             </cac:PartyIdentification>
          </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
          <cac:TenderValidityPeriod>
             <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
@@ -199,49 +281,107 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
          </cac:Language>
+         <!--Electronic Ordering (BT-92)-->
+         <!--Electronic Payment (BT-93)-->
          <cac:PostAwardProcess>
             <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension/>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
          <cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-04-22+01:00</cbc:EndDate>
-            <cbc:EndTime>15:00+01:00</cbc:EndTime>
+            <cbc:EndTime>15:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
             <cbc:StartDate>2021-03-04+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
          <cac:FrameworkAgreement>
             <cbc:MaximumOperatorQuantity>1</cbc:MaximumOperatorQuantity>
          </cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
          <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+         <!--Title (BT-21)-->
          <cbc:Name languageID="ENG">Airside and Landside Civil Works</cbc:Name>
+         <!--Description (BT-24)-->
          <cbc:Description languageID="ENG">Will manage and deliver all civil and associated works at Dublin Airport Campus (see attached RFI for further information). The contracting authority reserves the right to use this framework partner to undertake associated civil works at Cork Airport.</cbc:Description>
+         <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
          <cbc:Note languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
                <cac:AddressLine>
@@ -249,41 +389,96 @@
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot>
       <cbc:ID schemeName="Lot">LOT-002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
-         <cac:SelectionCriteria>
-            <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
-            <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
-         </cac:SelectionCriteria>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
          <cbc:VariantConstraintCode listName="permission">allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
          <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
          <cac:CallForTendersDocumentReference>
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
-         <cac:SpecificTendererRequirement>
-            <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-         </cac:SpecificTendererRequirement>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <!--Terms Performance (BT-70)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
             <cbc:Description languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Description>
          </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion>
@@ -294,15 +489,18 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=184096&amp;B=ETENDERS_SIMPLE</cbc:EndpointID>
             <cac:PartyIdentification>
                <cbc:ID schemeName="organization">ORG-001</cbc:ID>
             </cac:PartyIdentification>
          </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
          <cac:TenderValidityPeriod>
             <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
@@ -310,49 +508,107 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
          </cac:Language>
+         <!--Electronic Ordering (BT-92)-->
+         <!--Electronic Payment (BT-93)-->
          <cac:PostAwardProcess>
             <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
       <!-- cac:TenderingProcess here -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension/>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
          <cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-04-22+01:00</cbc:EndDate>
-            <cbc:EndTime>15:00+01:00</cbc:EndTime>
+            <cbc:EndTime>15:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
             <cbc:StartDate>2021-03-04+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
          <cac:FrameworkAgreement>
             <cbc:MaximumOperatorQuantity>1</cbc:MaximumOperatorQuantity>
          </cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
          <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+         <!--Title (BT-21)-->
          <cbc:Name languageID="ENG">Underpass Construction</cbc:Name>
+         <!--Description (BT-24)-->
          <cbc:Description languageID="ENG">Will manage and deliver all civil and associated work with the Underpass construction at Dublin Airport Campus (see attached RFI for further details). The contracting authority reserves the right to use this framework partner to undertake associated civil works at Cork Airport.</cbc:Description>
+         <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
          <cbc:Note languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
                <cac:AddressLine>
@@ -360,6 +616,13 @@
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

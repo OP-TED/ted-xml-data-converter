@@ -3,7 +3,7 @@
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" 
 xmlns:doc="http://www.pnp-software.com/XSLTdoc" xmlns:opfun="http://publications.europa.eu/local/xslt-functions"
 xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" 
-xmlns:efbc="http://eforms/v1.0/ExtensionBasicComponents" xmlns:efac="http://eforms/v1.0/ExtensionAggregateComponents" xmlns:efext="http://eforms/v1.0/Extensions" xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " 
@@ -37,6 +37,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:template name="lot-tendering-terms">
 		<xsl:comment> Lot cac:TenderingTerms here </xsl:comment>
 		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+
 			<!-- In eForms, Selection Criteria are specified at the Lot level. Multiple Selection Criteria each use a separate <efac:SelectionCriteria> element. -->
 			<!--            The different types of Selection Criteria are indicated by values from the selection-criterion codelist -->
 			<!-- sui-act Suitability to pursue the professional activity -->
@@ -64,6 +69,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:comment>Selection Criteria Second Stage Invite Number Threshold (BT-7532)</xsl:comment>
 			<!-- Selection Criteria Second Stage Invite Number (BT-752) cardinality * -->
 			<xsl:comment>Selection Criteria Second Stage Invite Number (BT-752)</xsl:comment>
+			</efext:EformsExtension>
+			</ext:ExtensionContent>
+			</ext:UBLExtension>
+			</ext:UBLExtensions>
 			<!-- Variants (BT-63) cardinality ? -->
 			<xsl:comment>Variants (BT-63)</xsl:comment>
 			<xsl:apply-templates select="ted:NO_ACCEPTED_VARIANTS|ted:ACCEPTED_VARIANTS"/>
@@ -181,7 +190,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:variable name="element-name" select="fn:local-name(.)"/>
 		<xsl:variable name="selection-criterion-type" select="$mappings//selection-criterion-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 		<xsl:if test="$text ne ''">
-			<cac:SelectionCriteria>
+			<efac:SelectionCriteria>
 				<!-- Selection Criteria Type (BT-747) cardinality ?-->
 				<xsl:comment>Selection Criteria Type (BT-747)</xsl:comment>
 				<cbc:CriterionTypeCode listName="selection-criterion"><xsl:value-of select="$selection-criterion-type"/></cbc:CriterionTypeCode>
@@ -192,7 +201,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 				<!-- Selection Criteria Used (BT-748) cardinality ? -->
 				<xsl:comment>Selection Criteria Used (BT-748)</xsl:comment>
-			</cac:SelectionCriteria>
+			</efac:SelectionCriteria>
 		</xsl:if>
 	</xsl:template>
 	
@@ -241,16 +250,18 @@ RESERVED_ORGANISATIONS_SERVICE_MISSION	Participation in the procedure is reserve
 		<!-- Reserved Participation (BT-71) is Mandatory for notice subtypes 7-9 (PIN) and 10-22 (CN) -->
 		<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
 		<!-- reserved-procurement code res-pub-ser is RESERVED_ORGANISATIONS_SERVICE_MISSION in TED XML, used only in F21 -->
-		<xsl:choose>
-			<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">
-				<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>
-			</xsl:when>
-			<xsl:otherwise>
-				<cac:SpecificTendererRequirement>
-					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-				</cac:SpecificTendererRequirement>
-			</xsl:otherwise>
-		</xsl:choose>
+		<cac:TendererQualificationRequest>
+			<xsl:choose>
+				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">
+					<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<cac:SpecificTendererRequirement>
+						<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+					</cac:SpecificTendererRequirement>
+				</xsl:otherwise>
+			</xsl:choose>
+		</cac:TendererQualificationRequest>
 	</xsl:template>
 	
 	<xsl:template match="ted:RESTRICTED_SHELTERED_WORKSHOP">
@@ -530,9 +541,10 @@ EINVOICING	Electronic invoicing will be accepted
 				<xsl:when test="../../ted:PROCEDURE/ted:TIME_RECEIPT_TENDERS">
 					<!-- add any missing leading "0" from the hour -->
 					<xsl:value-of select="fn:replace(../../ted:PROCEDURE/ted:TIME_RECEIPT_TENDERS, '^([0-9]):', '0$1:')"/>
-					<xsl:text>+01:00</xsl:text>
+					<!-- add ":00" for the seconds; add the TimeZone offset for CET -->
+					<xsl:text>:00+01:00</xsl:text>
 				</xsl:when>
-				<xsl:otherwise><xsl:text>23:59+01:00</xsl:text></xsl:otherwise>
+				<xsl:otherwise><xsl:text>23:59:00+01:00</xsl:text></xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 		<cbc:EndTime><xsl:value-of select="$endtime"/></cbc:EndTime>
@@ -578,8 +590,17 @@ EINVOICING	Electronic invoicing will be accepted
 		<!-- Therfore for complete accuracy, a mapping of country codes to UTC timezone offsets is required -->
 		<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
 		<cac:OpenTenderEvent>
-			<cbc:OccurrenceDate><xsl:value-of select="ted:DATE_OPENING_TENDERS"/><xsl:text>+01:00</xsl:text></cbc:OccurrenceDate>
-			<cbc:OccurrenceTime><xsl:value-of select="fn:replace(ted:TIME_OPENING_TENDERS, '^([0-9]):', '0$1:')"/><xsl:text>+01:00</xsl:text></cbc:OccurrenceTime>
+			<cbc:OccurrenceDate>
+				<xsl:value-of select="ted:DATE_OPENING_TENDERS"/>
+				<!-- add the TimeZone offset for CET -->
+				<xsl:text>+01:00</xsl:text>
+			</cbc:OccurrenceDate>
+			<cbc:OccurrenceTime>
+				<!-- add any missing leading "0" from the hour -->
+				<xsl:value-of select="fn:replace(ted:TIME_OPENING_TENDERS, '^([0-9]):', '0$1:')"/>
+				<!-- add ":00" for the seconds; add the TimeZone offset for CET -->
+				<xsl:text>:00+01:00</xsl:text>
+			</cbc:OccurrenceTime>
 			<xsl:apply-templates select="ted:INFO_ADD"/>
 			<xsl:apply-templates select="ted:PLACE"/>
 		</cac:OpenTenderEvent>
