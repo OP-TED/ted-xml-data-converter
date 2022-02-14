@@ -144,19 +144,19 @@ Thus the main structures (of the first form to be analysed, the Contract Notice 
 Within each structure, the steps taken are:
 
 ### 1. Identify the next structure in eForms to work on
-In the eForms documentation for the section, read the table at the beginning of the section, which lists all the Business Terms used. Read the occurrence symbol for that BT to ensure that it is relevant in the section context. Document this in a comment in the XSLT file.
+In the eForms documentation for the section, read the table at the beginning of the section, which lists all the Business Terms used. Identify the next BT (or group of BTs) to work on. Read the occurrence symbol for that BT to ensure that it is relevant in the section context. Document this in a comment in the XSLT file.
 Check that the order matches with the element order defined in the eForms schema.
 
 ### 2. Check the Annex spreadsheet for Form relevance
 Review the Annex spreadsheet for the related BTs **and BGs**, determining which Forms they are allowed / forbidden / mandatory for. Document this in a comment in the XSLT file. If they are allowed for form 16, proceed with the next steps. 
 
 ### 3. Determine the cardinality(-ies) of the structure
-Examine the documentation for all the related BTs for the structure, reviewing the cardinalities of all the elements involved. If the structure is repeated, either for the current BT or for other BTs, check which element which should be repeated by reviewing the documentation and the schema.
+Identify the XML structure used for the selected BT or BTs. Examine the documentation for all the related BTs for the structure (those using the same parent elements or structures), reviewing the cardinalities of all the elements involved. You may want to consider them together as a group. If the structure is repeated, either for the current BT or for other BTs, check which elements in the overall structure should be repeated by reviewing the documentation and the schema.
 
 ### 4. Determine the use / purpose of the structure
 Review the documentation and Annex spreadsheet to understand what information the structure is used for.
 
-If the structure uses a codelist, extract the codes and labels for consideration.
+If the structure uses a codelist, extract the codes and labels for consideration. Consider adding the list of codes and labels as a comment in the XSLT file.
 
 ### 5. Identify the structure used in TED XML for the same purpose
 Review the information sources listed above for the TED XML to find the appropriate structures used for the same information. If none are found, document this in a comment in the XSLT, and move on to the next eForms structure.
