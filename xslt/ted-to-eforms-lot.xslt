@@ -793,7 +793,6 @@ none None
 				<xsl:otherwise><xsl:apply-templates select="../ted:CPV_MAIN"/></xsl:otherwise>
 			</xsl:choose>
 			
-<!-- CONTINUE HERE -->
 			
 			
 			<!-- Place of Performance (*) -> RealizedLocation cardinality ? Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
@@ -812,6 +811,9 @@ none None
 			<!-- Place Performance Country Code (BT-5141) -->
 			<xsl:comment>Place Performance Country Code (BT-5141)</xsl:comment>
 			<xsl:call-template name="place-performance"/>
+	
+			
+			<!-- Planned Period (*) cardinality ? BT-536 and BT-537 are Mandatory for subtypes E5, the other BTs are forbiden for E5; all BTs are forbiden for 23-24, 36-37; all BTs are Optional for all the other subtypes -->
 			<!-- Duration Start Date (BT-536) cardinality ? -->
 			<xsl:comment>Duration Start Date (BT-536)</xsl:comment>
 			<!-- Duration End Date (BT-537) cardinality ? -->
@@ -820,6 +822,16 @@ none None
 			<xsl:comment>Duration Period (BT-36)</xsl:comment>
 			<!-- Duration Other (BT-538) cardinality ? -->
 			<xsl:comment>Duration Other (BT-538)</xsl:comment>
+			<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>			
+				
+			
+
+
+
+<!-- CONTINUE HERE -->
+
+
+
 			<!-- Options Description (BT-54) cardinality ? -->
 			<xsl:comment>Options Description (BT-54)</xsl:comment>
 			<!-- Renewal maximum (BT-58) cardinality ? -->
@@ -868,7 +880,46 @@ none None
         </cac:AddressLine>
 	</xsl:template>
 
-
+	<xsl:template match="ted:DURATION">
+		<cac:PlannedPeriod>	
+			<!--"YEAR"|"MONTH"|"DAY"-->
+			<xsl:variable name="duration-type" select="@TYPE"/>
+			<cbc:DurationMeasure unitCode="{$duration-type}"><xsl:value-of select="."/></cbc:DurationMeasure>	
+		</cac:PlannedPeriod>
+	</xsl:template>
+	
+	<xsl:template match="ted:DATE_START">
+		<cac:PlannedPeriod>		
+			<cbc:StartDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:StartDate>
+			<cbc:EndDate>
+				<xsl:choose>
+					<xsl:when test="../ted:DATE_END"><xsl:value-of select="../ted:DATE_END"/><xsl:text>+01:00</xsl:text></xsl:when>
+					<xsl:otherwise> 
+						<!-- ERROR: cbc:EndDate is required but the source TED notice does not contain DATE_END. For now, in order to obtain a valid XML, a far future date was used (2099-12-31+01:00) -->
+						<xsl:comment> ERROR: cbc:EndDate is required but the source TED notice does not contain DATE_END. For now, in order to obtain a valid XML, a far future date was used (2099-12-31+01:00) </xsl:comment>
+						<xsl:text>2099-12-31+01:00</xsl:text>
+					</xsl:otherwise>
+				</xsl:choose>
+			
+			</cbc:EndDate>
+				
+		</cac:PlannedPeriod>
+	</xsl:template>
+	
+	<xsl:template match="ted:DATE_END[fn:not(../ted:DATE_START)]">
+		<cac:PlannedPeriod>	
+			<cbc:StartDate>
+				<!-- ERROR: cbc:StartDate is required but the source TED notice does not contain DATE_START. For now, in order to obtain a valid XML, a far past date was used (1900-01-01+01:00) -->
+				<xsl:comment> ERROR: cbc:StartDate is required but the source TED notice does not contain DATE_START. For now, in order to obtain a valid XML, a far past date was used (1900-01-01+01:00) </xsl:comment>
+				<xsl:text>1900-01-01+01:00</xsl:text>
+			</cbc:StartDate>			
+			<cbc:EndDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:EndDate>		
+		</cac:PlannedPeriod>
+	</xsl:template>
+	<!--Other means might be completed "UNLIMITED"|"UNKNOWN"-->
+	<!--<cbc:DescriptionCode listName="timeperiod">UNLIMITED</cbc:DescriptionCode>-->
+	
+	
 	<!-- Lot Procurement Process templates  end here -->
 
 
