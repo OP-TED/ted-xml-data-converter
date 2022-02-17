@@ -814,13 +814,13 @@ none None
 	
 			
 			<!-- Planned Period (*) cardinality ? BT-536 and BT-537 are Mandatory for subtypes E5, the other BTs are forbiden for E5; all BTs are forbiden for 23-24, 36-37; all BTs are Optional for all the other subtypes -->
-			<!-- Duration Start Date (BT-536) cardinality ? -->
+			<!-- Duration Start Date (BT-536) cardinality = "?"-->
 			<xsl:comment>Duration Start Date (BT-536)</xsl:comment>
-			<!-- Duration End Date (BT-537) cardinality ? -->
+			<!-- Duration End Date (BT-537) cardinality = "?"-->
 			<xsl:comment>Duration End Date (BT-537)</xsl:comment>
-			<!-- Duration Period (BT-36) cardinality ? -->
+			<!-- Duration Period (BT-36) cardinality = "?"-->
 			<xsl:comment>Duration Period (BT-36)</xsl:comment>
-			<!-- Duration Other (BT-538) cardinality ? -->
+			<!-- Duration Other (BT-538) cardinality = "?"-->
 			<xsl:comment>Duration Other (BT-538)</xsl:comment>
 			<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>			
 				
@@ -829,15 +829,28 @@ none None
 
 
 <!-- CONTINUE HERE -->
+			<!--cbc:MaximumNumberNumeric is mandatory for Notice subtypes 15 (Notice on the existence of a qualification system), 17 and 18 (Contract, or concession, notice — standard regime, Directives 2014/25/EU and 2009/81/EC)
 
+				cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)
 
+				cbc:MaximumNumberNumeric refers to the number of possible renewals; an encoded value of "3" involves an initial contract followed by up to 3 renewals -->
 
-			<!-- Options Description (BT-54) cardinality ? -->
+			<!-- Contract Extension (*) cardinality ? BT-53 and BT-54 are forbiden for E1, 1 to 6, E2, 15, 23, 24, 36 and 37 and optional for all the other subtypes -->
+			<!-- BT-54, BT-58 and BT-57 are optional (?) for lots -->
+			<!-- BT-58 is mandatory for 15, 17 and 18; BT-58 and BT-57 are forbiden for E1, 1 to 6, E2, 14, 23, 24, 36 and 37 and optional for all the other subtypes -->
+			
+			<!-- When Options exist (Options BT-53), they shall be described (Options Description BT-54) -->
+			<!-- Options Description (BT-54) cardinality = "?"-->
 			<xsl:comment>Options Description (BT-54)</xsl:comment>
-			<!-- Renewal maximum (BT-58) cardinality ? -->
+			<!-- Renewal maximum (BT-58) cardinality = "?"-->
 			<xsl:comment>Renewal maximum (BT-58)</xsl:comment>
-			<!-- Renewal Description (BT-57) cardinality ? -->
+			<!-- Renewal Description (BT-57) cardinality = "?"-->
 			<xsl:comment>Renewal Description (BT-57)</xsl:comment>
+			<xsl:call-template name="contract-extension"/>	
+			
+			
+			
+			
 		</cac:ProcurementProject>
 	</xsl:template>
 
@@ -919,7 +932,34 @@ none None
 	<!--Other means might be completed "UNLIMITED"|"UNKNOWN"-->
 	<!--<cbc:DescriptionCode listName="timeperiod">UNLIMITED</cbc:DescriptionCode>-->
 	
-	
+	<xsl:template name="contract-extension">
+		<xsl:if test="($eforms-notice-subtype = ('15', '17', '18') or (ted:OPTIONS) or (ted:RENEWAL))">
+			<cac:ContractExtension>	
+				<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:OPTIONS_DESCR/ted:P, ' '))"/>
+				<xsl:if test="$text ne ''">		
+					<cbc:OptionsDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:OptionsDescription>
+					<!--<cbc:OptionsDescription languageID="FRA">L'acheteur se réserve le droit ...</cbc:OptionsDescription>-->
+				</xsl:if>
+				<!--cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)-->
+				<xsl:if test="$eforms-notice-subtype = ('15', '17', '18')">
+					<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+				</xsl:if>
+				<xsl:if test="(ted:RENEWAL)">
+					<cac:Renewal>
+						<cac:Period>
+							<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:RENEWAL_DESCR/ted:P, ' '))"/>
+							<!--<xsl:value-of select="functx:path-to-node(.)"/>-->
+							<xsl:if test="$text ne ''">		
+								<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+								<!--<cbc:Description languageID="FRA">L'acheteur se réserve le droit ...</cbc:Description>-->
+							</xsl:if>					
+						</cac:Period>
+					</cac:Renewal>
+				</xsl:if>
+			</cac:ContractExtension>
+		</xsl:if>
+	</xsl:template>	
+		
 	<!-- Lot Procurement Process templates  end here -->
 
 

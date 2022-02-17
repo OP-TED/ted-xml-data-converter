@@ -407,6 +407,13 @@
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract will be renewed in the event of delays occasioned by exogenous factors.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

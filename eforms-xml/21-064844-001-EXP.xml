@@ -610,11 +610,19 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <cac:PlannedPeriod>
-            <cbc:DurationMeasure unitCode="$duration-type">48</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cbc:OptionsDescription languageID="NLD">Zie beschrijving verlengingen.</cbc:OptionsDescription>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="NLD">Er wordt een raamovereenkomst afgesloten voor een periode van twee jaar met een optie tot eenzijdige verlenging door de opdrachtgever van twee keer een jaar.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

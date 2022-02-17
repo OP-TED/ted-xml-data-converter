@@ -398,11 +398,14 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <cac:PlannedPeriod>
-            <cbc:DurationMeasure unitCode="$duration-type">60</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot>
@@ -632,11 +635,14 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <cac:PlannedPeriod>
-            <cbc:DurationMeasure unitCode="$duration-type">60</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>
