@@ -33,13 +33,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	 
 	<xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
 	
-	<xsl:variable name="legal-basis-element" select="$ted-form-main-element/*[1]"/> <!-- the legal basis element is always the first child of the form element -->
+	<xsl:variable name="legal-basis-element" select="$ted-form-main-element/ted:LEGAL_BASIS"/>
 	
 	<doc:doc> Legal basis </doc:doc>
 	<xsl:variable name="legal-basis">
 		<xsl:choose>
-			<xsl:when test="$legal-basis-element/fn:local-name() eq 'LEGAL_BASIS_OTHER'">OTHER</xsl:when>
-			<xsl:otherwise><xsl:value-of select="$legal-basis-element/@VALUE"/></xsl:otherwise>
+			<xsl:when test="$ted-form-main-element/ted:LEGAL_BASIS"><xsl:value-of select="$ted-form-main-element/ted:LEGAL_BASIS/@VALUE"/></xsl:when>
+			<xsl:otherwise><xsl:text>OTHER</xsl:text></xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
 	
