@@ -119,6 +119,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:apply-templates select="../(ted:CA_TYPE|CA_TYPE_OTHER)"/>
 			<!-- Activity Authority (BT-10)  and Activity Entity (BT-610)-->
 			<xsl:comment>Activity Authority (BT-10) and Activity Entity (BT-610)</xsl:comment>
+			<!-- Activity Authority (BT-10)  and Activity Entity (BT-610) both are implemented as code values from a codelist -->
+			<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
+			<!-- NOTE: CA_ACTIVITY_OTHER and CA_TYPE_OTHER cannot be converted -->
 			<xsl:apply-templates select="../ted:CA_ACTIVITY"/>
 			<cac:Party>
 				<!-- Buyer Technical Identifier Reference (OPT-300) -->
