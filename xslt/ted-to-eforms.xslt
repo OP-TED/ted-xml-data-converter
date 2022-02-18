@@ -237,14 +237,14 @@ cac:ProcurementProjectLot
 	<xsl:comment> efac:Organizations here </xsl:comment>
 	<efac:Organizations>
 		<!-- there are no F##_2014 forms that do not have ADDRESS_CONTRACTING_BODY -->
-		<!-- need to investigate elements efbc:GroupLeadIndicator, efbc:AcquiringCPBIndicator, efbc:AwardingCPBIndicator here -->
-		<xsl:variable name="ismorethanonebuyer" select="$tedaddressesuniquewithid//ted-org/path[fn:contains(.,'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]"/>
+		<!-- for all TED forms except F14 and MOVE, ADDRESS_CONTRACTING_BODY_ADDITIONAL and JOINT_PROCUREMENT_INVOLVED always occur together -->
+		<xsl:variable name="isjointprocurement" select="fn:boolean(ted:CONTRACTING_BODY/ted:JOINT_PROCUREMENT_INVOLVED)"/>
 		<xsl:for-each select="$tedaddressesuniquewithid//ted-org/tedaddress">
 			<efac:Organization>
 				<!-- Organization Subrole (BT-770) : Group leader (Buyer)-->
 				<xsl:comment>Organization Subrole (BT-770) : Group leader (Buyer)</xsl:comment>
-				<!-- efbc:GroupLeadIndicator -->
-				<xsl:if test="$ismorethanonebuyer and (../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY')])">
+				<!-- efbc:GroupLeadIndicator, used for joint procurement, only on Contracting Body addresses -->
+				<xsl:if test="$isjointprocurement and (../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY')])">
 					<efbc:GroupLeadIndicator>
 						<xsl:choose>
 							<xsl:when test="../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]">false</xsl:when>
