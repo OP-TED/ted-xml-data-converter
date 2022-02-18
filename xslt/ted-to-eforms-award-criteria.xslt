@@ -135,8 +135,8 @@ max-pass Maximum number of tenders passing
 									<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
 									<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
 								</xsl:when>
-								<xsl:when test="fn:matches($text, '^[0-9]+ *%$')">
-									<xsl:variable name="number" select="fn:replace($text, '% *', '')"/>
+								<xsl:when test="fn:matches($text, '^[0-9.,]+ *%$')">
+									<xsl:variable name="number" select="fn:replace($text, ' *%', '')"/>
 									<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
 									<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
 								</xsl:when>
