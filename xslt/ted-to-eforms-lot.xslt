@@ -475,7 +475,7 @@ EINVOICING	Electronic invoicing will be accepted
 			</xsl:if>
 			<!-- Dispatch Invitation Tender (BT-130) cardinality ? Optional for subtypes PIN 7-9, CN 10-14, 16-24. Forbidden for other Notice subtypes -->
 			<xsl:comment>Dispatch Invitation Tender (BT-130)</xsl:comment>
-			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:DATE_DISPATCH_NOTICE"/>
+			<xsl:apply-templates select="../../ted:PROCEDURE/ted:DATE_DISPATCH_INVITATIONS"/>
 			<!-- Deadline Receipt Requests (BT-1311) cardinality ? Optional for subtypes PIN 7, 9; CN 16-24; Forbidden for other Notice subtypes -->
 			<xsl:comment>Deadline Receipt Requests (BT-1311)</xsl:comment>
 			
@@ -550,7 +550,7 @@ EINVOICING	Electronic invoicing will be accepted
 		<cbc:EndTime><xsl:value-of select="$endtime"/></cbc:EndTime>
 	</xsl:template>
 
-	<xsl:template match="ted:DATE_DISPATCH_NOTICE">
+	<xsl:template match="ted:DATE_DISPATCH_INVITATIONS">
 		<!-- NOTE: cbc:EndDate and cbc:EndTime should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
 		<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
 		<!-- Therfore for complete accuracy, a mapping of country codes to UTC timezone offsets is required -->
