@@ -789,7 +789,7 @@ none None
 			<xsl:apply-templates select="ted:INFO_ADD"/>
 			<!-- Estimated Value (BT-27) cardinality ? Optional for subtypes PIN 4-9, E1 and E2; CN 10-14, 16-22 and E3; CAN 29-35 and E4; E5; Forbidden for other Notice subtypes. -->
 			<xsl:comment>Estimated Value (BT-27)</xsl:comment>
-			<xsl:apply-templates select="ted:VAL_ESTIMATED_TOTAL"/>
+			<xsl:apply-templates select="ted:VAL_OBJECT"/>
 			<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 			<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 			<xsl:comment>Main Classification Code (BT-262)</xsl:comment>

@@ -83,7 +83,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
 	</xsl:template>
 	
-	<xsl:template match="ted:VAL_ESTIMATED_TOTAL">
+	<xsl:template match="ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 		<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
 		<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
 		<cac:RequestedTenderTotal>
