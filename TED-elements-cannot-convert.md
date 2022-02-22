@@ -4,8 +4,7 @@ This table lists the elements defined in the TED schemas, but whose data cannot 
 
 This table is under development.
 
-| TED Element | TED schema | Number of notices | Content format Usage | Description | Reason for inability to convert |
-| --- | --- | --- | --- | --- | --- |
+|| TED Element || TED schema || Number of notices || Content format Usage || Description || Reason for inability to convert ||
 | CA_ACTIVITY_OTHER | R.2.0.9 | 80000 | Text | Alternative to CA_ACTIVITY, containing textual description | Cannot convert text to a code |
 | CA_TYPE_OTHER | R.2.0.9 | 97000 | Text | Alternative to CA_TYPE, containing textual description | Cannot convert text to a code |
 | CRITERIA_CANDIDATE | R.2.0.9 | 11000 | Text | Objective criteria for choosing the limited number of candidates: | eForms does not record the criteria used for selecting candidates for the second stage |
