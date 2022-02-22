@@ -615,9 +615,9 @@
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
          <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <!--ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
-            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>5</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>5</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->

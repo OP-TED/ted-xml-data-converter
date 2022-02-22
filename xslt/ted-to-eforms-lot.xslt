@@ -568,9 +568,14 @@ EINVOICING	Electronic invoicing will be accepted
 	</xsl:template>
 
 	<xsl:template name="limit-candidate">
-		<xsl:if test="ted:NB_MAX_LIMIT_CANDIDATE or ted:NB_MIN_LIMIT_CANDIDATE or $eforms-notice-subtype = '16'">
+		<xsl:if test="ted:NB_MAX_LIMIT_CANDIDATE or ted:NB_MIN_LIMIT_CANDIDATE or $eforms-notice-subtype = '16' or ted:NB_ENVISAGED_CANDIDATE">
 			<cac:EconomicOperatorShortList>
 				<xsl:choose>
+					<xsl:when test="ted:NB_ENVISAGED_CANDIDATE">
+						<cbc:LimitationDescription>true</cbc:LimitationDescription>
+						<cbc:MaximumQuantity><xsl:value-of select="ted:NB_ENVISAGED_CANDIDATE"/></cbc:MaximumQuantity>
+						<!--<cbc:MinimumQuantity><xsl:value-of select="ted:NB_ENVISAGED_CANDIDATE"/></cbc:MinimumQuantity>-->
+					</xsl:when>
 					<xsl:when test="ted:NB_MAX_LIMIT_CANDIDATE">
 						<cbc:LimitationDescription>true</cbc:LimitationDescription>
 						<cbc:MaximumQuantity><xsl:value-of select="ted:NB_MAX_LIMIT_CANDIDATE"/></cbc:MaximumQuantity>
@@ -582,6 +587,9 @@ EINVOICING	Electronic invoicing will be accepted
 				<xsl:choose>
 					<xsl:when test="ted:NB_MIN_LIMIT_CANDIDATE">
 						<cbc:MinimumQuantity><xsl:value-of select="ted:NB_MIN_LIMIT_CANDIDATE"/></cbc:MinimumQuantity>
+					</xsl:when>
+					<xsl:when test="ted:NB_ENVISAGED_CANDIDATE">
+						<cbc:MinimumQuantity><xsl:value-of select="ted:NB_ENVISAGED_CANDIDATE"/></cbc:MinimumQuantity>
 					</xsl:when>
 					<xsl:when test="$eforms-notice-subtype = '16'">
 						<xsl:comment>ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.</xsl:comment>

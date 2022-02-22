@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>www.giessen.de</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Magistrat der Universitätsstadt Gießen - Hochbauamt -</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Berliner Platz 1</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Gießen</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>35390</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Contact Point (BT-502)-->
+                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+49 6413061420</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+49 6413062661</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>submissionsstelle@giessen.de</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Vergabekammer des Landes Hessen beim Regierungspräsidium Darmstadt</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Dienstgebäude: Wilhelminenstraße 1-3; Fristenbriefkasten: Luisenplatz 2</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Darmstadt</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>64283</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Contact Point (BT-502)-->
+                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+49 6151125816 / +49 6151126834</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication here -->
+               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <!-- cac:ContractingParty here -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>ra</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms here -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess here -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Lots All Required (BT-763)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject here -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="DEU">Fachplanungsleistung Heizung/Lüftung/Klimatisierung/Sanitär für Neukonzeption des Oberhessischen Museums Gießen, Georg-Schlosser-Straße 2 (LH), Kirchenplatz 6 (WH), 35390 Gießen</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="DEU">Das Oberhessische Museum Gießen präsentiert an den drei Standorten Altes Schloss (AS), Leib’sches Haus (LH) und Wallenfels’sches Haus (WH) (alle Kulturdenkmäler) eine umfassende Sammlung. Der bereits abgeschlossene Realisierungswettbewerb diente unter Berücksichtigung eines neuen Raumprogrammes und des Denkmalschutzes u. a. der Umsetzung baulicher Maßnahmen zur Barrierefreiheit und zur Einhaltung des Brandschutzes. Gegenstand dieses VgV-Verfahrens sind hinsichtlich der Fachplanerleistungen HLS die LPH 1 bis 4, d. h. die Grundlagenermittlung, die Vorplanung, die Entwurfs- und (sofern und soweit erforderlich) die Genehmigungsplanung. Eine Bauantragserstellung ist erforderlich. Weiterhin sind die Durchführung der LPH 5 bis 9 für die Gesamtmaßnahme, d. h. die Ausführungsplanung, die Vorbereitung und die Mitwirkung bei der Vergabe, die Objektüberwachung und die Objektbetreuung und Dokumentation Bestandteil der Fachplanerleistung.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <!--Estimated Value (BT-27)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Main Classification Code (BT-262)-->
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="DEU">Eignungskriterien gemäß Auftragsunterlagen</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.subreport.de/E79877888</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.subreport.de/E79877888</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="DAY">112</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="DEU">Ergeht eine Mitteilung des Auftraggebers, der Rüge nicht abhelfen zu wollen, kann der Bieter wegen Nichtbeachtung der Vergabevorschriften ein Nachprüfungsverfahren nur innerhalb von 15 Kalendertagen nach Eingang vor der Vergabekammer beantragen. Nach Ablauf der Frist ist der Antrag unzulässig. (§ 160 Abs. 3 Nr. 4 GWB)</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>DEU</cbc:ID>
+         </cac:Language>
+         <!--Electronic Ordering (BT-92)-->
+         <!--Electronic Payment (BT-93)-->
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2021-08-10+01:00</cbc:EndDate>
+            <cbc:EndTime>10:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2021-08-27+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>5</cbc:MaximumQuantity>
+            <!--ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="DEU">Fachplanungsleistung Heizung/Lüftung/Klimatisierung/Sanitär für Neukonzeption des Oberhessischen Museums Gießen, Georg-Schlosser-Straße 2 (LH), Kirchenplatz 6 (WH), 35390 Gießen</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="DEU">Die Universitätsstadt Gießen plant die Neukonzeption des Oberhessischen Museums. Gegenstand des Auftrags ist die Sanierung und der Umbau des Wallenfels´schen und Leib´schen Hauses. Der Fachplaner HLS muss unter Berücksichtigung der denkmalpflegerischen Aspekte (s. o.) den Entwurf in technischer Hinsicht in den beiden Bestandsgebäuden sowie dem neu hinzuzufügenden Zwischenbau planen und umsetzen. Wichtig sind hierbei insbesondere eine große Erfahrung mit Instandsetzungen und Bauen im Bestand im Allgemeinen, mit museumstechnischer Ausstattung und den speziellen Anforderungen eines Museums an die Klimatisierung im Besonderen. Die bisher vorhandenen Anlagen, Leitungen etc. werden vollständig bis zum Hausanschluss entfernt. Gegenstand dieses VgV-Verfahrens ist hinsichtlich der Fachplanerleistungen Heizung/Lüftung/Sanitär/Klimatisierung (Anlagengruppen 1 bis 3 und 8 + KG 480) die Durchführung der LPH 1-4 und 5 bis 9, für die Gesamtmaßnahme, d.h. die Grundlagenermittlung, die Vorplanung, die Entwurfs- und (sofern und soweit erforderlich) die Genehmigungsplanung zu erbringen, sowie die Ausführungsplanung, die Vorbereitung und die Mitwirkung bei der Vergabe, die Objektüberwachung und ggf. die Objektbetreuung und Dokumentation.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71240000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cac:AddressLine>
+                  <cbc:Line>Gießen</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">36</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>
