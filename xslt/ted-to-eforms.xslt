@@ -436,7 +436,7 @@ cac:ProcurementProjectLot
 		<!-- Additional Classification Code (BT-263) cardinality * No equivalent element in TED XML at Procedure level -->
 		<xsl:comment>Additional Classification Code (BT-263)</xsl:comment>
 		<!-- Place of Performance (*) -> RealizedLocation No equivalent element in TED XML at Procedure level -->
-		<!-- No location elements exist in TED F02 schema at Procedure level. Question: if NO_LOT_DIVISION, should we copy the location details from the single Lot in OBJECT_DESCR? -->
+		<!-- No location elements exist in TED F02 schema at Procedure level. TBD: Question: if NO_LOT_DIVISION, should we copy the location details from the single Lot in OBJECT_DESCR? -->
 			<!-- Place of Performance Additional Information (BT-728) -->
 			<xsl:comment>Place of Performance Additional Information (BT-728)</xsl:comment>
 			<!-- Place Performance City (BT-5131) -->

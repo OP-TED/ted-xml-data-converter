@@ -45,6 +45,13 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<cbc:IdentificationCode><xsl:value-of select="@VALUE"/></cbc:IdentificationCode>
 		</cac:Country>
 	</xsl:template>
+
+	<xsl:template match="ted:NATIONALID">
+		<cac:PartyLegalEntity>
+            <cbc:CompanyID><xsl:apply-templates/></cbc:CompanyID>
+        </cac:PartyLegalEntity>
+    </xsl:template>
+
 	
 	<xsl:template match="ted:PHONE">
 		<cbc:Telephone><xsl:apply-templates/></cbc:Telephone>

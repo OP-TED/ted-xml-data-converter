@@ -51,11 +51,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- In TED, Selection Criteria are specified by the LEFTI element, at Procedure level. There are no Selection Criteria specified at Lot level. -->
 			<!--            The different types of Selection Criteria are indicated by different elements within the LEFTI element -->
 			<!-- PARTICULAR_PROFESSION always has @CTYPE set to "SERVICES". It is most often accompanied by REFERENCE_TO_LAW which contains selection requirements for service providers -->
+			<!-- All Notices (except F12) with PARTICULAR_PROFESSION also have <TYPE_CONTRACT CTYPE="SERVICES"/> -->
 			<!-- Selection Criteria information is repeatable -->
 			<!-- Clarifications requested for documentation of Selection Criteria in TEDEFO-548 -->
 			
 			<!-- the empty TED elements ECONOMIC_CRITERIA_DOC and TECHNICAL_CRITERIA_DOC indicate that the economic/technical criteria are described in the procurement documents. -->
-			<!-- there is no equivalent in eForms. Need to determine if/how to map this element -->
+			<!-- there are no equivalents in eForms. So these elements cannot be converted -->
 			
 			<!-- Selection Criteria Type (BT-747), Selection Criteria Name (BT-749), Selection Criteria Description (BT-750), Selection Criteria Used (BT-748) -->
 			<xsl:apply-templates select="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL)"/>
@@ -250,18 +251,20 @@ RESERVED_ORGANISATIONS_SERVICE_MISSION	Participation in the procedure is reserve
 		<!-- Reserved Participation (BT-71) is Mandatory for notice subtypes 7-9 (PIN) and 10-22 (CN) -->
 		<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
 		<!-- reserved-procurement code res-pub-ser is RESERVED_ORGANISATIONS_SERVICE_MISSION in TED XML, used only in F21 -->
-		<cac:TendererQualificationRequest>
-			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">
-					<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<cac:SpecificTendererRequirement>
-						<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-					</cac:SpecificTendererRequirement>
-				</xsl:otherwise>
-			</xsl:choose>
-		</cac:TendererQualificationRequest>
+		<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)">
+			<cac:TendererQualificationRequest>
+				<xsl:choose>
+					<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">
+						<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<cac:SpecificTendererRequirement>
+							<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+						</cac:SpecificTendererRequirement>
+					</xsl:otherwise>
+				</xsl:choose>
+			</cac:TendererQualificationRequest>
+		</xsl:if>
 	</xsl:template>
 	
 	<xsl:template match="ted:RESTRICTED_SHELTERED_WORKSHOP">
@@ -279,19 +282,23 @@ RESERVED_ORGANISATIONS_SERVICE_MISSION	Participation in the procedure is reserve
 <!-- 
 TED elements
 RESTRICTED_SHELTERED_PROGRAM	The execution of the contract/concession is restricted to the framework of sheltered employment programmes
+PARTICULAR_PROFESSION	Execution of the service is reserved to a particular profession
+REFERENCE_TO_LAW	There is no equivalent in eForms
 -->
 	<xsl:template name="reserved-execution">
 		<!-- Reserved Execution (BT-736) is Mandatory for notice subtypes 7-9 (PIN) and 10-22 (CN) -->
 		<xsl:comment>Reserved Execution (BT-736)</xsl:comment>
-		<xsl:variable name="is-reserved-execution">
-			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/ted:RESTRICTED_SHELTERED_PROGRAM)">true</xsl:when>
-				<xsl:otherwise>false</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		<cac:ContractExecutionRequirement>
-			<cbc:ExecutionRequirementCode listName="reserved-execution"><xsl:value-of select="$is-reserved-execution"/></cbc:ExecutionRequirementCode>
-		</cac:ContractExecutionRequirement>
+		<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION)">
+			<xsl:variable name="is-reserved-execution">
+				<xsl:choose>
+					<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">true</xsl:when>
+					<xsl:otherwise>false</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution"><xsl:value-of select="$is-reserved-execution"/></cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+		</xsl:if>
 	</xsl:template>
 
 <!--
@@ -690,6 +697,7 @@ EINVOICING	Electronic invoicing will be accepted
 					<cbc:MaximumOperatorQuantity><xsl:value-of select="ted:NB_PARTICIPANTS"/></cbc:MaximumOperatorQuantity>
 				</xsl:when>
 				<xsl:otherwise>
+					<!-- TED element SEVERAL_OPERATORS is present -->
 					<xsl:comment>ERROR: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113)</xsl:comment>
 				</xsl:otherwise>
 			</xsl:choose>

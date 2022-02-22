@@ -20,6 +20,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</xsl:if>
 	</xsl:template>
 
+	<!-- NO_LOT_DIVISION does not need to be converted, as it implies no need for cac:LotDistribution -->
 	<xsl:template match="ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]">
 		<!-- LOT_DIVISION is a child only of OBJECT_CONTRACT -->
 		<!-- LOT_DIVISION has children: LOT_ALL LOT_COMBINING_CONTRACT_RIGHT LOT_MAX_NUMBER LOT_MAX_ONE_TENDERER LOT_ONE_ONLY -->
