@@ -33,8 +33,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	 
 	<xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
 	
-	<xsl:variable name="legal-basis-element" select="$ted-form-main-element/ted:LEGAL_BASIS"/>
-	
 	<doc:doc> Legal basis </doc:doc>
 	<xsl:variable name="legal-basis">
 		<xsl:choose>
@@ -42,8 +40,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:otherwise><xsl:text>OTHER</xsl:text></xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	
-	<xsl:variable name="legal-basis-other-text" select="if ($legal-basis eq 'OTHER') then $legal-basis-element/fn:string(P) else ''"/>
 	
 	<doc:doc> Form Types </doc:doc>
 	<!-- TODO draft, needs development -->
