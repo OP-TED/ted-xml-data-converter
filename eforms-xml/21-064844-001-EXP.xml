@@ -41,6 +41,10 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>262273306</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+31 628532670</cbc:Telephone>
@@ -75,6 +79,10 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>372061297</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+31 235225555</cbc:Telephone>
@@ -110,6 +118,10 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>482056380</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+31 14023</cbc:Telephone>
@@ -141,6 +153,7 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>info@tenderned.nl</cbc:ElectronicMail>
@@ -168,6 +181,7 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+31 238884444</cbc:Telephone>
@@ -195,6 +209,7 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>info@tenderned.nl</cbc:ElectronicMail>
@@ -519,9 +534,6 @@
             <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
-         <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2021-02-04+01:00</cbc:StartDate>
-         </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
