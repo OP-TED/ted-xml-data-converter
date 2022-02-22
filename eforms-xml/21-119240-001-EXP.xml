@@ -316,7 +316,7 @@
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2021-03-04+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-06-04+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
@@ -326,6 +326,11 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>4</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>4</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -553,7 +558,7 @@
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2021-03-04+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-06-04+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
@@ -563,6 +568,11 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>4</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>4</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

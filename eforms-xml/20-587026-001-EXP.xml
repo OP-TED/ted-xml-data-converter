@@ -604,7 +604,7 @@
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2020-11-20+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-01-15+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
@@ -615,9 +615,9 @@
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
          <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <!--ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
-            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>5</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>5</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->

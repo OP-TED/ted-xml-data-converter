@@ -528,8 +528,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.08 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.08</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -543,8 +543,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.08 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.08</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -558,8 +558,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>9.94 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>9.94</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -573,8 +573,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>9.94 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>9.94</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -588,8 +588,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>9.94 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>9.94</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -603,8 +603,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.01 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.01</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -618,8 +618,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.01 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.01</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -634,7 +634,7 @@
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
                                  <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>30 </efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -681,9 +681,6 @@
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <!--Dispatch Invitation Tender (BT-130)-->
-         <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2021-01-01+01:00</cbc:StartDate>
-         </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
@@ -819,8 +816,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.08 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.08</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -834,8 +831,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.08 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.08</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -849,8 +846,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>9.94 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>9.94</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -864,8 +861,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>9.94 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>9.94</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -879,8 +876,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>9.94 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>9.94</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -894,8 +891,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.01 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.01</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -909,8 +906,8 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10.01 %</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10.01</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -925,7 +922,7 @@
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
                                  <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>30 </efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -972,9 +969,6 @@
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <!--Dispatch Invitation Tender (BT-130)-->
-         <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2021-01-01+01:00</cbc:StartDate>
-         </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->

@@ -272,7 +272,7 @@
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
                                  <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>70 </efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -287,7 +287,7 @@
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter>
                                  <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>30 </efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -352,9 +352,6 @@
             <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
-         <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2020-04-01+01:00</cbc:StartDate>
-         </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
