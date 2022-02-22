@@ -215,6 +215,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:comment>Organization Name (BT-500)</xsl:comment>
 		<xsl:apply-templates select="ted:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
+		<!-- Organization Identifier (BT-501) Optional for all subtypes -->
+		<xsl:comment>Organization Identifier (BT-501)</xsl:comment>
+		<xsl:apply-templates select="ted:NATIONALID"/>
 		<xsl:call-template name="contact"/>
 
 	<!--
