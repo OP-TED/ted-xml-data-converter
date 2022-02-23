@@ -52,7 +52,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
         </cac:PartyLegalEntity>
     </xsl:template>
 
-	
+	<xsl:template match="ted:CONTACT_POINT">
+		<cbc:Name><xsl:apply-templates/></cbc:Name>
+	</xsl:template>
+
 	<xsl:template match="ted:PHONE">
 		<cbc:Telephone><xsl:apply-templates/></cbc:Telephone>
 	</xsl:template>

@@ -253,10 +253,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:template>
 	
 	<xsl:template name="contact">
-		<!-- Organization Contact Point (BT-502) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Organization Contact Point (BT-502)</xsl:comment>
-		<xsl:if test="ted:PHONE|ted:FAX|ted:E_MAIL">
+		<xsl:if test="ted:PHONE|ted:FAX|ted:E_MAIL|ted:CONTACT_POINT">
 			<cac:Contact>
+				<!-- Organization Contact Point (BT-502) cardinality ? -->
+				<xsl:comment>Organization Contact Point (BT-502)</xsl:comment>
+				<xsl:apply-templates select="ted:CONTACT_POINT"/>
 				<!-- Organization Contact Telephone Number (BT-503) cardinality ? -->
 				<xsl:comment>Organization Contact Telephone Number (BT-503)</xsl:comment>
 				<xsl:apply-templates select="ted:PHONE"/>
