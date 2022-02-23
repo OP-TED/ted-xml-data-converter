@@ -39,8 +39,9 @@
                               <cbc:IdentificationCode>DE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+49 9633890</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+49 963389299</cbc:Telefax>
@@ -67,6 +68,7 @@
                               <cbc:IdentificationCode>DE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -92,7 +94,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>

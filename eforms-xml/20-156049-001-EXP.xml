@@ -41,8 +41,14 @@
                               <cbc:IdentificationCode>HU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>EKRSZ_46282392</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Módos István</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+36 12390420</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+36 12390420</cbc:Telefax>
@@ -76,8 +82,14 @@
                               <cbc:IdentificationCode>HU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>EKRSZ_38488450</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Sinka Imre</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+36 66218344</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+36 66218344</cbc:Telefax>
@@ -111,8 +123,14 @@
                               <cbc:IdentificationCode>HU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>EKRSZ_62388104</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Valánszki Miklós Róbert</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+36 66483100</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+36 66484100</cbc:Telefax>
@@ -146,8 +164,14 @@
                               <cbc:IdentificationCode>HU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>EKRSZ_10934474</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Siklósi István</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+36 66515515</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+36 66515503</cbc:Telefax>
@@ -177,8 +201,9 @@
                               <cbc:IdentificationCode>HU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+36 18828592</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+36 18828593</cbc:Telefax>
@@ -209,7 +234,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2020-03-27+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>

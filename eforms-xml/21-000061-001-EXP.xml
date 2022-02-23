@@ -40,8 +40,9 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>James.mayer@highwaysengland.co.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
@@ -68,6 +69,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -93,6 +95,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -118,6 +121,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -143,6 +147,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -168,6 +173,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -193,6 +199,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -218,6 +225,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -243,6 +251,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -268,6 +277,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -293,6 +303,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -318,6 +329,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -343,6 +355,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -364,6 +377,7 @@
                               <cbc:IdentificationCode>UK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -389,7 +403,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-01-01+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
@@ -498,11 +512,6 @@
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
-         <cac:TendererQualificationRequest>
-            <cac:SpecificTendererRequirement>
-               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-            </cac:SpecificTendererRequirement>
-         </cac:TendererQualificationRequest>
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -512,9 +521,6 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <!--Reserved Execution (BT-736)-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
-         </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <!--Electronic Invoicing (BT-743)-->
          <!--Terms Performance (BT-70)-->
@@ -786,11 +792,6 @@
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
-         <cac:TendererQualificationRequest>
-            <cac:SpecificTendererRequirement>
-               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-            </cac:SpecificTendererRequirement>
-         </cac:TendererQualificationRequest>
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -800,9 +801,6 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <!--Reserved Execution (BT-736)-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
-         </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <!--Electronic Invoicing (BT-743)-->
          <!--Terms Performance (BT-70)-->

@@ -40,8 +40,14 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>09215846</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>René Hartgers</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+31 317-480095</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <!--Organization Contact Email Address (BT-506)-->
@@ -70,8 +76,9 @@
                               <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+31 31748081</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <!--Organization Contact Email Address (BT-506)-->
@@ -101,7 +108,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2020-07-30+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
@@ -289,7 +296,6 @@
          <!--Electronic Payment (BT-93)-->
          <cac:PostAwardProcess>
             <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
-            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
@@ -378,6 +384,9 @@
          <!--Suitable for SMEs (BT-726)-->
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">15000000.00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
          <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>

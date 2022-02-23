@@ -39,8 +39,14 @@
                               <cbc:IdentificationCode>NO</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>964338531</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Ståle Otto Hopland</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+47 05556</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <!--Organization Contact Email Address (BT-506)-->
@@ -69,6 +75,7 @@
                               <cbc:IdentificationCode>NO</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
@@ -94,7 +101,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-03-04+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>

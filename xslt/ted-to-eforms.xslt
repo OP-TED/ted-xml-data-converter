@@ -185,8 +185,10 @@ cac:ProcurementProjectLot
 	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
 	<!-- Notice Dispatch Date (BT-05) -->
 	<xsl:comment>Notice Dispatch Date (BT-05)</xsl:comment>
-	<!-- TBD: hard-coded for now -->
-	<cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+	<!-- TBD: hard-coded for now, done -->
+	<!--<cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>-->
+	<cbc:IssueDate><xsl:value-of select="ted:COMPLEMENTARY_INFO/ted:DATE_DISPATCH_NOTICE"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
 	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
 	<!-- Notice Version (BT-757) -->
 	<xsl:comment>Notice Version (BT-757)</xsl:comment>
