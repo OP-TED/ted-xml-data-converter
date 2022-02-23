@@ -156,7 +156,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
 	</xsl:template>
 	
-	<xsl:template match="ted:EINVOICING">
+	<xsl:template match="ted:EPAYMENT">
 		<cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
 	</xsl:template>
 

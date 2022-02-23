@@ -132,7 +132,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:comment>Subcontracting Obligation Maximum (BT-729)</xsl:comment>
 			<!-- Subcontracting Obligation Minimum (BT-64) cardinality ? Only relevant for D81 Defense or OTHER -->
 			<xsl:comment>Subcontracting Obligation Minimum (BT-64)</xsl:comment>
-			<!-- Reserved Execution (BT-736) cardinality 1 Mandatory in eForms Contract Notice -->
+			<!-- Reserved Execution (BT-736) cardinality ? Mandatory in eForms Contract Notice Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6, E2, E3, and CM subtypes 38-40; Forbidden for all other Notice subtypes -->
 			<xsl:comment>Reserved Execution (BT-736)</xsl:comment>
 			<xsl:call-template name="reserved-execution"/>
 			<!-- Electronic Invoicing (BT-743) cardinality ? Mandatory for eForms Contract Notice subtype 16 -->
@@ -393,9 +393,9 @@ EINVOICING	Electronic invoicing will be accepted
 	</xsl:template>
 
 	<xsl:template name="post-award-processing">
-		<xsl:if test="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EINVOICING) or $eforms-notice-subtype eq '16'">
+		<xsl:if test="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EPAYMENT) or $eforms-notice-subtype eq '16'">
 			<cac:PostAwardProcess>
-				<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EINVOICING)"/>
+				<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EPAYMENT)"/>
 			</cac:PostAwardProcess>
 		</xsl:if>
 	</xsl:template>
