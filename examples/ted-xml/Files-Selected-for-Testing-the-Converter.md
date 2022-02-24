@@ -14,8 +14,10 @@ This table lists the TED XML files chosen to test the Converter, and the reasons
 | 20-242009-001-EXP.xml | F02_2014 | CN | Covers 25 other elements, 1 Lot, includes translations |
 | 21-013188-001-EXP.xml | F02_2014 | CN | Covers 11 other elements, 1 Lot |
 | 20-382921-001-EXP.xml | F02_2014 | CN | Covers 7 other elements, 1 Lot |
+| 20-259392-001-EXP.xml | F02_2014 | CN | LOT_MAX_NUMBER = 2 and 4 Lots |
+| 20-156925-001-EXP.xml | F02_2014 | CN | LOT_ONE_ONLY and 4 Lots |
 
-There are 14 elements in TED not covered by the above four files:
+There are 14 elements in TED not covered by the first four files:
 ACCELERATED_PROC
 AC_COST
 CPV_SUPPLEMENTARY_CODE
@@ -30,3 +32,5 @@ PT_COMPETITIVE_DIALOGUE
 PT_INNOVATION_PARTNERSHIP
 RESTRICTED_SHELTERED_PROGRAM
 RESTRICTED_SHELTERED_WORKSHOP
+
+In TEDXDC-29, Lamya said that of the above list of elements, most can be added to one or more of the first four files in the list. The two that can't are: LOT_MAX_NUMBER and LOT_ONE_ONLY. These are covered by the last two files in the list.
