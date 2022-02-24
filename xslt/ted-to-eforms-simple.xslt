@@ -89,6 +89,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	
 	
 	
+	<xsl:template match="ted:REFERENCE_NUMBER">
+		<cbc:ID schemeName="InternalID"><xsl:apply-templates/></cbc:ID>
+	</xsl:template>
+	
 	<xsl:template match="ted:LOT_MAX_ONE_TENDERER">
 		<cbc:MaximumLotsAwardedNumeric><xsl:apply-templates/></cbc:MaximumLotsAwardedNumeric>
 	</xsl:template>

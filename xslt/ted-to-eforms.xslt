@@ -413,8 +413,9 @@ cac:ProcurementProjectLot
 	<xsl:comment> cac:ProcurementProject here </xsl:comment>
 	<cac:ProcurementProject>
 		<!-- A limited number of BTs are specified for procurement project at root level -->
-		<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
+		<!-- Internal Identifier (BT-22) cardinality 1 REFERENCE_NUMBER -->
 		<xsl:comment>Internal Identifier (BT-22)</xsl:comment>
+		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:REFERENCE_NUMBER"/>
 		<cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
 		<!-- Title (BT-21) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:comment>Title (BT-21)</xsl:comment>
