@@ -39,8 +39,16 @@
                               <cbc:IdentificationCode>CZ</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>00064203</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Ing. Aleš Mudruňka</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>verejne.zakazky@fnmotol.cz</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
@@ -66,8 +74,9 @@
                               <cbc:IdentificationCode>CZ</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
                         <!--Organization Contact Point (BT-502)-->
-                        <cac:Contact><!--Organization Contact Telephone Number (BT-503)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+420 542167111</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <cbc:Telefax>+420 542167112</cbc:Telefax>
@@ -98,7 +107,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-05+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
@@ -375,6 +384,9 @@
          <!--Suitable for SMEs (BT-726)-->
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="CZK">60730111.73</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
          <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
