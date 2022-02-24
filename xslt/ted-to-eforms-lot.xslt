@@ -139,8 +139,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:comment>Electronic Invoicing (BT-743)</xsl:comment>
 			<xsl:call-template name="e-invoicing"/>
 			<!-- Terms Performance (BT-70) cardinality ? Mandatory for eForms Contract Notice subtypes 17 (F05), 18 and 22 PERFORMANCE_CONDITIONS -->
-			<xsl:comment>Terms Performance (BT-70)</xsl:comment>
 			<xsl:call-template name="terms-performance"/>
+			
+			<!-- Submission Electronic Catalog (BT-764) cardinality ? Optional for Lots, Forbiden for eForms Contract Notice subtypes 1-6, E2, 14-15, 19, 23-40, and E5; Optional for 7-13, 18, E3, 20-22, Mandatory for 16-17, 18 and 22. The equivalent TED XML is ECATALOGUE_REQUIRED -->
+			<xsl:call-template name="submission-electronic-catalog"/>			
+			
 			<!-- Submission Electronic Signature (BT-744) cardinality ? No equivalent element in TED XML -->
 			<xsl:comment>Submission Electronic Signature (BT-744)</xsl:comment>
 			<xsl:call-template name="awarding-terms"/>
@@ -338,6 +341,30 @@ EINVOICING	Electronic invoicing will be accepted
 		</xsl:if>
 	</xsl:template>
 	
+	<xsl:template name="submission-electronic-catalog">
+		<xsl:comment>Submission Electronic Catalog (BT-764)</xsl:comment>
+		<!-- Submission Electronic Catalog (BT-764) cardinality ? Optional for Lots, Forbiden for eForms Contract Notice subtypes 1-6, E2, 14-15, 19, 23-40, and E5; Optional for 7-13, 18, E3, 20-22, Mandatory for 16-17, 18 and 22. The equivalent TED XML is ECATALOGUE_REQUIRED -->
+	
+				
+		<xsl:choose>
+			<xsl:when test="ted:ECATALOGUE_REQUIRED">
+				<cac:ContractExecutionRequirement>
+					<cbc:ExecutionRequirementCode listName="ecatalog-submission">
+						<xsl:value-of select="ted:ECATALOGUE_REQUIRED"/>
+					</cbc:ExecutionRequirementCode>
+				</cac:ContractExecutionRequirement>
+			</xsl:when>
+			<xsl:when test="$eforms-notice-subtype = ('16','17', '18', '22')">
+				
+				<cac:ContractExecutionRequirement>
+					<cbc:ExecutionRequirementCode listName="ecatalog-submission"><xsl:comment>ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.</xsl:comment></cbc:ExecutionRequirementCode>
+				</cac:ContractExecutionRequirement>
+				
+			</xsl:when>
+		</xsl:choose>
+				
+	</xsl:template>	
+			
 	<xsl:template name="address-participation-url-participation">
 		<!-- if either ADDRESS_PARTICIPATION or URL_PARTICIPATION is present, cac:TenderRecipientParty must be used. -->
 		<!-- if ADDRESS_PARTICIPATION_IDEM is present alone, cac:TenderRecipientParty is not output -->
