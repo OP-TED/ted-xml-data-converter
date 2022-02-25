@@ -133,10 +133,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Subcontracting Obligation Minimum (BT-64) cardinality ? Only relevant for D81 Defense or OTHER -->
 			<xsl:comment>Subcontracting Obligation Minimum (BT-64)</xsl:comment>
 			<!-- Reserved Execution (BT-736) cardinality ? Mandatory in eForms Contract Notice Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6, E2, E3, and CM subtypes 38-40; Forbidden for all other Notice subtypes -->
-			<xsl:comment>Reserved Execution (BT-736)</xsl:comment>
 			<xsl:call-template name="reserved-execution"/>
 			<!-- Electronic Invoicing (BT-743) cardinality ? Mandatory for eForms Contract Notice subtype 16 -->
-			<xsl:comment>Electronic Invoicing (BT-743)</xsl:comment>
 			<xsl:call-template name="e-invoicing"/>
 			<!-- Terms Performance (BT-70) cardinality ? Mandatory for eForms Contract Notice subtypes 17 (F05), 18 and 22 PERFORMANCE_CONDITIONS -->
 			<xsl:call-template name="terms-performance"/>
@@ -332,36 +330,42 @@ EINVOICING	Electronic invoicing will be accepted
 		<!-- Terms Performance (BT-70) is Mandatory for eForms Contract Notice subtypes 17 (F05), 18 (CONTRACT_DEFENCE) and 22 (CONTRACT_CONCESSIONAIRE_DEFENCE) -->
 		<xsl:comment>Terms Performance (BT-70)</xsl:comment>
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:LEFTI/ted:PERFORMANCE_CONDITIONS/ted:P, ' '))"/>
-		<xsl:if test="$eforms-notice-subtype = ('17', '18', '22') or $text ne ''">
-			<xsl:variable name="text-or-default" select="if ($text ne '') then $text else 'PERFORMANCE CONDITIONS NOT FOUND'"/>
-			<cac:ContractExecutionRequirement>
+		<xsl:choose>
+			<xsl:when test="$text ne ''" >
+				<cac:ContractExecutionRequirement>
 				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text-or-default"/></cbc:Description>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 			</cac:ContractExecutionRequirement>
-		</xsl:if>
+			</xsl:when>
+			<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
+				<cac:ContractExecutionRequirement>
+					<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+						<cbc:Description languageID="{$eforms-first-language}">
+							<xsl:comment>ERROR: Terms Performance (BT-70) is Mandatory for eForms subtypes 17, 18 and 22, but no PERFORMANCE_CONDITIONS was found in TED XML.</xsl:comment>
+						</cbc:Description>
+				</cac:ContractExecutionRequirement>
+			</xsl:when>
+		</xsl:choose>		
 	</xsl:template>
 	
 	<xsl:template name="submission-electronic-catalog">
 		<xsl:comment>Submission Electronic Catalog (BT-764)</xsl:comment>
-		<!-- Submission Electronic Catalog (BT-764) cardinality ? Optional for Lots, Forbiden for eForms Contract Notice subtypes 1-6, E2, 14-15, 19, 23-40, and E5; Optional for 7-13, 18, E3, 20-22, Mandatory for 16-17, 18 and 22. The equivalent TED XML is ECATALOGUE_REQUIRED -->
-	
-				
-		<xsl:choose>
-			<xsl:when test="ted:ECATALOGUE_REQUIRED">
-				<cac:ContractExecutionRequirement>
-					<cbc:ExecutionRequirementCode listName="ecatalog-submission">
-						<xsl:value-of select="ted:ECATALOGUE_REQUIRED"/>
-					</cbc:ExecutionRequirementCode>
-				</cac:ContractExecutionRequirement>
-			</xsl:when>
-			<xsl:when test="$eforms-notice-subtype = ('16','17', '18', '22')">
-				
-				<cac:ContractExecutionRequirement>
-					<cbc:ExecutionRequirementCode listName="ecatalog-submission"><xsl:comment>ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.</xsl:comment></cbc:ExecutionRequirementCode>
-				</cac:ContractExecutionRequirement>
-				
-			</xsl:when>
-		</xsl:choose>
+		<!-- Submission Electronic Catalog (BT-764) cardinality ? Optional for Lots, Forbiden for eForms Contract Notice subtypes 1-6, E2, 14-15, 19, 23-40, and E5; Optional for 7-13, 18, E3, 20-22, Mandatory for 16-17, 18 and 22. The equivalent TED XML is ECATALOGUE_REQUIRED -->		
+			<xsl:choose>
+				<xsl:when test="ted:ECATALOGUE_REQUIRED">
+					<cac:ContractExecutionRequirement>
+						<cbc:ExecutionRequirementCode listName="ecatalog-submission">
+							<xsl:text>allowed</xsl:text>
+						</cbc:ExecutionRequirementCode>
+					</cac:ContractExecutionRequirement>
+				</xsl:when>
+				<xsl:when test="$eforms-notice-subtype = ('16','17', '18', '22')">
+					<cac:ContractExecutionRequirement>
+						<cbc:ExecutionRequirementCode listName="ecatalog-submission"><xsl:comment>ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.</xsl:comment>
+						</cbc:ExecutionRequirementCode>
+					</cac:ContractExecutionRequirement>
+				</xsl:when>
+			</xsl:choose>
 				
 	</xsl:template>	
 			

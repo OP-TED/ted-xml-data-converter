@@ -329,6 +329,7 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">ENV/2020/OP/0030</cbc:ID>
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Assessment Support of Draft cap Strategic Plans with Respect to Environmental Requirements</cbc:Name>
@@ -387,11 +388,9 @@
          <!--Subcontracting Obligation Maximum (BT-729)-->
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
-         <!--Reserved Execution (BT-736)-->
-         <!--Electronic Invoicing (BT-743)-->
          <!--Electronic Invoicing (BT-743)-->
          <!--Terms Performance (BT-70)-->
-         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>

@@ -167,6 +167,7 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">UH 2021/77</cbc:ID>
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="SWE">Laboratorieinredning Hus 6 och 7 Ångström</cbc:Name>
@@ -246,11 +247,9 @@
          <!--Subcontracting Obligation Maximum (BT-729)-->
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
-         <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
-         <!--Electronic Invoicing (BT-743)-->
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
@@ -258,7 +257,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>

@@ -336,6 +336,7 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">EKR000316682020</cbc:ID>
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="HUN">Békésszentandrás-Dévaványa-Mezőberény szennyvíz</cbc:Name>
@@ -452,20 +453,21 @@
          <!--Subcontracting Obligation Maximum (BT-729)-->
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
-         <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
-         <!--Electronic Invoicing (BT-743)-->
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
-         <!--Terms Performance (BT-70)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
             <cbc:Description languageID="HUN">Késedelmi kötbér: a szerz szerinti áfa nélkül számított ellenszolgáltatás 1 %-a/nap Meghiúsulási kötbér: a szerz szerinti áfa nélkül számított ellenszolgáltatás 25 %-a Jótállás: 36 hónap. Teljesítési biztosíték: szerz. szerinti, áfa nélkül számított ellenszolgáltatás 5 %-a. Jótállási biztosíték: szerz. szerinti, áfa nélkül számított ellenszolgáltatás 5 %-a. Részletesen:ADII Előleg: max.a szerz elszám.összege 30 %-a. Előleg-visszafiz.bizt. szerz.elszám.összege 10 %-án felül, a szerz.elszám.összegének 10 %-a és az igényelt előleg különbözetére jutó összegnek megfelelő, 272/2014. (XI.5.) Kr. 118/A.§ (2a) szerint. A szerz. és a kifizetés pénzneme: HUF. Vonatkozó jogszabályok: 2007.éviCXXVII.tv, Ptk. 6:130.§ (1)-(2), Kbt. 135. § (1)-(6) bek., 322/2015.(X.30.)Kr., 272/2014. (XI.5.). szállítói finanszírozás, támogatás intenzitása: a mindenkori TSZ szerinti, Részl: AD II. kötet. Tartkeret:AK a tartalékkeret jogintézményét nem alkalmazza. AK a részszámla benyújtására lehetőséget biztosít.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"><!--ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.--></cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>

@@ -163,6 +163,7 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">2021/19782</cbc:ID>
       <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="ENG">EEA 018-2021 Development Plan Slettebakken (NEW)</cbc:Name>
@@ -258,17 +259,18 @@
          <!--Subcontracting Obligation Maximum (BT-729)-->
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
-         <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
-         <!--Electronic Invoicing (BT-743)-->
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
-         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"><!--ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.--></cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>

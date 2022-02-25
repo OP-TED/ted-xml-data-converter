@@ -505,20 +505,21 @@
          <!--Subcontracting Obligation Maximum (BT-729)-->
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
-         <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
-         <!--Electronic Invoicing (BT-743)-->
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
-         <!--Terms Performance (BT-70)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
             <cbc:Description languageID="DAN">Kontrakt punkt 7.3 - Miljø: Leverandøren skal aktivt medvirke til fortsatte forbedringer af miljø, teknologi og økonomi i forbindelse med kontrakten, herunder til at mængden af emballage mindskes mest muligt. Leverandøren skal sørge for at afhjælpe såvel miljø- som arbejdsmiljøproblemer, f.eks. med hensyn til emballagens udformning, materiale og vægt. Kontrakt punkt 22 - Socialt ansvar: Leverandøren skal i forbindelse med gennemførelsen af kontrakten respektere og overholde nationale og internationale love og regler vedrørende menneskerettigheder, arbejdstagerrettigheder, miljø og antikorruption, det vil sige: FN’s deklaration om menneskerettigheder, ILO’s deklaration om arbejdstagerrettigheder, Rio-deklarationen om miljø og udvikling, FN’s konvention mod korruption. Dette indebærer bl.a., at hverken leverandøren eller dennes eventuelle underleverandører må benytte sig af konventionsstridig børne- og voksenarbejdskraft.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"><!--ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.--></cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
