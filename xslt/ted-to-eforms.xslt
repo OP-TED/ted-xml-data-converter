@@ -272,14 +272,11 @@ cac:ProcurementProjectLot
 			</efac:Organization>
 		</xsl:for-each>
 	</efac:Organizations>
-<<<<<<< HEAD
 	<!--
 	<xsl:copy-of select="$tedaddresses"/>
 	<xsl:copy-of select="$tedaddressesunique"/>
 	<xsl:copy-of select="$tedaddressesuniquewithid"/>-->
-=======
-	<xsl:copy-of select="$tedaddressesuniquewithid"/>
->>>>>>> 9986a6a378256bcdaa51d08d57024174f0824dd4
+
 </xsl:template>
 
 <xsl:template name="publication">
