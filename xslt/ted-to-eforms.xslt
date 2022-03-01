@@ -260,7 +260,10 @@ cac:ProcurementProjectLot
 			</efac:Organization>
 		</xsl:for-each>
 	</efac:Organizations>
-	<!--<xsl:copy-of select="$tedaddressesuniquewithid"/>-->
+	<!--
+	<xsl:copy-of select="$tedaddresses"/>
+	<xsl:copy-of select="$tedaddressesunique"/>
+	<xsl:copy-of select="$tedaddressesuniquewithid"/>-->
 </xsl:template>
 
 <xsl:template name="publication">

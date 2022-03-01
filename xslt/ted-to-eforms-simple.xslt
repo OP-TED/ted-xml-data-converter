@@ -15,15 +15,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</cac:PartyName>
 	</xsl:template>
 	
-	<xsl:template match="ted:URL_GENERAL">
+	<xsl:template match="ted:URL_GENERAL|ted:URL">
 		<cbc:WebsiteURI><xsl:apply-templates/></cbc:WebsiteURI>
 	</xsl:template>
-	<!-- Need to investigate purpose and meaning of element URL_BUYER in addresses not CONTRACTING_BODY -->
-	<!--
-	<xsl:template match="ted:URL_BUYER">
-		<cbc:EndpointID><xsl:apply-templates/></cbc:EndpointID>
-	</xsl:template>
-	-->
+	
 	<xsl:template match="ted:ADDRESS">
 		<cbc:StreetName><xsl:apply-templates/></cbc:StreetName>
 	</xsl:template>

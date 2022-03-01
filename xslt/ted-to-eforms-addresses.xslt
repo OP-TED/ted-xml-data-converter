@@ -203,10 +203,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xs:element ref="n2021:NUTS"/>
 		<xs:element ref="URL_GENERAL" minOccurs="0"/>
 		<xs:element ref="URL_BUYER" minOccurs="0"/>
-	-->
+	-->	
 		<!-- Organization Internet Address (BT-505) cardinality ? -->
 		<xsl:comment>Organization Internet Address (BT-505)</xsl:comment>
-		<xsl:apply-templates select="ted:URL_GENERAL"/>
+		<xsl:apply-templates select="ted:URL_GENERAL|ted:URL"/>
 		<!-- Need to investigate purpose and meaning of element URL_BUYER in addresses not CONTRACTING_BODY -->
 		<!-- Organization Technical Identifier (OPT-200) cardinality ? -->
 		<xsl:comment>Organization Technical Identifier (OPT-200)</xsl:comment>
@@ -219,6 +219,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:comment>Organization Identifier (BT-501)</xsl:comment>
 		<xsl:apply-templates select="ted:NATIONALID"/>
 		<xsl:call-template name="contact"/>
+	
 
 	<!--
 		<xs:element ref="NATIONALID" minOccurs="0"/>
@@ -231,6 +232,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	-->
 		
 	</xsl:template>
+	
 	
 	<xsl:template name="address">
 		<cac:PostalAddress>
