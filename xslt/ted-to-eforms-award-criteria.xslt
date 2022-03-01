@@ -39,6 +39,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Award Criteria Order Justification (BT-733) cardinality ? No equivalent element in TED XML -->
 			<!-- Award Criteria Complicated (BT-543) cardinality ? No equivalent element in TED XML -->
 			
+			<!-- Award Criterion Number (BT-541) -->
 			<!-- Award Criterion Number Weight (BT-5421) cardinality ? -->
 			<!-- Award Criterion Number Fixed (BT-5422) cardinality ? -->
 			<!-- Award Criterion Number Threshold (BT-5423) cardinality ? -->
@@ -71,6 +72,8 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 	<xsl:template match="ted:AC_QUALITY">
 		<cac:SubordinateAwardingCriterion>
+			<!-- Award Criterion Number (BT-541) -->
+			<xsl:comment>Award Criterion Number (BT-541)</xsl:comment>
 			<xsl:apply-templates select="ted:AC_WEIGHTING"/>
 			<xsl:apply-templates select="ted:AC_CRITERION"/>
 		</cac:SubordinateAwardingCriterion>
@@ -91,11 +94,15 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 	<xsl:template match="ted:AC_PROCUREMENT_DOC">
 		<cac:SubordinateAwardingCriterion>
+			<!-- Award Criterion Description (BT-540) -->
+			<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
 			<cbc:Description languageID="{$eforms-first-language}"><xsl:text>Price is not the only award criterion and all criteria are stated only in the procurement documents.</xsl:text></cbc:Description>
 		</cac:SubordinateAwardingCriterion>
 	</xsl:template>
 	
 	<xsl:template match="ted:AC_CRITERION">
+		<!-- Award Criterion Description (BT-540) -->
+		<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
 		<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Description>
 	</xsl:template>
 <!--
@@ -125,6 +132,10 @@ max-pass Maximum number of tenders passing
 				<ext:ExtensionContent>
 					<efext:EformsExtension>
 						<efac:AwardCriterionParameter>
+							<!-- Award Criterion Number Weight (BT-5421) -->
+							<xsl:comment>Award Criterion Number Weight (BT-5421)</xsl:comment>
+							<!-- Award Criterion Number (BT-541) -->
+							<xsl:comment>Award Criterion Number (BT-541)</xsl:comment>
 							<xsl:choose>
 								<xsl:when test="matches($text, '^[0-9]+$')">
 									<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>

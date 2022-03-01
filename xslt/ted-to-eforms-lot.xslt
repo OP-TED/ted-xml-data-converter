@@ -223,7 +223,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 				</xsl:otherwise>
 			</xsl:choose>
 			<!-- Documents URL (BT-15) cardinality ?, Documents Restricted URL (BT-615) cardinality ? -->
-			<xsl:comment>Documents URL (BT-15), Documents Restricted URL (BT-615)</xsl:comment>
+			<xsl:comment>Documents URL (BT-15) or Documents Restricted URL (BT-615)</xsl:comment>
 			<xsl:apply-templates select="following-sibling::ted:URL_DOCUMENT"/>
 		</cac:CallForTendersDocumentReference>
 	</xsl:template>
@@ -349,8 +349,8 @@ EINVOICING	Electronic invoicing will be accepted
 	</xsl:template>
 	
 	<xsl:template name="submission-electronic-catalog">
-		<xsl:comment>Submission Electronic Catalog (BT-764)</xsl:comment>
 		<!-- Submission Electronic Catalog (BT-764) cardinality ? Optional for Lots, Forbiden for eForms Contract Notice subtypes 1-6, E2, 14-15, 19, 23-40, and E5; Optional for 7-13, 18, E3, 20-22, Mandatory for 16-17, 18 and 22. The equivalent TED XML is ECATALOGUE_REQUIRED -->		
+		<xsl:comment>Submission Electronic Catalog (BT-764)</xsl:comment>
 			<xsl:choose>
 				<xsl:when test="ted:ECATALOGUE_REQUIRED">
 					<cac:ContractExecutionRequirement>
@@ -490,6 +490,7 @@ EINVOICING	Electronic invoicing will be accepted
 			<cbc:SubmissionMethodCode listName="esubmission"><xsl:value-of select="$electronic-submission"/></cbc:SubmissionMethodCode>
 			<!-- Successive Reduction Indicator (Procedure) (BT-52) cardinality ? Mandatory for CN Notice subtype 16; Optional for PIN Notice subtypes 7-9, CN Notice subtypes 10-14, 17-18, 20-24 and E3. Forbidden for other Notice subtypes -->
 			<xsl:if test="../../ted:PROCEDURE/ted:REDUCTION_RECOURSE or $eforms-notice-subtype = '16'">
+				<xsl:comment>Successive Reduction Indicator (Procedure) (BT-52)</xsl:comment>
 				<cbc:CandidateReductionConstraintIndicator><xsl:value-of select="if (fn:exists(../../ted:PROCEDURE/ted:REDUCTION_RECOURSE)) then 'true' else 'false'"/></cbc:CandidateReductionConstraintIndicator>
 			</xsl:if>
 			<!-- GPA Coverage (BT-115) cardinality ? Mandatory for subtypes PIN 7, 8; CN 10, 11, 15, 16, 17; CAN 25, 26, 29, 30; Optional for subtypes PIN 4, 5; CN 19; CAN 28; CM 38-40. Forbidden for other Notice subtypes -->
@@ -507,6 +508,7 @@ EINVOICING	Electronic invoicing will be accepted
 			<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->
 			<!-- TBD: Question: For Notice Subtypes 20 and 21, BOTH Deadline Receipt Expressions (BT-630) AND Deadline Receipt Tenders (BT-131) map from TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS - What should we do? -->
 			<xsl:if test="(../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS) and ($eforms-notice-subtype = ('7', '8', '9', '16', '17', '18', '19', '20', '21','22', '23', '24'))">
+				<xsl:comment>Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)</xsl:comment>
 				<cac:TenderSubmissionDeadlinePeriod>
 					<xsl:call-template name="date-time-receipt-tenders"/>
 				</cac:TenderSubmissionDeadlinePeriod>
@@ -802,6 +804,7 @@ none None
 			<xsl:comment>Main Nature (BT-23)</xsl:comment>
 			<xsl:apply-templates select="../ted:TYPE_CONTRACT"/>
 			<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
+			<xsl:comment>Additional Nature (different from Main) (BT-531)</xsl:comment>
 			<!-- Strategic Procurement (BT-06) cardinality * No equivalent element in TED XML -->
 			<xsl:comment>Strategic Procurement (BT-06)</xsl:comment>
 			<!-- Strategic Procurement Description (BT-777) cardinality * No equivalent element in TED XML -->
@@ -911,6 +914,7 @@ none None
 		<!-- MAIN_SITE might contain no text! -->
 		<xsl:if test="fn:normalize-space(ted:MAIN_SITE) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
 			<cac:RealizedLocation>
+				<xsl:comment>Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)</xsl:comment>
 				<xsl:choose>
 					<xsl:when test="fn:normalize-space(ted:MAIN_SITE)">
 						<cac:Address>

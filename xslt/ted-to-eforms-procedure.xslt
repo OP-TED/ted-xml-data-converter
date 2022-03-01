@@ -26,8 +26,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!-- LOT_DIVISION has children: LOT_ALL LOT_COMBINING_CONTRACT_RIGHT LOT_MAX_NUMBER LOT_MAX_ONE_TENDERER LOT_ONE_ONLY -->
 	
 		<cac:LotDistribution>
-			<!-- Lots Max Awarded (BT-33), Lots Max Allowed (BT-31)  -->
-			<xsl:comment>Lots Max Awarded (BT-33)</xsl:comment>
 			<!-- F01_2014 F02_2014 F04_2014 F05_2014 F21_2014 F22_2014 F23_2014 F24_2014 -->
 			<!-- Lots Max Awarded (BT-33) The maximum number of Lots that can be awarded to one economic operator -->
 			<xsl:comment>Lots Max Awarded (BT-33)</xsl:comment>

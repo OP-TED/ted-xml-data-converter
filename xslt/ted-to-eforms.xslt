@@ -141,7 +141,7 @@ cac:ProcurementProjectLot
 			</xsd:sequence>
 -->
 					<xsl:if test="$eforms-form-type eq 'CAN'">
-						<!-- TODO : efac:AppealsInformation : Review Requester Organization requesting for review or  Review Requester Organization that requested a review request. -->
+						<!-- TODO : efac:AppealsInformation : Review Requester Organization requesting for review or Review Requester Organization that requested a review request. -->
 					</xsl:if>
 					<xsl:if test="$ted-form-notice-type eq '14'">
 						<xsl:call-template name="changes"/>
@@ -194,9 +194,10 @@ cac:ProcurementProjectLot
 	<xsl:comment>Notice Version (BT-757)</xsl:comment>
 	<!-- TBD: hard-coded for now -->
 	<cbc:VersionID>01</cbc:VersionID>
-	<!-- Future Notice (BT-127) TBD: hard-coded for now -->
+	<!-- Future Notice (BT-127) -->
+	<!-- TBD: hard-coded for now -->
 	<xsl:comment>Future Notice (BT-127)</xsl:comment>
-	<!-- The "cbc:PlannedDate" is used for planning notices (PIN only excluded) [Notice subtypes 1,2,3, 7,8,9] to specify when the competition notice will be published.  -->
+	<!-- The "cbc:PlannedDate" is used for planning notices (PIN only excluded) [Notice subtypes 1,2,3, 7,8,9] to specify when the competition notice will be published. -->
 	<!-- F01, F04 element is TED_EXPORT/FORM_SECTION/F01_2014/OBJECT_CONTRACT/DATE_PUBLICATION_NOTICE -->
 	<!-- F16 PRIOR_INFORMATION_DEFENCE does not have an equivalent element -->
 	<xsl:if test="$eforms-notice-subtype = ('1', '2', '3', '7', '8', '9')">
@@ -341,7 +342,7 @@ cac:ProcurementProjectLot
 
 
 
-<!-- Procedure-level templates for Tendering Terms  end here -->
+<!-- Procedure-level templates for Tendering Terms end here -->
 
 
 

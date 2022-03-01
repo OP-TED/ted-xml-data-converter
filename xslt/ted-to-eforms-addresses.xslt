@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+<xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" 
 xmlns:doc="http://www.pnp-software.com/XSLTdoc" xmlns:opfun="http://publications.europa.eu/local/xslt-functions"
 xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" 
@@ -117,9 +117,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740) -->
 			<xsl:comment>Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)</xsl:comment>
 			<xsl:apply-templates select="../(ted:CA_TYPE|CA_TYPE_OTHER)"/>
-			<!-- Activity Authority (BT-10)  and Activity Entity (BT-610)-->
+			<!-- Activity Authority (BT-10) and Activity Entity (BT-610)-->
 			<xsl:comment>Activity Authority (BT-10) and Activity Entity (BT-610)</xsl:comment>
-			<!-- Activity Authority (BT-10)  and Activity Entity (BT-610) both are implemented as code values from a codelist -->
+			<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 			<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
 			<!-- NOTE: CA_ACTIVITY_OTHER and CA_TYPE_OTHER cannot be converted -->
 			<xsl:apply-templates select="../ted:CA_ACTIVITY"/>
