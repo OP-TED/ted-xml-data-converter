@@ -148,10 +148,19 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
 		</xsl:if>
 		<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
-		<xsl:if test="$eforms-subtype eq ''">
-			<xsl:message terminate="yes">ERROR: no eForms subtype mapping available for this Notice:<xsl:value-of select="$newline"/>
-			<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
-		</xsl:if>
+			<xsl:choose>
+				<xsl:when test="$eforms-subtype eq ''">
+					<xsl:message terminate="yes">ERROR: no eForms subtype mapping available for this Notice:<xsl:value-of select="$newline"/>
+					<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
+				</xsl:when>
+				<xsl:when test="$eforms-subtype eq 'ERROR'">
+					<xsl:message terminate="yes">ERROR: The combination of data in this Notice is considered an error:<xsl:value-of select="$newline"/>
+					<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
+				</xsl:when>
+				<xsl:when test="fn:not(fn:matches($eforms-subtype, '^[12][0-9]*$'))">
+					<xsl:message terminate="yes">ERROR: Conversion for eForms subtype <xsl:value-of select="$eforms-subtype"/> has not been created</xsl:message>
+				</xsl:when>
+			</xsl:choose>
 		<xsl:value-of select="$eforms-subtype"/>
 	</xsl:function>
 
