@@ -92,6 +92,16 @@
 		<eforms-value>innovation</eforms-value>
 		<label>Innovation partnership</label>
 	</mapping>
+	<mapping>
+		<ted-value>PT_INVOLVING_NEGOTIATION</ted-value>
+		<eforms-value>neg-wo-call</eforms-value>
+		<label>Negotiated without prior call for competition</label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_NEGOTIATED_WITH_PRIOR_CALL</ted-value>
+		<eforms-value>neg-w-call</eforms-value>
+		<label>Negotiated with prior publication of a call for competition / competitive with negotiation</label>
+	</mapping>
 </procedure-types>
 
 <contract-nature-types>

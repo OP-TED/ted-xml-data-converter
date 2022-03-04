@@ -391,7 +391,7 @@ cac:ProcurementProjectLot
 		<xsl:comment>Procedure Features (BT-88)</xsl:comment>
 		<!-- Procedure Type (BT-105) cardinality 1 Maps from elements: PT_OPEN, PT_RESTRICTED, PT_COMPETITIVE_NEGOTIATION, PT_COMPETITIVE_DIALOGUE, PT_INNOVATION_PARTNERSHIP -->
 		<xsl:comment>Procedure Type (BT-105)</xsl:comment>
-		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP)"/>
+		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL)"/>
 		<!-- PIN Competition Termination (BT-756) cardinality ? This BT only allowed for CAN notice subtypes 29, 30, 33, 34 -->
 		<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
 		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
