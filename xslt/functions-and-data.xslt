@@ -157,7 +157,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 					<xsl:message terminate="yes">ERROR: The combination of data in this Notice is considered an error:<xsl:value-of select="$newline"/>
 					<xsl:value-of select="fn:string-join(($ted-form-element, $ted-form-name, $ted-form-notice-type, $ted-form-legal-basis, $ted-form-document-code), ':')"/></xsl:message>
 				</xsl:when>
-				<xsl:when test="fn:not(fn:matches($eforms-subtype, '^[12][0-9]*$'))">
+				<xsl:when test="fn:not(fn:matches($eforms-subtype, '^[1-9]|[1-3][0-9]|40*$'))">
 					<xsl:message terminate="yes">ERROR: Conversion for eForms subtype <xsl:value-of select="$eforms-subtype"/> has not been created</xsl:message>
 				</xsl:when>
 			</xsl:choose>
