@@ -14,8 +14,44 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<cac:ProcurementProjectLot>
 			<!-- for form F02, the element OBJECT_DESCR is the same, whether there is one lot (NO_LOT_DIVISION) or more than one lot (LOT_DIVISION) -->
 			<!-- But, for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
-			<xsl:variable name="lot-id" select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 3))"/>
-			<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-id"/></cbc:ID>
+			<!-- In TED LOT_NO, if present, usually contains a positive integer. This will be converted to the new eForms format -->
+			<xsl:if test="fn:true()">
+			<xsl:choose>
+				<!-- when LOT_NO exists -->
+				<xsl:when test="ted:LOT_NO">
+					<!--<xsl:comment>Lot Number from TED notice was <xsl:value-of select="ted:LOT_NO"/></xsl:comment>-->
+					<xsl:choose>
+						<!-- LOT_NO is a positive integer between 1 and 9999 -->
+						<xsl:when test="fn:matches(ted:LOT_NO, '^[1-9][0-9]{0,3}$')">
+						<!-- tested -->
+							<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/></cbc:ID>
+						</xsl:when>
+						<xsl:otherwise>
+						<!-- tested -->
+							<xsl:comment>ERROR: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:comment>
+							<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/></cbc:ID>
+						</xsl:otherwise>							
+					</xsl:choose>
+				</xsl:when>
+				<!-- LOT_NO does not exist -->
+				<xsl:otherwise>
+					<xsl:choose>
+						<!-- This is the only Lot in the notice -->
+						<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
+							<!-- tested -->
+							<!-- use identifier LOT-0001 -->
+							<xsl:comment>Only one Lot in the TED notice</xsl:comment>
+							<cbc:ID schemeName="Lot"><xsl:value-of select="'LOT-0001'"/></cbc:ID>
+						</xsl:when>
+						<xsl:otherwise>
+							<!-- not tested, no examples found -->
+							<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
+							<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/></cbc:ID>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:otherwise>
+			</xsl:choose>
+			</xsl:if>
 			<xsl:call-template name="lot-tendering-terms"/>
 			<xsl:call-template name="lot-tendering-process"/>
 			<xsl:call-template name="lot-procurement-project"/>
