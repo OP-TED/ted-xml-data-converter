@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.regionsjaelland.dk</cbc:WebsiteURI>
@@ -45,7 +45,6 @@
                         <cac:PartyLegalEntity>
                            <cbc:CompanyID>29190658</cbc:CompanyID>
                         </cac:PartyLegalEntity>
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
                            <cbc:Name>Per Thomsen</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
@@ -56,7 +55,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.regionh.dk</cbc:WebsiteURI>
@@ -85,13 +84,12 @@
                         <cac:PartyLegalEntity>
                            <cbc:CompanyID>29190623</cbc:CompanyID>
                         </cac:PartyLegalEntity>
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>regionh@regionh.dk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.rn.dk</cbc:WebsiteURI>
@@ -120,13 +118,12 @@
                         <cac:PartyLegalEntity>
                            <cbc:CompanyID>29190941</cbc:CompanyID>
                         </cac:PartyLegalEntity>
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>region@rn.dk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.rm.dk</cbc:WebsiteURI>
@@ -155,14 +152,15 @@
                         <cac:PartyLegalEntity>
                            <cbc:CompanyID>29190925</cbc:CompanyID>
                         </cac:PartyLegalEntity>
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>kontakt@regionmidtjylland.dk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://erhvervsstyrelsen.dk/klagenaevnet-for-udbud</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-005</cbc:ID>
                         </cac:PartyIdentification>
@@ -183,7 +181,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+45 35291095</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -192,8 +189,10 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.kfst.dk</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-006</cbc:ID>
                         </cac:PartyIdentification>
@@ -214,7 +213,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+45 41715000</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -391,9 +389,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-      <!--Title (BT-21)-->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="DAN">IT-klientudstyr 2021-2025</cbc:Name>
       <!--Description (BT-24)-->
       <cbc:Description languageID="DAN">Rammeaftale vedrørende IT-klientudstyr. Udbud omfatter: Bærbar Pc'er, stationære Pc'er, tyndeklienter, Pc skærme, monitorer, tablets, små printere, digitale infostandere, klinisk stuegangsvogne, telefoner og IT-tilbehør samt indsamling og bortskaffelse af udtjent IT-hardware.</cbc:Description>
@@ -482,7 +478,7 @@
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=286788&amp;B=RS</cbc:URI>
@@ -524,12 +520,12 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>60</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
@@ -537,6 +533,7 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DAN">Kvalitet</cbc:Description>
                </cac:SubordinateAwardingCriterion>
                <cac:SubordinateAwardingCriterion>
@@ -544,7 +541,7 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>40</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
@@ -615,10 +612,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-01-08+01:00</cbc:EndDate>
             <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
@@ -675,6 +674,7 @@
          <cbc:Description languageID="DAN">Udbuddet gennemføres som et udbud med forhandling, jf. udbudslovens § § 61-66, hvilket betyder, at enhver økonomisk aktør kan ansøge om at deltage, men kun ansøgere som ordregiver opfordrer hertil, kan deltage i den videre proces. Ordregiver har til hensigt at prækvalificere 5 ansøgere. Når prækvalifikationsfasen er afsluttet, underretter ordregiver skriftligt tilbudsgiverne herom med samtidig oplysning om, at udbudsforretningens anden fase - tilbudsfasen - indledes. Herefter opfordres tilbudsgiverne til at afgive det indledende tilbud. Derefter kan ordregiver vælge at enten tildele rammeaftalen på baggrund af indledende tilbud eller indlede en forhandlingsfase. Ordregiver påtænker at tildele rammeaftale til 3 tilbudsgivere. Rammeaftale vedrører indkøb af IT-Klientudstyr, herunder bærbar Pc'er, stationære Pc'er, tyndeklienter, Pc skærme, monitorer, tablets, små printere, digitale infostandere, klinisk stuegangsvogne, telefoner og IT-tilbehør samt indsamling og bortskaffelse af udtjent IT-hardware.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -703,7 +703,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cac:Address>
                <cac:AddressLine>
                   <cbc:Line>Danmark</cbc:Line>

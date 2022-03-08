@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.simap.ch</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -41,7 +41,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
                            <cbc:Name>Projekt «LTE Mobilfunktester»</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
@@ -51,7 +50,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
@@ -73,7 +72,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -160,9 +158,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-      <!--Title (BT-21)-->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="FRA">Testeur de radiocommunication LTE pour 3.9G et 4.xG</cbc:Name>
       <!--Description (BT-24)-->
       <cbc:Description languageID="FRA">La section accès au marché et conformité (MK) de la division radio monitoring et installations (RA) de l’Office fédéral de la communication (OFCOM) vérifie, dans le cadre de son mandat légal (chapitre 8 de l’ordonnance du 25.11.2015 sur les installations de télécommunication [RS 784.101.2; OIT]), la conformité technique des installations de télécommunication qui ont été ou sont mises à disposition, mises en service, mises en place ou exploitées sur le marché suisse (article 36, alinéa 1, OIT). Le testeur de radiocommunication à acquérir doit prendre en charge la mesure des terminaux 3.9G et 4.xG.</cbc:Description>
@@ -234,7 +230,7 @@
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentTypeCode listName="communication-justification">CODE_FOR_RESTRICTED_DOCUMENT_JUSTIFICATION_REQUIRED_HERE</cbc:DocumentTypeCode>
             <cbc:DocumentType>restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>http://www.simap.ch/shabforms/servlet/Search?NOTICE_NR=1120749</cbc:URI>
@@ -277,7 +273,7 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
@@ -285,6 +281,7 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="FRA">Performance</cbc:Description>
                </cac:SubordinateAwardingCriterion>
                <cac:SubordinateAwardingCriterion>
@@ -292,7 +289,7 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
@@ -300,6 +297,7 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="FRA">Prix</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -350,10 +348,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2020-05-25+01:00</cbc:EndDate>
             <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
@@ -407,6 +407,7 @@
          <cbc:Description languageID="FRA">La section accès au marché et conformité (MK) de la division radio monitoring et installations (RA) de l’Office fédéral de la communication (OFCOM) vérifie, dans le cadre de son mandat légal (chapitre 8 de l’ordonnance du 25.11.2015 sur les installations de télécommunication [RS 784.101.2; OIT]), la conformité technique des installations de télécommunication qui ont été ou sont mises à disposition, mises en service, mises en place ou exploitées sur le marché suisse (article 36, alinéa 1, OIT). Le testeur de radiocommunication à acquérir doit prendre en charge la mesure des terminaux 3.9G et 4.xG.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -431,7 +432,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cac:Address>
                <cac:AddressLine>
                   <cbc:Line>2501 Bienne.</cbc:Line>

@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>www.veitshoechheim.de</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -41,7 +41,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+49 9319802732</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -130,9 +129,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-      <!--Title (BT-21)-->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="DEU">Gemeinde Veitshöchheim, Sportplatzbauarbeiten an der Freisportanlage</cbc:Name>
       <!--Description (BT-24)-->
       <cbc:Description languageID="DEU">Gegenstand des Auftrages ist die Vergabe von Sportplatzbauarbeiten bei der Freisportanlage am Schulzentrum in der Günterslebener Str. 41, 97209 Veitshöchheim. Die Arbeiten sollen ab den Sommerferien 2020 stattfinden. Bisher ist die Fertigstellung Mitte 2021 geplant.</cbc:Description>
@@ -220,6 +217,7 @@
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
          <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <!--Dispatch Invitation Tender (BT-130)-->
@@ -253,6 +251,7 @@
          <cbc:Description languageID="DEU">Die Gemeinde Veitshöchheim beabsichtigt bei der Freisportanlage am Schulzentrum (Günterslebener Str. 41, 97209 Veitshöchheim) eine Belagssanierung durchzuführen. Folgende Arbeiten sind hauptsächlich notwendig: — Abbruch und Neubau des Kunststoffbelags: —— Belagstyp A ca. 5 200 m2; —— Belagstyp B ca. 1 200 m2. — Einbau einer neuen Bitu-Tragschicht in Teilbereichen der Sportflächen; — Tiefenreinigung von zwei Kleinspielfeldern und punktuelle Ausbesserung von Schadstellen; — Abbruch und Neubau von beschädigten Einfassungen; — Abbruch und Neubau von zwei Weitsprunggruben; — Ausbau von beschädigten Kastenrinnen der Rundlaufbahn; — Montage von neuen Sporteinbauteilen wie z. B. Bodenhülsen, Basketballständern, Absprungbalken sowie Aufbringen von Spielfeldlinierungen; — Einbau einer Wurzelschutzbahn seitlich der Weit-/Hochsprungbahn, um das Einwachsen von Wurzeln zu verhindern; — Partieller Austausch von defekten Drainleitungen unter Sportflächen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -277,7 +276,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cac:Address>
                <cac:AddressLine>
                   <cbc:Line>Günterslebener Straße 41</cbc:Line>

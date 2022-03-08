@@ -16,7 +16,9 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>true</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.cheshireeast.gov.uk/</cbc:WebsiteURI>
@@ -42,13 +44,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.blackburn.gov.uk/</cbc:WebsiteURI>
@@ -74,13 +77,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.blackpool.gov.uk/</cbc:WebsiteURI>
@@ -106,13 +110,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.bolton.gov.uk/</cbc:WebsiteURI>
@@ -138,13 +143,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.bury.gov.uk/</cbc:WebsiteURI>
@@ -170,13 +176,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://cheshirewestandchester.gov.uk/</cbc:WebsiteURI>
@@ -202,13 +209,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.cumbria.gov.uk/</cbc:WebsiteURI>
@@ -234,13 +242,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.halton.gov.uk/</cbc:WebsiteURI>
@@ -266,13 +275,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.knowsley.gov.uk</cbc:WebsiteURI>
@@ -296,13 +306,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.lancashire.gov.uk/</cbc:WebsiteURI>
@@ -326,13 +337,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://liverpool.gov.uk</cbc:WebsiteURI>
@@ -356,13 +368,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.manchester.gov.uk/</cbc:WebsiteURI>
@@ -386,13 +399,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.oldham.gov.uk/</cbc:WebsiteURI>
@@ -416,13 +430,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.rochdale.gov.uk</cbc:WebsiteURI>
@@ -446,13 +461,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.salford.gov.uk/</cbc:WebsiteURI>
@@ -476,13 +492,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.sthelens.gov.uk/</cbc:WebsiteURI>
@@ -506,13 +523,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.sefton.gov.uk</cbc:WebsiteURI>
@@ -536,13 +554,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.stockport.gov.uk/</cbc:WebsiteURI>
@@ -566,13 +585,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.tameside.gov.uk</cbc:WebsiteURI>
@@ -596,13 +616,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.trafford.gov.uk/</cbc:WebsiteURI>
@@ -626,13 +647,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.warrington.gov.uk/</cbc:WebsiteURI>
@@ -656,13 +678,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.wigan.gov.uk</cbc:WebsiteURI>
@@ -686,13 +709,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.wirral.gov.uk</cbc:WebsiteURI>
@@ -716,13 +740,12 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
                            <cbc:ElectronicMail>tracy.roberts@cheshireeast.gov.uk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-024</cbc:ID>
@@ -744,7 +767,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+44 2079476000</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -752,7 +774,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-025</cbc:ID>
@@ -774,7 +796,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -1391,7 +1412,7 @@
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
    <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
-      <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+      <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>3</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
       <!--Group Identifier (BT-330)-->
@@ -1418,7 +1439,6 @@
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">DN505426</cbc:ID>
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="ENG">North West SEND Flexible Purchasing System</cbc:Name>
       <!--Description (BT-24)-->
@@ -1486,7 +1506,7 @@
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>https://www.the-chest.org.uk</cbc:URI>
@@ -1524,7 +1544,7 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -1572,10 +1592,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-01-04+01:00</cbc:EndDate>
             <cbc:EndTime>13:00:00+01:00</cbc:EndTime>
@@ -1626,6 +1648,7 @@
          <cbc:Description languageID="ENG">The Provider will create an environment in which the Services operate that has continuous improvement at its core. Services will be flexible, responsive and creative, in order to deliver provision that meets the needs of the Learner. Ofsted (or an equivalent body approved by the Secretary of State for Education under section 106 of the Education and Skills Act 2008) inspection reports will be used as one of the key quality measures for this framework. The Provider will deliver education and/or training appropriate to the age, ability, aptitude and special educational needs of the Learner in accordance with their EHC Plan or Annual Review (whichever is most up to date for the Learner). The Provider will deliver a programme of education and activities which meet the Learner’s outcomes, as stated in their EHC Plan or annual review paperwork (whichever is most up to date for the Learner). This will include supporting the Learner to work towards qualifications that meet their ability and demonstrate the Learner is making academic progression or acquiring skills. The Provider will endeavour to ensure the Learner does not repeat qualifications or courses. The service specification sets out the outcomes the Provider will be expected to deliver in respect of: • the service overall (the Outcomes), and • individual placements (the Individual Outcomes). In respect of the service overall, the Provider will be expected to participate fully in the North West Performance Monitoring and Outcomes Framework, providing the required data and key performance indicators (in the format requested by the placing authorities) In respect of individual placements, the Provider will be expected to work with the Placing Authority to achieve positive outcomes for the Learner and meet the objectives as described in the Education, Health and Care Plan accompanying each placement. The North West local authorities are committed to collaboration, co-production and best practice with Parents/ Carers and Providers, to ensure the regional contract remains fit for purpose. This FPS will be regularly reviewed by the North West Regional Governance Group to ensure that the required outcomes are being delivered and further developments and innovation are included.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1653,7 +1676,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -1710,7 +1733,7 @@
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>https://www.the-chest.org.uk</cbc:URI>
@@ -1748,7 +1771,7 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -1796,10 +1819,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-01-04+01:00</cbc:EndDate>
             <cbc:EndTime>13:00:00+01:00</cbc:EndTime>
@@ -1850,6 +1875,7 @@
          <cbc:Description languageID="ENG">The Provider will create an environment in which the Services operate that has continuous improvement at its core. Services will be flexible, responsive and creative, in order to deliver provision that meets the needs of the Learner. Ofsted (or an equivalent body approved by the Secretary of State for Education under section 106 of the Education and Skills Act 2008) inspection reports will be used as one of the key quality measures for this framework. The Provider will deliver education and/or training appropriate to the age, ability, aptitude and special educational needs of the Learner in accordance with their EHC Plan or Annual Review (whichever is most up to date for the Learner). The Provider will deliver a programme of education and activities which meet the Learner’s outcomes, as stated in their EHC Plan or annual review paperwork (whichever is most up to date for the Learner). This will include supporting the Learner to work towards qualifications that meet their ability and demonstrate the Learner is making academic progression or acquiring skills. The Provider will endeavour to ensure the Learner does not repeat qualifications or courses. The service specification sets out the outcomes the Provider will be expected to deliver in respect of: • the service overall (the Outcomes), and • individual placements (the Individual Outcomes). In respect of the service overall, the Provider will be expected to participate fully in the North West Performance Monitoring and Outcomes Framework, providing the required data and key performance indicators (in the format requested by the placing authorities) In respect of individual placements, the Provider will be expected to work with the Placing Authority to achieve positive outcomes for the Learner and meet the objectives as described in the Education, Health and Care Plan accompanying each placement. The North West local authorities are committed to collaboration, co-production and best practice with Parents/ Carers and Providers, to ensure the regional contract remains fit for purpose. This FPS will be regularly reviewed by the North West Regional Governance Group to ensure that the required outcomes are being delivered and further developments and innovation are included. The Provider will be required to meet the requisite accommodation standards and requirements for children’s homes specified within the Children and Young People’s Residential Placements Flexible Procurement System.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1877,7 +1903,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -1934,7 +1960,7 @@
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>https://www.the-chest.org.uk</cbc:URI>
@@ -1972,7 +1998,7 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -2020,10 +2046,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-01-04+01:00</cbc:EndDate>
             <cbc:EndTime>13:00:00+01:00</cbc:EndTime>
@@ -2074,6 +2102,7 @@
          <cbc:Description languageID="ENG">The Provider will create an environment in which the Services operate that has continuous improvement at its core. Services will be flexible, responsive and creative, in order to deliver provision that meets the needs of the Learner. Ofsted (or an equivalent body approved by the Secretary of State for Education under section 106 of the Education and Skills Act 2008) inspection reports will be used as one of the key quality measures for this framework. The Provider will deliver education and/or training appropriate to the age, ability, aptitude and special educational needs of the Learner in accordance with their EHC Plan or Annual Review (whichever is most up to date for the Learner). The Provider will deliver a programme of education and activities which meet the Learner’s outcomes, as stated in their EHC Plan or annual review paperwork (whichever is most up to date for the Learner). This will include supporting the Learner to work towards qualifications that meet their ability and demonstrate the Learner is making academic progression or acquiring skills. The Provider will endeavour to ensure the Learner does not repeat qualifications or courses. The service specification sets out the outcomes the Provider will be expected to deliver in respect of: • the service overall (the Outcomes), and • individual placements (the Individual Outcomes). In respect of the service overall, the Provider will be expected to participate fully in the North West Performance Monitoring and Outcomes Framework, providing the required data and key performance indicators (in the format requested by the placing authorities) In respect of individual placements, the Provider will be expected to work with the Placing Authority to achieve positive outcomes for the Learner and meet the objectives as described in the Education, Health and Care Plan accompanying each placement. The North West local authorities are committed to collaboration, co-production and best practice with Parents/ Carers and Providers, to ensure the regional contract remains fit for purpose. This FPS will be regularly reviewed by the North West Regional Governance Group to ensure that the required outcomes are being delivered and further developments and innovation are included. The Provider will be required to meet the requisite accommodation standards and requirements for children’s homes specified within the Children and Young People’s Residential Placements Flexible Procurement System.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2101,7 +2130,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->

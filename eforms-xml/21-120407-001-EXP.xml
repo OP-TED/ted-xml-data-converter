@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://permalink.mercell.com/149974429.aspx</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -43,7 +43,6 @@
                         <cac:PartyLegalEntity>
                            <cbc:CompanyID>964338531</cbc:CompanyID>
                         </cac:PartyLegalEntity>
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
                            <cbc:Name>Ståle Otto Hopland</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
@@ -54,7 +53,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
@@ -76,7 +75,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -164,7 +162,6 @@
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">2021/19782</cbc:ID>
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="ENG">EEA 018-2021 Development Plan Slettebakken (NEW)</cbc:Name>
       <!--Description (BT-24)-->
@@ -236,7 +233,7 @@
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>https://permalink.mercell.com/149974429.aspx</cbc:URI>
@@ -274,7 +271,7 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -320,10 +317,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-04-08+01:00</cbc:EndDate>
             <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
@@ -377,6 +376,7 @@
          <cbc:Description languageID="ENG">Bergen Municipality, the Agency for Planning and Building, would like a consultant team with interdisciplinary breadth and competence within planning and architecture, water and sewage, landscape and sports installations for the preparation of an area development plan for Slettebakken.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -401,7 +401,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->

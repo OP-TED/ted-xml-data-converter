@@ -50,7 +50,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 		<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
 	</xsl:template>
-
+	
+				
+	
 	<xsl:template match="ted:ACCELERATED_PROC">
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 		<cac:ProcessJustification>

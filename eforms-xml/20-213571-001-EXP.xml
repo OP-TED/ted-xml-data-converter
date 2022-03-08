@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.eis2win.co.uk</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -41,7 +41,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
                            <cbc:Name>Mark Richards (Head of Information Systems)</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
@@ -51,7 +50,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
@@ -73,7 +72,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -134,7 +132,7 @@
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
    <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
-      <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+      <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>2</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
       <!--Group Identifier (BT-330)-->
@@ -159,9 +157,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-      <!--Title (BT-21)-->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Information and Communications Technology Services</cbc:Name>
       <!--Description (BT-24)-->
       <cbc:Description languageID="ENG">English Institute of Sport (‘the EIS’) is seeking to appoint through a restricted procedure a suitably qualified and experienced provider of ICT support services. The services will compromise provision and support of Wide Area Network, Local Area Network including Wireless at our regional high performance centres, and provision of a dedicated 24-hour service desk for our 450 users. The staff are based at several performance centres in the UK, but most of the workforce regularly work away from their centres and have work patterns that are mobile and remote. A large number of staff work abroad as required by the sports we work with; their overseas travel may cover periods up to several months. As a publicly funded organisation EIS is seeking to maximise value for money, and wishes to minimise one-offset up costs as well as ongoing revenue costs.</cbc:Description>
@@ -229,7 +225,7 @@
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentTypeCode listName="communication-justification">CODE_FOR_RESTRICTED_DOCUMENT_JUSTIFICATION_REQUIRED_HERE</cbc:DocumentTypeCode>
             <cbc:DocumentType>restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>https://www.eis2win.co.uk/register-interest-to-tender/</cbc:URI>
@@ -271,7 +267,7 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -314,10 +310,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2020-06-05+01:00</cbc:EndDate>
             <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
@@ -370,6 +368,7 @@
          <cbc:Description languageID="ENG">English Institute of Sport (‘the EIS’) is seeking to appoint through a restricted procedure a suitably qualified and experienced provider of ICT Managed support services. The services will compromise support of Wide Area Network, Local Area Network including Wireless at our regional high performance centres, and provision of a dedicated 24-hour service desk for our 450 users. The service desk will respond to service requests and problems from users, and perform agreed scheduled support activities, as detailed in the EIS operations manual. The service desk will comprise a minimum of two dedicated staff providing two full time equivalent roles. The service desk will operate 24/7/365 with the bulk of user activity during normal business hours. The Wide Area Network will comprise circuits to up to 10 sites. The EIS pioneers the delivery of science, medicine and technology services to drive medal success at olympic, paralympic and international competition, supporting elite athletes through its nationwide network of expertise and facilities. It strives to be the world-leading high performance institute. Staff are based at nine high performance centres across the UK but they deliver EIS services at different sporting locations including swimming pools, lakes, velodromes and athletic tracks. EIS delivers services to athletes while competing or training overseas. To receive a copy of the invitation to tender (ITT) please contact mark.richards@eis2win.co.uk. The ITT will be issued to selected suppliers after 8 June 2020.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -397,7 +396,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -455,7 +454,7 @@
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentTypeCode listName="communication-justification">CODE_FOR_RESTRICTED_DOCUMENT_JUSTIFICATION_REQUIRED_HERE</cbc:DocumentTypeCode>
             <cbc:DocumentType>restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>https://www.eis2win.co.uk/register-interest-to-tender/</cbc:URI>
@@ -497,7 +496,7 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -540,10 +539,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2020-06-05+01:00</cbc:EndDate>
             <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
@@ -596,6 +597,7 @@
          <cbc:Description languageID="ENG">Provision of circuit rental services up to 10 high performance centre sites in England. The current circuits range from 50 to 100 mbps.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -623,7 +625,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->

@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>www.fsdkenya.org</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -41,7 +41,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
                            <cbc:Name>Lydiah Kioko</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
@@ -52,7 +51,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
@@ -74,7 +73,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+254 205137300</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -157,9 +155,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
-      <!--Title (BT-21)-->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Government of Kenya Collections Strategy</cbc:Name>
       <!--Description (BT-24)-->
       <cbc:Description languageID="ENG">Governments are the largest payer and receiver of cash in any economy and Kenya is no exception. It is estimated that GoK represents 60 % of payments and collections in the economy. Following a presidential directive to digitise all government collections in the country which would effectively eliminate cash from Government offices a Government Digital Payments (GDP) task force was set up to oversee the implementation of this key project which saw the deployment of e-Citizen, a single sign-on platform that allows citizens to access, apply and pay for government services. To date about three hundred out of a possible five thousand government services have been fully digitised and the revenue collected through the platform has been growing steadily since 2015. Currently, over eight million citizens are registered on the e-citizen platform.</cbc:Description>
@@ -230,7 +226,7 @@
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>https://fsdkenya.org/about-us/opportunities/</cbc:URI>
@@ -268,7 +264,7 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -311,10 +307,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2020-06-12+01:00</cbc:EndDate>
             <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
@@ -371,6 +369,7 @@
          <cbc:Description languageID="ENG">In 2019, FSD Kenya re-engaged with the GDP team which continues to work to digitise the remaining government services. FSD Kenya initially supported the development of a proof of concept, securing the platform against cyber-attacks as well as development of an agency model that would efficiently implement this initiative. Based on recommendations from the first phase, it was agreed that FSD Kenya would continue to support the GDP team to undertake a market analysis, a legal and regulatory review and the development of a strategy and business case. Work on the first two activities is going on although has recently slowed due to effects of Covid-19. FSD Kenya is now looking for a consultancy firm or team of consultants to support the GDP in developing the strategy. The work will focus on the following key areas: — identify the key strategic objectives and key indicators for success; — develop a business case for GDP including costs and benefits to be accrued on full digitization of government collections. This will include the necessary incentives to drive the implementation of the strategy; — a detailed implementation plan including sustainability options such as private and public management of the platform and onboarding of remaining services on the platform.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -395,7 +394,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->

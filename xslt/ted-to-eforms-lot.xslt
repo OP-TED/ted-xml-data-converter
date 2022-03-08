@@ -495,9 +495,7 @@ EINVOICING	Electronic invoicing will be accepted
 			</xsl:if>
 			<!-- GPA Coverage (BT-115) cardinality ? Mandatory for subtypes PIN 7, 8; CN 10, 11, 15, 16, 17; CAN 25, 26, 29, 30; Optional for subtypes PIN 4, 5; CN 19; CAN 28; CM 38-40. Forbidden for other Notice subtypes -->
 			<xsl:comment>GPA Coverage (BT-115)</xsl:comment>
-			<xsl:if test="../../ted:PROCEDURE/(CONTRACT_COVERED_GPA|NO_CONTRACT_COVERED_GPA)">
-				<cbc:GovernmentAgreementConstraintIndicator><xsl:value-of select="if (fn:exists(../../ted:PROCEDURE/ted:CONTRACT_COVERED_GPA)) then 'true' else 'false'"/></cbc:GovernmentAgreementConstraintIndicator>
-			</xsl:if>
+			<xsl:apply-templates select="../../ted:PROCEDURE/(ted:CONTRACT_COVERED_GPA|ted:NO_CONTRACT_COVERED_GPA)"/>
 			
 			<!-- Tool Atypical URL (BT-124) cardinality ? Optional for PIN and CN Notice subtypes 1 to 24, E1, E2 and E3 Forbidden for other Notice subtypes CONTRACTING_BODY/URL_TOOL -->
 			<xsl:comment>Tool Atypical URL (BT-124)</xsl:comment>
@@ -568,6 +566,13 @@ EINVOICING	Electronic invoicing will be accepted
 			<xsl:call-template name="dps"/>
 		</cac:TenderingProcess>
 	</xsl:template>
+	
+	<xsl:template match="ted:CONTRACT_COVERED_GPA"> 
+		<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>	
+	</xsl:template>
+	<xsl:template match="ted:NO_CONTRACT_COVERED_GPA"> 
+		<cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>	
+	</xsl:template>		
 	
 	<xsl:template name="date-time-receipt-tenders">
 		<!-- NOTE: cbc:EndDate and cbc:EndTime should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->

@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.fnmotol.cz</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -43,7 +43,6 @@
                         <cac:PartyLegalEntity>
                            <cbc:CompanyID>00064203</cbc:CompanyID>
                         </cac:PartyLegalEntity>
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
                            <cbc:Name>Ing. Aleš Mudruňka</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
@@ -53,8 +52,10 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://www.uohs.cz/</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
                         </cac:PartyIdentification>
@@ -75,7 +76,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+420 542167111</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -162,7 +162,6 @@
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">98/21</cbc:ID>
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="CES">FN Motol - centrální zdroj chladu pro objekt A - VZT a chlazení</cbc:Name>
       <!--Description (BT-24)-->
@@ -230,7 +229,7 @@
             <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
             <!--Documents Restricted (BT-14)-->
             <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
-            <!--Documents URL (BT-15), Documents Restricted URL (BT-615)-->
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
                   <cbc:URI>www.egordion.cz/nabidkaGORDION/profilFnm</cbc:URI>
@@ -317,10 +316,12 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-08-11+01:00</cbc:EndDate>
             <cbc:EndTime>10:00:00+01:00</cbc:EndTime>
@@ -374,6 +375,7 @@
          <cbc:Description languageID="CES">Předmětem plnění této veřejné zakázky jsou stavební práce, na jejímž základě bude realizován projekt s názvem „FN Motol - centrální zdroj chladu pro objekt A - VZT a chlazení“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -401,7 +403,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cac:Address>
                <cac:AddressLine>
                   <cbc:Line>Praha</cbc:Line>

@@ -16,7 +16,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.enisa.europa.eu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -41,7 +41,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
                            <cbc:Name>Procurement Officer</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
@@ -52,7 +51,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
@@ -75,10 +74,9 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-003</cbc:ID>
@@ -100,7 +98,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+352 4303-1</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -110,7 +107,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-004</cbc:ID>
@@ -132,7 +129,6 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
                            <cbc:Telephone>+33 388172313</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
@@ -313,7 +309,6 @@
    <!-- cac:ProcurementProject here -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">ENISA F-EDO-20-T32</cbc:ID>
-      <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Production and Supply of Branded Promotional Material</cbc:Name>
       <!--Description (BT-24)-->
@@ -377,12 +372,12 @@
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
@@ -390,6 +385,7 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">As per tender specification</cbc:Description>
                </cac:SubordinateAwardingCriterion>
                <cac:SubordinateAwardingCriterion>
@@ -397,7 +393,7 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
@@ -405,6 +401,7 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">As per tender specification</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
@@ -486,6 +483,7 @@
          <cbc:Description languageID="ENG">It is anticipated that orders will be placed in early 2021, immediately following the signature of framework contract.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -510,7 +508,7 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation>
+         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cbc:Description languageID="ENG">The source TED notice does not have an address for this Lot</cbc:Description>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
