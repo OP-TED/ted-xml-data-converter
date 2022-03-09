@@ -12,62 +12,106 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode>20</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>www.mitterteich.de</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>http://www.donegalcoco.ie</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Stadt Mitterteich</cbc:Name>
+                           <cbc:Name>Donegal County Council</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Kirchplatz 12</cbc:StreetName>
+                           <cbc:StreetName>County House, Co. Donegal</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Mitterteich</cbc:CityName>
+                           <cbc:CityName>Lifford</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>95666</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">IE</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+49 9633890</cbc:Telephone>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>N/A</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Shane Sweeney</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+353 749153900</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
-                           <cbc:Telefax>+49 963389299</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>info@mitterteich.de</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>ssweeney@donegalcoco.ie</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>www.donegalcoco.ie</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Donegal County Council</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Council Secreteriat, County House</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Lifford</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>F93 Y622</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">IE</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Shane Sweeney</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+353 749153900</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>ssweeney@donegalcoco.ie</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Regierung der Oberpfalz</cbc:Name>
+                           <cbc:Name>High Court of Ireland</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
-                           <cbc:CityName>Regensburg</cbc:CityName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Four Courts, Inns Quay</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Dublin 7</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>highcourtcentraloffice@courts.ie</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -92,7 +136,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2020-06-17+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
@@ -102,9 +146,12 @@
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>https://irl.eu-supply.com/ctm/Company/CompanyInformation/Index/1193</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
+      <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyType>ra</cbc:PartyType>
       </cac:ContractingPartyType>
@@ -141,6 +188,9 @@
          </ext:UBLExtension>
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
+      <cac:TenderingProcess>
+         <cbc:Description languageID="ENG">See tender documents.</cbc:Description>
+      </cac:TenderingProcess>
       <!--Procedure Type (BT-105)-->
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
       <!--PIN Competition Termination (BT-756)-->
@@ -150,19 +200,21 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
-      <cbc:Name languageID="DEU">Lieferung, Montage und Inbetriebnahme von digitalen Unterrichtstafeln als Erweiterung der bestehenden Infrastruktur</cbc:Name>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">Riverine Community Park</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">Procurement of Integrated Consultancy Team Services for Development of a Proposed Riverine Community Park</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="DEU">Lieferung, Montage und Inbetriebnahme von digitalen Unterrichtstafeln als Erweiterung der bestehenden Infrastruktur.</cbc:Description>
+      <cbc:Description languageID="ENG">Donegal County Council (DCC) and Derry City and Strabane District Council (DCSDC) have been awarded EUR 6 000 433 excluding VAT and professional fees, by the SEUPB PEACE IV Shared Space &amp; Services Programme to develop the Riverine Community Park in Lifford, Co. Donegal, Republic of Ireland and Strabane, Co. Tyrone, Northern Ireland. The project aims to address the impact of the conflict in the Lifford and Strabane area, and its hinterlands, by regenerating the border riverside area to create an iconic cross-border community park straddling the River Foyle as a shared space to bring communities together from both sides of the border, to re-connect and form new, long lasting connections and relationships.</cbc:Description>
       <!--Main Nature (BT-23)-->
-      <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
       <cac:RequestedTenderTotal>
-         <cbc:EstimatedOverallContractAmount currencyID="EUR">40000</cbc:EstimatedOverallContractAmount>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">6000433.00</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">45317000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">71220000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
@@ -182,43 +234,15 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension>
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="DEU">Direkter Link zur Eigenerklärung -- siehe Link https://www.staatsanzeiger-eservices.de/aJs/EuBekEigenUrl?z_param=224371</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                     </efac:SelectionCriteria>
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="DEU">Direkter Link zur Eigenerklärung -- siehe Link https://www.staatsanzeiger-eservices.de/aJs/EuBekEigenUrl?z_param=224371.</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                     </efac:SelectionCriteria>
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="DEU">Direkter Link zur Eigenerklärung -- siehe Link https://www.staatsanzeiger-eservices.de/aJs/EuBekEigenUrl?z_param=224371.</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                     </efac:SelectionCriteria>
-                     <!--Selection Criteria Second Stage Invite (BT-40)-->
-                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
-                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
-                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
-                  </efext:EformsExtension>
+                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
-         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
-         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
@@ -234,7 +258,7 @@
             <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://www.staatsanzeiger-eservices.de/aJs/EuBekVuUrl?z_param=224371</cbc:URI>
+                  <cbc:URI>http://irl.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=168696&amp;B=ETENDERS_SIMPLE</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
@@ -258,18 +282,8 @@
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
-         </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-            <cbc:Description languageID="DEU">Direkter Link zur Eigenerklärung -- siehe Link https://www.staatsanzeiger-eservices.de/aJs/EuBekEigenUrl?z_param=224371</cbc:Description>
-         </cac:ContractExecutionRequirement>
          <!--Submission Electronic Catalog (BT-764)-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="ecatalog-submission"><!--ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.--></cbc:ExecutionRequirementCode>
-         </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms>
             <cac:TechnicalCommitteePerson>
@@ -277,25 +291,26 @@
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
-         <cac:TenderValidityPeriod>
-            <cbc:DurationMeasure unitCode="DAY">51</cbc:DurationMeasure>
-         </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-003</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>
-            <cbc:ID>DEU</cbc:ID>
+            <cbc:ID>ENG</cbc:ID>
          </cac:Language>
          <!--Electronic Ordering (BT-92)-->
          <!--Electronic Payment (BT-93)-->
-         <cac:PostAwardProcess/>
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
@@ -305,22 +320,24 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-07-31+01:00</cbc:EndDate>
+                        <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
-         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
-         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
-         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2021-08-10+01:00</cbc:EndDate>
-            <cbc:EndTime>09:30:00+01:00</cbc:EndTime>
+            <cbc:EndDate>2020-07-31+01:00</cbc:EndDate>
+            <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
          <!--Deadline Receipt Requests (BT-1311)-->
@@ -331,46 +348,28 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <!--ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
-            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
-         </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <cac:OpenTenderEvent>
-            <cbc:OccurrenceDate>2021-08-10+01:00</cbc:OccurrenceDate>
-            <cbc:OccurrenceTime>10:00:00+01:00</cbc:OccurrenceTime>
-         </cac:OpenTenderEvent>
          <!--Electronic Auction (BT-767)-->
          <!--Electronic Auction Description (BT-122)-->
          <!--Electronic Auction URL (BT-123)-->
-         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
-            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
-         </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
          <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="DEU">Lieferung, Montage und Inbetriebnahme von digitalen Unterrichtstafeln als Erweiterung der bestehenden Infrastruktur</cbc:Name>
+         <cbc:Name languageID="ENG">Procurement of Integrated Consultancy Team Services for Development of a Proposed Riverine Community Park</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="DEU">Lieferung, Montage und Inbetriebnahme von digitalen Unterrichtstafeln als Erweiterung der bestehenden Infrastruktur.</cbc:Description>
+         <cbc:Description languageID="ENG">Donegal County Council (DCC) and Derry City and Strabane District Council (DCSDC) have been awarded EUR 6 000 433 excluding VAT and professional fees, by the SEUPB PEACE IV Shared Space &amp; Services Programme to develop the Riverine Community Park in Lifford, Co. Donegal, Republic of Ireland and Strabane, Co. Tyrone, Northern Ireland. The Project aims to address the impact of the conflict in the Lifford and Strabane area, and its hinterlands, by regenerating the border riverside area to create an iconic cross-border community park straddling the River Foyle as a shared space to bring communities together from both sides of the border, to re-connect and form new, long lasting connections and relationships.</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
          <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -384,10 +383,13 @@
          <!--Suitable for SMEs (BT-726)-->
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">6000433.00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
          <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">45317000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
@@ -399,7 +401,7 @@
          <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
             <cac:Address>
                <cac:AddressLine>
-                  <cbc:Line>95666 Mitterteich</cbc:Line>
+                  <cbc:Line>Co. Donegal, Republic of Ireland and Co. Tyrone, Northern Ireland.</cbc:Line>
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
@@ -408,8 +410,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <cac:PlannedPeriod>
-            <cbc:StartDate>2021-11-01+01:00</cbc:StartDate>
-            <cbc:EndDate><!-- ERROR: cbc:EndDate is required but the source TED notice does not contain DATE_END. For now, in order to obtain a valid XML, a far future date was used (2099-12-31+01:00) -->2099-12-31+01:00</cbc:EndDate>
+            <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->

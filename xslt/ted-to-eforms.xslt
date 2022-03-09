@@ -387,8 +387,11 @@ cac:ProcurementProjectLot
 			</ext:UBLExtension>
 		</ext:UBLExtensions>
 		<!-- A limited number of BTs are specified for tendering process at root level -->
-		<!-- Procedure Features (BT-88) cardinality ? No equivalent element in TED XML -->
-		<xsl:comment>Procedure Features (BT-88)</xsl:comment>
+		
+		<!-- Procedure Features (BT-88) cardinality ? - for Lots, Forbiden for eForms (Contract Notice)? subtypes 1-6, E2, 14, 15, 25-28, 38-40; Optional for 7-11, 16-19, E3, 22-24, 29-37, E5; Mandatory for 12, 13, 20, 21. The equivalent TED XML is MAIN_FEATURES_AWARD element-->
+		<xsl:call-template name="main-features-award"/>	
+		
+		
 		<!-- Procedure Type (BT-105) cardinality 1 Maps from elements: PT_OPEN, PT_RESTRICTED, PT_COMPETITIVE_NEGOTIATION, PT_COMPETITIVE_DIALOGUE, PT_INNOVATION_PARTNERSHIP -->
 		<xsl:comment>Procedure Type (BT-105)</xsl:comment>
 		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL)"/>

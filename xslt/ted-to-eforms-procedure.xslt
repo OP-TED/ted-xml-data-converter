@@ -43,8 +43,28 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	-->
 		</cac:LotDistribution>
 	</xsl:template>
-	
-	
+
+	<xsl:template name="main-features-award">
+		<!-- Procedure Features (BT-88) cardinality ? - for Lots, Forbiden for eForms (Contract Notice)? subtypes 1-6, E2, 14, 15, 25-28, 38-40; Optional for 7-11, 16-19, E3, 22-24, 29-37, E5; Mandatory for 12, 13, 20, 21. The equivalent TED XML is MAIN_FEATURES_AWARD element-->
+		<xsl:comment>Procedure Features (BT-88)</xsl:comment>
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:MAIN_FEATURES_AWARD/ted:P, ' '))"/>
+		<!--<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/ted:MAIN_FEATURES_AWARD/ted:P, ' '))"/>-->
+			<xsl:choose>
+				<xsl:when test="$text ne ''">
+					<cac:TenderingProcess>
+						<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+						<!--<cbc:Description languageID="FRA">Une procedure en deux étapes ...</cbc:Description>-->
+						<!-- Interrupted Mark-Up -->
+					</cac:TenderingProcess>
+				</xsl:when>
+				<xsl:when test="$eforms-notice-subtype = ('12','13', '20', '21')">
+					<cac:TenderingProcess>
+						<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>ERROR: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>
+					</cac:TenderingProcess>
+				</xsl:when>
+			</xsl:choose>			
+	</xsl:template>	
+			
 	<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL">
 		<xsl:variable name="element-name" select="fn:local-name(.)"/>
 		<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
