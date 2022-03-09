@@ -30,7 +30,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 
 	<xsl:template name="awarding-terms">
-		<!-- will need to determine rules for including main element cac:AwardingTerms -->
+		<!-- TBD: will need to determine rules for including main element cac:AwardingTerms -->
 		<cac:AwardingTerms>
 			<!-- Following Contract (BT-41) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
 			<!-- Jury Decision Binding (BT-42) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
@@ -49,6 +49,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<xsl:apply-templates select="ted:AC"/>
 			
 			<!-- Jury Member Name (BT-46) cardinality + (Is this correct? Conflict between documentation and Annex spreadsheet) Only used in Contract Notice subtypes 23 and 24 -->
+			<!-- TBD: see TEDEFO-748 -->
 			<!-- TBD: no equivalent element in TED XML identified -->
 			<cac:TechnicalCommitteePerson>
 				<cbc:FamilyName></cbc:FamilyName>
