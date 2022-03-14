@@ -160,6 +160,7 @@
          <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
@@ -398,11 +399,11 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <cac:RealizedLocation><!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <!--   -->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
             <cac:Address>
-               <cac:AddressLine>
-                  <cbc:Line>Co. Donegal, Republic of Ireland and Co. Tyrone, Northern Ireland.</cbc:Line>
-               </cac:AddressLine>
+               <cbc:StreetName>Co. Donegal, Republic of Ireland and Co. Tyrone, Northern Ireland.</cbc:StreetName>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
