@@ -122,7 +122,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 			<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
 			<!-- NOTE: CA_ACTIVITY_OTHER and CA_TYPE_OTHER cannot be converted -->
-			<xsl:apply-templates select="../ted:CA_ACTIVITY"/>
+			<xsl:apply-templates select="../ted:CA_ACTIVITY|../ted:CE_ACTIVITY"/>
 			<cac:Party>
 				<!-- Buyer Technical Identifier Reference (OPT-300) -->
 				<xsl:comment>Buyer Technical Identifier Reference (OPT-300)</xsl:comment>
@@ -309,19 +309,29 @@ eu-int-org European Institution/Agency or International Organisation
 		</cac:ContractingPartyType>
 		<!-- Buyer Contracting Entity (BT-740) -->
 		<xsl:comment>Buyer Contracting Entity (BT-740)</xsl:comment>
-	<!-- buyer-contracting-type codelist Not yet available -->
+		<!-- buyer-contracting-type codelist Not yet available -->
 		<cac:ContractingPartyType>
 			<cbc:PartyType><xsl:value-of select="'buyer-contracting-type'"/></cbc:PartyType>
 		</cac:ContractingPartyType>
 	</xsl:template>
 
 	<xsl:template match="ted:CA_ACTIVITY">
-	<!-- authority-activity codelist not yet available -->
+		<!-- Activity Authority (BT-10) -->
+		<xsl:comment>Activity Authority (BT-10)</xsl:comment>
+		<!-- authority-activity codelist not yet available -->
 		<cac:ContractingActivity>
 			<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
 	</xsl:template>
 	
+	<xsl:template match="ted:CE_ACTIVITY">
+		<!-- Activity Entity (BT-610) -->
+		<xsl:comment>Activity Entity (BT-610)</xsl:comment>
+		<!-- entity-activity codelist not yet available -->
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+	</xsl:template>
 	<xsl:template match="ted:ADDRESS_FURTHER_INFO">
 		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_FURTHER_INFO')]/../orgid"/>
 		<cac:AdditionalInformationParty>

@@ -953,20 +953,40 @@ none None
 		<!-- Note this will violate the business rules where BT-5101(c) Place Performance Streetline 2 is not allowed unless BT-5101(b) Place Performance Streetline 1 is present; -->
 		<!--         and BT-5101(b) Place Performance Streetline 1 is not allowed unless BT-5101(a) Place Performance Street is present -->
 		<!-- MAIN_SITE might contain no text! -->
-		<xsl:if test="fn:normalize-space(ted:MAIN_SITE) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
-			<cac:RealizedLocation>
-				<xsl:comment>Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)</xsl:comment>
-				<xsl:choose>
-					<xsl:when test="fn:normalize-space(ted:MAIN_SITE)">
-						<cac:Address>
-							<xsl:apply-templates select="ted:MAIN_SITE/ted:P"/>
-						</cac:Address>
-					</xsl:when>
-					<xsl:otherwise>
-						<cbc:Description languageID="ENG"><xsl:text>The source TED notice does not have an address for this Lot</xsl:text></cbc:Description>
-					</xsl:otherwise>
-				</xsl:choose>
-			</cac:RealizedLocation>
+		<!-- TBD: Questions about NUTS. 1. Do we convert only NUTS3 codes? 2. Do we convert NUTS2016 to NUTS2021? 3. What about NUTS code "00"> -->
+		<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts(n2016:NUTS/@CODE)"/>
+		<xsl:variable name="max-nuts-length" select="fn:max(for $val in $valid-nuts return fn:string-length($val))"/>
+		<xsl:variable name="main-nuts" select="$valid-nuts[fn:string-length(.) = $max-nuts-length][1]"/>
+		<xsl:variable name="rest-nuts" select="functx:value-except($valid-nuts, $main-nuts)"/>
+		<xsl:comment><xsl:value-of select="fn:concat(fn:string-join($valid-nuts, ':'), ' ', $max-nuts-length, ' ', fn:string-join($main-nuts, ':'), ' ', fn:string-join($rest-nuts, ':'))"/></xsl:comment>
+		<xsl:if test="fn:normalize-space(ted:MAIN_SITE) or fn:not(fn:empty($valid-nuts)) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
+			<xsl:comment>Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)</xsl:comment>
+			<xsl:choose>
+				<xsl:when test="fn:not(fn:normalize-space(ted:MAIN_SITE)) and fn:empty($valid-nuts)">
+					<!-- No valid MAIN_SITE and no valid NUTS codes -->
+					<cac:RealizedLocation>
+						<cbc:Region>anyw</cbc:Region>
+					</cac:RealizedLocation>
+				</xsl:when>
+					<!-- No valid MAIN_SITE and at least one valid NUTS code -->
+				<xsl:when test="fn:normalize-space(ted:MAIN_SITE) and fn:empty($valid-nuts)">
+					<!-- valid MAIN_SITE exists but no valid NUTS codes -->
+					<xsl:call-template name="main-site">
+						<xsl:with-param name="nuts-code" select="''"/>
+						<xsl:with-param name="main-site" select="ted:MAIN_SITE"/>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<!-- valid MAIN_SITE exists and at least one valid NUTS code exists, create a <cac:RealizedLocation><cac:Address> for each NUTS code -->
+					<xsl:variable name="main-site" select="ted:MAIN_SITE"/>
+					<xsl:for-each select="$valid-nuts">
+						<xsl:call-template name="main-site">
+							<xsl:with-param name="nuts-code" select="."/>
+							<xsl:with-param name="main-site" select="$main-site"/>
+						</xsl:call-template>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:if>
 	</xsl:template>
 	
@@ -978,13 +998,31 @@ none None
 		</xsl:if>
 	</xsl:template>
 
-
-	<xsl:template match="ted:MAIN_SITE/ted:P">
-		<cac:AddressLine>
-            <cbc:Line><xsl:value-of select="fn:normalize-space(.)"/></cbc:Line>
-        </cac:AddressLine>
+	<xsl:template name="main-site">
+		<xsl:param name="nuts-code"/>
+		<xsl:param name="main-site"/>
+		<xsl:variable name="valid-main-site-paragraphs" select="$main-site/ted:P[fn:normalize-space(.) != '']/fn:normalize-space()"/>
+		<cac:RealizedLocation>
+			<cac:Address>
+				<!-- need to follow order of elements defined in the eForms schema -->
+				<xsl:if test="$valid-main-site-paragraphs[1]">
+					<cbc:StreetName><xsl:value-of select="$valid-main-site-paragraphs[1]"/></cbc:StreetName>
+				</xsl:if>
+				<xsl:if test="$valid-main-site-paragraphs[2]">
+					<cbc:AdditionalStreetName><xsl:value-of select="$valid-main-site-paragraphs[2]"/></cbc:AdditionalStreetName>
+				</xsl:if>
+				<xsl:if test="$nuts-code != ''">
+					<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="$nuts-code"/></cbc:CountrySubentityCode>
+				</xsl:if>
+				<xsl:for-each select="$valid-main-site-paragraphs[fn:position() > 2]">
+					<cac:AddressLine>
+						<cbc:Line><xsl:value-of select="."/></cbc:Line>
+					</cac:AddressLine>
+				</xsl:for-each>
+			</cac:Address>
+		</cac:RealizedLocation>
 	</xsl:template>
-
+	
 	<xsl:template match="ted:DURATION">
 		<cac:PlannedPeriod>	
 			<!--"YEAR"|"MONTH"|"DAY"-->
@@ -1037,6 +1075,7 @@ none None
 					<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
 				</xsl:if>
 				<xsl:if test="(ted:RENEWAL)">
+					<!-- TBD: if subtype is not 15, 17 or 18, but RENEWAL exists, should cbc:MaximumNumberNumeric be used, and if so, with what value? -->
 					<cac:Renewal>
 						<cac:Period>
 							<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:RENEWAL_DESCR/ted:P, ' '))"/>
