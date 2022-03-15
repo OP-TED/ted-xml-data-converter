@@ -51,16 +51,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!--<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/ted:MAIN_FEATURES_AWARD/ted:P, ' '))"/>-->
 			<xsl:choose>
 				<xsl:when test="$text ne ''">
-					<cac:TenderingProcess>
 						<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 						<!--<cbc:Description languageID="FRA">Une procedure en deux étapes ...</cbc:Description>-->
 						<!-- Interrupted Mark-Up -->
-					</cac:TenderingProcess>
 				</xsl:when>
 				<xsl:when test="$eforms-notice-subtype = ('12','13', '20', '21')">
-					<cac:TenderingProcess>
-						<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>ERROR: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>
-					</cac:TenderingProcess>
+						<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>ERROR: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>	
 				</xsl:when>
 			</xsl:choose>			
 	</xsl:template>	

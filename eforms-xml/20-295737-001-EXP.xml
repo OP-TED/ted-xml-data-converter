@@ -188,9 +188,7 @@
          </ext:UBLExtension>
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
-      <cac:TenderingProcess>
-         <cbc:Description languageID="ENG">See tender documents.</cbc:Description>
-      </cac:TenderingProcess>
+      <cbc:Description languageID="ENG">See tender documents.</cbc:Description>
       <!--Procedure Type (BT-105)-->
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
       <!--PIN Competition Termination (BT-756)-->
