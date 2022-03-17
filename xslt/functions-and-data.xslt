@@ -114,16 +114,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <!-- NUTS -->
 
-	<xsl:function name="opfun:get-valid-nuts" as="xs:string*">
+	<xsl:function name="opfun:get-valid-nuts-codes" as="xs:string*">
 		<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
 		<xsl:param name="nuts-codes" as="xs:string*"/>
-		<xsl:sequence>
 			<xsl:for-each select="$nuts-codes">
 				<xsl:choose>
 					<xsl:when test="fn:string-length(.) > 4"><xsl:value-of select="."/></xsl:when>
 				</xsl:choose>
 			</xsl:for-each>
-		</xsl:sequence>
 	</xsl:function>
 
 
