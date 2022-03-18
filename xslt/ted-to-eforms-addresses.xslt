@@ -13,22 +13,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <!-- ADDRESSES -->
 
-	<xsl:variable name="tedaddresses" as="element()">
 	<!-- create temporary XML structure to hold all the TED address elements -->
-	<!--
-	All TED XML address elements
-	AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR	Name and address of the contractor/concessionaire
-	AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_PARTY	Name and address of the party or parties exercising legal control over the selected operator
-	COMPLEMENTARY_INFO/ADDRESS_MEDIATION_BODY	Body responsible for mediation procedures
-	COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY	Review body Address
-	COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO	Service from which information about the review procedure may be obtained
-	CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY	contracting authorities responsible for the procedure
-	CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY_ADDITIONAL	contracting authorities responsible for the procedure
-	CONTRACTING_BODY/ADDRESS_FURTHER_INFO	Additional information can be obtained from
-	CONTRACTING_BODY/ADDRESS_FURTHER_INFO_IDEM	Additional information can be obtained from the abovementioned address (ADDRESS_CONTRACTOR)
-	CONTRACTING_BODY/ADDRESS_PARTICIPATION	Tenders or requests to participate must be submitted
-	CONTRACTING_BODY/ADDRESS_PARTICIPATION_IDEM	Tenders or requests to participate must be submitted to the abovementioned address (ADDRESS_CONTRACTOR)
-	-->
+	<xsl:variable name="tedaddresses" as="element()">
 		<ted-orgs>
 			<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY/(ted:ADDRESS_CONTRACTING_BODY | ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL | ted:ADDRESS_FURTHER_INFO | ted:ADDRESS_PARTICIPATION) | ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY | ted:ADDRESS_MEDIATION_BODY | ted:ADDRESS_REVIEW_INFO) | ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS/ted:CONTRACTOR/(ted:ADDRESS_CONTRACTOR | ted:ADDRESS_PARTY))">
 				<ted-org>
@@ -44,8 +30,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</ted-orgs>
 	</xsl:variable>
 
+	<!-- create temporary XML structure to hold the UNIQUE (using deep-equal) addresses in TED XML. Each xml structure includes the XPATH of all source TED addresses that are the same address -->
 	<xsl:variable name="tedaddressesunique" as="element()">
-		<!-- create temporary XML structure to hold the UNIQUE (using deep-equal) addresses in TED XML. Each xml structure includes the XPATH of all source TED addresses that are the same address -->
 		<ted-orgs>
 		<xsl:for-each select="$tedaddresses//ted-org">
 			<xsl:variable name="pos" select="fn:position()"/>
@@ -77,8 +63,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</ted-orgs>
 	</xsl:variable>
 	
+	<!-- create temporary XML structure that is a copy of the UNIQUE addresses in TED XML, and assign a unique identifier to each (OPT-200, "Organization Technical Identifier") -->
 	<xsl:variable name="tedaddressesuniquewithid" as="element()">
-		<!-- create temporary XML structure that is a copy of the UNIQUE addresses in TED XML, and assign a unique identifier to each (OPT-200, "Organization Technical Identifier") -->
 		<ted-orgs>
 		<xsl:for-each select="$tedaddressesunique//ted-org">
 			<ted-org>
@@ -92,22 +78,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</ted-orgs>
 	</xsl:variable>
 
-<!-- original template for only one cac:ContractingParty
-	<xsl:template match="ted:CONTRACTING_BODY">
-		<cac:ContractingParty>
-			<xsl:apply-templates select="ted:ADDRESS_CONTRACTING_BODY/ted:URL_BUYER"/>
-			<xsl:apply-templates select="ted:CA_TYPE|CA_TYPE_OTHER"/>
-			<xsl:apply-templates select="ted:CA_ACTIVITY"/>
-			<cac:Party>
-				<cac:PartyIdentification>
-					<cbc:ID schemeName="organization"><xsl:value-of select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(.,'ADDRESS_CONTRACTING_BODY')]/../orgid"/></cbc:ID>
-				</cac:PartyIdentification>
-			</cac:Party>
-		</cac:ContractingParty>
-	</xsl:template>
--->
-
-
+	<!-- Template to create cac:ContractingParty -->
 	<xsl:template match="ted:ADDRESS_CONTRACTING_BODY|ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<cac:ContractingParty>
@@ -149,61 +120,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:template>
 
 
-<!-- eForms ContractNotice schema definition of cac:ContractingParty 
-		<xsd:sequence>
-			<xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:BuyerProfileURI" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:ContractingPartyType" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:ContractingActivity" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:ContractingRepresentationType" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:Party" minOccurs="1" maxOccurs="1"/>
-		</xsd:sequence>
-
-	<xsd:complexType name="PartyType">
-		<xsd:sequence>
-			<xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:MarkCareIndicator" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:MarkAttentionIndicator" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:WebsiteURI" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:LogoReferenceID" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:EndpointID" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:IndustryClassificationCode" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:PartyIdentification" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:PartyName" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:Language" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:PostalAddress" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:PhysicalLocation" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:PartyTaxScheme" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:PartyLegalEntity" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:Contact" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:Person" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:AgentParty" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:ServiceProviderParty" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:PowerOfAttorney" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:PartyAuthorization" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:FinancialAccount" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:AdditionalWebSite" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:SocialMediaProfile" minOccurs="0" maxOccurs="unbounded"/>
-		</xsd:sequence>
-	</xsd:complexType>
-
--->	
+	<!-- Template to create address structures for Organizations -->
 	<xsl:template name="org-address">
-	<!--
-		<xs:element ref="OFFICIALNAME"/>
-		<xs:element ref="NATIONALID" minOccurs="0"/>
-		<xs:element ref="ADDRESS" minOccurs="0"/>
-		<xs:element ref="TOWN"/>
-		<xs:element ref="POSTAL_CODE" minOccurs="0"/>
-		<xs:element ref="COUNTRY"/>
-		<xs:element ref="CONTACT_POINT" minOccurs="0"/>
-		<xs:element ref="PHONE" minOccurs="0"/>
-		<xs:element ref="E_MAIL" minOccurs="0"/>
-		<xs:element ref="FAX" minOccurs="0"/>
-		<xs:element ref="n2021:NUTS"/>
-		<xs:element ref="URL_GENERAL" minOccurs="0"/>
-		<xs:element ref="URL_BUYER" minOccurs="0"/>
-	-->	
 		<!-- Organization Internet Address (BT-505) cardinality ? -->
 		<xsl:comment>Organization Internet Address (BT-505)</xsl:comment>
 		<xsl:apply-templates select="ted:URL_GENERAL|ted:URL"/>
@@ -218,22 +136,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!-- Organization Identifier (BT-501) Optional for all subtypes -->
 		<xsl:comment>Organization Identifier (BT-501)</xsl:comment>
 		<xsl:apply-templates select="ted:NATIONALID"/>
-		<xsl:call-template name="contact"/>
-	
-
-	<!--
-		<xs:element ref="NATIONALID" minOccurs="0"/>
-		<xs:element ref="CONTACT_POINT" minOccurs="0"/>
-		<xs:element ref="PHONE" minOccurs="0"/>
-		<xs:element ref="E_MAIL" minOccurs="0"/>
-		<xs:element ref="FAX" minOccurs="0"/>
-		<xs:element ref="URL_GENERAL" minOccurs="0"/>
-		<xs:element ref="URL_BUYER" minOccurs="0"/>
-	-->
-		
+		<xsl:call-template name="contact"/>	
 	</xsl:template>
 	
-	
+	<!-- Template to create cac:PostalAddress -->
 	<xsl:template name="address">
 		<cac:PostalAddress>
 			<!-- Organization Street (BT-510) cardinality ? -->
@@ -254,6 +160,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</cac:PostalAddress>
 	</xsl:template>
 	
+	<!-- Template to create cac:Contact -->
 	<xsl:template name="contact">
 		<xsl:if test="ted:PHONE|ted:FAX|ted:E_MAIL|ted:CONTACT_POINT">
 			<cac:Contact>
@@ -273,33 +180,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</xsl:if>
 	</xsl:template>
 	
+	<!-- Template to create cac:ContractingPartyType -->
 	<xsl:template match="ted:CA_TYPE">
-<!--
-buyer-legal-type codelist
-cga Central government authority
-ra Regional authority
-la Local authority
-body-pl Body governed by public law
-body-pl-cga Body governed by public law, controlled by a central government authority
-body-pl-ra Body governed by public law, controlled by a regional authority
-body-pl-la Body governed by public law, controlled by a local authority
-pub-undert Public undertaking
-pub-undert-cga Public undertaking, controlled by a central government authority
-pub-undert-ra Public undertaking, controlled by a regional authority
-pub-undert-la Public undertaking, controlled by a local authority
-spec-rights-entity Entity with special or exclusive rights
-org-sub Organisation awarding a contract subsidised by a contracting authority
-org-sub-cga Organisation awarding a contract subsidised by a central government authority
-org-sub-ra Organisation awarding a contract subsidised by a regional authority
-org-sub-la Organisation awarding a contract subsidised by a local authority
-def-cont Defence contractor
-int-org International organisation
-eu-ins-bod-ag EU institution, body or agency
-rl-aut Regional or local authority
-eu-int-org European Institution/Agency or International Organisation
-
-
--->
 		<xsl:variable name="ca-type" select="@VALUE"/>
 		<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
 		<!-- Buyer Legal Type (BT-11) -->
@@ -315,6 +197,7 @@ eu-int-org European Institution/Agency or International Organisation
 		</cac:ContractingPartyType>
 	</xsl:template>
 
+	<!-- Templates to create cac:ContractingActivity -->
 	<xsl:template match="ted:CA_ACTIVITY">
 		<!-- Activity Authority (BT-10) -->
 		<xsl:comment>Activity Authority (BT-10)</xsl:comment>
@@ -332,6 +215,9 @@ eu-int-org European Institution/Agency or International Organisation
 			<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
 	</xsl:template>
+	
+	
+	<!-- Template to create cac:AdditionalInformationParty -->
 	<xsl:template match="ted:ADDRESS_FURTHER_INFO">
 		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_FURTHER_INFO')]/../orgid"/>
 		<cac:AdditionalInformationParty>
@@ -341,7 +227,8 @@ eu-int-org European Institution/Agency or International Organisation
 		</cac:AdditionalInformationParty>
 	</xsl:template>
 	
-		<xsl:template match="ted:ADDRESS_REVIEW_INFO">
+	<!-- Template to create cac:AppealInformationParty -->
+	<xsl:template match="ted:ADDRESS_REVIEW_INFO">
 		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_REVIEW_INFO')]/../orgid"/>
 		<cac:AppealInformationParty>
 			<cac:PartyIdentification>
@@ -350,7 +237,8 @@ eu-int-org European Institution/Agency or International Organisation
 		</cac:AppealInformationParty>
 	</xsl:template>
 
-		<xsl:template match="ted:ADDRESS_REVIEW_BODY">
+	<!-- Template to create cac:AppealReceiverParty -->
+	<xsl:template match="ted:ADDRESS_REVIEW_BODY">
 		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_REVIEW_BODY')]/../orgid"/>
 		<cac:AppealReceiverParty>
 			<cac:PartyIdentification>
@@ -359,7 +247,8 @@ eu-int-org European Institution/Agency or International Organisation
 		</cac:AppealReceiverParty>
 	</xsl:template>
 
-		<xsl:template match="ted:ADDRESS_MEDIATION_BODY">
+	<!-- Template to create cac:MediationParty -->
+	<xsl:template match="ted:ADDRESS_MEDIATION_BODY">
 		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_MEDIATION_BODY')]/../orgid"/>
 		<cac:MediationParty>
 			<cac:PartyIdentification>
@@ -368,7 +257,7 @@ eu-int-org European Institution/Agency or International Organisation
 		</cac:MediationParty>
 	</xsl:template>
 
-	
+	<!-- Templates to create cac:PartyIdentification -->
 	<xsl:template match="ted:ADDRESS_PARTICIPATION">
 		<xsl:variable name="orgid" select="$tedaddressesuniquewithid//ted-org/path[fn:ends-with(., 'ADDRESS_PARTICIPATION')]/../orgid"/>
 		<cac:PartyIdentification>

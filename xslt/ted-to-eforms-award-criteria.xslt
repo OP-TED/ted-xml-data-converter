@@ -10,25 +10,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 
-<!-- Example of AC TED element
-               <AC>
-                  <AC_QUALITY>
-                     <AC_CRITERION>Health, safety and wellbeing (HS&amp;W)</AC_CRITERION>
-                     <AC_WEIGHTING>10.08 %</AC_WEIGHTING>
-                  </AC_QUALITY>
-                  <AC_QUALITY>
-                     <AC_CRITERION>Supply chain management</AC_CRITERION>
-                     <AC_WEIGHTING>10.01 %</AC_WEIGHTING>
-                  </AC_QUALITY>
-                  <AC_PRICE>
-                     <AC_WEIGHTING>30 %</AC_WEIGHTING>
-                  </AC_PRICE>
-               </AC>
-
--->
-
-
-
+	<!-- Template to create cac:AwardingTerms -->
 	<xsl:template name="awarding-terms">
 		<!-- TBD: will need to determine rules for including main element cac:AwardingTerms -->
 		<cac:AwardingTerms>
@@ -58,12 +40,11 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Prize Rank (BT-44) cardinality ? -->
 			<!-- Value Prize (BT-644) cardinality ? -->
 			<!-- Rewards Other (BT-45) cardinality ? -->
-	
 		</cac:AwardingTerms>
 	</xsl:template>
 
 	<xsl:template match="ted:AC">
-		<!-- Some TED XML notices have no valid information within the AC element, so these must be checked -->
+		<!-- TBD: Some TED XML notices have no valid information within the AC element, so these must be checked -->
 		<xsl:if test="ted:AC_PROCUREMENT_DOC|.//*[fn:normalize-space(.)!='']">
 			<cac:AwardingCriterion>
 				<xsl:apply-templates select="*"/>
@@ -106,24 +87,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
 		<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Description>
 	</xsl:template>
-<!--
-eForms number-fixed codelist
-fix-tot Fixed (total)
-fix-unit Fixed (per unit)
 
-eForms number-weight codelist
-per-exa Weight (percentage, exact)
-per-mid Weight (percentage, middle of a range)
-dec-exa Weight (decimal, exact)
-dec-mid Weight (decimal, middle of a range)
-poi-exa Weight (points, exact)
-poi-mid Weight (points, middle of a range)
-ord-imp Order of importance
-
-eForms number-threshold codelist
-min-score Minimum score
-max-pass Maximum number of tenders passing
--->	
 	<xsl:template match="ted:AC_WEIGHTING">
 		<xsl:variable name="text" select="fn:normalize-space(.)"/>
 		<xsl:variable name="part1" select="fn:substring-before($text, ' ')"/>

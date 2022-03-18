@@ -67,23 +67,6 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cbc:BuyerProfileURI><xsl:apply-templates/></cbc:BuyerProfileURI>
 	</xsl:template>
 	
-	
-	<!-- 
-						<OFFICIALNAME>European Commission, Directorate-General for Informatics, Directorate A: Startegy and Resources, Unit A3: ICT Procurement and Contracts</OFFICIALNAME>
-						<ADDRESS>rue Montoyer 15, Office MO15 07/P001</ADDRESS>
-						<TOWN>Brussels</TOWN>
-						<POSTAL_CODE>1049</POSTAL_CODE>
-						<COUNTRY VALUE="BE"/>
-						<CONTACT_POINT>Digit Contracts Info Centre</CONTACT_POINT>
-						<E_MAIL>digit-contracts-info-centre@ec.europa.eu</E_MAIL>
-						<n2016:NUTS CODE="BE1"/>
-						<URL_GENERAL>https://ec.europa.eu/info/departments/informatics_en#responsibilities</URL_GENERAL>
-						<URL_BUYER>https://ec.europa.eu/info/funding-tenders/tenders/tender-opportunities-department/tender-opportunities-informatics_en</URL_BUYER>
-	
-	-->
-	
-	
-	
 	<xsl:template match="ted:REFERENCE_NUMBER">
 		<cbc:ID schemeName="InternalID"><xsl:apply-templates/></cbc:ID>
 	</xsl:template>
@@ -120,13 +103,6 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
 	</xsl:template>
 	
-	<!-- The TED element PERFORMANCE_STAFF_QUALIFICATION does not indicate at what procedure stage  supporting information for staff qualification should be provided, "t-requ" or "par-requ"  
-	requirement-stage codelist:
-	t-requ Tender requirement
-	par-requ Request to participate requirement
-	not-requ Not required
-	nyk Not yet known 
-	-->
 	<xsl:template match="ted:PERFORMANCE_STAFF_QUALIFICATION">
 		<cbc:RequiredCurriculaCode listName="requirement-stage"></cbc:RequiredCurriculaCode>
 	</xsl:template>

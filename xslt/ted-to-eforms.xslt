@@ -19,47 +19,45 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <xsl:include href="functions-and-data.xslt"/>
 <xsl:include href="ted-to-eforms-simple.xslt"/>
-<xsl:include href="ted-to-eforms-suppressed.xslt"/>
 <xsl:include href="ted-to-eforms-award-criteria.xslt"/>
 <xsl:include href="ted-to-eforms-addresses.xslt"/>
 <xsl:include href="ted-to-eforms-procedure.xslt"/>
 <xsl:include href="ted-to-eforms-lot.xslt"/>
 
-<!-- FUNCTIONS -->
 
-
-
-	<doc:doc> Form Language </doc:doc>
-	
-	<!-- TODO : currently only catering for one form , one language -->
+<!-- TBD : Currently these styleshets only cater for one form element, one language. Work is required to cater for other form elements with alternate languages -->
 	
 	
 	
 	
 <!-- DEFAULT TEMPLATES -->
 
-	<xsl:template match="*">
-		<xsl:variable name="name" select="opfun:prefix-and-name(.)"/>
-		<tedelement name="{$name}">
-			<xsl:apply-templates select="@*|node()"></xsl:apply-templates>
-		</tedelement>
-	</xsl:template>
+<!-- These templates exist to report where <xsl:apply-templates> select a TED element, but there is no matching <xsl:template> -->
 
-	<xsl:template match="@*">
-		<xsl:copy/>
-	</xsl:template>
+<xsl:template match="*">
+	<xsl:variable name="name" select="opfun:prefix-and-name(.)"/>
+	<tedelement name="{$name}">
+		<xsl:apply-templates select="@*|node()"></xsl:apply-templates>
+	</tedelement>
+</xsl:template>
+
+<xsl:template match="@*">
+	<xsl:copy/>
+</xsl:template>
 
 
 	
-<!-- MAIN ROOT TEMPLATE -->	
+<!-- MAIN ROOT TEMPLATE -->
 
-	<xsl:template match="/">
-		<!-- terminate processing if XML file contains more than one type of form (form element name) -->
-		<xsl:if test="fn:count($ted-form-elements-names) != 1">
-			<xsl:message terminate="yes">ERROR: found <xsl:value-of select="fn:count($ted-form-elements-names)"/> different form types in <xsl:value-of select="document-uri(.)"/></xsl:message>
-		</xsl:if>
-		<xsl:apply-templates select="$ted-form-main-element"/>
-	</xsl:template>
+<!-- This is the starting template -->
+
+<xsl:template match="/">
+	<!-- terminate processing if XML file contains more than one type of form (form element name) -->
+	<xsl:if test="fn:count($ted-form-elements-names) != 1">
+		<xsl:message terminate="yes">ERROR: found <xsl:value-of select="fn:count($ted-form-elements-names)"/> different form types in <xsl:value-of select="document-uri(.)"/></xsl:message>
+	</xsl:if>
+	<xsl:apply-templates select="$ted-form-main-element"/>
+</xsl:template>
 	
 	
 	
@@ -69,8 +67,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:template match="ted:LINKS_SECTION"/>
 <xsl:template match="ted:CODED_DATA_SECTION"/>
 <xsl:template match="ted:TRANSLATION_SECTION"/>
+<!-- LEGAL_BASIS only occurs as direct child of the FORM ELEMENT, and is handled in <xsl:template name="notice-information"> -->
+<xsl:template match="ted:LEGAL_BASIS"/>
 
-<!-- ROOT ELEMENT -->
+<!-- NOTICE only occurs as direct child of the FORM ELEMENT, and is only used to select the eForms Notice subtype -->
+<xsl:template match="ted:NOTICE"/>
+
+<!-- In TED, within element CONTRACTING_BODY, the elements ADDRESS_FURTHER_INFO_IDEM and ADDRESS_PARTICIPATION_IDEM are used to represent options for "to the abovementioned address" in the PDF forms. -->
+<!-- These indicate that for the functions of "Additional information can be obtained from" and "Tenders or requests to participate must be submitted to", the Contracting Authority address should be used. -->
+<!-- in eForms, such a direction is implicit, and no such elements are used. So the element ADDRESS_FURTHER_INFO_IDEM will not be mapped. -->
+<!-- However, the element ADDRESS_PARTICIPATION_IDEM may exist with a sibling element URL_PARTICIPATION, which is mapped to the element cbc:EndpointID within cac:TenderRecipientParty. -->
+<!-- In this case, it does not make sense to include cac:TenderRecipientParty without pointing to the correct address, so ADDRESS_PARTICIPATION_IDEM will be mapped if it has a URL_PARTICIPATION sibling -->
+<xsl:template match="ted:ADDRESS_FURTHER_INFO_IDEM"/>
+
+
+<!-- Form ELEMENT (F01_2014, F02_2014, etc) -->
+<!-- this template is called from the starting template above -->
 
 <xsl:template match="*[@CATEGORY='ORIGINAL']">
 	<xsl:element name="{opfun:get-eforms-element-name($ubl-xsd-type)}" namespace="{opfun:get-eforms-xmlns($ubl-xsd-type)}">
@@ -88,15 +100,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:call-template name="root-tendering-process"/>
 		<xsl:call-template name="root-procurement-project"/>
 		<xsl:call-template name="procurement-project-lots"/>
-<!--
-cac:ContractingParty
-cac:TenderingTerms
-cac:TenderingProcess
-cac:ProcurementProject
-cac:ProcurementProjectLot
--->
 	</xsl:element>
-
 </xsl:template>
 
 
@@ -116,30 +120,6 @@ cac:ProcurementProjectLot
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
-<!--
-			<xsd:sequence>
-				<xsd:element ref="efbc:AccessToolName" minOccurs="0" maxOccurs="unbounded"/> Not relevant for Root (and contradiction in documentation)
-				<xsd:element ref="efbc:ProcedureRelaunchIndicator" minOccurs="0" maxOccurs="1"/> Not relevant for Root (relevancy still to be decided)
-				<xsd:element ref="efac:AnswerReceptionPeriod" minOccurs="0" maxOccurs="1"/> Not in documentation
-				<xsd:element ref="efac:AppealRequestsStatistics" minOccurs="0" maxOccurs="unbounded"/> BT-712 BT-636 BT-635 Only relevant for /*/efac:NoticeResult/LotResult
-				<xsd:element ref="efac:AppealsInformation" minOccurs="0" maxOccurs="unbounded"/> Only relevant for ContractAwardNotice
-				<xsd:element ref="efac:AwardCriterionParameter" minOccurs="0" maxOccurs="unbounded"/> Not relevant for Root; Only relevant within cac:AwardingCriterion/cac:SubordinateAwardingCriterion
-				<xsd:element ref="efac:BuyingPartyReference" minOccurs="0" maxOccurs="unbounded"/> Not in documentation
-				<xsd:element ref="efac:Changes" minOccurs="0" maxOccurs="1"/> Only relevant for Root
-				<xsd:element ref="efac:ContractModification" minOccurs="0" maxOccurs="unbounded"/> Only relevant for Root
-				<xsd:element ref="efac:FieldsPrivacy" minOccurs="0" maxOccurs="unbounded"/> Does not exist in TED XML
-				<xsd:element ref="efac:InterestExpressionReceptionPeriod" minOccurs="0" maxOccurs="1"/> Only relevant for Lot
-				<xsd:element ref="efac:NoticeResult" minOccurs="0" maxOccurs="1"/> Only relevant for Root
-				<xsd:element ref="efac:NoticeSubType" minOccurs="0" maxOccurs="1"/> Only relevant for Root
-				<xsd:element ref="efac:Organizations" minOccurs="0" maxOccurs="1"/> Only relevant for Root
-				<xsd:element ref="efac:Publication" minOccurs="0" maxOccurs="1"/> Only relevant for Root
-				<xsd:element ref="efac:SelectionCriteria" minOccurs="0" maxOccurs="unbounded"/> Only relevant for Lot or LotsGroup
-				<xsd:element ref="efac:StrategicProcurementStatistics" minOccurs="0" maxOccurs="unbounded"/> Only relevant within LotResult
-				<xsd:element ref="efac:SubsidiaryClassification" minOccurs="0" maxOccurs="unbounded"/> Only relevant within MainCommodityClassification
-				<xsd:element ref="efac:ReferencedDocumentPart" minOccurs="0" maxOccurs="unbounded"/> Not in documentation
-				<xsd:element ref="efac:TenderSubcontractingRequirements" minOccurs="0" maxOccurs="unbounded"/> Only relevant for Lot in PIN and CN
-			</xsd:sequence>
--->
 					<xsl:if test="$eforms-form-type eq 'CAN'">
 						<!-- TODO : efac:AppealsInformation : Review Requester Organization requesting for review or Review Requester Organization that requested a review request. -->
 					</xsl:if>
@@ -274,9 +254,11 @@ cac:ProcurementProjectLot
 		</xsl:for-each>
 	</efac:Organizations>
 	<!--
+	These instructions can be un-commented to show the variables holding the organization addresses at intermediate stages
 	<xsl:copy-of select="$tedaddresses"/>
 	<xsl:copy-of select="$tedaddressesunique"/>
-	<xsl:copy-of select="$tedaddressesuniquewithid"/>-->
+	<xsl:copy-of select="$tedaddressesuniquewithid"/>
+	-->
 
 </xsl:template>
 
@@ -488,7 +470,7 @@ cac:ProcurementProjectLot
 
 
 
-<!-- Initial template for all Lots -->
+<!-- Initial template to process each Lot -->
 
 
 <xsl:template name="procurement-project-lots">
