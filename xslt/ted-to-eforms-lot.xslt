@@ -206,9 +206,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Mediation Organization cardinality ? -->
 			<xsl:call-template name="appeal-terms"/>
 			<!-- Submission Language (BT-97) cardinality + Mandatory for PIN Notice subtypes 7, 8 and 9, and CN Notice subtypes 10-14, 16-22; Optional for CN Notice subtypes 15, 23, 24 and E3 -->
-			<xsl:comment>Submission Language (BT-97)</xsl:comment>
 			<!-- Forbidden for all other Notice subtypes -->
-			<xsl:apply-templates select="../../ted:PROCEDURE/ted:LANGUAGES/ted:LANGUAGE"/>
+			<xsl:call-template name="submission-language"/>
 			<!-- Electronic Ordering (BT-92) cardinality ? Mandatory for CN subtype 16, Optional for CN subtypes 7-15 and 17-22 -->
 			<xsl:comment>Electronic Ordering (BT-92)</xsl:comment>
 			<!-- Electronic Payment (BT-93) cardinality ? Mandatory for CN subtype 16, Optional for CN subtypes 7-15 and 17-22 -->
@@ -452,6 +451,25 @@ EINVOICING	Electronic invoicing will be accepted
 		</xsl:if>
 	</xsl:template>
 
+	<xsl:template name="submission-language">
+		<!-- Submission Language (BT-97) cardinality + Mandatory for PIN Notice subtypes 7, 8 and 9, and CN Notice subtypes 10-14, 16-22; Optional for CN Notice subtypes 15, 23, 24 and E3 -->
+		<xsl:comment>Submission Language (BT-97)</xsl:comment>
+		<!-- Forbidden for all other Notice subtypes -->
+		<xsl:choose>
+			<xsl:when test="../../ted:PROCEDURE/ted:LANGUAGES/ted:LANGUAGE">
+				<xsl:apply-templates select="../../ted:PROCEDURE/ted:LANGUAGES/ted:LANGUAGE"/>
+			</xsl:when>
+			<xsl:when test="($eforms-notice-subtype = ('7','8','9','10','11','12','13','14','16','17','18','19','20','21','22'))">
+				<cac:Language>
+					<cbc:ID><xsl:comment>ERROR: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. For now, in order to obtain a valid XML, ENG is used by default. 
+							</xsl:comment><xsl:text>ENG</xsl:text>
+					</cbc:ID>
+				</cac:Language>
+				
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
+
 	<xsl:template match="ted:LANGUAGE">
 		<xsl:variable name="lang" select="opfun:get-eforms-language(@VALUE)"/>
 		<cac:Language>
@@ -502,13 +520,8 @@ EINVOICING	Electronic invoicing will be accepted
 							<!-- Tool Name (BT-632) cardinality ? Optional for PIN and CN Notice subtypes 1 to 24, E1, E2 and E3; Forbidden for other Notice subtypes No equivalent element in TED XML -->
 							<xsl:comment>Tool Name (BT-632)</xsl:comment>
 							<!-- Deadline Receipt Expressions (BT-630) cardinality ? Mandatory for CN Notice subtypes 10-14, Optional for CN Notice subtypes 20,21; Forbidden for other Notice subtypes -->
-							<xsl:comment>Deadline Receipt Expressions (BT-630)</xsl:comment>
 							<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->
-							<xsl:if test="(../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS) and ($eforms-notice-subtype = ('10', '11', '12', '13', '14', '20', '21'))">
-								<efac:InterestExpressionReceptionPeriod>
-									<xsl:call-template name="date-time-receipt-tenders"/>
-								</efac:InterestExpressionReceptionPeriod>
-							</xsl:if>
+							<xsl:call-template name="date-time-receipt-expressions"/>
 						</efext:EformsExtension>
 					</ext:ExtensionContent>
 				</ext:UBLExtension>
@@ -538,15 +551,10 @@ EINVOICING	Electronic invoicing will be accepted
 			<xsl:apply-templates select="../../ted:CONTRACTING_BODY/ted:URL_TOOL"/>
 			
 			<!-- Deadline Receipt Tenders (BT-131) cardinality ? Mandatory for subtypes PIN 8; Optional for subtypes PIN 7, 9; CN 16-24; Forbidden for other Notice subtypes -->
-			<xsl:comment>Deadline Receipt Tenders (BT-131)</xsl:comment>
 			<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->
 			<!-- TBD: Question: For Notice Subtypes 20 and 21, BOTH Deadline Receipt Expressions (BT-630) AND Deadline Receipt Tenders (BT-131) map from TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS - What should we do? -->
-			<xsl:if test="(../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS) and ($eforms-notice-subtype = ('7', '8', '9', '16', '17', '18', '19', '20', '21','22', '23', '24'))">
-				<xsl:comment>Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)</xsl:comment>
-				<cac:TenderSubmissionDeadlinePeriod>
-					<xsl:call-template name="date-time-receipt-tenders"/>
-				</cac:TenderSubmissionDeadlinePeriod>
-			</xsl:if>
+			<xsl:call-template name="date-time-receipt-tenders"/>
+			
 			<!-- Dispatch Invitation Tender (BT-130) cardinality ? Optional for subtypes PIN 7-9, CN 10-14, 16-24. Forbidden for other Notice subtypes -->
 			<xsl:comment>Dispatch Invitation Tender (BT-130)</xsl:comment>
 			<xsl:apply-templates select="../../ted:PROCEDURE/ted:DATE_DISPATCH_INVITATIONS"/>
@@ -609,8 +617,49 @@ EINVOICING	Electronic invoicing will be accepted
 	<xsl:template match="ted:NO_CONTRACT_COVERED_GPA"> 
 		<cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>	
 	</xsl:template>		
-	
+	<xsl:template name="date-time-receipt-expressions">
+		<!-- Deadline Receipt Expressions (BT-630) cardinality ? Mandatory for CN Notice subtypes 10-14, Optional for CN Notice subtypes 20,21; Forbidden for other Notice subtypes -->
+		<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->	
+		<xsl:comment>Deadline Receipt Expressions (BT-630)</xsl:comment>
+		
+			<xsl:choose>
+				<xsl:when test="(../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS)">
+					<efac:InterestExpressionReceptionPeriod>
+						<xsl:call-template name="date-time-receipt-common"/>
+					</efac:InterestExpressionReceptionPeriod>
+				</xsl:when>
+				<xsl:when test="($eforms-notice-subtype = ('10', '11', '12', '13', '14'))">
+					<efac:InterestExpressionReceptionPeriod>	
+						<xsl:comment>ERROR: Deadline Receipt Expressions (BT-630) is Mandatory for eForms subtypes 10, 11, 12, 13 and 14, but no DATE_RECEIPT_TENDERS was found in TED XML. For now, in order to obtain a valid XML, a far future date was used (2099-01-01+01:00). 
+						</xsl:comment>
+						<xsl:text>2099-01-01+01:00</xsl:text>
+					</efac:InterestExpressionReceptionPeriod>
+				</xsl:when>
+			</xsl:choose>
+		
+	</xsl:template>
 	<xsl:template name="date-time-receipt-tenders">
+		<!-- Deadline Receipt Tenders (BT-131) cardinality ? Mandatory for subtypes PIN 8; Optional for subtypes PIN 7, 9; CN 16-24; Forbidden for other Notice subtypes -->
+		<xsl:comment>Deadline Receipt Tenders (BT-131)</xsl:comment>
+		<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->
+		<!-- TBD: Question: For Notice Subtypes 20 and 21, BOTH Deadline Receipt Expressions (BT-630) AND Deadline Receipt Tenders (BT-131) map from TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS - What should we do? -->
+			<xsl:choose>
+				<xsl:when test="(../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS)">
+					<cac:TenderSubmissionDeadlinePeriod>
+	
+						<xsl:call-template name="date-time-receipt-common"/>
+					</cac:TenderSubmissionDeadlinePeriod>			
+				</xsl:when>
+				<xsl:when test="($eforms-notice-subtype = ('8'))">
+					<cac:TenderSubmissionDeadlinePeriod>
+						<xsl:comment>ERROR: Deadline Receipt Tenders (BT-131) is Mandatory for eForms subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. For now, in order to obtain a valid XML, a far future date was used (2099-01-01+01:00). 
+						</xsl:comment>
+						<xsl:text>2099-01-01+01:00</xsl:text>
+					</cac:TenderSubmissionDeadlinePeriod>			
+				</xsl:when>
+			</xsl:choose>
+	</xsl:template>
+	<xsl:template name="date-time-receipt-common">
 		<!-- NOTE: cbc:EndDate and cbc:EndTime should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
 		<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
 		<!-- Therfore for complete accuracy, a mapping of country codes to UTC timezone offsets is required -->

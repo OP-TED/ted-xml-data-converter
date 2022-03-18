@@ -312,7 +312,12 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2021-04-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
@@ -324,7 +329,6 @@
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
-         <!--Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2021-04-08+01:00</cbc:EndDate>
             <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
