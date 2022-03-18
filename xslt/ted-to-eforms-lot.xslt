@@ -319,6 +319,7 @@ RESERVED_ORGANISATIONS_SERVICE_MISSION	Participation in the procedure is reserve
 TED elements
 RESTRICTED_SHELTERED_PROGRAM	The execution of the contract/concession is restricted to the framework of sheltered employment programmes
 PARTICULAR_PROFESSION	Execution of the service is reserved to a particular profession
+NO_PARTICULAR_PROFESSION	Execution of the service is not reserved to a particular profession - this does not need to be converted
 REFERENCE_TO_LAW	There is no equivalent in eForms
 -->
 	<xsl:template name="reserved-execution">
@@ -1003,7 +1004,7 @@ none None
 		<!--         and BT-5101(b) Place Performance Streetline 1 is not allowed unless BT-5101(a) Place Performance Street is present -->
 		<!-- MAIN_SITE might contain no text! -->
 		<!-- TBD: Questions about NUTS. 1. Do we convert only NUTS3 codes? 2. Do we convert NUTS2016 to NUTS2021? 3. What about NUTS code "00"> -->
-		<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts(n2016:NUTS/@CODE)"/>
+		<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts-codes(n2016:NUTS/@CODE)"/>
 		<xsl:variable name="max-nuts-length" select="fn:max(for $val in $valid-nuts return fn:string-length($val))"/>
 		<xsl:variable name="main-nuts" select="$valid-nuts[fn:string-length(.) = $max-nuts-length][1]"/>
 		<xsl:variable name="rest-nuts" select="functx:value-except($valid-nuts, $main-nuts)"/>
