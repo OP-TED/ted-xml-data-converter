@@ -6,9 +6,9 @@ The repository contains the following folders:
 | Folder | Purpose |
 | --- | --- |
 | `xslt` | The xslt and data for the conversion |
-| `ted-xml` | Sample source TED XML files. See [Files-Selected-for-Testing.md](ted-xml/Files-Selected-for-Testing.md) |
-| `eforms-xml` | The converted eForms XML files. |
-| `data` | This folder should be removed. Files used for analysis |
+| `sample-files/ted-xml` | Sample source TED XML files. See [Files-Selected-for-Testing.md](sample-files/Files-Selected-for-Testing.md) |
+| `sample-files/eforms-xml` | The sample source TED XML files converted to eForms XML files. |
+| `structure-files` | This folder should be removed. Files used for analysis |
 | `examples` | Some files in this folder should be removed. Sample XML in TED schema XML and eForms XML format for testing the converter |
 
 ## XSLT files
@@ -20,11 +20,11 @@ Currently, the `xslt` folder contains these files:
 |  [ted-to-eforms.xslt](xslt/ted-to-eforms.xslt) | The main (starting) XSLT file |
 |  [functx-1.0.1-doc.xsl](xslt/functx-1.0.1-doc.xsl) | The FunctX XSLT Function Library, available [here](http://www.xsltfunctions.com/) |
 |  [functions-and-data.xslt](xslt/functions-and-data.xslt) | An XSLT file for retrieving data from the mapping files, and common functions |
-|  [ted-to-eforms-simple.xslt](xslt/ted-to-eforms-simple.xslt) | An XSLT file containing simple templates (one-to-one mappings) |
-|  [ted-to-eforms-addresses.xslt](xslt/ted-to-eforms-addresses.xslt) | An XSLT file containing templates for converting addresses |
-|  [ted-to-eforms-award-criteria.xslt](xslt/ted-to-eforms-award-criteria.xslt) | An XSLT file containing templates for converting Award Criteria (BG-38) |
-|  [ted-to-eforms-procedure.xslt](xslt/ted-to-eforms-procedure.xslt) | An XSLT file containing templates for converting information at Procedure level |
-|  [ted-to-eforms-lot.xslt](xslt/ted-to-eforms-lot.xslt) | An XSLT file containing templates for converting information at Lot level |
+|  [simple.xslt](xslt/simple.xslt) | An XSLT file containing simple templates (one-to-one mappings) |
+|  [addresses.xslt](xslt/addresses.xslt) | An XSLT file containing templates for converting addresses |
+|  [award-criteria.xslt](xslt/award-criteria.xslt) | An XSLT file containing templates for converting Award Criteria (BG-38) |
+|  [procedure.xslt](xslt/procedure.xslt) | An XSLT file containing templates for converting information at Procedure level |
+|  [lot.xslt](xslt/lot.xslt) | An XSLT file containing templates for converting information at Lot level |
 | Mapping files |
 | [ted-notice-type-mapping.xml](xslt/ted-notice-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
 | [languages.xml](xslt/languages.xml) | The "Language" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
@@ -57,7 +57,7 @@ Content below this line is relevant to the eForms developers, and ma be moved to
 
 <br>
 
-### Analysis files in the `data` folder
+### Analysis files in the `structure-files` folder
 
 These files are in draft status.
 

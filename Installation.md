@@ -5,21 +5,19 @@ Project to convert notices in TED XML format to eForms XML format
 Please see the [README.md](README.md) file for information about the files included in this repository.
 
 
+## Installation instructions
+
+These instructions are for installation in a Unix environment.
+
+<br>
+
 ## Summary
 To run the converter requires the following :
 
 * Java
 * Saxon 9-HE (or later)
 * This repository
-* XSpec
 
-<br>
-
-## Installation instructions
-
-These instructions are for installation in a Unix environment. The author is not familiar with Windows Command Prompt or PowerShell.
-
-<br>
 
 ### Java
 
@@ -29,7 +27,7 @@ The user's system must have either a Java Virtual Machine, or a Java development
 
 ### Saxon, or another XSLT processor
 
-A processor for XSLT version 2.0 is required. This converter has only been tested using the free version of Saxon, Saxon-9 HE, available from https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. The installation instructions are here: https://www.saxonica.com/html/documentation9.9/about/installationjava/. Make sure the saxon9he.jar file is in the Java CLASSPATH environment variable.
+A processor for XSLT version 2.0 is required. This converter has only been tested using the open-source version of Saxon, Saxon-9 HE, available from https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. The installation instructions are here: https://www.saxonica.com/html/documentation9.9/about/installationjava/. Make sure the saxon9he.jar file is in the Java CLASSPATH environment variable.
 
 Documentation on running XSL using Saxon9 is available here: https://saxonica.com/documentation9.9/index.html#!using-xsl
 
@@ -39,15 +37,6 @@ Documentation on running XSL using Saxon9 is available here: https://saxonica.co
 
 Clone the TED XML Data Converter from https://citnet.tech.ec.europa.eu/CITnet/stash/projects/TEDXDC/repos/ted-xml-data-converter/browse.
 
-
-<br>
-
-### XSPec
-
-Clone XSpec from https://github.com/xspec/xspec. There’s information and a tutorial here: https://github.com/xspec/xspec/wiki/Getting-Started.
-
-
-<br>
 
 ## Using the TED XML Data Converter
 
