@@ -10,7 +10,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	
-<xsl:include href="functx-1.0.1-doc.xsl"/>
+<xsl:include href="lib/functx-1.0.1-doc.xsl"/>
 
 <xsl:variable name="newline" select="'&#10;'"/>
 <xsl:variable name="tab" select="'&#09;'"/>

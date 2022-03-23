@@ -18,7 +18,7 @@ Currently, the `xslt` folder contains these files:
 | --- | --- |
 | XSLT |
 |  [ted-to-eforms.xslt](xslt/ted-to-eforms.xslt) | The main (starting) XSLT file |
-|  [functx-1.0.1-doc.xsl](xslt/functx-1.0.1-doc.xsl) | The FunctX XSLT Function Library, available [here](http://www.xsltfunctions.com/) |
+|  [functx-1.0.1-doc.xsl](xslt/lib/functx-1.0.1-doc.xsl) | The FunctX XSLT Function Library, available [here](http://www.xsltfunctions.com/) |
 |  [functions-and-data.xslt](xslt/functions-and-data.xslt) | An XSLT file for retrieving data from the mapping files, and common functions |
 |  [simple.xslt](xslt/simple.xslt) | An XSLT file containing simple templates (one-to-one mappings) |
 |  [addresses.xslt](xslt/addresses.xslt) | An XSLT file containing templates for converting addresses |
