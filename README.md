@@ -1,7 +1,8 @@
-# TED XML to eForms XML Converter
 
+# Disclaimer
+This project is currently under development. We may update the current version and replace it with a new version at any time. In this case, we recommend you retrieve the latest version in order to ensure technical compliance. The Publications Office cannot guarantee the accuracy, adequacy, validity, reliability, availability or completeness of this information and accepts no responsibility for any use you may make of this project’s component parts.
 
-## Purpose
+# Purpose
 
 The purpose of the TED XML Data Converter is to assist eSenders in the migration to eForms. 
 
@@ -9,9 +10,9 @@ An eSender may wish to switch the production of notices in their system from the
 
 The TED XML Data Converter is designed to help with this process, by converting a notice published in the TED schemas, to a draft form of the same notice in eForms. The eSender can then correct and complete this notice, and use it as a basis for creating a following notice in eForms.
 
-## How to use
+# How to use
 
-The code for the TED XML Data Converter is contained in this repository. Basic usage instructions for developers to run the code in their own system is available here (link to usage markdown file).
+The code for the TED XML Data Converter is contained in this repository. Basic usage instructions for developers to run the code in their own system is available [here](Usage-Information.md).
 An API will be developed for the converter. A user will specify the TED notice number, and the API will retrieve the published TED notice XML, convert it to eForms XML and return it to the user.
 
 ## XML output will be incomplete and invalid.
@@ -47,7 +48,7 @@ Some notes about the versioning scheme here. Similar to that for the eForms SDK.
 
 ## Developer information
 
-Information about the code and associated files, and brief information on how to use them, can be found here (link to code markdown file).
+Information about the code and associated files, and brief information on how to use them, can be found [here](Usage-Information.md).
 
 
 ## Feedback
@@ -56,72 +57,3 @@ Feedback on this converter is welcome. Please address questions, comments and bu
 
 
 
-
-<br>
-
-<br>
-
-
-
----
-
-Content below this line may be moved to another Markdown file in this repository or deleted.
-
----
-
-<br>
-
-
-Project to convert notices in TED XML format to eForms XML format.
-
-Please see [Conversion-Methodology.md](Conversion-Methodology.md) for the approach and methodology for developing the conversion XSLT.
-
-Please see [Installation.md](Installation.md) for installation and usage instructions.
-
-### Summary
-The repository contains the following folders:
-
-| Folder | Purpose |
-| --- | --- |
-| `xslt` | The xslt and data for the conversion |
-| `ted-xml` | Sample source TED XML files. See [Files-Selected-for-Testing.md](ted-xml/Files-Selected-for-Testing.md) |
-| `eforms-xml` | The converted eForms XML files. |
-| `data` | Files used for analysis |
-
-### XSLT files
-Currently, the `xslt` folder contains these files:
-
-| File | Purpose |
-| --- | --- |
-| XSLT |
-|  [ted-to-eforms.xslt](xslt/ted-to-eforms.xslt) | The main (starting) XSLT file |
-|  [functions-and-data.xslt](xslt/functions-and-data.xslt) | An XSLT file for retrieving data from other files, and common functions |
-|  [ted-to-eforms-simple.xslt](xslt/ted-to-eforms-simple.xslt) | An XSLT file containing simple templates (one-to-one mappings) |
-|  [ted-to-eforms-addresses.xslt](xslt/ted-to-eforms-addresses.xslt) | An XSLT file containing templates for converting addresses |
-|  [ted-to-eforms-award-criteria.xslt](xslt/ted-to-eforms-award-criteria.xslt) | An XSLT file containing templates for converting Award Criteria (BG-38) |
-| XSpec testing |
-| [test-ted-to-eforms-xslt.xspec](xslt/test-ted-to-eforms-xslt.xspec) | XSPec file for testing the XSLT |
-| Mapping files |
-|  [ubl-form-types.xml](xslt/ubl-form-types.xml) | An XML file containing mappings data for eForms form element names and XML namespaces |
-|  [languages.xml](xslt/languages.xml) | The "Language" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
-| [ted-notice-mapping.xml](xslt/ted-notice-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
-| [ubl-form-types.xml](xslt/ubl-form-types.xml) | Mapping file from Notice Type abbreviation (eg CAN) to root element name and namespace |
-| [languages.xml](xslt/languages.xml) | Authority codelist for languages, to map from TED abbreviations to eForms abbreviations |
-| [ca-types-mapping.xml](xslt/ca-types-mapping.xml) | Mapping file between CA_TYPE and buyer-legal-type |
-
-<br>
-
-### Analysis files in the `data` folder
-
-These files are in draft status.
-
-The "structure" files are intended to include all possible elements used in eForms. This excludes elements that are valid according to the relevant eForms schema, but which are not actually used in eForms. Use of the correct attributes and values is not guaranteed. These files will not pass the eForms business rules Schematron validation. Element values used are fictitious, and may be redundant or inconsistent or contradictory.
-
-Repeatability. Where elements are repeatable, it is not the purpose of these XML files to show that. Only one instance of these elements will usually be present. However, where the schema defines an exclusive choice of child elements for a parent element (meaning that the XML would be schema-invalid if the same parent element contained both child elements), then the parent element will be repeated to allow all possible child elements to be present, and maintain schema validity.
-
-
-| File | Purpose |
-| --- | --- |
-| notice-structure-CN.xml | XML file containing all possible used elements for any Contract Notice |
-| notice-structure-CAN.xml | XML file containing all possible used elements for any Contract Award Notice |
-| notice-structure-PIN-CFC.xml | XML file containing all possible used elements for any PIN used as a Call for Competition Notice |

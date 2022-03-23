@@ -32,7 +32,16 @@ Currently, the `xslt` folder contains these files:
 
 ## Usage
 
-The TEDXDC Converter 
+The TEDXDC Converter has been developed and tested using the Saxon-9 HE XSLT processor, available from https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. However any XSLT 2 processor can be used. The main template is ted-to-eforms.xslt, the other templates and data XML files are called by the main template.
+
+
+
+Project to convert notices in TED XML format to eForms XML format.
+
+Please see [Conversion-Methodology.md](Conversion-Methodology.md) for the approach and methodology for developing the conversion XSLT.
+
+Please see [Installation.md](Installation.md) for installation and usage instructions.
+
 
 <br>
 
@@ -56,13 +65,6 @@ The "structure" files are intended to include all possible elements used in eFor
 
 Repeatability. Where elements are repeatable, it is not the purpose of these XML files to show that. Only one instance of these elements will usually be present. However, where the schema defines an exclusive choice of child elements for a parent element (meaning that the XML would be schema-invalid if the same parent element contained both child elements), then the parent element will be repeated to allow all possible child elements to be present, and maintain schema validity.
 
-
-
-Project to convert notices in TED XML format to eForms XML format.
-
-Please see [Conversion-Methodology.md](Conversion-Methodology.md) for the approach and methodology for developing the conversion XSLT.
-
-Please see [Installation.md](Installation.md) for installation and usage instructions.
 
 
 | File | Purpose |
