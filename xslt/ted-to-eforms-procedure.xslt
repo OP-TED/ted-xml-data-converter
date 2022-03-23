@@ -26,27 +26,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!-- LOT_DIVISION has children: LOT_ALL LOT_COMBINING_CONTRACT_RIGHT LOT_MAX_NUMBER LOT_MAX_ONE_TENDERER LOT_ONE_ONLY -->
 
 	<cac:LotDistribution>
-		<!-- F01_2014 F02_2014 F04_2014 F05_2014 F21_2014 F22_2014 F23_2014 F24_2014 -->
-		<!-- Lots Max Awarded (BT-33) The maximum number of Lots that can be awarded to one economic operator -->
+		<!-- Lots Max Awarded (BT-33) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Lots Max Awarded (BT-33)</xsl:comment>
 		<xsl:apply-templates select="ted:LOT_MAX_ONE_TENDERER"/>
-		<!-- Lots Max Allowed (BT-31) The maximum number of Lots that one economic operator can submit a tender for -->
+		<!-- Lots Max Allowed (BT-31) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Lots Max Allowed (BT-31)</xsl:comment>
-		<!-- Tenders may be submmitted for: LOT_ALL LOT_MAX_NUMBER LOT_ONE_ONLY -->
+		<!-- Tenders may be submitted for: LOT_ALL LOT_MAX_NUMBER LOT_ONE_ONLY -->
 		<xsl:apply-templates select="ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY"/>
 	</cac:LotDistribution>
 </xsl:template>
 
 <xsl:template name="main-features-award">
-	<!-- Procedure Features (BT-88) cardinality ? - for Lots, Forbiden for eForms (Contract Notice)? subtypes 1-6, E2, 14, 15, 25-28, 38-40; Optional for 7-11, 16-19, E3, 22-24, 29-37, E5; Mandatory for 12, 13, 20, 21. The equivalent TED XML is MAIN_FEATURES_AWARD element-->
+	<!-- Procedure Features (BT-88) cardinality ? Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:comment>Procedure Features (BT-88)</xsl:comment>
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:MAIN_FEATURES_AWARD/ted:P, ' '))"/>
-	<!--<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/ted:MAIN_FEATURES_AWARD/ted:P, ' '))"/>-->
 		<xsl:choose>
 			<xsl:when test="$text ne ''">
 					<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
-					<!--<cbc:Description languageID="FRA">Une procedure en deux étapes ...</cbc:Description>-->
-					<!-- Interrupted Mark-Up -->
 			</xsl:when>
 			<xsl:when test="$eforms-notice-subtype = ('12','13', '20', '21')">
 					<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>ERROR: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>	
@@ -65,10 +61,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:template match="ted:ACCELERATED_PROC">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<cac:ProcessJustification>
-		<!-- Procedure Accelerated (BT-106) cardinality ? Optional for Notice subtypes CN 16-18, CAN  29-33, E3 and E5; Forbidden for other Notice subtypes -->
+		<!-- Procedure Accelerated (BT-106) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Procedure Accelerated (BT-106)</xsl:comment>
 		<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
-		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for Notice subtypes CN 16-18, CAN  29-33, E3 and E5; Forbidden for other Notice subtypes -->
+		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Procedure Accelerated Justification (BT-1351)</xsl:comment>
 		<xsl:if test="$text ne ''">
 			<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>

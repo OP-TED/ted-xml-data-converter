@@ -15,7 +15,7 @@ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:sp
 xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " 
 >
-	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <xsl:include href="functions-and-data.xslt"/>
 <xsl:include href="ted-to-eforms-simple.xslt"/>
@@ -25,7 +25,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:include href="ted-to-eforms-lot.xslt"/>
 
 
-<!-- TBD : Currently these styleshets only cater for one form element, one language. Work is required to cater for other form elements with alternate languages -->
+<!-- TBD: Currently these stylesheets only cater for one form element, one language. Work is required to cater for other form elements with alternate languages -->
 	
 	
 	
@@ -85,7 +85,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <!-- this template is called from the starting template above -->
 
 <xsl:template match="*[@CATEGORY='ORIGINAL']">
-	<xsl:element name="{opfun:get-eforms-element-name($ubl-xsd-type)}" namespace="{opfun:get-eforms-xmlns($ubl-xsd-type)}">
+	<xsl:element name="{opfun:get-eforms-element-name($eforms-form-type)}" namespace="{opfun:get-eforms-xmlns($eforms-form-type)}">
 		<xsl:namespace name="cac" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'"/>
 		<xsl:namespace name="cbc" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'"/>
 		<xsl:namespace name="ext" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2'"/>
@@ -154,7 +154,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!-- Customization ID (UBL) -->
 	<xsl:comment>Customization ID (UBL)</xsl:comment>
 	<!-- TBD: hard-coded for now -->
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
 	<!-- Notice Identifier (BT-701) -->
 	<xsl:comment>Notice Identifier (BT-701)</xsl:comment>
 	<!-- TBD: hard-coded for now -->
@@ -310,14 +310,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:PROCUREMENT_LAW"/>
 		<!-- Exclusion Grounds (BT-67) cardinality ? No Exclusion Grounds in TED XML-->
 		<xsl:comment>Exclusion Grounds (BT-67)</xsl:comment>
-		<!-- Lots Max Awarded (BT-33) cardinality 1 Optional for subtypes PIN 7,8,9, CN 10-14, 16-24. Forbidden for all other Notice subtype -->
+		<!-- Lots Max Awarded (BT-33) cardinality 1 OOptional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Lots Max Awarded (BT-33)</xsl:comment>
-		<!-- Lots Max Allowed (BT-31) cardinality 1 -->
+		<!-- Lots Max Allowed (BT-31) cardinality 1 Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Lots Max Allowed (BT-31)</xsl:comment>
 		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
-		<!-- Group Identifier (BT-330) cardinality 1 -->
+		<!-- Group Identifier (BT-330) cardinality 1 Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Group Identifier (BT-330)</xsl:comment> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
-		<!-- Group Lot Identifier (BT-1375) cardinality 1 -->
+		<!-- Group Lot Identifier (BT-1375) cardinality 1 Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Group Lot Identifier (BT-1375)</xsl:comment> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
 	</cac:TenderingTerms>
 </xsl:template>
@@ -358,11 +358,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<ext:UBLExtension>
 				<ext:ExtensionContent>
 					<efext:EformsExtension>
-						<!-- Tool Name (BT-632) -->
+						<!-- Tool Name (BT-632) Optional for PIN subtypes 1-9, E1, and E2, CN subtypes 10-24 and E3; Forbidden for other subtypes -->
 						<xsl:comment>Tool Name (BT-632)</xsl:comment>
-						<!-- Deadline Receipt Expressions (BT-630) -->
+						<!-- Deadline Receipt Expressions (BT-630) Mandatory for CN subtypes 10-14; Optional for CN subtypes 20 and 21; Forbidden for other subtypes -->
 						<xsl:comment>Deadline Receipt Expressions (BT-630)</xsl:comment>
-						<!-- Procurement Relaunch (BT-634) cardinality >? Note: review after meeting on BT-634 and email from Carmen -->
+						<!-- Procurement Relaunch (BT-634) cardinality ? Optional for CN subtypes 10-24 and E3, CAN subtypes 29-37 and E4; Forbidden for other subtypes -->
+						<!-- TBD: review after meeting on BT-634 and email from DG GROW -->
 						<xsl:comment>Procurement Relaunch (BT-634)</xsl:comment>
 					</efext:EformsExtension>
 				</ext:ExtensionContent>
@@ -370,24 +371,27 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</ext:UBLExtensions>
 		<!-- A limited number of BTs are specified for tendering process at root level -->
 		
-		<!-- Procedure Features (BT-88) cardinality ? - for Lots, Forbiden for eForms (Contract Notice)? subtypes 1-6, E2, 14, 15, 25-28, 38-40; Optional for 7-11, 16-19, E3, 22-24, 29-37, E5; Mandatory for 12, 13, 20, 21. The equivalent TED XML is MAIN_FEATURES_AWARD element-->
+		<!-- Procedure Features (BT-88) cardinality ? -Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="main-features-award"/>	
 		
 		
-		<!-- Procedure Type (BT-105) cardinality 1 Maps from elements: PT_OPEN, PT_RESTRICTED, PT_COMPETITIVE_NEGOTIATION, PT_COMPETITIVE_DIALOGUE, PT_INNOVATION_PARTNERSHIP -->
+		<!-- Procedure Type (BT-105) cardinality 1 Mandatory for CN subtypes 10, 11, 16-18, 23, and 24, CAN subtypes 25-31, 36, and 37; Optional for PIN subtypes 7-9, CN subtypes 12, 13, 20-22, and E3, CAN subtypes 33, 34, and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Maps from elements: PT_OPEN, PT_RESTRICTED, PT_COMPETITIVE_NEGOTIATION, PT_COMPETITIVE_DIALOGUE, PT_INNOVATION_PARTNERSHIP -->
 		<xsl:comment>Procedure Type (BT-105)</xsl:comment>
 		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL)"/>
-		<!-- PIN Competition Termination (BT-756) cardinality ? This BT only allowed for CAN notice subtypes 29, 30, 33, 34 -->
+		<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
 		<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
 		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Lots All Required (BT-763)</xsl:comment>
-		<!-- Procedure Accelerated (BT-106), Procedure Accelerated Justification (BT-1351) -->
+		<!-- Procedure Accelerated (BT-106) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes
+ -->
 		<xsl:apply-templates select="ted:PROCEDURE/ted:ACCELERATED_PROC"/>
-		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? this BT only allowed for CAN notice subtypes 25 to 35 and E4, E5 -->
+		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Direct Award Justification Previous Procedure Identifier (BT-1252)</xsl:comment>
-		<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? -->
+		<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Direct Award Justification (BT-136)</xsl:comment>
-		<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? -->
+		<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Direct Award Justification (BT-135)</xsl:comment>
 	</cac:TenderingProcess>
 </xsl:template>
@@ -415,7 +419,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:comment> cac:ProcurementProject here </xsl:comment>
 	<cac:ProcurementProject>
 		<!-- A limited number of BTs are specified for procurement project at root level -->
-		<!-- Internal Identifier (BT-22) cardinality 1 REFERENCE_NUMBER -->
+		<!-- Internal Identifier (BT-22) cardinality 1 Optional for ALL Notice subtypes -->
 		<xsl:comment>Internal Identifier (BT-22)</xsl:comment>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:REFERENCE_NUMBER"/>
 		<!-- Title (BT-21) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->

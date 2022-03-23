@@ -88,7 +88,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<!-- Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740) -->
 			<xsl:comment>Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)</xsl:comment>
 			<xsl:apply-templates select="../(ted:CA_TYPE|CA_TYPE_OTHER)"/>
-			<!-- Activity Authority (BT-10) and Activity Entity (BT-610)-->
+			<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
+			<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 			<xsl:comment>Activity Authority (BT-10) and Activity Entity (BT-610)</xsl:comment>
 			<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 			<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
@@ -122,18 +123,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 	<!-- Template to create address structures for Organizations -->
 	<xsl:template name="org-address">
-		<!-- Organization Internet Address (BT-505) cardinality ? -->
+		<!-- Organization Internet Address (BT-505) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Internet Address (BT-505)</xsl:comment>
 		<xsl:apply-templates select="ted:URL_GENERAL|ted:URL"/>
 		<!-- Need to investigate purpose and meaning of element URL_BUYER in addresses not CONTRACTING_BODY -->
 		<!-- Organization Technical Identifier (OPT-200) cardinality ? -->
 		<xsl:comment>Organization Technical Identifier (OPT-200)</xsl:comment>
 		<cac:PartyIdentification><cbc:ID schemeName="organization"><xsl:value-of select="../orgid"/></cbc:ID></cac:PartyIdentification>
-		<!-- Organization Name (BT-500) cardinality ? -->
+		<!-- Organization Name (BT-500) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Name (BT-500)</xsl:comment>
 		<xsl:apply-templates select="ted:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
-		<!-- Organization Identifier (BT-501) Optional for all subtypes -->
+		<!-- Organization Identifier (BT-501) Optional for ALL subtypes -->
 		<xsl:comment>Organization Identifier (BT-501)</xsl:comment>
 		<xsl:apply-templates select="ted:NATIONALID"/>
 		<xsl:call-template name="contact"/>	
@@ -142,19 +143,19 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!-- Template to create cac:PostalAddress -->
 	<xsl:template name="address">
 		<cac:PostalAddress>
-			<!-- Organization Street (BT-510) cardinality ? -->
+			<!-- Organization Street (BT-510) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization Street (BT-510)</xsl:comment>
 			<xsl:apply-templates select="ted:ADDRESS"/>
-			<!-- Organization City (BT-513) cardinality ? -->
+			<!-- Organization City (BT-513) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization City (BT-513)</xsl:comment>
 			<xsl:apply-templates select="ted:TOWN"/>
-			<!-- Organization Post Code (BT-512) cardinality ? -->
+			<!-- Organization Post Code (BT-512) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization Post Code (BT-512)</xsl:comment>
 			<xsl:apply-templates select="ted:POSTAL_CODE"/>
-			<!-- Organization Country Subdivision (BT-507) cardinality ? -->
+			<!-- Organization Country Subdivision (BT-507) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization Country Subdivision (BT-507)</xsl:comment>
 			<xsl:apply-templates select="n2016:NUTS"/>
-			<!-- Organization Country Code (BT-514) cardinality ? -->
+			<!-- Organization Country Code (BT-514) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization Country Code (BT-514)</xsl:comment>
 			<xsl:apply-templates select="ted:COUNTRY"/>
 		</cac:PostalAddress>
@@ -164,16 +165,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:template name="contact">
 		<xsl:if test="ted:PHONE|ted:FAX|ted:E_MAIL|ted:CONTACT_POINT">
 			<cac:Contact>
-				<!-- Organization Contact Point (BT-502) cardinality ? -->
+				<!-- Organization Contact Point (BT-502) cardinality ? Optional for ALL subtypes -->
 				<xsl:comment>Organization Contact Point (BT-502)</xsl:comment>
 				<xsl:apply-templates select="ted:CONTACT_POINT"/>
-				<!-- Organization Contact Telephone Number (BT-503) cardinality ? -->
+				<!-- Organization Contact Telephone Number (BT-503) cardinality ? Optional for ALL subtypes -->
 				<xsl:comment>Organization Contact Telephone Number (BT-503)</xsl:comment>
 				<xsl:apply-templates select="ted:PHONE"/>
-				<!-- Organization Contact Fax (BT-739) cardinality ? -->
+				<!-- Organization Contact Fax (BT-739) cardinality ? Optional for ALL subtypes -->
 				<xsl:comment>Organization Contact Fax (BT-739)</xsl:comment>
 				<xsl:apply-templates select="ted:FAX"/>
-				<!-- Organization Contact Email Address (BT-506) cardinality ? -->
+				<!-- Organization Contact Email Address (BT-506) cardinality ? Optional for ALL subtypes -->
 				<xsl:comment>Organization Contact Email Address (BT-506)</xsl:comment>
 				<xsl:apply-templates select="ted:E_MAIL"/>
 			</cac:Contact>
@@ -184,12 +185,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:template match="ted:CA_TYPE">
 		<xsl:variable name="ca-type" select="@VALUE"/>
 		<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
-		<!-- Buyer Legal Type (BT-11) -->
+		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:comment>Buyer Legal Type (BT-11)</xsl:comment>
 		<cac:ContractingPartyType>
 			<cbc:PartyType><xsl:value-of select="$buyer-legal-type"/></cbc:PartyType>
 		</cac:ContractingPartyType>
-		<!-- Buyer Contracting Entity (BT-740) -->
+		<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Buyer Contracting Entity (BT-740)</xsl:comment>
 		<!-- buyer-contracting-type codelist Not yet available -->
 		<cac:ContractingPartyType>
@@ -199,7 +200,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 	<!-- Templates to create cac:ContractingActivity -->
 	<xsl:template match="ted:CA_ACTIVITY">
-		<!-- Activity Authority (BT-10) -->
+		<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:comment>Activity Authority (BT-10)</xsl:comment>
 		<!-- authority-activity codelist not yet available -->
 		<cac:ContractingActivity>
@@ -208,7 +209,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:template>
 	
 	<xsl:template match="ted:CE_ACTIVITY">
-		<!-- Activity Entity (BT-610) -->
+		<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Activity Entity (BT-610)</xsl:comment>
 		<!-- entity-activity codelist not yet available -->
 		<cac:ContractingActivity>

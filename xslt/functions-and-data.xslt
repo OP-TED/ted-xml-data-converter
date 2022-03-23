@@ -15,27 +15,41 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:variable name="newline" select="'&#10;'"/>
 <xsl:variable name="tab" select="'&#09;'"/>
 
+
+<!-- MAPPING FILES -->
+	
+<xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
+
+
 <!-- GLOBAL VARIABLES -->
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
 <xsl:variable name="ted-form-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY]"/>
-<!-- Variable ted-form-main-element holds the first form element that has @CATEGORY='ORIGINAL'. This is the TED form element which is processed. -->
+<!-- Variable ted-form-main-element holds the first form element that has @CATEGORY='ORIGINAL'. This is the TED form element which is processed -->
 <xsl:variable name="ted-form-main-element" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
-<!-- Variable ted-form-additional-elements holds the form elements that are not the main form element. -->
+<!-- Variable ted-form-additional-elements holds the form elements that are not the main form element -->
 <xsl:variable name="ted-form-additional-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
-<!-- Variable ted-form-elements-names holds a list of unique element names of the ted form elements. -->
+<!-- Variable ted-form-elements-names holds a list of unique element names of the ted form elements -->
 <xsl:variable name="ted-form-elements-names" select="fn:distinct-values($ted-form-elements/fn:local-name())"/>
-<!-- Variable ted-form-element-name holds a the element name of the main form element. -->
+<!-- Variable ted-form-element-name holds the element name of the main form element. -->
 <xsl:variable name="ted-form-element-name" select="$ted-form-main-element/fn:local-name()"/> <!-- F06_2014 or CONTRACT_DEFENCE or MOVE or OTH_NOT or ... -->
+<!-- Variable ted-form-name holds the name of the main form element as held in the @FORM attribute -->
 <xsl:variable name="ted-form-name" select="$ted-form-main-element/fn:string(@FORM)"/><!-- F06 or 17 or T02 or ... -->
+<!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element. -->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
+<!-- Variable ted-form-document-code holds the value of the @TYPE attribute of the NOTICE element -->
 <xsl:variable name="ted-form-document-code" select="/ted:TED_EXPORT/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+<!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
+<!-- Variable ted-form-additional-languages holds the values of the @LG attribute of the remaining form elements -->
 <xsl:variable name="ted-form-additional-languages" select="$ted-form-additional-elements/fn:string(@LG)"/>
- 
+
+
+<!-- Variable eforms-first-language holds the eForms three-letter code for the first language -->
 <xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
 
+<!-- Variable legal-basis holds the value of the @VALUE attribute of the element LEGAL_BASIS, if it exists. If element LEGAL_BASIS does not exist, it holds the value "OTHER" -->
 <xsl:variable name="legal-basis">
 	<xsl:choose>
 		<xsl:when test="$ted-form-main-element/ted:LEGAL_BASIS"><xsl:value-of select="$ted-form-main-element/ted:LEGAL_BASIS/@VALUE"/></xsl:when>
@@ -43,25 +57,30 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:choose>
 </xsl:variable>
 
+<!-- Variable eforms-notice-subtype holds the computed eForms notice subtype value -->
 <xsl:variable name="eforms-notice-subtype">
 	<xsl:value-of select="opfun:get-eforms-notice-subtype($ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $ted-form-document-code)"/>
 </xsl:variable>
 
+<!-- Variable eforms-subtypes-pin holds the values of eForms notice subtypes for notices of Document Type PIN -->
 <xsl:variable name="eforms-subtypes-pin" as="xs:string*">
 	<xsl:for-each select="1 to 9"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
 	<xsl:sequence select="('E1', 'E2')"/>
 </xsl:variable>
 
+<!-- Variable eforms-subtypes-cn holds the values of eForms notice subtypes for notices of Document Type Contract Notice -->
 <xsl:variable name="eforms-subtypes-cn" as="xs:string*">
 	<xsl:for-each select="10 to 24"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
 	<xsl:sequence select="('E3')"/>
 </xsl:variable>
 
+<!-- Variable eforms-subtypes-can holds the values of eForms notice subtypes for notices of Document Type Contract Award Notice -->
 <xsl:variable name="eforms-subtypes-can" as="xs:string*">
 	<xsl:for-each select="25 to 40"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
 	<xsl:sequence select="('E4')"/>
 </xsl:variable>
 
+<!-- Variable eforms-form-type holds the computed Document Type of the notice being converted -->
 <xsl:variable name="eforms-form-type">
 	<xsl:choose>
 		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-pin"><xsl:value-of select="'PIN'"/></xsl:when>
@@ -71,21 +90,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:choose>
 </xsl:variable>
 
-<xsl:variable name="ubl-xsd-type">
-	<xsl:choose>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-pin"><xsl:value-of select="'PIN'"/></xsl:when>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-cn"><xsl:value-of select="'CN'"/></xsl:when>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-can"><xsl:value-of select="'CAN'"/></xsl:when>
-		<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
-	</xsl:choose>
-</xsl:variable>
 	
 
+<!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
 <xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
 
 
-<xsl:variable name="languages">
-	<!-- variable containing XML of map of language codes from TED to eForms from codelist "languages.xml" -->
+<!-- LANGUAGES -->
+
+<!-- Variable language-codes-map holds a mapping of language codes from TED two-letter format to eForms three-letter format -->
+<xsl:variable name="language-codes-map">
 	<xsl:variable name="source-language-file" select="fn:document('languages.xml')"/>
 	<languages>
 		<xsl:for-each select="$source-language-file//record[op-mapped-code/@source='TED']">
@@ -100,18 +114,19 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 </xsl:variable>
 
 
-
-<!-- LANGUAGES -->
-
+<!-- Function opfun:get-eforms-language converts a language code from TED two-letter format to eForms three-letter format -->
 <xsl:function name="opfun:get-eforms-language" as="xs:string">
 	<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
 	<xsl:param name="ted-language" as="xs:string"/>
-	<xsl:variable name="mapped-language" select="$languages//language[ted eq $ted-language]/fn:string(eforms)"/>
+	<xsl:variable name="mapped-language" select="$language-codes-map//language[ted eq $ted-language]/fn:string(eforms)"/>
 	<xsl:value-of select="if ($mapped-language) then $mapped-language else 'UNKNOWN-LANGUAGE'"/>
 </xsl:function>
 
-<!-- NUTS -->
 
+
+<!-- GLOBAL FUNCTIONS -->
+
+<!-- Function opfun:get-valid-nuts-codes filters a list of NUTS codes to those of more than 4 characters -->
 <xsl:function name="opfun:get-valid-nuts-codes" as="xs:string*">
 	<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
 	<xsl:param name="nuts-codes" as="xs:string*"/>
@@ -125,28 +140,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 
 
-<!-- MAPPING FILES -->
-	
-<xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
-
-
 <!-- FORM TYPES AND SUBTYPES -->
 
 
+<!-- Function opfun:get-eforms-element-name returns the name of eForms schema root element, given the Document Type code, e.g. "CN" to "ContractNotice" -->
 <xsl:function name="opfun:get-eforms-element-name" as="xs:string">
-	<!-- function to get name of eForms schema root element, given abbreviation, e.g. "CN" to "ContractNotice" -->
 	<xsl:param name="form-abbreviation" as="xs:string"/>
 	<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
 </xsl:function>
 
+<!-- Function opfun:get-eforms-xmlns returns the eForms schema XML namespace, given the Document Type code, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
 <xsl:function name="opfun:get-eforms-xmlns" as="xs:string">
-	<!-- function to get name of eForms schema XML namespace given abbreviation, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
 	<xsl:param name="form-abbreviation" as="xs:string"/>
 	<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
 </xsl:function>
 
+<!-- Function opfun:get-eforms-notice-subtype computes the eForms notice subtype, using information from the TED notice -->
 <xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">
-	<!-- function to get eForms Notice Subtype value, given values from TED XML notice -->
 	<xsl:param name="ted-form-element"/>
 	<xsl:param name="ted-form-name"/>
 	<xsl:param name="ted-form-notice-type"/>
@@ -179,8 +189,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <!-- GENERAL FUNCTIONS -->
 	
+<!-- Function opfun:descendants-deep-equal compares the contents of two nodes, returning TRUE or FALSE. The names of the root node elements are ignored -->
 <xsl:function name="opfun:descendants-deep-equal" as="xs:boolean">
-	<!-- function to deep-compare the contents of two nodes, returning TRUE or FALSE. The names of the root node elements are ignored -->
 	<xsl:param name="node1" as="node()"/>
 	<xsl:param name="node2" as="node()"/>
 	<xsl:variable name="out1">
@@ -200,8 +210,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
 </xsl:function>
 
+<!-- Function to opfun:prefix-and-name returns the namespace prefix and local name of a given element, e.g. "cbc:ID" -->
 <xsl:function name="opfun:prefix-and-name" as="xs:string">
-	<!-- function to return the prefix and name of given element, e.g. "cbc:ID" -->
 	<xsl:param name="elem" as="element()"/>
 	<xsl:variable name="name" select="$elem/fn:local-name()"/>
 	<xsl:variable name="prefix" select="fn:prefix-from-QName(fn:node-name($elem))"/>

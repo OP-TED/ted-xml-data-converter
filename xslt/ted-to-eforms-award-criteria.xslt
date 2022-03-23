@@ -14,37 +14,36 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	<xsl:template name="awarding-terms">
 		<!-- TBD: will need to determine rules for including main element cac:AwardingTerms -->
 		<cac:AwardingTerms>
-			<!-- Following Contract (BT-41) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
-			<!-- Jury Decision Binding (BT-42) cardinality + Forbidden for all Forms except Mandatory for Contract Notice subtypes 23 and 24 -->
-			<!-- No Negotiation Necessary (BT-120) cardinality + Forbidden for all Forms except CM for Contract Notice subtype 16 and Optional for Contract Notice subtype 20 RIGHT_CONTRACT_INITIAL_TENDERS -->
+			<!-- Following Contract (BT-41) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- Jury Decision Binding (BT-42) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- No Negotiation Necessary (BT-120) cardinality + Optional for CN subtypes 16 and 20; Forbidden for other subtypes -->
 			<xsl:apply-templates select="../../ted:RIGHT_CONTRACT_INITIAL_TENDERS"/>
 			<!-- Award Criteria Order Justification (BT-733) cardinality ? No equivalent element in TED XML -->
 			<!-- Award Criteria Complicated (BT-543) cardinality ? No equivalent element in TED XML -->
 			
-			<!-- Award Criterion Number (BT-541) -->
-			<!-- Award Criterion Number Weight (BT-5421) cardinality ? -->
-			<!-- Award Criterion Number Fixed (BT-5422) cardinality ? -->
-			<!-- Award Criterion Number Threshold (BT-5423) cardinality ? -->
-			<!-- Award Criterion Type (BT-539) cardinality ? -->
-			<!-- Award Criterion Name (BT-734) cardinality ? -->
-			<!-- Award Criterion Description (BT-540) cardinality ? -->
+			<!-- Award Criterion Number (BT-541) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+			<!-- Award Criterion Number Weight (BT-5421) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+			<!-- Award Criterion Number Fixed (BT-5422) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+			<!-- Award Criterion Number Threshold (BT-5423) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+			<!-- Award Criterion Type (BT-539) cardinality ? Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
+			<!-- Award Criterion Name (BT-734) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+			<!-- Award Criterion Description (BT-540) cardinality ? Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 			<xsl:apply-templates select="ted:AC"/>
 			
-			<!-- Jury Member Name (BT-46) cardinality + (Is this correct? Conflict between documentation and Annex spreadsheet) Only used in Contract Notice subtypes 23 and 24 -->
+			<!-- Jury Member Name (BT-46) cardinality + (Is this correct? Conflict between documentation and Annex spreadsheet) Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<!-- TBD: see TEDEFO-748 -->
 			<!-- TBD: no equivalent element in TED XML identified -->
 			<cac:TechnicalCommitteePerson>
 				<cbc:FamilyName></cbc:FamilyName>
 			</cac:TechnicalCommitteePerson>
 			<!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
-			<!-- Prize Rank (BT-44) cardinality ? -->
-			<!-- Value Prize (BT-644) cardinality ? -->
-			<!-- Rewards Other (BT-45) cardinality ? -->
+			<!-- Prize Rank (BT-44) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- Value Prize (BT-644) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		</cac:AwardingTerms>
 	</xsl:template>
 
 	<xsl:template match="ted:AC">
-		<!-- TBD: Some TED XML notices have no valid information within the AC element, so these must be checked -->
 		<xsl:if test="ted:AC_PROCUREMENT_DOC|.//*[fn:normalize-space(.)!='']">
 			<cac:AwardingCriterion>
 				<xsl:apply-templates select="*"/>
@@ -54,7 +53,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 	<xsl:template match="ted:AC_QUALITY">
 		<cac:SubordinateAwardingCriterion>
-			<!-- Award Criterion Number (BT-541) -->
+			<!-- Award Criterion Number (BT-541) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 			<xsl:comment>Award Criterion Number (BT-541)</xsl:comment>
 			<xsl:apply-templates select="ted:AC_WEIGHTING"/>
 			<xsl:apply-templates select="ted:AC_CRITERION"/>
@@ -76,14 +75,14 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 
 	<xsl:template match="ted:AC_PROCUREMENT_DOC">
 		<cac:SubordinateAwardingCriterion>
-			<!-- Award Criterion Description (BT-540) -->
+			<!-- Award Criterion Description (BT-540) cardinality ? Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 			<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
 			<cbc:Description languageID="{$eforms-first-language}"><xsl:text>Price is not the only award criterion and all criteria are stated only in the procurement documents.</xsl:text></cbc:Description>
 		</cac:SubordinateAwardingCriterion>
 	</xsl:template>
 	
 	<xsl:template match="ted:AC_CRITERION">
-		<!-- Award Criterion Description (BT-540) -->
+		<!-- Award Criterion Description (BT-540) cardinality ? Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
 		<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Description>
 	</xsl:template>
@@ -97,9 +96,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 				<ext:ExtensionContent>
 					<efext:EformsExtension>
 						<efac:AwardCriterionParameter>
-							<!-- Award Criterion Number Weight (BT-5421) -->
+							<!-- Award Criterion Number Weight (BT-5421) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 							<xsl:comment>Award Criterion Number Weight (BT-5421)</xsl:comment>
-							<!-- Award Criterion Number (BT-541) -->
+							<!-- Award Criterion Number (BT-541) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 							<xsl:comment>Award Criterion Number (BT-541)</xsl:comment>
 							<xsl:choose>
 								<xsl:when test="matches($text, '^[0-9]+$')">
