@@ -162,7 +162,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:param name="ted-form-notice-type"/>
 	<xsl:param name="ted-form-legal-basis"/><!-- could be value 'ANY' -->
 	<xsl:param name="ted-form-document-code"/>
-	<xsl:variable name="notice-mapping-file" select="fn:document('ted-notice-type-mapping.xml')"/>
+	<xsl:variable name="notice-mapping-file" select="fn:document('notice-type-mapping.xml')"/>
 	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $ted-form-legal-basis) or (legal-basis eq 'ANY')][document-code eq $ted-form-document-code]"/>
 	<xsl:if test="fn:count($mapping-row) != 1">
 		<xsl:message terminate="yes">ERROR: found <xsl:value-of select="fn:count($mapping-row)"/> different eForms subtype mappings for this Notice:<xsl:value-of select="$newline"/>

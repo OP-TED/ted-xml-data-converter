@@ -18,11 +18,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <xsl:include href="functions-and-data.xslt"/>
-<xsl:include href="ted-to-eforms-simple.xslt"/>
-<xsl:include href="ted-to-eforms-award-criteria.xslt"/>
-<xsl:include href="ted-to-eforms-addresses.xslt"/>
-<xsl:include href="ted-to-eforms-procedure.xslt"/>
-<xsl:include href="ted-to-eforms-lot.xslt"/>
+<xsl:include href="simple.xslt"/>
+<xsl:include href="award-criteria.xslt"/>
+<xsl:include href="addresses.xslt"/>
+<xsl:include href="procedure.xslt"/>
+<xsl:include href="lot.xslt"/>
 
 
 <!-- TBD: Currently these stylesheets only cater for one form element, one language. Work is required to cater for other form elements with alternate languages -->
