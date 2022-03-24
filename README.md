@@ -31,8 +31,9 @@ The current version of the TED XML Data Converter will only convert a limited su
 
 * TED Schema: Only TED schema R.2.0.9 is supported. Notices published under Directive 23 cannot be converted with this version of the Converter.
 * TED Schema version: Only the latest version of the TED schema R.2.0.9 (S05) is supported. Notices published under earlier versions of the schema may be converted, but may contain more errors.
-* Contract Notices: Only Contract Notices are currently supported.
-
+* Document Types: Only Contract Notices are currently supported:
+** All elements in TED XML form F02 are supported
+** Most elements in TED XML forms F05, F12 and the Contract Notice variants of forms F21, F22, F23 and F24 are supported
 
 ## HTML Comments in output eForms XML
 
@@ -57,5 +58,9 @@ Information about the code and associated files, and brief information on how to
 
 Feedback on this converter is welcome. Please address questions, comments and bug reports using the [Contact details on SIMAP](https://simap.ted.europa.eu/contact). Please ensure you include "TEDXDC Converter" in the Subject line.
 
+## What's next?
+Work on conversion of the remaining Contract Notice TED XML forms (F05, F12, F21, F22, F23 and F24) is ongoing.
+
+Work will begin on Contract Award notice forms in the near future.
 
 
