@@ -25,7 +25,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 						<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/></cbc:ID>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:comment>ERROR: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:comment>
+					<!-- WARNING: Cannot convert original TED lot number to eForms -->
+						<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:variable>
+						<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+						<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
 						<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/></cbc:ID>
 					</xsl:otherwise>							
 				</xsl:choose>
@@ -346,11 +349,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</cac:ContractExecutionRequirement>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
+			<!-- WARNING: Terms Performance (BT-70) is Mandatory for eForms subtypes 17, 18 and 22, but no PERFORMANCE_CONDITIONS was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Terms Performance (BT-70) is Mandatory for eForms subtypes 17, 18 and 22, but no PERFORMANCE_CONDITIONS was found in TED XML.</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 			<cac:ContractExecutionRequirement>
 				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-					<cbc:Description languageID="{$eforms-first-language}">
-						<xsl:comment>ERROR: Terms Performance (BT-70) is Mandatory for eForms subtypes 17, 18 and 22, but no PERFORMANCE_CONDITIONS was found in TED XML.</xsl:comment>
-					</cbc:Description>
+					<cbc:Description languageID="{$eforms-first-language}"></cbc:Description>
 			</cac:ContractExecutionRequirement>
 		</xsl:when>
 	</xsl:choose>		
@@ -368,9 +373,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 				</cac:ContractExecutionRequirement>
 			</xsl:when>
 			<xsl:when test="$eforms-notice-subtype = ('16','17', '18', '22')">
+				<!-- WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML. -->
+				<xsl:variable name="message">WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.</xsl:variable>
+				<xsl:message terminate="no" select="$message"/>
+				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 				<cac:ContractExecutionRequirement>
-					<cbc:ExecutionRequirementCode listName="ecatalog-submission"><xsl:comment>ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.</xsl:comment>
-					</cbc:ExecutionRequirementCode>
+					<cbc:ExecutionRequirementCode listName="ecatalog-submission"></cbc:ExecutionRequirementCode>
 				</cac:ContractExecutionRequirement>
 			</xsl:when>
 		</xsl:choose>
@@ -431,9 +439,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:apply-templates select="../../ted:PROCEDURE/ted:LANGUAGES/ted:LANGUAGE"/>
 		</xsl:when>
 		<xsl:when test="($eforms-notice-subtype = ('7','8','9','10','11','12','13','14','16','17','18','19','20','21','22'))">
+			<!-- WARNING: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. In order to obtain valid XML for this notice, ENG is used. -->
+			<xsl:variable name="message">WARNING: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. In order to obtain valid XML for this notice, ENG is used.</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 			<cac:Language>
 				<cbc:ID>
-					<xsl:comment>ERROR: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. In order to obtain valid XML for this notice, ENG is used by default. </xsl:comment>
 					<xsl:text>ENG</xsl:text>
 				</cbc:ID>
 			</cac:Language>
@@ -601,9 +612,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 				</efac:InterestExpressionReceptionPeriod>
 			</xsl:when>
 			<xsl:when test="($eforms-notice-subtype = ('10', '11', '12', '13', '14'))">
+				<!-- WARNING: Deadline Receipt Expressions (BT-630) is Mandatory for eForms subtypes 10, 11, 12, 13 and 14, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00). -->
+				<xsl:variable name="message">WARNING: Deadline Receipt Expressions (BT-630) is Mandatory for eForms subtypes 10, 11, 12, 13 and 14, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00).</xsl:variable>
+				<xsl:message terminate="no" select="$message"/>
+				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 				<efac:InterestExpressionReceptionPeriod>	
-					<xsl:comment>ERROR: Deadline Receipt Expressions (BT-630) is Mandatory for eForms subtypes 10, 11, 12, 13 and 14, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00).</xsl:comment>
-					<xsl:text>2099-01-01+01:00</xsl:text>
+					<cbc:EndDate>2099-01-01+01:00</cbc:EndDate>
+					<cbc:EndTime>11:59:59+01:00</cbc:EndTime>
 				</efac:InterestExpressionReceptionPeriod>
 			</xsl:when>
 		</xsl:choose>
@@ -621,9 +636,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 				</cac:TenderSubmissionDeadlinePeriod>			
 			</xsl:when>
 			<xsl:when test="($eforms-notice-subtype = ('8'))">
+				<!-- WARNING: Deadline Receipt Tenders (BT-131) is Mandatory for eForms subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00). -->
+				<xsl:variable name="message">WARNING: Deadline Receipt Tenders (BT-131) is Mandatory for eForms subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00).</xsl:variable>
+				<xsl:message terminate="no" select="$message"/>
+				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 				<cac:TenderSubmissionDeadlinePeriod>
-					<xsl:comment>ERROR: Deadline Receipt Tenders (BT-131) is Mandatory for eForms subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. FIn order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00). </xsl:comment>
-					<xsl:text>2099-01-01+01:00</xsl:text>
+					<cbc:EndDate>2099-01-01+01:00</cbc:EndDate>
+					<cbc:EndTime>11:59:59+01:00</cbc:EndTime>
 				</cac:TenderSubmissionDeadlinePeriod>			
 			</xsl:when>
 		</xsl:choose>
@@ -636,18 +655,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
 	<!-- If TIME_RECEIPT_TENDERS is not present, a time of 23:59+01:00 is assumed -->
 	<cbc:EndDate><xsl:value-of select="../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS"/><xsl:text>+01:00</xsl:text></cbc:EndDate>
-	<xsl:variable name="endtime">
-		<xsl:choose>
-			<xsl:when test="../../ted:PROCEDURE/ted:TIME_RECEIPT_TENDERS">
+	<xsl:choose>
+		<xsl:when test="../../ted:PROCEDURE/ted:TIME_RECEIPT_TENDERS">
+			<cbc:EndTime>
 				<!-- add any missing leading "0" from the hour -->
 				<xsl:value-of select="fn:replace(../../ted:PROCEDURE/ted:TIME_RECEIPT_TENDERS, '^([0-9]):', '0$1:')"/>
 				<!-- add ":00" for the seconds; add the TimeZone offset for CET -->
 				<xsl:text>:00+01:00</xsl:text>
-			</xsl:when>
-			<xsl:otherwise><xsl:text>23:59:00+01:00</xsl:text></xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
-	<cbc:EndTime><xsl:value-of select="$endtime"/></cbc:EndTime>
+			</cbc:EndTime>
+		</xsl:when>
+		<xsl:otherwise>
+			<!-- WARNING: TIME_RECEIPT_TENDERS was not found in TED XML. In order to obtain valid XML for this notice, a time of 23:59+01:00 was used. -->
+			<xsl:variable name="message">WARNING: TIME_RECEIPT_TENDERS was not found in TED XML. In order to obtain valid XML for this notice, a time of 23:59+01:00 was used.</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			<cbc:EndTime>23:59:00+01:00</cbc:EndTime>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template match="ted:DATE_DISPATCH_INVITATIONS">
@@ -685,7 +709,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 					<cbc:MinimumQuantity><xsl:value-of select="ted:NB_ENVISAGED_CANDIDATE"/></cbc:MinimumQuantity>
 				</xsl:when>
 				<xsl:when test="$eforms-notice-subtype = '16'">
-					<xsl:comment>WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.</xsl:comment>
+					<!-- WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used. -->
+					<xsl:variable name="message">WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.</xsl:variable>
+					<xsl:message terminate="no" select="$message"/>
+					<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 					<cbc:MinimumQuantity>0</cbc:MinimumQuantity>
 				</xsl:when>
 			</xsl:choose>
@@ -694,12 +721,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 </xsl:template>
 
 <xsl:template match="ted:OPENING_CONDITION">
-	<!-- NOTE: cbc:OccurrenceDate and cbc:OccurrenceTime should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
-	<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
-	<!-- Therefore for complete accuracy, a mapping of country codes to UTC timezone offsets is required -->
-	<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
 	<cac:OpenTenderEvent>
-		<xsl:comment> WARNING: TED XML does not specify a time zone for DATE_OPENING_TENDERS and TIME_OPENING_TENDERS. For</xsl:comment>
 		<cbc:OccurrenceDate>
 			<xsl:value-of select="ted:DATE_OPENING_TENDERS"/>
 			<!-- add the TimeZone offset for CET -->
@@ -742,14 +764,24 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 					<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
 					<!-- Electronic Auction Description (BT-122) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3; Forbidden for other subtypes -->
 					<xsl:comment>Electronic Auction Description (BT-122)</xsl:comment>
-					<cbc:Description languageID="{$eforms-first-language}">
-						<xsl:variable name="text" select="fn:normalize-space(fn:string-join(../../ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
-						<xsl:choose>
-							<xsl:when test="$text ne ''"><xsl:value-of select="$text"/></xsl:when>
-							<xsl:otherwise><xsl:text>Warning: source TED XML notice does not contain information for Electronic Auction Description (BT-122)</xsl:text></xsl:otherwise>
-						</xsl:choose>
-					</cbc:Description>
-					<cbc:AuctionURI><xsl:text>Warning: source TED XML notice does not contain information for Electronic Auction URL (BT-123)</xsl:text></cbc:AuctionURI>
+					
+					<xsl:variable name="text" select="fn:normalize-space(fn:string-join(../../ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
+					<xsl:choose>
+						<xsl:when test="$text ne ''">
+							<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:variable name="message">WARNING: source TED XML notice does not contain information for Electronic Auction Description (BT-122).</xsl:variable>
+							<xsl:message terminate="no" select="$message"/>
+							<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+							<cbc:Description languageID="{$eforms-first-language}"></cbc:Description>
+						</xsl:otherwise>
+					</xsl:choose>
+					
+					<xsl:variable name="message">WARNING: source TED XML notice does not contain information for Electronic Auction URL (BT-123).</xsl:variable>
+					<xsl:message terminate="no" select="$message"/>
+					<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+					<cbc:AuctionURI></cbc:AuctionURI>
 				</xsl:when>
 				<xsl:otherwise>
 					<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
@@ -792,7 +824,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- TED element SEVERAL_OPERATORS is present -->
-				<xsl:comment>ERROR: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113)</xsl:comment>
+				<!-- WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113). -->
+				<xsl:variable name="message">WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).</xsl:variable>
+				<xsl:message terminate="no" select="$message"/>
+				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+				<cbc:MaximumOperatorQuantity></cbc:MaximumOperatorQuantity>
 			</xsl:otherwise>
 		</xsl:choose>
 		<!-- Framework Duration Justification (BT-109) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-13, 16-18, 20-22, and E3; Forbidden for other subtypes -->
@@ -810,7 +846,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <xsl:template name="dps">
 	<xsl:if test="../../ted:PROCEDURE/ted:DPS or $eforms-notice-subtype = ('7', '8', '10', '11', '16', '17', '29', '30')">
-		<xsl:comment> WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.</xsl:comment>
+		<!-- WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML. -->
+		<xsl:comment>WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.</xsl:comment>
 		<cac:ContractingSystem>
 			<cbc:ContractingSystemTypeCode listName="dps-usage">
 				<xsl:choose>
@@ -847,8 +884,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
 		<xsl:comment>Internal Identifier (BT-22)</xsl:comment>
 		<!-- TBD: unique ID required here -->
-		<xsl:comment> ERROR: Internal ID (BT-22) is required but there source is equivalent element in TED XML. </xsl:comment>
-		<cbc:ID schemeName="InternalID">ERROR: unique Internal ID (BT-22) is required here</cbc:ID>
+		<!-- WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML. -->
+		<xsl:variable name="message">WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.</xsl:variable>
+		<xsl:message terminate="no" select="$message"/>
+		<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+		<cbc:ID schemeName="InternalID"></cbc:ID>
 		<!-- Title (BT-21) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40-->
 		<xsl:comment>Title (BT-21)</xsl:comment>
 		<!-- if TITLE exists in OBJ_DESCR, use that, otherwise use TITLE in OBJECT_CONTRACT parent -->
@@ -1039,26 +1079,28 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:template match="ted:DATE_START">
 	<cac:PlannedPeriod>		
 		<cbc:StartDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:StartDate>
-		<cbc:EndDate>
-			<xsl:choose>
-				<xsl:when test="../ted:DATE_END"><xsl:value-of select="../ted:DATE_END"/><xsl:text>+01:00</xsl:text></xsl:when>
-				<xsl:otherwise> 
-					<!-- ERROR: cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00) -->
-					<xsl:comment> ERROR: cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00) </xsl:comment>
-					<xsl:text>2099-12-31+01:00</xsl:text>
-				</xsl:otherwise>
-			</xsl:choose>
-		</cbc:EndDate>
+		
+		<xsl:choose>
+			<xsl:when test="../ted:DATE_END"><cbc:EndDate><xsl:value-of select="../ted:DATE_END"/><xsl:text>+01:00</xsl:text></cbc:EndDate></xsl:when>
+			<xsl:otherwise> 
+				<!-- WARNING: Duration Other (BT-538) cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00) -->
+				<xsl:variable name="message">WARNING: Duration Other (BT-538) cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00).</xsl:variable>
+				<xsl:message terminate="no" select="$message"/>
+				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+				<cbc:EndDate><xsl:text>2099-12-31+01:00</xsl:text></cbc:EndDate>
+			</xsl:otherwise>
+		</xsl:choose>
+		
 	</cac:PlannedPeriod>
 </xsl:template>
 	
 <xsl:template match="ted:DATE_END[fn:not(../ted:DATE_START)]">
 	<cac:PlannedPeriod>	
-		<cbc:StartDate>
-			<!-- ERROR: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00) -->
-			<xsl:comment> ERROR: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00) </xsl:comment>
-			<xsl:text>1900-01-01+01:00</xsl:text>
-		</cbc:StartDate>			
+		<!-- WARNING: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00) -->
+		<xsl:variable name="message">WARNING: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00).</xsl:variable>
+		<xsl:message terminate="no" select="$message"/>
+		<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+		<cbc:StartDate><xsl:text>1900-01-01+01:00</xsl:text></cbc:StartDate>			
 		<cbc:EndDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:EndDate>		
 	</cac:PlannedPeriod>
 </xsl:template>

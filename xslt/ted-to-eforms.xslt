@@ -85,6 +85,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <!-- this template is called from the starting template above -->
 
 <xsl:template match="*[@CATEGORY='ORIGINAL']">
+
+
+	<!-- NOTE: all eForms dates and times should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
+	<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
+	<!-- Therefore for complete accuracy, a mapping of country codes to UTC timezone offsets is required -->
+	<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
+
+	<xsl:variable name="message">WARNING: TED date elements have no time zone associated. For this notice, the time zone is assumed to be CET, i.e. UTC+01:00 </xsl:variable>
+	<xsl:message terminate="no" select="$message"/>
+	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+
+
 	<xsl:element name="{opfun:get-eforms-element-name($eforms-form-type)}" namespace="{opfun:get-eforms-xmlns($eforms-form-type)}">
 		<xsl:namespace name="cac" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'"/>
 		<xsl:namespace name="cbc" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'"/>
