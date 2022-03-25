@@ -93,6 +93,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!-- there are no F##_2014 forms that do not have ADDRESS_CONTRACTING_BODY -->
 	<xsl:for-each select="$ted-addresses-unique-with-id//ted-org/ted-address">
 		<efac:Organization>
+			<!-- Organization Subrole (BT-770) : Group leader (Buyer)-->
+			<xsl:comment>Organization Subrole (BT-770) : Group leader (Buyer)</xsl:comment>
+			<!-- efbc:GroupLeadIndicator, used for joint procurement, only on Contracting Body addresses -->
+			<xsl:if test="$is-joint-procurement and (../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY')])">
+				<efbc:GroupLeadIndicator>
+					<xsl:choose>
+						<xsl:when test="../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]">false</xsl:when>
+						<xsl:otherwise>true</xsl:otherwise>
+					</xsl:choose>
+				</efbc:GroupLeadIndicator>
+			</xsl:if>
 			<!-- Organization Role : Acquiring CPB -->
 			<xsl:comment>Organization Role : Acquiring CPB</xsl:comment>
 			<!-- efbc:AcquiringCPBIndicator, used for central purchasing, only on Contracting Body addresses -->
@@ -105,26 +116,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 					</xsl:choose>
 				</efbc:AcquiringCPBIndicator>
 			</xsl:if>
-			<!-- Organization Subrole (BT-770) : Group leader (Buyer)-->
-			<xsl:comment>Organization Subrole (BT-770) : Group leader (Buyer)</xsl:comment>
-			<!-- efbc:GroupLeadIndicator, used for joint procurement, only on Contracting Body addresses -->
-			<xsl:if test="$is-joint-procurement and (../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY')])">
-				<efbc:GroupLeadIndicator>
-					<xsl:choose>
-						<xsl:when test="../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]">false</xsl:when>
-						<xsl:otherwise>true</xsl:otherwise>
-					</xsl:choose>
-				</efbc:GroupLeadIndicator>
-			</xsl:if>
 			<xsl:call-template name="org-address"/>
 		</efac:Organization>
 	</xsl:for-each>
 </efac:Organizations>
 <!--
 These instructions can be un-commented to show the variables holding the organization addresses at intermediate stages
-<xsl:copy-of select="$tedaddresses"/>
-<xsl:copy-of select="$tedaddressesunique"/>
-<xsl:copy-of select="$tedaddressesuniquewithid"/>
+<xsl:copy-of select="$ted-addresses"/>
+<xsl:copy-of select="$ted-addresses-unique"/>
+<xsl:copy-of select="$ted-addresses-unique-with-id"/>
 -->
 
 </xsl:template>

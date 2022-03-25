@@ -1026,7 +1026,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:when test="fn:not(fn:normalize-space(ted:MAIN_SITE)) and fn:empty($valid-nuts)">
 				<!-- No valid MAIN_SITE and no valid NUTS codes -->
 				<cac:RealizedLocation>
-					<cbc:Region>anyw</cbc:Region>
+					<cac:Address>
+						<cbc:Region>anyw</cbc:Region>
+					</cac:Address>
 				</cac:RealizedLocation>
 			</xsl:when>
 				<!-- No valid MAIN_SITE and at least one valid NUTS code -->
