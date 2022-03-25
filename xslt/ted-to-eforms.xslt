@@ -228,52 +228,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:comment> efac:NoticeResult here </xsl:comment>
 </xsl:template>
 
-<xsl:template name="organizations">
-	<xsl:comment> efac:Organizations here </xsl:comment>
-	<xsl:variable name="is-joint-procurement" select="fn:boolean(ted:CONTRACTING_BODY/ted:JOINT_PROCUREMENT_INVOLVED)"/>
-	<xsl:variable name="is-central-purchasing" select="fn:boolean(ted:CONTRACTING_BODY/ted:CENTRAL_PURCHASING)"/>
-	<efac:Organizations>
-		<!-- there are no F##_2014 forms that do not have ADDRESS_CONTRACTING_BODY -->
-		<xsl:for-each select="$tedaddressesuniquewithid//ted-org/tedaddress">
-			<efac:Organization>
-				<!-- Organization Role : Acquiring CPB -->
-				<xsl:comment>Organization Role : Acquiring CPB</xsl:comment>
-				<!-- efbc:AcquiringCPBIndicator, used for central purchasing, only on Contracting Body addresses -->
-				<!-- For Acquiring CPB, the element "efbc:AcquiringCPBIndicator" must either be omitted for all Buyers, or included for all Buyers, at least one of which should have the value "true". -->
-				<xsl:if test="$is-central-purchasing and (../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY')])">
-					<efbc:AcquiringCPBIndicator>
-						<xsl:choose>
-							<xsl:when test="../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]">false</xsl:when>
-							<xsl:otherwise>true</xsl:otherwise>
-						</xsl:choose>
-					</efbc:AcquiringCPBIndicator>
-				</xsl:if>
-				<!-- Organization Subrole (BT-770) : Group leader (Buyer)-->
-				<xsl:comment>Organization Subrole (BT-770) : Group leader (Buyer)</xsl:comment>
-				<!-- efbc:GroupLeadIndicator, used for joint procurement, only on Contracting Body addresses -->
-				<xsl:if test="$is-joint-procurement and (../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY')])">
-					<efbc:GroupLeadIndicator>
-						<xsl:choose>
-							<xsl:when test="../path[fn:contains(., 'ADDRESS_CONTRACTING_BODY_ADDITIONAL')]">false</xsl:when>
-							<xsl:otherwise>true</xsl:otherwise>
-						</xsl:choose>
-					</efbc:GroupLeadIndicator>
-				</xsl:if>
-				<efac:Company>
-					<xsl:call-template name="org-address"/>
-				</efac:Company>
-			</efac:Organization>
-		</xsl:for-each>
-	</efac:Organizations>
-	<!--
-	These instructions can be un-commented to show the variables holding the organization addresses at intermediate stages
-	<xsl:copy-of select="$tedaddresses"/>
-	<xsl:copy-of select="$tedaddressesunique"/>
-	<xsl:copy-of select="$tedaddressesuniquewithid"/>
-	-->
-
-</xsl:template>
-
 <xsl:template name="publication">
 	<xsl:comment> efac:Publication here </xsl:comment>
 	<efac:Publication>

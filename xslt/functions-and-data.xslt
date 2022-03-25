@@ -9,19 +9,20 @@ xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " 
 >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
-	
+
+<!-- include FunctX XSLT Function Library -->
 <xsl:include href="lib/functx-1.0.1-doc.xsl"/>
-
-<xsl:variable name="newline" select="'&#10;'"/>
-<xsl:variable name="tab" select="'&#09;'"/>
-
 
 <!-- MAPPING FILES -->
 	
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
 
 
-<!-- GLOBAL VARIABLES -->
+
+<!-- #### GLOBAL VARIABLES #### -->
+
+<xsl:variable name="newline" select="'&#10;'"/>
+<xsl:variable name="tab" select="'&#09;'"/>
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
@@ -90,13 +91,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:choose>
 </xsl:variable>
 
-	
-
 <!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
 <xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
-
-
-<!-- LANGUAGES -->
 
 <!-- Variable language-codes-map holds a mapping of language codes from TED two-letter format to eForms three-letter format -->
 <xsl:variable name="language-codes-map">
@@ -114,6 +110,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 </xsl:variable>
 
 
+
+<!-- #### GLOBAL FUNCTIONS #### -->
+
 <!-- Function opfun:get-eforms-language converts a language code from TED two-letter format to eForms three-letter format -->
 <xsl:function name="opfun:get-eforms-language" as="xs:string">
 	<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
@@ -122,9 +121,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:value-of select="if ($mapped-language) then $mapped-language else 'UNKNOWN-LANGUAGE'"/>
 </xsl:function>
 
-
-
-<!-- GLOBAL FUNCTIONS -->
 
 <!-- Function opfun:get-valid-nuts-codes filters a list of NUTS codes to those of more than 4 characters -->
 <xsl:function name="opfun:get-valid-nuts-codes" as="xs:string*">
@@ -138,10 +134,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 </xsl:function>
 
 
-
-
 <!-- FORM TYPES AND SUBTYPES -->
-
 
 <!-- Function opfun:get-eforms-element-name returns the name of eForms schema root element, given the Document Type code, e.g. "CN" to "ContractNotice" -->
 <xsl:function name="opfun:get-eforms-element-name" as="xs:string">
@@ -242,7 +235,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
 </xsl:function>
 
-<!-- Function to opfun:prefix-and-name returns the namespace prefix and local name of a given element, e.g. "cbc:ID" -->
+<!-- Function opfun:prefix-and-name returns the namespace prefix and local name of a given element, e.g. "cbc:ID" -->
 <xsl:function name="opfun:prefix-and-name" as="xs:string">
 	<xsl:param name="elem" as="element()"/>
 	<xsl:variable name="name" select="$elem/fn:local-name()"/>
