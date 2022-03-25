@@ -455,8 +455,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:comment>Main Nature (BT-23)</xsl:comment>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>
 		<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
-		<!-- Additional Information (BT-300) (*)* cardinality ? No equivalent element in TED XML -->
+		<!-- Additional Information (BT-300) cardinality ? Optional for ALL Notice subtypes -->
 		<xsl:comment>Additional Information (BT-300)</xsl:comment>
+		<xsl:apply-templates select="ted:COMPLEMENTARY_INFO/ted:INFO_ADD"/>
+		
 		<!-- Estimated Value (BT-27) cardinality ? -->
 		<xsl:comment>Estimated Value (BT-27)</xsl:comment>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>
