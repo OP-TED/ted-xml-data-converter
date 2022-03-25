@@ -56,7 +56,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
 </xsl:template>
 	
-				
+<xsl:template match="ted:NOTICE_NUMBER_OJ">
+	<xsl:variable name="text" select="fn:normalize-space(.)"/>
+	<cac:NoticeDocumentReference>
+		<cbc:ID schemeName="ojs-notice-id"><xsl:value-of select="$text"/></cbc:ID>
+	</cac:NoticeDocumentReference>
+</xsl:template>
 	
 <xsl:template match="ted:ACCELERATED_PROC">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>

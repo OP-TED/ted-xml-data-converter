@@ -391,10 +391,21 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!-- Maps from elements: PT_OPEN, PT_RESTRICTED, PT_COMPETITIVE_NEGOTIATION, PT_COMPETITIVE_DIALOGUE, PT_INNOVATION_PARTNERSHIP -->
 		<xsl:comment>Procedure Type (BT-105)</xsl:comment>
 		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL)"/>
-		<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
-		<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
 		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Lots All Required (BT-763)</xsl:comment>
+		<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
+		<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
+		
+		<!-- Previous Planning Identifier (BT-125) cardinality - Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. -->
+		<xsl:comment>Previous Planning Identifier (BT-125)</xsl:comment>
+		<!-- TBD: Discussion about methods of linking to previous notices is ongoing. This mapping/conversion may change. -->
+		<!-- TBD: When the notice linked to is of type PIN Only, BT-125 and BT-1251 should be specified at Lot level, not at notice level. -->
+		
+		<xsl:apply-templates select="ted:PROCEDURE/ted:NOTICE_NUMBER_OJ"/>
+		
+		<!-- Previous Planning Part Identifier (BT-1251) cardinality - Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. No equivalent element in TED XML. -->
+		<xsl:comment>Previous Planning Part Identifier (BT-1251)</xsl:comment>
+		
 		<!-- Procedure Accelerated (BT-106) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes
  -->
