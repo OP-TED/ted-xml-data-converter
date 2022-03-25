@@ -209,10 +209,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:call-template name="appeal-terms"/>
 		<!-- Submission Language (BT-97) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-14 and 16-22; Optional for PIN subtype E1, CN subtypes 15, 23, 24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="submission-language"/>
-		<!-- Electronic Ordering (BT-92) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
-		<xsl:comment>Electronic Ordering (BT-92)</xsl:comment>
-		<!-- Electronic Payment (BT-93) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
-		<xsl:comment>Electronic Payment (BT-93)</xsl:comment>
+		<!-- Electronic Ordering (BT-92) and Electronic Payment (BT-93) -->
 		<xsl:call-template name="post-award-processing"/>
 		<!-- Participant Name (BT-47) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		<xsl:comment>Participant Name (BT-47)</xsl:comment>
@@ -462,7 +459,26 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:template name="post-award-processing">
 	<xsl:if test="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EPAYMENT) or $eforms-notice-subtype eq '16'">
 		<cac:PostAwardProcess>
-			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/(ted:EORDERING|ted:EPAYMENT)"/>
+			<!-- Electronic Ordering (BT-92) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+			<xsl:comment>Electronic Ordering (BT-92)</xsl:comment>
+			<xsl:choose>
+				<xsl:when test="../../ted:COMPLEMENTARY_INFO/ted:EORDERING">
+					<cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+				</xsl:when>
+				<xsl:when test="$eforms-notice-subtype eq '16'">
+					<cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+				</xsl:when>
+			</xsl:choose>
+			<!-- Electronic Payment (BT-93) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+			<xsl:comment>Electronic Payment (BT-93)</xsl:comment>
+			<xsl:choose>
+				<xsl:when test="../../ted:COMPLEMENTARY_INFO/ted:EPAYMENT">
+					<cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+				</xsl:when>
+				<xsl:when test="$eforms-notice-subtype eq '16'">
+					<cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
+				</xsl:when>
+			</xsl:choose>
 		</cac:PostAwardProcess>
 	</xsl:if>
 </xsl:template>
