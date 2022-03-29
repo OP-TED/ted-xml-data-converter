@@ -15,8 +15,11 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<!-- TBD: will need to determine rules for including main element cac:AwardingTerms -->
 		<cac:AwardingTerms>
 			<!-- Following Contract (BT-41) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<xsl:comment>Following Contract (BT-41)</xsl:comment>
 			<!-- Jury Decision Binding (BT-42) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<xsl:comment>Jury Decision Binding (BT-42)</xsl:comment>
 			<!-- No Negotiation Necessary (BT-120) cardinality + Optional for CN subtypes 16 and 20; Forbidden for other subtypes -->
+			<xsl:comment>No Negotiation Necessary (BT-120)</xsl:comment>
 			<xsl:apply-templates select="../../ted:RIGHT_CONTRACT_INITIAL_TENDERS"/>
 			<!-- Award Criteria Order Justification (BT-733) cardinality ? No equivalent element in TED XML -->
 			<!-- Award Criteria Complicated (BT-543) cardinality ? No equivalent element in TED XML -->
@@ -33,6 +36,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Jury Member Name (BT-46) cardinality + (Is this correct? Conflict between documentation and Annex spreadsheet) Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<!-- TBD: see TEDEFO-748 -->
 			<!-- TBD: no equivalent element in TED XML identified -->
+			<xsl:comment>Jury Member Name (BT-46)</xsl:comment>
 			<cac:TechnicalCommitteePerson>
 				<cbc:FamilyName></cbc:FamilyName>
 			</cac:TechnicalCommitteePerson>
