@@ -21,8 +21,10 @@ An API will be developed for the converter. A user will specify the TED notice n
 
 The XML output from the TED XML Data Converter will not be complete, and will also contain some errors. It will not pass all the eForms Schematron checks. This is because:
 
-* Some information required by eForms is not used in the TED schemas (for example: )
-* Some information present in the TED XML is in a different format from that required by eForms (for example: textual description in TED XML, a specific code from a codelist in eForms XML)
+* Some information required by eForms is not used in the TED schemas (for example: Internal ID (BT-22) has no equivalent in the TED schema )
+* Some information present in the TED XML is in a different format from that required by eForms (for example: a textual description in TED XML, a specific code from a codelist in eForms XML)
+
+The TED XML Data Converter will report these issues as comments and application-level warnings.
 
 
 ## Limited Scope
@@ -47,7 +49,7 @@ Where an XML element or Business Term is mandatory for an eForms notice, and the
 
 ## Versioning scheme
 
-Some notes about the versioning scheme here. Similar to that for the eForms SDK.
+The versioning scheme which will be adopted for the TED XML Data Converter will be similar to that for the [eForms SDK](https://docs.ted.europa.eu/eforms/latest/versioning.html).
 
 ## Developer information
 
