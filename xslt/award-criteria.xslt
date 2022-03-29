@@ -125,6 +125,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 								</xsl:when>
 								<!-- miscellaneous unparseable values here -->
 								<xsl:otherwise>
+									<!-- WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed. -->
+									<xsl:variable name="message">WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.</xsl:variable>
+									<xsl:message terminate="no" select="$message"/>
+									<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 									<efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
 									<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
 								</xsl:otherwise>

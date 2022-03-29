@@ -341,9 +341,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:choose>
 		<xsl:when test="$text ne ''" >
 			<cac:ContractExecutionRequirement>
-			<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
-		</cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			</cac:ContractExecutionRequirement>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
 			<!-- WARNING: Terms Performance (BT-70) is Mandatory for eForms subtypes 17, 18 and 22, but no PERFORMANCE_CONDITIONS was found in TED XML. -->
@@ -863,7 +863,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:template name="dps">
 	<xsl:if test="../../ted:PROCEDURE/ted:DPS or $eforms-notice-subtype = ('7', '8', '10', '11', '16', '17', '29', '30')">
 		<!-- WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML. -->
-		<xsl:comment>WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.</xsl:comment>
+		<xsl:variable name="message">WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.</xsl:variable>
+		<xsl:message terminate="no" select="$message"/>
+		<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 		<cac:ContractingSystem>
 			<cbc:ContractingSystemTypeCode listName="dps-usage">
 				<xsl:choose>

@@ -92,7 +92,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!-- Therefore for complete accuracy, a mapping of country codes to UTC timezone offsets is required -->
 	<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
 
-	<xsl:variable name="message">WARNING: TED date elements have no time zone associated. For this notice, the time zone is assumed to be CET, i.e. UTC+01:00 </xsl:variable>
+	<xsl:variable name="message">WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 </xsl:variable>
 	<xsl:message terminate="no" select="$message"/>
 	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 
@@ -273,6 +273,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:comment>Cross Border Law (BT-09)</xsl:comment>
 		<!-- BT-01 Legal Basis Local - Code cardinality * No equivalent element in TED XML -->
 		<!-- BT-01 Legal Basis Local - Text cardinality * Element PROCUREMENT_LAW -->
+		<xsl:comment>BT-01 Legal Basis Local - Text</xsl:comment>
 		<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:PROCUREMENT_LAW"/>
 		<!-- Exclusion Grounds (BT-67) cardinality ? No Exclusion Grounds in TED XML-->
 		<xsl:comment>Exclusion Grounds (BT-67)</xsl:comment>
@@ -337,12 +338,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</ext:UBLExtensions>
 		<!-- A limited number of BTs are specified for tendering process at root level -->
 		
-		<!-- Procedure Features (BT-88) cardinality ? -Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Procedure Features (BT-88) cardinality ? Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="main-features-award"/>	
 		
 		
 		<!-- Procedure Type (BT-105) cardinality 1 Mandatory for CN subtypes 10, 11, 16-18, 23, and 24, CAN subtypes 25-31, 36, and 37; Optional for PIN subtypes 7-9, CN subtypes 12, 13, 20-22, and E3, CAN subtypes 33, 34, and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Maps from elements: PT_OPEN, PT_RESTRICTED, PT_COMPETITIVE_NEGOTIATION, PT_COMPETITIVE_DIALOGUE, PT_INNOVATION_PARTNERSHIP -->
 		<xsl:comment>Procedure Type (BT-105)</xsl:comment>
 		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL)"/>
 		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
