@@ -14,11 +14,6 @@ These instructions are for installation in a Unix environment.
 ## Summary
 To run the converter requires the following :
 
-* Java
-* Saxon 9-HE (or later)
-* This repository
-
-
 ### Java
 
 The user's system must have either a Java Virtual Machine, or a Java development environment. At least Java SE 8 (also known as JDK 1.8) must be available. Java must be available to run from the Unix terminal. Type "java -version" to confirm.
@@ -37,6 +32,7 @@ Documentation on running XSL using Saxon9 is available here: https://saxonica.co
 
 Clone the TED XML Data Converter from https://citnet.tech.ec.europa.eu/CITnet/stash/projects/TEDXDC/repos/ted-xml-data-converter/browse.
 
+<br>
 
 ## Using the TED XML Data Converter
 
@@ -50,17 +46,7 @@ To convert all the test TED XML files use:
 
 `find ted-xml -type f -name "*.xml" | while read -r file; do outfile=${file/ted-xml/eforms-xml}; java -Xms6291456 -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform -dtd:off -expand:off -strip:all  -s:"$file" -xsl:xslt/ted-to-eforms.xslt -o:"$outfile"; done `
 
-<br>
 
-### Testing the XSLT
-
-The XSLT can be tested using the unit-testing [XSpec framework](https://github.com/xspec/xspec). Tests are written in XML, and reports are output in both XML and HTML.
-
-The Unix command to test the XSLT is:
-
-[path to XSpec folder]/bin/xspec.sh xslt/test-ted-to-eforms-xslt.xspec
-
-XSpec compiles the given XSpec test file to XSLT, then executes it. The resulting report is available in XML and HTML format. All these files are placed in an `xspec` folder within the `xslt` folder.
 
 
 

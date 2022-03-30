@@ -17,6 +17,8 @@ The TED XML Data Converter is designed to help with this process, by converting 
 The code for the TED XML Data Converter is contained in this repository. Basic usage instructions for developers to run the code in their own system is available [here](Usage-Information.md).
 An API will be developed for the converter. A user will specify the TED notice number, and the API will retrieve the published TED notice XML, convert it to eForms XML and return it to the user.
 
+# About the converter
+
 ## XML output will be incomplete and invalid.
 
 The XML output from the TED XML Data Converter will not be complete, and will also contain some errors. It will not pass all the eForms Schematron checks. This is because:
@@ -31,11 +33,12 @@ The TED XML Data Converter will report these issues as comments and application-
 
 The current version of the TED XML Data Converter will only convert a limited subset of published TED notices:
 
-* TED Schema: Only TED schema R.2.0.9 is supported. Notices published under Directive 23 cannot be converted with this version of the Converter.
-* TED Schema version: Only the latest version of the TED schema R.2.0.9 (S05) is supported. Notices published under earlier versions of the schema may be converted, but may contain more errors.
-* Document Types: Only Contract Notices are currently supported:
-** All elements in TED XML form F02 are supported
-** Most elements in TED XML forms F05, F12 and the Contract Notice variants of forms F21, F22, F23 and F24 are supported
+* TED Schema: only TED schema R.2.0.9 is supported. Notices published under Directive 23 cannot be converted with this version of the Converter.
+* TED Schema version: only the latest version of the TED schema R.2.0.9 (S05) is supported. Notices published under earlier versions of the schema may be converted, but may contain more errors.
+* Document Types: only Contract Notices are currently supported:
+    * All elements in TED XML form F02 are supported
+    * Most elements in TED XML forms F05, F12 and the Contract Notice variants of forms F21, F22, F23 and F24 are supported
+* Languages: currently the converter only converts the main (original) language of each notice. Other languages which may be present in the TED XML are not included.
 
 ## HTML Comments in output eForms XML
 

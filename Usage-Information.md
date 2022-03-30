@@ -8,7 +8,7 @@ The repository contains the following folders:
 | `xslt` | The xslt and data for the conversion |
 | `sample-files/ted-xml` | Sample source TED XML files. See [Files-Selected-for-Testing.md](sample-files/Files-Selected-for-Testing.md) |
 | `sample-files/eforms-xml` | The sample source TED XML files converted to eForms XML files. |
-| `structure-files` | This folder should be removed. Files used for analysis |
+| `structure-files` | Sample files for the structure of eForms XML. Only the notice-structure-CN.xml is complete. |
 | `examples` | Some files in this folder should be removed. Sample XML in TED schema XML and eForms XML format for testing the converter |
 
 ## XSLT files
