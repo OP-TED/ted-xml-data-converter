@@ -19,24 +19,20 @@ Currently, the `xslt` folder contains these files:
 | XSLT |
 |  [ted-to-eforms.xslt](xslt/ted-to-eforms.xslt) | The main (starting) XSLT file |
 |  [functx-1.0.1-doc.xsl](xslt/lib/functx-1.0.1-doc.xsl) | The FunctX XSLT Function Library, available [here](http://www.xsltfunctions.com/) |
-|  [functions-and-data.xslt](xslt/functions-and-data.xslt) | An XSLT file for retrieving data from the mapping files, and common functions |
-|  [simple.xslt](xslt/simple.xslt) | An XSLT file containing simple templates (one-to-one mappings) |
-|  [addresses.xslt](xslt/addresses.xslt) | An XSLT file containing templates for converting addresses |
-|  [award-criteria.xslt](xslt/award-criteria.xslt) | An XSLT file containing templates for converting Award Criteria (BG-38) |
-|  [procedure.xslt](xslt/procedure.xslt) | An XSLT file containing templates for converting information at Procedure level |
-|  [lot.xslt](xslt/lot.xslt) | An XSLT file containing templates for converting information at Lot level |
+|  [functions-and-data.xslt](xslt/functions-and-data.xslt) | Retrieving data from the mapping files, and common functions |
+|  [simple.xslt](xslt/simple.xslt) | Simple templates (one-to-one mappings) |
+|  [addresses.xslt](xslt/addresses.xslt) | Templates for addresses |
+|  [award-criteria.xslt](xslt/award-criteria.xslt) | Templates for converting Award Criteria (BG-38) |
+|  [procedure.xslt](xslt/procedure.xslt) | Templates for converting information at Procedure level |
+|  [lot.xslt](xslt/lot.xslt) | Templates for converting information at Lot level |
 | Mapping files |
 | [ted-notice-type-mapping.xml](xslt/ted-notice-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
 | [languages.xml](xslt/languages.xml) | The "Language" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
-| [other-mappings.xml](xslt/other-mappings.xml) | A file containing other data mappings |
+| [other-mappings.xml](xslt/other-mappings.xml) | Other data mappings |
 
 ## Usage
 
 The TEDXDC Converter has been developed and tested using the Saxon-9 HE XSLT processor, available from https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. However any XSLT 2 processor can be used. The main template is ted-to-eforms.xslt, the other templates and data XML files are called by the main template.
-
-
-
-Project to convert notices in TED XML format to eForms XML format.
 
 Please see [Conversion-Methodology.md](Conversion-Methodology.md) for the approach and methodology for developing the conversion XSLT.
 
@@ -51,7 +47,7 @@ Please see [Installation.md](Installation.md) for installation and usage instruc
 
 ---
 
-Content below this line is relevant to the eForms developers, and ma be moved to another Markdown file in this repository or deleted.
+Content below this line is relevant to the eForms developers, and may be moved to another Markdown file in this repository or deleted.
 
 ---
 

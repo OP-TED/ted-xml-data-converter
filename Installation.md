@@ -30,7 +30,7 @@ Documentation on running XSL using Saxon9 is available here: https://saxonica.co
 
 ### This repository
 
-Clone the TED XML Data Converter from https://citnet.tech.ec.europa.eu/CITnet/stash/projects/TEDXDC/repos/ted-xml-data-converter/browse.
+Clone the TED XML Data Converter from https://github.com/OP-TED/ted-xml-data-converter.
 
 <br>
 
@@ -40,11 +40,11 @@ Clone the TED XML Data Converter from https://citnet.tech.ec.europa.eu/CITnet/st
 
 A typical Unix command to convert a file is:
 
-`java  -Xms6291456  -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform  -dtd:off -expand:off -strip:all  -s:ted-xml/21-000061-001-EXP.xml -xsl:xslt/ted-to-eforms.xslt -o:eforms-xml/21-000061-001-EXP.xml`
+`java  -Xms6291456  -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform  -dtd:off -expand:off -strip:all  -s:sample-files/ted-xml/21-000061-001-EXP.xml -xsl:xslt/ted-to-eforms.xslt -o:sample-files/eforms-xml/21-000061-001-EXP.xml`
 
 To convert all the test TED XML files use:
 
-`find ted-xml -type f -name "*.xml" | while read -r file; do outfile=${file/ted-xml/eforms-xml}; java -Xms6291456 -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform -dtd:off -expand:off -strip:all  -s:"$file" -xsl:xslt/ted-to-eforms.xslt -o:"$outfile"; done `
+`find sample-files/ted-xml -type f -name "*.xml" | while read -r file; do outfile=${file/ted-xml/eforms-xml}; java -Xms6291456 -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform -dtd:off -expand:off -strip:all  -s:"$file" -xsl:xslt/ted-to-eforms.xslt -o:"$outfile"; done `
 
 
 
