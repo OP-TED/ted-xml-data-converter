@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <PriorInformationNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
@@ -16,7 +17,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>www.veitshoechheim.de</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -66,7 +67,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -111,7 +112,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
@@ -123,8 +124,10 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <!--PIN Competition Termination (BT-756)-->
       <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -190,7 +193,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Jury Member Name (BT-46)-->
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
@@ -200,8 +203,6 @@
          <!--Review Deadline Description (BT-99)-->
          <cac:AppealTerms/>
          <!--Submission Language (BT-97)-->
-         <!--Electronic Ordering (BT-92)-->
-         <!--Electronic Payment (BT-93)-->
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
@@ -211,9 +212,7 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
-                     <efac:InterestExpressionReceptionPeriod/>
-                  </efext:EformsExtension>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
@@ -223,7 +222,6 @@
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
-         <cac:TenderSubmissionDeadlinePeriod/>
          <!--Dispatch Invitation Tender (BT-130)-->
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
@@ -247,8 +245,8 @@
          <!--Dynamic Purchasing System (BT-766)-->
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
          <cbc:Name languageID="DEU">Gemeinde Veitshöchheim, Sportplatzbauarbeiten an der Freisportanlage</cbc:Name>
          <!--Description (BT-24)-->

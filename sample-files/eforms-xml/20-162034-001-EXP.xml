@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
@@ -16,7 +17,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.simap.ch</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -50,7 +51,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
@@ -90,7 +91,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -139,7 +140,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
@@ -152,8 +153,10 @@
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
-      <!--PIN Competition Termination (BT-756)-->
       <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -166,6 +169,7 @@
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="FRA">Des offres partielles ne sont pas admises. Conditions pour les pays n'ayant pas adhéré aux accords de l'OMC: aucune. Négociations: néant. Le soumissionnaire est tenu de présenter sa meilleure offre. Conditions régissant la procédure: le pouvoir adjudicateur adjuge des marchés publics pour des prestations en Suisse uniquement à des adjudicataires qui garantissent le respect des dispositions sur la protection des travailleurs, les conditions de travail et l'égalité de salaire entre hommes et femmes. Indication des voies de recours: conformément à l’article 30 LMP, la présente publication peut être attaquée, dans un délai de 20 jours à compter de sa notification, auprès du Tribunal administratif fédéral, case postale, 9023 St. Gall. Le mémoire de recours, à présenter en deux exemplaires, indiquera les conclusions, motifs et moyens de preuve et portera la signature de la partie recourante ou de son mandataire; y seront jointes une copie de la présente publication et les pièces invoquées comme moyens de preuve, lorsqu'elles sont disponibles. Délai de clôture pour le dépôt des offres/remarques: lieu de dépôt: voir le chiffre 1.2. Important pour le respect du délai de dépôt: a) en cas de depôt en mains propres à Armasuisse (Centre administratif Guisanplatz 1): lors de la remise au «Verwaltungszentrum Guisanplatz 1», Guisanplatz 1, 3003 Berne, à l'attention du CC WTO Armasuisse, les points suivants doivent être respectés: — le soumissionnaire doit s'annoncer a la loge principale, Guisanplatz 1, en indiquant l'intitulé du projet (cf. chiffre 1.2). II sera alors redirige a la «gestion des rampes, Guisanplatz 1»; — heures d'ouverture de la gestion des rampes: lundi-vendredi 07h30 - 12h00/13h00-15h00 (en dehors de ces heures, aucune offre ne peut être remise); b) expédition par courrier postal: le timbre postal ou le code-barres du prestataire procédant a l'expédition est déterminant (la date du timbre appose par l'entreprise ne fait pas foi); c) en cas de remise a une représentation diplomatique ou consulaire de la Suisse: l'attestation de réception délivrée par la représentation en question fait foi. L'attestation de réception doit être envoyée a l'adresse électronique indiquée au chiffre 1.2 au plus tard jusqu'a la date-limite de remise de l'offre. Remarques: (délai souhaité pour poser des questions par écrit). Si des questions apparaissent lors de l’élaboration de l’offre, elles peuvent être posées exclusivement sous la forme de questions anonymes dans la foire aux questions du site simap.ch Chaque question doit être posée séparément dans le forum (une question par entrée). Les réponses sont données dans la foire aux questions du site simap.ch Toutes les questions et réponses peuvent être consultées par tous les soumissionnaires qui se sont procurés la documentation pour l’appel d’offres. Le soumissionnaire est lui-même responsable de s’informer sur les éventuelles questions et réponses figurant dans la foire aux questions. Publication de référence nationale: SIMAP du 1.4.2020, doc. 1120749. Délai souhaité pour poser des questions par écrit: 15.5.2020. Conditions à l'obtention du dossier d'appel d'offres: la documentation peut être téléchargée exclusivement à partir la plate-forme électronique www.simap.ch — rubrique «marchés publics, Confédération». À cet effet, vous devez tout d'abord vous enregistrer dans le projet en question et vous pourrez ensuite accéder à la documentation au moyen du login et du mot de passe que vous recevrez par courrier électronique. Un forum est à disposition pour les questions.</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">32250000</cbc:ItemClassificationCode>
@@ -263,11 +267,12 @@
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="ecatalog-submission"><!--ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.--></cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion>
                   <ext:UBLExtensions>
@@ -302,6 +307,7 @@
                   <cbc:Description languageID="FRA">Prix</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
@@ -331,9 +337,11 @@
          <cac:Language>
             <cbc:ID>ITA</cbc:ID>
          </cac:Language>
-         <!--Electronic Ordering (BT-92)-->
-         <!--Electronic Payment (BT-93)-->
-         <cac:PostAwardProcess/>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
@@ -346,6 +354,7 @@
                   <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
                      <efac:InterestExpressionReceptionPeriod>
                         <cbc:EndDate>2020-05-25+01:00</cbc:EndDate>
+                        <!--WARNING: TIME_RECEIPT_TENDERS was not found in TED XML. In order to obtain valid XML for this notice, a time of 23:59+01:00 was used.-->
                         <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
                      </efac:InterestExpressionReceptionPeriod>
                   </efext:EformsExtension>
@@ -362,6 +371,7 @@
          <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
             <cbc:EndDate>2020-05-25+01:00</cbc:EndDate>
+            <!--WARNING: TIME_RECEIPT_TENDERS was not found in TED XML. In order to obtain valid XML for this notice, a time of 23:59+01:00 was used.-->
             <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
@@ -375,7 +385,7 @@
          <!--Minimum Candidates (BT-50)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <!--ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
             <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
@@ -400,13 +410,14 @@
             <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
          <cbc:Name languageID="FRA">Testeur de radiocommunication LTE pour 3.9G et 4.xG</cbc:Name>
          <!--Description (BT-24)-->

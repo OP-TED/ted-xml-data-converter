@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
@@ -16,8 +17,9 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.nfp.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -56,8 +58,9 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.bszta.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -96,8 +99,9 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.devavanya.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -136,8 +140,9 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.mezobereny.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -176,7 +181,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-005</cbc:ID>
@@ -223,7 +228,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -310,7 +315,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
@@ -323,8 +328,10 @@
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
-      <!--PIN Competition Termination (BT-756)-->
       <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -339,6 +346,7 @@
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="HUN">1. AK jelen eljárását a Kbt.53§ (6)bek. alapján indítja meg.A Kbt.135. §(12)bek.-ben foglaltakra is tekintettel,AK felhívja AT figyelmét,hogy támogatásra irányuló igényt(pályázatot;támogatási szerz.-módosítást,változásbejelentést)nyújtott be.AK tájékoztatja AT-t,hogy a támogatásra irányuló igény el nem fogadását vagy az igényeltnél kisebb összegben történő elfogadását vagy amennyiben releváns a Támogatási Szerződés (TSZ)mód-ot vagy vált. bej. el nem fogadását olyan körülménynek tekinti,amelyre az AK a szerződés megkötésére (Kbt. 131. § (9) bek.)vagy teljesítésére képtelenné válása okaként hivatkozhat.AK a Kbt.53.§(6)bek. és a Ptk.6:116. § (1)bek. alapján az eljárást akkor is eredménytelenné nyilváníthatja,ha szerz. pénzügyi fedezetét biztosító TSZ nem kerül megkötésre,vagy a TSZ mód. nem kerül aláírásra vagy a vált. bej. nem kerül elfogadásra.Jelen feltételek a szerz. hatályba lépésének felfüggesztő feltételei. 2. Ajánlattevő (AT), alkalmasság (alk) igazolásában résztvevő szervezet csatolja: Ajánlatot aláírók aláírási címpéldányát,vagy 2006. évi V. tv 9.§ (1) szerinti aláírásmintáját,külföldi illetőségű AT esetén ennek megfeleltethető dokumentumot (ha ilyen dokumentum az adott országban nem ismert,teljes bizonyító erejű magánokiratba v. ügyvéd/közjegyző/kamarai jogtanácsos előtt tett okiratba foglalt aláírásminta) cégkivonatban nem szereplő kötelezettségvállaló(k) esetében cégjegyzésre jogosult személytől származó, ajánlat aláírására vonatkozó (meghatalmazó és meghatalmazott aláírását is tartalmazó) írásos meghatalmazást egyéni vállalkozó és magánszem. esetében ajánlatkérő elfogadja bármely olyan dokumentum egyszerű másolatának csatolását, amely alkalmas a képviseletre való jogosultság igazolására (így például: személyi igazolvány) 3. Ajánlatnak tartalmaznia kell: — Kbt.66.§(6) a) és b) szerinti nyíl.(nemleges tartalommal is) — Kbt.66.§(2)bek. nyil, — Kbt.66.§(5)alapján felolvasólap — szakmai aj-ot a dok. szerint. 4. Az Ért. szempontok szerinti értékelés során adható pontszám alsó-felső határa: 0,00-10,00pont; 0,00pont legrosszabb,10,00 pont legjobb érték. Módszerek: az 1. ért. szempont: a KH 2019.11.26-i útmutatója („Útm.”) 1.m.A.1.aa)pontja szerinti fordított ar. A 2.rszpt.1-4 alszempontok esetében a KH 2019.11.26-i útm.1.sz. mell.A 1.ab) egyenesar.(Részl.AD.I.kötet) (legkedvezőbb: 36 hónap, legkedvezőtlenebb 0 hónap). A 2. részszempont alátámasztására az önéletrajzok csatolása már az ajánlatban szükséges. 5. III.1.2)P.1. valamint III.1.3)M.1.-M.2.pontokban előírt feltételek és ig. módok minősített ajánlattevők jegyzékébe történő felvétel feltételeinél szigorúbbak. 6. Ajánlati biztosíték 10 000 000 HUF. Az AT választása szerint teljesíthető az előírt pénzösszegnek az AK 10032000-00332945-00000024 sz. fizetési számlájára történő befizetésével pénzügyi intézmény vagy biztosító által vállalt garancia vagy készfizető kezesség biztosításával,vagy biztosítási szerz. alapján kiállított – készfizető kezességvállalást tartalmazó – kötelezvénnyel. Igazolása: készpénz átutalással való teljesítése esetén a banki terhelési értesítő, pénzügyi intézmény vagy biztosító által vállalt garanciával/készfizető kezességgel való teljesítés esetén a garancia/kezességvállaló nyilatkozat, biztosítási szerződéssel való teljesítés esetén a kötelezvény. A garancialevél, a kezességvállalásról szóló dok.valamint a kötelezvény tekintetében AK előírja és kiemelten is felhívja a figyelmet az alábbiakra: Az olyan nyilatkozat,amely közvetlenül valamely követelés érvényesítésének alapjául szolgál (különösen garanciavállaló nyilatkozat vagy kezességvállalásról szóló nyilatkozat),elektronikus okiratként feleljen meg a polgári perrendtartásról szóló törvény szerinti teljes bizonyító erejű magánokirat követelményeinek! Az igazolást az ajánlatban csatolni szükséges. 7. Kbt.35.§(8)alapján nem lehetséges gazdálkodó szervezet (projekttársaság)létrehozása. 8. AK alkalmazza a Kbt.75.§ (2) bekezdés e) pontját. Folyt.: AF VI.4.3.)</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">45200000</cbc:ItemClassificationCode>
@@ -460,11 +468,12 @@
             <cbc:Description languageID="HUN">Késedelmi kötbér: a szerz szerinti áfa nélkül számított ellenszolgáltatás 1 %-a/nap Meghiúsulási kötbér: a szerz szerinti áfa nélkül számított ellenszolgáltatás 25 %-a Jótállás: 36 hónap. Teljesítési biztosíték: szerz. szerinti, áfa nélkül számított ellenszolgáltatás 5 %-a. Jótállási biztosíték: szerz. szerinti, áfa nélkül számított ellenszolgáltatás 5 %-a. Részletesen:ADII Előleg: max.a szerz elszám.összege 30 %-a. Előleg-visszafiz.bizt. szerz.elszám.összege 10 %-án felül, a szerz.elszám.összegének 10 %-a és az igényelt előleg különbözetére jutó összegnek megfelelő, 272/2014. (XI.5.) Kr. 118/A.§ (2a) szerint. A szerz. és a kifizetés pénzneme: HUF. Vonatkozó jogszabályok: 2007.éviCXXVII.tv, Ptk. 6:130.§ (1)-(2), Kbt. 135. § (1)-(6) bek., 322/2015.(X.30.)Kr., 272/2014. (XI.5.). szállítói finanszírozás, támogatás intenzitása: a mindenkori TSZ szerinti, Részl: AD II. kötet. Tartkeret:AK a tartalékkeret jogintézményét nem alkalmazza. AK a részszámla benyújtására lehetőséget biztosít.</cbc:Description>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="ecatalog-submission"><!--ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.--></cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -561,6 +570,7 @@
                   </ext:UBLExtensions>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
@@ -596,9 +606,9 @@
          <cac:Language>
             <cbc:ID>HUN</cbc:ID>
          </cac:Language>
-         <!--Electronic Ordering (BT-92)-->
-         <!--Electronic Payment (BT-93)-->
-         <cac:PostAwardProcess>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
@@ -642,7 +652,7 @@
          <!--Minimum Candidates (BT-50)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <!--ERROR: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
             <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
@@ -671,13 +681,14 @@
             <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
          <cbc:Name languageID="HUN">Békésszentandrás-Dévaványa-Mezőberény szennyvíz</cbc:Name>
          <!--Description (BT-24)-->
