@@ -116,7 +116,7 @@
 
 <selection-criterion-types>
 	<description>Mapping for Main and Additional Nature (BT-23, BT-531)</description>
-	<ted-context>/TED_EXPORT/FORM_SECTION/*/LEFTI/(SUITABILITY|ECONOMIC_FINANCIAL_INFO|ECONOMIC_FINANCIAL_MIN_LEVEL|TECHNICAL_PROFESSIONAL_INFO|TECHNICAL_PROFESSIONAL_MIN_LEVEL)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/LEFTI/(SUITABILITY|ECONOMIC_FINANCIAL_INFO|ECONOMIC_FINANCIAL_MIN_LEVEL|TECHNICAL_PROFESSIONAL_INFO|TECHNICAL_PROFESSIONAL_MIN_LEVEL|RULES_CRITERIA)/fn:local-name()</ted-context>
 	<eforms-context>/*/cac:ProcurementProjectLot/cac:SelectionCriteria/cbc:CriterionTypeCode</eforms-context>
 	<eforms-codelist>selection-criterion</eforms-codelist>
 	<mapping>
@@ -143,6 +143,11 @@
 		<ted-value>TECHNICAL_PROFESSIONAL_MIN_LEVEL</ted-value>
 		<eforms-value>tp-abil</eforms-value>
 		<label>Technical and professional ability</label>
+	</mapping>
+	<mapping>
+		<ted-value>RULES_CRITERIA</ted-value>
+		<eforms-value>other</eforms-value>
+		<label>Other</label>
 	</mapping>
 </selection-criterion-types>
 

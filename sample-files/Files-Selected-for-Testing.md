@@ -18,6 +18,7 @@ This table lists the TED XML files chosen to test the Converter, and the reasons
 | 20-156049-001-EXP.xml | F02 | CN | Addresses | multiple URL_BUYER |
 | 20-377805-001-EXP.xml | F02 | CN | Lot | TIME_RECEIPT_TENDERS with one digit for hour |
 | 21-119240-001-EXP.xml | F02 | CN | Lot | REDUCTION_RECOURSE |
+| 21-119240-001-EXP.xml | F02 | CN | Selection Criteria | RULES_CRITERIA |
 | 20-566267-001-EXP.xml | F02 | CN | Lot | FRAMEWORK and DPS_ADDITIONAL_PURCHASERS |
 | 20-295737-001-EXP.xml | F21 | CN | Procedure | MAIN_FEATURES_AWARD |
 | 21-120407-001-EXP.xml | F02 | CN | Dates | DATE_TENDER_VALID |
