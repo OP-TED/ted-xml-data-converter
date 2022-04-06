@@ -1,8 +1,8 @@
 # TED schema elements which cannot be converted to eForms
 
-This table lists the elements defined in the TED R.2.0.9 schema, but whose data cannot be converted to any data structures in eForms.
+This table lists the elements defined in the TED R.2.0.9 schema for Contract Notices, but whose data cannot be converted to any data structures in eForms.
 
-This table is under development.
+This table is under development. Elements used in Contract Award Notices and PINs have not been considered yet.
 
 | TED Element | TED schema | Content format Usage | Description | Reason for inability to convert |
 | --- | --- | --- | --- | --- |

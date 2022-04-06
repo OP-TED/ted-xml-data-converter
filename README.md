@@ -17,29 +17,10 @@ The repository contains the following folders:
 | Folder | Purpose |
 | --- | --- |
 | `xslt` | The xslt and data for the conversion |
-| `development-notices/ted-xml` | Sample source TED XML files used for testing the XSLT development. |
-| `development-notices/eforms-xml` | The sample source TED XML files converted to eForms XML files. |
-| `structure-files` | Sample files for the structure of eForms XML. Only the notice-structure-CN.xml is complete. |
-| `examples` | Some files in this folder should be removed. Sample XML in TED schema XML and eForms XML format for testing the converter |
+| `development-notices` | Sample source TED XML files used for testing during development |
+| `eforms-structure-files` | Sample files for the structure of eForms XML |
+| `test-notices` | Sample notices in in TED schema XML to be used for testing the converter |
 
-## XSLT files
-Currently, the `xslt` folder contains these files:
-
-| File | Purpose |
-| --- | --- |
-| XSLT |
-|  [ted-to-eforms.xslt](xslt/ted-to-eforms.xslt) | The main (starting) XSLT file |
-|  [functx-1.0.1-doc.xsl](xslt/lib/functx-1.0.1-doc.xsl) | The FunctX XSLT Function Library, available [here](http://www.xsltfunctions.com/) |
-|  [functions-and-data.xslt](xslt/functions-and-data.xslt) | Retrieving data from the mapping files, and common functions |
-|  [simple.xslt](xslt/simple.xslt) | Simple templates (one-to-one mappings) |
-|  [addresses.xslt](xslt/addresses.xslt) | Templates for addresses |
-|  [award-criteria.xslt](xslt/award-criteria.xslt) | Templates for converting Award Criteria (BG-38) |
-|  [procedure.xslt](xslt/procedure.xslt) | Templates for converting information at Procedure level |
-|  [lot.xslt](xslt/lot.xslt) | Templates for converting information at Lot level |
-| Mapping files |
-| [ted-notice-type-mapping.xml](xslt/ted-notice-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
-| [languages.xml](xslt/languages.xml) | The "Language" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
-| [other-mappings.xml](xslt/other-mappings.xml) | Other data mappings |
 
 # How to use
 

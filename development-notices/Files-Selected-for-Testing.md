@@ -1,6 +1,6 @@
 # TED XML files selected for testing the converter
 
-This table lists the TED XML files chosen to test the Converter, and the reasons for their choosing.
+This table lists the TED XML files selected to test development of the Converter, and the reasons for their selection.
 
 | File | Form Type | Form Type | Topic | Reasons for selection |
 | --- | --- | --- | --- | --- |

@@ -5,7 +5,7 @@
 
 The TEDXDC Converter has been developed and tested using the Saxon-9 HE XSLT processor, available from https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. However any XSLT 2 processor can be used. The main template is ted-to-eforms.xslt, the other templates and data XML files are called by the main template.
 
-Please see [Conversion-Methodology.md](Conversion-Methodology.md) for the approach and methodology for developing the conversion XSLT.
+Please see [Development-Methodology.md](Development-Methodology.md) for the approach and methodology for developing the conversion XSLT.
 
 Please see [Installation.md](Installation.md) for installation and usage instructions.
 
@@ -46,30 +46,6 @@ Each leaf element in the output eForms XML will be preceded by an HTML comment n
 Where the eForms XML standard requires information that is not present in the source TED XML, the XSLT application will report a warning.
 
 * An HTML comment will precede the XML element stating that required information was not found in the source TED XML.
-* A warning message will be sent to the XSLT processing application using <xsl:message>
+* A warning message will be sent to the XSLT processing application using \<xsl:message\>
 * In some cases, such as dates, valid values will be added to make the XML schema-valid.
 
-
----
-
-Content below this line is relevant to the eForms developers, and may be moved to another Markdown file in this repository or deleted.
-
----
-
-<br>
-
-### Analysis files in the `structure-files` folder
-
-These files are in draft status.
-
-The "structure" files are intended to include all possible elements used in eForms. This excludes elements that are valid according to the relevant eForms schema, but which are not actually used in eForms. Use of the correct attributes and values is not guaranteed. These files will not pass the eForms business rules Schematron validation. Element values used are fictitious, and may be redundant or inconsistent or contradictory.
-
-Repeatability. Where elements are repeatable, it is not the purpose of these XML files to show that. Only one instance of these elements will usually be present. However, where the schema defines an exclusive choice of child elements for a parent element (meaning that the XML would be schema-invalid if the same parent element contained both child elements), then the parent element will be repeated to allow all possible child elements to be present, and maintain schema validity.
-
-
-
-| File | Purpose |
-| --- | --- |
-| notice-structure-CN.xml | XML file containing all possible used elements for any Contract Notice |
-| notice-structure-CAN.xml | XML file containing all possible used elements for any Contract Award Notice |
-| notice-structure-PIN-CFC.xml | XML file containing all possible used elements for any PIN used as a Call for Competition Notice |
