@@ -24,7 +24,7 @@ The repository contains the following folders:
 
 # How to use
 
-Basic usage instructions for developers to run the code in their own system is available [here](Usage-Information.md).
+Basic usage instructions for developers to run the code in their own system is available [here](usage-information.md).
 
 
 ## Versioning scheme

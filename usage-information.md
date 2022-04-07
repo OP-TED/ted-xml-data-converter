@@ -5,9 +5,9 @@
 
 The TEDXDC Converter has been developed and tested using the Saxon-9 HE XSLT processor, available from https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. However any XSLT 2 processor can be used. The main template is ted-to-eforms.xslt, the other templates and data XML files are called by the main template.
 
-Please see [Development-Methodology.md](Development-Methodology.md) for the approach and methodology for developing the conversion XSLT.
+Please see [development-methodology.md](development-methodology.md) for the approach and methodology for developing the conversion XSLT.
 
-Please see [Installation.md](Installation.md) for installation and usage instructions.
+Please see [installation.md](installation.md) for installation and usage instructions.
 
 An API for the converter is being developed which will allow conversion of notices via HTTPS requests.
 <br>
