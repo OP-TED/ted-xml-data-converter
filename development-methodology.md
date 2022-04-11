@@ -5,16 +5,16 @@ This page attemps to describe the technical approach to the conversion, and the 
 ## Technical Approach
 
 ### Business Terms
-The expression "Business Term" is exclusive to eForms. It has not been used previously for TED XML. It refers to an eForms business concept. Sometimes this will be expressed in only one structure/location in eForms XML. Often, it is relevant in multiple contexts ("top-level" Procedure, Lot, Result), and so could be expressed in more than one structure/location in eForms XML. The [Schema section of the eForms documentation](https://docs.ted.europa.eu/eforms/latest/schema/index.html)  groups these contexts together (see section [Procedure, Group of Lots, Lot & Part related information](https://docs.ted.europa.eu/eforms/latest/schema/procedure-lot-part-information.html) ), so that each Business Term is described only once.
+The expression "Business Term" is exclusive to eForms. It has not been used previously for TED XML. It refers to an eForms business concept. Sometimes this will be expressed in only one structure/location in eForms XML. Often, it is relevant in multiple contexts ("top-level" Procedure, Lot, Result), and so could be expressed in more than one structure/location in eForms XML. The [Schema section of the eForms documentation](https://docs.ted.europa.eu/eforms/0.5.0/schema/index.html)  groups these contexts together (see section [Procedure, Group of Lots, Lot & Part related information](https://docs.ted.europa.eu/eforms/0.5.0/schema/procedure-lot-part-information.html) ), so that each Business Term is described only once.
 
 Since this document is expressly about XSLT conversion, it will focus mainly on XML elements, and less about Business Terms. Hence, the term "XML structure" will be used to refer to a single XML element or XML structure; this may or may not be an expression of a single Business Term.
 
 ### Considerations
 
-There is not always a 1-to-1 mapping between a single TED XML structure and a single eForms structure.
+There is not always a 1-to-1 mapping between a single TED XML structure and a single eForms XML structure.
 
-* Some TED XML elements have no equivalent in eForms
-* Some TED XML structures map to multiple XML structures and locations in eForms
+* Some TED XML elements have no equivalent in eForms XM
+* Some TED XML structures map to multiple XML structures and locations in eForms XM
 * Some eForms Business Terms are mandatory in some contexts; their expression as XML structures are thus also mandatory, even if no equivalent TED XML structure is present in the source XML notice.
 
 
@@ -48,7 +48,6 @@ In this conversion XSLT, the Pull Model dominates. This is because:
 
 However, where there is a consistent and simple mapping between TED XML elements and eForms XML elements, the Push Model is used. This is because:
 * Push Model templates can be easier to understand
-* It supports abstraction into data maps for automatic XSLT template generation
 * Only one template is required if conversion is the same in multiple locations
 
 <br/>
@@ -76,7 +75,7 @@ There are multiple dimensions to this conversion:
 #### TED XML
 
 * TED XML Schemas
-* A million published XML notices <sup>[1](footnote1)</sup>
+* A million published XML notices
 * Validation Rules spreadsheets
 * The spreadsheets created from the April 2021 mapping of TED XML form items to business terms by EC
 * TED XML procurement PDF forms
@@ -91,17 +90,17 @@ There are multiple dimensions to this conversion:
 
 | Aspect | TED XML Sources | eForms sources |
 | --- | --- | --- |
-| Document structure | **TED XML schemas** <br/> Published notices | **eForms XML Schemas** <br/> **eForms documentation**  |
-| Element occurrence <br/> variations | **TED XML schemas** <br/> Published notices <br/> Validation Rules spreadsheets <br/> TED XML form item mapping spreadsheets | **eForms documentation** <br/> *eForms Regulation Annex spreadsheet* |
-| Element purpose, <br/> definitions, documentation | Element names *partly* <br/> Validation Rules spreadsheets *poor and incomplete* <br/> TED PDF form item mapping spreadsheets *unreliable* <br/> TED PDF forms | **eForms XML Schemas** <br/> **eForms documentation** <br/> *eForms Regulation Annex spreadsheet* <br/> eForms codelists |
+| Document structure | TED XML schemas <br/> Published notices | eForms XML Schemas <br/> eForms documentation  |
+| Element occurrence <br/> variations | TED XML schemas <br/> Published notices <br/> Validation Rules spreadsheets <br/> TED XML form item mapping spreadsheets | **eForms documentation** <br/> eForms Regulation Annex spreadsheet |
+| Element purpose, <br/> definitions, documentation | Element names *partly* <br/> Validation Rules spreadsheets *poor and incomplete* <br/> TED PDF form item mapping spreadsheets *unreliable* <br/> TED PDF forms | eForms XML Schemas <br/> eForms documentation <br/> *eForms Regulation Annex spreadsheet* <br/> eForms codelists |
 
 ## Occurrence and Priority
 
 There exists an extremely large number of variations of types of existing TED XML notice, arising from the combination of different TED XML schemas, the multiple Form types, and the historic schema evolution.  These variations in types are far from evenly distributed. As it is considered not feasible to complete the conversion XSLT for all these variations, priority must be given to those with the greatest number of published notices.
 
-### Calculation of notice occurrence counts
+### Published TED XML data set
 
-<a name="footnote1"></a>In preparation for this work, two years' worth (1.200.000 XML files) of TED XML notices were prepared for analysis. This set spans from March 2020 to February 2022. It covers the two TED XML schemas, but only the latest versions of these. Previous versions are thus not currently considered.
+In preparation for this work, two years' worth (1,200,000 XML files) of TED XML notices were prepared for analysis. This set spans from March 2020 to February 2022. It covers the two TED XML schemas, but only the latest versions of these. Previous versions are thus not currently considered.
 
 ## Analysis Process
 
@@ -134,10 +133,10 @@ Check that the order matches with the element order defined in the eForms schema
 ### 2. Check the Annex spreadsheet for Form relevance
 Review the Annex spreadsheet for the related BTs **and BGs**, determining which Forms they are allowed / forbidden / mandatory for. Document this in a comment in the XSLT file. If they are allowed for form 16, proceed with the next steps. 
 
-### 3. Determine the cardinality(-ies) of the structure
-Identify the XML structure used for the selected BT or BTs. Examine the documentation for all the related BTs for the structure (those using the same parent elements or structures), reviewing the cardinalities of all the elements involved. You may want to consider them together as a group. If the structure is repeated, either for the current BT or for other BTs, check which elements in the overall structure should be repeated by reviewing the documentation and the schema.
+### 3. Determine the cardinality(-ies) of the eForms structure
+Identify the XML structure used for the selected BT or BTs. Examine the documentation for all the related BTs for the structure (those using the same parent elements or structures), reviewing the cardinalities of all the elements involved. It may be helpful to consider them together as a group. If the structure is repeated, either for the current BT or for other BTs, check which elements in the overall structure should be repeated by reviewing the documentation and the schema.
 
-### 4. Determine the use / purpose of the structure
+### 4. Determine the use / purpose of the eForms structure
 Review the documentation and Annex spreadsheet to understand what information the structure is used for.
 
 If the structure uses a codelist, extract the codes and labels for consideration. Consider adding the list of codes and labels as a comment in the XSLT file.
@@ -146,13 +145,13 @@ If the structure uses a codelist, extract the codes and labels for consideration
 Review the information sources listed above for the TED XML to find the appropriate structures used for the same information. If none are found, document this in a comment in the XSLT, and move on to the next eForms structure.
 If an equivalent TED XML structure is found, check:
 * If the structure is used in only one, or more, locations in the TED XML schema
-* If the structure is an enumerated set of alternatives, consider an eForms codelist
+* If the structure is an enumerated set of alternatives (consider mapping to an eForms codelist)
 * Which TED XML forms allow the structure, and for each the cardinality and requirement (Optional or Mandatory)
 
 ### 6. Optional: Analyse text content of the TED XML structure
-If the identified TED XML structure contains text (such as a \<P\> element), write a script to extract and collate all the text variations from the TED XML data set. 
+If the identified TED XML structure contains text (such as a \<P\> element), extract and collate all the text variations from the TED XML data set. 
 
-If the text is an enumerated set (either an attribute with an enumerated set of values, or a set of empty elements (the element names are considerered values)), list them. Determine the meaning behind each, and map to the equivalent eForms codelist code.
+If the text is an enumerated set (either an attribute with an enumerated set of values, list them. Determine the meaning behind each, and map to the equivalent eForms codelist code.
 
 If the text is expressed in the language of the form, consider only the English versions. Read enough to confirm understanding of the meaning / use of the structure.
 
