@@ -5,7 +5,7 @@
 
 The TEDXDC Converter has been developed and tested using the Saxon-9 HE XSLT processor, available from https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/. However any XSLT 2 processor can be used. The main template is ted-to-eforms.xslt, the other templates and data XML files are called by the main template.
 
-Please see [development-methodology.md](development-methodology.md) for the approach and methodology for developing the conversion XSLT.
+Please see [development-methodology.md](development-methodology.md) for the approach and methodology for developing the conversion in XSLT.
 
 Please see [installation.md](installation.md) for installation and usage instructions.
 
@@ -16,7 +16,7 @@ An API for the converter is being developed which will allow conversion of notic
 
 # About the converter
 
-## XML output will be incomplete and invalid.
+## Incomplete and invalid XML output
 
 The XML output from the TED XML Data Converter will not be complete, and will also contain some errors. It will not pass all the eForms Schematron checks. This is because:
 

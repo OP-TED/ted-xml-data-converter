@@ -1,12 +1,12 @@
 
 # Disclaimer
-This project is currently under development. We may update the current version and replace it with a new version at any time. In this case, we recommend you retrieve the latest version in order to ensure technical compliance. The Publications Office of the European Union cannot guarantee the accuracy, adequacy, validity, reliability, availability or completeness of this information and accepts no responsibility for any use you may make of this project’s component parts.
+This project is currently under development. We may update the current version and replace it with a new version at any time. For this reason, we recommend you retrieve the latest version in order to ensure technical compliance. The Publications Office of the European Union cannot guarantee the accuracy, adequacy, validity, reliability, availability or completeness of this information and accepts no responsibility for any use you may make of this project’s component parts.
 
 The code and data in this repository is created by the Publications Office of the European Union and is licensed under the terms of the [EUPL-1.2 license](LICENSE).
 
 # Summary
 
-This project is managed by the Publications Office of the European Union to assist organisations publishing procurement notices in their migration to eForms. 
+This project is managed by the Publications Office of the European Union to assist organisations publishing procurement notices in their migration from TED XML to eForms. 
 
 An organisation publishing procurement notices may wish to switch the production of notices in their system from the TED schemas to the eForms schema at a point in time. In this case, they will have published some initial notices (PIN, Contract Notice, etc.) for an ongoing Procedure using the TED schemas. They will want to publish following notices, continuing the Procedure, using the eForms schema. 
 
@@ -17,9 +17,9 @@ The repository contains the following folders:
 | Folder | Purpose |
 | --- | --- |
 | `xslt` | The xslt and data for the conversion |
-| `development-notices` | Sample source TED XML files used for testing during development |
+| `development-notices` | Sample source TED XML files used for testing during development and their equivalent converted eForms XML files |
 | `eforms-structure-files` | Sample files for the structure of eForms XML |
-| `test-notices` | Sample notices in in TED schema XML to be used for testing the converter |
+| `test-notices` | Sample notices in TED schema XML to be used for testing the converter |
 
 
 # How to use

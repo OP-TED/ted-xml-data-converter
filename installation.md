@@ -1,4 +1,4 @@
-# TED XML to eForms XML Converter - installation instructions
+    # TED XML to eForms XML Converter: installation instructions
 
 Please see the [README.md](README.md) file for information about the files included in this repository.
 
@@ -10,7 +10,7 @@ These instructions are for installation in a Unix environment.
 <br>
 
 ## Summary
-To run the converter requires the following :
+To run the converter requires the following:
 
 ### Java
 
