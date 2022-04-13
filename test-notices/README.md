@@ -2,7 +2,6 @@
 
 In order to provide a way of testing the converter, a set of Notices in both TED XML and eForms XML formats is required. The TED XML notices should be representative; each set of notices should:
 
-- cover all the TED form types that have been included in the converter XSLT 
 - collectively include all the TED XML elements used in each TED form type covered
 - include variations in structure and language
 
