@@ -8,7 +8,7 @@ In order to provide a way of testing the converter, a set of Notices in both TED
 
 This table lists the TED XML files chosen to test the Converter, and the reasons for their choosing.
 
-| File | Form Name | Form Type | Reasons for selection |
+| File | Form Type | Document Type | Reasons for selection |
 | --- | --- | --- | --- | 
 | 20-320448-001-EXP.xml | F02_2014 | CN | Covers 81 elements, 2 Lots |
 | 20-242009-001-EXP.xml | F02_2014 | CN | Covers 25 other elements, 1 Lot, includes translations |
@@ -32,5 +32,3 @@ PT_COMPETITIVE_DIALOGUE
 PT_INNOVATION_PARTNERSHIP
 RESTRICTED_SHELTERED_PROGRAM
 RESTRICTED_SHELTERED_WORKSHOP
-
-In TEDXDC-29, Lamya said that of the above list of elements, most can be added to one or more of the first four files in the list. The two that can't are: LOT_MAX_NUMBER and LOT_ONE_ONLY. These are covered by the last two files in the list.

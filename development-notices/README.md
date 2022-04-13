@@ -2,9 +2,9 @@
 
 This table lists the TED XML files selected to test development of the Converter, and the reasons for their selection.
 
-| File | Form Type | Form Type | Topic | Reasons for selection |
+| File | Form Type | Document Type | Topic | Reasons for selection |
 | --- | --- | --- | --- | --- |
-| 20-155018-001-EXP.xml | F01 | PIN | Subtype mapping | PRI_ONLY Maps to  |
+| 20-155018-001-EXP.xml | F01 | PIN | Subtype mapping | PRI_ONLY Maps to subtype 4 |
 | 21-000061-001-EXP.xml | F03 | CAN | CAN | First CAN |
 | 21-000934-001-EXP.xml | F03 | CAN | Translations | One original English, 23 translations |
 | 21-010961-001-EXP.xml | F03 | CAN | Legal Basis | Other Legal Basis for EIB - no eForms subtype mapping available for this Notice |
