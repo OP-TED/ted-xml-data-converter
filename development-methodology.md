@@ -126,36 +126,36 @@ Thus the main structures (of the first form to be analysed, the Contract Notice 
 
 Within each structure, the steps taken are:
 
-### 1. Identify the next structure in eForms 
+#### 1. Identify the next structure in eForms 
 In the eForms documentation for the section, read the table at the beginning of the section, which lists all the Business Terms used. Identify the next BT (or group of BTs) to work on. Read the occurrence symbol for that BT to ensure that it is relevant in the section context. Document this in a comment in the XSLT file.
 Check that the order matches with the element order defined in the eForms schema.
 
-### 2. Check the Annex spreadsheet for eForms subtype relevance
+#### 2. Check the Annex spreadsheet for eForms subtype relevance
 Review the Annex spreadsheet for the related BTs **and BGs**, determining which eForms subtypes they are allowed / forbidden / mandatory for. Document this in a comment in the XSLT file. If they are allowed for form 16, proceed with the next steps. 
 
-### 3. Determine the cardinality(-ies) of the eForms structure
+#### 3. Determine the cardinality(-ies) of the eForms structure
 Identify the XML structure used for the selected BT or BTs. Examine the documentation for all the related BTs for the structure (those using the same parent elements or structures), reviewing the cardinalities of all the elements involved. It may be helpful to consider them together as a group. If the structure is repeated, either for the current BT or for other BTs, check which elements in the overall structure should be repeated by reviewing the documentation and the schema.
 
-### 4. Determine the use / purpose of the eForms structure
+#### 4. Determine the use / purpose of the eForms structure
 Review the documentation and Annex spreadsheet to understand what information the structure is used for.
 
 If the structure uses a codelist, extract the codes and labels for consideration. Consider adding the list of codes and labels as a comment in the XSLT file.
 
-### 5. Identify the structure used in TED XML for the same purpose
+#### 5. Identify the structure used in TED XML for the same purpose
 Review the information sources listed above for the TED XML to find the appropriate structures used for the same information. If none are found, document this in a comment in the XSLT, and move on to the next eForms structure.
 If an equivalent TED XML structure is found, check:
 * If the structure is used in only one, or more, locations in the TED XML schema
 * If the structure is an enumerated set of alternatives (consider mapping to an eForms codelist)
 * Which TED XML forms allow the structure, and for each the cardinality and requirement (Optional or Mandatory)
 
-### 6. Optional: analyse text content of the TED XML structure
+#### 6. Optional: analyse text content of the TED XML structure
 If the identified TED XML structure contains text (such as a \<P\> element), extract and collate all the text variations from the TED XML data set. 
 
 If the text is an enumerated set (either an attribute with an enumerated set of values, list them. Determine the meaning behind each, and map to the equivalent eForms codelist code.
 
 If the text is expressed in the language of the form, consider only the English versions. Read enough to confirm understanding of the meaning / use of the structure.
 
-### Choose the appropriate conversion approach (processing model and template structure)
+#### Choose the appropriate conversion approach (processing model and template structure)
 
 *This is more of a guide than definitive*
 
@@ -165,6 +165,9 @@ If the text is expressed in the language of the form, consider only the English 
 
 
 
+### TED XML elements which cannot be converted
+
+Some elements that exist in TED XML notices contain information which cannot be included in eForms XML. These, and the reasons they cannot be included in eForms, are listed in [ted-elements-not-convertible.md](ted-elements-not-convertible.md).
 
 
 

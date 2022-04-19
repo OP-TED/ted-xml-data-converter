@@ -21,6 +21,18 @@ The repository contains the following folders:
 | `eforms-structure-files` | Sample files for the structure of eForms XML |
 | `test-notices` | Sample notices in TED schema XML to be used for testing the converter |
 
+The repository contains the following documentation files in Markdown format:
+
+| File | Purpose |
+| --- | --- |
+| [README.md](README.md) | This file |
+| [usage-information.md](usage-information.md) | General information on usage of this repository |
+| [installation.md](installation.md) | Basic instructions on installation in a Unix environment |
+| [development-methodology.md](development-methodology.md) | The technical approach to developing this conversion |
+| [CHANGELOG.md](CHANGELOG.md) | The list of changes made since the last release |
+
+Each folder also contains a README.md file listing the files in that folder and their purpose.
+
 
 # How to use
 
