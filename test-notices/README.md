@@ -5,6 +5,8 @@ In order to provide a way of testing the converter, a set of Notices in both TED
 - collectively include all the TED XML elements used in each TED form type covered
 - include variations in structure and language
 
+The eForms XML notice files should be created using information from the TED XML notice files, by a different process from the converter. This work is in progress; no example eForms XML files are included in this release.
+
 This table lists the TED XML files chosen to test the Converter, and the reasons for their choosing.
 
 | File | Form Type | Document Type | Reasons for selection |
