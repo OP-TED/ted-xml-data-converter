@@ -29,6 +29,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:include href="addresses.xslt"/>
 <xsl:include href="procedure.xslt"/>
 <xsl:include href="lot.xslt"/>
+<xsl:include href="common.xslt"/>
 
 
 <!-- TBD: Currently these stylesheets only cater for one form element, one language. Work is required to cater for other form elements with alternate languages -->
