@@ -25,7 +25,6 @@ This table lists the TED XML files selected to test development of the Converter
 | 20-213571-001-EXP.xml | F02 | CN | NUTS | No NUTS3 codes, no MAIN_SITE |
 | 20-164186-001-EXP.xml | F02 | CN | NUTS | 1 NUTS3 code, no MAIN_SITE |
 | 20-560391-001-EXP.xml | F21 | CN | NUTS | 3 NUTS3 codes, no MAIN_SITE |
-| 20-261593-001-EXP.xml | F20 | CAN | NUTS | 1 NUTS3 code, MAIN_SITE with 1 P |
 | 21-051959-001-EXP.xml | F02 | CN | NUTS | 1 NUTS3 code, MAIN_SITE with 2 P |
 | 20-246700-001-EXP.xml | F02 | CN | NUTS | 1 NUTS3 code, MAIN_SITE with 3 P |
 | 20-156983-001-EXP.xml | F02 | CN | NUTS | 2 NUTS3 codes, MAIN_SITE with 1 P |
