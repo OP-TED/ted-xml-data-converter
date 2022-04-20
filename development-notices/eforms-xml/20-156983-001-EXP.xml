@@ -1,0 +1,2313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.langstane-ha.co.uk</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Langstane Housing Association Ltd</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>680 King Street</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Aberdeen</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>AB24 1SL</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+44 1224423000</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>info@langstane-ha.co.uk</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://www.castlehillha.co.uk/</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Castlehill Housing Association</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>4 Carden Place</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Aberdeen</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>AB10 1UT</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">UKM5</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+44 1224625822</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>info@castlehillha.co.uk</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://www.ospreyhousing.org.uk/</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Osprey Housing</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>22 Abercrombie Court, Arnhall Business Park</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Westhill</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>AB32 6FE</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+44 1224548000</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>enquiries@ospreyhousing.org.uk</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.angusha.org.uk</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Angus Housing Association Ltd</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>93 High Street</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Arbroath</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>DD11 1DP</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">UKM71</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+44 3451772244</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+44 1241430355</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>contactus@angusha.org.uk</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Aberdeen Sheriff Court</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>53 Castle Street</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Aberdeen</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>AB11 5BB</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication here -->
+               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2020-03-27+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!-- cac:ContractingParty here -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA14482</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>body-pl</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>HOUSING_AND_COMMUNITY_AMENITIES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA12562</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>body-pl</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>HOUSING_AND_COMMUNITY_AMENITIES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA11682</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>body-pl</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>HOUSING_AND_COMMUNITY_AMENITIES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA15743</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>body-pl</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>HOUSING_AND_COMMUNITY_AMENITIES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms here -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+      <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+         <cbc:MaximumLotsSubmittedNumeric>7</cbc:MaximumLotsSubmittedNumeric>
+      </cac:LotDistribution>
+      <!--Group Identifier (BT-330)-->
+      <!--Group Lot Identifier (BT-1375)-->
+   </cac:TenderingTerms>
+   <!-- cac:TenderingProcess here -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">2019/S 090-214462</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <!--Previous Planning Part Identifier (BT-1251)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject here -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">Kitchen and Bathroom Framework 2020-2024</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="ENG">Langstane Housing Association, Castlehill Housing Association, Osprey Housing and Angus Housing Association (otherwise not referred to as ‘the Associations’) are undertaking the creation of a Local Aberdeen, Dundee and surrounding areas kitchen and bathroom installation framework across seven lots.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">Please ensure that you comprehensively read, understand and complete the ESPD submission all as stated in the attached Project Particulars and ESPD Guidance — vFinal. Failure to complete this correctly may result in your ESPD being deemed as non-compliant and removed from the ESPD selection process. Note: to register your interest in this notice and obtain any additional information please visit the Public Contracts Scotland website at https://www.publiccontractsscotland.gov.uk/Search/Search_Switch.aspx?ID=619060 The buyer has indicated that it will accept electronic responses to this notice via the postbox facility. A user guide is available at https://www.publiccontractsscotland.gov.uk/sitehelp/help_guides.aspx Suppliers are advised to allow adequate time for uploading documents and to dispatch the electronic response well in advance of the closing time to avoid any last minute problems. A subcontract clause has been included in this contract. For more information see: http://www.publiccontractsscotland.gov.uk/info/InfoCentre.aspx?ID=2363 Community benefits are included in this requirement. For more information see: http://www.publiccontractsscotland.gov.uk/info/InfoCentre.aspx?ID=2361 A summary of the expected community benefits has been provided as follows: Details will be provided at stage 2 (SC Ref:619060)</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="GBP">12000000.00</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Main Classification Code (BT-262)-->
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <cbc:RecurringProcurementDescription languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:RecurringProcurementDescription>
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.publiccontractsscotland.gov.uk/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">KPIs will be issued with stage 2.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-05-15+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>6</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Lot 2: Aberdeenshire North</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The successful contractor/s key objectives will be to provide high-quality kitchen and bathroom replacement works which will include survey of existing properties, design, liaison with tenants and contract administrator, removal and disposal of existing kitchens and bathrooms, the supply and fit of replacement kitchens and bathrooms meeting the specification set out in the ITT documentation and ensuring compliance with SHQS and a defects service for 1 year after completion.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--UKM50:UKM62 5 UKM50 UKM62-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 2: Aberdeenshire North.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 2: Aberdeenshire North.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM62</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract shall commence in 3 August 2020 until 2 August 2022 with an option to extend for two single 12-month periods until 2024 subject to performance and compliance with contract KPI’s.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <cbc:RecurringProcurementDescription languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:RecurringProcurementDescription>
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.publiccontractsscotland.gov.uk/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">KPIs will be issued with stage 2.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-05-15+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>6</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Lot 1: Aberdeen City</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The successful contractor/s key objectives will be to provide high-quality kitchen and bathroom replacement works which will include survey of existing properties, design, liaison with tenants and contract administrator, removal and disposal of existing kitchens and bathrooms, the supply and fit of replacement kitchens and bathrooms meeting the specification set out in the ITT documentation and ensuring compliance with SHQS and a defects service for 1 year after completion.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--UKM50:UKM62 5 UKM50 UKM62-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 1: Aberdeen City.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 1: Aberdeen City.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM62</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract shall commence in 3 August 2020 until 2 August 2022 with an option to extend for two single 12-month periods until 2024 subject to performance and compliance with contract KPI’s.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <cbc:RecurringProcurementDescription languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:RecurringProcurementDescription>
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.publiccontractsscotland.gov.uk/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">KPIs will be issued with stage 2.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-05-15+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>6</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Lot 3: Aberdeenshire South</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The successful contractor/s key objectives will be to provide high-quality kitchen and bathroom replacement works which will include survey of existing properties, design, liaison with tenants and contract administrator, removal and disposal of existing kitchens and bathrooms, the supply and fit of replacement kitchens and bathrooms meeting the specification set out in the ITT documentation and ensuring compliance with SHQS and a defects service for 1 year after completion.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--UKM50:UKM62 5 UKM50 UKM62-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 3: Aberdeenshire South</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 3: Aberdeenshire South</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM62</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract shall commence in 3 August 2020 until 2 August 2022 with an option to extend for two single 12-month periods until 2024 subject to performance and compliance with contract KPI’s.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <cbc:RecurringProcurementDescription languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:RecurringProcurementDescription>
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.publiccontractsscotland.gov.uk/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">KPIs will be issued with stage 2.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-05-15+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>6</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Lot 4: Aberdeenshire West</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The successful contractor/s key objectives will be to provide high-quality kitchen and bathroom replacement works which will include survey of existing properties, design, liaison with tenants and contract administrator, removal and disposal of existing kitchens and bathrooms, the supply and fit of replacement kitchens and bathrooms meeting the specification set out in the ITT documentation and ensuring compliance with SHQS and a defects service for 1 year after completion.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--UKM50:UKM62 5 UKM50 UKM62-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 4: Aberdeenshire West</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 4: Aberdeenshire West</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM62</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract shall commence in 3 August 2020 until 2 August 2022 with an option to extend for two single 12-month periods until 2024 subject to performance and compliance with contract KPI’s.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <cbc:RecurringProcurementDescription languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:RecurringProcurementDescription>
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.publiccontractsscotland.gov.uk/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">KPIs will be issued with stage 2.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-05-15+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>6</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Lot 5: Moray</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The successful contractor/s key objectives will be to provide high-quality kitchen and bathroom replacement works which will include survey of existing properties, design, liaison with tenants and contract administrator, removal and disposal of existing kitchens and bathrooms, the supply and fit of replacement kitchens and bathrooms meeting the specification set out in the ITT documentation and ensuring compliance with SHQS and a defects service for 1 year after completion.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--UKM50:UKM62 5 UKM50 UKM62-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 5: Moray.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 5: Moray.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM62</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract shall commence in 3 August 2020 until 2 August 2022 with an option to extend for two single 12-month periods until 2024 subject to performance and compliance with contract KPI’s.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <cbc:RecurringProcurementDescription languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:RecurringProcurementDescription>
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.publiccontractsscotland.gov.uk/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">KPIs will be issued with stage 2.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-05-15+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>6</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Lot 6: Angus West and Dundee</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The successful contractor/s key objectives will be to provide high-quality kitchen and bathroom replacement works which will include survey of existing properties, design, liaison with tenants and contract administrator, removal and disposal of existing kitchens and bathrooms, the supply and fit of replacement kitchens and bathrooms meeting the specification set out in the ITT documentation and ensuring compliance with SHQS and a defects service for 1 year after completion.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--UKM71 5 UKM71 -->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 6: Angus West and Dundee.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM71</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract shall commence in 3 August 2020 until 2 August 2022 with an option to extend for two single 12-month periods until 2024 subject to performance and compliance with contract KPI’s.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <cbc:RecurringProcurementDescription languageID="ENG">As stated in the Project Particulars and ESPD Guidance — vFinal.</cbc:RecurringProcurementDescription>
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>http://www.publiccontractsscotland.gov.uk/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">KPIs will be issued with stage 2.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-05-08+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2020-05-15+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>6</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Lot 7: Angus East</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The successful contractor/s key objectives will be to provide high-quality kitchen and bathroom replacement works which will include survey of existing properties, design, liaison with tenants and contract administrator, removal and disposal of existing kitchens and bathrooms, the supply and fit of replacement kitchens and bathrooms meeting the specification set out in the ITT documentation and ensuring compliance with SHQS and a defects service for 1 year after completion.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--UKM71 5 UKM71 -->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Lot 7: Angus East.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">UKM71</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cac:Renewal>
+               <cac:Period>
+                  <cbc:Description languageID="ENG">The contract shall commence in 3 August 2020 until 2 August 2022 with an option to extend for two single 12-month periods until 2024 subject to performance and compliance with contract KPI’s.</cbc:Description>
+               </cac:Period>
+            </cac:Renewal>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>
