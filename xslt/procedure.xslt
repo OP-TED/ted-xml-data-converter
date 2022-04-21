@@ -77,21 +77,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</cac:ProcessJustification>
 </xsl:template>
 
-<xsl:template match="ted:TITLE">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<cbc:Name languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Name>
-</xsl:template>
-
-<xsl:template match="ted:SHORT_DESCR">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
-</xsl:template>
-
-<xsl:template match="ted:TYPE_CONTRACT">
-	<xsl:variable name="ted-value" select="fn:normalize-space(@CTYPE)"/>
-	<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[ted-value eq $ted-value]/fn:string(eforms-value)"/>
-	<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
-</xsl:template>
 	
 <xsl:template match="ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
@@ -101,12 +86,5 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</cac:RequestedTenderTotal>
 </xsl:template>
 
-<xsl:template match="ted:CPV_MAIN|ted:CPV_ADDITIONAL">
-	<xsl:variable name="ted-value" select="fn:normalize-space(ted:CPV_CODE/@CODE)"/>
-	<cac:MainCommodityClassification>
-		<cbc:ItemClassificationCode listName="cpv"><xsl:value-of select="$ted-value"/></cbc:ItemClassificationCode>
-	</cac:MainCommodityClassification>
-	<!-- "Supplementary CPV" (CPV_MAIN/CPV_SUPPLEMENTARY_CODE) are not implemented for eForms -->
-</xsl:template>
 
 </xsl:stylesheet>

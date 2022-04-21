@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations here -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://ec.europa.eu/jrc/</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Commission, JRC — Joint Research Centre, JRC.A — Strategy, Work Programme and Resources (Brussels), JRC.A.6 — Quality Assurance and Evaluation</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>CDMA 05/035, Rue du Champ de Mars 21</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Brussels</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>B-1050</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">BE100</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>jrc-ispra-dir-a-procurement@ec.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://curia.europa.eu</cbc:WebsiteURI>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>General Court of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Rue du Fort Niedergrünewald</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>2925</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode>LU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+352 4303-1</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>GC.Registry@curia.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication here -->
+               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2020-07-13+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32018R1046</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DAN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DEU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SPA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FIN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FRA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ELL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ITA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NLD</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SWE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EST</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HUN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LIT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LAV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MLT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GLE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BUL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RON</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HRV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!-- cac:ContractingParty here -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>eu-ins-bod-ag</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms here -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess here -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">2020/S 091-215923</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <!--Previous Planning Part Identifier (BT-1251)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject here -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">JRC/2020/OP/1033</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">JRC Multi-site Organisation Certification for ISO 9001 and Certification for ISO 45001 On-site Level</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="ENG">This framework contract is intended to select a certification body to maintain the certification of the JRC for ISO 9001:2015 as multi-site organisation (Brussels and Geel (Belgium), Karlsruhe (Germany), Petten (The Netherlands), Sevilla (Spain) and Ispra (Italy)) and includes also the maintenance of the certification for ISO 45001:2018 on site level for the Geel (Belgium), Karlsruhe (Germany), Petten (The Netherlands) and Ispra (Italy) sites.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">See internet address provided in section I.3).</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">400000.00</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">79212000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Main Classification Code (BT-262)-->
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot here -->
+   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <!-- Lot cac:TenderingTerms here -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">See internet address provided in section I.3).</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://etendering.ted.europa.eu/cft/cft-display.html?cftId=6282</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">See internet address provided in section I.3).</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <cac:TechnicalCommitteePerson>
+               <cbc:FamilyName/>
+            </cac:TechnicalCommitteePerson>
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://etendering.ted.europa.eu/cft/cft-display.html?cftId=6282</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">See internet address provided in Section I.3).</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>BUL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>CES</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>DAN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>DEU</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SPA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>EST</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>FIN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>FRA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>GLE</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>HRV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>HUN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ITA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>LIT</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>LAV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>MLT</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>NLD</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>POL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>POR</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>RON</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SLK</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SLV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SWE</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess here -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2020-08-24+01:00</cbc:EndDate>
+                        <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2020-08-24+01:00</cbc:EndDate>
+            <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>false</cbc:LimitationDescription>
+            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2020-08-26+01:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+01:00</cbc:OccurrenceTime>
+            <cbc:Description languageID="ENG">See internet address provided in section I.3.</cbc:Description>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ENG">Via Enrico Fermi 2749, 21027 Ispra (VA), ITALY.</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)-->
+            <cbc:MaximumOperatorQuantity>1</cbc:MaximumOperatorQuantity>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject here -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">JRC Multi-site Organisation Certification for ISO 9001 and Certification for ISO 45001 On-site Level</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">This framework contract is intended to select a certification body to maintain the certification of the JRC for ISO 9001:2015 as multi-site organisation (Brussels and Geel (Belgium), Karlsruhe (Germany), Petten (The Netherlands), Sevilla (Spain) and Ispra (Italy)) and includes also the maintenance of the certification for ISO 45001:2018 on site level for the Geel (Belgium), Karlsruhe (Germany), Petten (The Netherlands) and Ispra (Italy) sites.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">See internet address provided in section I.3).</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">400000.00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79212000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--BE100:BE213:ITC41:NL328:ES618 5 BE100 BE213:ITC41:NL328:ES618-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>JRC-Geel and JRC-Brussels — BELGIUM</cbc:StreetName>
+               <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">BE100</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>JRC-Geel and JRC-Brussels — BELGIUM</cbc:StreetName>
+               <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">BE213</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>JRC-Geel and JRC-Brussels — BELGIUM</cbc:StreetName>
+               <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>JRC-Geel and JRC-Brussels — BELGIUM</cbc:StreetName>
+               <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">NL328</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>JRC-Geel and JRC-Brussels — BELGIUM</cbc:StreetName>
+               <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">ES618</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
+               </cac:AddressLine>
+               <cac:AddressLine>
+                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>
