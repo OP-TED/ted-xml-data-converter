@@ -92,7 +92,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	</xsl:template>
 	
 	<xsl:template match="ted:NO_ACCEPTED_VARIANTS">
-		<cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+		<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
 	</xsl:template>
 	
 	<xsl:template match="ted:EU_PROGR_RELATED">

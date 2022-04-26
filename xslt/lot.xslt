@@ -308,8 +308,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION)">
 		<xsl:variable name="is-reserved-execution">
 			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">true</xsl:when>
-				<xsl:otherwise>false</xsl:otherwise>
+				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">yes</xsl:when>
+				<xsl:otherwise>no</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 		<cac:ContractExecutionRequirement>

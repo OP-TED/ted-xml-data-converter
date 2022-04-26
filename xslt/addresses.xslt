@@ -212,7 +212,6 @@ These instructions can be un-commented to show the variables holding the organiz
 		<xsl:apply-templates select="../(ted:CA_TYPE|CA_TYPE_OTHER)"/>
 		<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 		<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:comment>Activity Authority (BT-10) and Activity Entity (BT-610)</xsl:comment>
 		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 		<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
 		<!-- NOTE: CA_ACTIVITY_OTHER and CA_TYPE_OTHER cannot be converted -->
@@ -251,13 +250,16 @@ These instructions can be un-commented to show the variables holding the organiz
 	<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 	<xsl:comment>Buyer Legal Type (BT-11)</xsl:comment>
 	<cac:ContractingPartyType>
-		<cbc:PartyType><xsl:value-of select="$buyer-legal-type"/></cbc:PartyType>
+		<cbc:PartyType listName="buyer-legal-type"><xsl:value-of select="$buyer-legal-type"/></cbc:PartyType>
 	</cac:ContractingPartyType>
 	<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:comment>Buyer Contracting Entity (BT-740)</xsl:comment>
-	<!-- buyer-contracting-type codelist Not yet available -->
+	<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
+	<xsl:variable name="message">WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default</xsl:variable>
+	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+	<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
 	<cac:ContractingPartyType>
-		<cbc:PartyType><xsl:value-of select="'buyer-contracting-type'"/></cbc:PartyType>
+		<cbc:PartyType listName="buyer-contracting-type"><xsl:value-of select="'not-cont-ent'"/></cbc:PartyType>
 	</cac:ContractingPartyType>
 </xsl:template>
 
@@ -266,16 +268,20 @@ These instructions can be un-commented to show the variables holding the organiz
 <xsl:template match="ted:CA_ACTIVITY">
 	<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 	<xsl:comment>Activity Authority (BT-10)</xsl:comment>
-	<!-- authority-activity codelist not yet available -->
+	<xsl:variable name="message">WARNING: "Authority activity" codelist not yet available. Value copied from TED XML element CA_ACTIVITY</xsl:variable>
+	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+	<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
 	<cac:ContractingActivity>
-		<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
+		<cbc:ActivityTypeCode listName="authority-activity"><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
 </xsl:template>
 
 <xsl:template match="ted:CE_ACTIVITY">
 	<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:comment>Activity Entity (BT-610)</xsl:comment>
-	<!-- entity-activity codelist not yet available -->
+	<xsl:variable name="message">WARNING: "Entity activity" codelist not yet available. Value copied from TED XML element CE_ACTIVITY</xsl:variable>
+	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+	<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
 	<cac:ContractingActivity>
 		<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
