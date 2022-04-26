@@ -215,6 +215,7 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 		<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
 		<!-- NOTE: CA_ACTIVITY_OTHER and CA_TYPE_OTHER cannot be converted -->
+		<xsl:comment>Activity Authority (BT-10) and Activity Entity (BT-610)</xsl:comment>
 		<xsl:apply-templates select="../ted:CA_ACTIVITY|../ted:CE_ACTIVITY"/>
 		<cac:Party>
 			<!-- Buyer Technical Identifier Reference (OPT-300) -->
@@ -266,24 +267,22 @@ These instructions can be un-commented to show the variables holding the organiz
 <!-- Create cac:ContractingActivity structures -->
 
 <xsl:template match="ted:CA_ACTIVITY">
+	<xsl:variable name="ca-activity" select="@VALUE"/>
+	<xsl:variable name="authority-activity-type" select="$mappings//authority-activity-types/mapping[ted-value=$ca-activity]/fn:string(eforms-value)"/>
 	<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 	<xsl:comment>Activity Authority (BT-10)</xsl:comment>
-	<xsl:variable name="message">WARNING: "Authority activity" codelist not yet available. Value copied from TED XML element CA_ACTIVITY</xsl:variable>
-	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-	<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
 	<cac:ContractingActivity>
-		<cbc:ActivityTypeCode listName="authority-activity"><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
+		<cbc:ActivityTypeCode listName="authority-activity"><xsl:value-of select="$authority-activity-type"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
 </xsl:template>
 
 <xsl:template match="ted:CE_ACTIVITY">
+	<xsl:variable name="ce-activity" select="@VALUE"/>
+	<xsl:variable name="entity-activity-type" select="$mappings//entity-activity-types/mapping[ted-value=$ce-activity]/fn:string(eforms-value)"/>
 	<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:comment>Activity Entity (BT-610)</xsl:comment>
-	<xsl:variable name="message">WARNING: "Entity activity" codelist not yet available. Value copied from TED XML element CE_ACTIVITY</xsl:variable>
-	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-	<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
 	<cac:ContractingActivity>
-		<cbc:ActivityTypeCode><xsl:value-of select="@VALUE"/></cbc:ActivityTypeCode>
+		<cbc:ActivityTypeCode listName="entity-activity"><xsl:value-of select="$entity-activity-type"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
 </xsl:template>
 

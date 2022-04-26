@@ -124,10 +124,10 @@
       <cac:ContractingPartyType>
          <cbc:PartyType listName="buyer-contracting-type">not-cont-ent</cbc:PartyType>
       </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
-      <!--WARNING: "Authority activity" codelist not yet available. Value copied from TED XML element CA_ACTIVITY-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode listName="authority-activity">GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
