@@ -40,10 +40,15 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<cac:TechnicalCommitteePerson>
 				<cbc:FamilyName></cbc:FamilyName>
 			</cac:TechnicalCommitteePerson>
+			
 			<!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
-			<!-- Prize Rank (BT-44) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-			<!-- Value Prize (BT-644) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- Prize Rank (BT-44) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- Value Prize (BT-644) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<xsl:comment>Prize information (BG-44, BT-45, BT-644)</xsl:comment>
+		<xsl:apply-templates select="../../ted:PROCEDURE/ted:NUMBER_VALUE_PRIZE"/> 
+			
+		
 		</cac:AwardingTerms>
 	</xsl:template>
 
@@ -140,5 +145,28 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</ext:UBLExtensions>
 	</xsl:template>
 
+<!--Start of Prize information -->
+<!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
+			<!-- Prize Rank (BT-44) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- Value Prize (BT-644) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+			<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+<xsl:template match="ted:NUMBER_VALUE_PRIZE">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/ted:NUMBER_VALUE_PRIZE/ted:P, ' '))"/>
+	<xsl:if test="$text ne ''" >
+		<cac:Prize>
+			<!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
+									<xsl:variable name="message">WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.</xsl:variable>
+									<xsl:message terminate="no" select="$message"/>
+									<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			<cbc:RankCode>1</cbc:RankCode>
+			<!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
+									<xsl:variable name="message">WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.</xsl:variable>
+									<xsl:message terminate="no" select="$message"/>
+									<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+		</cac:Prize>
+	</xsl:if>			
+</xsl:template>
+<!--End of Prize information -->	
 
 </xsl:stylesheet>

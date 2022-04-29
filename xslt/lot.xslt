@@ -173,6 +173,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!-- Reserved Execution (BT-736) cardinality ? Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:call-template name="reserved-execution"/>
 		<!-- Electronic Invoicing (BT-743) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+			
 		<xsl:call-template name="e-invoicing"/>
 		<!-- Terms Performance (BT-70) cardinality ? Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:call-template name="terms-performance"/>
