@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" 
-xmlns:doc="http://www.pnp-software.com/XSLTdoc" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
-xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" 
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
-xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " 
->
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 
@@ -167,12 +167,22 @@ These instructions can be un-commented to show the variables holding the organiz
 		<xsl:apply-templates select="ted:POSTAL_CODE"/>
 		<!-- Organization Country Subdivision (BT-507) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Country Subdivision (BT-507)</xsl:comment>
-		<xsl:apply-templates select="n2016:NUTS"/>
+		<xsl:apply-templates select="n2016:NUTS|n2021:NUTS"/>
 		<!-- Organization Country Code (BT-514) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Country Code (BT-514)</xsl:comment>
 		<xsl:apply-templates select="ted:COUNTRY"/>
 	</cac:PostalAddress>
 </xsl:template>
+
+<!-- Convert two-letter country code in ted:COUNTRY to three-letter country code used in eForms -->
+
+<xsl:template match="ted:COUNTRY">
+	<xsl:variable name="country" select="opfun:get-eforms-country(@VALUE)"/>
+	<cac:Country>
+		<cbc:IdentificationCode listName="country"><xsl:value-of select="$country"/></cbc:IdentificationCode>
+	</cac:Country>
+</xsl:template>
+
 
 <!-- Create cac:PostalAddress structure -->
 
@@ -291,6 +301,15 @@ These instructions can be un-commented to show the variables holding the organiz
 
 <xsl:template match="ted:ADDRESS_FURTHER_INFO">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_FURTHER_INFO')]/../orgid"/>
+	<cac:AdditionalInformationParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
+		</cac:PartyIdentification>
+	</cac:AdditionalInformationParty>
+</xsl:template>
+
+<xsl:template match="ted:ADDRESS_FURTHER_INFO_IDEM">
+	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_CONTRACTING_BODY')]/../orgid"/>
 	<cac:AdditionalInformationParty>
 		<cac:PartyIdentification>
 			<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>

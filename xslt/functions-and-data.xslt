@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" 
-xmlns:doc="http://www.pnp-software.com/XSLTdoc" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
-xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" 
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
-xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " 
->
+<xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- include FunctX XSLT Function Library -->
@@ -98,7 +98,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:variable name="language-codes-map">
 	<xsl:variable name="source-language-file" select="fn:document('languages.xml')"/>
 	<languages>
-		<xsl:for-each select="$source-language-file//record[op-mapped-code/@source='TED']">
+		<xsl:for-each select="$source-language-file//record[@deprecated='false'][op-mapped-code/@source='TED']">
 			<language>
 				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
 				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
@@ -109,6 +109,20 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</languages>
 </xsl:variable>
 
+<!-- Variable country-codes-map holds a mapping of country codes from TED two-letter format to eForms three-letter format -->
+<xsl:variable name="country-codes-map">
+	<xsl:variable name="source-country-file" select="fn:document('countries.xml')"/>
+	<countries>
+		<xsl:for-each select="$source-country-file//record[@deprecated='false'][op-mapped-code/@source='TED']">
+			<country>
+				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
+				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
+				<ted><xsl:value-of select="$ted-form"/></ted>
+				<eforms><xsl:value-of select="$eforms-form"/></eforms>
+			</country>
+		</xsl:for-each>
+	</countries>
+</xsl:variable>
 
 
 <!-- #### GLOBAL FUNCTIONS #### -->
@@ -121,10 +135,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:value-of select="if ($mapped-language) then $mapped-language else 'UNKNOWN-LANGUAGE'"/>
 </xsl:function>
 
+<xsl:function name="opfun:get-eforms-country" as="xs:string">
+	<!-- function to get eForms country code from given TED country code, e.g. "BG" to "BGR" -->
+	<xsl:param name="ted-country" as="xs:string"/>
+	<xsl:variable name="mapped-country" select="$country-codes-map//country[ted eq $ted-country]/fn:string(eforms)"/>
+	<xsl:value-of select="if ($mapped-country) then $mapped-country else 'UNKNOWN-COUNTRY'"/>
+</xsl:function>
 
 <!-- Function opfun:get-valid-nuts-codes filters a list of NUTS codes to those of more than 4 characters -->
 <xsl:function name="opfun:get-valid-nuts-codes" as="xs:string*">
-	<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
 	<xsl:param name="nuts-codes" as="xs:string*"/>
 		<xsl:for-each select="$nuts-codes">
 			<xsl:choose>

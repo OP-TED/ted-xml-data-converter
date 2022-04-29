@@ -8,7 +8,7 @@
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
                  xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
-   <ext:UBLExtensions>
+   <ext:UBLExtensions xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
@@ -38,7 +38,7 @@
                            <cbc:CountrySubentityCode listName="nuts">DEE02</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -69,7 +69,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>DE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -92,27 +92,27 @@
       </ext:UBLExtension>
    </ext:UBLExtensions>
    <!--UBL version ID (UBL)-->
-   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:UBLVersionID xmlns:xlink="http://www.w3.org/1999/xlink">2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID xmlns:xlink="http://www.w3.org/1999/xlink">eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID xmlns:xlink="http://www.w3.org/1999/xlink">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
-   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:ContractFolderID xmlns:xlink="http://www.w3.org/1999/xlink">aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2021-01-28+01:00</cbc:IssueDate>
-   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:IssueDate xmlns:xlink="http://www.w3.org/1999/xlink">2021-01-28+01:00</cbc:IssueDate>
+   <cbc:IssueTime xmlns:xlink="http://www.w3.org/1999/xlink">12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
-   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:VersionID xmlns:xlink="http://www.w3.org/1999/xlink">01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain xmlns:xlink="http://www.w3.org/1999/xlink">32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode xmlns:xlink="http://www.w3.org/1999/xlink" listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode xmlns:xlink="http://www.w3.org/1999/xlink">DEU</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyType listName="buyer-legal-type">cga</cbc:PartyType>
       </cac:ContractingPartyType>
@@ -140,7 +140,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+   <cac:TenderingTerms xmlns:xlink="http://www.w3.org/1999/xlink"><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
       <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>30</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
@@ -148,7 +148,7 @@
       <!--Group Lot Identifier (BT-1375)-->
    </cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
-   <cac:TenderingProcess>
+   <cac:TenderingProcess xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
@@ -168,7 +168,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+   <cac:ProcurementProject xmlns:xlink="http://www.w3.org/1999/xlink"><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">V52567-0121</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="DEU">Entwicklung digitaler Kompetenzen von Lehrkräften der Grund- und Sekundarstufe in Sachsen-Anhalt</cbc:Name>
@@ -178,10 +178,10 @@
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -192,7 +192,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -289,6 +289,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -414,10 +419,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -425,7 +433,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -450,7 +457,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -547,6 +554,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -672,10 +684,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -683,7 +698,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -708,7 +722,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -805,6 +819,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -930,10 +949,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -941,7 +963,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -966,7 +987,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1063,6 +1084,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -1188,10 +1214,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -1199,7 +1228,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -1224,7 +1252,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1321,6 +1349,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -1446,10 +1479,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -1457,7 +1493,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -1482,7 +1517,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1579,6 +1614,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -1704,10 +1744,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -1715,7 +1758,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -1740,7 +1782,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1837,6 +1879,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -1962,10 +2009,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -1973,7 +2023,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -1998,7 +2047,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0008</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2095,6 +2144,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -2220,10 +2274,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -2231,7 +2288,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -2256,7 +2312,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0009</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2353,6 +2409,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -2478,10 +2539,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -2489,7 +2553,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -2514,7 +2577,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0010</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2611,6 +2674,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -2736,10 +2804,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -2747,7 +2818,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -2772,7 +2842,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0011</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2869,6 +2939,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -2994,10 +3069,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -3005,7 +3083,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -3030,7 +3107,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0012</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3127,6 +3204,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -3252,10 +3334,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -3263,7 +3348,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -3288,7 +3372,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 11000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 11000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-11000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3385,6 +3469,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -3510,10 +3599,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -3521,7 +3613,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -3546,7 +3637,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 12000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 12000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-12000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3643,6 +3734,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -3768,10 +3864,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -3779,7 +3878,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -3804,7 +3902,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 21000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 21000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-21000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3901,6 +3999,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -4026,10 +4129,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -4037,7 +4143,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -4062,7 +4167,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 22000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 22000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-22000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4159,6 +4264,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -4284,10 +4394,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -4295,7 +4408,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -4320,7 +4432,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 31000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 31000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-31000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4417,6 +4529,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -4542,10 +4659,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -4553,7 +4673,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -4578,7 +4697,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 33000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 33000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-33000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4675,6 +4794,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -4800,10 +4924,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -4811,7 +4938,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -4836,7 +4962,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 41000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 41000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-41000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4933,6 +5059,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -5058,10 +5189,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -5069,7 +5203,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -5094,7 +5227,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 42000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 42000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-42000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -5191,6 +5324,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -5316,10 +5454,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -5327,7 +5468,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -5352,7 +5492,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 51000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 51000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-51000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -5449,6 +5589,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -5574,10 +5719,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -5585,7 +5733,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -5610,7 +5757,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 52000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 52000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-52000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -5707,6 +5854,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -5832,10 +5984,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -5843,7 +5998,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -5868,7 +6022,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 61000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 61000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-61000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -5965,6 +6119,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -6090,10 +6249,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -6101,7 +6263,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -6126,7 +6287,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 62000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 62000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-62000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6223,6 +6384,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -6348,10 +6514,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -6359,7 +6528,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -6384,7 +6552,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 71000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 71000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-71000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6481,6 +6649,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -6606,10 +6779,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -6617,7 +6793,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -6642,7 +6817,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 81000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 81000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-81000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6739,6 +6914,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -6864,10 +7044,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -6875,7 +7058,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -6900,7 +7082,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 91000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 91000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-91000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6997,6 +7179,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -7122,10 +7309,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -7133,7 +7323,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -7158,7 +7347,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 101000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 101000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-101000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -7255,6 +7444,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -7380,10 +7574,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -7391,7 +7588,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -7416,7 +7612,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 111000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 111000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-111000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -7513,6 +7709,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -7638,10 +7839,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -7649,7 +7853,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -7674,7 +7877,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 121000 to eForms -->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!-- WARNING: Cannot convert original TED lot number of 121000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-121000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -7771,6 +7974,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://www.evergabe.de</cbc:EndpointID>
@@ -7896,10 +8104,13 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -7907,7 +8118,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--DEE02 5 DEE02 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

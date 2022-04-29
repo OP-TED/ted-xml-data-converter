@@ -8,7 +8,7 @@
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
                  xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
-   <ext:UBLExtensions>
+   <ext:UBLExtensions xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
@@ -40,7 +40,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU110</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -81,7 +81,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU332</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -122,7 +122,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU332</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -163,7 +163,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU332</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -199,7 +199,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -226,27 +226,27 @@
       </ext:UBLExtension>
    </ext:UBLExtensions>
    <!--UBL version ID (UBL)-->
-   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:UBLVersionID xmlns:xlink="http://www.w3.org/1999/xlink">2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID xmlns:xlink="http://www.w3.org/1999/xlink">eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID xmlns:xlink="http://www.w3.org/1999/xlink">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
-   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:ContractFolderID xmlns:xlink="http://www.w3.org/1999/xlink">aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-03-27+01:00</cbc:IssueDate>
-   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:IssueDate xmlns:xlink="http://www.w3.org/1999/xlink">2020-03-27+01:00</cbc:IssueDate>
+   <cbc:IssueTime xmlns:xlink="http://www.w3.org/1999/xlink">12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
-   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:VersionID xmlns:xlink="http://www.w3.org/1999/xlink">01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain xmlns:xlink="http://www.w3.org/1999/xlink">32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode xmlns:xlink="http://www.w3.org/1999/xlink" listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>HUN</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode xmlns:xlink="http://www.w3.org/1999/xlink">HUN</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.nfp.hu</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
@@ -263,7 +263,7 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.bszta.hu</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
@@ -280,7 +280,7 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.devavanya.hu</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
@@ -297,7 +297,7 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.mezobereny.hu</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
@@ -315,9 +315,9 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms xmlns:xlink="http://www.w3.org/1999/xlink"><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
-   <cac:TenderingProcess>
+   <cac:TenderingProcess xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
@@ -337,7 +337,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+   <cac:ProcurementProject xmlns:xlink="http://www.w3.org/1999/xlink"><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">EKR000316682020</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="HUN">Békésszentandrás-Dévaványa-Mezőberény szennyvíz</cbc:Name>
@@ -348,10 +348,10 @@
       <!--Additional Information (BT-300)-->
       <cbc:Note languageID="HUN">1. AK jelen eljárását a Kbt.53§ (6)bek. alapján indítja meg.A Kbt.135. §(12)bek.-ben foglaltakra is tekintettel,AK felhívja AT figyelmét,hogy támogatásra irányuló igényt(pályázatot;támogatási szerz.-módosítást,változásbejelentést)nyújtott be.AK tájékoztatja AT-t,hogy a támogatásra irányuló igény el nem fogadását vagy az igényeltnél kisebb összegben történő elfogadását vagy amennyiben releváns a Támogatási Szerződés (TSZ)mód-ot vagy vált. bej. el nem fogadását olyan körülménynek tekinti,amelyre az AK a szerződés megkötésére (Kbt. 131. § (9) bek.)vagy teljesítésére képtelenné válása okaként hivatkozhat.AK a Kbt.53.§(6)bek. és a Ptk.6:116. § (1)bek. alapján az eljárást akkor is eredménytelenné nyilváníthatja,ha szerz. pénzügyi fedezetét biztosító TSZ nem kerül megkötésre,vagy a TSZ mód. nem kerül aláírásra vagy a vált. bej. nem kerül elfogadásra.Jelen feltételek a szerz. hatályba lépésének felfüggesztő feltételei. 2. Ajánlattevő (AT), alkalmasság (alk) igazolásában résztvevő szervezet csatolja: Ajánlatot aláírók aláírási címpéldányát,vagy 2006. évi V. tv 9.§ (1) szerinti aláírásmintáját,külföldi illetőségű AT esetén ennek megfeleltethető dokumentumot (ha ilyen dokumentum az adott országban nem ismert,teljes bizonyító erejű magánokiratba v. ügyvéd/közjegyző/kamarai jogtanácsos előtt tett okiratba foglalt aláírásminta) cégkivonatban nem szereplő kötelezettségvállaló(k) esetében cégjegyzésre jogosult személytől származó, ajánlat aláírására vonatkozó (meghatalmazó és meghatalmazott aláírását is tartalmazó) írásos meghatalmazást egyéni vállalkozó és magánszem. esetében ajánlatkérő elfogadja bármely olyan dokumentum egyszerű másolatának csatolását, amely alkalmas a képviseletre való jogosultság igazolására (így például: személyi igazolvány) 3. Ajánlatnak tartalmaznia kell: — Kbt.66.§(6) a) és b) szerinti nyíl.(nemleges tartalommal is) — Kbt.66.§(2)bek. nyil, — Kbt.66.§(5)alapján felolvasólap — szakmai aj-ot a dok. szerint. 4. Az Ért. szempontok szerinti értékelés során adható pontszám alsó-felső határa: 0,00-10,00pont; 0,00pont legrosszabb,10,00 pont legjobb érték. Módszerek: az 1. ért. szempont: a KH 2019.11.26-i útmutatója („Útm.”) 1.m.A.1.aa)pontja szerinti fordított ar. A 2.rszpt.1-4 alszempontok esetében a KH 2019.11.26-i útm.1.sz. mell.A 1.ab) egyenesar.(Részl.AD.I.kötet) (legkedvezőbb: 36 hónap, legkedvezőtlenebb 0 hónap). A 2. részszempont alátámasztására az önéletrajzok csatolása már az ajánlatban szükséges. 5. III.1.2)P.1. valamint III.1.3)M.1.-M.2.pontokban előírt feltételek és ig. módok minősített ajánlattevők jegyzékébe történő felvétel feltételeinél szigorúbbak. 6. Ajánlati biztosíték 10 000 000 HUF. Az AT választása szerint teljesíthető az előírt pénzösszegnek az AK 10032000-00332945-00000024 sz. fizetési számlájára történő befizetésével pénzügyi intézmény vagy biztosító által vállalt garancia vagy készfizető kezesség biztosításával,vagy biztosítási szerz. alapján kiállított – készfizető kezességvállalást tartalmazó – kötelezvénnyel. Igazolása: készpénz átutalással való teljesítése esetén a banki terhelési értesítő, pénzügyi intézmény vagy biztosító által vállalt garanciával/készfizető kezességgel való teljesítés esetén a garancia/kezességvállaló nyilatkozat, biztosítási szerződéssel való teljesítés esetén a kötelezvény. A garancialevél, a kezességvállalásról szóló dok.valamint a kötelezvény tekintetében AK előírja és kiemelten is felhívja a figyelmet az alábbiakra: Az olyan nyilatkozat,amely közvetlenül valamely követelés érvényesítésének alapjául szolgál (különösen garanciavállaló nyilatkozat vagy kezességvállalásról szóló nyilatkozat),elektronikus okiratként feleljen meg a polgári perrendtartásról szóló törvény szerinti teljes bizonyító erejű magánokirat követelményeinek! Az igazolást az ajánlatban csatolni szükséges. 7. Kbt.35.§(8)alapján nem lehetséges gazdálkodó szervezet (projekttársaság)létrehozása. 8. AK alkalmazza a Kbt.75.§ (2) bekezdés e) pontját. Folyt.: AF VI.4.3.)</cbc:Note>
       <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">45200000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -362,7 +362,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!--Only one Lot in the TED notice-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -575,6 +575,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://ekr.gov.hu/portal/kozbeszerzes/eljarasok/EKR000316682020/reszletek</cbc:EndpointID>
@@ -710,10 +715,52 @@
          <cbc:Note languageID="HUN">AK a részajánlattétel lehetőségét a beszerzés tárgyának és jellegének megfelelően megvizsgálta, és a További információkban és a KD-ban szereplőkre figyelemmel nem biztosítja a részajánlattétel lehetőségét. FAKSZ: Stumpf Gábor (00063) AK jelzi, hogy a II.2.5) pont 2.1. szerinti szakmai „tap."rövidítés alatt szakmai tapasztalatot ért.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">39350000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">45200000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">39350000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45231300</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232400</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232410</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232411</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232420</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232423</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45233223</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45233228</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45252100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45252127</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45252130</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71322000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -721,7 +768,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--HU332 5 HU332 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

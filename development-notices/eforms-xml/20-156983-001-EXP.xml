@@ -8,7 +8,7 @@
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
                  xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
-   <ext:UBLExtensions>
+   <ext:UBLExtensions xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
@@ -40,7 +40,7 @@
                            <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -75,7 +75,7 @@
                            <cbc:CountrySubentityCode listName="nuts">UKM5</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -110,7 +110,7 @@
                            <cbc:CountrySubentityCode listName="nuts">UKM50</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -145,7 +145,7 @@
                            <cbc:CountrySubentityCode listName="nuts">UKM71</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -176,7 +176,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -196,27 +196,27 @@
       </ext:UBLExtension>
    </ext:UBLExtensions>
    <!--UBL version ID (UBL)-->
-   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:UBLVersionID xmlns:xlink="http://www.w3.org/1999/xlink">2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID xmlns:xlink="http://www.w3.org/1999/xlink">eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID xmlns:xlink="http://www.w3.org/1999/xlink">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
-   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:ContractFolderID xmlns:xlink="http://www.w3.org/1999/xlink">aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-03-27+01:00</cbc:IssueDate>
-   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:IssueDate xmlns:xlink="http://www.w3.org/1999/xlink">2020-03-27+01:00</cbc:IssueDate>
+   <cbc:IssueTime xmlns:xlink="http://www.w3.org/1999/xlink">12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
-   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:VersionID xmlns:xlink="http://www.w3.org/1999/xlink">01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain xmlns:xlink="http://www.w3.org/1999/xlink">32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode xmlns:xlink="http://www.w3.org/1999/xlink" listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode xmlns:xlink="http://www.w3.org/1999/xlink">ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA14482</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
@@ -246,7 +246,7 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA12562</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
@@ -276,7 +276,7 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA11682</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
@@ -306,7 +306,7 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA15743</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
@@ -337,7 +337,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+   <cac:TenderingTerms xmlns:xlink="http://www.w3.org/1999/xlink"><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
       <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>7</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
@@ -345,7 +345,7 @@
       <!--Group Lot Identifier (BT-1375)-->
    </cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
-   <cac:TenderingProcess>
+   <cac:TenderingProcess xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
@@ -368,7 +368,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
+   <cac:ProcurementProject xmlns:xlink="http://www.w3.org/1999/xlink"><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Kitchen and Bathroom Framework 2020-2024</cbc:Name>
       <!--Description (BT-24)-->
       <cbc:Description languageID="ENG">Langstane Housing Association, Castlehill Housing Association, Osprey Housing and Angus Housing Association (otherwise not referred to as ‘the Associations’) are undertaking the creation of a Local Aberdeen, Dundee and surrounding areas kitchen and bathroom installation framework across seven lots.</cbc:Description>
@@ -380,10 +380,10 @@
       <cac:RequestedTenderTotal>
          <cbc:EstimatedOverallContractAmount currencyID="GBP">12000000.00</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -394,7 +394,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -503,6 +503,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
@@ -626,10 +631,13 @@
          <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -637,7 +645,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--UKM50:UKM62 5 UKM50 UKM62-->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -670,7 +677,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -779,6 +786,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
@@ -902,10 +914,13 @@
          <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -913,7 +928,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--UKM50:UKM62 5 UKM50 UKM62-->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -946,7 +960,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1055,6 +1069,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
@@ -1178,10 +1197,13 @@
          <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -1189,7 +1211,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--UKM50:UKM62 5 UKM50 UKM62-->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -1222,7 +1243,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1331,6 +1352,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
@@ -1454,10 +1480,13 @@
          <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -1465,7 +1494,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--UKM50:UKM62 5 UKM50 UKM62-->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -1498,7 +1526,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1607,6 +1635,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
@@ -1730,10 +1763,13 @@
          <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -1741,7 +1777,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--UKM50:UKM62 5 UKM50 UKM62-->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -1774,7 +1809,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1883,6 +1918,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
@@ -2006,10 +2046,13 @@
          <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -2017,7 +2060,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--UKM71 5 UKM71 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
@@ -2044,7 +2086,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2153,6 +2195,11 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>http://www.publiccontractsscotland.gov.uk/</cbc:EndpointID>
@@ -2276,10 +2323,13 @@
          <cbc:Note languageID="ENG">Housing Associations may use the framework as defined by the Public Contracts Regulations (Scotland) 2015.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -2287,7 +2337,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--UKM71 5 UKM71 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
