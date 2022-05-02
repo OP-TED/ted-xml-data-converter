@@ -167,7 +167,7 @@ These instructions can be un-commented to show the variables holding the organiz
 		<xsl:apply-templates select="ted:POSTAL_CODE"/>
 		<!-- Organization Country Subdivision (BT-507) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Country Subdivision (BT-507)</xsl:comment>
-		<xsl:apply-templates select="n2016:NUTS|n2021:NUTS"/>
+		<xsl:apply-templates select="*:NUTS"/>
 		<!-- Organization Country Code (BT-514) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Country Code (BT-514)</xsl:comment>
 		<xsl:apply-templates select="ted:COUNTRY"/>

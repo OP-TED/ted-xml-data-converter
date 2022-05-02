@@ -1008,7 +1008,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 	<!--    the second P element will be converted to a cac:AddressLine/cbc:AdditionalStreetName element -->
 	<!--    the remaining P elements will be converted to separate cac:AddressLine/cbc:Line elements -->
 	<!-- get list of only NUTS level 3 codes -->
-	<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts-codes(n2016:NUTS/@CODE|n2021:NUTS/@CODE)"/>
+	<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts-codes(*:NUTS/@CODE)"/>
 	<xsl:variable name="main-nuts" select="$valid-nuts[1]"/>
 	<xsl:variable name="rest-nuts" select="functx:value-except($valid-nuts, $main-nuts)"/>
 	<xsl:if test="fn:normalize-space(ted:MAIN_SITE) or fn:not(fn:empty($valid-nuts)) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">

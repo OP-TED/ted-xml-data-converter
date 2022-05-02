@@ -32,11 +32,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 		<cbc:PostalZone><xsl:apply-templates/></cbc:PostalZone>
 	</xsl:template>
 	
-	<xsl:template match="n2016:NUTS">
-		<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="@CODE"/></cbc:CountrySubentityCode>
-	</xsl:template>
-	
-	<xsl:template match="n2021:NUTS">
+	<xsl:template match="*:NUTS">
 		<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="@CODE"/></cbc:CountrySubentityCode>
 	</xsl:template>
 	
