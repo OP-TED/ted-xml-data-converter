@@ -45,7 +45,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Prize Rank (BT-44) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<!-- Value Prize (BT-644) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-		<xsl:comment>Prize information (BG-44, BT-45, BT-644)</xsl:comment>
+		<xsl:comment>Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))</xsl:comment>
 		<xsl:apply-templates select="../../ted:PROCEDURE/ted:NUMBER_VALUE_PRIZE"/> 
 			
 		
@@ -154,11 +154,13 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/ted:NUMBER_VALUE_PRIZE/ted:P, ' '))"/>
 		<xsl:if test="$text ne ''" >
 			<cac:Prize>
+				<xsl:comment>Prize Rank (BT-44)</xsl:comment>
 				<!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
 				<xsl:variable name="message">WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.</xsl:variable>
 				<xsl:message terminate="no" select="$message"/>
 				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 				<cbc:RankCode>1</cbc:RankCode>
+				<xsl:comment>Value Prize (BT-644)</xsl:comment>
 				<!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
 				<xsl:variable name="message">WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.</xsl:variable>
 				<xsl:message terminate="no" select="$message"/>
