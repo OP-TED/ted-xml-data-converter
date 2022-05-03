@@ -134,9 +134,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!-- Multiple Tenders (BT-769) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Multiple Tenders (BT-769)</xsl:comment>
 		<!-- Guarantee Required (BT-751) cardinality ? Only exists in TED form F05. Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3; Forbidden for other subtypes -->
-		<xsl:comment>Guarantee Required (BT-751)</xsl:comment>
 		<!-- Guarantee Required Description (BT-75) cardinality ? Only exists in TED form F05. Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3; Forbidden for other subtypes -->
-		<xsl:comment>Guarantee Required Description (BT-75)</xsl:comment>
+		<xsl:apply-templates select="../../ted:LEFTI/ted:DEPOSIT_GUARANTEE_REQUIRED"/>
+		
 		<!-- Tax legislation information provider No equivalent element in TED XML -->
 		<!-- Environment legislation information provider No equivalent element in TED XML -->
 		<!-- Employment legislation information provider No equivalent element in TED XML -->
@@ -239,6 +239,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 			<xsl:comment>Selection Criteria Used (BT-748)</xsl:comment>
 			<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
 		</efac:SelectionCriteria>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="ted:DEPOSIT_GUARANTEE_REQUIRED">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:if test="$text ne ''">
+		<cac:RequiredFinancialGuarantee>
+			<xsl:comment>Guarantee Required (BT-751)</xsl:comment>
+			<cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+			<xsl:comment>Guarantee Required Description (BT-75)</xsl:comment>
+			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+		</cac:RequiredFinancialGuarantee>		
 	</xsl:if>
 </xsl:template>
 	

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -226,7 +226,11 @@
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
          <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
+         <cac:RequiredFinancialGuarantee><!--Guarantee Required (BT-751)-->
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <!--Guarantee Required Description (BT-75)-->
+            <cbc:Description languageID="ENG">N/A</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -285,6 +289,7 @@
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
@@ -491,7 +496,11 @@
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
          <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
+         <cac:RequiredFinancialGuarantee><!--Guarantee Required (BT-751)-->
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <!--Guarantee Required Description (BT-75)-->
+            <cbc:Description languageID="ENG">N/A</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -550,6 +559,7 @@
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
