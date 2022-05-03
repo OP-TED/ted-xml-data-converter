@@ -149,8 +149,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:comment>Documents Unofficial Language (BT-737)</xsl:comment>
 		<!-- Documents Restricted (BT-14), Documents URL (BT-15), Documents Restricted URL (BT-615) -->
 		<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:DOCUMENT_RESTRICTED|ted:DOCUMENT_FULL)"/>
-		<!-- Terms Financial (BT-77) cardinality ? No equivalent element in TED XML -->
-		<xsl:comment>Terms Financial (BT-77)</xsl:comment>
+		<!-- Terms Financial (BT-77) cardinality ? Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
+		<xsl:call-template name="terms-financial"/>
+		
 		<!-- Reserved Participation (BT-71) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 		<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
 		<xsl:call-template name="reserved-participation"/>
@@ -283,6 +284,29 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		</cac:ExternalReference>
 	</cac:Attachment>
 </xsl:template>
+
+<xsl:template name="terms-financial">
+	<!-- Terms Financial (BT-77) cardinality ? Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
+	<xsl:comment>Terms Financial (BT-77)</xsl:comment>
+	<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:MAIN_FINANCING_CONDITION/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:choose>
+		<xsl:when test="$text ne ''">
+			<cac:PaymentTerms>
+				<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+			</cac:PaymentTerms>
+		</xsl:when>
+		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
+			<!-- WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML.</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			<cac:PaymentTerms>
+				<cbc:Note languageID="{$eforms-first-language}"></cbc:Note>
+			</cac:PaymentTerms>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
 	
 <xsl:template name="reserved-participation">
 	<!-- Reserved Participation (BT-71) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->

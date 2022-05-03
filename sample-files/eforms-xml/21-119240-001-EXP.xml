@@ -225,7 +225,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
          <cac:RequiredFinancialGuarantee><!--Guarantee Required (BT-751)-->
             <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
             <!--Guarantee Required Description (BT-75)-->
@@ -246,6 +245,10 @@
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
+         <!--WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML.-->
+         <cac:PaymentTerms>
+            <cbc:Note languageID="ENG"/>
+         </cac:PaymentTerms>
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
@@ -495,7 +498,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
          <cac:RequiredFinancialGuarantee><!--Guarantee Required (BT-751)-->
             <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
             <!--Guarantee Required Description (BT-75)-->
@@ -516,6 +518,10 @@
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
+         <!--WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML.-->
+         <cac:PaymentTerms>
+            <cbc:Note languageID="ENG"/>
+         </cac:PaymentTerms>
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
