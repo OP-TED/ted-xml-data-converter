@@ -16,8 +16,13 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cac:AwardingTerms>
 			<!-- Following Contract (BT-41) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<xsl:comment>Following Contract (BT-41)</xsl:comment>
+			<xsl:apply-templates select="../../ted:PROCEDURE/(ted:FOLLOW_UP_CONTRACTS|ted:NO_FOLLOW_UP_CONTRACTS)"/>
+		
+			
 			<!-- Jury Decision Binding (BT-42) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<xsl:comment>Jury Decision Binding (BT-42)</xsl:comment>
+			<xsl:apply-templates select="../../ted:PROCEDURE/(ted:DECISION_BINDING_CONTRACTING|ted:NO_DECISION_BINDING_CONTRACTING)"/>
+			
 			<!-- No Negotiation Necessary (BT-120) cardinality + Optional for CN subtypes 16 and 20; Forbidden for other subtypes -->
 			<xsl:comment>No Negotiation Necessary (BT-120)</xsl:comment>
 			<xsl:apply-templates select="../../ted:RIGHT_CONTRACT_INITIAL_TENDERS"/>
@@ -35,11 +40,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			
 			<!-- Jury Member Name (BT-46) cardinality + (Is this correct? Conflict between documentation and Annex spreadsheet) Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<!-- TBD: see TEDEFO-748 -->
-			<!-- TBD: no equivalent element in TED XML identified -->
 			<xsl:comment>Jury Member Name (BT-46)</xsl:comment>
-			<cac:TechnicalCommitteePerson>
-				<cbc:FamilyName></cbc:FamilyName>
-			</cac:TechnicalCommitteePerson>
+			<xsl:apply-templates select="../../ted:PROCEDURE/ted:MEMBER_NAME"/>
+			
 			
 			<!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
 			<!-- Prize Rank (BT-44) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
@@ -51,6 +54,29 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		
 		</cac:AwardingTerms>
 	</xsl:template>
+
+
+	<xsl:template match="ted:FOLLOW_UP_CONTRACTS">
+		<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+	</xsl:template>
+	<xsl:template match="ted:NO_FOLLOW_UP_CONTRACTS">
+		<cbc:FollowupContractIndicator>false</cbc:FollowupContractIndicator>
+	</xsl:template>
+
+	<xsl:template match="ted:DECISION_BINDING_CONTRACTING">
+		<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
+	</xsl:template>
+	<xsl:template match="ted:NO_DECISION_BINDING_CONTRACTING">
+		<cbc:BindingOnBuyerIndicator>false</cbc:BindingOnBuyerIndicator>
+	</xsl:template>
+
+	<xsl:template match="ted:MEMBER_NAME">
+		<cac:TechnicalCommitteePerson>
+				<cbc:FamilyName><xsl:value-of select="(.)"/></cbc:FamilyName>
+		</cac:TechnicalCommitteePerson>
+	</xsl:template>
+
+
 
 	<xsl:template match="ted:AC">
 		<xsl:if test="ted:AC_PROCUREMENT_DOC|.//*[fn:normalize-space(.)!='']">
