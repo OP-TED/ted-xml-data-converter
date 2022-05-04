@@ -96,7 +96,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <!-- there are no equivalents in eForms. So these elements cannot be converted -->
 		
 						<!-- Selection Criteria Type (BT-747), Selection Criteria Name (BT-749), Selection Criteria Description (BT-750), Selection Criteria Used (BT-748) -->
-						<xsl:apply-templates select="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA)"/>
+						<xsl:apply-templates select="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION)"/>
 						
 						<!-- Second Stage Criteria do not have equivalent elements in TED XML -->
 						<!-- Selection Criteria Second Stage Invite (BT-40) cardinality ? No equivalent element in TED XML -->
@@ -156,10 +156,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
 		<xsl:call-template name="reserved-participation"/>
 
-		<!-- Tenderer Legal Form (BT-761) cardinality ? Element LEGAL_FORM only exists in form F05 Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
-		<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
-		<!-- Tenderer Legal Form Description (BT-76) cardinality ? Element LEGAL_FORM only exists in form F05 Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
-		<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
+		<!-- Tenderer Legal Form (BT-761) cardinality ? Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+		<!-- Tenderer Legal Form Description (BT-76) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+		<xsl:call-template name="tenderer-legal-form"/>
+		
+		
 		<!-- Late Tenderer Information (BT-771) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Late Tenderer Information (BT-771)</xsl:comment>
 		<!-- Subcontracting Tender Indication (BT-651) cardinality + Only relevant for D81 Defence or OTHER Mandatory for CN subtype 18; Optional for PIN subtype 9, CN subtype E3; Forbidden for other subtypes -->
@@ -222,7 +223,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</cac:TenderingTerms>
 </xsl:template>
 	
-<xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA">
+<xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="selection-criterion-type" select="$mappings//selection-criterion-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
@@ -307,7 +308,30 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	</xsl:choose>
 </xsl:template>
 
-	
+<xsl:template name="tenderer-legal-form">
+	<!-- Tenderer Legal Form (BT-761) cardinality ? Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+	<!-- Tenderer Legal Form Description (BT-76) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+	<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:LEGAL_FORM/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:choose>
+		<xsl:when test="$text ne ''">
+			<cac:TendererQualificationRequest>
+				<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
+				<cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
+				<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
+				<cbc:CompanyLegalForm languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:CompanyLegalForm>
+			</cac:TendererQualificationRequest>
+		</xsl:when>
+		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
+			<cac:TendererQualificationRequest>
+				<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
+				<cbc:CompanyLegalFormCode listName="required">false</cbc:CompanyLegalFormCode>
+				<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
+			</cac:TendererQualificationRequest>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
+
 <xsl:template name="reserved-participation">
 	<!-- Reserved Participation (BT-71) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 	<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
