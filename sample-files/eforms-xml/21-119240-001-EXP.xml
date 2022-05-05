@@ -225,9 +225,10 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <cac:RequiredFinancialGuarantee><!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <cac:RequiredFinancialGuarantee>
             <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
-            <!--Guarantee Required Description (BT-75)-->
             <cbc:Description languageID="ENG">N/A</cbc:Description>
          </cac:RequiredFinancialGuarantee>
          <!--Documents Restricted Justification (BT-707)-->
@@ -291,9 +292,6 @@
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
@@ -307,13 +305,13 @@
          <cac:TenderValidityPeriod>
             <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
-         <!--Review Deadline Description (BT-99)-->
-         <cac:AppealTerms>
+         <cac:AppealTerms><!--Review Deadline Description (BT-99)--><!--Review Information Providing Organization--><!--Review organization-->
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
                   <cbc:ID schemeName="organization">ORG-002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
+            <!--Mediation organization-->
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>
@@ -500,9 +498,10 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <cac:RequiredFinancialGuarantee><!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <cac:RequiredFinancialGuarantee>
             <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
-            <!--Guarantee Required Description (BT-75)-->
             <cbc:Description languageID="ENG">N/A</cbc:Description>
          </cac:RequiredFinancialGuarantee>
          <!--Documents Restricted Justification (BT-707)-->
@@ -566,9 +565,6 @@
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
@@ -582,13 +578,13 @@
          <cac:TenderValidityPeriod>
             <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
-         <!--Review Deadline Description (BT-99)-->
-         <cac:AppealTerms>
+         <cac:AppealTerms><!--Review Deadline Description (BT-99)--><!--Review Information Providing Organization--><!--Review organization-->
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
                   <cbc:ID schemeName="organization">ORG-002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
+            <!--Mediation organization-->
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>

@@ -205,7 +205,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:comment>Tender Validity Deadline (BT-98)</xsl:comment>
 		<xsl:apply-templates select="../../ted:PROCEDURE/(ted:DATE_TENDER_VALID|ted:DURATION_TENDER_VALID)"/>
 		<!-- Review Deadline Description (BT-99) cardinality ? Forbidden for PIN subtypes 1-6, E1, and E2, CN subtype 22; Optional for other subtypes -->
-		<xsl:comment>Review Deadline Description (BT-99)</xsl:comment>
 		<!-- Review organization cardinality ? -->
 		<!-- Organization providing more information on the time limits for review cardinality ? -->
 		<!-- Mediation Organization cardinality ? -->
@@ -246,11 +245,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <xsl:template match="ted:DEPOSIT_GUARANTEE_REQUIRED">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:comment>Guarantee Required (BT-751)</xsl:comment>
+	<xsl:comment>Guarantee Required Description (BT-75)</xsl:comment>
 	<xsl:if test="$text ne ''">
 		<cac:RequiredFinancialGuarantee>
-			<xsl:comment>Guarantee Required (BT-751)</xsl:comment>
 			<cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
-			<xsl:comment>Guarantee Required Description (BT-75)</xsl:comment>
 			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 		</cac:RequiredFinancialGuarantee>		
 	</xsl:if>
@@ -473,12 +472,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 </xsl:template>
 
 <xsl:template name="appeal-terms">
-	<cac:AppealTerms>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE"/>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_INFO"/>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_BODY"/>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY"/>
-	</cac:AppealTerms>
+	<xsl:variable name="bt-99-text" select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<!--<xsl:if test="$bt99-text or ../../ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_INFO|ted:ADDRESS_REVIEW_BODY|ted:ADDRESS_MEDIATION_BODY)">-->
+		<cac:AppealTerms>
+			<!-- Review Deadline Description (BT-99) cardinality ? Forbidden for PIN subtypes 1-6, E1, and E2, CN subtype 22; Optional for other subtypes -->
+			<xsl:comment>Review Deadline Description (BT-99)</xsl:comment>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE"/>
+			<!-- Review Information Providing Organization -->
+			<xsl:comment>Review Information Providing Organization</xsl:comment>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_INFO"/>
+			<!-- Review organization -->
+			<xsl:comment>Review organization</xsl:comment>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_BODY"/>
+			<!-- Mediation organization -->
+			<xsl:comment>Mediation organization</xsl:comment>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY"/>
+		</cac:AppealTerms>
+	<!--</xsl:if>-->
 </xsl:template>
 	
 <xsl:template match="ted:REVIEW_PROCEDURE">
