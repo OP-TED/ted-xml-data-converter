@@ -38,8 +38,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Award Criterion Description (BT-540) cardinality ? Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 			<xsl:apply-templates select="ted:AC"/>
 			
-			<!-- Jury Member Name (BT-46) cardinality + (Is this correct? Conflict between documentation and Annex spreadsheet) Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-			<!-- TBD: see TEDEFO-748 -->
+			<!-- Jury Member Name (BT-46) cardinality * Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<xsl:comment>Jury Member Name (BT-46)</xsl:comment>
 			<xsl:apply-templates select="../../ted:PROCEDURE/ted:MEMBER_NAME"/>
 			
@@ -55,7 +54,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</cac:AwardingTerms>
 	</xsl:template>
 
-
+	<!-- Following Contract (BT-41) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 	<xsl:template match="ted:FOLLOW_UP_CONTRACTS">
 		<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
 	</xsl:template>
@@ -63,6 +62,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cbc:FollowupContractIndicator>false</cbc:FollowupContractIndicator>
 	</xsl:template>
 
+	<!-- Jury Decision Binding (BT-42) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 	<xsl:template match="ted:DECISION_BINDING_CONTRACTING">
 		<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
 	</xsl:template>
@@ -70,6 +70,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		<cbc:BindingOnBuyerIndicator>false</cbc:BindingOnBuyerIndicator>
 	</xsl:template>
 
+	<!-- Jury Member Name (BT-46) cardinality * Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 	<xsl:template match="ted:MEMBER_NAME">
 		<cac:TechnicalCommitteePerson>
 				<cbc:FamilyName><xsl:value-of select="(.)"/></cbc:FamilyName>

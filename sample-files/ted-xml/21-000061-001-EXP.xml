@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TED_EXPORT xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+            xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+            xsi:schemaLocation="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication TED_EXPORT.xsd"
+            VERSION="R2.0.9.S03.E01"
+            DOC_ID="003543-2021"
+            EDITION="2021003">
+   <TECHNICAL_SECTION>
+      <RECEPTION_ID>21-000061-001</RECEPTION_ID>
+      <DELETION_DATE>20210411</DELETION_DATE>
+      <FORM_LG_LIST>EN </FORM_LG_LIST>
+      <COMMENTS>From Convertor</COMMENTS>
+   </TECHNICAL_SECTION>
+   <LINKS_SECTION>
+      <XML_SCHEMA_DEFINITION_LINK xlink:type="simple"
+                                  xlink:href="http://ted.europa.eu"
+                                  xlink:title="TED WEBSITE"/>
+      <OFFICIAL_FORMS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <FORMS_LABELS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <ORIGINAL_CPV_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <ORIGINAL_NUTS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+   </LINKS_SECTION>
+   <CODED_DATA_SECTION>
+      <REF_OJS>
+         <COLL_OJ>S</COLL_OJ>
+         <NO_OJ>3</NO_OJ>
+         <DATE_PUB>20210106</DATE_PUB>
+      </REF_OJS>
+      <NOTICE_DATA>
+         <NO_DOC_OJS>2021/S 003-003543</NO_DOC_OJS>
+         <URI_LIST>
+            <URI_DOC LG="EN">http://ted.europa.eu/udl?uri=TED:NOTICE:003543-2021:TEXT:EN:HTML</URI_DOC>
+         </URI_LIST>
+         <LG_ORIG>EN</LG_ORIG>
+         <ISO_COUNTRY VALUE="UK"/>
+         <IA_URL_GENERAL>https://www.gov.uk/government/organisations/highways-england</IA_URL_GENERAL>
+         <ORIGINAL_CPV CODE="73000000">Research and development services and related consultancy services</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="71000000">Architectural, construction, engineering and inspection services</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="71300000">Engineering services</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="71313000">Environmental engineering consultancy services</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="79300000">Market and economic research; polling and statistics</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="79418000">Procurement consultancy services</ORIGINAL_CPV>
+         <n2016:PERFORMANCE_NUTS CODE="UK">UNITED KINGDOM</n2016:PERFORMANCE_NUTS>
+         <n2016:CA_CE_NUTS CODE="UK">UNITED KINGDOM</n2016:CA_CE_NUTS>
+         <n2016:TENDERER_NUTS CODE="UK">UNITED KINGDOM</n2016:TENDERER_NUTS>
+         <VALUES>
+            <VALUE TYPE="PROCUREMENT_TOTAL" CURRENCY="GBP">300000000</VALUE>
+         </VALUES>
+         <REF_NOTICE>
+            <NO_DOC_OJS>2019/S 176-428607</NO_DOC_OJS>
+         </REF_NOTICE>
+      </NOTICE_DATA>
+      <CODIF_DATA>
+         <DS_DATE_DISPATCH>20210101</DS_DATE_DISPATCH>
+         <AA_AUTHORITY_TYPE CODE="N">National or federal Agency/Office</AA_AUTHORITY_TYPE>
+         <TD_DOCUMENT_TYPE CODE="7">Contract award notice</TD_DOCUMENT_TYPE>
+         <NC_CONTRACT_NATURE CODE="4">Services</NC_CONTRACT_NATURE>
+         <PR_PROC CODE="1">Open procedure</PR_PROC>
+         <RP_REGULATION CODE="Z">Not specified</RP_REGULATION>
+         <TY_TYPE_BID CODE="9">Not applicable</TY_TYPE_BID>
+         <AC_AWARD_CRIT CODE="2">The most economic tender</AC_AWARD_CRIT>
+         <MA_MAIN_ACTIVITIES CODE="S">General public services</MA_MAIN_ACTIVITIES>
+         <HEADING>08C03</HEADING>
+         <INITIATOR>08</INITIATOR>
+      </CODIF_DATA>
+   </CODED_DATA_SECTION>
+   <TRANSLATION_SECTION>
+      <ML_TITLES>
+         <ML_TI_DOC LG="BG">
+            <TI_CY>Обединено кралство</TI_CY>
+            <TI_TOWN>Бирмингам</TI_TOWN>
+            <TI_TEXT>
+               <P>Научни изследвания и експериментални разработки и свързаните с тях консултантски услуги</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="CS">
+            <TI_CY>Spojené království/Velká Británie</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Výzkum a vývoj a související služby</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="DA">
+            <TI_CY>Forenede Kongerige, Det</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Forsknings- og udviklingsvirksomhed og hermed beslægtet konsulentvirksomhed</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="DE">
+            <TI_CY>das Vereinigte Königreich</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Forschungs- und Entwicklungsdienste und zugehörige Beratung</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="EL">
+            <TI_CY>Ηνωμένο Βασίλειο</TI_CY>
+            <TI_TOWN>Μπίρμιγχαμ</TI_TOWN>
+            <TI_TEXT>
+               <P>Υπηρεσίες έρευνας και ανάπτυξης, καθώς και συναφείς υπηρεσίες παροχής συμβουλών</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="EN">
+            <TI_CY>United Kingdom</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Research and development services and related consultancy services</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="ES">
+            <TI_CY>Reino Unido</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Servicios de investigación y desarrollo y servicios de consultoría conexos</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="ET">
+            <TI_CY>Suurbritannia / Ühendkuningriik</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Uurimis- ja arendusteenused ja seonduvad nõustamisteenused</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="FI">
+            <TI_CY>Yhdistynyt kuningaskunta</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Tutkimus- ja kehityspalvelut ja niihin liittyvät konsulttipalvelut</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="FR">
+            <TI_CY>Royaume-Uni</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Services de recherche et développement et services de conseil connexes</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="GA">
+            <TI_CY>Ríocht Aontaithe, an</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Research and development services and related consultancy services</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="HR">
+            <TI_CY>Ujedinjena Kraljevina</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Usluge na području istraživanja i razvoja i s tim povezane usluge savjetovanja</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="HU">
+            <TI_CY>Egyesült Királyság</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Kutatási és fejlesztési szolgáltatások és kapcsolódó tanácsadói szolgáltatások</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="IT">
+            <TI_CY>Regno Unito</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Servizi di ricerca e sviluppo nonché servizi di consulenza affini</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="LT">
+            <TI_CY>Jungtinė Karalystė, Didžioji Britanija</TI_CY>
+            <TI_TOWN>Birmingemas</TI_TOWN>
+            <TI_TEXT>
+               <P>Mokslinių tyrimų ir taikomosios veiklos paslaugos bei su jomis susijusios konsultacinės paslaugos</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="LV">
+            <TI_CY>Apvienotā Karaliste</TI_CY>
+            <TI_TOWN>Birmingema</TI_TOWN>
+            <TI_TEXT>
+               <P>Pētniecības un izstrādes pakalpojumi un saistītie konsultāciju pakalpojumi</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="MT">
+            <TI_CY>Ir-Renju Unit</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Servizzi ta' riċerka u żvilupp u servizzi relatati mal-konsulenza</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="NL">
+            <TI_CY>Verenigd Koninkrijk</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Onderzoek en ontwikkeling, en aanverwante adviezen</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="PL">
+            <TI_CY>Zjednoczone Królestwo</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Usługi badawcze i eksperymentalno-rozwojowe oraz pokrewne usługi doradcze</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="PT">
+            <TI_CY>Reino Unido</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Serviços de investigação e desenvolvimento e serviços de consultoria conexos</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="RO">
+            <TI_CY>Regatul Unit</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Servicii de cercetare şi de dezvoltare şi servicii conexe de consultanţă</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SK">
+            <TI_CY>Spojené kráľovstvo</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Výskum a vývoj a súvisiace poradenské služby</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SL">
+            <TI_CY>Združeno kraljestvo</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>Storitve na področju raziskav in razvoja ter s tem povezane svetovalne storitve</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SV">
+            <TI_CY>Förenade kungariket</TI_CY>
+            <TI_TOWN>Birmingham</TI_TOWN>
+            <TI_TEXT>
+               <P>FoU-tjänster samt tillhörande konsulttjänster</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+      </ML_TITLES>
+      <ML_AA_NAMES>
+         <AA_NAME LG="EN">Highways England</AA_NAME>
+      </ML_AA_NAMES>
+   </TRANSLATION_SECTION>
+   <FORM_SECTION>
+      <F03_2014 CATEGORY="ORIGINAL" FORM="F03" LG="EN">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Highways England</OFFICIALNAME>
+               <ADDRESS>The Cube, 199 Wharfside Street</ADDRESS>
+               <TOWN>Birmingham</TOWN>
+               <POSTAL_CODE>B1 1RN</POSTAL_CODE>
+               <COUNTRY VALUE="UK"/>
+               <E_MAIL>James.mayer@highwaysengland.co.uk</E_MAIL>
+               <n2016:NUTS CODE="UK"/>
+               <URL_GENERAL>https://www.gov.uk/government/organisations/highways-england</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CENTRAL_PURCHASING/>
+            <CA_TYPE VALUE="NATIONAL_AGENCY"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Specialist Professional and Technical Services 2 (SPaTS 2) Framework</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73000000"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>The contract was previously advertised under the name Specialist Professional, Environmental, Customer Insight, Technical, Research and Engineering Services (SPECTRE) Framework.</P>
+               <P>Appointed suppliers will provide specialist, professional, technical consultancy, engineering advice, research, innovation and procurement advice services across a range of transport related topics.</P>
+               <P>The framework will be divided into two lots and will be for a duration of 4 years.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="GBP">300000000</VAL_TOTAL>
+            <LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <TITLE>
+                  <P>Technical Consultancy, Engineering Advice, Research and Innovation Services</P>
+               </TITLE>
+               <LOT_NO>1</LOT_NO>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="71000000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="71300000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="71313000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="79300000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="UK"/>
+               <MAIN_SITE>
+                  <P>England.</P>
+               </MAIN_SITE>
+               <SHORT_DESCR>
+                  <P>The provision of technical consultancy, engineering advice, research and innovation for roads, vehicles, highway infrastructure and operations on the following topics:</P>
+                  <P>(a) asset operation, maintenance, assurance and performance;</P>
+                  <P>(b) business support;</P>
+                  <P>(c) communications and data transfer;</P>
+                  <P>(d) customer insight research, market research and publicity;</P>
+                  <P>(e) design standards manuals and departures;</P>
+                  <P>(f) economics, statistics and transport modelling;</P>
+                  <P>(g) enforcement policy;</P>
+                  <P>(h) environmental;</P>
+                  <P>(i) geotechnical engineering;</P>
+                  <P>(j) health and safety, security, road safety and vehicle restraint;</P>
+                  <P>(k) highway structures;</P>
+                  <P>(l) identity and image;</P>
+                  <P>(m) incident management and traffic officer service;</P>
+                  <P>(n) intelligent transport;</P>
+                  <P>(o) management information systems;</P>
+                  <P>(p) network resilience;</P>
+                  <P>(q) pavement engineering;</P>
+                  <P>(r) pilots and trials;</P>
+                  <P>(s) post implementation evaluation;</P>
+                  <P>(t) quality management;</P>
+                  <P>(u) risk and value management;</P>
+                  <P>(v) road user behaviour;</P>
+                  <P>(w) strategic transport planning and policy;</P>
+                  <P>(x) sustainability;</P>
+                  <P>(y) traffic signals and road lighting;</P>
+                  <P>(z) transport engineering.</P>
+                  <P>It is expected that the successful suppliers will utilise a diverse supply chain to provide specialist support in the required areas.</P>
+                  <P>Work under the framework may be awarded following mini-competition, following a single response to a request for expressions of interest or through a direct award to a single supplier.</P>
+                  <P>The main site of performance of the activities is England. However, successful suppliers may be requested to work outside of England in support of the organisations enabled to use this framework, as noted at VI.3).</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Health, safety and wellbeing (HS&amp;W)</AC_CRITERION>
+                     <AC_WEIGHTING>10.08 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Customer and stakeholders</AC_CRITERION>
+                     <AC_WEIGHTING>10.08 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Project/programme management</AC_CRITERION>
+                     <AC_WEIGHTING>9.94 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Financial management</AC_CRITERION>
+                     <AC_WEIGHTING>9.94 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Knowledge transfer</AC_CRITERION>
+                     <AC_WEIGHTING>9.94 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Understanding and capability</AC_CRITERION>
+                     <AC_WEIGHTING>10.01 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Supply chain management</AC_CRITERION>
+                     <AC_WEIGHTING>10.01 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>30 %</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <NO_EU_PROGR_RELATED/>
+               <INFO_ADD>
+                  <P>Highways England reserves the right to transfer any unallocated value between lots to fund additional projects. Therefore when considering potential value of work which may be won by a successful supplier, bidders should consider the total expected value of the framework as well as of the relevant lot.</P>
+               </INFO_ADD>
+            </OBJECT_DESCR>
+            <OBJECT_DESCR ITEM="2">
+               <TITLE>
+                  <P>Procurement Advice</P>
+               </TITLE>
+               <LOT_NO>2</LOT_NO>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="79418000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="UK"/>
+               <MAIN_SITE>
+                  <P>England.</P>
+               </MAIN_SITE>
+               <SHORT_DESCR>
+                  <P>The provision of procurement advice and support for contract development, supply chain analysis and general procurement activities, including commercial assessment support.</P>
+                  <P>There will be a maximum of six suppliers appointed to this lot. It is expected that the successful suppliers will utilise a focused supply chain to reduce opportunities for conflicts of interest in the supported procurement activities.</P>
+                  <P>Work under the framework may be awarded following mini-competition, following a single response to a request for expressions of interest or through a direct award to a single supplier.</P>
+                  <P>The main site of performance of the activities is England. However, successful suppliers may be requested to work outside of England in support of the organisations enabled to use this framework, as noted at VI.3).</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Health, safety and wellbeing (HS&amp;W)</AC_CRITERION>
+                     <AC_WEIGHTING>10.08 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Customer and stakeholders</AC_CRITERION>
+                     <AC_WEIGHTING>10.08 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Project/programme management</AC_CRITERION>
+                     <AC_WEIGHTING>9.94 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Financial management</AC_CRITERION>
+                     <AC_WEIGHTING>9.94 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Knowledge transfer</AC_CRITERION>
+                     <AC_WEIGHTING>9.94 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Resources and conflict of interest</AC_CRITERION>
+                     <AC_WEIGHTING>10.01 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Procurement knowledge</AC_CRITERION>
+                     <AC_WEIGHTING>10.01 %</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>30 %</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <NO_EU_PROGR_RELATED/>
+               <INFO_ADD>
+                  <P>Highways England reserves the right to transfer any unallocated value between lots to fund additional projects. Therefore when considering potential value of work which may be won by a successful supplier, bidders should consider the total expected value of the framework as well as of the relevant lot.</P>
+               </INFO_ADD>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_OPEN/>
+            <FRAMEWORK/>
+            <CONTRACT_COVERED_GPA/>
+            <NOTICE_NUMBER_OJ>2019/S 176-428607</NOTICE_NUMBER_OJ>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>1A</CONTRACT_NO>
+            <LOT_NO>1</LOT_NO>
+            <TITLE>
+               <P>Technical Consultancy, Engineering Advice, Research and Innovation Services</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>7</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>1</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>7</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Amey OW Ltd</OFFICIALNAME>
+                        <ADDRESS>Chancery Exchange, 10 Furnival Street</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>EC4A 1AB</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">250000000</VAL_TOTAL>
+               </VALUES>
+               <LIKELY_SUBCONTRACTED/>
+               <PCT_SUBCONTRACTING>30</PCT_SUBCONTRACTING>
+               <INFO_ADD_SUBCONTRACTING>
+                  <P>Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</P>
+               </INFO_ADD_SUBCONTRACTING>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="2">
+            <CONTRACT_NO>1B</CONTRACT_NO>
+            <LOT_NO>1</LOT_NO>
+            <TITLE>
+               <P>Technical Consultancy, Engineering Advice, Research and Innovation Services</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>7</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>1</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>7</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>ATKINS Ltd</OFFICIALNAME>
+                        <ADDRESS>Woodcote Grove, Ashley Road</ADDRESS>
+                        <TOWN>Epsom</TOWN>
+                        <POSTAL_CODE>KT18 5BW</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Jacobs UK Ltd</OFFICIALNAME>
+                        <ADDRESS>1180 Eskdale Road, Winnersh</ADDRESS>
+                        <TOWN>Wokingham</TOWN>
+                        <POSTAL_CODE>RG41 5TU</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">250000000</VAL_TOTAL>
+               </VALUES>
+               <LIKELY_SUBCONTRACTED/>
+               <PCT_SUBCONTRACTING>30</PCT_SUBCONTRACTING>
+               <INFO_ADD_SUBCONTRACTING>
+                  <P>Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</P>
+               </INFO_ADD_SUBCONTRACTING>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="3">
+            <CONTRACT_NO>1C</CONTRACT_NO>
+            <LOT_NO>1</LOT_NO>
+            <TITLE>
+               <P>Technical Consultancy, Engineering Advice, Research and Innovation Services</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>7</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>1</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>7</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Costain Ltd</OFFICIALNAME>
+                        <ADDRESS>Costain House, Vanwall Business Park</ADDRESS>
+                        <TOWN>Maidenhead</TOWN>
+                        <POSTAL_CODE>SL6 4UB</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">250000000</VAL_TOTAL>
+               </VALUES>
+               <LIKELY_SUBCONTRACTED/>
+               <PCT_SUBCONTRACTING>30</PCT_SUBCONTRACTING>
+               <INFO_ADD_SUBCONTRACTING>
+                  <P>Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</P>
+               </INFO_ADD_SUBCONTRACTING>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="4">
+            <CONTRACT_NO>1D</CONTRACT_NO>
+            <LOT_NO>1</LOT_NO>
+            <TITLE>
+               <P>Technical Consultancy, Engineering Advice, Research and Innovation Services</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>7</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>1</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>7</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Arcadis Consulting (UK) Ltd</OFFICIALNAME>
+                        <ADDRESS>Arcadis House, 34 York Way</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>N1 9AB</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Pell Frischmann Consulting Engineers Ltd</OFFICIALNAME>
+                        <ADDRESS>5 Manchester Square</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>W1U 3PD</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>TRL Ltd</OFFICIALNAME>
+                        <ADDRESS>Crowthorne House, Nine Mile Ride</ADDRESS>
+                        <TOWN>Wokingham</TOWN>
+                        <POSTAL_CODE>RG40 3GA</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">250000000</VAL_TOTAL>
+               </VALUES>
+               <LIKELY_SUBCONTRACTED/>
+               <PCT_SUBCONTRACTING>30</PCT_SUBCONTRACTING>
+               <INFO_ADD_SUBCONTRACTING>
+                  <P>Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</P>
+               </INFO_ADD_SUBCONTRACTING>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="5">
+            <CONTRACT_NO>1E</CONTRACT_NO>
+            <LOT_NO>1</LOT_NO>
+            <TITLE>
+               <P>Technical Consultancy, Engineering Advice, Research and Innovation Services</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>7</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>1</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>7</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Ove Arup and Partners Ltd</OFFICIALNAME>
+                        <ADDRESS>13 Fitzroy Street</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>W1T 4BQ</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">250000000</VAL_TOTAL>
+               </VALUES>
+               <LIKELY_SUBCONTRACTED/>
+               <PCT_SUBCONTRACTING>30</PCT_SUBCONTRACTING>
+               <INFO_ADD_SUBCONTRACTING>
+                  <P>Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</P>
+               </INFO_ADD_SUBCONTRACTING>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="6">
+            <CONTRACT_NO>1F</CONTRACT_NO>
+            <LOT_NO>1</LOT_NO>
+            <TITLE>
+               <P>Technical Consultancy, Engineering Advice, Research and Innovation Services</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-10-14</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>7</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>1</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>7</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>WSP UK Ltd</OFFICIALNAME>
+                        <ADDRESS>WSP House, 70 Chancery Lane</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>WC2A 1AF</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">250000000</VAL_TOTAL>
+               </VALUES>
+               <LIKELY_SUBCONTRACTED/>
+               <PCT_SUBCONTRACTING>30</PCT_SUBCONTRACTING>
+               <INFO_ADD_SUBCONTRACTING>
+                  <P>Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</P>
+               </INFO_ADD_SUBCONTRACTING>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="7">
+            <CONTRACT_NO>2A</CONTRACT_NO>
+            <LOT_NO>2</LOT_NO>
+            <TITLE>
+               <P>Procurement Advice</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>8</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>2</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>8</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Arcadis Consulting (UK) Ltd</OFFICIALNAME>
+                        <ADDRESS>Arcadis House, 34 York Way</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>N1 9AB</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">50000000</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="8">
+            <CONTRACT_NO>2B</CONTRACT_NO>
+            <LOT_NO>2</LOT_NO>
+            <TITLE>
+               <P>Procurement Advice</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>8</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>2</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>8</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Jacobs UK Ltd</OFFICIALNAME>
+                        <ADDRESS>1180 Eskdale Road, Winnersh</ADDRESS>
+                        <TOWN>Wokingham</TOWN>
+                        <POSTAL_CODE>RG41 5TU</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">50000000</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="9">
+            <CONTRACT_NO>2C</CONTRACT_NO>
+            <LOT_NO>2</LOT_NO>
+            <TITLE>
+               <P>Procurement Advice</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>8</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>2</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>8</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Ove Arup and Partners Ltd</OFFICIALNAME>
+                        <ADDRESS>13 Fitzroy Street</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>W1T 4BQ</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">50000000</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="10">
+            <CONTRACT_NO>2D</CONTRACT_NO>
+            <LOT_NO>2</LOT_NO>
+            <TITLE>
+               <P>Procurement Advice</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>8</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>2</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>8</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Pricewaterhousecoopers LLP</OFFICIALNAME>
+                        <ADDRESS>1 Embankment Place</ADDRESS>
+                        <TOWN>London</TOWN>
+                        <POSTAL_CODE>WC2N 6RH</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">50000000</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="11">
+            <CONTRACT_NO>2E</CONTRACT_NO>
+            <LOT_NO>2</LOT_NO>
+            <TITLE>
+               <P>Procurement Advice</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>8</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>2</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>8</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Rowsell Wright Ltd</OFFICIALNAME>
+                        <ADDRESS>3 Greengate, Cardale Park</ADDRESS>
+                        <TOWN>Harrogate</TOWN>
+                        <POSTAL_CODE>HG3 1GY</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">50000000</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <AWARD_CONTRACT ITEM="12">
+            <CONTRACT_NO>2F</CONTRACT_NO>
+            <LOT_NO>2</LOT_NO>
+            <TITLE>
+               <P>Procurement Advice</P>
+            </TITLE>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2020-09-09</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>8</NB_TENDERS_RECEIVED>
+                  <NB_TENDERS_RECEIVED_SME>2</NB_TENDERS_RECEIVED_SME>
+                  <NB_TENDERS_RECEIVED_EMEANS>8</NB_TENDERS_RECEIVED_EMEANS>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Turner and Townsend Contract Services Ltd</OFFICIALNAME>
+                        <ADDRESS>Low Hall, Calverley Lane, Horsforth</ADDRESS>
+                        <TOWN>Leeds</TOWN>
+                        <POSTAL_CODE>LS18 4GH</POSTAL_CODE>
+                        <COUNTRY VALUE="UK"/>
+                        <n2016:NUTS CODE="UK"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="GBP">50000000</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>This framework is enabled for the use of the following UK public sector organisations:</P>
+               <P>1) Highways England;</P>
+               <P>2) Department for Transport;</P>
+               <P>3) High Speed Two (HS2) Ltd;</P>
+               <P>4) Local highway authorities in the United Kingdom;</P>
+               <P>5) Metropolitan combined authorities in England and Wales; and</P>
+               <P>6) Transport for London.</P>
+               <P>Where an enabled organisation transfers some or all of its functions to a successor organisation, following the date of dispatch of the contract notice, that successor organisation will also become an enabled organisation.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>See details at VI.4.3)</OFFICIALNAME>
+               <TOWN>See details at VI.4.3)</TOWN>
+               <COUNTRY VALUE="UK"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Highways England will incorporate a minimum 10 calendar days standstill period at the point information on award of the contract is communicated to tenderers.</P>
+               <P>Appeals must be lodged in accordance with the Public Contracts Regulations 2015 (SI 2015 No 102) as amended.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-01</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+   </FORM_SECTION>
+</TED_EXPORT>
