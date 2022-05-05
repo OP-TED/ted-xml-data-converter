@@ -251,13 +251,13 @@ These instructions can be un-commented to show the variables holding the organiz
 	<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 	<xsl:comment>Buyer Legal Type (BT-11)</xsl:comment>
 	<cac:ContractingPartyType>
-		<cbc:PartyType><xsl:value-of select="$buyer-legal-type"/></cbc:PartyType>
+		<cbc:PartyTypeCode><xsl:value-of select="$buyer-legal-type"/></cbc:PartyTypeCode>
 	</cac:ContractingPartyType>
 	<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:comment>Buyer Contracting Entity (BT-740)</xsl:comment>
 	<!-- buyer-contracting-type codelist Not yet available -->
 	<cac:ContractingPartyType>
-		<cbc:PartyType><xsl:value-of select="'buyer-contracting-type'"/></cbc:PartyType>
+		<cbc:PartyTypeCode><xsl:value-of select="'buyer-contracting-type'"/></cbc:PartyTypeCode>
 	</cac:ContractingPartyType>
 </xsl:template>
 
