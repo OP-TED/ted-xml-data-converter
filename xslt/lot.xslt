@@ -311,20 +311,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!-- Tenderer Legal Form (BT-761) cardinality ? Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<!-- Tenderer Legal Form Description (BT-76) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:LEGAL_FORM/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
+	<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
 	<xsl:choose>
 		<xsl:when test="$text ne ''">
 			<cac:TendererQualificationRequest>
-				<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
 				<cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
-				<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
 				<cbc:CompanyLegalForm languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:CompanyLegalForm>
 			</cac:TendererQualificationRequest>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
 			<cac:TendererQualificationRequest>
-				<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
 				<cbc:CompanyLegalFormCode listName="required">false</cbc:CompanyLegalFormCode>
-				<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
 			</cac:TendererQualificationRequest>
 		</xsl:when>
 	</xsl:choose>

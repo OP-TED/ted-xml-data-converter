@@ -256,9 +256,10 @@
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
             </cac:SpecificTendererRequirement>
          </cac:TendererQualificationRequest>
-         <cac:TendererQualificationRequest><!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <cac:TendererQualificationRequest>
             <cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
-            <!--Tenderer Legal Form Description (BT-76)-->
             <cbc:CompanyLegalForm languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:CompanyLegalForm>
          </cac:TendererQualificationRequest>
          <!--Late Tenderer Information (BT-771)-->
@@ -529,9 +530,10 @@
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
             </cac:SpecificTendererRequirement>
          </cac:TendererQualificationRequest>
-         <cac:TendererQualificationRequest><!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <cac:TendererQualificationRequest>
             <cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
-            <!--Tenderer Legal Form Description (BT-76)-->
             <cbc:CompanyLegalForm languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:CompanyLegalForm>
          </cac:TendererQualificationRequest>
          <!--Late Tenderer Information (BT-771)-->
