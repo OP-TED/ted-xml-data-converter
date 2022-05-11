@@ -70,7 +70,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 	<ted-orgs>
 	<xsl:for-each select="$ted-addresses-unique//ted-org">
 		<ted-org>
-			<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-org) + 1), 3)"/>
+			<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-org) + 1), 4)"/>
 			<orgid><xsl:text>ORG-</xsl:text><xsl:value-of select="$typepos"/></orgid>
 			<xsl:copy-of select="type"/>
 			<xsl:copy-of select="path"/>
