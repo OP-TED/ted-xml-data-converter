@@ -8,12 +8,12 @@
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
                  xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
-   <ext:UBLExtensions>
+   <ext:UBLExtensions xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
@@ -38,7 +38,7 @@
                            <cbc:CountrySubentityCode listName="nuts">00</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>KE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">KEN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -70,7 +70,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>KE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">KEN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -96,27 +96,27 @@
       </ext:UBLExtension>
    </ext:UBLExtensions>
    <!--UBL version ID (UBL)-->
-   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:UBLVersionID xmlns:xlink="http://www.w3.org/1999/xlink">2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID xmlns:xlink="http://www.w3.org/1999/xlink">eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID xmlns:xlink="http://www.w3.org/1999/xlink">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
-   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:ContractFolderID xmlns:xlink="http://www.w3.org/1999/xlink">aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-28+01:00</cbc:IssueDate>
-   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:IssueDate xmlns:xlink="http://www.w3.org/1999/xlink">2020-05-28+01:00</cbc:IssueDate>
+   <cbc:IssueTime xmlns:xlink="http://www.w3.org/1999/xlink">12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
-   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:VersionID xmlns:xlink="http://www.w3.org/1999/xlink">01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain xmlns:xlink="http://www.w3.org/1999/xlink">32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode xmlns:xlink="http://www.w3.org/1999/xlink" listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode xmlns:xlink="http://www.w3.org/1999/xlink">ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-001</cbc:ID>
@@ -131,9 +131,9 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms xmlns:xlink="http://www.w3.org/1999/xlink"><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
-   <cac:TenderingProcess>
+   <cac:TenderingProcess xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
@@ -158,7 +158,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
+   <cac:ProcurementProject xmlns:xlink="http://www.w3.org/1999/xlink"><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Government of Kenya Collections Strategy</cbc:Name>
       <!--Description (BT-24)-->
       <cbc:Description languageID="ENG">Governments are the largest payer and receiver of cash in any economy and Kenya is no exception. It is estimated that GoK represents 60 % of payments and collections in the economy. Following a presidential directive to digitise all government collections in the country which would effectively eliminate cash from Government offices a Government Digital Payments (GDP) task force was set up to oversee the implementation of this key project which saw the deployment of e-Citizen, a single sign-on platform that allows citizens to access, apply and pay for government services. To date about three hundred out of a possible five thousand government services have been fully digitised and the revenue collected through the platform has been growing steadily since 2015. Currently, over eight million citizens are registered on the e-citizen platform.</cbc:Description>
@@ -166,10 +166,10 @@
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">66170000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -180,7 +180,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!--Only one Lot in the TED notice-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -211,7 +211,7 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
@@ -253,7 +253,7 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
@@ -277,7 +277,17 @@
                <cbc:FamilyName/>
             </cac:TechnicalCommitteePerson>
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <cac:TenderValidityPeriod>
             <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
@@ -396,10 +406,10 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
             <cbc:ItemClassificationCode listName="cpv">66170000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -407,7 +417,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--   -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

@@ -8,12 +8,12 @@
                       xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                       xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
                       xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
-   <ext:UBLExtensions>
+   <ext:UBLExtensions xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!-- efac:NoticeResult here --><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>29</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
@@ -38,7 +38,7 @@
                            <cbc:CountrySubentityCode listName="nuts">EL</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>GR</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -71,7 +71,7 @@
                            <cbc:CountrySubentityCode listName="nuts">BE1</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -95,7 +95,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>LU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -126,7 +126,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>FR</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -153,125 +153,126 @@
       </ext:UBLExtension>
    </ext:UBLExtensions>
    <!--UBL version ID (UBL)-->
-   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:UBLVersionID xmlns:xlink="http://www.w3.org/1999/xlink">2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID xmlns:xlink="http://www.w3.org/1999/xlink">eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID xmlns:xlink="http://www.w3.org/1999/xlink">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
-   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <cbc:ContractFolderID xmlns:xlink="http://www.w3.org/1999/xlink">aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2021-01-28+01:00</cbc:IssueDate>
-   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <cbc:IssueDate xmlns:xlink="http://www.w3.org/1999/xlink">2021-01-28+01:00</cbc:IssueDate>
+   <cbc:IssueTime xmlns:xlink="http://www.w3.org/1999/xlink">12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
-   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:VersionID xmlns:xlink="http://www.w3.org/1999/xlink">01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32018R1046</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain xmlns:xlink="http://www.w3.org/1999/xlink">32018R1046</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode xmlns:xlink="http://www.w3.org/1999/xlink" listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode xmlns:xlink="http://www.w3.org/1999/xlink">ENG</cbc:NoticeLanguageCode>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>DAN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>DEU</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>SPA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>FIN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>FRA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>ELL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>ITA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>NLD</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>POR</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>SWE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>CES</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>EST</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>HUN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>LIT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>LAV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>MLT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>POL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>SLK</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>SLV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>GLE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>BUL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>RON</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage xmlns:xlink="http://www.w3.org/1999/xlink">
       <cbc:ID>HRV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty xmlns:xlink="http://www.w3.org/1999/xlink"><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>eu-ins-bod-ag</cbc:PartyType>
+         <cbc:PartyType listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyType>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
+      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyType listName="buyer-contracting-type">not-cont-ent</cbc:PartyType>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
@@ -288,9 +289,9 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms xmlns:xlink="http://www.w3.org/1999/xlink"><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
-   <cac:TenderingProcess>
+   <cac:TenderingProcess xmlns:xlink="http://www.w3.org/1999/xlink">
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
@@ -313,7 +314,7 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+   <cac:ProcurementProject xmlns:xlink="http://www.w3.org/1999/xlink"><!--Internal Identifier (BT-22)-->
       <cbc:ID schemeName="InternalID">ENISA F-EDO-20-T32</cbc:ID>
       <!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Production and Supply of Branded Promotional Material</cbc:Name>
@@ -323,10 +324,10 @@
       <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">39294100</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -337,7 +338,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
+   <cac:ProcurementProjectLot xmlns:xlink="http://www.w3.org/1999/xlink"><!--Only one Lot in the TED notice-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -507,10 +508,16 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">79342200</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">39294100</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79342200</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79800000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -518,7 +525,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--   -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

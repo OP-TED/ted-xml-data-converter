@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" 
-xmlns:doc="http://www.pnp-software.com/XSLTdoc" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
-xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" 
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
-xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts " 
->
+<xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <xsl:template match="ted:OBJECT_DESCR">
@@ -185,14 +185,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<xsl:call-template name="awarding-terms"/>
 		<!-- Organization providing additional information cardinality BT-18 ? -->
 		
-		<!-- In TED, within element CONTRACTING_BODY, the elements ADDRESS_FURTHER_INFO_IDEM and ADDRESS_PARTICIPATION_IDEM are used to represent options for "to the abovementioned address" in the PDF forms. -->
-		<!-- These indicate that for the functions of "Additional information can be obtained from" and "Tenders or requests to participate must be submitted to", the Contracting Authority address should be used. -->
-		<!-- In eForms, such a direction is implicit, and no such elements are used. So the element ADDRESS_FURTHER_INFO_IDEM will not be mapped. -->
-		<!-- However, the element ADDRESS_PARTICIPATION_IDEM may exist with a sibling element URL_PARTICIPATION, which is mapped to the element cbc:EndpointID within cac:TenderRecipientParty. -->
-		<!-- In this case, it does not make sense to include cac:TenderRecipientParty without pointing to the correct address, so ADDRESS_PARTICIPATION_IDEM will be mapped if it has a URL_PARTICIPATION sibling -->
-		
 		<!-- Organization providing offline access to the procurement documents cardinality ? -->
-		<xsl:apply-templates select="../../ted:CONTRACTING_BODY/ted:ADDRESS_FURTHER_INFO"/>
+		<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:ADDRESS_FURTHER_INFO|ted:ADDRESS_FURTHER_INFO_IDEM)"/>
 		<!-- Organization receiving tenders ​/ Requests to participate cardinality ? No equivalent element in TED XML -->
 		<!-- Submission URL (BT-18) cardinality ? Mandatory for PIN subtype E1; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3; Forbidden for other subtypes -->
 		<xsl:comment>Submission URL (BT-18)</xsl:comment>
@@ -308,8 +302,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION)">
 		<xsl:variable name="is-reserved-execution">
 			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">true</xsl:when>
-				<xsl:otherwise>false</xsl:otherwise>
+				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">yes</xsl:when>
+				<xsl:otherwise>no</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 		<cac:ContractExecutionRequirement>
@@ -321,17 +315,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 <xsl:template name="e-invoicing">
 	<!-- Electronic Invoicing (BT-743) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<xsl:comment>Electronic Invoicing (BT-743)</xsl:comment>
-	<xsl:if test="$eforms-notice-subtype = ('16') or $ted-form-main-element/ted:COMPLEMENTARY_INFO/ted:EINVOICING">
-		<xsl:variable name="is-e-invoicing">
-			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:COMPLEMENTARY_INFO/ted:EINVOICING)">allowed</xsl:when>
-				<xsl:otherwise>not-allowed</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		<cac:ContractExecutionRequirement>
-			<cbc:ExecutionRequirementCode listName="einvoicing"><xsl:value-of select="$is-e-invoicing"/></cbc:ExecutionRequirementCode>
-		</cac:ContractExecutionRequirement>
-	</xsl:if>
+	<xsl:choose>
+		<xsl:when test="$ted-form-main-element/ted:COMPLEMENTARY_INFO/ted:EINVOICING">
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing"><xsl:text>allowed</xsl:text></cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+		</xsl:when>
+		<xsl:when test="$eforms-notice-subtype = ('16')">
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing"><xsl:text>not-allowed</xsl:text></cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+		</xsl:when>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template name="terms-performance">
@@ -382,9 +377,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 </xsl:template>	
 			
 <xsl:template name="address-participation-url-participation">
-	<!-- if either ADDRESS_PARTICIPATION or URL_PARTICIPATION is present, cac:TenderRecipientParty must be used. -->
-	<!-- if ADDRESS_PARTICIPATION_IDEM is present alone, cac:TenderRecipientParty is not output -->
-	<xsl:if test="../../ted:CONTRACTING_BODY/(ted:ADDRESS_PARTICIPATION|ted:URL_PARTICIPATION)">
+	<xsl:if test="../../ted:CONTRACTING_BODY/(ted:ADDRESS_PARTICIPATION|ted:ADDRESS_PARTICIPATION_IDEM|ted:URL_PARTICIPATION)">
 		<cac:TenderRecipientParty>
 			<xsl:apply-templates select="../../ted:CONTRACTING_BODY/ted:URL_PARTICIPATION"/>
 			<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:ADDRESS_PARTICIPATION|ted:ADDRESS_PARTICIPATION_IDEM)"/>
@@ -952,13 +945,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:comment>Main Classification Code (BT-262)</xsl:comment>
+		<xsl:apply-templates select="../ted:CPV_MAIN"/>
 		<!-- Additional Classification Code (BT-263) cardinality * Optional for ALL Notice subtypes, No equivalent element in TED XML at Lot level -->
 		<xsl:comment>Additional Classification Code (BT-263)</xsl:comment>
-		<!-- If this Lot OBJECT_DESCR does not have a CPV code, use that from the parent OBJECT_CONTRACT -->
-		<xsl:choose>
-			<xsl:when test="ted:CPV_ADDITIONAL"><xsl:apply-templates select="ted:CPV_ADDITIONAL[1]"/></xsl:when>
-			<xsl:otherwise><xsl:apply-templates select="../ted:CPV_MAIN"/></xsl:otherwise>
-		</xsl:choose>
+		<xsl:apply-templates select="ted:CPV_ADDITIONAL"/>
 		
 		
 		
@@ -1017,11 +1007,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 	<!--    the first P element will be converted to a cac:AddressLine/cbc:StreetName element -->
 	<!--    the second P element will be converted to a cac:AddressLine/cbc:AdditionalStreetName element -->
 	<!--    the remaining P elements will be converted to separate cac:AddressLine/cbc:Line elements -->
-	<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts-codes(n2016:NUTS/@CODE)"/>
-	<xsl:variable name="max-nuts-length" select="fn:max(for $val in $valid-nuts return fn:string-length($val))"/>
-	<xsl:variable name="main-nuts" select="$valid-nuts[fn:string-length(.) = $max-nuts-length][1]"/>
+	<!-- get list of only NUTS level 3 codes -->
+	<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts-codes(*:NUTS/@CODE)"/>
+	<xsl:variable name="main-nuts" select="$valid-nuts[1]"/>
 	<xsl:variable name="rest-nuts" select="functx:value-except($valid-nuts, $main-nuts)"/>
-	<xsl:comment><xsl:value-of select="fn:concat(fn:string-join($valid-nuts, ':'), ' ', $max-nuts-length, ' ', fn:string-join($main-nuts, ':'), ' ', fn:string-join($rest-nuts, ':'))"/></xsl:comment>
 	<xsl:if test="fn:normalize-space(ted:MAIN_SITE) or fn:not(fn:empty($valid-nuts)) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
 		<xsl:comment>Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)</xsl:comment>
 		<xsl:choose>
