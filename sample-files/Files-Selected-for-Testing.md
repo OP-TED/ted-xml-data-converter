@@ -32,7 +32,8 @@ This table lists the TED XML files chosen to test the Converter, and the reasons
 | 20-156983-001-EXP.xml | F02 | CN | NUTS | 2 NUTS3 codes, MAIN_SITE with 1 P |
 | 21-077815-001-EXP.xml | F02 | CN | NUTS | 2 NUTS3 codes, MAIN_SITE with 2 P |
 | 20-343258-001-EXP.xml | F02 | CN | NUTS | 5 NUTS3 codes, MAIN_SITE with 5 P |
-| 21-363118-001-EXP.xml | F12 | CN | Lot Selection Criteria | CRITERIA_SELECTION | 
+| 21-363118-001-EXP.xml | F12 | CN | Lot Selection Criteria | CRITERIA_SELECTION |
+| 20-179994-001-EXP.xml | F12 | CN | Prize | NUMBER_VALUE_PRIZE and DETAILS_PAYMENT |
 | 352907_2021.xml | F02 | CN |  |  |
 | 353820_2021.xml | F02 | CN |  |  |
 | 352444_2021.xml | F02 | CN |  |  |
