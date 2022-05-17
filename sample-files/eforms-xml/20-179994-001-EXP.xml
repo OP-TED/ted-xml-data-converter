@@ -324,6 +324,34 @@
             <!--Jury Decision Binding (BT-42)-->
             <cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
             <!--No Negotiation Necessary (BT-120)-->
+            <!--*** start of cac:AwardingCriterion ***-->
+            <!--Award Criteria Order Justification (BT-733)-->
+            <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number Weight (BT-5421)-->
+            <!--Award Criterion Number Fixed (BT-5422)-->
+            <!--Award Criterion Number Threshold (BT-5423)-->
+            <!--Award Criterion Number (BT-541)-->
+            <!--Award Criterion Type (BT-539)-->
+            <!--Award Criterion Name (BT-734)-->
+            <!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">Jugement des candidatures: — les candidatures seront jugées et sélectionnées au regard des critères suivants: 1) pertinence de la composition de l'équipe au regard des compétences demandées et de la nature du projet (la présentation de compétences complémentaires pertinentes pourront être considérées comme un plus); 2) pertinence des références présentées, de dimension et de complexité équivalente à celles du projet envisagé, parmi lesquelles: — références du ou des architectes: —— une référence minimale de projet de construction d'un accueil périscolaire; —— une référence minimale de projet présentant des performances énergétiques et — environnementales élevées, a minima supérieures à la RT 2012 — 30 %; —— une référence d'un projet réalisé dans le cadre d'un marché public au budget travaux compris entre 1 et 3 000 000 EUR HT; — les références de moins de cinq ans seront appréciées; 3) moyens présentés par l'équipe, permettant de mener à bien une réalisation de dimension et de complexité équivalente à celle du projet envisagé. Jugement des prestations: — le jugement des propositions sera effectué dans les conditions prévues à l'article R. 2152 du code de la commande publique au moyen des critères suivants: 1) respect du programme de l'opération; 2) qualité architecturale du projet et cohérence de son insertion dans le site; 3) respect et crédibilité du coût estimé des travaux; 4) respect des délais et crédibilité du planning prévisionnel.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">Jugement des candidatures: — les candidatures seront jugées et sélectionnées au regard des critères suivants: 1) pertinence de la composition de l'équipe au regard des compétences demandées et de la nature du projet (la présentation de compétences complémentaires pertinentes pourront être considérées comme un plus); 2) pertinence des références présentées, de dimension et de complexité équivalente à celles du projet envisagé, parmi lesquelles: — références du ou des architectes: —— une référence minimale de projet de construction d'un accueil périscolaire; —— une référence minimale de projet présentant des performances énergétiques et — environnementales élevées, a minima supérieures à la RT 2012 — 30 %; —— une référence d'un projet réalisé dans le cadre d'un marché public au budget travaux compris entre 1 et 3 000 000 EUR HT; — les références de moins de cinq ans seront appréciées; 3) moyens présentés par l'équipe, permettant de mener à bien une réalisation de dimension et de complexité équivalente à celle du projet envisagé. Jugement des prestations: — le jugement des propositions sera effectué dans les conditions prévues à l'article R. 2152 du code de la commande publique au moyen des critères suivants: 1) respect du programme de l'opération; 2) qualité architecturale du projet et cohérence de son insertion dans le site; 3) respect et crédibilité du coût estimé des travaux; 4) respect des délais et crédibilité du planning prévisionnel.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">Jugement des candidatures: — les candidatures seront jugées et sélectionnées au regard des critères suivants: 1) pertinence de la composition de l'équipe au regard des compétences demandées et de la nature du projet (la présentation de compétences complémentaires pertinentes pourront être considérées comme un plus); 2) pertinence des références présentées, de dimension et de complexité équivalente à celles du projet envisagé, parmi lesquelles: — références du ou des architectes: —— une référence minimale de projet de construction d'un accueil périscolaire; —— une référence minimale de projet présentant des performances énergétiques et — environnementales élevées, a minima supérieures à la RT 2012 — 30 %; —— une référence d'un projet réalisé dans le cadre d'un marché public au budget travaux compris entre 1 et 3 000 000 EUR HT; — les références de moins de cinq ans seront appréciées; 3) moyens présentés par l'équipe, permettant de mener à bien une réalisation de dimension et de complexité équivalente à celle du projet envisagé. Jugement des prestations: — le jugement des propositions sera effectué dans les conditions prévues à l'article R. 2152 du code de la commande publique au moyen des critères suivants: 1) respect du programme de l'opération; 2) qualité architecturale du projet et cohérence de son insertion dans le site; 3) respect et crédibilité du coût estimé des travaux; 4) respect des délais et crédibilité du planning prévisionnel.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <cac:TechnicalCommitteePerson>
                <cbc:FamilyName>Sa composition n'est pas arrêtée à ce jour. Il sera composé selon le code de la commande publique</cbc:FamilyName>
@@ -334,6 +362,7 @@
                <!--Value Prize (BT-644)-->
                <!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
                <!--Rewards Other (Prize Description) (BT-45)-->
+               <!--Rewards Other (Prize Description) (BT-45) may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT-->
                <cbc:Description languageID="FRA">Les trois concurrents (candidats admis à concourir) recevront une indemnisation forfaitaire maximale de 10 000 EUR HT. Pour les prestations fournies, sous réserve de la recevabilité de leurs prestations au regard du règlement du concours et du respect du programme. Les indemnisations sont forfaitaires, conformément aux dispositions de l'article R. 2172-4 du code de la commande publique, l'acheteur, sur proposition du jury, se réserve le droit, dans le cas d'un projet qu'il jugerait incomplet ou dont les prestations seraient non conformes par rapport au règlement de concours et ou au programme, de supprimer totalement ou partiellement l'indemnité. Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
             </cac:Prize>
          </cac:AwardingTerms>

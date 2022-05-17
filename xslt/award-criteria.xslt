@@ -36,7 +36,19 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Award Criterion Type (BT-539) cardinality ? Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 			<!-- Award Criterion Name (BT-734) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 			<!-- Award Criterion Description (BT-540) cardinality ? Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
-			<xsl:apply-templates select="ted:AC"/>
+			<xsl:comment>*** start of cac:AwardingCriterion ***</xsl:comment>
+			<xsl:comment>Award Criteria Order Justification (BT-733)</xsl:comment>
+			<xsl:comment>Award Criteria Complicated (BT-543)</xsl:comment>
+			<xsl:comment>Award Criterion Number Weight (BT-5421)</xsl:comment>
+			<xsl:comment>Award Criterion Number Fixed (BT-5422)</xsl:comment>
+			<xsl:comment>Award Criterion Number Threshold (BT-5423)</xsl:comment>
+			<xsl:comment>Award Criterion Number (BT-541)</xsl:comment>
+			<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
+			<xsl:comment>Award Criterion Name (BT-734)</xsl:comment>
+			<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
+			
+			<xsl:apply-templates select="ted:AC|../../ted:PROCEDURE/ted:CRITERIA_EVALUATION"/>
+			<xsl:comment>*** end of cac:AwardingCriterion ***</xsl:comment>
 			
 			<!-- Jury Member Name (BT-46) cardinality * Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<xsl:comment>Jury Member Name (BT-46)</xsl:comment>
@@ -48,7 +60,6 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Value Prize (BT-644) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 			<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		<xsl:comment>Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))</xsl:comment>
-		<!--<xsl:apply-templates select="../../ted:PROCEDURE/(ted:NUMBER_VALUE_PRIZE|ted:DETAILS_PAYMENT)"/>-->
 		<xsl:call-template name="prize"/>
 			
 		
@@ -173,6 +184,32 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 		</ext:UBLExtensions>
 	</xsl:template>
 
+	<xsl:template match="ted:CRITERIA_EVALUATION">
+	<!-- To assist users to achieve correct information, and to comply with the rule mandating at least one Award Criterion (BG-38) that includes Award Criterion Type (BT-539) value that is equal to ("Price" or "Cost"), CRITERIA_EVALUATION is copied to one cac:SubordinateAwardingCriterion for each possible Award Criterion Type (BT-539) -->
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:if test="$text ne ''">
+		<cac:AwardingCriterion>
+			<cac:SubordinateAwardingCriterion>
+				<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
+				<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+				<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			</cac:SubordinateAwardingCriterion>
+			<cac:SubordinateAwardingCriterion>
+				<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
+				<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+				<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			</cac:SubordinateAwardingCriterion>
+			<cac:SubordinateAwardingCriterion>
+				<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
+				<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+				<xsl:comment>Award Criterion Description (BT-540)</xsl:comment>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			</cac:SubordinateAwardingCriterion>
+		</cac:AwardingCriterion>
+	</xsl:if>
+	</xsl:template>
 <!--Start of Prize information -->
 <!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
 			<!-- Prize Rank (BT-44) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
@@ -180,7 +217,6 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 			<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 	<xsl:template name="prize">
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/(ted:NUMBER_VALUE_PRIZE|ted:DETAILS_PAYMENT)/ted:P, ' '))"/>
-		<!-- <xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/(ted:NUMBER_VALUE_PRIZE|ted:DETAILS_PAYMENT)/ted:P, ' '))"/>-->
 		<xsl:if test="$text ne ''" >
 			<cac:Prize>
 				<xsl:comment>Prize Rank (BT-44)</xsl:comment>
@@ -195,8 +231,8 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 				<xsl:message terminate="no" select="$message"/>
 				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 				<xsl:comment>Rewards Other (Prize Description) (BT-45)</xsl:comment>
-				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/>
-				</cbc:Description>
+				<xsl:comment>Rewards Other (Prize Description) (BT-45) may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT</xsl:comment>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 			</cac:Prize>
 		</xsl:if>			
 	</xsl:template>
