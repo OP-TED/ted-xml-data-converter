@@ -471,24 +471,27 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 pin cn ca
 
 <xsl:template name="appeal-terms">
 	<xsl:variable name="bt-99-text" select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<!--<xsl:if test="$bt99-text or ../../ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_INFO|ted:ADDRESS_REVIEW_BODY|ted:ADDRESS_MEDIATION_BODY)">-->
+	<xsl:comment>*** start of cac:AppealTerms ***</xsl:comment>
+	<!-- Review Deadline Description (BT-99): eForms documentation cardinality = (?) at Lot level | eForms Regulation Annex requirements = Forbidden for PIN subtypes 1-6, E1, and E2, CN subtype 22; Optional for other subtypes -->
+	<xsl:comment>cac:PresentationPeriod: Review Deadline Description (BT-99)</xsl:comment>
+	<!-- Review Information Providing Organization -->
+	<xsl:comment>cac:AppealInformationParty: Review Information Providing Organization</xsl:comment>
+	<!-- Review organization -->
+	<xsl:comment>cac:AppealReceiverParty: Review organization</xsl:comment>
+	<!-- Mediation organization -->
+	<xsl:comment>cac:MediationParty: Mediation organization</xsl:comment>
+	<xsl:if test="$bt-99-text or ../../ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_INFO|ted:ADDRESS_REVIEW_BODY|ted:ADDRESS_MEDIATION_BODY)">
 		<cac:AppealTerms>
-			<!-- Review Deadline Description (BT-99) cardinality ? Forbidden for PIN subtypes 1-6, E1, and E2, CN subtype 22; Optional for other subtypes -->
-			<xsl:comment>Review Deadline Description (BT-99)</xsl:comment>
 			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE"/>
-			<!-- Review Information Providing Organization -->
-			<xsl:comment>Review Information Providing Organization</xsl:comment>
 			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_INFO"/>
-			<!-- Review organization -->
-			<xsl:comment>Review organization</xsl:comment>
 			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_BODY"/>
-			<!-- Mediation organization -->
-			<xsl:comment>Mediation organization</xsl:comment>
 			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY"/>
 		</cac:AppealTerms>
-	<!--</xsl:if>-->
+	</xsl:if>
+	<xsl:comment>*** end of cac:AppealTerms ***</xsl:comment>
 </xsl:template>
-	
+
+
 <xsl:template match="ted:REVIEW_PROCEDURE">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
