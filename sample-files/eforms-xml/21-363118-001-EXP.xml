@@ -119,11 +119,11 @@
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>ra</cbc:PartyType>
+         <cbc:PartyTypeCode>ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode>buyer-contracting-type</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
@@ -238,6 +238,8 @@
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
          <!--Subcontracting Tender Indication (BT-651)-->
          <!--Subcontracting Obligation (BT-65)-->
@@ -251,16 +253,47 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
+         <cac:AwardingTerms><!--Following Contract (BT-41)-->
+            <cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+            <!--Jury Decision Binding (BT-42)-->
+            <cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
+            <!--No Negotiation Necessary (BT-120)-->
+            <!--*** start of cac:AwardingCriterion ***-->
+            <!--Award Criteria Order Justification (BT-733)-->
+            <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number Weight (BT-5421)-->
+            <!--Award Criterion Number Fixed (BT-5422)-->
+            <!--Award Criterion Number Threshold (BT-5423)-->
+            <!--Award Criterion Number (BT-541)-->
+            <!--Award Criterion Type (BT-539)-->
+            <!--Award Criterion Name (BT-734)-->
+            <!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion><!--WARNING: The content of TED XML element CRITERIA_EVALUATION has been copied to three Award Criterion Description (BT-540), to assist with editing and correction.-->
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--*** end of cac:AwardingCriterion ***-->
+            <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
             <cac:Prize><!--Prize Rank (BT-44)--><!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
                <cbc:RankCode>1</cbc:RankCode>
                <!--Value Prize (BT-644)-->
                <!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
                <!--Rewards Other (Prize Description) (BT-45)-->
+               <!--Rewards Other (Prize Description) (BT-45) may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT-->
                <cbc:Description languageID="FRA">Chaque concurrent ayant remis une prestation conforme au règlement du concours recevra une prime d'un montant de 50 000 EUR HT (non révisable et non actualisable), TVA en sus au taux de la réglementation en vigueur. La rémunération du contrat de maîtrise d'œuvre tiendra compte de la prime reçue par le lauréat. Le versement de la prime aux candidats s'effectuera sur la base de la proposition du jury dans un délai de 30 jours suivant la date de notification du courrier de rejet aux candidats dont les projets n'auront pas été retenus.</cbc:Description>
             </cac:Prize>
          </cac:AwardingTerms>
@@ -269,7 +302,11 @@
             <cbc:EndpointID>http://www.mp74.fr</cbc:EndpointID>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
-         <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -282,6 +319,7 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>FRA</cbc:ID>

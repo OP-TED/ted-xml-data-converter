@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -428,8 +428,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -462,7 +460,9 @@
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
-         </cac:ContractExecutionRequirement>TED_EXPORT/FORM_SECTION/F02_2014/OBJECT_CONTRACT/OBJECT_DESCR<!--prize-information--><!--Electronic Invoicing (BT-743)--><cac:ContractExecutionRequirement>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
@@ -476,7 +476,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -573,10 +573,9 @@
                   </ext:UBLExtensions>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
+            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
@@ -589,7 +588,11 @@
          <cac:TenderValidityPeriod>
             <cbc:DurationMeasure unitCode="MONTH">2</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
-         <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="HUN">148. § előírásai szerint 9. AK a Kbt. 71. § (6) bek szerinti korlátozást nem alkalmazza. 10. AK a Kbt. 81.§ (5) bek.-t alkalmazza. 11. Aj-ban csatolni kell a nem magyar nyelvű dokumentum magyar fordítását. AK a nem magyar nyelven benyújtott dok AT általi felelős fordítását is elfogadja. 12. A 339/2014. (XII. 19.) KR-ben szerint az NFP más AK nevében folytatja le a közbeszerzési eljárást a közöttük fennálló konzorciumi megállapodás alapján (Kbt. 29. § (1) bek.). Az AF I.1. pontjában AK-ként kizárólag a hirdetményfeladás technikai okból került megjelölésre az 1. szervezet, jelen eljárás ajánlatkérője az AF I.1) pontjában megjelölt szervezet(ek). 13. Közös aj.tétel esetén csatolni kell közös ajtevők által cégszerűen aláírt közös AT megállapodást. 14. A nyertes AT a közbeszerzési dok.okban részletesen meghatározott feltételeknek megfelelő min. 1 000 000 000 Ft/év és min. 300 000 000 Ft/káreseményenkénti mértékű teljes körű építés-szerelési biztosítással (CAR)valamint min.200 000 000 Ft/év és min.100 000 000 Ft/káreseményenkénti mértékű tervezési felelősségbiztosítással kell rendelkeznie, amelyről szóló kötvényt szerz.kötéskor be kell nyújtania. AT csatolja nyilatkozatát az aj-ban, hogy az előírt felelősségbiztosítással nyertesség esetén rendelkezni fog. 15. AT nyertessége esetén III.1.3) M2 pont M.2.1-M.2.4 alpontok szerinti szakembereknek szerz.kötésre rendelkezni kell a megjelölt érvényes kamarai jog-gal és aktív státusszal. ATnek a beadott aj-ban nyilatkoznia kell, hogy nyertessége esetén a felhívás III.1.3) M.2 pont M.2.1-M.2.4 alpontokra bemutatott szakemberei a szükséges jogokkal és aktív kamarai státusszal rendelkezni fognak a szerz.kötéskor a szerz. teljesítésének teljes időtartamára. 16. A KD-ok a Kbt. 39.§ (1) bek. szerint a regisztrálási adatok megadását követően korlátlanul és teljeskörűen, közvetlenül és díjmentesen elektronikusan elérhetőek a felhívás I.3) pontjában meghatározott címen. 17. A felhívás IV.2.6)pontjában meghatározott ajánlati kötöttség időpontja alatt AK 60 naptári napos ajánlati kötöttséget ért; 18. Kieg.táj. a Kbt. 56. § -ban foglaltak szerint. AK konzultációt, helyszíni bejárást nem tart. 19. Ajánlatkérő a részajánlattétel lehetőségét a közbeszerzés tárgyának és jellegének megfelelően megvizsgálta, és akként határozott, hogy a beszerzési igény, a beszerzés tárgyának jellege (tervezés és kivitelezés) és a szerződéshez kapcsolódó további körülmények, így a versenysemlegesség követelménye, valamint a beruházás mérete, jellege és a támogatásból megvalósuló volta miatt a költséghatékonyság szempontja, továbbá a tervező és a kivitelező közötti esetleges jogviták elkerülése nem teszik lehetővé a közbeszerzés egy részére történő ajánlattételt. Folytatás és részletes kifejetés a KD-ban. 20. Többváltozatú ajánlat: Ajánlatkérő nem enged többváltozatú (alternatív) ajánlattételt. 21. A szerződés teljesítése során szükséges az MSZ EN ISO 14001:2004 rendszerszabvány szerinti környezetirányítási rendszer tanúsítvány alkalmazása vagy az Európai Unió más tagállamából származó a fentiekkel egyenértékű tanúsítvány, illetve az egyenértékű környezetirányítási intézkedések egyéb bizonyítékainak alkalmazása. A nyertes AT a szerződéskötés időpontjában köteles bemutatni a tárgyi tevékenységre vonatkozó hatályos tanúsítványát, illetve az egyenértékű környezetirányítási intézkedések egyéb bizonyítékait. AT csatolja ajánlatában nyilatkozatát, hogy a szerződéskötés időpontjára rendelkezni fog az előírt tanúsítvánnyal, illetve egyenértékű környezetirányítási intézkedések egyéb bizonyítékaival. 22. A Kbt. 104. § (7) bekezdése alapján az ajánlatkérő felhívja a figyelmet, hogy a beszerzését nem a keretmegállapodása alapján kívánja megvalósítani. 23. Ajánlatkérő rögzíti, hogy a felhívás II.2.7) pontjában meghatározott teljesítési határidő alatt 1095 naptári napot ért. 24. AK felhívja a figyelmet a 321/2015 (X.30.) Kr. (a továbbiakban: Kr.) 46. § (3) bek.- ben foglaltakra.</cbc:Description>
@@ -605,6 +608,7 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>HUN</cbc:ID>

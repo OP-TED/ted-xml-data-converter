@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -16,8 +17,9 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.regionsjaelland.dk</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -55,8 +57,9 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.regionh.dk</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -89,8 +92,9 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.rn.dk</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -123,8 +127,9 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     <!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.rm.dk</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -157,7 +162,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://erhvervsstyrelsen.dk/klagenaevnet-for-udbud</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -189,7 +194,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://www.kfst.dk</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -237,7 +242,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -260,11 +265,11 @@
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>ra</cbc:PartyType>
+         <cbc:PartyTypeCode>ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode>buyer-contracting-type</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
@@ -286,11 +291,11 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>ra</cbc:PartyType>
+         <cbc:PartyTypeCode>ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode>buyer-contracting-type</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
@@ -312,11 +317,11 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>ra</cbc:PartyType>
+         <cbc:PartyTypeCode>ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode>buyer-contracting-type</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
@@ -338,11 +343,11 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>ra</cbc:PartyType>
+         <cbc:PartyTypeCode>ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode>buyer-contracting-type</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
@@ -363,7 +368,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)-->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text-->
       <cac:ProcurementLegislationDocumentReference>
          <cbc:ID>LocalLegalBasis</cbc:ID>
          <cbc:DocumentDescription languageID="DAN">Udbud for: - Region Sjælland - Region Hovedstaden - Region Nordjylland - Region Midtjylland. Region Sjælland er udbudsansvarlig.</cbc:DocumentDescription>
@@ -386,8 +391,13 @@
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
       <cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
-      <!--PIN Competition Termination (BT-756)-->
       <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">2020/S 187-448857</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -432,6 +442,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="DAN">For at blive erklæret egnet, skal ansøger opfylde nedenstående vedrørende økonomisk og finansiel formåen: - Tilbudsgiver skal oplyse den samlede gennemsnitlige årsomsætning i de tre (3) seneste afsluttede regnskabsår. - Tilbudsgiver skal oplyse den gennemsnitlige soliditetsgrad for de tre (3) seneste afsluttede regnskabsår. - Soliditetsgraden skal beregnes som soliditetsgrad = egenkapital / aktiver i alt * 100.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
@@ -439,6 +450,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="DAN">- Tilbudsgiver gennemsnitligt har haft en årlig omsætning på minimum 300 mio. DKK baseret på de seneste 3 afsluttede regnskabsår. - Tilbudsgiver gennemsnitligt har haft en soliditetsgrad på minimum 10 % baseret på de seneste 3 afsluttede regnskabsår.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
@@ -446,6 +458,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="DAN">For at blive erklæret egnet, skal ansøger opfylde nedenstående vedrørende teknisk og faglig formåen: - Ansøger skal anføre to (2) forskellige leverancer som er (eller har været) igangværende indenfor de seneste tre (3) år før ansøgningsfristen – der skal have været realitet på levering i henhold til leverancen. Referencerne bedes indeholde: - Angivelse af kunden. - Beskrivelse af indholdet af opgaven, herunder varekøb, service- og supportaftale, vedligeholdelse og tjenesteydelser. - Beskrivelse af kompleksiteten i mængden af produkter som er blevet leveret, driftsstatus (igangværende/ophørt). - Kontraktens varighed (dato for ikrafttræden og slutdato) - Årlig kontraktværdi: — For rammeaftaler angives det estimerede årlige kontraktværdi.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
@@ -453,6 +466,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="DAN">1) Ansøger skal have minimum to (2) sammenlignelige leverancer. - En reference anses for sammenlignelig når den har lighed med den udbudte kontrakt og kunde. 2) Med lighed med kontrakten forstås opgaver, som i indhold af kontrakten og kompleksitet i mængden af produkter eller løsning bedst svarer til den udbudte kontrakt. 3) Med lighed med kunden forstås en offentlig/privat større virksomhed med et betydeligt antal ansatte og en geografisk fordeling på flere lokationer over et større område.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
@@ -473,8 +487,6 @@
          <cbc:RecurringProcurementDescription languageID="DAN">Ca. 9 måneder før udløbsdato.</cbc:RecurringProcurementDescription>
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -518,11 +530,23 @@
             <cbc:Description languageID="DAN">Kontrakt punkt 7.3 - Miljø: Leverandøren skal aktivt medvirke til fortsatte forbedringer af miljø, teknologi og økonomi i forbindelse med kontrakten, herunder til at mængden af emballage mindskes mest muligt. Leverandøren skal sørge for at afhjælpe såvel miljø- som arbejdsmiljøproblemer, f.eks. med hensyn til emballagens udformning, materiale og vægt. Kontrakt punkt 22 - Socialt ansvar: Leverandøren skal i forbindelse med gennemførelsen af kontrakten respektere og overholde nationale og internationale love og regler vedrørende menneskerettigheder, arbejdstagerrettigheder, miljø og antikorruption, det vil sige: FN’s deklaration om menneskerettigheder, ILO’s deklaration om arbejdstagerrettigheder, Rio-deklarationen om miljø og udvikling, FN’s konvention mod korruption. Dette indebærer bl.a., at hverken leverandøren eller dennes eventuelle underleverandører må benytte sig af konventionsstridig børne- og voksenarbejdskraft.</cbc:Description>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="ecatalog-submission"><!--ERROR: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.--></cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
+            <!--*** start of cac:AwardingCriterion ***-->
+            <!--Award Criteria Order Justification (BT-733)-->
+            <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number Weight (BT-5421)-->
+            <!--Award Criterion Number Fixed (BT-5422)-->
+            <!--Award Criterion Number Threshold (BT-5423)-->
+            <!--Award Criterion Number (BT-541)-->
+            <!--Award Criterion Type (BT-539)-->
+            <!--Award Criterion Name (BT-734)-->
+            <!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -555,9 +579,9 @@
                   </ext:UBLExtensions>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
+            <!--*** end of cac:AwardingCriterion ***-->
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
@@ -570,7 +594,11 @@
          <cac:TenderValidityPeriod>
             <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
-         <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DAN">Ved et udbud med prækvalifikation efter udbudsloven, forsyningsvirksomhedsdirektivet eller tilbudsloven skal en klage over ikke at være blevet prækvalificeret indgives inden 20 kalenderdage regnet fra dagen efter ordregiverens afsendelse af underretning om prækvalifikation. Andre klager over udbud eller beslutninger, f.eks. tildeling af kontrakter, omfattet af udbudslovens afsnit II eller III eller forsyningsvirksomhedsdirektivet skal være indgivet til Klagenævnet inden 45 kalenderdage regnet fra dagen efter ordregiverens offentliggørelse af en bekendtgørelse i EU-Tidende om indgåelse af kontrakt. Klager over indgåelse af en rammeaftale efter udbudsloven (afsnit II, III og § § 191 og 192), forsyningsvirksomhedsdirektivet eller tilbudsloven skal være indgivet til Klagenævnet inden 6 måneder regnet fra dagen efter ordregiverens underretning om tildelingsbeslutningen. Klager over indgåelse af en kontrakt baseret på en rammeaftale med genåbning af konkurrencen eller et dynamisk indkøbssystem omfattet af udbudslovens afsnit II eller III eller forsyningsvirksomhedsdirektivet skal være indgivet til Klagenævnet inden 30 kalenderdage regnet fra dagen efter ordregiverens underretning om tildelingsbeslutningen. Samtidig med klagens fremsendelse til Klagenævnet for Udbud skal klageren sende en kopi af klagen med bilag til ordregiveren, gerne pr. e-mail.</cbc:Description>
@@ -591,14 +619,14 @@
                </cac:PartyIdentification>
             </cac:MediationParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>DAN</cbc:ID>
          </cac:Language>
-         <!--Electronic Ordering (BT-92)-->
-         <!--Electronic Payment (BT-93)-->
-         <cac:PostAwardProcess>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
             <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
@@ -670,13 +698,14 @@
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
          <cbc:Name languageID="DAN">IT-klientudstyr 2021-2025</cbc:Name>
          <!--Description (BT-24)-->

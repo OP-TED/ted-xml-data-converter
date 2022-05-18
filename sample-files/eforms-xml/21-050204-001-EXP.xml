@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                     xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                     xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                     xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -16,7 +17,7 @@
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.enisa.europa.eu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
@@ -51,7 +52,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
@@ -76,7 +77,7 @@
                         <!--Organization Identifier (BT-501)-->
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-003</cbc:ID>
@@ -107,7 +108,7 @@
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Role : Acquiring CPB--><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-004</cbc:ID>
@@ -154,7 +155,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -266,11 +267,11 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>eu-ins-bod-ag</cbc:PartyType>
+         <cbc:PartyTypeCode>eu-ins-bod-ag</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode>buyer-contracting-type</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
@@ -287,7 +288,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms here -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess here -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
@@ -300,8 +301,13 @@
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
-      <!--PIN Competition Termination (BT-756)-->
       <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">2020/S 219-536631</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -350,8 +356,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -370,7 +374,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -405,13 +409,17 @@
                   <cbc:Description languageID="ENG">As per tender specification</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
+            <!--*** end of cac:AwardingCriterion ***-->
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
-         <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
@@ -424,9 +432,8 @@
                </cac:PartyIdentification>
             </cac:MediationParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
-         <!--Electronic Ordering (BT-92)-->
-         <!--Electronic Payment (BT-93)-->
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
@@ -436,9 +443,7 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
-                     <efac:InterestExpressionReceptionPeriod/>
-                  </efext:EformsExtension>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
@@ -448,7 +453,6 @@
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
-         <cac:TenderSubmissionDeadlinePeriod/>
          <!--Dispatch Invitation Tender (BT-130)-->
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
@@ -469,18 +473,22 @@
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--ERROR: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113)--><!--Framework Duration Justification (BT-109)--></cac:FrameworkAgreement>
+         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
+            <cbc:MaximumOperatorQuantity/>
+            <!--Framework Duration Justification (BT-109)-->
+         </cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
-      <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-         <cbc:ID schemeName="InternalID">TBD: unique ID required here</cbc:ID>
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
          <cbc:Name languageID="ENG">Production and Supply of Branded Promotional Material</cbc:Name>
          <!--Description (BT-24)-->
@@ -515,7 +523,9 @@
          <!--   -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
-            <cbc:Region>anyw</cbc:Region>
+            <cac:Address>
+               <cbc:Region>anyw</cbc:Region>
+            </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
          <!--Duration End Date (BT-537)-->
