@@ -189,6 +189,10 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 pin cn can ccts
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
 		<cac:AwardingCriterion>
+			<!-- WARNING: The content of TED XML element CRITERIA_EVALUATION has been copied to three Award Criterion Description (BT-540), to assist with editing and correction. -->
+			<xsl:variable name="message">WARNING: The content of TED XML element CRITERIA_EVALUATION has been copied to three Award Criterion Description (BT-540), to assist with editing and correction.</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 			<cac:SubordinateAwardingCriterion>
 				<!-- Award Criterion Type (BT-539): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 				<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
