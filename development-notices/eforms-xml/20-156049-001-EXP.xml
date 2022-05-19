@@ -13,7 +13,7 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
@@ -24,7 +24,7 @@
                         <cbc:WebsiteURI>http://www.nfp.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -40,7 +40,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU110</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -65,7 +65,7 @@
                         <cbc:WebsiteURI>http://www.bszta.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -81,7 +81,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU332</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -106,7 +106,7 @@
                         <cbc:WebsiteURI>http://www.devavanya.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -122,7 +122,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU332</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -147,7 +147,7 @@
                         <cbc:WebsiteURI>http://www.mezobereny.hu</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -163,7 +163,7 @@
                            <cbc:CountrySubentityCode listName="nuts">HU332</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -184,7 +184,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -199,7 +199,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>HU</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">HUN</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -252,7 +252,7 @@
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -269,7 +269,7 @@
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -286,7 +286,7 @@
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -303,7 +303,7 @@
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-004</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -348,10 +348,10 @@
       <!--Additional Information (BT-300)-->
       <cbc:Note languageID="HUN">1. AK jelen eljárását a Kbt.53§ (6)bek. alapján indítja meg.A Kbt.135. §(12)bek.-ben foglaltakra is tekintettel,AK felhívja AT figyelmét,hogy támogatásra irányuló igényt(pályázatot;támogatási szerz.-módosítást,változásbejelentést)nyújtott be.AK tájékoztatja AT-t,hogy a támogatásra irányuló igény el nem fogadását vagy az igényeltnél kisebb összegben történő elfogadását vagy amennyiben releváns a Támogatási Szerződés (TSZ)mód-ot vagy vált. bej. el nem fogadását olyan körülménynek tekinti,amelyre az AK a szerződés megkötésére (Kbt. 131. § (9) bek.)vagy teljesítésére képtelenné válása okaként hivatkozhat.AK a Kbt.53.§(6)bek. és a Ptk.6:116. § (1)bek. alapján az eljárást akkor is eredménytelenné nyilváníthatja,ha szerz. pénzügyi fedezetét biztosító TSZ nem kerül megkötésre,vagy a TSZ mód. nem kerül aláírásra vagy a vált. bej. nem kerül elfogadásra.Jelen feltételek a szerz. hatályba lépésének felfüggesztő feltételei. 2. Ajánlattevő (AT), alkalmasság (alk) igazolásában résztvevő szervezet csatolja: Ajánlatot aláírók aláírási címpéldányát,vagy 2006. évi V. tv 9.§ (1) szerinti aláírásmintáját,külföldi illetőségű AT esetén ennek megfeleltethető dokumentumot (ha ilyen dokumentum az adott országban nem ismert,teljes bizonyító erejű magánokiratba v. ügyvéd/közjegyző/kamarai jogtanácsos előtt tett okiratba foglalt aláírásminta) cégkivonatban nem szereplő kötelezettségvállaló(k) esetében cégjegyzésre jogosult személytől származó, ajánlat aláírására vonatkozó (meghatalmazó és meghatalmazott aláírását is tartalmazó) írásos meghatalmazást egyéni vállalkozó és magánszem. esetében ajánlatkérő elfogadja bármely olyan dokumentum egyszerű másolatának csatolását, amely alkalmas a képviseletre való jogosultság igazolására (így például: személyi igazolvány) 3. Ajánlatnak tartalmaznia kell: — Kbt.66.§(6) a) és b) szerinti nyíl.(nemleges tartalommal is) — Kbt.66.§(2)bek. nyil, — Kbt.66.§(5)alapján felolvasólap — szakmai aj-ot a dok. szerint. 4. Az Ért. szempontok szerinti értékelés során adható pontszám alsó-felső határa: 0,00-10,00pont; 0,00pont legrosszabb,10,00 pont legjobb érték. Módszerek: az 1. ért. szempont: a KH 2019.11.26-i útmutatója („Útm.”) 1.m.A.1.aa)pontja szerinti fordított ar. A 2.rszpt.1-4 alszempontok esetében a KH 2019.11.26-i útm.1.sz. mell.A 1.ab) egyenesar.(Részl.AD.I.kötet) (legkedvezőbb: 36 hónap, legkedvezőtlenebb 0 hónap). A 2. részszempont alátámasztására az önéletrajzok csatolása már az ajánlatban szükséges. 5. III.1.2)P.1. valamint III.1.3)M.1.-M.2.pontokban előírt feltételek és ig. módok minősített ajánlattevők jegyzékébe történő felvétel feltételeinél szigorúbbak. 6. Ajánlati biztosíték 10 000 000 HUF. Az AT választása szerint teljesíthető az előírt pénzösszegnek az AK 10032000-00332945-00000024 sz. fizetési számlájára történő befizetésével pénzügyi intézmény vagy biztosító által vállalt garancia vagy készfizető kezesség biztosításával,vagy biztosítási szerz. alapján kiállított – készfizető kezességvállalást tartalmazó – kötelezvénnyel. Igazolása: készpénz átutalással való teljesítése esetén a banki terhelési értesítő, pénzügyi intézmény vagy biztosító által vállalt garanciával/készfizető kezességgel való teljesítés esetén a garancia/kezességvállaló nyilatkozat, biztosítási szerződéssel való teljesítés esetén a kötelezvény. A garancialevél, a kezességvállalásról szóló dok.valamint a kötelezvény tekintetében AK előírja és kiemelten is felhívja a figyelmet az alábbiakra: Az olyan nyilatkozat,amely közvetlenül valamely követelés érvényesítésének alapjául szolgál (különösen garanciavállaló nyilatkozat vagy kezességvállalásról szóló nyilatkozat),elektronikus okiratként feleljen meg a polgári perrendtartásról szóló törvény szerinti teljes bizonyító erejű magánokirat követelményeinek! Az igazolást az ajánlatban csatolni szükséges. 7. Kbt.35.§(8)alapján nem lehetséges gazdálkodó szervezet (projekttársaság)létrehozása. 8. AK alkalmazza a Kbt.75.§ (2) bekezdés e) pontját. Folyt.: AF VI.4.3.)</cbc:Note>
       <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">45200000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -376,6 +376,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="HUN">Az elj-ban nem lehet AT, AV, és nem vehet részt az ALK IG olyan gazd szer, akivel szemben a Kbt. 62. § (1)-(2) bek-ei szerinti kizáró okok bármelyike fennáll. AK a Kbt. 74. § (1) bekezdés b) pontja alapján kizárja az eljárásból azt az AT-t, AV-t, vagy az ALK IG részt vevő szervezetet, aki részéről a Kbt. 62. § (1)-(2) bek meghatározott kizáró ok az eljárás során köv be. A Kr. 1.§ (1) alapján AT-nek (közös AT esetén a közös AT-k képviseletében a nyilatkozatot az ajánlatot benyújtó gazd. szereplő teszi) és a Kbt. 65. § (7) bek szerinti ALK IG szervezetnek/személynek (képviseletében az AT nyújtja be) aj-ában az aj benyújtásakor az EKR által generált egységes európai közbeszerzési dokumentum (EEKD) benyújtásával kell előzetesen igazolnia, hogy nem tartozik az előírt kizáró okok hatálya alá. Az előzetes igazolások során az EEKD-t a Kr. 4. § és 6-7. § alapján kell kitölteni. Kbt. 67.§ (4) szerint AT-nek azon AV tekintetében, amely nem vesz részt az alk ig-ban nyíl-ot kell benyújtani arról, hogy a szerz telj-hez nem vesz igénybe a Kbt. 62. § (1) és(2) bek szerinti kizáró okok hatálya alá eső AV-t (EKR által generált űrlap, közös ajánlattétel esetén külön nyilatkozat közös ajánlattevői tagok által). AK a Kbt. 69.§ (4)-(6) szerint jár el a bírálat során. A Kbt. 69.§ (4)-(6) alapján az ig beny-ra felhívott gazd szer-nek a Kr. 8.,10.,12- 16.§ szerint kell igazolnia, hogy nem tartozik a kizáró okok hatálya alá. AK felhívja a figyelmet a Kr. 1. § (7) bek foglaltakra. AT folyamatban lévő cégbírósági változásbejegyzési eljárás esetén a cégbírósághoz benyújtott változásbejegyzési kérelem és annak érkeztetéséről a cégbíróság által megküldött igazolást és az erről szóló nyilatkozatot csatolja (nemlegesség esetén is nyilatkozatot erről, elektronikus űrlap formájában) A Kr. 1.§ (1) alapján az AT-nek az aj-ában az aj benyújtásakor az EEKD IV. rész alfa pont kitöltésével szükséges előzetesen igazolnia, hogy megfelel a Kbt. 65. §-a alapján az alábbi alk köv-eknek azzal, hogy az alk köv-ekkel kapcsolatos ig benyújtására a Kbt. 69. § (4) bek. szerint kerül sor. SZ.1. A Kbt. 65.§ (1) c) pontja és a 322/2015. (X.30.) K.r. 8.§ (1) alapján AK előírja az építési beruházáshoz kapcsolódó tervezői szolgáltatás tárgya szerint illetékes országos szakmai kamara névjegyzékében szereplés követelményét, illetve a nem MAGYARORSZÁGon letelepedett gazdasági szereplők esetén a letelepedés szerinti ország nyilvántartásában szereplés, vagy a letelepedés szerinti országban előírt engedéllyel, jogosítvánnyal vagy szervezeti, kamarai tagsággal való rendelkezés követelményét. SZ.2. A Kbt. 65.§ (1) c) pontja és a 322/2015. (X.30.) K.r. 21.§ (1) alapján AK előírja az építőipari kivitelezési tevékenységet végző gazdasági szereplők vonatkozásában az Étv. szerinti, építőipari kivitelezési tevékenységet végzők névjegyzékében szereplés követelményét, illetve a nem MAGYARORSZÁGon letelepedett gazdasági szereplők esetén a letelepedés szerinti ország nyilvántartásában szereplés, vagy a letelepedés szerinti országban előírt engedéllyel, jogosítvánnyal vagy szervezeti, kamarai tagsággal való rendelkezés követelményét. A nyilv-ban szereplés tényét AK ellenőrzi, ha a Kbt. 69.§ (11) szerinti nyilv-okban a vonatkozó adatok, tények ingy ellenőrzésére nincsen mód a nyilvántartás kivonatának, a nyilvántartást vezető szerv által kiállított igazolásnak vagy a nyilvántartásban szereplés tényét igazoló dokumentumnak az egyszerű másolatban történő benyújtásával szükséges igazolni, nem MAGYARORSZÁGon (Mo) letelepedett gazdasági szereplő esetén a 2014/24/EU európai parlamenti és tanácsi irányelv XI. mellékletében felsorolt nyilvántartás szerinti igazolást (kivonatot) vagy egyéb igazolást, vagy nyilatkozatot kell igazolásként benyújtani. AK előírja továbbá, hogy a nem Mo-n letelepedett gazdasági szereplőnek nyertessége esetén legkésőbb a szerződés megkötésének időpontjában szerepelnie kell az építési beruházás tárgya szerint illetékes országos szakmai kamara névjegyzékében. Folyt.: III.I.2</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
@@ -383,6 +384,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="HUN">A Kr. 1.§ (1) bek. alapján az ajánlattevőnek az ajánlatában az (EEKD) benyújtásával kell előzetesen igazolnia, hogy megfelel a Kbt. 65. §-a alapján az alábbiakban meghatározott alkalmassági követelményeknek. Ajánlatkérő a Kr. 2. § (5) bekezdése alapján az alkalmassági követelmények előzetes igazolására elfogadja ajánlattevő egyszerű nyilatkozatát az egységes európai közbeszerzési dokumentumban (azaz a IV. rész alfa pont kitöltését). A Kbt. 69.§ (4)-(7) bek. alapján az alkalmassági követelményekre vonatkozó igazolások benyújtására felhívott gazdasági szereplőnek az alábbiak szerint szükséges igazolnia, hogy megfelel az alkalmassági követelményeknek: P.1. A Kbt. 65.§ (1) bek. a) és a Kr. 19.§ (1) bek. c) pontja és a 19. § (5) bek. alapján csatolja a jelen felhívás feladását megelőző utolsó 3, mérlegfordulónappal lezárt üzleti év közbeszerzés tárgyából (viziközmű beruházás kivitelezési és tervezési munkái és/vagy viziközmű beruházás kivitelezési munkái) származó - általános forgalmi adó nélkül számított - árbevételéről szóló nyilatkozatát, attól függően, hogy az ajánlattevő mikor jött létre, ill. mikor kezdte meg tevékenységét, ha ezek az adatok rendelkezésre állnak. Ha az ajánlattevő nem rendelkezik a jelen felhívás feladását közvetlenül megelőző 3 - mérlegfordulónappal lezárt - üzleti év árbevételi adataival, úgy a tevékenysége megkezdése óta eltelt időszak közbeszerzés tárgya szerinti nettó árbevételének kell megfelelnie az előírt minimumkövetelménynek. Ajánlatkérő felhívja a figyelmet a Kr. 19. § (3), valamint a (7) bekezdései szerinti esetre az igazolással kapcsolatban. Az alkalmasság igazolására a Kbt. 69. § (11)-(11a) bekezdése is irányadó.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
@@ -390,6 +392,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="HUN">Alkalmatlan az ajánlattevő, amennyiben P.1. jelen felhívás feladását megelőző utolsó három, mérlegfordulónappal lezárt üzleti év alapján a közbeszerzés tárgyából (viziközmű beruházás kivitelezési és tervezési munkái és/vagy viziközmű beruházás kivitelezési munkái) származó - általános forgalmi adó nélkül számított - árbevétele összesen nem érte el legalább a 3,5 milliárd HUF összeget. A Kbt. 65.§ (6) alapján az előírt alkalmassági követelményeknek a közös ajánlattevők együttesen is megfelelhetnek (P.1. pont szerinti árbevételre vonatkozó adatok összeadódnak). Az alkalmasság igazolására a Kbt. 65.§ (7)-(8), (11) és a Kbt. 69.§ (11) bekezdései., továbbá a Kr. 19. § (7)bekezdése is irányadó. AF.III.1.1. pont folytatása: Az alkalmasság minimumkövetelménye(i) SZ1.SZ2. alkalmassági feltétel tekintetében: SZ.1. Alkalmatlan az AT, ha az építési beruházáshoz kapcsolódó tervezői szolgáltatás tárgya szerint illetékes országos szakmai kamara névjegyzékében nem szerepel, ill. a nem Magyarországon letelepedett AT esetén a letelepedés szerinti ország nyilvántartásában nem szerepel, vagy a letelepedés szerinti országban előírt engedéllyel, jogosítvánnyal vagy szervezeti, kamarai tagsággal nem rendelkezik. SZ.2. Alkalmatlan az AT, ha az ajánlata alapján építőipari kivitelezési tevékenységet végző gazdasági szereplők az Étv. szerinti, építőipari kivitelezési tevékenységet végzők névjegyzékében nem szerepelnek, ill. a nem Magyarországon letelepedett gazdasági szereplők a letelepedés szerinti ország nyilvántartásában nem szerepelnek, vagy a letelepedés szerinti országban előírt engedéllyel, jogosítvánnyal vagy szervezeti, kamarai tagsággal nem rendelkeznek. Az ALK IG-ra a Kbt. 65.§ (7),(9), (11) és a Kbt. 69.§ (11)-(11a) bek is irányadók.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
@@ -397,6 +400,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="HUN">A Kr. 1.§ (1) alapján az AT-nek az aj-ban (EEKD) beny-val kell el ig-nia, hogy megfelel a Kbt. 65.§-a alapján az alábbiakban meghatározott alk köv-eknek. AK a Kr. 2. § (5) bek. alapján az alk köv-ek előzetes igazolására elfogadja AT egyszerű nyilatkozatát az EEKD-ban (azaz a IV. rész alfa pont kitöltését). A Kbt. 69.§ (4)-(7) bek. alapján az alk.ai köv-re vonatkozó igazolások benyújtására felhívott GSZnek az alábbiak szerint szükséges igazolnia, hogy megfelel az alk. kövk-nek: M.1. A Kbt. 65.§ (1) b) és a Kr. 21.§ (2) a) pontok alapján a felhívás feladását megelőző 60 hónap, legjelentősebb építési beruházásainak ismertetése, azaz a szerződést kötő másik fél által kiállított igazolás csatolása. A Kr. 21. § (2a) bekezdés alapján: AK az AF feladását megelőző 5 évben (60 hónap) befejezett, de legfeljebb 8 éven (96 hónap) belül megkezdett építési beruházásokat veszi figyelembe. Az igazolás tartalmazza legalább a következő adatokat: — a referencia (építési vagy építési és tervezési beruházás) tárgyát, mennyiségét (az elvégzett munka rövid ismertetését oly módon, hogy abból az alk. köv-nek k való megfelelés egyértelműen megállapítható legyen), — a teljesítés idejét (kezdő és befejező időpontját és a műszaki átadás-átvétel lezárásának időpontját, min. év/hónap/nap bontásban), — a teljesítés helyét, — a szerződést kötő másik fél megnevezését (nevét és székhelyét), — továbbá nyilatkozni kell arról, hogy a teljesítés az előírásoknak és a szerződésnek megfelelően történt-e. A referenciákból az előírt alk. köv-nek való megfelelésnek is egyértelműen ki kell derülniük. Közös AT teljesítés esetén, a referencia-igazolásból egyértelműen ki kell derülnie, az AT által végzett munkáknak (saját teljesítésnek), figyelemmel arra, hogy AK a bírálat során kizárólag AT által elvégzett munkákat veszi figyelembe az alk.köv.-nek való megf.-és vizsgálata során. A teljesítés oszthatatlansága esetén- a Kr. 22.§ (5)bek szerinti adatok megadása szükséges.. Amennyiben egy szervezet referenciaként olyan korábbi tevékenységet kíván bemutatni, amelyet projekttársaság tagjaként teljesített, abban az esetben a Kbt. 140.§ (9) bekszerint kell igazolnia az alk. feltételnek való megfelelést. Ha AT az eljárásban a jogelődjének referenciáival kívánja alk-át igazolni, csatolja ajánlatához az átalakulásra, jogutódlásának, valamint a tevékenység folytatásának igazolására vonatkozó okiratokat is. Befejezettnek minősül a referencia, ha a tárgyát képező beruházás sikeres (rész)műszaki átadás-átvételére jelen AF feladását megelőző 60 hónapban került sor. AK e körben felhívja a figyelmet a Kr. 21. § (2a) bek. a) pontjára valamint a Kr. 21/A.§-ra M.2. A Kbt. 65.§ (1) b) és a Kr. 21.§ (2) b) pontok alapján cégszerű nyilatkozat csatolása azoknak a szakembereknek (szervezeteknek) a megnevezésével, végzettségük, vagy képzettségük, szakmai tapasztalatuk ismertetésével, akiket az AT be kíván vonni a teljesítésbe. A bemutatott szakember(ek)nek csatolni(uk)a kell: — saját kezűleg aláírt szakmai önéletrajzot, amelyből a szakember végzettsége, előírt szakmai tapasztalat megléte, az ajánlat benyújtásakori munkáltatója minden kétséget kizáróan megállapítható. A szakmai gyakorlat időtartamát min. év, hónap pontossággal szükséges megadni, az időben párhuzamos gyakorlati idők csak egyszer számítanak bele a szakember szakmai gyakorlati idejébe, — végzettséget igazoló dokumentum egyszerű másolata — az adott szakember nyilatkozatát, hogy a teljesítés időtartama alatt rendelkezésre fog állni és AT nyertessége esetén a benyújtott ajánlatban megjelölt pozíciónak megfelelő aktív kamarai jogosultsággal a szerződéskötés időpontjától a szerződés teljesítésének teljes időtartama alatt rendelkezni fog. Ha az M.2.1)-M.2.4) pontokra megaj. szake.a az előírt jogosultfsággal rendelkezik, úgy a jogosultság megszerzéséhez szükséges végzettség és gyakorlat igazolására egyéb dok. csatolása nem szükséges, azokat az érv. jogosultság igazolja, a szakember szakmai önéletrajza ez esetben is csatolandó. Részletesen: KD</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
@@ -404,6 +408,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="HUN">M.1. Alkalmatlan az AT, ha nem rendelkezik a felhívás feladásának napjától visszafelé számított 5 évben (60 hónapban) az előírásoknak és a szerződésnek megfelelően teljesített, sikeres műszaki átadás-átvétellel lezárt, alábbi referenciamunká(kk)val: M/1.1. legalább 1 db szennyvízcsatorna-hálózat építésére és/vagy bővítésére és/vagy felújítására vonatkozó referencia, ami tartalmazott: — legalább 1300 fm hosszúságú és min.DN110 csőátmérőjű gravitációs vezeték Építést és/vagy bővítést és/vagy felújítást. A referencia szempontjából a „D” és „DN” jelű vezetékek egyenértékűnek tekinthetők. M/1.2. 1 db szennyvíztisztító telep építését és/vagy technológiai fejlesztését és/vagy bővítését és/vagy felújítását tartalmazó referencia, melynek során: – a szennyvíztisztító telep biológiai kapacitása elérte a 8100 LE értéket – a referencia tartalmazta legalább a biológiai műtárgysor és/vagy biológiai gépészet korszerűsítését, – a szerződés részét képezte a vízjogi létesítési engedélyezési tervdokumentáció és a kiviteli tervek elkészítése is. Az M/1.1. pontban foglalt minimumkövetelményeket legfeljebb 1 db referenciából lehet teljesíteni. Az M/1.2. pontban foglalt minimumkövetelményeket 1 db referenciából kell teljesíteni. Az M/1.1. és M/1.2. pontban foglalt minimumkövetelményeket 1 db referenciából is lehet teljesíteni. M.2. Alkalmatlan az AT, ha nem rendelkezik az alábbi szakemberek mindegyikével: M.2.1) 1 fő szakember, aki rendelkezik a 266/2013 (VII.1.) Korm. rendelet 1. melléklet szerinti MV-VZ jogosultsággal vagy a jogosultság megszerzéséhez szükséges végzettséggel és szakmai gyakorlati idővel. M.2.2) 1 fő szakember, aki rendelkezik a 266/2013 (VII.1.) Korm. rendelet 1. melléklet szerinti MV-ÉG jogosultsággal vagy a jogosultság megszerzéséhez szükséges végzettséggel és szakmai gyakorlati idővel. M.2.3) 1 fő szakember, aki rendelkezik a 266/2013 (VII.1.) Korm. rendelet 1. melléklet szerinti VZ-TEL jogosultsággal vagy a jogosultság megszerzéséhez szükséges végzettséggel és szakmai gyakorlati idővel. M.2.4) 1 fő szakember, aki rendelkezik a 266/2013. (VII.1.) Korm. rendelet 1. melléklet szerinti MV-ÉV jogosultsággal vagy a jogosultság megszerzéséhez szükséges végzettséggel és szakmai gyakorlati idővel. Ajánlatkérő elfogadja a fenti jogosultságok megszerzéséhez szükséges szakképzettséggel egyenértékű szakképzettséget is, mely egyenértékűséget az Ajánlattevőnek igazolnia kell. Egy szakember legfeljebb két pozícióra mutatható be.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
@@ -414,7 +419,7 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
@@ -423,8 +428,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -456,7 +459,7 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
@@ -473,7 +476,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -570,16 +573,20 @@
                   </ext:UBLExtensions>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
+            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://ekr.gov.hu/portal/kozbeszerzes/eljarasok/EKR000316682020/reszletek</cbc:EndpointID>
             <cac:PartyIdentification>
-               <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
             </cac:PartyIdentification>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
@@ -587,21 +594,27 @@
             <cbc:DurationMeasure unitCode="MONTH">2</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="HUN">148. § előírásai szerint 9. AK a Kbt. 71. § (6) bek szerinti korlátozást nem alkalmazza. 10. AK a Kbt. 81.§ (5) bek.-t alkalmazza. 11. Aj-ban csatolni kell a nem magyar nyelvű dokumentum magyar fordítását. AK a nem magyar nyelven benyújtott dok AT általi felelős fordítását is elfogadja. 12. A 339/2014. (XII. 19.) KR-ben szerint az NFP más AK nevében folytatja le a közbeszerzési eljárást a közöttük fennálló konzorciumi megállapodás alapján (Kbt. 29. § (1) bek.). Az AF I.1. pontjában AK-ként kizárólag a hirdetményfeladás technikai okból került megjelölésre az 1. szervezet, jelen eljárás ajánlatkérője az AF I.1) pontjában megjelölt szervezet(ek). 13. Közös aj.tétel esetén csatolni kell közös ajtevők által cégszerűen aláírt közös AT megállapodást. 14. A nyertes AT a közbeszerzési dok.okban részletesen meghatározott feltételeknek megfelelő min. 1 000 000 000 Ft/év és min. 300 000 000 Ft/káreseményenkénti mértékű teljes körű építés-szerelési biztosítással (CAR)valamint min.200 000 000 Ft/év és min.100 000 000 Ft/káreseményenkénti mértékű tervezési felelősségbiztosítással kell rendelkeznie, amelyről szóló kötvényt szerz.kötéskor be kell nyújtania. AT csatolja nyilatkozatát az aj-ban, hogy az előírt felelősségbiztosítással nyertesség esetén rendelkezni fog. 15. AT nyertessége esetén III.1.3) M2 pont M.2.1-M.2.4 alpontok szerinti szakembereknek szerz.kötésre rendelkezni kell a megjelölt érvényes kamarai jog-gal és aktív státusszal. ATnek a beadott aj-ban nyilatkoznia kell, hogy nyertessége esetén a felhívás III.1.3) M.2 pont M.2.1-M.2.4 alpontokra bemutatott szakemberei a szükséges jogokkal és aktív kamarai státusszal rendelkezni fognak a szerz.kötéskor a szerz. teljesítésének teljes időtartamára. 16. A KD-ok a Kbt. 39.§ (1) bek. szerint a regisztrálási adatok megadását követően korlátlanul és teljeskörűen, közvetlenül és díjmentesen elektronikusan elérhetőek a felhívás I.3) pontjában meghatározott címen. 17. A felhívás IV.2.6)pontjában meghatározott ajánlati kötöttség időpontja alatt AK 60 naptári napos ajánlati kötöttséget ért; 18. Kieg.táj. a Kbt. 56. § -ban foglaltak szerint. AK konzultációt, helyszíni bejárást nem tart. 19. Ajánlatkérő a részajánlattétel lehetőségét a közbeszerzés tárgyának és jellegének megfelelően megvizsgálta, és akként határozott, hogy a beszerzési igény, a beszerzés tárgyának jellege (tervezés és kivitelezés) és a szerződéshez kapcsolódó további körülmények, így a versenysemlegesség követelménye, valamint a beruházás mérete, jellege és a támogatásból megvalósuló volta miatt a költséghatékonyság szempontja, továbbá a tervező és a kivitelező közötti esetleges jogviták elkerülése nem teszik lehetővé a közbeszerzés egy részére történő ajánlattételt. Folytatás és részletes kifejetés a KD-ban. 20. Többváltozatú ajánlat: Ajánlatkérő nem enged többváltozatú (alternatív) ajánlattételt. 21. A szerződés teljesítése során szükséges az MSZ EN ISO 14001:2004 rendszerszabvány szerinti környezetirányítási rendszer tanúsítvány alkalmazása vagy az Európai Unió más tagállamából származó a fentiekkel egyenértékű tanúsítvány, illetve az egyenértékű környezetirányítási intézkedések egyéb bizonyítékainak alkalmazása. A nyertes AT a szerződéskötés időpontjában köteles bemutatni a tárgyi tevékenységre vonatkozó hatályos tanúsítványát, illetve az egyenértékű környezetirányítási intézkedések egyéb bizonyítékait. AT csatolja ajánlatában nyilatkozatát, hogy a szerződéskötés időpontjára rendelkezni fog az előírt tanúsítvánnyal, illetve egyenértékű környezetirányítási intézkedések egyéb bizonyítékaival. 22. A Kbt. 104. § (7) bekezdése alapján az ajánlatkérő felhívja a figyelmet, hogy a beszerzését nem a keretmegállapodása alapján kívánja megvalósítani. 23. Ajánlatkérő rögzíti, hogy a felhívás II.2.7) pontjában meghatározott teljesítési határidő alatt 1095 naptári napot ért. 24. AK felhívja a figyelmet a 321/2015 (X.30.) Kr. (a továbbiakban: Kr.) 46. § (3) bek.- ben foglaltakra.</cbc:Description>
             </cac:PresentationPeriod>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealInformationParty>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-005</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>HUN</cbc:ID>
@@ -710,10 +723,52 @@
          <cbc:Note languageID="HUN">AK a részajánlattétel lehetőségét a beszerzés tárgyának és jellegének megfelelően megvizsgálta, és a További információkban és a KD-ban szereplőkre figyelemmel nem biztosítja a részajánlattétel lehetőségét. FAKSZ: Stumpf Gábor (00063) AK jelzi, hogy a II.2.5) pont 2.1. szerinti szakmai „tap."rövidítés alatt szakmai tapasztalatot ért.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">39350000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">45200000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">39350000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45231300</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232400</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232410</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232411</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232420</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45232423</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45233223</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45233228</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45252100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45252127</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">45252130</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71322000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -721,7 +776,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--HU332 5 HU332 -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

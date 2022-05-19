@@ -13,7 +13,7 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>20</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">20</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
@@ -22,7 +22,7 @@
                         <cbc:WebsiteURI>http://www.donegalcoco.ie</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -37,7 +37,7 @@
                            <cbc:CountrySubentityCode listName="nuts">IE</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">IRL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -59,7 +59,7 @@
                         <cbc:WebsiteURI>www.donegalcoco.ie</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -75,7 +75,7 @@
                            <cbc:CountrySubentityCode listName="nuts">IE</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">IRL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -92,7 +92,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -106,7 +106,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>IE</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">IRL</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -154,20 +154,21 @@
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>ra</cbc:PartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
+      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -215,10 +216,10 @@
       <cac:RequestedTenderTotal>
          <cbc:EstimatedOverallContractAmount currencyID="EUR">6000433.00</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">71220000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -236,7 +237,20 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">See tender documentation.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
                </ext:ExtensionContent>
             </ext:UBLExtension>
          </ext:UBLExtensions>
@@ -248,8 +262,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -281,32 +293,39 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
-         </cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--*** end of cac:AwardingCriterion ***--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cac:PartyIdentification>
-               <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+               <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
             </cac:PartyIdentification>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-003</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -386,10 +405,97 @@
             <cbc:EstimatedOverallContractAmount currencyID="EUR">6000433.00</cbc:EstimatedOverallContractAmount>
          </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">71220000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71200000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71221000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71222000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71240000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71241000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71242000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71243000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71244000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71245000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71246000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71247000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71248000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71250000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71251000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71300000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71310000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71322000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71322100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71322300</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71400000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71410000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71420000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71421000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71500000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71530000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71540000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71541000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -397,7 +503,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--   -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

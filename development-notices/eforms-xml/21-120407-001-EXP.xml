@@ -13,7 +13,7 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
@@ -22,7 +22,7 @@
                         <cbc:WebsiteURI>https://permalink.mercell.com/149974429.aspx</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -35,9 +35,10 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>5013</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">NO</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">NOR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -57,7 +58,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -72,7 +73,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">NOR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -117,20 +118,21 @@
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>ra</cbc:PartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
+      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode>GENERAL_PUBLIC_SERVICES</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -174,10 +176,10 @@
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -202,6 +204,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="ENG">Registered in a trade register or company register. Documentation requirement: Tenderers must be registered in a company register or a trade register in the country where the tenderer is established. As described in annex XI of directive 2014/24/EU; suppliers from certain member countries can be required to fulfil other requirements in the mentioned annex.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
@@ -209,6 +212,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="ENG">Only for services: during the reference period, the tenderer has carried out the following important goods deliveries of the requested type, or the following important services of the requested type. The contracting authority can require up to 3 years experience and can take experience from the period before the last 3 years into consideration. Education and professional qualifications The following education and professional qualifications are held by the tenderer and/or (depending on the requirements given in the notice or in the procurement documents) by the senior executives.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
@@ -219,7 +223,7 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
@@ -228,8 +232,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -261,7 +263,7 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
@@ -274,17 +276,21 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
+            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://permalink.mercell.com/149974429.aspx</cbc:EndpointID>
@@ -294,13 +300,19 @@
             <cbc:DurationMeasure unitCode="DAY">91</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>NOR</cbc:ID>
@@ -404,10 +416,19 @@
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">71240000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71240000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71400000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71410000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -415,11 +436,10 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--   -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:Region>anyw</cbc:Region>
+               <cbc:CountrySubentityCode listName="nuts">NO0A2</cbc:CountrySubentityCode>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->

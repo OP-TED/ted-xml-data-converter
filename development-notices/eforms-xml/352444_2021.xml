@@ -13,7 +13,7 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
@@ -22,7 +22,7 @@
                         <cbc:WebsiteURI>https://www.fnmotol.cz</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -35,9 +35,10 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>150 06</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">CZ01</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>CZ</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">CZE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -58,7 +59,7 @@
                         <cbc:WebsiteURI>https://www.uohs.cz/</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -73,7 +74,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>CZ</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">CZE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -126,11 +127,11 @@
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode>HEALTH</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -177,10 +178,10 @@
       <cac:RequestedTenderTotal>
          <cbc:EstimatedOverallContractAmount currencyID="CZK">60730111.73</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -205,6 +206,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="CES">— dle § 77 odst. 1 ZZVZ výpisu z obchodního rejstříku, či výpisem z jiné obdobné evidence, pokud jiný právní předpis zápis do takové evidence požaduje; — dle § 77 odst. 2 písm. a) ZZVZ dokladu o oprávnění podnikat v rozsahu odpovídajícím předmětu veřejné zakázky, pokud jiné právní předpisy takové oprávnění vyžadují, zejména montáž, opravy a rekonstrukce chladícího zařízení a tepelných čerpadel; — dle § 77 odst. 2 písm. c) ZZVZ dokladu, že je odborně způsobilý nebo disponuje osobou, jejímž prostřednictvím odbornou způsobilost zabezpečuje, je-li pro plnění veřejné zakázky odborná způsobilost jinými právními předpisy vyžadována, zejména nařízením Evropského parlamentu a Rady (ES) 517/2014 o fluorovaných skleníkových plynech.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
@@ -215,7 +217,7 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
@@ -224,8 +226,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -257,7 +257,7 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
@@ -270,11 +270,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
-         </cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--*** end of cac:AwardingCriterion ***--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>www.egordion.cz/nabidkaGORDION/profilFnm</cbc:EndpointID>
@@ -284,21 +285,27 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="CES">Podmínkou pro podání návrhu k ÚOHS je podání námitek k Zadavateli, které je nutné doručit do 15 dnů ode dne, kdy se stěžovatel dozvěděl o domnělém porušení zákona Zadavatelem, nejpozději však do uzavření smlouvy nebo do chvíle, kdy se soutěž o návrh považuje po výběru návrhu za ukončenou. Námitky proti úkonům oznamovaným v dokumentech, které je Zadavatel povinen podle zákona uveřejnit či odeslat stěžovateli, musí být doručeny Zadavateli do 15 dnů od jejich uveřejnění či doručení stěžovateli. Pokud je v zadávacím řízení stanovena lhůta pro podání žádostí o účast, musí být námitky proti podmínkám vztahujícím se ke kvalifikaci dodavatele doručeny Zadavateli nejpozději do skončení této lhůty. Pokud je v zadávacím řízení stanovena lhůta pro podání nabídek, musí být námitky proti zadávací dokumentaci doručeny Zadavateli nejpozději do skončení této lhůty, v případě jednacího řízení s uveřejněním musí být námitky proti zadávací dokumentaci doručeny Zadavateli nejpozději do skončení lhůty pro podání předběžných nabídek. Námitky proti dobrovolnému oznámení o záměru uzavřít smlouvu podle § 212 odst. 2 zákona musí být doručeny Zadavateli do 30 dnů od uveřejnění tohoto oznámení. Zadavatel je povinen námitky vyřídit do 15 dnů. Návrh je nutné doručit ÚOHS i Zadavateli do 10 dnů ode dne, v němž stěžovatel obdržel rozhodnutí, kterým Zadavatel námitky odmítl nebo do 25 dnů od odeslání námitek, pokud Zadavatel o námitkách nerozhodl. Po uzavření smlouvy na veřejnou zakázku či rámcové dohody lze podat pouze návrh na uložení zákazu plnění smlouvy, a to i bez předchozího podání námitek. Návrh na uložení zákazu plnění smlouvy doručí navrhovatel ÚOHS a ve stejnopisu Zadavateli do 1 měsíce ode dne, kdy Zadavatel uveřejnil oznámení o uzavření smlouvy způsobem podle § 212 odst. 2 zákona s uvedením důvodu pro zadání veřejné zakázky bez uveřejnění oznámení o zahájení zadávacího řízení, předběžného oznámení nebo výzvy k podání nabídek ve zjednodušeném podlimitním řízení, nejpozději však do 6 měsíců od uzavření této smlouvy. Návrh na uložení zákazu plnění smlouvy podle § 254 odstavce 1 písm. d) zákona doručí navrhovatel ÚOHS a ve stejnopisu Zadavateli do 1 měsíce ode dne, kdy Zadavatel uveřejnil oznámení o uzavření smlouvy na základě rámcové dohody podle § 137 zákona nebo oznámení o uzavření smlouvy v dynamickém nákupním systému podle § 142 zákona, nejpozději však do 6 měsíců od uzavření této smlouvy. Ve lhůtě pro doručení návrhu je navrhovatel povinen složit na účet ÚOHS kauci ve výši 1 % z nabídkové ceny navrhovatele za celou dobu plnění veřejné zakázky nebo za dobu prvních čtyř let plnění v případě smluv na dobu neurčitou, nejméně však ve výši 50 000 českých korun (CZK), nejvýše ve výši 10 000 000 CZK. V případě, že navrhovatel nemůže stanovit celkovou nabídkovou cenu, je povinen složit kauci ve výši 100 000 CZK. V případě návrhu na uložení zákazu plnění smlouvy je navrhovatel povinen složit kauci ve výši 200 000 CZK. Jde-li o řízení o přezkoumání postupu pro zadávání koncesí, je navrhovatel povinen ve lhůtě pro doručení návrhu složit na účet ÚOHS kauci ve výši 1 % z předpokládané hodnoty koncese uveřejněné ve Věstníku veřejných zakázek nebo na profilu Zadavatele, nejméně však ve výši 50 000 CZK, nejvýše ve výši 10 000 000 CZK. V případě, že Zadavatel neuveřejní ve Věstníku veřejných zakázek nebo na profilu Zadavatele předpokládanou hodnotu koncese, je navrhovatel povinen složit kauci ve výši 100 000 CZK. V případě návrhu na uložení zákazu plnění koncesní smlouvy je navrhovatel povinen složit kauci ve výši 200 000 CZK.</cbc:Description>
             </cac:PresentationPeriod>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealInformationParty>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>CES</cbc:ID>
@@ -405,10 +412,13 @@
             <cbc:EstimatedOverallContractAmount currencyID="CZK">60730111.73</cbc:EstimatedOverallContractAmount>
          </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">42500000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">42500000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -416,7 +426,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--   -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

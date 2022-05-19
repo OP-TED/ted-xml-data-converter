@@ -1,23 +1,14 @@
-# TED XML Data Converter 0.2.0 Release Notes
-Below is a list of the major updates made to the Converter repository in this release. There was no substantial change to the XSLT code.
+# TED XML Data Converter 0.3.0 Release Notes
+Below is a list of the updates made to the Converter repository in this release. 
 
-## Folder names changed
-The four root folders were renamed to more clearly reflect their contents and purposes.
+## Contract Notices
+Templates have been added to convert elements in TED XML Contract Notice forms F05, F12, F21, F22, F23, F24
 
-## Removal of unnecessary files
-A number of files that were used during initial development, but are now no longer required, were removed.
+## Bug fixes and minor changes
 
-## File names changed
-The names of the Markdown files were changed to "kebab-case", to improve readability.
-
-## Markdown documentation
-The documentation in the various Markdown files was re-written to improve understanding of the different topics.
-A README.md file was added to every main folder to describe the contents of the folder.
-
-## Converted development test files
-The test notices in folder development-notices/ted-xml were all converted using this version of the converter, updating the output files in folder development-notices/eforms-files.
-
-## XSLT template location
-Some XSLT templates used in more than one location were moved into a new XSLT file, common.xslt. 
-
-
+* Missing listName attributes have been added, and some listName attribute values have been corrected.
+* Additional CPV codes are now included
+* TED XML element ADDRESS_FURTHER_INFO_IDEM included in conversion
+* NUTS2021 codes are now included
+* Country codes are now converted from 2-letter codes in TED XML to 3-letter codes from "Countries" codelist in eForms XML
+* Namespace declarations are now harmonised across all XSLT files

@@ -13,7 +13,7 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode>16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations here -->
                <efac:Organizations>
@@ -22,7 +22,7 @@
                         <cbc:WebsiteURI>https://livvhousinggroup.com/</cbc:WebsiteURI>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -38,7 +38,7 @@
                            <cbc:CountrySubentityCode listName="nuts">UKD</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -54,7 +54,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -67,7 +67,7 @@
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode>UK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -112,20 +112,21 @@
       <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>body-pl</cbc:PartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
+      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
-         <cbc:PartyType>buyer-contracting-type</cbc:PartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode>HOUSING_AND_COMMUNITY_AMENITIES</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-001</cbc:ID>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -172,10 +173,10 @@
       <cac:RequestedTenderTotal>
          <cbc:EstimatedOverallContractAmount currencyID="GBP">1200000</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
+      <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
          <cbc:ItemClassificationCode listName="cpv">79711000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
-      <!--Main Classification Code (BT-262)-->
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
       <!--Place Performance City (BT-5131)-->
@@ -200,6 +201,7 @@
                         <!--Selection Criteria Description (BT-750)-->
                         <cbc:Description languageID="ENG">(a) conspiracy within the meaning of section 1 or 1A of the Criminal Law Act 1977(a) or article 9 or 9A of the Criminal Attempts and Conspiracy (Northern Ireland) Order 1983(b) where that conspiracy relates to participation in a criminal organisation as defined in Article 2 of Council Framework Decision 2008/841/JHA on the fight against organised crime(c); (b) corruption within the meaning of section 1(2) of the Public Bodies Corrupt Practices Act 1889(d) or section 1 of the Prevention of Corruption Act 1906(e); (c) the common law offence of bribery; (d) bribery within the meaning of sections 1, 2 or 6 of the Bribery Act 2010(f) or section 113 of the Representation of the People Act 1983(g); (e) where the offence relates to fraud affecting the European Communities’ financial interests as defined by Article 1 of the Convention on the protection of the financial interests of the European Communities(h): (i) the common law offence of cheating the revenue, (ii) the common law offence of conspiracy to defraud, (iii) fraud or theft within the meaning of the Theft Act 1968(i), the Theft Act (Northern Ireland) 1969(j), the Theft Act 1978(k) or the Theft (Northern Ireland) Order 1978(l), (iv) fraudulent trading within the meaning of section 458 of the Companies Act 1985(m), article 451 of the Companies (Northern Ireland) Order 1986(n) or section 993 of the Companies Act 2006(o), (v) fraudulent evasion within the meaning of section 170 of the Customs and Excise Management Act 1979(p) or section 72 of the Value Added Tax Act 1994(q), (vi) an offence in connection with taxation in the European Union within the meaning of section 71 of the Criminal Justice Act 1993(r), (vii) destroying, defacing or concealing of documents or procuring the execution of a valuable security within the meaning of section 20 of the Theft Act 1968(s) or section 19 of the Theft Act (Northern Ireland) 1969(t), (viii) fraud within the meaning of section 2, 3 or 4 of the Fraud Act 2006(u), or (ix) the possession of articles for use in frauds within the meaning of section 6 of the Fraud Act 2006 or the making, adapting, supplying or offering to supply articles for use in frauds within the meaning of section 7 of that Act; (f) any offence listed: (i) in section 41 of the Counter Terrorism Act 2008(a), or (ii) in Schedule 2 to that Act where the court has determined that there is a terrorist connection; (g) any offence under sections 44 to 46 of the Serious Crime Act 2007(b) which relates to an offence covered by subparagraph (f); (h) money laundering within the meaning of sections 340(11) and 415 of the Proceeds of Crime Act 2002(c); (i) an offence in connection with the proceeds of criminal conduct within the meaning of section 93A, 93B or 93C of the Criminal Justice Act 1988(d) or article 45, 46 or 47 of the Proceeds of Crime (Northern Ireland) Order 1996(e); (j) an offence under section 4 of the Asylum and Immigration (Treatment of Claimants, etc.) Act 2004(f); (k) an offence under section 59A of the Sexual Offences Act 2003(g); (l) an offence under section 71 of the Coroners and Justice Act 2009(h); (m) an offence in connection with the proceeds of drug trafficking within the meaning of section 49, 50 or 51 of the Drug Trafficking Act 1994(i); or (n) any other offence within the meaning of Article 57(1) of the Public Contracts Directive: (i) as defined by the law of any jurisdiction outside England and Wales and Northern Ireland, or (ii) created, after the day on which these Regulations were made, in the law of England and Wales or Northern Ireland.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
@@ -210,7 +212,7 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not allowed</cbc:VariantConstraintCode>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
@@ -220,8 +222,6 @@
          <cbc:RecurringProcurementDescription languageID="ENG">72 months depending upon the ongoing needs of Livv Housing Group.</cbc:RecurringProcurementDescription>
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -253,7 +253,7 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">false</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
@@ -266,7 +266,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -299,11 +299,15 @@
                   </ext:UBLExtensions>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
+            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
-            <cac:TechnicalCommitteePerson>
-               <cbc:FamilyName/>
-            </cac:TechnicalCommitteePerson>
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
             <cbc:EndpointID>https://procontract.due-north.com/Advert/Index?advertId=a4368af9-4e85-ea11-80ff-005056b64545</cbc:EndpointID>
@@ -313,16 +317,22 @@
             <cbc:DurationMeasure unitCode="MONTH">4</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
+         <!--*** start of cac:AppealTerms ***-->
+         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
+         <!--cac:AppealInformationParty: Review Information Providing Organization-->
+         <!--cac:AppealReceiverParty: Review organization-->
+         <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="ENG">This tender process will incorporate a minimum 10 calendar days standstill period at the point information on the award is communicated to bidders. Appeals can be directly raised via the contact points detailed in section VI.4.1) of this contract notice. The Public Contracts Regulations 2015 #102 provide for aggrieved parties who have been harmed or are at risk of harm by a breach of the rules to take action in the High Court (England,Wales and Northern Ireland).</cbc:Description>
             </cac:PresentationPeriod>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-002</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
+         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -431,10 +441,16 @@
             <cbc:EstimatedOverallContractAmount currencyID="GBP">1200000</cbc:EstimatedOverallContractAmount>
          </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
-         <!--Additional Classification Code (BT-263)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">35120000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">79711000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">35120000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">44212329</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -442,7 +458,6 @@
          <!--Place Performance Services Other (BT-727)-->
          <!--Place Performance Street (BT-5101)-->
          <!--Place Performance Country Code (BT-5141)-->
-         <!--   -->
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>

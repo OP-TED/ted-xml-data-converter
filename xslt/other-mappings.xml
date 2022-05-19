@@ -62,6 +62,120 @@
 	</mapping>
 </ca-types>
 
+<authority-activity-types>
+	<description>Mapping for Activity Authority (BT-10)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/CONTRACTING_BODY/CA_ACTIVITY/@VALUE</ted-context>
+	<eforms-context>/*/cac:ContractingParty/cac:ContractingActivity/cbc:ActivityTypeCode[@listName="authority-activity"]</eforms-context>
+	<eforms-codelist>authority-activity</eforms-codelist>
+	<mapping>
+		<ted-value>DEFENCE</ted-value>
+		<eforms-value>defence</eforms-value>
+		<label>Defence</label>
+	</mapping>
+	<mapping>
+		<ted-value>ECONOMIC_AND_FINANCIAL_AFFAIRS</ted-value>
+		<eforms-value>econ-aff</eforms-value>
+		<label>Economic affairs</label>
+	</mapping>
+	<mapping>
+		<ted-value>EDUCATION</ted-value>
+		<eforms-value>education</eforms-value>
+		<label>Education</label>
+	</mapping>
+	<mapping>
+		<ted-value>ENVIRONMENT</ted-value>
+		<eforms-value>env-pro</eforms-value>
+		<label>Environmental protection</label>
+	</mapping>
+	<mapping>
+		<ted-value>GENERAL_PUBLIC_SERVICES</ted-value>
+		<eforms-value>gen-pub</eforms-value>
+		<label>General public services</label>
+	</mapping>
+	<mapping>
+		<ted-value>HEALTH</ted-value>
+		<eforms-value>health</eforms-value>
+		<label>Health</label>
+	</mapping>
+	<mapping>
+		<ted-value>HOUSING_AND_COMMUNITY_AMENITIES</ted-value>
+		<eforms-value>hc-am</eforms-value>
+		<label>Housing and community amenities</label>
+	</mapping>
+	<mapping>
+		<ted-value>PUBLIC_ORDER_AND_SAFETY</ted-value>
+		<eforms-value>pub-os</eforms-value>
+		<label>Public order and safety</label>
+	</mapping>
+	<mapping>
+		<ted-value>RECREATION_CULTURE_AND_RELIGION</ted-value>
+		<eforms-value>rcr</eforms-value>
+		<label>Recreation, culture and religion</label>
+	</mapping>
+	<mapping>
+		<ted-value>SOCIAL_PROTECTION</ted-value>
+		<eforms-value>soc-pro</eforms-value>
+		<label>Social protection</label>
+	</mapping>
+</authority-activity-types>
+
+<entity-activity-types>
+	<description>Mapping for Activity Entity (BT-610)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/CONTRACTING_BODY/CE_ACTIVITY/@VALUE</ted-context>
+	<eforms-context>/*/cac:ContractingParty/cac:ContractingActivity/cbc:ActivityTypeCode[@listName="entity-activity"]</eforms-context>
+	<eforms-codelist>entity-activity</eforms-codelist>
+	<mapping>
+		<ted-value>AIRPORT_RELATED_ACTIVITIES</ted-value>
+		<eforms-value>airport</eforms-value>
+		<label>Airport-related activities</label>
+	</mapping>
+	<mapping>
+		<ted-value>ELECTRICITY</ted-value>
+		<eforms-value>electricity</eforms-value>
+		<label>Electricity-related activities</label>
+	</mapping>
+	<mapping>
+		<ted-value>EXPLORATION_EXTRACTION_COAL_OTHER_SOLID_FUEL</ted-value>
+		<eforms-value>solid-fuel</eforms-value>
+		<label>Exploration or extraction of coal or other solid fuels</label>
+	</mapping>
+	<mapping>
+		<ted-value>EXPLORATION_EXTRACTION_GAS_OIL</ted-value>
+		<eforms-value>gas-oil</eforms-value>
+		<label>Extraction of gas or oil</label>
+	</mapping>
+	<mapping>
+		<ted-value>PORT_RELATED_ACTIVITIES</ted-value>
+		<eforms-value>port</eforms-value>
+		<label>Port-related activities</label>
+	</mapping>
+	<mapping>
+		<ted-value>POSTAL_SERVICES</ted-value>
+		<eforms-value>post</eforms-value>
+		<label>Postal services</label>
+	</mapping>
+	<mapping>
+		<ted-value>PRODUCTION_TRANSPORT_DISTRIBUTION_GAS_HEAT</ted-value>
+		<eforms-value>gas-heat</eforms-value>
+		<label>Production, transport or distribution of gas or heat</label>
+	</mapping>
+	<mapping>
+		<ted-value>RAILWAY_SERVICES</ted-value>
+		<eforms-value>rail</eforms-value>
+		<label>Railway services</label>
+	</mapping>
+	<mapping>
+		<ted-value>URBAN_RAILWAY_TRAMWAY_TROLLEYBUS_BUS_SERVICES</ted-value>
+		<eforms-value>urttb</eforms-value>
+		<label>Urban railway, tramway, trolleybus or bus services</label>
+	</mapping>
+	<mapping>
+		<ted-value>WATER</ted-value>
+		<eforms-value>water</eforms-value>
+		<label>Water-related activities</label>
+	</mapping>
+</entity-activity-types>
+
 <procedure-types>
 	<description>Mapping for Procedure Type (BT-105)</description>
 	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/(PT_OPEN|PT_RESTRICTED|PT_COMPETITIVE_NEGOTIATION|PT_COMPETITIVE_DIALOGUE|PT_INNOVATION_PARTNERSHIP)/fn:local-name()</ted-context>
@@ -116,7 +230,7 @@
 
 <selection-criterion-types>
 	<description>Mapping for Main and Additional Nature (BT-23, BT-531)</description>
-	<ted-context>/TED_EXPORT/FORM_SECTION/*/LEFTI/(SUITABILITY|ECONOMIC_FINANCIAL_INFO|ECONOMIC_FINANCIAL_MIN_LEVEL|TECHNICAL_PROFESSIONAL_INFO|TECHNICAL_PROFESSIONAL_MIN_LEVEL)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/LEFTI/(SUITABILITY|ECONOMIC_FINANCIAL_INFO|ECONOMIC_FINANCIAL_MIN_LEVEL|TECHNICAL_PROFESSIONAL_INFO|TECHNICAL_PROFESSIONAL_MIN_LEVEL|RULES_CRITERIA)/fn:local-name()</ted-context>
 	<eforms-context>/*/cac:ProcurementProjectLot/cac:SelectionCriteria/cbc:CriterionTypeCode</eforms-context>
 	<eforms-codelist>selection-criterion</eforms-codelist>
 	<mapping>
@@ -143,6 +257,16 @@
 		<ted-value>TECHNICAL_PROFESSIONAL_MIN_LEVEL</ted-value>
 		<eforms-value>tp-abil</eforms-value>
 		<label>Technical and professional ability</label>
+	</mapping>
+	<mapping>
+		<ted-value>RULES_CRITERIA</ted-value>
+		<eforms-value>other</eforms-value>
+		<label>Other</label>
+	</mapping>
+	<mapping>
+		<ted-value>CRITERIA_SELECTION</ted-value>
+		<eforms-value>other</eforms-value>
+		<label>Other</label>
 	</mapping>
 </selection-criterion-types>
 
