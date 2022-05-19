@@ -7,7 +7,7 @@ xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
+exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- include FunctX XSLT Function Library -->
@@ -144,6 +144,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 
 <!-- Function opfun:get-valid-nuts-codes filters a list of NUTS codes to those of more than 4 characters -->
 <xsl:function name="opfun:get-valid-nuts-codes" as="xs:string*">
+	<!-- function to get eForms language code from given TED language code, e.g. "DA" to "DAN" -->
 	<xsl:param name="nuts-codes" as="xs:string*"/>
 		<xsl:for-each select="$nuts-codes">
 			<xsl:choose>

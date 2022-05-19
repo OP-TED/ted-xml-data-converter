@@ -7,7 +7,7 @@ xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
+exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <xsl:template match="ted:OBJECT_DESCR">
@@ -96,7 +96,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 <!-- there are no equivalents in eForms. So these elements cannot be converted -->
 		
 						<!-- Selection Criteria Type (BT-747), Selection Criteria Name (BT-749), Selection Criteria Description (BT-750), Selection Criteria Used (BT-748) -->
-						<xsl:apply-templates select="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL)"/>
+						<xsl:apply-templates select="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION)"/>
 						
 						<!-- Second Stage Criteria do not have equivalent elements in TED XML -->
 						<!-- Selection Criteria Second Stage Invite (BT-40) cardinality ? No equivalent element in TED XML -->
@@ -134,9 +134,9 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 		<!-- Multiple Tenders (BT-769) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Multiple Tenders (BT-769)</xsl:comment>
 		<!-- Guarantee Required (BT-751) cardinality ? Only exists in TED form F05. Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3; Forbidden for other subtypes -->
-		<xsl:comment>Guarantee Required (BT-751)</xsl:comment>
 		<!-- Guarantee Required Description (BT-75) cardinality ? Only exists in TED form F05. Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3; Forbidden for other subtypes -->
-		<xsl:comment>Guarantee Required Description (BT-75)</xsl:comment>
+		<xsl:apply-templates select="../../ted:LEFTI/ted:DEPOSIT_GUARANTEE_REQUIRED"/>
+		
 		<!-- Tax legislation information provider No equivalent element in TED XML -->
 		<!-- Environment legislation information provider No equivalent element in TED XML -->
 		<!-- Employment legislation information provider No equivalent element in TED XML -->
@@ -149,16 +149,18 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 		<xsl:comment>Documents Unofficial Language (BT-737)</xsl:comment>
 		<!-- Documents Restricted (BT-14), Documents URL (BT-15), Documents Restricted URL (BT-615) -->
 		<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:DOCUMENT_RESTRICTED|ted:DOCUMENT_FULL)"/>
-		<!-- Terms Financial (BT-77) cardinality ? No equivalent element in TED XML -->
-		<xsl:comment>Terms Financial (BT-77)</xsl:comment>
+		<!-- Terms Financial (BT-77) cardinality ? Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
+		<xsl:call-template name="terms-financial"/>
+		
 		<!-- Reserved Participation (BT-71) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 		<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
 		<xsl:call-template name="reserved-participation"/>
 
-		<!-- Tenderer Legal Form (BT-761) cardinality ? Element LEGAL_FORM only exists in form F05 Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
-		<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
-		<!-- Tenderer Legal Form Description (BT-76) cardinality ? Element LEGAL_FORM only exists in form F05 Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
-		<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
+		<!-- Tenderer Legal Form (BT-761) cardinality ? Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+		<!-- Tenderer Legal Form Description (BT-76) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+		<xsl:call-template name="tenderer-legal-form"/>
+		
+		
 		<!-- Late Tenderer Information (BT-771) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Late Tenderer Information (BT-771)</xsl:comment>
 		<!-- Subcontracting Tender Indication (BT-651) cardinality + Only relevant for D81 Defence or OTHER Mandatory for CN subtype 18; Optional for PIN subtype 9, CN subtype E3; Forbidden for other subtypes -->
@@ -173,6 +175,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 		<!-- Reserved Execution (BT-736) cardinality ? Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:call-template name="reserved-execution"/>
 		<!-- Electronic Invoicing (BT-743) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+			
 		<xsl:call-template name="e-invoicing"/>
 		<!-- Terms Performance (BT-70) cardinality ? Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:call-template name="terms-performance"/>
@@ -214,7 +217,7 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 	</cac:TenderingTerms>
 </xsl:template>
 	
-<xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL">
+<xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="selection-criterion-type" select="$mappings//selection-criterion-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
@@ -230,7 +233,20 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 			<!-- Selection Criteria Used (BT-748) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3; Forbidden for other subtypes -->
 			<xsl:comment>Selection Criteria Used (BT-748)</xsl:comment>
+			<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
 		</efac:SelectionCriteria>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="ted:DEPOSIT_GUARANTEE_REQUIRED">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:comment>Guarantee Required (BT-751)</xsl:comment>
+	<xsl:comment>Guarantee Required Description (BT-75)</xsl:comment>
+	<xsl:if test="$text ne ''">
+		<cac:RequiredFinancialGuarantee>
+			<cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+		</cac:RequiredFinancialGuarantee>		
 	</xsl:if>
 </xsl:template>
 	
@@ -263,7 +279,51 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 		</cac:ExternalReference>
 	</cac:Attachment>
 </xsl:template>
-	
+
+<xsl:template name="terms-financial">
+	<!-- Terms Financial (BT-77) cardinality ? Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
+	<xsl:comment>Terms Financial (BT-77)</xsl:comment>
+	<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:MAIN_FINANCING_CONDITION/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:choose>
+		<xsl:when test="$text ne ''">
+			<cac:PaymentTerms>
+				<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+			</cac:PaymentTerms>
+		</xsl:when>
+		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
+			<!-- WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML.</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			<cac:PaymentTerms>
+				<cbc:Note languageID="{$eforms-first-language}"></cbc:Note>
+			</cac:PaymentTerms>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="tenderer-legal-form">
+	<!-- Tenderer Legal Form (BT-761) cardinality ? Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+	<!-- Tenderer Legal Form Description (BT-76) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
+	<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:LEGAL_FORM/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:comment>Tenderer Legal Form (BT-761)</xsl:comment>
+	<xsl:comment>Tenderer Legal Form Description (BT-76)</xsl:comment>
+	<xsl:choose>
+		<xsl:when test="$text ne ''">
+			<cac:TendererQualificationRequest>
+				<cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
+				<cbc:CompanyLegalForm languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:CompanyLegalForm>
+			</cac:TendererQualificationRequest>
+		</xsl:when>
+		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
+			<cac:TendererQualificationRequest>
+				<cbc:CompanyLegalFormCode listName="required">false</cbc:CompanyLegalFormCode>
+			</cac:TendererQualificationRequest>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
+
 <xsl:template name="reserved-participation">
 	<!-- Reserved Participation (BT-71) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 	<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
@@ -404,14 +464,28 @@ exclude-result-prefixes="xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn ca
 </xsl:template>
 
 <xsl:template name="appeal-terms">
-	<cac:AppealTerms>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE"/>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_INFO"/>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_BODY"/>
-		<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY"/>
-	</cac:AppealTerms>
+	<xsl:variable name="bt-99-text" select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:comment>*** start of cac:AppealTerms ***</xsl:comment>
+	<!-- Review Deadline Description (BT-99): eForms documentation cardinality = (?) at Lot level | eForms Regulation Annex requirements = Forbidden for PIN subtypes 1-6, E1, and E2, CN subtype 22; Optional for other subtypes -->
+	<xsl:comment>cac:PresentationPeriod: Review Deadline Description (BT-99)</xsl:comment>
+	<!-- Review Information Providing Organization -->
+	<xsl:comment>cac:AppealInformationParty: Review Information Providing Organization</xsl:comment>
+	<!-- Review organization -->
+	<xsl:comment>cac:AppealReceiverParty: Review organization</xsl:comment>
+	<!-- Mediation organization -->
+	<xsl:comment>cac:MediationParty: Mediation organization</xsl:comment>
+	<xsl:if test="$bt-99-text or ../../ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_INFO|ted:ADDRESS_REVIEW_BODY|ted:ADDRESS_MEDIATION_BODY)">
+		<cac:AppealTerms>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE"/>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_INFO"/>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_REVIEW_BODY"/>
+			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY"/>
+		</cac:AppealTerms>
+	</xsl:if>
+	<xsl:comment>*** end of cac:AppealTerms ***</xsl:comment>
 </xsl:template>
-	
+
+
 <xsl:template match="ted:REVIEW_PROCEDURE">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
