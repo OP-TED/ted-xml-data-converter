@@ -15,7 +15,8 @@ This folder contains the converteer code: XSLT and data files.
 |  [lot.xslt](lot.xslt) | Templates for converting information at Lot level |
 |  [common.xslt](common.xslt) | Templates used in more than one location |
 | Mapping files |
-| [ted-notice-type-mapping.xml](ted-notice-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
+| [notice-type-mapping.xml](notice-type-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
 | [languages.xml](languages.xml) | The "Language" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
+| [countries.xml](countries.xml) | The "Country" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
 | [other-mappings.xml](other-mappings.xml) | Other data mappings |
 
