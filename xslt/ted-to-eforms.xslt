@@ -22,6 +22,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:include href="addresses.xslt"/>
 <xsl:include href="procedure.xslt"/>
 <xsl:include href="lot.xslt"/>
+<xsl:include href="notice-result.xslt"/>
 <xsl:include href="common.xslt"/>
 
 
