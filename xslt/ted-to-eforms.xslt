@@ -217,10 +217,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:comment> efac:ContractModification here </xsl:comment>
 </xsl:template>
 
-<xsl:template name="notice-result">
-	<xsl:comment> efac:NoticeResult here </xsl:comment>
-</xsl:template>
-
 <xsl:template name="publication">
 	<xsl:comment> efac:Publication here </xsl:comment>
 	<efac:Publication>
