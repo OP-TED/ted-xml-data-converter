@@ -69,12 +69,30 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:for-each select="$ted-contractor-groups-unique//ted-contractor-group">
 			<ted-contractor-group>
 				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-contractor-group) + 1), 4)"/>
-				<orgid><xsl:text>TPA-</xsl:text><xsl:value-of select="$typepos"/></orgid>
+				<tpaid><xsl:text>TPA-</xsl:text><xsl:value-of select="$typepos"/></tpaid>
 				<xsl:copy-of select="path"/>
 				<xsl:copy-of select="contractor-group"/>
 			</ted-contractor-group>
 		</xsl:for-each>
 	</ted-contractor-groups>
+</xsl:variable>
+
+
+<!-- Create temporary XML structure to hold all the LotTender elements, with the source XPath for each, and assign a unique identifier to each (OPT-321, "Tender Technical Identifier") -->
+<xsl:variable name="lot-tenders-with-id" as="element()">
+	<ted-lot-tenders>
+		<xsl:for-each select="$ted-form-main-element/ted:AWARD_CONTRACT">
+			<ted-lot-tender>
+				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+				<path><xsl:value-of select="$path"/></path>
+				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:AWARD_CONTRACT) + 1), 4)"/>
+				<tenid><xsl:text>TEN-</xsl:text><xsl:value-of select="$typepos"/></tenid>
+				<!-- copy selected elements from AWARD_CONTRACT that relate to Lot Tenders -->
+				<xsl:copy-of select="ted:CONTRACT_NO" copy-namespaces="no"/>
+				<xsl:copy-of select="ted:LOT_NO" copy-namespaces="no"/>
+			</ted-lot-tender>
+		</xsl:for-each>
+	</ted-lot-tenders>
 </xsl:variable>
 
 
@@ -84,9 +102,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 These instructions can be un-commented to show the variables holding the contractor-groups at intermediate stages
 
 <xsl:copy-of select="$ted-contractor-groups"/>
-<xsl:copy-of select="$ted-contractor-groups-unique"/>
+<xsl:copy-of select="$ted-contractor-groups-unique"/>-->
 <xsl:copy-of select="$ted-contractor-groups-unique-with-id"/>
+
+<!--
+This instruction can be un-commented to show the variable holding the lot-tenders
 -->
+<xsl:copy-of select="$lot-tenders-with-id"/>
+
 	
 	<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
 	<xsl:comment>Notice Value (BT-161)</xsl:comment>
@@ -180,13 +203,33 @@ These instructions can be un-commented to show the variables holding the contrac
 		<!-- Contract EU Funds Name (BT-722): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:Funding​/cbc:FundingProgram -->
 
 
-
-	<!-- efac:TenderingParty -->
-		<!-- Tendering Party ID (OPT-210): eForms documentation cardinality (TenderingParty) = 1 | cbc:ID -->
-		<!-- Tenderer ID Reference (OPT-300): eForms documentation cardinality (TenderingParty) = + | efac:Tenderer​/cbc:ID -->
-		<!-- Tendering Party Leader (OPT-170): eForms documentation cardinality (TenderingParty) = * | efac:Tenderer​/efbc:GroupLeadIndicator -->
-		<!-- Subcontractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | efac:SubContractor​/cbc:ID -->
-		<!-- Main Contractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | efac:SubContractor​/efac:MainContractor​/cbc:ID -->
+		<xsl:for-each select="$ted-contractor-groups-unique-with-id//contractor-group">
+			<efac:TenderingParty>
+				<!-- Tendering Party ID (OPT-210): eForms documentation cardinality (TenderingParty) = 1 | cbc:ID -->
+				<cbc:ID schemeName="tendering-party"><xsl:value-of select="../tpaid"/></cbc:ID>
+				<xsl:variable name="ted-contractor-count" select="fn:count(ted-contractor)"/>
+				<xsl:for-each select="ted-contractor">
+					<efac:Tenderer>
+						<!-- Tenderer ID Reference (OPT-300): eForms documentation cardinality (TenderingParty) = + -->
+						<cbc:ID schemeName="organization"><xsl:value-of select="."/></cbc:ID>
+						<!-- Tendering Party Leader (OPT-170): eForms documentation cardinality (TenderingParty) = * -->
+						<!-- Assume if more than one CONTRACTOR that the first one is a Group Leader -->
+						<xsl:if test="$ted-contractor-count > 1">
+							<xsl:choose>
+								<xsl:when test="fn:position() = 1">
+									<efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+								</xsl:when>
+								<xsl:otherwise>
+									<efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:if>
+						<!-- Subcontractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | No equivalent element in TED XML -->
+						<!-- Main Contractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | No equivalent element in TED XML -->
+					</efac:Tenderer>
+				</xsl:for-each>
+			</efac:TenderingParty>
+		</xsl:for-each>
 
 	</efac:NoticeResult>
 	<!--  -->
