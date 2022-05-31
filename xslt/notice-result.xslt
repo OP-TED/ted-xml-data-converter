@@ -10,8 +10,84 @@ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-o
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
+
+<!-- Create temporary XML structure to hold all the TED CONTRACTORS elements, with the XPath for each -->
+<xsl:variable name="ted-contractor-groups" as="element()">
+	<ted-contractor-groups>
+		<xsl:for-each select="$ted-form-main-element/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS">
+			<ted-contractor-group>
+				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+				<path><xsl:value-of select="$path"/></path>
+				<contractor-group>
+					<xsl:for-each select="ted:CONTRACTOR">
+						<xsl:variable name="contractor-path" select="functx:path-to-node-with-pos(.)"/>
+						<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:starts-with(.,$contractor-path)]/fn:string(../orgid)"/>
+						<ted-contractor><xsl:value-of select="$orgid"/></ted-contractor>
+					</xsl:for-each>
+				</contractor-group>
+			</ted-contractor-group>
+		</xsl:for-each>
+	</ted-contractor-groups>
+</xsl:variable>
+
+<!-- Create temporary XML structure to hold the UNIQUE (using deep-equal) contractor groups in TED XML. Each xml structure includes the XPATH of all source TED contractor groups that are the same group -->
+<xsl:variable name="ted-contractor-groups-unique" as="element()">
+	<ted-contractor-groups>
+		<xsl:for-each select="$ted-contractor-groups//ted-contractor-group">
+			<xsl:variable name="pos" select="fn:position()"/>
+			<xsl:variable name="this-group" as="element()" select="contractor-group"/>
+			<!-- find if any preceding addresses are deep-equal to this one -->
+			<xsl:variable name="prevsame">
+				<xsl:for-each select="./preceding-sibling::ted-contractor-group">
+					<xsl:if test="fn:deep-equal(contractor-group, $this-group)">
+						<xsl:value-of select="'same'"/>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:variable>
+			<data><xsl:value-of select="$pos"/><xsl:text>:</xsl:text><xsl:value-of select="$prevsame"/></data>
+			<!-- if no preceding addresses are deep-equal to this one, then ... -->
+			<xsl:if test="$prevsame = ''">
+				<ted-contractor-group>
+					<!-- get list of paths of addresses, this one and following, that are deep-equal to this one -->
+					<path><xsl:sequence select="fn:string(path)"/></path>
+					<xsl:for-each select="./following-sibling::ted-contractor-group">
+						<xsl:if test="fn:deep-equal(contractor-group, $this-group)">
+							<path><xsl:sequence select="fn:string(path)"/></path>
+						</xsl:if>
+					</xsl:for-each>
+					<!-- copy the address -->
+					<xsl:copy-of select="contractor-group"/>
+				</ted-contractor-group>
+			</xsl:if>
+		</xsl:for-each>
+	</ted-contractor-groups>
+</xsl:variable>
+
+<!-- create temporary XML structure that is a copy of the UNIQUE contractor groups in TED XML, and assign a unique identifier to each (OPT-210, "Tendering Party ID") -->
+<xsl:variable name="ted-contractor-groups-unique-with-id" as="element()">
+	<ted-contractor-groups>
+		<xsl:for-each select="$ted-contractor-groups-unique//ted-contractor-group">
+			<ted-contractor-group>
+				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-contractor-group) + 1), 4)"/>
+				<orgid><xsl:text>TPA-</xsl:text><xsl:value-of select="$typepos"/></orgid>
+				<xsl:copy-of select="path"/>
+				<xsl:copy-of select="contractor-group"/>
+			</ted-contractor-group>
+		</xsl:for-each>
+	</ted-contractor-groups>
+</xsl:variable>
+
+
 <xsl:template name="notice-result">
 	<efac:NoticeResult>
+<!--
+These instructions can be un-commented to show the variables holding the contractor-groups at intermediate stages
+
+<xsl:copy-of select="$ted-contractor-groups"/>
+<xsl:copy-of select="$ted-contractor-groups-unique"/>
+<xsl:copy-of select="$ted-contractor-groups-unique-with-id"/>
+-->
+	
 	<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
 	<xsl:comment>Notice Value (BT-161)</xsl:comment>
 	<xsl:apply-templates select="ted:OBJECT_CONTRACT/(ted:VAL_TOTAL|ted:VAL_RANGE_TOTAL)"/>
