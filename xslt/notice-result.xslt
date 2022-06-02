@@ -10,8 +10,107 @@ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-o
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
+
+<!-- Create temporary XML structure to hold all the TED CONTRACTORS elements, with the XPath for each -->
+<xsl:variable name="ted-contractor-groups" as="element()">
+	<ted-contractor-groups>
+		<xsl:for-each select="$ted-form-main-element/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS">
+			<ted-contractor-group>
+				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+				<path><xsl:value-of select="$path"/></path>
+				<contractor-group>
+					<xsl:for-each select="ted:CONTRACTOR">
+						<xsl:variable name="contractor-path" select="functx:path-to-node-with-pos(.)"/>
+						<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:starts-with(.,$contractor-path)]/fn:string(../orgid)"/>
+						<ted-contractor><xsl:value-of select="$orgid"/></ted-contractor>
+					</xsl:for-each>
+				</contractor-group>
+			</ted-contractor-group>
+		</xsl:for-each>
+	</ted-contractor-groups>
+</xsl:variable>
+
+<!-- Create temporary XML structure to hold the UNIQUE (using deep-equal) contractor groups in TED XML. Each xml structure includes the XPATH of all source TED contractor groups that are the same group -->
+<xsl:variable name="ted-contractor-groups-unique" as="element()">
+	<ted-contractor-groups>
+		<xsl:for-each select="$ted-contractor-groups//ted-contractor-group">
+			<xsl:variable name="pos" select="fn:position()"/>
+			<xsl:variable name="this-group" as="element()" select="contractor-group"/>
+			<!-- find if any preceding addresses are deep-equal to this one -->
+			<xsl:variable name="prevsame">
+				<xsl:for-each select="./preceding-sibling::ted-contractor-group">
+					<xsl:if test="fn:deep-equal(contractor-group, $this-group)">
+						<xsl:value-of select="'same'"/>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:variable>
+			<data><xsl:value-of select="$pos"/><xsl:text>:</xsl:text><xsl:value-of select="$prevsame"/></data>
+			<!-- if no preceding addresses are deep-equal to this one, then ... -->
+			<xsl:if test="$prevsame = ''">
+				<ted-contractor-group>
+					<!-- get list of paths of addresses, this one and following, that are deep-equal to this one -->
+					<path><xsl:sequence select="fn:string(path)"/></path>
+					<xsl:for-each select="./following-sibling::ted-contractor-group">
+						<xsl:if test="fn:deep-equal(contractor-group, $this-group)">
+							<path><xsl:sequence select="fn:string(path)"/></path>
+						</xsl:if>
+					</xsl:for-each>
+					<!-- copy the address -->
+					<xsl:copy-of select="contractor-group"/>
+				</ted-contractor-group>
+			</xsl:if>
+		</xsl:for-each>
+	</ted-contractor-groups>
+</xsl:variable>
+
+<!-- create temporary XML structure that is a copy of the UNIQUE contractor groups in TED XML, and assign a unique identifier to each (OPT-210, "Tendering Party ID") -->
+<xsl:variable name="ted-contractor-groups-unique-with-id" as="element()">
+	<ted-contractor-groups>
+		<xsl:for-each select="$ted-contractor-groups-unique//ted-contractor-group">
+			<ted-contractor-group>
+				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-contractor-group) + 1), 4)"/>
+				<tpaid><xsl:text>TPA-</xsl:text><xsl:value-of select="$typepos"/></tpaid>
+				<xsl:copy-of select="path"/>
+				<xsl:copy-of select="contractor-group"/>
+			</ted-contractor-group>
+		</xsl:for-each>
+	</ted-contractor-groups>
+</xsl:variable>
+
+
+<!-- Create temporary XML structure to hold all the LotTender elements, with the source XPath for each, and assign a unique identifier to each (OPT-321, "Tender Technical Identifier") -->
+<xsl:variable name="lot-tenders-with-id" as="element()">
+	<ted-lot-tenders>
+		<xsl:for-each select="$ted-form-main-element/ted:AWARD_CONTRACT">
+			<ted-lot-tender>
+				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+				<path><xsl:value-of select="$path"/></path>
+				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:AWARD_CONTRACT) + 1), 4)"/>
+				<tenid><xsl:text>TEN-</xsl:text><xsl:value-of select="$typepos"/></tenid>
+				<!-- copy selected elements from AWARD_CONTRACT that relate to Lot Tenders -->
+				<xsl:copy-of select="ted:CONTRACT_NO" copy-namespaces="no"/>
+				<xsl:copy-of select="ted:LOT_NO" copy-namespaces="no"/>
+			</ted-lot-tender>
+		</xsl:for-each>
+	</ted-lot-tenders>
+</xsl:variable>
+
+
 <xsl:template name="notice-result">
 	<efac:NoticeResult>
+<!--
+These instructions can be un-commented to show the variables holding the contractor-groups at intermediate stages
+
+<xsl:copy-of select="$ted-contractor-groups"/>
+<xsl:copy-of select="$ted-contractor-groups-unique"/>-->
+<xsl:copy-of select="$ted-contractor-groups-unique-with-id"/>
+
+<!--
+This instruction can be un-commented to show the variable holding the lot-tenders
+-->
+<xsl:copy-of select="$lot-tenders-with-id"/>
+
+	
 	<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
 	<xsl:comment>Notice Value (BT-161)</xsl:comment>
 	<xsl:apply-templates select="ted:OBJECT_CONTRACT/(ted:VAL_TOTAL|ted:VAL_RANGE_TOTAL)"/>
@@ -104,13 +203,33 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Contract EU Funds Name (BT-722): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:Funding​/cbc:FundingProgram -->
 
 
-
-	<!-- efac:TenderingParty -->
-		<!-- Tendering Party ID (OPT-210): eForms documentation cardinality (TenderingParty) = 1 | cbc:ID -->
-		<!-- Tenderer ID Reference (OPT-300): eForms documentation cardinality (TenderingParty) = + | efac:Tenderer​/cbc:ID -->
-		<!-- Tendering Party Leader (OPT-170): eForms documentation cardinality (TenderingParty) = * | efac:Tenderer​/efbc:GroupLeadIndicator -->
-		<!-- Subcontractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | efac:SubContractor​/cbc:ID -->
-		<!-- Main Contractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | efac:SubContractor​/efac:MainContractor​/cbc:ID -->
+		<xsl:for-each select="$ted-contractor-groups-unique-with-id//contractor-group">
+			<efac:TenderingParty>
+				<!-- Tendering Party ID (OPT-210): eForms documentation cardinality (TenderingParty) = 1 | cbc:ID -->
+				<cbc:ID schemeName="tendering-party"><xsl:value-of select="../tpaid"/></cbc:ID>
+				<xsl:variable name="ted-contractor-count" select="fn:count(ted-contractor)"/>
+				<xsl:for-each select="ted-contractor">
+					<efac:Tenderer>
+						<!-- Tenderer ID Reference (OPT-300): eForms documentation cardinality (TenderingParty) = + -->
+						<cbc:ID schemeName="organization"><xsl:value-of select="."/></cbc:ID>
+						<!-- Tendering Party Leader (OPT-170): eForms documentation cardinality (TenderingParty) = * -->
+						<!-- Assume if more than one CONTRACTOR that the first one is a Group Leader -->
+						<xsl:if test="$ted-contractor-count > 1">
+							<xsl:choose>
+								<xsl:when test="fn:position() = 1">
+									<efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+								</xsl:when>
+								<xsl:otherwise>
+									<efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:if>
+						<!-- Subcontractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | No equivalent element in TED XML -->
+						<!-- Main Contractor ID Reference (OPT-301): eForms documentation cardinality (TenderingParty) = * | No equivalent element in TED XML -->
+					</efac:Tenderer>
+				</xsl:for-each>
+			</efac:TenderingParty>
+		</xsl:for-each>
 
 	</efac:NoticeResult>
 	<!--  -->

@@ -11,7 +11,249 @@
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
-            <efext:EformsExtension><!-- efac:NoticeResult here --><!--Notice SubType (OPP-070)-->
+            <efext:EformsExtension>
+               <efac:NoticeResult>
+                  <ted-contractor-groups xmlns="">
+                     <ted-contractor-group>
+                        <tpaid>TPA-0001</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[1]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0002</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0002</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[2]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0003</ted-contractor>
+                           <ted-contractor>ORG-0004</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0003</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[3]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0005</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0004</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0006</ted-contractor>
+                           <ted-contractor>ORG-0007</ted-contractor>
+                           <ted-contractor>ORG-0008</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0005</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[5]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[9]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0009</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0006</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[6]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0010</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0007</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[7]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0006</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0008</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[8]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0004</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0009</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[10]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0011</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0010</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[11]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0012</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                     <ted-contractor-group>
+                        <tpaid>TPA-0011</tpaid>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[12]/AWARDED_CONTRACT/CONTRACTORS</path>
+                        <contractor-group>
+                           <ted-contractor>ORG-0013</ted-contractor>
+                        </contractor-group>
+                     </ted-contractor-group>
+                  </ted-contractor-groups>
+                  <ted-lot-tenders xmlns="">
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[1]</path>
+                        <tenid>TEN-0001</tenid>
+                        <CONTRACT_NO>1A</CONTRACT_NO>
+                        <LOT_NO>1</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[2]</path>
+                        <tenid>TEN-0002</tenid>
+                        <CONTRACT_NO>1B</CONTRACT_NO>
+                        <LOT_NO>1</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[3]</path>
+                        <tenid>TEN-0003</tenid>
+                        <CONTRACT_NO>1C</CONTRACT_NO>
+                        <LOT_NO>1</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]</path>
+                        <tenid>TEN-0004</tenid>
+                        <CONTRACT_NO>1D</CONTRACT_NO>
+                        <LOT_NO>1</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[5]</path>
+                        <tenid>TEN-0005</tenid>
+                        <CONTRACT_NO>1E</CONTRACT_NO>
+                        <LOT_NO>1</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[6]</path>
+                        <tenid>TEN-0006</tenid>
+                        <CONTRACT_NO>1F</CONTRACT_NO>
+                        <LOT_NO>1</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[7]</path>
+                        <tenid>TEN-0007</tenid>
+                        <CONTRACT_NO>2A</CONTRACT_NO>
+                        <LOT_NO>2</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[8]</path>
+                        <tenid>TEN-0008</tenid>
+                        <CONTRACT_NO>2B</CONTRACT_NO>
+                        <LOT_NO>2</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[9]</path>
+                        <tenid>TEN-0009</tenid>
+                        <CONTRACT_NO>2C</CONTRACT_NO>
+                        <LOT_NO>2</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[10]</path>
+                        <tenid>TEN-0010</tenid>
+                        <CONTRACT_NO>2D</CONTRACT_NO>
+                        <LOT_NO>2</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[11]</path>
+                        <tenid>TEN-0011</tenid>
+                        <CONTRACT_NO>2E</CONTRACT_NO>
+                        <LOT_NO>2</LOT_NO>
+                     </ted-lot-tender>
+                     <ted-lot-tender>
+                        <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[12]</path>
+                        <tenid>TEN-0012</tenid>
+                        <CONTRACT_NO>2F</CONTRACT_NO>
+                        <LOT_NO>2</LOT_NO>
+                     </ted-lot-tender>
+                  </ted-lot-tenders>
+                  <!--Notice Value (BT-161)-->
+                  <cbc:TotalAmount currencyID="GBP">300000000</cbc:TotalAmount>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                        <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0007</cbc:ID>
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0008</cbc:ID>
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0009</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0006</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0010</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0007</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0008</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0009</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0011</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0010</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0011</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
                   <cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
                </efac:NoticeSubType>
@@ -21,6 +263,7 @@
                      <efbc:AcquiringCPBIndicator>true</efbc:AcquiringCPBIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.gov.uk/government/organisations/highways-england</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -49,7 +292,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
@@ -74,7 +317,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
@@ -99,7 +342,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
                         </cac:PartyIdentification>
@@ -124,7 +367,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
                         </cac:PartyIdentification>
@@ -149,7 +392,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
                         </cac:PartyIdentification>
@@ -174,7 +417,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0007</cbc:ID>
                         </cac:PartyIdentification>
@@ -199,7 +442,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0008</cbc:ID>
                         </cac:PartyIdentification>
@@ -224,7 +467,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0009</cbc:ID>
                         </cac:PartyIdentification>
@@ -249,7 +492,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0010</cbc:ID>
                         </cac:PartyIdentification>
@@ -274,7 +517,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0011</cbc:ID>
                         </cac:PartyIdentification>
@@ -299,7 +542,9 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
                         </cac:PartyIdentification>
@@ -324,7 +569,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
                         </cac:PartyIdentification>
@@ -349,7 +594,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0014</cbc:ID>
                         </cac:PartyIdentification>

@@ -26,6 +26,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<xsl:for-each select="*">
 						<xsl:copy-of select="." copy-namespaces="no"/>
 					</xsl:for-each>
+					<xsl:copy-of select="../ted:SME" copy-namespaces="no"/>
 				</ted-address>
 			</ted-org>
 		</xsl:for-each>
@@ -35,48 +36,47 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Create temporary XML structure to hold the UNIQUE (using deep-equal) addresses in TED XML. Each xml structure includes the XPATH of all source TED addresses that are the same address -->
 <xsl:variable name="ted-addresses-unique" as="element()">
 	<ted-orgs>
-	<xsl:for-each select="$ted-addresses//ted-org">
-		<xsl:variable name="pos" select="fn:position()"/>
-		<xsl:variable name="this-address" as="element()" select="ted-address"/>
-		<!-- find if any preceding addresses are deep-equal to this one -->
-		<xsl:variable name="prevsame">
-			<xsl:for-each select="./preceding-sibling::ted-org">
-				<xsl:if test="fn:deep-equal(ted-address, $this-address)">
-					<xsl:value-of select="'same'"/>
-				</xsl:if>
-			</xsl:for-each>
-		</xsl:variable>
-		<data><xsl:value-of select="$pos"/><xsl:text>:</xsl:text><xsl:value-of select="$prevsame"/></data>
-		<!-- if no preceding addresses are deep-equal to this one, then ... -->
-		<xsl:if test="$prevsame = ''">
-			<ted-org>
-			<!-- get list of paths of addresses, this one and following, that are deep-equal to this one -->
-			<path><xsl:sequence select="fn:string(path)"/></path>
-			<xsl:for-each select="./following-sibling::ted-org">
-				<xsl:if test="fn:deep-equal(ted-address, $this-address)">
+		<xsl:for-each select="$ted-addresses//ted-org">
+			<xsl:variable name="pos" select="fn:position()"/>
+			<xsl:variable name="this-address" as="element()" select="ted-address"/>
+			<!-- find if any preceding addresses are deep-equal to this one -->
+			<xsl:variable name="prevsame">
+				<xsl:for-each select="./preceding-sibling::ted-org">
+					<xsl:if test="fn:deep-equal(ted-address, $this-address)">
+						<xsl:value-of select="'same'"/>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:variable>
+			<data><xsl:value-of select="$pos"/><xsl:text>:</xsl:text><xsl:value-of select="$prevsame"/></data>
+			<!-- if no preceding addresses are deep-equal to this one, then ... -->
+			<xsl:if test="$prevsame = ''">
+				<ted-org>
+					<!-- get list of paths of addresses, this one and following, that are deep-equal to this one -->
 					<path><xsl:sequence select="fn:string(path)"/></path>
-				</xsl:if>
-			</xsl:for-each>
-			<!-- copy the address -->
-			<xsl:copy-of select="ted-address"/>
-			</ted-org>
-		</xsl:if>
-	</xsl:for-each>
+					<xsl:for-each select="./following-sibling::ted-org">
+						<xsl:if test="fn:deep-equal(ted-address, $this-address)">
+							<path><xsl:sequence select="fn:string(path)"/></path>
+						</xsl:if>
+					</xsl:for-each>
+					<!-- copy the address -->
+					<xsl:copy-of select="ted-address"/>
+				</ted-org>
+			</xsl:if>
+		</xsl:for-each>
 	</ted-orgs>
 </xsl:variable>
 
 <!-- create temporary XML structure that is a copy of the UNIQUE addresses in TED XML, and assign a unique identifier to each (OPT-200, "Organization Technical Identifier") -->
 <xsl:variable name="ted-addresses-unique-with-id" as="element()">
 	<ted-orgs>
-	<xsl:for-each select="$ted-addresses-unique//ted-org">
-		<ted-org>
-			<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-org) + 1), 4)"/>
-			<orgid><xsl:text>ORG-</xsl:text><xsl:value-of select="$typepos"/></orgid>
-			<xsl:copy-of select="type"/>
-			<xsl:copy-of select="path"/>
-			<xsl:copy-of select="ted-address"/>
-		</ted-org>
-	</xsl:for-each>
+		<xsl:for-each select="$ted-addresses-unique//ted-org">
+			<ted-org>
+				<xsl:variable name="typepos" select="functx:pad-integer-to-length((fn:count(./preceding-sibling::ted-org) + 1), 4)"/>
+				<orgid><xsl:text>ORG-</xsl:text><xsl:value-of select="$typepos"/></orgid>
+				<xsl:copy-of select="path"/>
+				<xsl:copy-of select="ted-address"/>
+			</ted-org>
+		</xsl:for-each>
 	</ted-orgs>
 </xsl:variable>
 
@@ -122,11 +122,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </efac:Organizations>
 <!--
 These instructions can be un-commented to show the variables holding the organization addresses at intermediate stages
+
 <xsl:copy-of select="$ted-addresses"/>
 <xsl:copy-of select="$ted-addresses-unique"/>
 <xsl:copy-of select="$ted-addresses-unique-with-id"/>
 -->
-
 </xsl:template>
 
 
@@ -137,8 +137,9 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Organization Internet Address (BT-505) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Internet Address (BT-505)</xsl:comment>
 		<xsl:apply-templates select="ted:URL_GENERAL|ted:URL"/>
-		<!-- Need to investigate purpose and meaning of element URL_BUYER in addresses not CONTRACTING_BODY -->
-		<!-- Organization Technical Identifier (OPT-200) cardinality ? -->
+		<xsl:comment>Winner Size (BT-165)</xsl:comment>
+		<!-- Winner Size (BT-165): eForms documentation cardinality = (?) at Organisation level | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
+		<xsl:call-template name="winner-size"/>
 		<xsl:comment>Organization Technical Identifier (OPT-200)</xsl:comment>
 		<cac:PartyIdentification><cbc:ID schemeName="organization"><xsl:value-of select="../orgid"/></cbc:ID></cac:PartyIdentification>
 		<!-- Organization Name (BT-500) cardinality ? Optional for ALL subtypes -->
@@ -150,6 +151,23 @@ These instructions can be un-commented to show the variables holding the organiz
 		<xsl:apply-templates select="ted:NATIONALID"/>
 		<xsl:call-template name="contact"/>	
 	</efac:Company>
+</xsl:template>
+
+<xsl:template name="winner-size">
+		<!-- Winner Size (BT-165): eForms documentation cardinality = (?) at Organisation level | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
+		<xsl:if test="../path[fn:ends-with(., 'ADDRESS_CONTRACTOR')]">
+			<xsl:choose>
+				<xsl:when test="ted:SME">
+					<efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+				</xsl:when>
+				<xsl:when test="$eforms-notice-subtype = ('29', '30', '32', '33', '34', '35', '36', '37')">
+					<!-- WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML. -->
+					<xsl:variable name="message">WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.</xsl:variable>
+					<xsl:message terminate="no" select="$message"/>
+					<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:if>
 </xsl:template>
 
 <!-- Create cac:PostalAddress structure -->
