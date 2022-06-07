@@ -105,6 +105,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="root-tendering-process"/>
 		<xsl:call-template name="root-procurement-project"/>
 		<xsl:call-template name="procurement-project-lots"/>
+		<!-- The ContractAwardNotice schema requires cac:TenderResult/cbc:AwardDate -->
+		<xsl:if test="$eforms-form-type eq 'CAN'">
+			<cac:TenderResult>
+				<cbc:AwardDate><xsl:text>2000-01-01Z</xsl:text></cbc:AwardDate>
+			</cac:TenderResult>
+		</xsl:if>
 	</xsl:element>
 </xsl:template>
 
@@ -353,6 +359,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes
  -->
 		<xsl:apply-templates select="ted:PROCEDURE/ted:ACCELERATED_PROC"/>
+		
+		
 		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Direct Award Justification Previous Procedure Identifier (BT-1252)</xsl:comment>
 		<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
