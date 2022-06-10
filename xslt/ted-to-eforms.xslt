@@ -333,7 +333,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		
 		<!-- Procedure Type (BT-105) cardinality 1 Mandatory for CN subtypes 10, 11, 16-18, 23, and 24, CAN subtypes 25-31, 36, and 37; Optional for PIN subtypes 7-9, CN subtypes 12, 13, 20-22, and E3, CAN subtypes 33, 34, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Procedure Type (BT-105)</xsl:comment>
-		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL)"/>
+		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_AWARD_CONTRACT_WITHOUT_CALL)"/>
+		
 		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Lots All Required (BT-763)</xsl:comment>
 		<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
@@ -353,12 +354,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes
  -->
 		<xsl:apply-templates select="ted:PROCEDURE/ted:ACCELERATED_PROC"/>
-		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:comment>Direct Award Justification Previous Procedure Identifier (BT-1252)</xsl:comment>
+		
+		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->	
 		<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:comment>Direct Award Justification (BT-136)</xsl:comment>
 		<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:comment>Direct Award Justification (BT-135)</xsl:comment>
+		<xsl:call-template name="direct-award-justification"/>
+		
 	</cac:TenderingProcess>
 </xsl:template>
 

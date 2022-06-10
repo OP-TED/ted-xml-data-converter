@@ -37,6 +37,7 @@ This table lists the TED XML files selected to test development of the Converter
 | 353820_2021.xml | F02 | CN |  |  |
 | 352444_2021.xml | F02 | CN |  |  |
 | 352458_2021.xml | F02 | CN |  |  |
+| 352425_2021.xml | F03 | CAN | Contract award | PT_AWARD_CONTRACT_WITHOUT_CALL |
 
 
 

@@ -50,7 +50,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:choose>			
 </xsl:template>	
 			
-<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL">
+<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_AWARD_CONTRACT_WITHOUT_CALL">
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 	<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
@@ -77,6 +77,29 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:ProcessJustification>
 </xsl:template>
 
+
+<xsl:template name="direct-award-justification">
+	<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes. No equivalent element in TED XML-->
+	<xsl:comment>Direct Award Justification Previous Procedure Identifier (BT-1252)</xsl:comment>
+	<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+	<xsl:comment>Direct Award Justification (BT-136)</xsl:comment>
+	<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+	<xsl:comment>Direct Award Justification (BT-135)</xsl:comment>
+		
+	<xsl:if test="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL">	
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/ted:D_JUSTIFICATION/ted:P, ' '))"/>
+		<xsl:for-each select="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/(ted:D_ACCORDANCE_ARTICLE/*|ted:D_OUTSIDE_SCOPE)">
+		<cac:ProcessJustification>
+			<xsl:variable name="element-name" select="fn:local-name(.)"/>
+			<xsl:variable name="justification" select="$mappings//direct-award-justification/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>			
+			<cbc:ProcessReasonCode listName="direct-award-justification"><xsl:value-of select="$justification"/></cbc:ProcessReasonCode>
+			<xsl:if test="$text ne ''">
+				<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
+			</xsl:if>	
+		</cac:ProcessJustification>
+		</xsl:for-each>
+	</xsl:if>
+</xsl:template>
 	
 <xsl:template match="ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
