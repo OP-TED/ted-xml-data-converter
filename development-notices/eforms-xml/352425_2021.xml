@@ -12,24 +12,16 @@
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
-               <efac:NoticeResult>
-                  <ted-contractor-groups xmlns="">
-                     <ted-contractor-group>
-                        <tpaid>TPA-0001</tpaid>
-                        <path>TED_EXPORT/FORM_SECTION/F03_2014[3]/AWARD_CONTRACT/AWARDED_CONTRACT/CONTRACTORS</path>
-                        <contractor-group>
-                           <ted-contractor>ORG-0002</ted-contractor>
-                        </contractor-group>
-                     </ted-contractor-group>
-                  </ted-contractor-groups>
-                  <ted-lot-tenders xmlns="">
-                     <ted-lot-tender>
-                        <path>TED_EXPORT/FORM_SECTION/F03_2014[3]/AWARD_CONTRACT</path>
-                        <tenid>TEN-0001</tenid>
-                     </ted-lot-tender>
-                  </ted-lot-tenders>
-                  <!--Notice Value (BT-161)-->
+               <efac:NoticeResult><!--Notice Value (BT-161)-->
                   <cbc:TotalAmount currencyID="EUR">800000.00</cbc:TotalAmount>
+                  <efac:LotTender>
+                     <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">800000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                  </efac:LotTender>
                   <efac:TenderingParty>
                      <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
                      <efac:Tenderer>
@@ -304,6 +296,7 @@
       <!--Previous Planning Identifier (BT-125)-->
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
       <cac:ProcessJustification>
@@ -434,10 +427,6 @@
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
-            <cbc:MaximumOperatorQuantity/>
-            <!--Framework Duration Justification (BT-109)-->
-         </cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
@@ -500,4 +489,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
 </ContractAwardNotice>

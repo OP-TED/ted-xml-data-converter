@@ -880,7 +880,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:if test="../../ted:PROCEDURE/ted:FRAMEWORK or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
 		<xsl:choose>
 			<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
-				<xsl:apply-templates select="../../ted:PROCEDURE/ted:FRAMEWORK"/>
+				<!--For CN forms F02, F05, F21, F22 FRAMEWORK has child elements specifying the number of participants and the duration justification-->
+				<xsl:apply-templates select="../../ted:PROCEDURE/ted:FRAMEWORK[*]"/>
 				<cac:ContractingSystem>
 					<cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
 				</cac:ContractingSystem>
