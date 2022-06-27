@@ -132,7 +132,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<xsl:if test="$eforms-form-type eq 'CAN'">
-						<!-- TODO : efac:AppealsInformation : Review Requester Organization requesting for review or Review Requester Organization that requested a review request. -->
+						<!-- TBD : efac:AppealsInformation : Review Requester Organization requesting for review or Review Requester Organization that requested a review request. -->
 					</xsl:if>
 					<xsl:if test="$ted-form-notice-type eq '14'">
 						<xsl:call-template name="changes"/>
