@@ -653,11 +653,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment>Public Opening Place (BT-133)</xsl:comment>
 		<xsl:apply-templates select="../../ted:PROCEDURE/ted:OPENING_CONDITION"/>
 		<!-- Electronic Auction (BT-767) cardinality ? Mandatory for CN subtypes 16-18 and 22, CAN subtypes 29-31; Optional for PIN subtypes 7-9, CN subtypes 10-14, 19-21, and E3, CAN subtypes 32-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:comment>Electronic Auction (BT-767)</xsl:comment>
 		<!-- Electronic Auction Description (BT-122) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3; Forbidden for other subtypes -->
-		<xsl:comment>Electronic Auction Description (BT-122)</xsl:comment>
 		<!-- Electronic Auction URL (BT-123) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3; Forbidden for other subtypes -->
-		<xsl:comment>Electronic Auction URL (BT-123)</xsl:comment>
 		<xsl:call-template name="eauction-used"/>
 		<!-- Framework Maximum Participants Number (BT-113) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-13, 16-18, 20-22, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Framework Maximum Participants Number (BT-113)</xsl:comment>
@@ -839,19 +836,19 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			
 <xsl:template name="eauction-used">
 	<!--<xsl:if test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = ('16', '17', '18', '22')">-->
-	<xsl:if test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = ('16', '17', '18', '22', '29', '30', '31')">
-		<cac:AuctionTerms>
-			<!-- Electronic Auction (BT-767) cardinality ? Mandatory for CN subtypes 16-18 and 22, CAN subtypes 29-31; Optional for PIN subtypes 7-9, CN subtypes 10-14, 19-21, and E3, CAN subtypes 32-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-			<xsl:comment>Electronic Auction (BT-767)</xsl:comment>
-			<xsl:choose>
-				<xsl:when test="../../ted:PROCEDURE/ted:EAUCTION_USED">
-					<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
-					<!-- Electronic Auction Description (BT-122) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3; Forbidden for other subtypes -->
-					<xsl:comment>Electronic Auction Description (BT-122)</xsl:comment>
-					<xsl:choose>
-						<xsl:when test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '16', '17', '18', '19', '20', '21', '22', 'E3')">
-					
-						<xsl:variable name="text" select="fn:normalize-space(fn:string-join(../../ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
+	<xsl:choose>
+		<xsl:when test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = ('16', '17', '18', '22', '29', '30', '31')">
+			<cac:AuctionTerms>
+				<!-- Electronic Auction (BT-767) cardinality ? Mandatory for CN subtypes 16-18 and 22, CAN subtypes 29-31; Optional for PIN subtypes 7-9, CN subtypes 10-14, 19-21, and E3, CAN subtypes 32-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+				<xsl:choose>
+					<xsl:when test="../../ted:PROCEDURE/ted:EAUCTION_USED">
+						<xsl:comment>Electronic Auction (BT-767)</xsl:comment>
+						<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+						<!-- Electronic Auction Description (BT-122) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3; Forbidden for other subtypes -->
+						<xsl:comment>Electronic Auction Description (BT-122)</xsl:comment>
+						<!-- When Electronic Auction (BT-767) is "true", Electronic Auction Description (BT-122) and Electronic Auction URL (BT-123) should be specified -->
+						<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '16', '17', '18', '19', '20', '21', '22', 'E3')">
+							<xsl:variable name="text" select="fn:normalize-space(fn:string-join(../../ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
 							<xsl:choose>
 								<xsl:when test="$text ne ''">
 									<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
@@ -863,20 +860,31 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 									<cbc:Description languageID="{$eforms-first-language}"></cbc:Description>
 								</xsl:otherwise>
 							</xsl:choose>
-						
+						</xsl:if>
+						<xsl:comment>Electronic Auction URL (BT-123)</xsl:comment>
+						<!-- When Electronic Auction (BT-767) is "true", Electronic Auction Description (BT-122) and Electronic Auction URL (BT-123) should be specified -->
+						<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '16', '17', '18', '19', '20', '21', '22', 'E3')">
 							<xsl:variable name="message">WARNING: source TED XML notice does not contain information for Electronic Auction URL (BT-123).</xsl:variable>
 							<xsl:message terminate="no" select="$message"/>
 							<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 							<cbc:AuctionURI></cbc:AuctionURI>
-						</xsl:when>
-					</xsl:choose>
-				</xsl:when>
-				<xsl:otherwise>
-					<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
-				</xsl:otherwise>
-			</xsl:choose>
-		</cac:AuctionTerms>
-	</xsl:if>
+						</xsl:if>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:comment>Electronic Auction (BT-767)</xsl:comment>
+						<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+						<xsl:comment>Electronic Auction Description (BT-122)</xsl:comment>
+						<xsl:comment>Electronic Auction URL (BT-123)</xsl:comment>
+					</xsl:otherwise>
+				</xsl:choose>
+			</cac:AuctionTerms>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:comment>Electronic Auction (BT-767)</xsl:comment>
+			<xsl:comment>Electronic Auction Description (BT-122)</xsl:comment>
+			<xsl:comment>Electronic Auction URL (BT-123)</xsl:comment>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template name="framework-agreement">
