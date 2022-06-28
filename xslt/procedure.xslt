@@ -55,6 +55,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 	<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
 </xsl:template>
+
+
+<xsl:template name="pin-competition-termination">
+<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
+<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
+	<xsl:if test="ted:PROCEDURE/(ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_COMPETITIVE_NEGOTIATION)">
+		<xsl:choose>
+			<xsl:when test="ted:PROCEDURE/ted:TERMINATION_PIN">
+				<cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
+			</xsl:when>
+			<xsl:otherwise>
+				<cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
+			</xsl:otherwise>
+		</xsl:choose>		
+	</xsl:if>	
+</xsl:template>
 	
 <xsl:template match="ted:NOTICE_NUMBER_OJ">
 	<xsl:variable name="text" select="fn:normalize-space(.)"/>

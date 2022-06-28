@@ -344,8 +344,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Lots All Required (BT-763)</xsl:comment>
 		<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
-		<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
-		
+		<xsl:call-template name="pin-competition-termination"/>
+
 		<!-- Previous Planning Identifier (BT-125) cardinality - Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. -->
 		<xsl:comment>Previous Planning Identifier (BT-125)</xsl:comment>
 		<!-- TBD: Discussion about methods of linking to previous notices is ongoing. This mapping/conversion may change. -->
