@@ -209,7 +209,7 @@ These instructions can be un-commented to show the variables
 			
 			<!-- Winner Chosen (BT-142): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 			<xsl:comment>Winner Chosen (BT-142)</xsl:comment>
-			<xsl:if test="awards/ted:AWARD_CONTRACT/(ted:AWARDED_CONTRACT and ted:NO_AWARDED_CONTRACT)">
+			<xsl:if test="awards/ted:AWARD_CONTRACT[ted:AWARDED_CONTRACT and ted:NO_AWARDED_CONTRACT]">
 				<!-- WARNING: Both AWARDED_CONTRACT and NO_AWARDED_CONTRACT elements were found in AWARD_CONTRACT elements used for LotResult -->
 				<xsl:variable name="message">
 					<xsl:text>WARNING: Both AWARDED_CONTRACT and NO_AWARDED_CONTRACT elements were found in AWARD_CONTRACT elements used for LotResult </xsl:text>
