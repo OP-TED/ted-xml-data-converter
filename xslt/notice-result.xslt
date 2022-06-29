@@ -165,11 +165,13 @@ These instructions can be un-commented to show the variables
 
 	
 	<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
+		<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
 	<xsl:comment>Notice Value (BT-161)</xsl:comment>
-	<xsl:apply-templates select="ted:OBJECT_CONTRACT/(ted:VAL_TOTAL|ted:VAL_RANGE_TOTAL)"/>
-	
+	<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
+	<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_TOTAL"/>
+<!--	<xsl:apply-templates select="ted:OBJECT_CONTRACT/(ted:VAL_TOTAL|ted:VAL_RANGE_TOTAL)"/>
+-->	
 
-	<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
 	<!-- efac:GroupFramework -->
 		<!-- Group Framework Value (BT-156): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efbc:GroupFrameworkValueAmount -->
 		<!-- Group Framework Value Lot Identifier (BT-556): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:TenderLot -->
@@ -414,22 +416,31 @@ These instructions can be un-commented to show the variables
 
 <!-- *** Start of Notice Value *** -->
 <!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
+<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
+<!--If  the CAN TED XML notice  contains the element FRAMEWORK, then VAL_TOTAL should be mapped to BT-118 Notice Framework Value. Otherwise, VAL_TOTAL should be mapped to BT-161 Notice Value-->
 
 <xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_TOTAL">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
-	<cbc:TotalAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:TotalAmount>	
+	<xsl:choose>
+		<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
+			<cbc:EstimatedOverallFrameworkContractsAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallFrameworkContractsAmount>
+		</xsl:when>
+		<xsl:otherwise>
+		    <cbc:TotalAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:TotalAmount>	
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>	
 
-<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_RANGE_TOTAL">
+<!--<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_RANGE_TOTAL">
 	<xsl:variable name="ted-value-highest" select="fn:normalize-space(ted:HIGH)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>	
-	<!--WARNING: Notice Value (BT-161) exists in this TED XML notice as a range of values (VAL_RANGE_TOTAL). In order to not lose information, the highest value given (HIGH) was used.-->
+	--><!--WARNING: Notice Value (BT-161) exists in this TED XML notice as a range of values (VAL_RANGE_TOTAL). In order to not lose information, the highest value given (HIGH) was used.--><!--
 	<xsl:variable name="message">WARNING: Notice Value (BT-161) exists in this TED XML notice as a range of values (VAL_RANGE_TOTAL). In order to not lose information, the highest value given (HIGH) was used.</xsl:variable>
 	<xsl:message terminate="no" select="$message"/>
 	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
 	<cbc:TotalAmount currencyID="{$currency}"><xsl:value-of select="$ted-value-highest"/></cbc:TotalAmount>	
-</xsl:template>
+</xsl:template>-->
 <!-- *** End of Notice Value *** -->
 
 
