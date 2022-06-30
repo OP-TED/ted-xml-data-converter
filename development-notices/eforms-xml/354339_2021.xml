@@ -13,36 +13,16 @@
          <ext:ExtensionContent>
             <efext:EformsExtension>
                <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
-                  <cbc:TotalAmount currencyID="EUR">1220020</cbc:TotalAmount>
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
-                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <efbc:DPSTerminationIndicator>true</efbc:DPSTerminationIndicator>
                   </efac:LotResult>
                   <efac:LotTender>
                      <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
-                     <cac:LegalMonetaryTotal>
-                        <cbc:PayableAmount currencyID="EUR">1220020</cbc:PayableAmount>
-                     </cac:LegalMonetaryTotal>
                   </efac:LotTender>
-                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
-                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
-                     <!--Winner Decision Date (BT-1451)-->
-                     <!--Contract Conclusion Date (BT-145)-->
-                     <cbc:IssueDate>2021-06-15+01:00</cbc:IssueDate>
-                     <!--Contract Title (BT-721)-->
-                     <cbc:Title>Beschaffung eines GPS-Systems für Kraftfahrzeuge</cbc:Title>
-                     <efac:ContractReference>
-                        <cbc:ID/>
-                     </efac:ContractReference>
-                  </efac:SettledContract>
-                  <efac:TenderingParty>
-                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
-                     <efac:Tenderer>
-                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
-                     </efac:Tenderer>
-                  </efac:TenderingParty>
                </efac:NoticeResult>
                <!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
@@ -52,7 +32,7 @@
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>https://www.hausbetreuung-wien.at/</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>http://www.uppsala.se/</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -60,97 +40,43 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Wiener Wohnen Hausbetreuung GmbH</cbc:Name>
+                           <cbc:Name>Uppsala kommun</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Erdbergstraße 200</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Wien</cbc:CityName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Uppsala</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>1030</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">AT130</cbc:CountrySubentityCode>
+                           <cbc:CountrySubentityCode listName="nuts">SE121</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">SWE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+43 160766430</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>ausschreibungen@hausbetreuung-wien.at</cbc:ElectronicMail>
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>stefan.palm@uppsala.se</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
-                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
-                        <!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>ITBinder GmbH</cbc:Name>
+                           <cbc:Name>Förvaltningsrätten i Uppsala</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Hirnsdorf 80</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Feistritztal</cbc:CityName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Uppsala</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>8221</cbc:PostalZone>
-                           <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">AT22</cbc:CountrySubentityCode>
-                           <!--Organization Country Code (BT-514)-->
-                           <cac:Country>
-                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
-                           </cac:Country>
-                        </cac:PostalAddress>
-                        <!--Organization Identifier (BT-501)-->
-                        <cac:PartyLegalEntity>
-                           <cbc:CompanyID>9110016767246</cbc:CompanyID>
-                        </cac:PartyLegalEntity>
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+43 311351510</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>itb@fuhrpark.at</cbc:ElectronicMail>
-                        </cac:Contact>
-                     </efac:Company>
-                  </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>http://www.verwaltungsgericht.wien.gv.at</cbc:WebsiteURI>
-                        <!--Winner Size (BT-165)-->
-                        <!--Organization Technical Identifier (OPT-200)-->
-                        <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
-                        </cac:PartyIdentification>
-                        <!--Organization Name (BT-500)-->
-                        <cac:PartyName>
-                           <cbc:Name>Verwaltungsgericht Wien</cbc:Name>
-                        </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Muthgasse 62</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Wien</cbc:CityName>
-                           <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>1190</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">SWE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+43 1400038500</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>post@vgw.wien.gv.at</cbc:ElectronicMail>
-                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -185,11 +111,11 @@
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode>SWE</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
@@ -199,7 +125,7 @@
       <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
@@ -227,13 +153,12 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
+      <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
       <!--Previous Planning Identifier (BT-125)-->
       <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2020/S 078-183831</cbc:ID>
+         <cbc:ID schemeName="ojs-notice-id">2019/S 177-431038</cbc:ID>
       </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
@@ -242,17 +167,20 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject here -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
-      <cbc:Name languageID="DEU">Beschaffung eines GPS Systems für Kraftfahrzeuge</cbc:Name>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">AMN-2019-0277</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="SWE">Arbetsbefrämjande insatser</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="DEU">Implementierung und Wartung eines GPS-Systems zur Ortung von Kraftfahrzeugen und zur Erfassung der Fahrtzeiten in Übereinstimmung mit den gesetzlichen Vorgaben.</cbc:Description>
+      <cbc:Description languageID="SWE">Syftet med detta dynamiska inköpssystem är att kunna avropa kommunens olika behov av arbetsbefrämjande insatser av skiftande karaktär på ett enhetlig sätt.</cbc:Description>
       <!--Main Nature (BT-23)-->
-      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="SWE">Det dynamiska inköpssystemet nås nu på denna länk, https://ted.europa.eu/udl?uri=TED:NOTICE:225177-2021:TEXT:SV:HTML</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">38112100</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">85300000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -301,75 +229,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
-            <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="DEU">Funktionalität der Software</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="DEU">Reaktions- und Entstörzeiten</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="DEU">Referenzen Projektleiter</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-               </cac:SubordinateAwardingCriterion>
-            </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
-            <!--Jury Member Name (BT-46)-->
-            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
-         </cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--*** end of cac:AwardingCriterion ***--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
@@ -381,7 +241,7 @@
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
@@ -403,7 +263,7 @@
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
          <!--GPA Coverage (BT-115)-->
-         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <!--Dispatch Invitation Tender (BT-130)-->
@@ -434,18 +294,18 @@
          <!--Dynamic Purchasing System (BT-766)-->
          <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
          <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">dps-list</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject here -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="DEU">Beschaffung eines GPS Systems für Kraftfahrzeuge</cbc:Name>
+         <cbc:Name languageID="SWE">Arbetsbefrämjande insatser</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="DEU">Nähere Angaben finden Sie in den Beschaffungsunterlagen.</cbc:Description>
+         <cbc:Description languageID="SWE">Syftet med detta dynamiska inköpssystem är att kunna avropa kommunens olika behov av arbetsbefrämjande insatser av skiftande karaktär på ett enhetlig sätt.</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
          <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -461,11 +321,14 @@
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">38112100</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">85300000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
          <cac:AdditionalCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">72263000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">98000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85310000</cbc:ItemClassificationCode>
          </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
@@ -477,7 +340,7 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:StreetName>Wien</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">SE121</cbc:CountrySubentityCode>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -487,9 +350,6 @@
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
-            <cbc:OptionsDescription languageID="DEU">Vertragsverlängerung.</cbc:OptionsDescription>
-         </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:TenderResult>

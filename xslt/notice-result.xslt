@@ -158,9 +158,9 @@ These instructions can be un-commented to show the variables
 <xsl:copy-of select="$contracts-unique-with-id" copy-namespaces="no"/>
 <xsl:copy-of select="$lot-results" copy-namespaces="no"/>
 
-
-
 -->
+
+
 
 
 	
@@ -229,8 +229,10 @@ These instructions can be un-commented to show the variables
 			</xsl:choose>
 			
 			
-			<!-- Dynamic Purchasing System Termination (BT-119): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29, 30, 33, 34 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efbc:DPSTerminationIndicator -->
+			<!-- Dynamic Purchasing System Termination (BT-119): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29, 30, 33, 34 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 			<xsl:comment>Dynamic Purchasing System Termination (BT-119)</xsl:comment>
+			<xsl:apply-templates select="$ted-form-main-element/ted:PROCEDURE/ted:TERMINATION_DPS"/>
+		
 			
 
 			
@@ -302,6 +304,8 @@ These instructions can be un-commented to show the variables
 			
 			
 		<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
+		<xsl:comment>Contract Title (BT-721)</xsl:comment>
+		<xsl:apply-templates select="$ted-form-main-element/ted:AWARD_CONTRACT/ted:TITLE"/>
 
 		<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:URI -->
 		
@@ -359,6 +363,19 @@ These instructions can be un-commented to show the variables
 	<!--  -->
 </xsl:template>
 
+<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
+<xsl:template match="ted:AWARD_CONTRACT/ted:TITLE">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:if test="$text ne ''">
+		<cbc:Title><xsl:value-of select="$text"/></cbc:Title>
+	</xsl:if>	
+</xsl:template>
+
+
+<!-- Dynamic Purchasing System Termination (BT-119): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29, 30, 33, 34 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
+<xsl:template match="ted:TERMINATION_DPS">
+	<efbc:DPSTerminationIndicator>true</efbc:DPSTerminationIndicator>
+</xsl:template>
 
 <!-- LotTenders -->
 <xsl:template match="ted:AWARD_CONTRACT">
