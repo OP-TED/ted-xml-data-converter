@@ -209,7 +209,7 @@ These instructions can be un-commented to show the variables
 			
 			<!-- Winner Chosen (BT-142): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 			<xsl:comment>Winner Chosen (BT-142)</xsl:comment>
-			<xsl:if test="awards/ted:AWARD_CONTRACT[ted:AWARDED_CONTRACT and ted:NO_AWARDED_CONTRACT]">
+			<xsl:if test="awards[ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT][ted:AWARD_CONTRACT/ted:NO_AWARDED_CONTRACT]">
 				<!-- WARNING: Both AWARDED_CONTRACT and NO_AWARDED_CONTRACT elements were found in AWARD_CONTRACT elements used for LotResult -->
 				<xsl:variable name="message">
 					<xsl:text>WARNING: Both AWARDED_CONTRACT and NO_AWARDED_CONTRACT elements were found in AWARD_CONTRACT elements used for LotResult </xsl:text>
@@ -229,7 +229,7 @@ These instructions can be un-commented to show the variables
 			</xsl:choose>
 			
 			
-			<!-- Dynamic Purchasing System Termination (BT-119): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29, 30, 33, 34 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
+			<!-- Dynamic Purchasing System Termination (BT-119): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29, 30, 33, 34 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efbc:DPSTerminationIndicator -->
 			<xsl:comment>Dynamic Purchasing System Termination (BT-119)</xsl:comment>
 			<xsl:apply-templates select="$ted-form-main-element/ted:PROCEDURE/ted:TERMINATION_DPS"/>
 		
@@ -310,6 +310,17 @@ These instructions can be un-commented to show the variables
 		<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:URI -->
 		
 		<!-- Contract Framework Agreement (BT-768): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-35 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efbc:ContractFrameworkIndicator -->
+		<xsl:if test="$ted-form-main-element/ted:PROCEDURE/ted:FRAMEWORK">
+			<!-- WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default. -->
+			<xsl:variable name="message">
+				<xsl:text>WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.</xsl:text>
+			</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			<efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>		
+		</xsl:if>
+		
+		
 		<!-- Framework Notice Identifier (OPT-100): eForms documentation cardinality (SettledContract) = ? | cac:NoticeDocumentReference/cbc:ID -->
 		<!-- Signatory Identifier Reference (OPT-300): eForms documentation cardinality (SettledContract) = + | cac:SignatoryParty​/cac:PartyIdentification​/cbc:ID -->
 		<!-- Contract Identifier (BT-150): eForms documentation cardinality (SettledContract) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes efac:ContractReference​/cbc:ID -->
