@@ -20,4 +20,6 @@ This table is under development. Elements used in Contract Award Notices and PIN
 | REFERENCE_NUMBER | R.2.0.9 | Text | Reference number (Object section) | eForms does not have a BT to hold a reference number |
 | TECHNICAL_CRITERIA_DOC | R.2.0.9 | Text | Selection criteria as stated in the procurement documents | eForms does not allow for Selection Criteria to be contained in external documents |
 | URL_NATIONAL_PROCEDURE | R.2.0.9 | URL | Information about national procedures is available at (URL) | eForms does not have a BT to hold a national procedure URL |
+| OBJECT_CONTRACT/VAL_RANGE_TOTAL/HIGH
+OBJECT_CONTRACT/VAL_RANGE_TOTAL/LOW | R.2.0.9 | Value | Total value of the procurement (excluding VAT) - Lowest offer / Highest offer taken into consideration | eForms does not have a BT to hold range values for offers across all lots |
 

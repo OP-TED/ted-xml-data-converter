@@ -90,7 +90,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
 			<contract number="{$this-group-number}" contract-number="{$contract-number}" award-count="{$award-count}">
 				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
-				<award-count><xsl:value-of select="$award-count"/></award-count>
 				<awards>
 					<xsl:for-each select="fn:current-group()">
 						<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
@@ -166,11 +165,7 @@ These instructions can be un-commented to show the variables
 	
 	<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
 		<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
-	<xsl:comment>Notice Value (BT-161)</xsl:comment>
-	<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
 	<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_TOTAL"/>
-<!--	<xsl:apply-templates select="ted:OBJECT_CONTRACT/(ted:VAL_TOTAL|ted:VAL_RANGE_TOTAL)"/>
--->	
 
 	<!-- efac:GroupFramework -->
 		<!-- Group Framework Value (BT-156): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efbc:GroupFrameworkValueAmount -->
@@ -182,30 +177,39 @@ These instructions can be un-commented to show the variables
 		<efac:LotResult>
 	
 			<!-- Tender Value Highest (BT-711): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->
-			<xsl:comment>Tender Value Highest (BT-711)</xsl:comment>
 			<!-- Tender Value Lowest (BT-710): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->		
-			<xsl:comment>Tender Value Lowest (BT-710)</xsl:comment>
-			<xsl:if test="awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL">
-				<xsl:variable name="currencies" select="fn:distinct-values(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL/@CURRENCY)"/>
-				<xsl:if test="fn:count($currencies) > 1">
-						<!-- WARNING: Multiple different currencies were found in VAL_RANGE_TOTAL elements in AWARD_CONTRACT elements used for LotResult -->
-						<xsl:variable name="message">
-							<xsl:text>WARNING: Multiple different currencies (</xsl:text>
-							<xsl:value-of select="fn:string-join($currencies, ', ')"/>
-							<xsl:text>) were found in VAL_RANGE_TOTAL elements in AWARD_CONTRACT elements used for LotResult </xsl:text>
-							<xsl:value-of select="lotresult-id"/>
-							<xsl:text>.</xsl:text>
-						</xsl:variable>
-						<xsl:message terminate="no" select="$message"/>
-						<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-				</xsl:if>
-				<xsl:variable name="max-value" select="fn:max(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL/ted:HIGH)"/>
-				<xsl:variable name="currency" select="(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL[ted:HIGH = $max-value])[1]/@CURRENCY"/>
-				<xsl:variable name="min-value" select="fn:max(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL/ted:LOW)"/>
-				<xsl:variable name="currency" select="(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL[ted:LOW = $max-value])[1]/@CURRENCY"/>
-				<cbc:HigherTenderAmount currencyID="{$currency}"><xsl:value-of select="$max-value"/></cbc:HigherTenderAmount>
-			</xsl:if>
-	
+			<xsl:choose>
+				<xsl:when test="awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL">
+					<xsl:variable name="currencies" select="fn:distinct-values(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL/@CURRENCY)"/>
+					<xsl:if test="fn:count($currencies) > 1">
+							<!-- WARNING: Multiple different currencies were found in VAL_RANGE_TOTAL elements in AWARD_CONTRACT elements used for LotResult -->
+							<xsl:variable name="message">
+								<xsl:text>WARNING: Multiple different currencies (</xsl:text>
+								<xsl:value-of select="fn:string-join($currencies, ', ')"/>
+								<xsl:text>) were found in VAL_RANGE_TOTAL elements in AWARD_CONTRACT elements used for LotResult </xsl:text>
+								<xsl:value-of select="lotresult-id"/>
+								<xsl:text>.</xsl:text>
+							</xsl:variable>
+							<xsl:message terminate="no" select="$message"/>
+							<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+					</xsl:if>
+					<xsl:variable name="max-value-double" select="fn:max(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL/ted:HIGH)"/>
+					<xsl:variable name="max-value" select="(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL[ted:HIGH = $max-value-double])[1]/ted:HIGH"/>
+					<xsl:variable name="currency" select="(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL[ted:HIGH = $max-value-double])[1]/@CURRENCY"/>
+					<xsl:comment>Tender Value Highest (BT-711)</xsl:comment>
+					<cbc:HigherTenderAmount currencyID="{$currency}"><xsl:value-of select="$max-value"/></cbc:HigherTenderAmount>
+					<xsl:variable name="min-value-double" select="fn:max(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL/ted:LOW)"/>
+					<xsl:variable name="min-value" select="(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL[ted:LOW = $min-value-double])[1]/ted:LOW"/>
+					<xsl:variable name="currency" select="(awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_RANGE_TOTAL[ted:LOW = $min-value-double])[1]/@CURRENCY"/>
+					<xsl:comment>Tender Value Lowest (BT-710)</xsl:comment>
+					<cbc:LowerTenderAmount currencyID="{$currency}"><xsl:value-of select="$min-value"/></cbc:LowerTenderAmount>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:comment>Tender Value Highest (BT-711)</xsl:comment>
+					<xsl:comment>Tender Value Lowest (BT-710)</xsl:comment>
+				</xsl:otherwise>
+			</xsl:choose>
+
 			
 			<!-- Winner Chosen (BT-142): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 			<xsl:comment>Winner Chosen (BT-142)</xsl:comment>
@@ -261,11 +265,6 @@ These instructions can be un-commented to show the variables
 	<!-- Lot Tenders -->
 	<xsl:apply-templates select="ted:AWARD_CONTRACT"/>
 
-
-	<!--
-	These instructions can be un-commented to show the source TED XML for the current group
-	<xsl:copy-of select="$contracts-unique-with-id" copy-namespaces="no"/>
-	-->
 
 	<!-- Settled Contract -->
 	<xsl:for-each select="$contracts-unique-with-id//contract">
@@ -442,7 +441,6 @@ These instructions can be un-commented to show the variables
 </xsl:template>	
 
 
-<!-- *** Start of Notice Value *** -->
 <!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
 <!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
 <!--If  the CAN TED XML notice  contains the element FRAMEWORK, then VAL_TOTAL should be mapped to BT-118 Notice Framework Value. Otherwise, VAL_TOTAL should be mapped to BT-161 Notice Value-->
@@ -452,24 +450,17 @@ These instructions can be un-commented to show the variables
 	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
 	<xsl:choose>
 		<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
+			<xsl:comment>Notice Value (BT-161)</xsl:comment>
+			<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
 			<cbc:EstimatedOverallFrameworkContractsAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallFrameworkContractsAmount>
 		</xsl:when>
 		<xsl:otherwise>
+			<xsl:comment>Notice Value (BT-161)</xsl:comment>
 		    <cbc:TotalAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:TotalAmount>	
+			<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>	
-
-<!--<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_RANGE_TOTAL">
-	<xsl:variable name="ted-value-highest" select="fn:normalize-space(ted:HIGH)"/>
-	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>	
-	--><!--WARNING: Notice Value (BT-161) exists in this TED XML notice as a range of values (VAL_RANGE_TOTAL). In order to not lose information, the highest value given (HIGH) was used.--><!--
-	<xsl:variable name="message">WARNING: Notice Value (BT-161) exists in this TED XML notice as a range of values (VAL_RANGE_TOTAL). In order to not lose information, the highest value given (HIGH) was used.</xsl:variable>
-	<xsl:message terminate="no" select="$message"/>
-	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-	<cbc:TotalAmount currencyID="{$currency}"><xsl:value-of select="$ted-value-highest"/></cbc:TotalAmount>	
-</xsl:template>-->
-<!-- *** End of Notice Value *** -->
 
 
 </xsl:stylesheet>
