@@ -20,6 +20,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://permalink.mercell.com/149974429.aspx</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -35,7 +36,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>5013</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">NO</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">NOR</cbc:IdentificationCode>
@@ -56,7 +56,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
@@ -162,6 +162,7 @@
       <!--Previous Planning Identifier (BT-125)-->
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
@@ -190,8 +191,8 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
-      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -373,11 +374,10 @@
             <cbc:OccurrenceDate>2021-04-08+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>12:00:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->

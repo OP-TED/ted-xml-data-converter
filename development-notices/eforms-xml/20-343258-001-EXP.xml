@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -289,8 +289,8 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
-      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -544,11 +544,10 @@
                <cbc:Description languageID="ENG">Via Enrico Fermi 2749, 21027 Ispra (VA), ITALY.</cbc:Description>
             </cac:OccurenceLocation>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->

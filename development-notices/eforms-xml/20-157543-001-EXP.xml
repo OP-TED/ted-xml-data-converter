@@ -57,8 +57,6 @@
                      <cbc:IssueDate>2020-03-18+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Realización de controles financieros sobre proyectos cofinanciados por la Unión Europea en el marco comunitario del periodo 2014-2020 en los fondos Feaga, Feader, FEMP, Feder y FSE</cbc:Title>
-                     <cbc:Title>Realización de controles financieros a efectuar a beneficiarios de subvenciones financiadas con cargo a los presupuestos de la Generalidad de Cataluña</cbc:Title>
-                     <cbc:Title>Realización de controles financieros a efectuar a centros educativos públicos no universitarios de la Generalitatde Catalunya con régimen de autonomía económica</cbc:Title>
                      <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <efac:ContractReference>
@@ -103,7 +101,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>08007</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">ES51</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
@@ -134,7 +131,6 @@
                            <cbc:CityName>Barcelona</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">ES51</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
@@ -159,7 +155,6 @@
                            <cbc:CityName>Barcelona</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">ES51</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
@@ -331,7 +326,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -493,7 +488,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -655,7 +650,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>

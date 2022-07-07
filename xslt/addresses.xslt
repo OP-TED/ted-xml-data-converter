@@ -185,7 +185,8 @@ These instructions can be un-commented to show the variables holding the organiz
 		<xsl:apply-templates select="ted:POSTAL_CODE"/>
 		<!-- Organization Country Subdivision (BT-507) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Country Subdivision (BT-507)</xsl:comment>
-		<xsl:apply-templates select="*:NUTS"/>
+		<!-- Convert only NUTS level 3 codes -->
+		<xsl:apply-templates select="*:NUTS[opfun:is-valid-nuts-code(@CODE)]"/>
 		<!-- Organization Country Code (BT-514) cardinality ? Optional for ALL subtypes -->
 		<xsl:comment>Organization Country Code (BT-514)</xsl:comment>
 		<xsl:apply-templates select="ted:COUNTRY"/>

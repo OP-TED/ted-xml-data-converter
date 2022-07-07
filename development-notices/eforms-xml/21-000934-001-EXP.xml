@@ -11,7 +11,50 @@
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
-            <efext:EformsExtension><!-- efac:NoticeResult here --><!--Notice SubType (OPP-070)-->
+            <efext:EformsExtension>
+               <efac:NoticeResult><!--Notice Value (BT-161)-->
+                  <cbc:TotalAmount currencyID="EUR">1490000.00</cbc:TotalAmount>
+                  <!--Notice Framework Value (BT-118)-->
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                  </efac:LotResult>
+                  <efac:LotTender>
+                     <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">1490000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                  </efac:LotTender>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-12-15+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Assessment Support of draft CAP Strategic Plans with Respect to Environmental Requirements</cbc:Title>
+                     <efac:ContractReference>
+                        <cbc:ID>07.0202/2020/839227/ETU/ENV.D.1</cbc:ID>
+                     </efac:ContractReference>
+                  </efac:SettledContract>
+                  <efac:TenderingParty>
+                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer>
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
                   <cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
                </efac:NoticeSubType>
@@ -20,6 +63,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://ec.europa.eu/environment/funding/calls_en.htm</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -35,7 +79,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>B-1049</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">BE10</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
@@ -48,7 +91,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
@@ -63,7 +106,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>1040</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">BE</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
@@ -73,7 +115,9 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
@@ -88,7 +132,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>10717</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">DE</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
@@ -98,7 +141,9 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
                         </cac:PartyIdentification>
@@ -113,7 +158,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>1060</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">BE</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
@@ -125,6 +169,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>http://curia.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
@@ -329,6 +374,7 @@
       </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
@@ -358,8 +404,8 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
-      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -515,9 +561,11 @@
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
+         </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Estimated Maximum Value (BT-157)-->
@@ -584,4 +632,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
 </ContractAwardNotice>

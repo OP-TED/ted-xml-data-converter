@@ -117,13 +117,6 @@
                      <cbc:IssueDate>2021-04-13+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Pakiet nr 1</cbc:Title>
-                     <cbc:Title>Pakiet nr 2</cbc:Title>
-                     <cbc:Title>Pakiet nr 3</cbc:Title>
-                     <cbc:Title>Pakiet nr 4</cbc:Title>
-                     <cbc:Title>Pakiet nr 5</cbc:Title>
-                     <cbc:Title>Pakiet nr 6</cbc:Title>
-                     <cbc:Title>Pakiet nr 7</cbc:Title>
-                     <cbc:Title>Pakiet nr 8</cbc:Title>
                      <efac:ContractReference>
                         <cbc:ID>1</cbc:ID>
                      </efac:ContractReference>
@@ -134,14 +127,7 @@
                      <!--Contract Conclusion Date (BT-145)-->
                      <cbc:IssueDate>2021-04-20+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
-                     <cbc:Title>Pakiet nr 1</cbc:Title>
-                     <cbc:Title>Pakiet nr 2</cbc:Title>
-                     <cbc:Title>Pakiet nr 3</cbc:Title>
                      <cbc:Title>Pakiet nr 4</cbc:Title>
-                     <cbc:Title>Pakiet nr 5</cbc:Title>
-                     <cbc:Title>Pakiet nr 6</cbc:Title>
-                     <cbc:Title>Pakiet nr 7</cbc:Title>
-                     <cbc:Title>Pakiet nr 8</cbc:Title>
                      <efac:ContractReference>
                         <cbc:ID>4</cbc:ID>
                      </efac:ContractReference>
@@ -230,7 +216,6 @@
                            <cbc:CityName>Zabrze</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">PL22</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
@@ -257,7 +242,6 @@
                            <cbc:CityName>Zabrze</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">PL22</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
@@ -311,7 +295,6 @@
                            <cbc:CityName>Września</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">PL41</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
@@ -484,7 +467,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -686,7 +669,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -888,7 +871,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1090,7 +1073,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1292,7 +1275,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1494,7 +1477,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1696,7 +1679,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1898,7 +1881,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0008</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>

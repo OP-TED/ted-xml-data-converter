@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                     xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                     xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                     xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
                <efac:NoticeResult><!--Notice Value (BT-161)-->
                   <cbc:TotalAmount currencyID="EUR">6738400.00</cbc:TotalAmount>
+                  <!--Notice Framework Value (BT-118)-->
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                  </efac:LotResult>
                   <efac:LotTender>
                      <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      <!--Tender Rank (BT-171)-->
@@ -22,6 +27,16 @@
                         <cbc:PayableAmount currencyID="EUR">6680000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
                   </efac:LotTender>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2021-06-16+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <efac:ContractReference>
+                        <cbc:ID/>
+                     </efac:ContractReference>
+                  </efac:SettledContract>
                   <efac:TenderingParty>
                      <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
                      <efac:Tenderer>
@@ -93,7 +108,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>619 00</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">CZ</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">CZE</cbc:IdentificationCode>
@@ -241,8 +255,8 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot><!--Only one Lot in the TED notice-->
-      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -332,12 +346,10 @@
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
             <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->

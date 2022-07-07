@@ -304,7 +304,7 @@ These instructions can be un-commented to show the variables
 			
 		<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
 		<xsl:comment>Contract Title (BT-721)</xsl:comment>
--->		<xsl:apply-templates select="awards/ted:AWARD_CONTRACT[1]/ted:TITLE"/>
+		<xsl:apply-templates select="awards/ted:AWARD_CONTRACT[1]/ted:TITLE"/>
 
 		<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:URI -->
 		

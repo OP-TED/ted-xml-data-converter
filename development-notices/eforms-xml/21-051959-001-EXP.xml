@@ -20,6 +20,7 @@
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://lisa.sachsen-anhalt.de/</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -52,7 +53,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
@@ -164,6 +165,7 @@
       <!--Previous Planning Identifier (BT-125)-->
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
@@ -192,7 +194,7 @@
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -381,11 +383,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -462,7 +463,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -651,11 +652,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -732,7 +732,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -921,11 +921,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -1002,7 +1001,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1191,11 +1190,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -1272,7 +1270,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1461,11 +1459,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -1542,7 +1539,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -1731,11 +1728,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -1812,7 +1808,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2001,11 +1997,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -2082,7 +2077,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0008</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2271,11 +2266,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -2352,7 +2346,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0009</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2541,11 +2535,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -2622,7 +2615,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0010</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -2811,11 +2804,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -2892,7 +2884,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0011</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3081,11 +3073,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -3162,7 +3153,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0012</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3351,11 +3342,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -3432,7 +3422,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 11000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 11000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-11000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3621,11 +3611,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -3702,7 +3691,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 12000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 12000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-12000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -3891,11 +3880,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -3972,7 +3960,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 21000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 21000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-21000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4161,11 +4149,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -4242,7 +4229,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 22000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 22000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-22000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4431,11 +4418,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -4512,7 +4498,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 31000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 31000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-31000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4701,11 +4687,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -4782,7 +4767,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 33000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 33000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-33000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -4971,11 +4956,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -5052,7 +5036,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 41000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 41000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-41000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -5241,11 +5225,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -5322,7 +5305,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 42000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 42000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-42000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -5511,11 +5494,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -5592,7 +5574,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 51000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 51000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-51000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -5781,11 +5763,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -5862,7 +5843,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 52000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 52000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-52000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6051,11 +6032,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -6132,7 +6112,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 61000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 61000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-61000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6321,11 +6301,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -6402,7 +6381,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 62000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 62000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-62000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6591,11 +6570,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -6672,7 +6650,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 71000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 71000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-71000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -6861,11 +6839,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -6942,7 +6919,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 81000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 81000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-81000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -7131,11 +7108,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -7212,7 +7188,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 91000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 91000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-91000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -7401,11 +7377,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -7482,7 +7457,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 101000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 101000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-101000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -7671,11 +7646,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -7752,7 +7726,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 111000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 111000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-111000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -7941,11 +7915,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
@@ -8022,7 +7995,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!-- WARNING: Cannot convert original TED lot number of 121000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 121000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-121000</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
       <cac:TenderingTerms>
@@ -8211,11 +8184,10 @@
             <cbc:OccurrenceDate>2021-03-01+01:00</cbc:OccurrenceDate>
             <cbc:OccurrenceTime>08:01:00+01:00</cbc:OccurrenceTime>
          </cac:OpenTenderEvent>
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
          <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
             <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->

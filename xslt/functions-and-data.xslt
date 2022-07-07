@@ -148,11 +148,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:param name="nuts-codes" as="xs:string*"/>
 		<xsl:for-each select="$nuts-codes">
 			<xsl:choose>
-				<xsl:when test="fn:string-length(.) > 4"><xsl:value-of select="."/></xsl:when>
+				<xsl:when test="opfun:is-valid-nuts-code(.)"><xsl:value-of select="."/></xsl:when>
 			</xsl:choose>
 		</xsl:for-each>
 </xsl:function>
 
+<!-- Function opfun:is-valid-nut-code returns true if the given string is a valid NUTS code (string length > 4) -->
+<xsl:function name="opfun:is-valid-nuts-code" as="xs:boolean">
+	<xsl:param name="nuts-code" as="xs:string"/>
+	<xsl:sequence select="fn:string-length($nuts-code) > 4"/>
+</xsl:function>
 
 <!-- FORM TYPES AND SUBTYPES -->
 

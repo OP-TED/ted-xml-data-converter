@@ -15,7 +15,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- For form F02, the element OBJECT_DESCR is the same, whether there is one lot (NO_LOT_DIVISION) or more than one lot (LOT_DIVISION) -->
 		<!-- But, for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
 		<!-- In TED LOT_NO, if present, usually contains a positive integer. This will be converted to the new eForms format -->
-		<xsl:if test="fn:true()">
+
+		<!-- Purpose Lot Identifier (BT-137): eForms documentation cardinality (Lot) = 1 | eForms Regulation Annex table conditions = Forbidden for PIN subtypes 1-3; Optional (O or EM or CM) for all other subtypes -->
+		<xsl:comment>Purpose Lot Identifier (BT-137)</xsl:comment>
 		<xsl:choose>
 			<!-- When LOT_NO exists -->
 			<xsl:when test="ted:LOT_NO">
@@ -39,9 +41,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<!-- This is the only Lot in the notice -->
 					<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
 						<!-- tested -->
-						<!-- use identifier LOT-0001 -->
+						<!-- use identifier LOT-0000 -->
 						<xsl:comment>Only one Lot in the TED notice</xsl:comment>
-						<cbc:ID schemeName="Lot"><xsl:value-of select="'LOT-0001'"/></cbc:ID>
+						<cbc:ID schemeName="Lot"><xsl:value-of select="'LOT-0000'"/></cbc:ID>
 					</xsl:when>
 					<xsl:otherwise>
 						<!-- not tested, no examples found -->
@@ -51,7 +53,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				</xsl:choose>
 			</xsl:otherwise>
 		</xsl:choose>
-		</xsl:if>
 
 		<xsl:call-template name="lot-tendering-terms"/>
 		<xsl:call-template name="lot-tendering-process"/>
@@ -1110,7 +1111,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					</cac:Address>
 				</cac:RealizedLocation>
 			</xsl:when>
-				<!-- No valid MAIN_SITE and at least one valid NUTS code -->
+				<!-- Valid MAIN_SITE and no valid NUTS codes -->
 			<xsl:when test="fn:normalize-space(ted:MAIN_SITE) and fn:empty($valid-nuts)">
 				<!-- valid MAIN_SITE exists but no valid NUTS codes -->
 				<xsl:call-template name="main-site">
