@@ -18,41 +18,21 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 		<!-- Purpose Lot Identifier (BT-137): eForms documentation cardinality (Lot) = 1 | eForms Regulation Annex table conditions = Forbidden for PIN subtypes 1-3; Optional (O or EM or CM) for all other subtypes -->
 		<xsl:comment>Purpose Lot Identifier (BT-137)</xsl:comment>
+		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+		<xsl:variable name="lot-info" select="$lot-numbers-map//lot[path = $path]"/>
+		
 		<xsl:choose>
 			<!-- When LOT_NO exists -->
-			<xsl:when test="ted:LOT_NO">
-				<xsl:choose>
-					<!-- LOT_NO is a positive integer between 1 and 9999 -->
-					<xsl:when test="fn:matches(ted:LOT_NO, '^[1-9][0-9]{0,3}$')">
-						<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/></cbc:ID>
-					</xsl:when>
-					<xsl:otherwise>
-					<!-- WARNING: Cannot convert original TED lot number to eForms -->
-						<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:variable>
-						<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-						<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
-						<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/></cbc:ID>
-					</xsl:otherwise>							
-				</xsl:choose>
+			<xsl:when test="fn:not($lot-info/is-convertible)">
+				<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:variable>
+				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+				<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
 			</xsl:when>
-			<!-- When LOT_NO does not exist -->
-			<xsl:otherwise>
-				<xsl:choose>
-					<!-- This is the only Lot in the notice -->
-					<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
-						<!-- tested -->
-						<!-- use identifier LOT-0000 -->
-						<xsl:comment>Only one Lot in the TED notice</xsl:comment>
-						<cbc:ID schemeName="Lot"><xsl:value-of select="'LOT-0000'"/></cbc:ID>
-					</xsl:when>
-					<xsl:otherwise>
-						<!-- not tested, no examples found -->
-						<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
-						<cbc:ID schemeName="Lot"><xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/></cbc:ID>
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:otherwise>
+			<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
+				<xsl:comment>Only one Lot in the TED notice</xsl:comment>
+			</xsl:when>
 		</xsl:choose>
+		<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
 
 		<xsl:call-template name="lot-tendering-terms"/>
 		<xsl:call-template name="lot-tendering-process"/>

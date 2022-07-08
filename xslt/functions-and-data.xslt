@@ -124,6 +124,52 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</countries>
 </xsl:variable>
 
+<!-- Variable lot-numbers-map holds a mapping of the TED XML Lots (OBJECT_DESCR XPath) to the calculated eForms Purpose Lot Identifier (BT-137) -->
+<xsl:variable name="lot-numbers-map">
+	<xsl:variable name="count-lots" select="fn:count($ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR)"/>
+	<lots>
+		<xsl:for-each select="$ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR">
+			<lot>
+				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NO"/></xsl:variable>
+				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
+				<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+				<lot-no><xsl:value-of select="$lot-no"/></lot-no>
+				<xsl:if test="$lot-no-is-convertible"><is-convertible/></xsl:if>
+				<lot-id>
+					<xsl:choose>
+						<!-- When LOT_NO exists -->
+						<xsl:when test="$lot-no">
+							<xsl:choose>
+								<!-- LOT_NO is a positive integer between 1 and 9999 -->
+								<xsl:when test="$lot-no-is-convertible">
+									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/>
+								</xsl:otherwise>							
+							</xsl:choose>
+						</xsl:when>
+						<!-- When LOT_NO does not exist -->
+						<xsl:otherwise>
+							<xsl:choose>
+								<!-- This is the only Lot in the notice -->
+								<xsl:when test="$count-lots = 1">
+									<!-- use identifier LOT-0000 -->
+									<xsl:value-of select="'LOT-0000'"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<!-- not tested, no examples found -->
+									<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
+									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:otherwise>
+					</xsl:choose>
+				</lot-id>
+			</lot>
+		</xsl:for-each>
+	</lots>
+</xsl:variable>
 
 <!-- #### GLOBAL FUNCTIONS #### -->
 

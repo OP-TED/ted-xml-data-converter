@@ -257,7 +257,21 @@ These instructions can be un-commented to show the variables
 			<!-- Contract Identifier Reference (OPT-315): eForms documentation cardinality (LotResult) = * | efac:SettledContract​/cbc:ID -->
 			<!-- Vehicle Type (OPT-155): eForms documentation cardinality (LotResult) = * | efac:StrategicProcurementStatistics​/efbc:StatisticsCode -->
 			<!-- Vehicle Numeric (OPT-156): eForms documentation cardinality (LotResult) = * | efac:StrategicProcurementStatistics​/efbc:StatisticsNumeric -->
-			<!-- Result Lot Identifier (BT-13713): eForms documentation cardinality (LotResult) = 1 | efac:TenderLot​/cbc:ID -->
+			<!-- Result Lot Identifier (BT-13713): eForms documentation cardinality (LotResult) = 1 -->
+			<xsl:comment>Result Lot Identifier (BT-13713)</xsl:comment>
+			<!-- Get Result Lot Identifier from first Lot with matching LOT_NO. If no matching Lot, use AWARD_CONTRACT/LOT_NO -->
+			<efac:TenderLot>
+				<xsl:variable name="lot-no" select="@lot-number"/>
+				<xsl:variable name="lotid" select="$lot-numbers-map//lot[lot-no = $lot-no][1]/fn:string(lot-id)"/>
+				<xsl:choose>
+					<xsl:when test="$lotid">
+						<cbc:ID schemeName="Lot"><xsl:value-of select="$lotid"/></cbc:ID>
+					</xsl:when>
+					<xsl:otherwise>
+						<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-no"/></cbc:ID>
+					</xsl:otherwise>
+				</xsl:choose>
+			</efac:TenderLot>
 		</efac:LotResult>
 	</xsl:for-each>
 		
@@ -274,7 +288,6 @@ These instructions can be un-commented to show the variables
 			<xsl:comment>Contract Technical Identifier (OPT-316)</xsl:comment>
 			<cbc:ID schemeName="contract"><xsl:value-of select="contract-id"/></cbc:ID>
 		
-	<!-- efac:SettledContract -->
 		
 			<!-- Winner Decision Date (BT-1451): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtype 36, Optional (O or EM or CM) for CAN subtypes 25-35, 37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:AwardDate -->
 			<xsl:comment>Winner Decision Date (BT-1451)</xsl:comment>

@@ -18,6 +18,10 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotResult>
                   <efac:LotTender>
                      <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
