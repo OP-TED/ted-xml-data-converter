@@ -206,22 +206,31 @@ These instructions can be un-commented to show the variables holding the organiz
 <!-- Create cac:PostalAddress structure -->
 
 <xsl:template name="contact">
-	<xsl:if test="ted:PHONE|ted:FAX|ted:E_MAIL|ted:CONTACT_POINT">
-		<cac:Contact>
-			<!-- Organization Contact Point (BT-502) cardinality ? Optional for ALL subtypes -->
+	<!-- Some ADDRESS_* elements (especially ADDRESS_CONTRACTOR) do not have any "contact" elements -->
+	<xsl:choose>
+		<xsl:when test="ted:PHONE|ted:FAX|ted:E_MAIL|ted:CONTACT_POINT">
+			<cac:Contact>
+				<!-- Organization Contact Point (BT-502) cardinality ? Optional for ALL subtypes -->
+				<xsl:comment>Organization Contact Point (BT-502)</xsl:comment>
+				<xsl:apply-templates select="ted:CONTACT_POINT"/>
+				<!-- Organization Contact Telephone Number (BT-503) cardinality ? Optional for ALL subtypes -->
+				<xsl:comment>Organization Contact Telephone Number (BT-503)</xsl:comment>
+				<xsl:apply-templates select="ted:PHONE"/>
+				<!-- Organization Contact Fax (BT-739) cardinality ? Optional for ALL subtypes -->
+				<xsl:comment>Organization Contact Fax (BT-739)</xsl:comment>
+				<xsl:apply-templates select="ted:FAX"/>
+				<!-- Organization Contact Email Address (BT-506) cardinality ? Optional for ALL subtypes -->
+				<xsl:comment>Organization Contact Email Address (BT-506)</xsl:comment>
+				<xsl:apply-templates select="ted:E_MAIL"/>
+			</cac:Contact>
+		</xsl:when>
+		<xsl:otherwise>
 			<xsl:comment>Organization Contact Point (BT-502)</xsl:comment>
-			<xsl:apply-templates select="ted:CONTACT_POINT"/>
-			<!-- Organization Contact Telephone Number (BT-503) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization Contact Telephone Number (BT-503)</xsl:comment>
-			<xsl:apply-templates select="ted:PHONE"/>
-			<!-- Organization Contact Fax (BT-739) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization Contact Fax (BT-739)</xsl:comment>
-			<xsl:apply-templates select="ted:FAX"/>
-			<!-- Organization Contact Email Address (BT-506) cardinality ? Optional for ALL subtypes -->
 			<xsl:comment>Organization Contact Email Address (BT-506)</xsl:comment>
-			<xsl:apply-templates select="ted:E_MAIL"/>
-		</cac:Contact>
-	</xsl:if>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 
