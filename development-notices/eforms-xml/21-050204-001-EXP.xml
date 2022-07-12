@@ -22,13 +22,22 @@
                         <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
                      <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">200000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotTender>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -36,16 +45,23 @@
                      <!--Contract Conclusion Date (BT-145)-->
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Production and Supply of Branded Promotional Material</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
                      <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>ENISA F-EDO-20-C32</cbc:ID>
                      </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
                   </efac:SettledContract>
-                  <efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
-                     <efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
                </efac:NoticeResult>
@@ -114,6 +130,10 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->

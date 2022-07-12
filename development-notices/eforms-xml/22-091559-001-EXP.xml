@@ -79,63 +79,107 @@
                         <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
                      <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotTender>
-                  <efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
                      <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotTender>
-                  <efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
                      <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotTender>
-                  <efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
                      <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotTender>
-                  <efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
                      <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotTender>
-                  <efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
                      <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
-                  </efac:LotTender>
-                  <efac:LotTender>
-                     <cbc:ID schemeName="tender">TEN-0007</cbc:ID>
-                     <!--Tender Rank (BT-171)-->
-                     <!--Tender Variant (BT-193)-->
-                     <cac:LegalMonetaryTotal>
-                        <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
-                     </cac:LegalMonetaryTotal>
-                  </efac:LotTender>
-                  <efac:LotTender>
-                     <cbc:ID schemeName="tender">TEN-0008</cbc:ID>
-                     <!--Tender Rank (BT-171)-->
-                     <!--Tender Variant (BT-193)-->
-                     <cac:LegalMonetaryTotal>
-                        <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
-                     </cac:LegalMonetaryTotal>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+                     </efac:TenderLot>
                   </efac:LotTender>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -144,9 +188,15 @@
                      <cbc:IssueDate>2021-12-29+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Cefuroxim – Gebietslose 3, 7, 8</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>11</cbc:ID>
                      </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
                   </efac:SettledContract>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0002</cbc:ID>
@@ -155,9 +205,15 @@
                      <cbc:IssueDate>2021-12-29+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Cefuroxim – Gebietslose 3, 7, 8</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>12</cbc:ID>
                      </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
                   </efac:SettledContract>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0003</cbc:ID>
@@ -166,9 +222,15 @@
                      <cbc:IssueDate>2021-12-29+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Cefuroxim – Gebietslose 3, 7, 8</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>13</cbc:ID>
                      </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
                   </efac:SettledContract>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0004</cbc:ID>
@@ -177,9 +239,15 @@
                      <cbc:IssueDate>2021-12-29+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Roxithromycin - Gebietslos 7</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>15</cbc:ID>
                      </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
                   </efac:SettledContract>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0005</cbc:ID>
@@ -188,9 +256,15 @@
                      <cbc:IssueDate>2021-12-29+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Roxithromycin - Gebietslos 7</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>16</cbc:ID>
                      </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
                   </efac:SettledContract>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0006</cbc:ID>
@@ -199,43 +273,55 @@
                      <cbc:IssueDate>2021-12-29+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
                      <cbc:Title>Roxithromycin - Gebietslos 7</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>17</cbc:ID>
                      </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     </efac:LotTender>
                   </efac:SettledContract>
-                  <efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
-                     <efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
-                     <efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
-                     <efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0014</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
-                     <efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0015</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
                         <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
                      </efac:Tenderer>
-                     <efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0016</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
                         <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
-                     <efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0017</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
                </efac:NoticeResult>
@@ -622,6 +708,10 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
@@ -643,6 +733,10 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
@@ -664,6 +758,10 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
@@ -685,6 +783,10 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
@@ -706,6 +808,10 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
@@ -727,6 +833,10 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
