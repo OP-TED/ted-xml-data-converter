@@ -20,6 +20,14 @@
                      <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
                         <cbc:ID schemeName="Lot">N/A</cbc:ID>

@@ -133,16 +133,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<xsl:variable name="award-count" select="fn:count(current-group())"/>
 					<xsl:variable name="this-group-number" select="fn:position()"/>
 					<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
-					<lotresult number="{$this-group-number}" lot-number="{$lot-number}" award-count="{$award-count}">
+					<lot-result number="{$this-group-number}" lot-number="{$lot-number}" award-count="{$award-count}">
 						<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
-						<lotresult-id><xsl:text>LTR-</xsl:text><xsl:value-of select="$typepos"/></lotresult-id>
+						<lot-result-id><xsl:text>LTR-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
 						<awards>
 							<xsl:for-each select="fn:current-group()">
 								<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
 								<xsl:copy-of select="." copy-namespaces="no"/>
 							</xsl:for-each>
 						</awards>
-					</lotresult>
+					</lot-result>
 				</xsl:for-each-group>
 			</xsl:when>
 			<!-- Where no DPS or FRAMEWORK, create a LotResult for each AWARD_CONTRACT -->
@@ -152,14 +152,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<xsl:variable name="award-count" select="'1'"/>
 					<xsl:variable name="this-award-number" select="fn:position()"/>
 					<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
-					<lotresult number="{$this-award-number}" lot-number="{$lot-number}" award-count="{$award-count}">
+					<lot-result number="{$this-award-number}" lot-number="{$lot-number}" award-count="{$award-count}">
 						<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
-						<lotresult-id><xsl:text>LTR-</xsl:text><xsl:value-of select="$typepos"/></lotresult-id>
+						<lot-result-id><xsl:text>LTR-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
 						<awards>
 							<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
 							<xsl:copy-of select="." copy-namespaces="no"/>
 						</awards>
-					</lotresult>
+					</lot-result>
 				</xsl:for-each>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -177,8 +177,8 @@ These instructions can be un-commented to show the variables
 <xsl:copy-of select="$contracts-unique-with-id" copy-namespaces="no"/>
 <xsl:copy-of select="$lot-results" copy-namespaces="no"/>
 <xsl:copy-of select="$ted-contractor-groups-unique-with-id" copy-namespaces="no"/>
-
 -->
+
 
 
 
@@ -194,9 +194,9 @@ These instructions can be un-commented to show the variables
 
 
 	<!-- efac:LotResult -->
-	<xsl:for-each select="$lot-results//lotresult">
+	<xsl:for-each select="$lot-results//lot-result">
 		<efac:LotResult>
-	
+			<xsl:variable name="paths" select="awards/path/fn:string()"/>
 			<!-- Tender Value Highest (BT-711): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->
 			<!-- Tender Value Lowest (BT-710): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->		
 			<xsl:choose>
@@ -208,7 +208,7 @@ These instructions can be un-commented to show the variables
 								<xsl:text>WARNING: Multiple different currencies (</xsl:text>
 								<xsl:value-of select="fn:string-join($currencies, ', ')"/>
 								<xsl:text>) were found in VAL_RANGE_TOTAL elements in AWARD_CONTRACT elements used for LotResult </xsl:text>
-								<xsl:value-of select="lotresult-id"/>
+								<xsl:value-of select="lot-result-id"/>
 								<xsl:text>.</xsl:text>
 							</xsl:variable>
 							<xsl:message terminate="no" select="$message"/>
@@ -238,7 +238,7 @@ These instructions can be un-commented to show the variables
 				<!-- WARNING: Both AWARDED_CONTRACT and NO_AWARDED_CONTRACT elements were found in AWARD_CONTRACT elements used for LotResult -->
 				<xsl:variable name="message">
 					<xsl:text>WARNING: Both AWARDED_CONTRACT and NO_AWARDED_CONTRACT elements were found in AWARD_CONTRACT elements used for LotResult </xsl:text>
-					<xsl:value-of select="lotresult-id"/>
+					<xsl:value-of select="lot-result-id"/>
 					<xsl:text>.</xsl:text>
 				</xsl:variable>
 				<xsl:message terminate="no" select="$message"/>
@@ -268,6 +268,16 @@ These instructions can be un-commented to show the variables
 			<!-- Buyer Review Requests Count (BT-635): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:AppealRequestsStatistics[efbc:StatisticsCode​/@listName='irregularity-type']​/efbc:StatisticsNumeric -->
 			<!-- Not Awarded Reason (BT-144): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:DecisionReason​/efbc:DecisionReasonCode -->
 			<!-- Tender Identifier Reference (OPT-320): eForms documentation cardinality (LotResult) = * | efac:LotTender​/cbc:ID -->
+			<xsl:comment>Tender Identifier Reference (OPT-320)</xsl:comment>
+			<xsl:variable name="lot-tender-ids" select="$lot-tenders-unique-with-id//lot-tender[path = $paths]/lot-tender-id/fn:string()"/>
+			
+			<xsl:for-each select="$lot-tender-ids">
+				<efac:LotTender>
+					<cbc:ID schemeName="tender"><xsl:value-of select="."/></cbc:ID>
+				</efac:LotTender>
+			</xsl:for-each>
+
+			
 			<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
 			<!-- Framework Maximum Value (BT-709): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:MaximumValueAmount -->
 			
@@ -276,6 +286,17 @@ These instructions can be un-commented to show the variables
 			<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsNumeric -->
 	
 			<!-- Contract Identifier Reference (OPT-315): eForms documentation cardinality (LotResult) = * | efac:SettledContract​/cbc:ID -->
+			<xsl:comment>Contract Identifier Reference (OPT-315)</xsl:comment>
+			<xsl:variable name="contract-ids" select="$contracts-unique-with-id//contract[awards/path = $paths]/contract-id/fn:string()"/>
+			<xsl:for-each select="$contract-ids">
+				<efac:SettledContract>
+					<cbc:ID schemeName="contract"><xsl:value-of select="."/></cbc:ID>
+				</efac:SettledContract>
+			</xsl:for-each>
+			
+
+			
+			
 			<!-- Vehicle Type (OPT-155): eForms documentation cardinality (LotResult) = * | efac:StrategicProcurementStatistics​/efbc:StatisticsCode -->
 			<!-- Vehicle Numeric (OPT-156): eForms documentation cardinality (LotResult) = * | efac:StrategicProcurementStatistics​/efbc:StatisticsNumeric -->
 			<!-- Result Lot Identifier (BT-13713): eForms documentation cardinality (LotResult) = 1 -->

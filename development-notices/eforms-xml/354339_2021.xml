@@ -17,6 +17,8 @@
                      <cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <efbc:DPSTerminationIndicator>true</efbc:DPSTerminationIndicator>
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
                         <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
