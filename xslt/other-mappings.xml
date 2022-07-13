@@ -356,6 +356,23 @@
 	</mapping>
 </selection-criterion-types>
 
+<non-award-justification>
+	<description>Not Awarded Reason (BT-144)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/AWARD_CONTRACT/NO_AWARDED_CONTRACT/(PROCUREMENT_DISCONTINUED|PROCUREMENT_UNSUCCESSFUL)/fn:local-name()</ted-context>
+	<eforms-context>/ContractAwardNotice/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:DecisionReason/efbc:DecisionReasonCode</eforms-context>
+	<eforms-codelist>non-award-justification</eforms-codelist>
+	<mapping>
+		<ted-value>PROCUREMENT_DISCONTINUED</ted-value>
+		<eforms-value>other</eforms-value>
+		<label>Other</label>
+	</mapping>
+	<mapping>
+		<ted-value>PROCUREMENT_UNSUCCESSFUL</ted-value>
+		<eforms-value>all-rej</eforms-value>
+		<label>All tenders, requests to participate or projects were withdrawn or found inadmissible</label>
+	</mapping>
+		
+</non-award-justification> 
  
  
 </mappings>
