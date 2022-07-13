@@ -486,27 +486,28 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 <xsl:template name="contract-conclusion-date">
-<xsl:comment>Contract Conclusion Date (BT-145)</xsl:comment>
-			<!-- Get list of unique values for DATE_CONCLUSION_CONTRACT for this group -->
-			<xsl:variable name="date-conclusion-contract-list" select="fn:distinct-values(.//*:AWARDED_CONTRACT/*:DATE_CONCLUSION_CONTRACT)" as="xs:string*"/>
-			<xsl:choose>
-				<xsl:when test="fn:count($date-conclusion-contract-list) = 1">
-					<cbc:IssueDate><xsl:value-of select="$date-conclusion-contract-list[1]"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
-				</xsl:when>
-				<xsl:when test="fn:count($date-conclusion-contract-list) > 1">
-					<!-- WARNING: Multiple different dates were found in DATE_CONCLUSION_CONTRACT in the AWARD_CONTRACTs sharing the same CONTRACT_NO value -->
-					<xsl:variable name="message">
-						<xsl:text>WARNING: Multiple different dates were found in DATE_CONCLUSION_CONTRACT in the AWARD_CONTRACTs sharing the same CONTRACT_NO value of </xsl:text>
-						<xsl:value-of select="@contract-number"/>
-						<xsl:text>.</xsl:text>
-					</xsl:variable>
-					<xsl:message terminate="no" select="$message"/>
-					<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-					<xsl:for-each select="$date-conclusion-contract-list">
-						<cbc:IssueDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
-					</xsl:for-each>
-				</xsl:when>
-			</xsl:choose>
+	<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes cbc:IssueDate -->
+	<xsl:comment>Contract Conclusion Date (BT-145)</xsl:comment>
+	<!-- Get list of unique values for DATE_CONCLUSION_CONTRACT for this group -->
+	<xsl:variable name="date-conclusion-contract-list" select="fn:distinct-values(.//*:AWARDED_CONTRACT/*:DATE_CONCLUSION_CONTRACT)" as="xs:string*"/>
+	<xsl:choose>
+		<xsl:when test="fn:count($date-conclusion-contract-list) = 1">
+			<cbc:IssueDate><xsl:value-of select="$date-conclusion-contract-list[1]"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
+		</xsl:when>
+		<xsl:when test="fn:count($date-conclusion-contract-list) > 1">
+			<!-- WARNING: Multiple different dates were found in DATE_CONCLUSION_CONTRACT in the AWARD_CONTRACTs sharing the same CONTRACT_NO value -->
+			<xsl:variable name="message">
+				<xsl:text>WARNING: Multiple different dates were found in DATE_CONCLUSION_CONTRACT in the AWARD_CONTRACTs sharing the same CONTRACT_NO value of </xsl:text>
+				<xsl:value-of select="@contract-number"/>
+				<xsl:text>.</xsl:text>
+			</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			<xsl:for-each select="$date-conclusion-contract-list">
+				<cbc:IssueDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
+			</xsl:for-each>
+		</xsl:when>
+	</xsl:choose>
 </xsl:template>
 
 <!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
@@ -536,7 +537,7 @@ These instructions can be un-commented to show the variables
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="justification" select="$mappings//non-award-justification/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 	<xsl:variable name="message">
-		<xsl:text>WARNING: for Not Awarded Reason (BT-144), source TED XML notice groups the two following justifications: 1) no tenders or requests to participate were received or 2) all were rejected. The codelist value "all-rej" (eForms equivalent of the second TED justification) has been used as a default.</xsl:text>
+		<xsl:text>WARNING: The TED XML element PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default.</xsl:text>
 	</xsl:variable>
 	<xsl:message terminate="no" select="$message"/>
 	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
