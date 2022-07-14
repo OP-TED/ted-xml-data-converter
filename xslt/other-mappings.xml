@@ -373,6 +373,38 @@
 	</mapping>
 		
 </non-award-justification> 
+
+<received-submission-type>
+	<description>Received Submissions Type (BT-760)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/AWARD_CONTRACT/AWARDED_CONTRACT/TENDERS/*/fn:local-name()</ted-context>
+	<eforms-context>/ContractAwardNotice/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:ReceivedSubmissionsStatistics/efbc:StatisticsCode</eforms-context>
+	<eforms-codelist>received-submission-type</eforms-codelist>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED</ted-value>
+		<eforms-value>tenders</eforms-value>
+		<label>Tenders</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_SME</ted-value>
+		<eforms-value>t-sme</eforms-value>
+		<label>Tenders from micro, small or medium tenderers</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_OTHER_EU</ted-value>
+		<eforms-value>t-oth-eea</eforms-value>
+		<label>Tenders from tenderers registered in other European Economic Area countries than the country of the buyer</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_NON_EU</ted-value>
+		<eforms-value>t-no-eea</eforms-value>
+		<label>Tenders from tenders registered in countries outside of the European Economic Area</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_EMEANS</ted-value>
+		<eforms-value>t-esubm</eforms-value>
+		<label>Tenders submitted electronically</label>
+	</mapping>
+</received-submission-type> 
  
  
 </mappings>

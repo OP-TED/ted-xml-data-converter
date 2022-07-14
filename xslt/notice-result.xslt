@@ -286,7 +286,7 @@ These instructions can be un-commented to show the variables
 			
 			<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsCode -->
 			<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsNumeric -->
-			
+			<xsl:call-template name="received-submissions-type"/>
 	
 			<!-- Contract Identifier Reference (OPT-315): eForms documentation cardinality (LotResult) = * | efac:SettledContract​/cbc:ID -->
 			<xsl:comment>Contract Identifier Reference (OPT-315)</xsl:comment>
@@ -543,6 +543,23 @@ These instructions can be un-commented to show the variables
 	 <efac:DecisionReason>
         <efbc:DecisionReasonCode listName="non-award-justification"><xsl:value-of select="$justification"/></efbc:DecisionReasonCode>
     </efac:DecisionReason>
+</xsl:template>
+
+<xsl:template name="received-submissions-type">
+	<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsCode -->
+	<xsl:comment>Received Submissions Type (BT-760)</xsl:comment>
+	<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsNumeric -->
+	<xsl:comment>Received Submissions Count (BT-759)</xsl:comment>
+	<xsl:for-each select="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:TENDERS/*">	
+		<xsl:variable name="element-name" select="fn:local-name(.)"/>
+		<xsl:variable name="submission-type" select="$mappings//received-submission-type/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>	
+		<efac:ReceivedSubmissionsStatistics>
+			<!-- # UNPUB-16 : Received Submissions Type (BT-760) publication will be delayed -->
+			<efbc:StatisticsCode listName="received-submission-type"><xsl:value-of select="$submission-type"/></efbc:StatisticsCode>
+			<!-- # UNPUB-17 : Received Submissions Count (BT-759) publication will be delayed -->
+			<efbc:StatisticsNumeric><xsl:value-of select="."/></efbc:StatisticsNumeric>
+		</efac:ReceivedSubmissionsStatistics>
+	</xsl:for-each>
 </xsl:template>
 
 <!-- LotTenders -->
