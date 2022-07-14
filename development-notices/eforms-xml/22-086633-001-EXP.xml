@@ -18,6 +18,7 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
                      <!--Tender Identifier Reference (OPT-320)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
@@ -34,6 +35,7 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
                      <!--Tender Identifier Reference (OPT-320)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
@@ -50,6 +52,7 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
                      <!--Tender Identifier Reference (OPT-320)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
@@ -66,6 +69,7 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
                      <!--Tender Identifier Reference (OPT-320)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
@@ -82,6 +86,7 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
                      <!--Tender Identifier Reference (OPT-320)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
@@ -98,6 +103,7 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
                      <!--Tender Identifier Reference (OPT-320)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
@@ -114,6 +120,7 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
                      <!--Tender Identifier Reference (OPT-320)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0007</cbc:ID>
@@ -130,6 +137,11 @@
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--WARNING: The TED XML element PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default.-->
+                     <efac:DecisionReason>
+                        <efbc:DecisionReasonCode listName="non-award-justification">all-rej</efbc:DecisionReasonCode>
+                     </efac:DecisionReason>
                      <!--Tender Identifier Reference (OPT-320)-->
                      <!--Contract Identifier Reference (OPT-315)-->
                      <!--Result Lot Identifier (BT-13713)-->
