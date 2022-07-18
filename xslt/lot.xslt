@@ -55,43 +55,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="lot-tendering-terms">
 	<xsl:comment> Lot cac:TenderingTerms here </xsl:comment>
 	<cac:TenderingTerms>
-		<ext:UBLExtensions>
-			<ext:UBLExtension>
-				<ext:ExtensionContent>
-					<efext:EformsExtension>
-
-<!-- In eForms, Selection Criteria are specified at the Lot level. Multiple Selection Criteria each use a separate <efac:SelectionCriteria> element. -->
-<!--            The different types of Selection Criteria are indicated by values from the selection-criterion codelist -->
-<!-- sui-act Suitability to pursue the professional activity -->
-<!-- ef-stand Economic and financial standing -->
-<!-- tp-abil Technical and professional ability -->
-<!-- other Other -->
-<!-- In TED, Selection Criteria are specified by the LEFTI element, at Procedure level. There are no Selection Criteria specified at Lot level. -->
-<!--            The different types of Selection Criteria are indicated by different elements within the LEFTI element -->
-<!-- PARTICULAR_PROFESSION always has @CTYPE set to "SERVICES". It is most often accompanied by REFERENCE_TO_LAW which contains selection requirements for service providers -->
-<!-- All Notices (except F12) with PARTICULAR_PROFESSION also have <TYPE_CONTRACT CTYPE="SERVICES"/> -->
-<!-- Selection Criteria information is repeatable -->
-<!-- Clarifications requested for documentation of Selection Criteria in TEDEFO-548 -->
-
-<!-- the empty TED elements ECONOMIC_CRITERIA_DOC and TECHNICAL_CRITERIA_DOC indicate that the economic/technical criteria are described in the procurement documents. -->
-<!-- there are no equivalents in eForms. So these elements cannot be converted -->
-		
-						<!-- Selection Criteria Type (BT-747), Selection Criteria Name (BT-749), Selection Criteria Description (BT-750), Selection Criteria Used (BT-748) -->
-						<xsl:apply-templates select="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION)"/>
-						
-						<!-- Second Stage Criteria do not have equivalent elements in TED XML -->
-						<!-- Selection Criteria Second Stage Invite (BT-40) cardinality ? No equivalent element in TED XML -->
-						<xsl:comment>Selection Criteria Second Stage Invite (BT-40)</xsl:comment>
-						<!-- Selection Criteria Second Stage Invite Number Weight (BT-7531) cardinality * No equivalent element in TED XML -->
-						<xsl:comment>Selection Criteria Second Stage Invite Number Weight (BT-7531)</xsl:comment>
-						<!-- Selection Criteria Second Stage Invite Number Threshold (BT-7532) cardinality * No equivalent element in TED XML -->
-						<xsl:comment>Selection Criteria Second Stage Invite Number Threshold (BT-7532)</xsl:comment>
-						<!-- Selection Criteria Second Stage Invite Number (BT-752) cardinality * No equivalent element in TED XML -->
-						<xsl:comment>Selection Criteria Second Stage Invite Number (BT-752)</xsl:comment>
-					</efext:EformsExtension>
-				</ext:ExtensionContent>
-			</ext:UBLExtension>
-		</ext:UBLExtensions>
+		<!-- Selection Criteria -->
+		<xsl:call-template name="selection-criteria"/>
 		<!-- Variants (BT-63) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24 and E3; Forbidden for other subtypes -->
 		<xsl:comment>Variants (BT-63)</xsl:comment>
 		<xsl:apply-templates select="ted:NO_ACCEPTED_VARIANTS|ted:ACCEPTED_VARIANTS"/>
@@ -197,8 +162,61 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment>Security Clearance Description (BT-732)</xsl:comment>
 	</cac:TenderingTerms>
 </xsl:template>
+
+<xsl:template name="selection-criteria">
+	<!-- template to ensure the BT comments for selection criteria are always output -->
 	
-<xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION">
+	<!-- In eForms, Selection Criteria are specified at the Lot level. Multiple Selection Criteria each use a separate <efac:SelectionCriteria> element. -->
+	<!--            The different types of Selection Criteria are indicated by values from the selection-criterion codelist -->
+	<!-- In TED, Selection Criteria are specified by the LEFTI element, at Procedure level. There are no Selection Criteria specified at Lot level. -->
+	<!--            The different types of Selection Criteria are indicated by different elements within the LEFTI element -->
+	<!-- PARTICULAR_PROFESSION always has @CTYPE set to "SERVICES". It is most often accompanied by REFERENCE_TO_LAW which contains selection requirements for service providers -->
+	<!-- All Notices (except F12) with PARTICULAR_PROFESSION also have <TYPE_CONTRACT CTYPE="SERVICES"/> -->
+	<!-- Selection Criteria information is repeatable -->
+	<!-- Clarifications requested for documentation of Selection Criteria in TEDEFO-548 -->
+	
+	<xsl:choose>
+		<xsl:when test="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION|ted:QUALIFICATION/ted:CONDITIONS|ted:QUALIFICATION/ted:METHODS)">
+		<ext:UBLExtensions>
+			<ext:UBLExtension>
+				<ext:ExtensionContent>
+					<efext:EformsExtension>
+						<xsl:apply-templates select="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION|ted:QUALIFICATION/ted:CONDITIONS|ted:QUALIFICATION/ted:METHODS)"/>
+						<!-- the empty TED elements ECONOMIC_CRITERIA_DOC and TECHNICAL_CRITERIA_DOC indicate that the economic/technical criteria are described in the procurement documents. -->
+						<!-- there are no equivalents in eForms. So these elements cannot be converted -->
+
+						<!-- Selection Criteria Type (BT-747), Selection Criteria Name (BT-749), Selection Criteria Description (BT-750), Selection Criteria Used (BT-748) -->
+						
+						<!-- Second Stage Criteria do not have equivalent elements in TED XML -->
+						<!-- Selection Criteria Second Stage Invite (BT-40) cardinality ? No equivalent element in TED XML -->
+						<xsl:comment>Selection Criteria Second Stage Invite (BT-40)</xsl:comment>
+						<!-- Selection Criteria Second Stage Invite Number Weight (BT-7531) cardinality * No equivalent element in TED XML -->
+						<xsl:comment>Selection Criteria Second Stage Invite Number Weight (BT-7531)</xsl:comment>
+						<!-- Selection Criteria Second Stage Invite Number Threshold (BT-7532) cardinality * No equivalent element in TED XML -->
+						<xsl:comment>Selection Criteria Second Stage Invite Number Threshold (BT-7532)</xsl:comment>
+						<!-- Selection Criteria Second Stage Invite Number (BT-752) cardinality * No equivalent element in TED XML -->
+						<xsl:comment>Selection Criteria Second Stage Invite Number (BT-752)</xsl:comment>
+					</efext:EformsExtension>
+				</ext:ExtensionContent>
+			</ext:UBLExtension>
+		</ext:UBLExtensions>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:comment>Selection Criteria Type (BT-747)</xsl:comment>
+			<xsl:comment>Selection Criteria Name (BT-749)</xsl:comment>
+			<xsl:comment>Selection Criteria Description (BT-750)</xsl:comment>
+			<xsl:comment>Selection Criteria Used (BT-748)</xsl:comment>
+			<xsl:comment>Selection Criteria Second Stage Invite (BT-40)</xsl:comment>
+			<xsl:comment>Selection Criteria Second Stage Invite Number Weight (BT-7531)</xsl:comment>
+			<xsl:comment>Selection Criteria Second Stage Invite Number Threshold (BT-7532)</xsl:comment>
+			<xsl:comment>Selection Criteria Second Stage Invite Number (BT-752)</xsl:comment>
+		</xsl:otherwise>
+	</xsl:choose>
+
+</xsl:template>
+
+
+<xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION|ted:QUALIFICATION/ted:CONDITIONS|ted:QUALIFICATION/ted:METHODS">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="selection-criterion-type" select="$mappings//selection-criterion-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
