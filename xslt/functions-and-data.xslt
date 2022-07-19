@@ -26,11 +26,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
-<xsl:variable name="ted-form-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY]"/>
+<xsl:variable name="ted-form-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY]"/>
 <!-- Variable ted-form-main-element holds the first form element that has @CATEGORY='ORIGINAL'. This is the TED form element which is processed -->
-<xsl:variable name="ted-form-main-element" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
+<xsl:variable name="ted-form-main-element" select="/*/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
 <!-- Variable ted-form-additional-elements holds the form elements that are not the main form element -->
-<xsl:variable name="ted-form-additional-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
+<xsl:variable name="ted-form-additional-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
 <!-- Variable ted-form-elements-names holds a list of unique element names of the ted form elements -->
 <xsl:variable name="ted-form-elements-names" select="fn:distinct-values($ted-form-elements/fn:local-name())"/>
 <!-- Variable ted-form-element-name holds the element name of the main form element. -->
@@ -40,7 +40,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element. -->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
 <!-- Variable ted-form-document-code holds the value of the @TYPE attribute of the NOTICE element -->
-<xsl:variable name="ted-form-document-code" select="/ted:TED_EXPORT/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+<xsl:variable name="ted-form-document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
 <!-- Variable ted-form-additional-languages holds the values of the @LG attribute of the remaining form elements -->
@@ -228,7 +228,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:param name="ted-form-document-code"/>
 	<xsl:variable name="notice-mapping-file" select="fn:document('notice-type-mapping.xml')"/>
 	<!-- get rows from notice-type-mapping.xml with values matching the given parameters -->
-	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $ted-form-legal-basis) or (legal-basis eq 'ANY')][document-code eq $ted-form-document-code]"/>
+	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $ted-form-legal-basis) or (legal-basis eq 'ANY')][(document-code eq $ted-form-document-code) or (document-code eq 'ANY')]"/>
 	<!-- exit with an error if there is not exactly one matching row -->
 	<xsl:if test="fn:count($mapping-row) != 1">
 		<xsl:message terminate="yes">

@@ -45,7 +45,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 			</xsl:when>
 			<xsl:when test="$eforms-notice-subtype = ('12','13', '20', '21')">
-					<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>ERROR: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>	
+					<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>WARNING: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>	
 			</xsl:when>
 		</xsl:choose>			
 </xsl:template>	
