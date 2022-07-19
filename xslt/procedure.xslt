@@ -117,7 +117,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 	
-<xsl:template match="ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
+<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
 	<cac:RequestedTenderTotal>

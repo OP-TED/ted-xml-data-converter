@@ -182,11 +182,10 @@ These instructions can be un-commented to show the variables
 
 
 
-
 	
 	<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
 		<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
-	<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_TOTAL"/>
+	<xsl:call-template name="notice-values"/>
 
 	<!-- efac:GroupFramework -->
 		<!-- Group Framework Value (BT-156): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efbc:GroupFrameworkValueAmount -->
@@ -238,6 +237,7 @@ These instructions can be un-commented to show the variables
 			<!-- Not Awarded Reason (BT-144): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:DecisionReason​/efbc:DecisionReasonCode -->
 			<xsl:comment>Not Awarded Reason (BT-144)</xsl:comment>
 			<xsl:apply-templates select="awards/ted:AWARD_CONTRACT[1]/ted:NO_AWARDED_CONTRACT/(ted:PROCUREMENT_DISCONTINUED|ted:PROCUREMENT_UNSUCCESSFUL)"/>
+			
 			<!-- Tender Identifier Reference (OPT-320): eForms documentation cardinality (LotResult) = * | efac:LotTender​/cbc:ID -->
 			<xsl:comment>Tender Identifier Reference (OPT-320)</xsl:comment>
 			<xsl:variable name="lot-tender-ids" select="$lot-tenders-unique-with-id//lot-tender[path = $paths]/lot-tender-id/fn:string()"/>
@@ -250,6 +250,9 @@ These instructions can be un-commented to show the variables
 
 			
 			<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
+			<xsl:comment>Framework Estimated Value (BT-660)</xsl:comment>
+			<xsl:apply-templates select="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_ESTIMATED_TOTAL"/>
+						
 			<!-- Framework Maximum Value (BT-709): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:MaximumValueAmount -->
 			
 			
@@ -542,7 +545,7 @@ These instructions can be un-commented to show the variables
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="justification" select="$mappings//non-award-justification/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 	<xsl:variable name="message">
-		<xsl:text>WARNING: The TED XML element PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default.</xsl:text>
+		<xsl:text>WARNING: PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default.</xsl:text>
 	</xsl:variable>
 	<xsl:message terminate="no" select="$message"/>
 	<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
@@ -551,21 +554,48 @@ These instructions can be un-commented to show the variables
     </efac:DecisionReason>
 </xsl:template>
 
+<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
+<xsl:template match="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_ESTIMATED_TOTAL">
+	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
+	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
+	<xsl:choose>
+		<xsl:when test="$ted-form-main-element/ted:PROCEDURE/ted:FRAMEWORK">
+			<efac:FrameworkAgreementValues>
+				<cbc:EstimatedMaximumValueAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedMaximumValueAmount>
+			</efac:FrameworkAgreementValues>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:variable name="message">
+			<xsl:text>WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.</xsl:text>
+			</xsl:variable>
+			<xsl:message terminate="no" select="$message"/>
+			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:template>
+
+
 <xsl:template name="received-submissions-type">
 	<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsCode -->
-	<xsl:comment>Received Submissions Type (BT-760)</xsl:comment>
 	<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsNumeric -->
-	<xsl:comment>Received Submissions Count (BT-759)</xsl:comment>
-	<xsl:for-each select="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:TENDERS/*">	
-		<xsl:variable name="element-name" select="fn:local-name(.)"/>
-		<xsl:variable name="submission-type" select="$mappings//received-submission-type/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>	
-		<efac:ReceivedSubmissionsStatistics>
-			<!-- # UNPUB-16 : Received Submissions Type (BT-760) publication will be delayed -->
-			<efbc:StatisticsCode listName="received-submission-type"><xsl:value-of select="$submission-type"/></efbc:StatisticsCode>
-			<!-- # UNPUB-17 : Received Submissions Count (BT-759) publication will be delayed -->
-			<efbc:StatisticsNumeric><xsl:value-of select="."/></efbc:StatisticsNumeric>
-		</efac:ReceivedSubmissionsStatistics>
-	</xsl:for-each>
+	<xsl:choose>
+		<xsl:when test="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:TENDERS/*">
+			<xsl:for-each select="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:TENDERS/*">	
+				<xsl:variable name="element-name" select="fn:local-name(.)"/>
+				<xsl:variable name="submission-type" select="$mappings//received-submission-type/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>	
+				<efac:ReceivedSubmissionsStatistics>
+					<xsl:comment>Received Submissions Type (BT-760)</xsl:comment>
+					<efbc:StatisticsCode listName="received-submission-type"><xsl:value-of select="$submission-type"/></efbc:StatisticsCode>
+					<xsl:comment>Received Submissions Count (BT-759)</xsl:comment>
+					<efbc:StatisticsNumeric><xsl:value-of select="."/></efbc:StatisticsNumeric>
+				</efac:ReceivedSubmissionsStatistics>
+			</xsl:for-each>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:comment>Received Submissions Type (BT-760)</xsl:comment>
+			<xsl:comment>Received Submissions Count (BT-759)</xsl:comment>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <!-- LotTenders -->
@@ -584,18 +614,30 @@ These instructions can be un-commented to show the variables
 <!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
 <!--If  the CAN TED XML notice  contains the element FRAMEWORK, then VAL_TOTAL should be mapped to BT-118 Notice Framework Value. Otherwise, VAL_TOTAL should be mapped to BT-161 Notice Value-->
 
-<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_TOTAL">
-	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
-	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
+<xsl:template name="notice-values">
 	<xsl:choose>
-		<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
-			<xsl:comment>Notice Value (BT-161)</xsl:comment>
-			<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
-			<cbc:EstimatedOverallFrameworkContractsAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallFrameworkContractsAmount>
+<!--	<xsl:when test="ted:OBJECT_CONTRACT/ted:VAL_TOTAL">
+		<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
+		<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
+-->		<xsl:when test="$ted-form-main-element/ted:OBJECT_CONTRACT/ted:VAL_TOTAL">
+		<xsl:variable name="ted-value" select="fn:normalize-space($ted-form-main-element/ted:OBJECT_CONTRACT/ted:VAL_TOTAL)"/>
+		<xsl:variable name="currency" select="fn:normalize-space($ted-form-main-element/ted:OBJECT_CONTRACT/ted:VAL_TOTAL/@CURRENCY)"/>
+			<xsl:choose>
+<!--				<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
+-->				<xsl:when test="$ted-form-main-element/ted:PROCEDURE/ted:FRAMEWORK">
+					<xsl:comment>Notice Value (BT-161)</xsl:comment>
+					<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
+					<cbc:EstimatedOverallFrameworkContractsAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallFrameworkContractsAmount>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:comment>Notice Value (BT-161)</xsl:comment>
+					<cbc:TotalAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:TotalAmount>	
+					<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:comment>Notice Value (BT-161)</xsl:comment>
-		    <cbc:TotalAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:TotalAmount>	
 			<xsl:comment>Notice Framework Value (BT-118)</xsl:comment>
 		</xsl:otherwise>
 	</xsl:choose>
