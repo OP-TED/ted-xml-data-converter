@@ -23,6 +23,33 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -40,6 +67,33 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
                      </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -57,6 +111,33 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
                      </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -74,6 +155,33 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
                      </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0002</cbc:ID>
@@ -91,6 +199,33 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
                      </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -108,6 +243,33 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
                      </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -125,6 +287,33 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0007</cbc:ID>
                      </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -138,11 +327,14 @@
                      <cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
-                     <!--WARNING: The TED XML element PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default.-->
+                     <!--WARNING: PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default.-->
                      <efac:DecisionReason>
                         <efbc:DecisionReasonCode listName="non-award-justification">all-rej</efbc:DecisionReasonCode>
                      </efac:DecisionReason>
                      <!--Tender Identifier Reference (OPT-320)-->
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
                      <!--Contract Identifier Reference (OPT-315)-->
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
@@ -157,6 +349,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">47620.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
@@ -174,6 +372,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="PLN">57231.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
@@ -191,6 +395,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="PLN">36436.50</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
@@ -208,6 +418,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="PLN">7950.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
@@ -225,6 +441,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="PLN">68950.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
@@ -242,6 +464,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="PLN">1139.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
@@ -259,6 +487,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="PLN">11800.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
@@ -603,20 +837,19 @@
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>POL</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -652,7 +885,6 @@
       </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
@@ -685,16 +917,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -887,16 +1110,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1089,16 +1303,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1291,16 +1496,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1493,16 +1689,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1695,16 +1882,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1897,16 +2075,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -2099,16 +2268,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0008</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->

@@ -225,21 +225,19 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA14482</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -255,21 +253,19 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA12562</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -285,21 +281,19 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA11682</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
@@ -315,21 +309,19 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA15743</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
@@ -370,7 +362,6 @@
          <cbc:ID schemeName="ojs-notice-id">2019/S 090-214462</cbc:ID>
       </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->

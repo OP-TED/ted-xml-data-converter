@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                     xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                     xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                     xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -32,6 +32,9 @@
                         <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
                      </efac:LotTender>
                      <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">214000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
                      <!--Received Submissions Type (BT-760)-->
                      <!--Received Submissions Count (BT-759)-->
                      <!--Contract Identifier Reference (OPT-315)-->
@@ -112,6 +115,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
@@ -129,6 +138,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
@@ -146,6 +161,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
@@ -163,6 +184,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
@@ -180,6 +207,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
@@ -197,6 +230,12 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
@@ -936,20 +975,19 @@
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -963,20 +1001,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -990,20 +1027,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
@@ -1017,20 +1053,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
@@ -1044,20 +1079,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
@@ -1071,20 +1105,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
@@ -1098,20 +1131,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0007</cbc:ID>
@@ -1125,20 +1157,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0008</cbc:ID>
@@ -1152,20 +1183,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0009</cbc:ID>
@@ -1179,20 +1209,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0010</cbc:ID>
@@ -1206,20 +1235,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0011</cbc:ID>
@@ -1297,16 +1325,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1457,16 +1476,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1617,16 +1627,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1777,16 +1778,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1937,16 +1929,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->

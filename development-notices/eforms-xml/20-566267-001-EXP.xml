@@ -839,21 +839,19 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.cheshireeast.gov.uk/</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -867,20 +865,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -894,20 +891,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
@@ -921,20 +917,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
@@ -948,20 +943,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
@@ -975,20 +969,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
@@ -1002,20 +995,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0007</cbc:ID>
@@ -1029,20 +1021,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0008</cbc:ID>
@@ -1056,20 +1047,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0009</cbc:ID>
@@ -1083,20 +1073,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0010</cbc:ID>
@@ -1110,20 +1099,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0011</cbc:ID>
@@ -1137,20 +1125,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
@@ -1164,20 +1151,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
@@ -1191,20 +1177,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0014</cbc:ID>
@@ -1218,20 +1203,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0015</cbc:ID>
@@ -1245,20 +1229,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0016</cbc:ID>
@@ -1272,20 +1255,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0017</cbc:ID>
@@ -1299,20 +1281,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0018</cbc:ID>
@@ -1326,20 +1307,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0019</cbc:ID>
@@ -1353,20 +1333,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0020</cbc:ID>
@@ -1380,20 +1359,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0021</cbc:ID>
@@ -1407,20 +1385,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0022</cbc:ID>
@@ -1434,20 +1411,19 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0023</cbc:ID>
@@ -1485,7 +1461,6 @@
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
       <!--Previous Planning Part Identifier (BT-1251)-->
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->

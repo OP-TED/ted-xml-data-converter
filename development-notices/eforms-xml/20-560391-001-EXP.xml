@@ -116,21 +116,19 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.sykehusinnkjop.no/</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -162,13 +160,12 @@
          </ext:UBLExtension>
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
-      <cbc:Description languageID="ENG"><!--ERROR: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.--></cbc:Description>
+      <cbc:Description languageID="ENG"><!--WARNING: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.--></cbc:Description>
       <!--Procedure Type (BT-105)-->
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
       <!--Previous Planning Part Identifier (BT-1251)-->
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -201,16 +198,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -401,16 +389,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -601,16 +580,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
       <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->

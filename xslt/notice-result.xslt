@@ -194,6 +194,21 @@ These instructions can be un-commented to show the variables
 
 	<!-- efac:LotResult -->
 	<xsl:for-each select="$lot-results//lot-result">
+		<!-- Get Result Lot Identifier from first Lot with matching LOT_NO. If no matching Lot, use AWARD_CONTRACT/LOT_NO -->
+		<xsl:variable name="result-lot-identifier">
+			<xsl:variable name="lot-no" select="@lot-number"/>
+			<xsl:variable name="lotid" select="$lot-numbers-map//lot[lot-no = $lot-no][1]/fn:string(lot-id)"/>
+			<xsl:choose>
+				<xsl:when test="$lotid">
+					<xsl:value-of select="$lotid"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$lot-no"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+
+
 		<efac:LotResult>
 			<xsl:variable name="paths" select="awards/path/fn:string()"/>
 			<!-- Tender Value Highest (BT-711): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->
@@ -250,8 +265,9 @@ These instructions can be un-commented to show the variables
 
 			
 			<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
-			<xsl:comment>Framework Estimated Value (BT-660)</xsl:comment>
-			<xsl:apply-templates select="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_ESTIMATED_TOTAL"/>
+			<xsl:call-template name="framework-estimated-value">
+				<xsl:with-param name="result-lot-identifier" select="$result-lot-identifier"/>
+			</xsl:call-template>
 						
 			<!-- Framework Maximum Value (BT-709): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:MaximumValueAmount -->
 			
@@ -278,16 +294,7 @@ These instructions can be un-commented to show the variables
 			<xsl:comment>Result Lot Identifier (BT-13713)</xsl:comment>
 			<!-- Get Result Lot Identifier from first Lot with matching LOT_NO. If no matching Lot, use AWARD_CONTRACT/LOT_NO -->
 			<efac:TenderLot>
-				<xsl:variable name="lot-no" select="@lot-number"/>
-				<xsl:variable name="lotid" select="$lot-numbers-map//lot[lot-no = $lot-no][1]/fn:string(lot-id)"/>
-				<xsl:choose>
-					<xsl:when test="$lotid">
-						<cbc:ID schemeName="Lot"><xsl:value-of select="$lotid"/></cbc:ID>
-					</xsl:when>
-					<xsl:otherwise>
-						<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-no"/></cbc:ID>
-					</xsl:otherwise>
-				</xsl:choose>
+				<cbc:ID schemeName="Lot"><xsl:value-of select="$result-lot-identifier"/></cbc:ID>
 			</efac:TenderLot>
 		</efac:LotResult>
 	</xsl:for-each>
@@ -542,6 +549,7 @@ These instructions can be un-commented to show the variables
 <xsl:template match="ted:PROCUREMENT_UNSUCCESSFUL">
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="justification" select="$mappings//non-award-justification/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
+	<!-- WARNING: PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default. -->
 	<xsl:variable name="message">
 		<xsl:text>WARNING: PROCUREMENT_UNSUCCESSFUL ("No tenders or requests to participate were received or all were rejected") maps to two codes in the non-award-justification codelist used in eForms: 1) "no-rece": "No tenders, requests to participate or projects were received"; and 2) "all-rej": "All tenders, requests to participate or projects were withdrawn or found inadmissible". The value "all-rej" has been used as a default.</xsl:text>
 	</xsl:variable>
@@ -553,23 +561,44 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 <!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
-<xsl:template match="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_ESTIMATED_TOTAL">
-	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
-	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
-	<xsl:choose>
-		<xsl:when test="$ted-form-main-element/ted:PROCEDURE/ted:FRAMEWORK">
-			<efac:FrameworkAgreementValues>
-				<cbc:EstimatedMaximumValueAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedMaximumValueAmount>
-			</efac:FrameworkAgreementValues>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:variable name="message">
-			<xsl:text>WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.</xsl:text>
-			</xsl:variable>
-			<xsl:message terminate="no" select="$message"/>
-			<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-		</xsl:otherwise>
-	</xsl:choose>
+<xsl:template name="framework-estimated-value">
+	<xsl:param name="result-lot-identifier"/>
+	<!-- set variable to the set of all VAL_ESTIMATED_TOTAL elements for this lot-result element -->
+	<xsl:variable name="lot-result-val-estimated-total" select="awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_ESTIMATED_TOTAL"/>
+	<xsl:comment>Framework Estimated Value (BT-660)</xsl:comment>
+	<!-- if there is at least one VAL_ESTIMATED_TOTAL within this lot-result element -->
+	<xsl:if test="$lot-result-val-estimated-total">
+		<!-- When FRAMEWORK exists, VALUES/VAL_ESTIMATED_TOTAL maps to Framework Estimated Value (BT-660) -->
+		<xsl:choose>
+			<xsl:when test="$ted-form-main-element/ted:PROCEDURE/ted:FRAMEWORK">
+				<!-- If there is only one unique value of VALUES/VAL_ESTIMATED_TOTAL within the AWARDED_CONTRACT elements for this lot-result element -->
+				<xsl:if test="fn:count(fn:distinct-values($lot-result-val-estimated-total)) &gt; 1">
+					<!-- WARNING: Multiple values for VALUES/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot xxx. The first value has been used -->
+					<xsl:variable name="message">
+						<xsl:text>WARNING: Multiple values for VALUES/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot </xsl:text>
+							<xsl:value-of select="$result-lot-identifier"/>
+							<xsl:text>. The first value has been used.</xsl:text>
+					</xsl:variable>
+					<xsl:message terminate="no" select="$message"/>
+					<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+				</xsl:if>
+				<xsl:variable name="ted-value" select="fn:normalize-space($lot-result-val-estimated-total[1])"/>
+				<xsl:variable name="currency" select="fn:normalize-space($lot-result-val-estimated-total[1]/@CURRENCY)"/>
+				<efac:FrameworkAgreementValues>
+					<cbc:EstimatedMaximumValueAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedMaximumValueAmount>
+				</efac:FrameworkAgreementValues>
+			</xsl:when>
+			<xsl:otherwise>
+				<!-- Report WARNING when FRAMEWORK does not exist -->
+				<!-- WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case. -->
+				<xsl:variable name="message">
+					<xsl:text>WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.</xsl:text>
+				</xsl:variable>
+				<xsl:message terminate="no" select="$message"/>
+				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:if>
 </xsl:template>
 
 

@@ -251,17 +251,16 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://industryportal.f4e.europa.eu/default.aspx</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -277,17 +276,16 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://industryportal.f4e.europa.eu/default.aspx</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
       <!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Activity Authority (BT-10)-->
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -323,7 +321,6 @@
          <cbc:ID schemeName="ojs-notice-id">2020/S 222-542947</cbc:ID>
       </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->

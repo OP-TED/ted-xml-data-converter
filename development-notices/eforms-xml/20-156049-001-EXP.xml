@@ -252,8 +252,14 @@
    <!-- cac:ContractingParty here -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.nfp.hu</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.-->
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -269,8 +275,14 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.bszta.hu</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.-->
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -286,8 +298,14 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.devavanya.hu</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.-->
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
@@ -303,8 +321,14 @@
    </cac:ContractingParty>
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>http://www.mezobereny.hu</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)-->
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
+      <!--Buyer Legal Type (BT-11)-->
+      <!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.-->
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
@@ -336,7 +360,6 @@
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
       <!--Previous Planning Part Identifier (BT-1251)-->
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
