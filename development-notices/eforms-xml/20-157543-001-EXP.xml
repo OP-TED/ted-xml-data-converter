@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
-                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                     xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                     xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                     xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -101,9 +101,11 @@
                         <cbc:PayableAmount currencyID="EUR">7834899.64</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
                      <!--Subcontracting (BT-773)-->
-                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
                         <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
                         <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
                      </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
@@ -124,9 +126,11 @@
                         <cbc:PayableAmount currencyID="EUR">1205369.20</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
                      <!--Subcontracting (BT-773)-->
-                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
                         <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
                         <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
                      </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
@@ -147,9 +151,11 @@
                         <cbc:PayableAmount currencyID="EUR">602684.60</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
                      <!--Subcontracting (BT-773)-->
-                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
                         <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
                         <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
                      </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
