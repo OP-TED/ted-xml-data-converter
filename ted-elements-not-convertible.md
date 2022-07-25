@@ -22,4 +22,6 @@ This table is under development. Elements used in Contract Award Notices and PIN
 | URL_NATIONAL_PROCEDURE | R.2.0.9 | URL | Information about national procedures is available at (URL) | eForms does not have a BT to hold a national procedure URL |
 | OBJECT_CONTRACT/VAL_RANGE_TOTAL/HIGH
 OBJECT_CONTRACT/VAL_RANGE_TOTAL/LOW | R.2.0.9 | Value | Total value of the procurement (excluding VAT) - Lowest offer / Highest offer taken into consideration | eForms does not have a BT to hold range values for offers across all lots |
-
+| AWARDED_CONTRACT/VAL_ESTIMATED_TOTAL | R.2.0.9 | Value | Initial estimated total value of the contract / lot 
+(for framework agreements or dynamic purchasing systems – estimated total maximum value for the entire duration of this lot) | 
+When the notice is not part of a Framework Agreement or DPS, there is no eForms equivalent of this element |
