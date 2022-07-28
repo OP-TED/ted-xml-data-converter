@@ -12,12 +12,10 @@
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
-               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
-                  <efac:LotResult><!--Tender Value Highest (BT-711)-->
-                     <cbc:HigherTenderAmount currencyID="EUR">2491930.00</cbc:HigherTenderAmount>
-                     <!--Tender Value Lowest (BT-710)-->
-                     <cbc:LowerTenderAmount currencyID="EUR">1900000.00</cbc:LowerTenderAmount>
-                     <!--Winner Chosen (BT-142)-->
+               <efac:NoticeResult><!--Notice Value (BT-161)-->
+                  <cbc:TotalAmount currencyID="EUR">1220020</cbc:TotalAmount>
+                  <!--Notice Framework Value (BT-118)-->
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -26,21 +24,20 @@
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
                      <!--Framework Estimated Value (BT-660)-->
-                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
                         <!--Received Submissions Count (BT-759)-->
-                        <efbc:StatisticsNumeric>4</efbc:StatisticsNumeric>
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
                      </efac:ReceivedSubmissionsStatistics>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
-                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
                         <!--Received Submissions Count (BT-759)-->
-                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
                      </efac:ReceivedSubmissionsStatistics>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
-                        <efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
                         <!--Received Submissions Count (BT-759)-->
-                        <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
                      </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
@@ -48,7 +45,7 @@
                      </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
-                        <cbc:ID schemeName="Lot">N/A</cbc:ID>
+                        <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
                   <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
@@ -56,6 +53,9 @@
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
                      <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">1220020</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>
@@ -68,20 +68,20 @@
                      </efac:TenderingParty>
                      <!--Tender Lot Identifier (BT-13714)-->
                      <efac:TenderLot>
-                        <cbc:ID schemeName="Lot">N/A</cbc:ID>
+                        <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotTender>
                   <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
                      <cbc:ID schemeName="contract">CON-0001</cbc:ID>
                      <!--Winner Decision Date (BT-1451)-->
                      <!--Contract Conclusion Date (BT-145)-->
-                     <cbc:IssueDate>2020-07-10+01:00</cbc:IssueDate>
+                     <cbc:IssueDate>2021-06-15+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
-                     <cbc:Title>Design Review and Construction Supervision Services in Relation to the Design and Build of Water and Wastewater Treatment Facilities</cbc:Title>
+                     <cbc:Title>Beschaffung eines GPS-Systems für Kraftfahrzeuge</cbc:Title>
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>ZWS2-C4XD-C-002</cbc:ID>
+                        <cbc:ID/>
                      </efac:ContractReference>
                      <!--Contract Tender ID (Reference, BT-3202)-->
                      <efac:LotTender>
@@ -104,7 +104,7 @@
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>www.mwsc.com.zm</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>https://www.hausbetreuung-wien.at/</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -112,90 +112,96 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Mulonga Water Supply and Sanitation Company Ltd</cbc:Name>
+                           <cbc:Name>Wiener Wohnen Hausbetreuung GmbH</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>P. O Box 11712</cbc:StreetName>
+                           <cbc:StreetName>Erdbergstraße 200</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Chingola</cbc:CityName>
+                           <cbc:CityName>Wien</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>10101</cbc:PostalZone>
+                           <cbc:PostalZone>1030</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">AT130</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">ZMB</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)-->
-                           <cbc:Name>Reuben Kaira</cbc:Name>
-                           <!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+260 212312199</cbc:Telephone>
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+43 160766430</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
-                           <cbc:Telefax>+260 212310025</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>kairar@mwsc.com.zm</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>ausschreibungen@hausbetreuung-wien.at</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>www.nodwyer.com</cbc:WebsiteURI>
-                        <!--Winner Size (BT-165)-->
-                        <!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Nicholas Odwyer</cbc:Name>
+                           <cbc:Name>ITBinder GmbH</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
-                           <cbc:CityName>Dublin</cbc:CityName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Hirnsdorf 80</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Feistritztal</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>8221</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">IRL</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>9110016767246</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+353 12969000</cbc:Telephone>
+                           <cbc:Telephone>+43 311351510</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
-                           <cbc:Telefax>+353 12969001</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>int@nodwyer.com</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>itb@fuhrpark.at</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.verwaltungsgericht.wien.gv.at</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Zambia Public Procurement Authority</cbc:Name>
+                           <cbc:Name>Verwaltungsgericht Wien</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>P O Box 31009</cbc:StreetName>
+                           <cbc:StreetName>Muthgasse 62</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Lusaka</cbc:CityName>
+                           <cbc:CityName>Wien</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>10101</cbc:PostalZone>
+                           <cbc:PostalZone>1190</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">ZMB</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
-                        <!--Organization Contact Telephone Number (BT-503)-->
-                        <!--Organization Contact Fax (BT-739)-->
-                        <!--Organization Contact Email Address (BT-506)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+43 1400038500</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>post@vgw.wien.gv.at</cbc:ElectronicMail>
+                        </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -220,17 +226,17 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2021-01-08+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>OTHER</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
@@ -241,6 +247,9 @@
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
       <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
@@ -268,12 +277,13 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
+      <cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
+      <cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
       <!--Previous Planning Identifier (BT-125)-->
       <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2017/S 129-262839</cbc:ID>
+         <cbc:ID schemeName="ojs-notice-id">2020/S 078-183831</cbc:ID>
       </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
@@ -281,19 +291,17 @@
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">EIB-GtP/ZWS2-C4XD-C-002</cbc:ID>
-      <!--Title (BT-21)-->
-      <cbc:Name languageID="ENG">Design Review and Construction Supervision Services in relation to the Design and Build of Water and Wastewater Treatment Facilities</cbc:Name>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
+      <cbc:Name languageID="DEU">Beschaffung eines GPS Systems für Kraftfahrzeuge</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="ENG">The design review and construction supervision consultant’s role shall include: 1) assist MWSC in undertaking contract negotiation and award with the D&amp;B contractor; 2) review detailed designs prepared by the D&amp;B contractor in accordance with the design criteria and functional/performance requirements specified in the bid and contract documents to ensure long term stability and operating life of all facilities; 3) monitor and supervise the construction activities; 4) monitor ‘Tests after Completion’ and the D&amp;B Contractor’s assisted operations and training activities: 5) support MWSC’s Project Implementation Unit in the overall project management and implementation as agreed with MWSC’s Director for Infrastructure Development.</cbc:Description>
+      <cbc:Description languageID="DEU">Implementierung und Wartung eines GPS-Systems zur Ortung von Kraftfahrzeugen und zur Erfassung der Fahrtzeiten in Übereinstimmung mit den gesetzlichen Vorgaben.</cbc:Description>
       <!--Main Nature (BT-23)-->
-      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">71242000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">38112100</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -340,64 +348,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>82.40</efbc:ParameterNumeric>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
                   <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Qualification</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>317.83</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Adequacy and quality of the proposed methodology and work plan in responding to the terms of reference</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>399.61</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Key experts</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>799.85</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Overall weighted assessment</cbc:Description>
+                  <cbc:Description languageID="DEU">Funktionalität der Software</cbc:Description>
                </cac:SubordinateAwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -405,159 +365,45 @@
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>79.98</efbc:ParameterNumeric>
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
                   <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Overall weighted assessment (%)</cbc:Description>
+                  <cbc:Description languageID="DEU">Reaktions- und Entstörzeiten</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="DEU">Referenzen Projektleiter</cbc:Description>
                </cac:SubordinateAwardingCriterion>
                <cac:SubordinateAwardingCriterion>
                   <ext:UBLExtensions>
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>1,900,000.000</efbc:ParameterNumeric>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Proposal price under consideration (EUR)</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>1,900,000.000</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Fm (Lowest financial proposal following arithmetic corrections)</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>100.00</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Sf (Bidder with the lowest financial proposal following arithmetic corrections)</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>1,900,000.000</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">F (Price of proposal under consideration)</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>100.00</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Sf bidder</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>79.98</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">St bidder (Technical score)</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>63.98</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Weighted technical score</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>20.00</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Weighted financial score</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>83.98</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">S: Combined weighted technical and financial score</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
@@ -632,11 +478,11 @@
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="ENG">Design Review and Construction Supervision Services in relation to the Design and Build of Water and Wastewater Treatment Facilities</cbc:Name>
+         <cbc:Name languageID="DEU">Beschaffung eines GPS Systems für Kraftfahrzeuge</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="ENG">A Design and Build (D&amp;B) contractor procured by MWSC will undertake designs and subsequent rehabilitation and/or upgrade of water and wastewater sewage treatment facilities to enable sustainable provision of services within the towns of Mufulira, Chingola and Chililabombwe. MWSC therefore requires the services of a design review and Construction Supervision Consultant (DRCS) to ensure that the D&amp;B contractor adheres to the specifications and performance requirements set out in the D&amp;B Contract with MWSC.</cbc:Description>
+         <cbc:Description languageID="DEU">Nähere Angaben finden Sie in den Beschaffungsunterlagen.</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
          <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -652,9 +498,12 @@
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">71242000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">38112100</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72263000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -665,7 +514,7 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:StreetName>Chingola Water Treatment Plant, Chililabombwe Treatment Plant, Mufulira Water Treatment Plants and some selected Sewer Ponds.</cbc:StreetName>
+               <cbc:StreetName>Wien</cbc:StreetName>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -675,6 +524,9 @@
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
+         <cac:ContractExtension>
+            <cbc:OptionsDescription languageID="DEU">Vertragsverlängerung.</cbc:OptionsDescription>
+         </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:TenderResult>

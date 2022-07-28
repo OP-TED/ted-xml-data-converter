@@ -13,13 +13,13 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">23</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>www.fsdkenya.org</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>http://www.mp74.fr</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -27,28 +27,27 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Financial Sector Deepening Trust (Kenya)</cbc:Name>
+                           <cbc:Name>Commune de Vétraz-Monthoux</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Box 11353</cbc:StreetName>
+                           <cbc:StreetName>1 place de la Mairie</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Nairobi</cbc:CityName>
+                           <cbc:CityName>Vétraz-Monthoux</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>00100</cbc:PostalZone>
+                           <cbc:PostalZone>74100</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">FRK28</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">KEN</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)-->
-                           <cbc:Name>Lydiah Kioko</cbc:Name>
-                           <!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+254 205137300</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>tenders@fsdkenya.org</cbc:ElectronicMail>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>21740298100013</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>marches.publics@vetraz-monthoux.fr</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -59,26 +58,27 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Financial Sector Deepening Trust (FSD Kenya)</cbc:Name>
+                           <cbc:Name>Tribunal administratif de Grenoble</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>11353</cbc:StreetName>
+                           <cbc:StreetName>2 place de Verdun</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Nairobi</cbc:CityName>
+                           <cbc:CityName>Grenoble</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>00100</cbc:PostalZone>
+                           <cbc:PostalZone>38022</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">KEN</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+254 205137300</cbc:Telephone>
+                           <cbc:Telephone>+33 476429000</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+33 476422269</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>info@fsdkenya.org</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>greffe.ta-grenoble@juradm.fr</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -104,7 +104,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-05-28+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
@@ -114,13 +114,22 @@
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)--><!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.--><!--Buyer Contracting Entity (BT-740)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>http://www.mp74.fr</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
       <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
@@ -148,32 +157,28 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
       <!--Previous Planning Part Identifier (BT-1251)-->
-      <cac:ProcessJustification><!--Procedure Accelerated (BT-106)-->
-         <cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
-         <!--Procedure Accelerated Justification (BT-1351)-->
-         <cbc:ProcessReason languageID="ENG">Two distinct workstreams whose findings are critical to its development are currently underway and timetabled for completion in July. These are: (a) a landscape review which will provide a detailed analysis of the implementation of different government collection initiatives in Kenya; (b) the legal and regulatory review which will provide an analysis of the legislative and regulatory framework currently in place to support the successful implementation of the programme. Acceleration of timeline is therefore sought on the basis that: (a) the strategy development provider should be identified in advance and undertake the foundational work prior to submission of the two critical pieces so as to keep the momentum going and ensure the work is in alignment with the agreed timelines (b) there is a strong desire by the Government of Kenya and other stakeholders to complete the assignment at the earliest to allow for planning and implementation of specific policies in the next fiscal year.</cbc:ProcessReason>
-      </cac:ProcessJustification>
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
-      <cbc:Name languageID="ENG">Government of Kenya Collections Strategy</cbc:Name>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">2021-09</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="FRA">Marché de maîtrise d'œuvre de niveau Esquisse + pour la construction du nouveau groupe scolaire René Cassin concours restreint</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="ENG">Governments are the largest payer and receiver of cash in any economy and Kenya is no exception. It is estimated that GoK represents 60 % of payments and collections in the economy. Following a presidential directive to digitise all government collections in the country which would effectively eliminate cash from Government offices a Government Digital Payments (GDP) task force was set up to oversee the implementation of this key project which saw the deployment of e-Citizen, a single sign-on platform that allows citizens to access, apply and pay for government services. To date about three hundred out of a possible five thousand government services have been fully digitised and the revenue collected through the platform has been growing steadily since 2015. Currently, over eight million citizens are registered on the e-citizen platform.</cbc:Description>
       <!--Main Nature (BT-23)-->
-      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="FRA">Les dépôts de plis doivent être impérativement remis par voie dématérialisée. Cette consultation bénéficie du service DUME. Pour retrouver cet avis intégral, accéder au DCE, poser des questions à l'acheteur, déposer un pli, allez sur http://www.mp74.fr — Mission de maîtrise d'œuvre de base (articles R. 2431-4 et R. 2431-5 du code de la commande publique) incluant l'EXE. Le marché comprend également une autre mission de maîtrise d'œuvre dans le cadre d'une Prestation supplémentaire éventuelle (PSE): Ordonnancement pilotage coordination (OPC). Candidat (ou un groupement candidat) disposant, a minima, des compétences suivantes: — architecture (en application de la loi nº 77-2 du 3.1.1977 modifiée sur l'architecture); — technique: structures; — technique: fluides; — technique: thermique; — technique: courants forts et faibles; — économie de la construction; — paysagiste; — Haute qualité environnementale (HQE); — acousticien; — Ordonnancement pilotage coordination (OPC) = prestation supplémentaire éventuelle.</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">66170000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">71200000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -194,18 +199,10 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
                         <!--Selection Criteria Name (BT-749)-->
                         <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="ENG">The consulting firm or team of consultants should have: — strong understanding of government collections landscape in Kenya and globally; — demonstrable deep knowledge and understanding of the global payments market with a bias on government payments; — reputation, market position and record of implementing similar assignments; — relevant technical and commercial skills; — ability to work flexibly, including availability on short notice.</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
-                     </efac:SelectionCriteria>
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="ENG">Expressions of interest must include a capability statement, of no more than four (4) A4 pages, which shows evidence of relevant skills and experience in providing the services required under this contract notice. Abridged CVs of key personnel only, each of not more than three (3) pages in length, should also be included. These CVs can be submitted in addition to the four page capability statement. Expressions of interest should be submitted preferably by email to tenders@fsdkenya.org (reference: Government Collection Strategy). Following assessment of expressions of interest, FSD Kenya will invite short-listed applicants to submit full technical and commercial proposals.</cbc:Description>
+                        <cbc:Description languageID="FRA">Le jury examinera les candidatures à l'une des critères de sélection des candidatures hiérarchisés suivants cités par ordre décroissant d'importance: — capacités professionnelles évaluées au regard de la qualité (notamment architecturale) et la pertinence des références présentées par le candidat ou le groupement candidat, compte tenu de la nature et de la complexité du marché; — capacités techniques évaluées au regard des compétences proposées et des moyens en personnel du candidat ou du groupement candidat affectés au projet; — capacités financières du candidat ou du groupement candidat. Détaillé dans le règlement de concours.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
@@ -222,12 +219,10 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
-         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
-         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
@@ -241,18 +236,13 @@
             <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://fsdkenya.org/about-us/opportunities/</cbc:URI>
+                  <cbc:URI>http://www.mp74.fr</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
-         <cac:TendererQualificationRequest>
-            <cac:SpecificTendererRequirement>
-               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-            </cac:SpecificTendererRequirement>
-         </cac:TendererQualificationRequest>
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -262,27 +252,53 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">yes</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
-         </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
-         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
-         </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
-            <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+         <cac:AwardingTerms><!--Following Contract (BT-41)-->
+            <cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+            <!--Jury Decision Binding (BT-42)-->
+            <cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
+            <!--No Negotiation Necessary (BT-120)-->
+            <!--Award Criteria Order Justification (BT-733)-->
+            <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number Weight (BT-5421)-->
+            <!--Award Criterion Number Fixed (BT-5422)-->
+            <!--Award Criterion Number Threshold (BT-5423)-->
+            <!--Award Criterion Number (BT-541)-->
+            <!--Award Criterion Type (BT-539)-->
+            <!--Award Criterion Name (BT-734)-->
+            <!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion><!--WARNING: The content of TED XML element CRITERIA_EVALUATION has been copied to three Award Criterion Description (BT-540), to assist with editing and correction.-->
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <cac:Prize><!--Prize Rank (BT-44)--><!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
+               <cbc:RankCode>1</cbc:RankCode>
+               <!--Value Prize (BT-644)-->
+               <!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
+               <!--Rewards Other (Prize Description) (BT-45)-->
+               <!--Rewards Other (Prize Description) (BT-45) may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT-->
+               <cbc:Description languageID="FRA">Chaque concurrent ayant remis une prestation conforme au règlement du concours recevra une prime d'un montant de 50 000 EUR HT (non révisable et non actualisable), TVA en sus au taux de la réglementation en vigueur. La rémunération du contrat de maîtrise d'œuvre tiendra compte de la prime reçue par le lauréat. Le versement de la prime aux candidats s'effectuera sur la base de la proposition du jury dans un délai de 30 jours suivant la date de notification du courrier de rejet aux candidats dont les projets n'auront pas été retenus.</cbc:Description>
+            </cac:Prize>
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -291,20 +307,20 @@
          </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
-            <cac:PartyIdentification>
-               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
-            </cac:PartyIdentification>
+            <cbc:EndpointID>http://www.mp74.fr</cbc:EndpointID>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
-         <cac:TenderValidityPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
-         </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
          <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
                   <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -313,13 +329,8 @@
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>
-            <cbc:ID>ENG</cbc:ID>
+            <cbc:ID>FRA</cbc:ID>
          </cac:Language>
-         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
-            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
-            <!--Electronic Payment (BT-93)-->
-            <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
-         </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
@@ -331,7 +342,7 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
                      <efac:InterestExpressionReceptionPeriod>
-                        <cbc:EndDate>2020-06-12+01:00</cbc:EndDate>
+                        <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
                         <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
                      </efac:InterestExpressionReceptionPeriod>
                   </efext:EformsExtension>
@@ -339,15 +350,12 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
-         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
-         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
-         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
          <!--GPA Coverage (BT-115)-->
-         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2020-06-12+01:00</cbc:EndDate>
+            <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
             <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
@@ -359,49 +367,27 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
-            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
-         </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <cac:OpenTenderEvent>
-            <cbc:OccurrenceDate>2020-06-15+01:00</cbc:OccurrenceDate>
-            <cbc:OccurrenceTime>08:00:00+01:00</cbc:OccurrenceTime>
-            <cac:OccurenceLocation>
-               <cbc:Description languageID="ENG">Nairobi — KENYA.</cbc:Description>
-            </cac:OccurenceLocation>
-         </cac:OpenTenderEvent>
-         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
-            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
-            <!--Electronic Auction Description (BT-122)-->
-            <!--Electronic Auction URL (BT-123)-->
-         </cac:AuctionTerms>
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
-         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="ENG">Government of Kenya Collections Strategy</cbc:Name>
+         <cbc:Name languageID="FRA">Marché de maîtrise d'œuvre de niveau Esquisse + pour la construction du nouveau groupe scolaire René Cassin concours restreint</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="ENG">In 2019, FSD Kenya re-engaged with the GDP team which continues to work to digitise the remaining government services. FSD Kenya initially supported the development of a proof of concept, securing the platform against cyber-attacks as well as development of an agency model that would efficiently implement this initiative. Based on recommendations from the first phase, it was agreed that FSD Kenya would continue to support the GDP team to undertake a market analysis, a legal and regulatory review and the development of a strategy and business case. Work on the first two activities is going on although has recently slowed due to effects of Covid-19. FSD Kenya is now looking for a consultancy firm or team of consultants to support the GDP in developing the strategy. The work will focus on the following key areas: — identify the key strategic objectives and key indicators for success; — develop a business case for GDP including costs and benefits to be accrued on full digitization of government collections. This will include the necessary incentives to drive the implementation of the strategy; — a detailed implementation plan including sustainability options such as private and public management of the platform and onboarding of remaining services on the platform.</cbc:Description>
+         <cbc:Description languageID="FRA">La Commune de Vétraz-Monthoux a décidé de reconstruire le groupe scolaire René Cassin dans le centre-bourg de Vétraz-Monthoux pour une capacité de 20 classes comprenant: — un pôle maternelle de huit classes; — un pôle élémentaire de onze classes + une Ulis; — un restaurant scolaire; — un Centre de loisirs sans hébergement (CLSH) (actuellement situé dans le groupe scolaire F Dolto) de 200 enfants; — un parking souterrain d'environ 100 places. La commune souhaite réaliser ce groupe scolaire en deux phases: — phase 1 = construction d'un groupe scolaire complet pouvant accueillir 17 classes à la rentrée 2024; — phase 2 = extension du groupe scolaire de trois classes supplémentaires avec une échéance de livraison sur 2025. Détaillé dans la note de présentation.</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
          <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -417,9 +403,12 @@
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">66170000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">71200000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71240000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -437,20 +426,9 @@
          <!--Duration End Date (BT-537)-->
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
-         <cac:PlannedPeriod>
-            <cbc:StartDate>2020-07-20+01:00</cbc:StartDate>
-            <cbc:EndDate>2020-11-30+01:00</cbc:EndDate>
-         </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
-            <cac:Renewal>
-               <cac:Period>
-                  <cbc:Description languageID="ENG">The contract will be renewed in the event of delays occasioned by exogenous factors.</cbc:Description>
-               </cac:Period>
-            </cac:Renewal>
-         </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

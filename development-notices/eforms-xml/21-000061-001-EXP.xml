@@ -11,16 +11,793 @@
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
-            <efext:EformsExtension><!-- efac:NoticeResult here --><!--Notice SubType (OPP-070)-->
+            <efext:EformsExtension>
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
+                  <cbc:EstimatedOverallFrameworkContractsAmount currencyID="GBP">300000000</cbc:EstimatedOverallFrameworkContractsAmount>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>7</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>7</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0003</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0005</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0006</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0007</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0008</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0009</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0010</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0011</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0012</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>8</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>8</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0007</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0008</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0009</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0010</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0011</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0012</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">250000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)-->
+                        <efbc:TermDescription languageID="ENG">Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</efbc:TermDescription>
+                        <!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermPercent>30</efbc:TermPercent>
+                        <!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">250000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)-->
+                        <efbc:TermDescription languageID="ENG">Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</efbc:TermDescription>
+                        <!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermPercent>30</efbc:TermPercent>
+                        <!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">250000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)-->
+                        <efbc:TermDescription languageID="ENG">Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</efbc:TermDescription>
+                        <!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermPercent>30</efbc:TermPercent>
+                        <!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">250000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)-->
+                        <efbc:TermDescription languageID="ENG">Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</efbc:TermDescription>
+                        <!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermPercent>30</efbc:TermPercent>
+                        <!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">250000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)-->
+                        <efbc:TermDescription languageID="ENG">Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</efbc:TermDescription>
+                        <!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermPercent>30</efbc:TermPercent>
+                        <!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">250000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)-->
+                        <efbc:TermDescription languageID="ENG">Suppliers are given additional marks in secondary competitions for work under the framework based on their performance against targets to subcontract work to small or medium sized enterprises.</efbc:TermDescription>
+                        <!--Subcontracting Percentage (BT-555)-->
+                        <efbc:TermPercent>30</efbc:TermPercent>
+                        <!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0006</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0007</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">50000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0007</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0008</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">50000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0008</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0009</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">50000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0010</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">50000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0009</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0011</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">50000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0010</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0012</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">50000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0011</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Technical Consultancy, Engineering Advice, Research and Innovation Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1A</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Technical Consultancy, Engineering Advice, Research and Innovation Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1B</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0003</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Technical Consultancy, Engineering Advice, Research and Innovation Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1C</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Technical Consultancy, Engineering Advice, Research and Innovation Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1D</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0005</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Technical Consultancy, Engineering Advice, Research and Innovation Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1E</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0006</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-10-14+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Technical Consultancy, Engineering Advice, Research and Innovation Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1F</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0007</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Procurement Advice</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2A</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0007</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0008</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Procurement Advice</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2B</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0008</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0009</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Procurement Advice</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2C</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0009</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0010</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Procurement Advice</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2D</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0010</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0011</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Procurement Advice</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2E</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0011</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0012</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-09-09+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Procurement Advice</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2F</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0012</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                        <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                        <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0007</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0008</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0009</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0006</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0010</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0007</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0008</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0009</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0011</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0010</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0011</cbc:ID>
+                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
                   <cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
                </efac:NoticeSubType>
-               <!-- efac:Organizations here -->
+               <!-- efac:Organizations -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efbc:AcquiringCPBIndicator>true</efbc:AcquiringCPBIndicator>
                      <efac:Company><!--Organization Internet Address (BT-505)-->
                         <cbc:WebsiteURI>https://www.gov.uk/government/organisations/highways-england</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -36,7 +813,6 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>B1 1RN</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -49,7 +825,7 @@
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
@@ -64,17 +840,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>EC4A 1AB</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
@@ -89,17 +868,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>KT18 5BW</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
                         </cac:PartyIdentification>
@@ -114,17 +896,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>RG41 5TU</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
                         </cac:PartyIdentification>
@@ -139,17 +924,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>SL6 4UB</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
                         </cac:PartyIdentification>
@@ -164,17 +952,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>N1 9AB</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0007</cbc:ID>
                         </cac:PartyIdentification>
@@ -189,17 +980,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>W1U 3PD</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0008</cbc:ID>
                         </cac:PartyIdentification>
@@ -214,17 +1008,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>RG40 3GA</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0009</cbc:ID>
                         </cac:PartyIdentification>
@@ -239,17 +1036,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>W1T 4BQ</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0010</cbc:ID>
                         </cac:PartyIdentification>
@@ -264,17 +1064,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>WC2A 1AF</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0011</cbc:ID>
                         </cac:PartyIdentification>
@@ -289,17 +1092,22 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>WC2N 6RH</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
                         </cac:PartyIdentification>
@@ -314,17 +1122,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>HG3 1GY</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
                         </cac:PartyIdentification>
@@ -339,17 +1150,20 @@
                            <!--Organization Post Code (BT-512)-->
                            <cbc:PostalZone>LS18 4GH</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
                               <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0014</cbc:ID>
                         </cac:PartyIdentification>
@@ -367,10 +1181,14 @@
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
-               <!-- efac:Publication here -->
+               <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication ID (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
@@ -402,21 +1220,20 @@
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
-   <!-- cac:ContractingParty here -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11) and Buyer Contracting Entity (BT-740)--><!--Buyer Legal Type (BT-11)-->
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-legal-type">cga</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
-      <!--WARNING: "Buyer contracting type" codelist not yet available. Value "not-cont-ent" used as a default-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10) and Activity Entity (BT-610)-->
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
          <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -430,9 +1247,9 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <!-- cac:TenderingTerms here -->
+   <!-- cac:TenderingTerms -->
    <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
-   <!-- cac:TenderingProcess here -->
+   <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
@@ -455,7 +1272,7 @@
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
-   <!-- cac:ProcurementProject here -->
+   <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Specialist Professional and Technical Services 2 (SPaTS 2) Framework</cbc:Name>
       <!--Description (BT-24)-->
@@ -478,20 +1295,11 @@
       <!--Place Performance Street (BT-5101)-->
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
-   <!-- multiple cac:ProcurementProjectLot here -->
-   <cac:ProcurementProjectLot>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -516,7 +1324,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -645,14 +1453,12 @@
                   </ext:UBLExtensions>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -667,13 +1473,12 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -700,18 +1505,16 @@
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
+         </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
-            <cbc:MaximumOperatorQuantity/>
-            <!--Framework Duration Justification (BT-109)-->
-         </cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
@@ -721,7 +1524,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -783,19 +1586,10 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--></efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
-         <!--EU Funds (BT-60)-->
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -820,7 +1614,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -949,14 +1743,12 @@
                   </ext:UBLExtensions>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -971,13 +1763,12 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1004,18 +1795,16 @@
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
+         </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)--><!--WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).-->
-            <cbc:MaximumOperatorQuantity/>
-            <!--Framework Duration Justification (BT-109)-->
-         </cac:FrameworkAgreement>
          <cac:ContractingSystem>
             <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
@@ -1025,7 +1814,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -1078,4 +1867,7 @@
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
 </ContractAwardNotice>

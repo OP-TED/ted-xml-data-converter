@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
 xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
 xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+
 
 <xsl:template match="ted:PROCUREMENT_LAW">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
@@ -45,24 +46,39 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 			</xsl:when>
 			<xsl:when test="$eforms-notice-subtype = ('12','13', '20', '21')">
-					<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>ERROR: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>	
+					<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>WARNING: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>
 			</xsl:when>
-		</xsl:choose>			
-</xsl:template>	
-			
-<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL">
+		</xsl:choose>
+</xsl:template>
+
+<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_AWARD_CONTRACT_WITHOUT_CALL">
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 	<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
 </xsl:template>
-	
+
+<xsl:template name="pin-competition-termination">
+<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
+<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
+	<xsl:if test="ted:PROCEDURE/(ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_COMPETITIVE_NEGOTIATION)">
+		<xsl:choose>
+			<xsl:when test="ted:PROCEDURE/ted:TERMINATION_PIN">
+				<cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
+			</xsl:when>
+			<xsl:otherwise>
+				<cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:if>
+</xsl:template>
+
 <xsl:template match="ted:NOTICE_NUMBER_OJ">
 	<xsl:variable name="text" select="fn:normalize-space(.)"/>
 	<cac:NoticeDocumentReference>
 		<cbc:ID schemeName="ojs-notice-id"><xsl:value-of select="$text"/></cbc:ID>
 	</cac:NoticeDocumentReference>
 </xsl:template>
-	
+
 <xsl:template match="ted:ACCELERATED_PROC">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<cac:ProcessJustification>
@@ -77,14 +93,35 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:ProcessJustification>
 </xsl:template>
 
-	
-<xsl:template match="ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
+<xsl:template name="direct-award-justification">
+	<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes. No equivalent element in TED XML-->
+	<xsl:comment>Direct Award Justification Previous Procedure Identifier (BT-1252)</xsl:comment>
+	<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+	<xsl:comment>Direct Award Justification (BT-136)</xsl:comment>
+	<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+	<xsl:comment>Direct Award Justification (BT-135)</xsl:comment>
+
+	<xsl:if test="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/ted:D_JUSTIFICATION/ted:P, ' '))"/>
+		<xsl:for-each select="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/(ted:D_ACCORDANCE_ARTICLE/*|ted:D_OUTSIDE_SCOPE)">
+		<cac:ProcessJustification>
+			<xsl:variable name="element-name" select="fn:local-name(.)"/>
+			<xsl:variable name="justification" select="$mappings//direct-award-justifications/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
+			<cbc:ProcessReasonCode listName="direct-award-justification"><xsl:value-of select="$justification"/></cbc:ProcessReasonCode>
+			<xsl:if test="$text ne ''">
+				<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
+			</xsl:if>
+		</cac:ProcessJustification>
+		</xsl:for-each>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
 	<cac:RequestedTenderTotal>
 		<cbc:EstimatedOverallContractAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallContractAmount>
 	</cac:RequestedTenderTotal>
 </xsl:template>
-
 
 </xsl:stylesheet>

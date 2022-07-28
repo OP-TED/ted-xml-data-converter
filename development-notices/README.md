@@ -37,6 +37,17 @@ This table lists the TED XML files selected to test development of the Converter
 | 353820_2021.xml | F02 | CN |  |  |
 | 352444_2021.xml | F02 | CN |  |  |
 | 352458_2021.xml | F02 | CN |  |  |
+| 354625_2021.xml | F12 | CN |  |  |
+| 354626_2021.xml | F12 | CN |  |  |
+| 354823_2021.xml | F12 | CN |  |  |
+| 352425_2021.xml | F03 | CAN | Contract award | PT_AWARD_CONTRACT_WITHOUT_CALL |
+| 353237_2021.xml | F03 | CAN | Contract award | TERMINATION_PIN |
+| 20-157399-001-EXP.xml | F03 | CAN | SettledContract | No DPS, no FRAMEWORK |
+| 20-157543-001-EXP.xml | F03 | CAN | SettledContract | FRAMEWORK |
+| 22-086633-001-EXP.xml | F03 | CAN | SettledContract | Multiple AWARD_CONTRACT collated into one SettledContract |
+| 22-091559-001-EXP.xml | F03 | CAN | SettledContract | NO_AWARDED_CONTRACT |
+
+
 
 
 

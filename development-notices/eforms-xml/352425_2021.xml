@@ -12,9 +12,8 @@
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
-               <efac:NoticeResult><!--Notice Value (BT-161)-->
-                  <cbc:TotalAmount currencyID="EUR">1490000.00</cbc:TotalAmount>
-                  <!--Notice Framework Value (BT-118)-->
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
+                  <cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">800000.00</cbc:EstimatedOverallFrameworkContractsAmount>
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
@@ -24,9 +23,21 @@
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
                      <!--Framework Estimated Value (BT-660)-->
-                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">800000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
                         <!--Received Submissions Count (BT-759)-->
                         <efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
                      </efac:ReceivedSubmissionsStatistics>
@@ -45,17 +56,13 @@
                      <!--Tender Variant (BT-193)-->
                      <!--Tender Value (BT-720)-->
                      <cac:LegalMonetaryTotal>
-                        <cbc:PayableAmount currencyID="EUR">1490000.00</cbc:PayableAmount>
+                        <cbc:PayableAmount currencyID="EUR">800000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
                      <!--Subcontracting (BT-773)-->
-                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)-->
-                        <efbc:TermPercent>41</efbc:TermPercent>
-                        <!--Subcontracting (BT-773)-->
-                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
                         <!--Subcontracting Percentage Known (BT-731)-->
-                        <efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
                         <!--Subcontracting Value Known (BT-730)-->
-                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
                      </efac:SubcontractingTerm>
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
@@ -70,13 +77,15 @@
                      <cbc:ID schemeName="contract">CON-0001</cbc:ID>
                      <!--Winner Decision Date (BT-1451)-->
                      <!--Contract Conclusion Date (BT-145)-->
-                     <cbc:IssueDate>2020-12-15+01:00</cbc:IssueDate>
+                     <cbc:IssueDate>2021-07-06+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
-                     <cbc:Title>Assessment Support of draft CAP Strategic Plans with Respect to Environmental Requirements</cbc:Title>
+                     <cbc:Title>Open Access Publishing on Wiley's Journals</cbc:Title>
                      <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>07.0202/2020/839227/ETU/ENV.D.1</cbc:ID>
+                        <cbc:ID/>
                      </efac:ContractReference>
                      <!--Contract Tender ID (Reference, BT-3202)-->
                      <efac:LotTender>
@@ -88,17 +97,6 @@
                      <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
-                        <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
-                     </efac:Tenderer>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
-                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
-                        <!--Tendering Party Leader (OPT-170)-->
-                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
-                     </efac:Tenderer>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
-                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
-                        <!--Tendering Party Leader (OPT-170)-->
-                        <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      </efac:Tenderer>
                   </efac:TenderingParty>
                </efac:NoticeResult>
@@ -110,7 +108,7 @@
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>http://ec.europa.eu/environment/funding/calls_en.htm</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>https://ec.europa.eu/jrc/</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -118,23 +116,24 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>European Commission, Directorate General Environment</cbc:Name>
+                           <cbc:Name>European Commission, Joint Research Centre (JRC), JRC.H — Knowledge Management (Ispra), JRC.H.2 — Knowledge Management Methodologies, Communities and Dissemination</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>ENV.A.5 – Finance, BU 9 01/005</cbc:StreetName>
+                           <cbc:StreetName>Via Enrico Fermi 2749</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Brussels</cbc:CityName>
+                           <cbc:CityName>Ispra (VA)</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>B-1049</cbc:PostalZone>
+                           <cbc:PostalZone>I-21027</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>env-tenders@ec.europa.eu</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>jrc-ispra-dir-h-procurement@ec.europa.eu</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -145,81 +144,22 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Ecorys Europe EEIG-GEIE</cbc:Name>
+                           <cbc:Name>John Wiley and Sons Ltd</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Rue Belliard 12</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Brussels</cbc:CityName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Chichester</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>1040</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">UKJ27</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
-                        <!--Organization Contact Telephone Number (BT-503)-->
-                        <!--Organization Contact Fax (BT-739)-->
-                        <!--Organization Contact Email Address (BT-506)-->
-                     </efac:Company>
-                  </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
-                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
-                        <!--Organization Technical Identifier (OPT-200)-->
-                        <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
-                        </cac:PartyIdentification>
-                        <!--Organization Name (BT-500)-->
-                        <cac:PartyName>
-                           <cbc:Name>Ecologics Institute GmbH</cbc:Name>
-                        </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Pfalzburger Straße 42-44</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Berlin</cbc:CityName>
-                           <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>10717</cbc:PostalZone>
-                           <!--Organization Country Subdivision (BT-507)-->
-                           <!--Organization Country Code (BT-514)-->
-                           <cac:Country>
-                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
-                           </cac:Country>
-                        </cac:PostalAddress>
-                        <!--Organization Identifier (BT-501)-->
-                        <!--Organization Contact Point (BT-502)-->
-                        <!--Organization Contact Telephone Number (BT-503)-->
-                        <!--Organization Contact Fax (BT-739)-->
-                        <!--Organization Contact Email Address (BT-506)-->
-                     </efac:Company>
-                  </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
-                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
-                        <!--Organization Technical Identifier (OPT-200)-->
-                        <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
-                        </cac:PartyIdentification>
-                        <!--Organization Name (BT-500)-->
-                        <cac:PartyName>
-                           <cbc:Name>Milieu Consulting SPRL</cbc:Name>
-                        </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Chaussée de Charleroi 112</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Brussels</cbc:CityName>
-                           <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>1060</cbc:PostalZone>
-                           <!--Organization Country Subdivision (BT-507)-->
-                           <!--Organization Country Code (BT-514)-->
-                           <cac:Country>
-                              <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
-                           </cac:Country>
-                        </cac:PostalAddress>
-                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>641132</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <!--Organization Contact Point (BT-502)-->
                         <!--Organization Contact Telephone Number (BT-503)-->
                         <!--Organization Contact Fax (BT-739)-->
@@ -232,7 +172,7 @@
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
@@ -243,7 +183,7 @@
                            <!--Organization City (BT-513)-->
                            <cbc:CityName>Luxembourg</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>2925</cbc:PostalZone>
+                           <cbc:PostalZone>L-2925</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
@@ -281,7 +221,7 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2021-01-04+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-07-06+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
@@ -424,33 +364,34 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cbc:ProcedureCode listName="procurement-procedure-type">neg-wo-call</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
-      <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2020/S 161-391292</cbc:ID>
-      </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="direct-award-justification">technical</cbc:ProcessReasonCode>
+         <cbc:ProcessReason languageID="ENG">Technical/artistic reasons or exclusive rights (captive market, technical monopoly) — Art. 164(1)(d) FR, Point 11.1(b) Annex I.</cbc:ProcessReason>
+      </cac:ProcessJustification>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">ENV/2020/OP/0030</cbc:ID>
+      <cbc:ID schemeName="InternalID">JRC/IPR/2021/NP/0610</cbc:ID>
       <!--Title (BT-21)-->
-      <cbc:Name languageID="ENG">Assessment Support of Draft cap Strategic Plans with Respect to Environmental Requirements</cbc:Name>
+      <cbc:Name languageID="ENG">Open Access Publishing on Wiley's Journals</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="ENG">This contract will aim to support the European Commission with the environment-related knowledge needed to engage in constructive conversation with the Member States during the preparation of their CAP strategic plans (CAP SP). This contract aims to complement the work to be carried out within the European Commission that will be screening, assessing and providing feedback on the drafts of CAP SP. The contract entails providing detailed support relative to the ex-ante analysis of country-specific of environmental objectives by preparing individual fiches per Member State. It will also provide an analysis of the current needs/challenges for the environmental objectives and in light of the Commission’s Recommendations for environmental related specific objectives and taking into account the European Green Deal. Following the submission of the draft CAP strategic plans, this contract will support DG Environment in the assessment of the environmental-relevant parts of the draft CAP SP.</cbc:Description>
+      <cbc:Description languageID="ENG">The subject of this procurement procedure is covering the costs associated with the service of open access publishing on Wiley's journals, in line with the Horizon Europe policy. JRC needs to cover the costs of Open Access publishing for publication of articles authored by JRC scientists accepted for publication by Wiley scientific journals.</cbc:Description>
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
-      <cbc:Note languageID="ENG">See internet address provided in section I.3).</cbc:Note>
+      <cbc:Note languageID="ENG">This notice is published in accordance with point 2.4(a) of Annex I to Regulation (EU, Euratom) No 2018/1046 of 18 July 2018 on the financial rules applicable to the general budget of the Union. The date indicated in Section V.2.1) of this notice is the date of the award decision – no contract has been signed at the time of publication. The contracting authority shall not sign the contract with the successful tenderer until 10 calendar days have elapsed, running from the day after the notice has been published.</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">90700000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">79970000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -490,74 +431,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
-            <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Quality of the proposed methodology</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>60</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Organisation of the work and allocation of resources</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Quality control measures</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>50/50</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-               </cac:SubordinateAwardingCriterion>
-            </cac:AwardingCriterion>
-            <!--Jury Member Name (BT-46)-->
-            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
-         </cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
@@ -567,11 +441,11 @@
          <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
-               <cbc:Description languageID="ENG">See internet address provided in section I.3).</cbc:Description>
+               <cbc:Description languageID="ENG">Within 2 months of the notification of the award decision, an appeal may be lodged to the review body in Heading VI.4.1).You may submit any observations concerning the award procedure to the contracting authority indicated in Heading I.1). If you believe that there was maladministration, you may lodge a complaint to the European Ombudsman within 2 years of the date when you became aware of the facts on which the complaint is based (see http://www.ombudsman.europa.eu). Such complaint does not have as an effect either to suspend the time-limit to launch an appeal or to open a new period for lodging an appeal.</cbc:Description>
             </cac:PresentationPeriod>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                  <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
@@ -618,7 +492,7 @@
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
          <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
@@ -630,9 +504,9 @@
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="ENG">Assessment Support of Draft cap Strategic Plans with Respect to Environmental Requirements</cbc:Name>
+         <cbc:Name languageID="ENG">Open Access Publishing on Wiley's Journals</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="ENG">Assessment support of draft CAP strategic plans with respect to environmental requirements.</cbc:Description>
+         <cbc:Description languageID="ENG">Open access publishing on Wiley's journals.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
          <!--Additional Nature (different from Main) (BT-531)-->
@@ -650,11 +524,11 @@
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">90700000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">79970000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
          <cac:AdditionalCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">90700000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">79970000</cbc:ItemClassificationCode>
          </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
@@ -666,7 +540,8 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:StreetName>The contractor's premises.</cbc:StreetName>
+               <cbc:StreetName>Via Enrico Fermi 2749, I-21027 Ispra (VA), ITALY.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
