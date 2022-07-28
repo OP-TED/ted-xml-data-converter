@@ -49,8 +49,10 @@ The versioning scheme which will be adopted for the TED XML Data Converter will 
 Feedback on this converter is welcome. Please address questions, comments and bug reports using [Github Discussions](https://github.com/OP-TED/ted-xml-data-converter/discussions).
 
 ## What's next?
-Work on conversion of the remaining Contract Notice TED XML forms (F05, F12, F21, F22, F23 and F24) is ongoing.
+All Contract Notice TED XML forms (F02, F05, F12, F21, F22, F23 and F24) are convertible.
 
-Work will begin on Contract Award notice forms in the near future.
+The F03 Contract Award Notice form is convertible.
+
+Work will begin on the remaining Contract Award notice forms (F06, F13, F15, F21, F22, F23, F24 and F25) in the near future.
 
 

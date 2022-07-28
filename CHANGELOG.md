@@ -1,23 +1,16 @@
-# TED XML Data Converter 0.2.0 Release Notes
-Below is a list of the major updates made to the Converter repository in this release. There was no substantial change to the XSLT code.
+# TED XML Data Converter 0.4.0 Release Notes
 
-## Folder names changed
-The four root folders were renamed to more clearly reflect their contents and purposes.
+## Contract Award Notices - TED form F03
 
-## Removal of unnecessary files
-A number of files that were used during initial development, but are now no longer required, were removed.
+The majority of changes included in this release are for the conversion of TED form F03, a Contract Award Notice. A new XSLT stylesheet, notice-result.xslt, has been created for this.
 
-## File names changed
-The names of the Markdown files were changed to "kebab-case", to improve readability.
-
-## Markdown documentation
-The documentation in the various Markdown files was re-written to improve understanding of the different topics.
-A README.md file was added to every main folder to describe the contents of the folder.
-
-## Converted development test files
-The test notices in folder development-notices/ted-xml were all converted using this version of the converter, updating the output files in folder development-notices/eforms-files.
-
-## XSLT template location
-Some XSLT templates used in more than one location were moved into a new XSLT file, common.xslt. 
+New mappings for "direct-award-justification", "non-award-justification" and "received-submission-type" have been added to other-mappings.xslt 
 
 
+## Minor changes
+
+Minor fixes for:
+* Buyer Legal Type (BT-11)
+* Buyer Contracting Entity (BT-740)
+* Electronic Auction (BT-767)
+* PIN Competition Termination (BT-756)
