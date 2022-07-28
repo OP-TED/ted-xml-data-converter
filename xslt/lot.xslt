@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
 xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
 xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
+<!-- template for a single Lot -->
 <xsl:template match="ted:OBJECT_DESCR">
 	<cac:ProcurementProjectLot>
 		<!-- For form F02, the element OBJECT_DESCR is the same, whether there is one lot (NO_LOT_DIVISION) or more than one lot (LOT_DIVISION) -->
@@ -20,7 +21,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment>Purpose Lot Identifier (BT-137)</xsl:comment>
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<xsl:variable name="lot-info" select="$lot-numbers-map//lot[path = $path]"/>
-		
+
 		<xsl:choose>
 			<!-- When LOT_NO exists -->
 			<xsl:when test="fn:not($lot-info/is-convertible)">
@@ -42,18 +43,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 
 
-
-
-
-
-
-
-
 <!-- Lot Tendering Terms templates -->
 
-
 <xsl:template name="lot-tendering-terms">
-	<xsl:comment> Lot cac:TenderingTerms here </xsl:comment>
+	<xsl:comment> Lot cac:TenderingTerms </xsl:comment>
 	<cac:TenderingTerms>
 		<!-- Selection Criteria -->
 		<xsl:call-template name="selection-criteria"/>
@@ -82,11 +75,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Guarantee Required (BT-751) cardinality ? Only exists in TED form F05. Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3; Forbidden for other subtypes -->
 		<!-- Guarantee Required Description (BT-75) cardinality ? Only exists in TED form F05. Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3; Forbidden for other subtypes -->
 		<xsl:apply-templates select="../../ted:LEFTI/ted:DEPOSIT_GUARANTEE_REQUIRED"/>
-		
+
 		<!-- Tax legislation information provider No equivalent element in TED XML -->
 		<!-- Environment legislation information provider No equivalent element in TED XML -->
 		<!-- Employment legislation information provider No equivalent element in TED XML -->
-		
+
 		<!-- Documents Restricted Justification (BT-707) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Documents Restricted Justification (BT-707)</xsl:comment>
 		<!-- Documents Official Language (BT-708) cardinality ? No equivalent element in TED XML -->
@@ -97,7 +90,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:DOCUMENT_RESTRICTED|ted:DOCUMENT_FULL)"/>
 		<!-- Terms Financial (BT-77) cardinality ? Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
 		<xsl:call-template name="terms-financial"/>
-		
+
 		<!-- Reserved Participation (BT-71) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 		<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
 		<xsl:call-template name="reserved-participation"/>
@@ -105,35 +98,33 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Tenderer Legal Form (BT-761) cardinality ? Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<!-- Tenderer Legal Form Description (BT-76) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:call-template name="tenderer-legal-form"/>
-		
-		
+
 		<!-- Late Tenderer Information (BT-771) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Late Tenderer Information (BT-771)</xsl:comment>
 		<!-- Subcontracting Tender Indication (BT-651) cardinality + Only relevant for D81 Defence or OTHER Mandatory for CN subtype 18; Optional for PIN subtype 9, CN subtype E3; Forbidden for other subtypes -->
 		<xsl:comment>Subcontracting Tender Indication (BT-651)</xsl:comment>
 		<!-- Subcontracting Obligation (BT-65) cardinality ? Only relevant for D81 Defence or OTHER Mandatory for CN subtype 18; Optional for PIN subtype 9, CN subtype E3; Forbidden for other subtypes -->
 		<xsl:comment>Subcontracting Obligation (BT-65)</xsl:comment>
-		<!-- Subcontracting Obligation Maximum (BT-729) cardinality ? Only relevant for D81 Defence or OTHER Optional for PIN subtype 9, CN subtypes 18 and E3; Forbidden for other subtypes
- -->
+		<!-- Subcontracting Obligation Maximum (BT-729) cardinality ? Only relevant for D81 Defence or OTHER Optional for PIN subtype 9, CN subtypes 18 and E3; Forbidden for other subtypes -->
 		<xsl:comment>Subcontracting Obligation Maximum (BT-729)</xsl:comment>
 		<!-- Subcontracting Obligation Minimum (BT-64) cardinality ? Only relevant for D81 Defence or OTHER Optional for PIN subtype 9, CN subtypes 18 and E3; Forbidden for other subtypes -->
 		<xsl:comment>Subcontracting Obligation Minimum (BT-64)</xsl:comment>
 		<!-- Reserved Execution (BT-736) cardinality ? Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:call-template name="reserved-execution"/>
 		<!-- Electronic Invoicing (BT-743) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
-			
+
 		<xsl:call-template name="e-invoicing"/>
 		<!-- Terms Performance (BT-70) cardinality ? Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:call-template name="terms-performance"/>
-		
+
 		<!-- Submission Electronic Catalog (BT-764) cardinality ? Mandatory for CN subtypes 16 and 17; Optional for PIN subtypes 7-9, CN subtypes 10-13, 18, 20-22, and E3; Forbidden for other subtypes -->
-		<xsl:call-template name="submission-electronic-catalog"/>			
-		
+		<xsl:call-template name="submission-electronic-catalog"/>
+
 		<!-- Submission Electronic Signature (BT-744) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Submission Electronic Signature (BT-744)</xsl:comment>
 		<xsl:call-template name="awarding-terms"/>
 		<!-- Organization providing additional information cardinality BT-18 ? -->
-		
+
 		<!-- Organization providing offline access to the procurement documents cardinality ? -->
 		<xsl:apply-templates select="../../ted:CONTRACTING_BODY/(ted:ADDRESS_FURTHER_INFO|ted:ADDRESS_FURTHER_INFO_IDEM)"/>
 		<!-- Organization receiving tenders ​/ Requests to participate cardinality ? No equivalent element in TED XML -->
@@ -165,7 +156,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="selection-criteria">
 	<!-- template to ensure the BT comments for selection criteria are always output -->
-	
+
 	<!-- In eForms, Selection Criteria are specified at the Lot level. Multiple Selection Criteria each use a separate <efac:SelectionCriteria> element. -->
 	<!--            The different types of Selection Criteria are indicated by values from the selection-criterion codelist -->
 	<!-- In TED, Selection Criteria are specified by the LEFTI element, at Procedure level. There are no Selection Criteria specified at Lot level. -->
@@ -174,7 +165,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<!-- All Notices (except F12) with PARTICULAR_PROFESSION also have <TYPE_CONTRACT CTYPE="SERVICES"/> -->
 	<!-- Selection Criteria information is repeatable -->
 	<!-- Clarifications requested for documentation of Selection Criteria in TEDEFO-548 -->
-	
+
 	<xsl:choose>
 		<xsl:when test="../../ted:LEFTI/(ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION|ted:QUALIFICATION/ted:CONDITIONS|ted:QUALIFICATION/ted:METHODS)">
 		<ext:UBLExtensions>
@@ -186,7 +177,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<!-- there are no equivalents in eForms. So these elements cannot be converted -->
 
 						<!-- Selection Criteria Type (BT-747), Selection Criteria Name (BT-749), Selection Criteria Description (BT-750), Selection Criteria Used (BT-748) -->
-						
+						<xsl:comment>Selection Criteria Type (BT-747)</xsl:comment>
+						<xsl:comment>Selection Criteria Name (BT-749)</xsl:comment>
+						<xsl:comment>Selection Criteria Description (BT-750)</xsl:comment>
+						<xsl:comment>Selection Criteria Used (BT-748)</xsl:comment>
+
 						<!-- Second Stage Criteria do not have equivalent elements in TED XML -->
 						<!-- Selection Criteria Second Stage Invite (BT-40) cardinality ? No equivalent element in TED XML -->
 						<xsl:comment>Selection Criteria Second Stage Invite (BT-40)</xsl:comment>
@@ -212,9 +207,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:comment>Selection Criteria Second Stage Invite Number (BT-752)</xsl:comment>
 		</xsl:otherwise>
 	</xsl:choose>
-
 </xsl:template>
-
 
 <xsl:template match="ted:SUITABILITY|ted:ECONOMIC_FINANCIAL_INFO|ted:ECONOMIC_FINANCIAL_MIN_LEVEL|ted:TECHNICAL_PROFESSIONAL_INFO|ted:TECHNICAL_PROFESSIONAL_MIN_LEVEL|ted:RULES_CRITERIA|ted:CRITERIA_SELECTION|ted:QUALIFICATION/ted:CONDITIONS|ted:QUALIFICATION/ted:METHODS">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
@@ -245,10 +238,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<cac:RequiredFinancialGuarantee>
 			<cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
 			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
-		</cac:RequiredFinancialGuarantee>		
+		</cac:RequiredFinancialGuarantee>
 	</xsl:if>
 </xsl:template>
-	
+
 <xsl:template match="ted:DOCUMENT_RESTRICTED|ted:DOCUMENT_FULL">
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<cac:CallForTendersDocumentReference>
@@ -270,7 +263,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="following-sibling::ted:URL_DOCUMENT"/>
 	</cac:CallForTendersDocumentReference>
 </xsl:template>
-	
+
 <xsl:template match="ted:URL_DOCUMENT">
 	<cac:Attachment>
 		<cac:ExternalReference>
@@ -322,7 +315,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:choose>
 </xsl:template>
 
-
 <xsl:template name="reserved-participation">
 	<!-- Reserved Participation (BT-71) cardinality + Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 	<xsl:comment>Reserved Participation (BT-71)</xsl:comment>
@@ -342,7 +334,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</cac:TendererQualificationRequest>
 	</xsl:if>
 </xsl:template>
-	
+
 <xsl:template match="ted:RESTRICTED_SHELTERED_WORKSHOP">
 	<cac:SpecificTendererRequirement>
 		<cbc:TendererRequirementTypeCode listName="reserved-procurement">res-ws</cbc:TendererRequirementTypeCode>
@@ -409,11 +401,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<cbc:Description languageID="{$eforms-first-language}"></cbc:Description>
 			</cac:ContractExecutionRequirement>
 		</xsl:when>
-	</xsl:choose>		
+	</xsl:choose>
 </xsl:template>
-	
+
 <xsl:template name="submission-electronic-catalog">
-	<!-- Submission Electronic Catalog (BT-764) cardinality ? Mandatory for CN subtypes 16 and 17; Optional for PIN subtypes 7-9, CN subtypes 10-13, 18, 20-22, and E3; Forbidden for other subtypes -->		
+	<!-- Submission Electronic Catalog (BT-764) cardinality ? Mandatory for CN subtypes 16 and 17; Optional for PIN subtypes 7-9, CN subtypes 10-13, 18, 20-22, and E3; Forbidden for other subtypes -->
 	<xsl:comment>Submission Electronic Catalog (BT-764)</xsl:comment>
 		<xsl:choose>
 			<xsl:when test="ted:ECATALOGUE_REQUIRED">
@@ -433,8 +425,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				</cac:ContractExecutionRequirement>
 			</xsl:when>
 		</xsl:choose>
-</xsl:template>	
-			
+</xsl:template>
+
 <xsl:template name="address-participation-url-participation">
 	<xsl:if test="../../ted:CONTRACTING_BODY/(ted:ADDRESS_PARTICIPATION|ted:ADDRESS_PARTICIPATION_IDEM|ted:URL_PARTICIPATION)">
 		<cac:TenderRecipientParty>
@@ -456,7 +448,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template match="ted:DURATION_TENDER_VALID">
 	<!-- Duration in months (from the date stated for receipt of tender) -->
-	<!-- TYPE attribute is FIXED to "MONTH" -->		
+	<!-- TYPE attribute is FIXED to "MONTH" -->
 	<cac:TenderValidityPeriod>
 		<cbc:DurationMeasure unitCode="MONTH"><xsl:value-of select="fn:number(.)"/></cbc:DurationMeasure>
 	</cac:TenderValidityPeriod>
@@ -464,7 +456,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="appeal-terms">
 	<xsl:variable name="bt-99-text" select="../../ted:COMPLEMENTARY_INFO/ted:REVIEW_PROCEDURE/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<xsl:comment>*** start of cac:AppealTerms ***</xsl:comment>
 	<!-- Review Deadline Description (BT-99): eForms documentation cardinality = (?) at Lot level | eForms Regulation Annex requirements = Forbidden for PIN subtypes 1-6, E1, and E2, CN subtype 22; Optional for other subtypes -->
 	<xsl:comment>cac:PresentationPeriod: Review Deadline Description (BT-99)</xsl:comment>
 	<!-- Review Information Providing Organization -->
@@ -481,9 +472,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:apply-templates select="../../ted:COMPLEMENTARY_INFO/ted:ADDRESS_MEDIATION_BODY"/>
 		</cac:AppealTerms>
 	</xsl:if>
-	<xsl:comment>*** end of cac:AppealTerms ***</xsl:comment>
 </xsl:template>
-
 
 <xsl:template match="ted:REVIEW_PROCEDURE">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
@@ -550,28 +539,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 
-<!-- Lot Tendering Terms templates end here -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- end of Lot Tendering Terms templates -->
 
 
 
 <!-- Lot Tendering Process templates -->
 
-
 <xsl:template name="lot-tendering-process">
-	<xsl:comment> cac:TenderingProcess here </xsl:comment>
+	<xsl:comment> cac:TenderingProcess </xsl:comment>
 	<cac:TenderingProcess>
 		<ext:UBLExtensions>
 			<ext:UBLExtension>
@@ -608,11 +583,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- GPA Coverage (BT-115) cardinality ? Mandatory for PIN subtypes 7 and 8, CN subtypes 10, 11, and 15-17, CAN subtypes 25, 26, 29, and 30; Optional for PIN subtypes 4 and 5, CN subtype 19, CAN subtypes 28 and 32, CM subtypes 38-40; Forbidden for other subtypes -->
 		<xsl:comment>GPA Coverage (BT-115)</xsl:comment>
 		<xsl:apply-templates select="../../ted:PROCEDURE/(ted:CONTRACT_COVERED_GPA|ted:NO_CONTRACT_COVERED_GPA)"/>
-			
+
 		<!-- Tool Atypical URL (BT-124) cardinality ? Optional for PIN subtypes 1-9, E1, and E2, CN subtypes 10-24 and E3; Forbidden for other subtypes -->
 		<xsl:comment>Tool Atypical URL (BT-124)</xsl:comment>
 		<xsl:apply-templates select="../../ted:CONTRACTING_BODY/ted:URL_TOOL"/>
-		
+
 		<!-- Deadline Receipt Tenders (BT-131) cardinality ? Mandatory for PIN subtype 8; Optional for PIN subtypes 7 and 9, CN subtypes 16-24 and E3; Forbidden for other subtypes -->
 		<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->
 		<!-- TBD: Question: For Notice Subtypes 20 and 21, BOTH Deadline Receipt Expressions (BT-630) AND Deadline Receipt Tenders (BT-131) map from TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS - What should we do? -->
@@ -623,8 +598,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="../../ted:PROCEDURE/ted:DATE_DISPATCH_INVITATIONS"/>
 		<!-- Deadline Receipt Requests (BT-1311) cardinality ? Optional for PIN subtypes 7 and 9, CN subtypes 16-24 and E3; Forbidden for other subtypes -->
 		<xsl:comment>Deadline Receipt Requests (BT-1311)</xsl:comment>
-		
-		
+
+
 		<!-- Additional Information Deadline (BT-13) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Additional Information Deadline (BT-13)</xsl:comment>
 		<!-- Previous Planning Identifier (BT-125) cardinality ? The equivalent element(s) in TED are at TED_EXPORT/CODED_DATA_SECTION/NOTICE_DATA/REF_NOTICE/NO_DOC_OJS -->
@@ -634,7 +609,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment>Submission Nonelectronic Justification (BT-19)</xsl:comment>
 		<!-- Submission Nonelectronic Description (BT-745) cardinality ? No equivalent element in TED XML -->
 		<xsl:comment>Submission Nonelectronic Description (BT-745)</xsl:comment>
-		
+
 		<!-- Note: TED element TED_EXPORT/FORM_SECTION/F02_2014/OBJECT_CONTRACT/OBJECT_DESCR/NB_ENVISAGED_CANDIDATE has no equivalent in eForms -->
 		<!-- Maximum Candidates Indicator (BT-661) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Maximum Candidates Indicator (BT-661)</xsl:comment>
@@ -643,8 +618,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Minimum Candidates (BT-50) cardinality ? Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Minimum Candidates (BT-50)</xsl:comment>
 		<xsl:call-template name="limit-candidate"/>
-		<!-- Public Opening Date (BT-132) cardinality ? Optional for CN subtypes 16, 17, 20, 21, and E3; Forbidden for other subtypes
- -->
+		<!-- Public Opening Date (BT-132) cardinality ? Optional for CN subtypes 16, 17, 20, 21, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Public Opening Date (BT-132)</xsl:comment>
 		<!-- Public Opening Description (BT-134) cardinality ? Optional for CN subtypes 16, 17, 20, 21, and E3; Forbidden for other subtypes -->
 		<xsl:comment>Public Opening Description (BT-134)</xsl:comment>
@@ -671,18 +645,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="dps"/>
 	</cac:TenderingProcess>
 </xsl:template>
-	
-<xsl:template match="ted:CONTRACT_COVERED_GPA"> 
-	<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>	
+
+<xsl:template match="ted:CONTRACT_COVERED_GPA">
+	<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
 </xsl:template>
 
-<xsl:template match="ted:NO_CONTRACT_COVERED_GPA"> 
-	<cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>	
+<xsl:template match="ted:NO_CONTRACT_COVERED_GPA">
+	<cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
 </xsl:template>
 
 <xsl:template name="date-time-receipt-expressions">
 	<!-- Deadline Receipt Expressions (BT-630) cardinality ? Mandatory for CN subtypes 10-14; Optional for CN subtypes 20 and 21; Forbidden for other subtypes -->
-	<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->	
+	<!-- Note: TED DATE_RECEIPT_TENDERS and TIME_RECEIPT_TENDERS map to either Deadline Receipt Expressions (BT-630) or Deadline Receipt Tenders (BT-131) depending on the Notice subtype -->
 	<xsl:comment>Deadline Receipt Expressions (BT-630)</xsl:comment>
 		<xsl:choose>
 			<xsl:when test="(../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS)">
@@ -695,7 +669,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:variable name="message">WARNING: Deadline Receipt Expressions (BT-630) is Mandatory for eForms subtypes 10, 11, 12, 13 and 14, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00).</xsl:variable>
 				<xsl:message terminate="no" select="$message"/>
 				<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-				<efac:InterestExpressionReceptionPeriod>	
+				<efac:InterestExpressionReceptionPeriod>
 					<cbc:EndDate>2099-01-01+01:00</cbc:EndDate>
 					<cbc:EndTime>11:59:59+01:00</cbc:EndTime>
 				</efac:InterestExpressionReceptionPeriod>
@@ -712,7 +686,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:when test="(../../ted:PROCEDURE/ted:DATE_RECEIPT_TENDERS)">
 				<cac:TenderSubmissionDeadlinePeriod>
 					<xsl:call-template name="date-time-receipt-common"/>
-				</cac:TenderSubmissionDeadlinePeriod>			
+				</cac:TenderSubmissionDeadlinePeriod>
 			</xsl:when>
 			<xsl:when test="($eforms-notice-subtype = ('8'))">
 				<!-- WARNING: Deadline Receipt Tenders (BT-131) is Mandatory for eForms subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00). -->
@@ -722,7 +696,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<cac:TenderSubmissionDeadlinePeriod>
 					<cbc:EndDate>2099-01-01+01:00</cbc:EndDate>
 					<cbc:EndTime>11:59:59+01:00</cbc:EndTime>
-				</cac:TenderSubmissionDeadlinePeriod>			
+				</cac:TenderSubmissionDeadlinePeriod>
 			</xsl:when>
 		</xsl:choose>
 </xsl:template>
@@ -816,7 +790,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="ted:PLACE"/>
 	</cac:OpenTenderEvent>
 </xsl:template>
-	
+
 <xsl:template match="ted:OPENING_CONDITION/ted:INFO_ADD">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
@@ -832,9 +806,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</cac:OccurenceLocation>
 	</xsl:if>
 </xsl:template>
-			
+
 <xsl:template name="eauction-used">
-	<!--<xsl:if test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = ('16', '17', '18', '22')">-->
 	<xsl:choose>
 		<xsl:when test="../../ted:PROCEDURE/ted:EAUCTION_USED or $eforms-notice-subtype = ('16', '17', '18', '22', '29', '30', '31')">
 			<cac:AuctionTerms>
@@ -906,7 +879,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:choose>
 	</xsl:if>
 </xsl:template>
-	
+
 <xsl:template match="ted:FRAMEWORK">
 	<cac:FrameworkAgreement>
 		<!-- Framework Maximum Participants Number (BT-113) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-13, 16-18, 20-22, and E3; Forbidden for other subtypes -->
@@ -932,7 +905,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="ted:JUSTIFICATION"/>
 	</cac:FrameworkAgreement>
 </xsl:template>
-	
+
 <xsl:template match="ted:JUSTIFICATION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
@@ -958,26 +931,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-<!-- Lot Tendering Process templates end here -->
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- end of Lot Tendering Process templates -->
 
 
 
 <!-- Lot Procurement Process templates -->
 
 <xsl:template name="lot-procurement-project">
-	<xsl:comment> cac:ProcurementProject here </xsl:comment>
+	<xsl:comment> cac:ProcurementProject </xsl:comment>
 	<cac:ProcurementProject>
 		<!-- Internal Identifier (BT-22) cardinality 1 No equivalent element in TED XML -->
 		<xsl:comment>Internal Identifier (BT-22)</xsl:comment>
@@ -1036,9 +997,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Additional Classification Code (BT-263) cardinality * Optional for ALL Notice subtypes, No equivalent element in TED XML at Lot level -->
 		<xsl:comment>Additional Classification Code (BT-263)</xsl:comment>
 		<xsl:apply-templates select="ted:CPV_ADDITIONAL"/>
-		
-		
-		
+
 		<!-- Place of Performance (*) -> RealizedLocation cardinality ? Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
 		<!-- Place of Performance Additional Information (BT-728) -->
 		<xsl:comment>Place of Performance Additional Information (BT-728)</xsl:comment>
@@ -1056,7 +1015,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment>Place Performance Country Code (BT-5141)</xsl:comment>
 		<xsl:call-template name="place-performance"/>
 
-		
 		<!-- Planned Period (*) cardinality ? BT-536 and BT-537 are Mandatory for subtypes E5, the other BTs are forbidden for E5; all BTs are forbidden for 23-24, 36-37; all BTs are Optional for all the other subtypes -->
 		<!-- Duration Start Date (BT-536) cardinality ? Mandatory for CM subtype E5; Forbidden for CN subtypes 23 and 24, CAN subtypes 36 and 37; Optional for other subtypes -->
 		<xsl:comment>Duration Start Date (BT-536)</xsl:comment>
@@ -1066,15 +1024,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment>Duration Period (BT-36)</xsl:comment>
 		<!-- Duration Other (BT-538) cardinality ? Forbidden for CN subtypes 23 and 24, CAN subtypes 36 and 37, CM subtype E5; Optional for other subtypes -->
 		<xsl:comment>Duration Other (BT-538)</xsl:comment>
-		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>			
-		<!--cbc:MaximumNumberNumeric is mandatory for Notice subtypes 15 (Notice on the existence of a qualification system), 17 and 18 (Contract, or concession, notice — standard regime, Directives 2014/25/EU and 2009/81/EC)
-
-			cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)
-
-			cbc:MaximumNumberNumeric refers to the number of possible renewals; an encoded value of "3" involves an initial contract followed by up to 3 renewals -->
-
+		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
+		<!-- cbc:MaximumNumberNumeric is mandatory for Notice subtypes 15 (Notice on the existence of a qualification system), 17 and 18 (Contract, or concession, notice — standard regime, Directives 2014/25/EU and 2009/81/EC) -->
+		<!-- cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0) -->
+		<!-- cbc:MaximumNumberNumeric refers to the number of possible renewals; an encoded value of "3" involves an initial contract followed by up to 3 renewals -->
 		<!-- Contract Extensions group -->
-		
 		<!-- Note: the presence of Options Description (BT-54) implies Options (BT-53) -->
 		<!-- Options Description (BT-54) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
 		<xsl:comment>Options Description (BT-54)</xsl:comment>
@@ -1082,7 +1036,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment>Renewal maximum (BT-58)</xsl:comment>
 		<!-- Renewal Description (BT-57) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-13, 15-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
 		<xsl:comment>Renewal Description (BT-57)</xsl:comment>
-		<xsl:call-template name="contract-extension"/>	
+		<xsl:call-template name="contract-extension"/>
 	</cac:ProcurementProject>
 </xsl:template>
 
@@ -1131,9 +1085,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-
-
-
 <xsl:template name="main-site">
 	<xsl:param name="nuts-code"/>
 	<xsl:param name="main-site"/>
@@ -1150,7 +1101,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:if test="$nuts-code != ''">
 				<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="$nuts-code"/></cbc:CountrySubentityCode>
 			</xsl:if>
-			<xsl:for-each select="$valid-main-site-paragraphs[fn:position() > 2]">
+			<xsl:for-each select="$valid-main-site-paragraphs[fn:position() &gt; 2]">
 				<cac:AddressLine>
 					<cbc:Line><xsl:value-of select="."/></cbc:Line>
 				</cac:AddressLine>
@@ -1160,20 +1111,19 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 <xsl:template match="ted:DURATION">
-	<cac:PlannedPeriod>	
+	<cac:PlannedPeriod>
 		<!--"YEAR"|"MONTH"|"DAY"-->
 		<xsl:variable name="duration-type" select="@TYPE"/>
-		<cbc:DurationMeasure unitCode="{$duration-type}"><xsl:value-of select="."/></cbc:DurationMeasure>	
+		<cbc:DurationMeasure unitCode="{$duration-type}"><xsl:value-of select="."/></cbc:DurationMeasure>
 	</cac:PlannedPeriod>
 </xsl:template>
-	
+
 <xsl:template match="ted:DATE_START">
-	<cac:PlannedPeriod>		
+	<cac:PlannedPeriod>
 		<cbc:StartDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:StartDate>
-		
 		<xsl:choose>
 			<xsl:when test="../ted:DATE_END"><cbc:EndDate><xsl:value-of select="../ted:DATE_END"/><xsl:text>+01:00</xsl:text></cbc:EndDate></xsl:when>
-			<xsl:otherwise> 
+			<xsl:otherwise>
 				<!-- WARNING: Duration Other (BT-538) cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00) -->
 				<xsl:variable name="message">WARNING: Duration Other (BT-538) cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00).</xsl:variable>
 				<xsl:message terminate="no" select="$message"/>
@@ -1181,26 +1131,25 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<cbc:EndDate><xsl:text>2099-12-31+01:00</xsl:text></cbc:EndDate>
 			</xsl:otherwise>
 		</xsl:choose>
-		
 	</cac:PlannedPeriod>
 </xsl:template>
-	
+
 <xsl:template match="ted:DATE_END[fn:not(../ted:DATE_START)]">
-	<cac:PlannedPeriod>	
+	<cac:PlannedPeriod>
 		<!-- WARNING: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00) -->
 		<xsl:variable name="message">WARNING: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00).</xsl:variable>
 		<xsl:message terminate="no" select="$message"/>
 		<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
-		<cbc:StartDate><xsl:text>1900-01-01+01:00</xsl:text></cbc:StartDate>			
-		<cbc:EndDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:EndDate>		
+		<cbc:StartDate><xsl:text>1900-01-01+01:00</xsl:text></cbc:StartDate>
+		<cbc:EndDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:EndDate>
 	</cac:PlannedPeriod>
 </xsl:template>
-	
+
 <xsl:template name="contract-extension">
 	<xsl:if test="($eforms-notice-subtype = ('15', '17', '18') or (ted:OPTIONS) or (ted:RENEWAL))">
-		<cac:ContractExtension>	
+		<cac:ContractExtension>
 			<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:OPTIONS_DESCR/ted:P, ' '))"/>
-			<xsl:if test="$text ne ''">		
+			<xsl:if test="$text ne ''">
 				<cbc:OptionsDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:OptionsDescription>
 			</xsl:if>
 			<!--cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)-->
@@ -1213,17 +1162,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<cac:Period>
 						<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:RENEWAL_DESCR/ted:P, ' '))"/>
 						<!--<xsl:value-of select="functx:path-to-node(.)"/>-->
-						<xsl:if test="$text ne ''">		
+						<xsl:if test="$text ne ''">
 							<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
-						</xsl:if>					
+						</xsl:if>
 					</cac:Period>
 				</cac:Renewal>
 			</xsl:if>
 		</cac:ContractExtension>
 	</xsl:if>
-</xsl:template>	
-	
-<!-- Lot Procurement Process templates  end here -->
+</xsl:template>
 
+<!-- end of Lot Procurement Process templates -->
 
 </xsl:stylesheet>

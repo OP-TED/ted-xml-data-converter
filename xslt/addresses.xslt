@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
 xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
 xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
@@ -80,13 +80,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</ted-orgs>
 </xsl:variable>
 
-
-
-
 <!-- Create efac:Organizations structure -->
-
 <xsl:template name="organizations">
-<xsl:comment> efac:Organizations here </xsl:comment>
+<xsl:comment> efac:Organizations </xsl:comment>
 <xsl:variable name="is-joint-procurement" select="fn:boolean(ted:CONTRACTING_BODY/ted:JOINT_PROCUREMENT_INVOLVED)"/>
 <xsl:variable name="is-central-purchasing" select="fn:boolean(ted:CONTRACTING_BODY/ted:CENTRAL_PURCHASING)"/>
 <efac:Organizations>
@@ -120,6 +116,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</efac:Organization>
 	</xsl:for-each>
 </efac:Organizations>
+
 <!--
 These instructions can be un-commented to show the variables holding the organization addresses at intermediate stages
 
@@ -129,9 +126,7 @@ These instructions can be un-commented to show the variables holding the organiz
 -->
 </xsl:template>
 
-
 <!-- Create efac:Company structure -->
-
 <xsl:template name="org-address">
 	<efac:Company>
 		<!-- Organization Internet Address (BT-505) cardinality ? Optional for ALL subtypes -->
@@ -149,7 +144,7 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Organization Identifier (BT-501) Optional for ALL subtypes -->
 		<xsl:comment>Organization Identifier (BT-501)</xsl:comment>
 		<xsl:apply-templates select="ted:NATIONALID"/>
-		<xsl:call-template name="contact"/>	
+		<xsl:call-template name="contact"/>
 	</efac:Company>
 </xsl:template>
 
@@ -171,7 +166,6 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:PostalAddress structure -->
-
 <xsl:template name="address">
 	<cac:PostalAddress>
 		<!-- Organization Street (BT-510) cardinality ? Optional for ALL subtypes -->
@@ -194,7 +188,6 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Convert two-letter country code in ted:COUNTRY to three-letter country code used in eForms -->
-
 <xsl:template match="ted:COUNTRY">
 	<xsl:variable name="country" select="opfun:get-eforms-country(@VALUE)"/>
 	<cac:Country>
@@ -202,9 +195,7 @@ These instructions can be un-commented to show the variables holding the organiz
 	</cac:Country>
 </xsl:template>
 
-
 <!-- Create cac:PostalAddress structure -->
-
 <xsl:template name="contact">
 	<!-- Some ADDRESS_* elements (especially ADDRESS_CONTRACTOR) do not have any "contact" elements -->
 	<xsl:choose>
@@ -233,12 +224,7 @@ These instructions can be un-commented to show the variables holding the organiz
 	</xsl:choose>
 </xsl:template>
 
-
-
-
-
 <!-- Create cac:ContractingParty structure -->
-
 <xsl:template match="ted:ADDRESS_CONTRACTING_BODY|ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
 	<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 	<cac:ContractingParty>
@@ -298,7 +284,6 @@ These instructions can be un-commented to show the variables holding the organiz
 		</xsl:choose>
 </xsl:template>
 
-
 <xsl:template name="buyer-contracting-entity">
 	<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:comment>Buyer Contracting Entity (BT-740)</xsl:comment>
@@ -316,9 +301,7 @@ These instructions can be un-commented to show the variables holding the organiz
 	</xsl:choose>
 </xsl:template>
 
-
 <!-- Create cac:ContractingPartyType structures -->
-
 <xsl:template match="ted:CA_TYPE">
 	<xsl:variable name="ca-type" select="@VALUE"/>
 	<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
@@ -329,7 +312,6 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:ContractingActivity structures -->
-
 <xsl:template match="ted:CA_ACTIVITY">
 	<xsl:variable name="ca-activity" select="@VALUE"/>
 	<xsl:variable name="authority-activity-type" select="$mappings//authority-activity-types/mapping[ted-value=$ca-activity]/fn:string(eforms-value)"/>
@@ -348,9 +330,7 @@ These instructions can be un-commented to show the variables holding the organiz
 	</cac:ContractingActivity>
 </xsl:template>
 
-
 <!-- Create cac:AdditionalInformationParty structure -->
-
 <xsl:template match="ted:ADDRESS_FURTHER_INFO">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_FURTHER_INFO')]/../orgid"/>
 	<cac:AdditionalInformationParty>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -15,7 +15,7 @@
                <efac:NoticeSubType>
                   <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
-               <!-- efac:Organizations here -->
+               <!-- efac:Organizations -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
                      <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
@@ -190,7 +190,7 @@
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
-               <!-- efac:Publication here -->
+               <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication ID (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
@@ -222,7 +222,7 @@
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
-   <!-- cac:ContractingParty here -->
+   <!-- cac:ContractingParty -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA14482</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11)-->
@@ -335,7 +335,7 @@
          <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
       </cac:Party>
    </cac:ContractingParty>
-   <!-- cac:TenderingTerms here -->
+   <!-- cac:TenderingTerms -->
    <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
       <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>7</cbc:MaximumLotsSubmittedNumeric>
@@ -343,7 +343,7 @@
       <!--Group Identifier (BT-330)-->
       <!--Group Lot Identifier (BT-1375)-->
    </cac:TenderingTerms>
-   <!-- cac:TenderingProcess here -->
+   <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
@@ -366,7 +366,7 @@
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
-   <!-- cac:ProcurementProject here -->
+   <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="ENG">Kitchen and Bathroom Framework 2020-2024</cbc:Name>
       <!--Description (BT-24)-->
@@ -392,10 +392,10 @@
       <!--Place Performance Street (BT-5101)-->
       <!--Place Performance Country Code (BT-5141)-->
    </cac:ProcurementProject>
-   <!-- multiple cac:ProcurementProjectLot here -->
+   <!-- multiple cac:ProcurementProjectLot -->
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
+      <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -425,6 +425,10 @@
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
                      <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
@@ -492,13 +496,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
@@ -516,7 +519,6 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -528,7 +530,6 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -542,7 +543,7 @@
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -611,7 +612,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -683,7 +684,7 @@
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
+      <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -713,6 +714,10 @@
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
                      <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
@@ -780,13 +785,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
@@ -804,7 +808,6 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -816,7 +819,6 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -830,7 +832,7 @@
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -899,7 +901,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -971,7 +973,7 @@
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
+      <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1001,6 +1003,10 @@
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
                      <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
@@ -1068,13 +1074,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
@@ -1092,7 +1097,6 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -1104,7 +1108,6 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -1118,7 +1121,7 @@
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1187,7 +1190,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -1259,7 +1262,7 @@
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
+      <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1289,6 +1292,10 @@
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
                      <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
@@ -1356,13 +1363,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
@@ -1380,7 +1386,6 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -1392,7 +1397,6 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -1406,7 +1410,7 @@
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1475,7 +1479,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -1547,7 +1551,7 @@
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
+      <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1577,6 +1581,10 @@
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
                      <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
@@ -1644,13 +1652,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
@@ -1668,7 +1675,6 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -1680,7 +1686,6 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -1694,7 +1699,7 @@
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1763,7 +1768,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -1835,7 +1840,7 @@
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
+      <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -1865,6 +1870,10 @@
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
                      <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
@@ -1932,13 +1941,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
@@ -1956,7 +1964,6 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -1968,7 +1975,6 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -1982,7 +1988,7 @@
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -2051,7 +2057,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
@@ -2117,7 +2123,7 @@
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
-      <!-- Lot cac:TenderingTerms here -->
+      <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -2147,6 +2153,10 @@
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
                      <!--Selection Criteria Second Stage Invite (BT-40)-->
                      <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
                      <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
@@ -2214,13 +2224,12 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--*** start of cac:AwardingCriterion ***--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
-            <!--*** end of cac:AwardingCriterion ***-->
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
          </cac:AwardingTerms>
@@ -2238,7 +2247,6 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--*** start of cac:AppealTerms ***-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
@@ -2250,7 +2258,6 @@
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
-         <!--*** end of cac:AppealTerms ***-->
          <!--Submission Language (BT-97)-->
          <cac:Language>
             <cbc:ID>ENG</cbc:ID>
@@ -2264,7 +2271,7 @@
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
-      <!-- cac:TenderingProcess here -->
+      <!-- cac:TenderingProcess -->
       <cac:TenderingProcess>
          <ext:UBLExtensions>
             <ext:UBLExtension>
@@ -2333,7 +2340,7 @@
             <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
       </cac:TenderingProcess>
-      <!-- cac:ProcurementProject here -->
+      <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
