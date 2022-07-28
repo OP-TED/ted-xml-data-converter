@@ -26,11 +26,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
-<xsl:variable name="ted-form-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY]"/>
+<xsl:variable name="ted-form-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY]"/>
 <!-- Variable ted-form-main-element holds the first form element that has @CATEGORY='ORIGINAL'. This is the TED form element which is processed -->
-<xsl:variable name="ted-form-main-element" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
+<xsl:variable name="ted-form-main-element" select="/*/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
 <!-- Variable ted-form-additional-elements holds the form elements that are not the main form element -->
-<xsl:variable name="ted-form-additional-elements" select="/ted:TED_EXPORT/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
+<xsl:variable name="ted-form-additional-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
 <!-- Variable ted-form-elements-names holds a list of unique element names of the ted form elements -->
 <xsl:variable name="ted-form-elements-names" select="fn:distinct-values($ted-form-elements/fn:local-name())"/>
 <!-- Variable ted-form-element-name holds the element name of the main form element. -->
@@ -40,7 +40,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element. -->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
 <!-- Variable ted-form-document-code holds the value of the @TYPE attribute of the NOTICE element -->
-<xsl:variable name="ted-form-document-code" select="/ted:TED_EXPORT/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+<xsl:variable name="ted-form-document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
 <!-- Variable ted-form-additional-languages holds the values of the @LG attribute of the remaining form elements -->
@@ -124,6 +124,52 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</countries>
 </xsl:variable>
 
+<!-- Variable lot-numbers-map holds a mapping of the TED XML Lots (OBJECT_DESCR XPath) to the calculated eForms Purpose Lot Identifier (BT-137) -->
+<xsl:variable name="lot-numbers-map">
+	<xsl:variable name="count-lots" select="fn:count($ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR)"/>
+	<lots>
+		<xsl:for-each select="$ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR">
+			<lot>
+				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NO"/></xsl:variable>
+				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
+				<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+				<lot-no><xsl:value-of select="$lot-no"/></lot-no>
+				<xsl:if test="$lot-no-is-convertible"><is-convertible/></xsl:if>
+				<lot-id>
+					<xsl:choose>
+						<!-- When LOT_NO exists -->
+						<xsl:when test="$lot-no">
+							<xsl:choose>
+								<!-- LOT_NO is a positive integer between 1 and 9999 -->
+								<xsl:when test="$lot-no-is-convertible">
+									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/>
+								</xsl:otherwise>							
+							</xsl:choose>
+						</xsl:when>
+						<!-- When LOT_NO does not exist -->
+						<xsl:otherwise>
+							<xsl:choose>
+								<!-- This is the only Lot in the notice -->
+								<xsl:when test="$count-lots = 1">
+									<!-- use identifier LOT-0000 -->
+									<xsl:value-of select="'LOT-0000'"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<!-- not tested, no examples found -->
+									<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
+									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:otherwise>
+					</xsl:choose>
+				</lot-id>
+			</lot>
+		</xsl:for-each>
+	</lots>
+</xsl:variable>
 
 <!-- #### GLOBAL FUNCTIONS #### -->
 
@@ -148,11 +194,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:param name="nuts-codes" as="xs:string*"/>
 		<xsl:for-each select="$nuts-codes">
 			<xsl:choose>
-				<xsl:when test="fn:string-length(.) > 4"><xsl:value-of select="."/></xsl:when>
+				<xsl:when test="opfun:is-valid-nuts-code(.)"><xsl:value-of select="."/></xsl:when>
 			</xsl:choose>
 		</xsl:for-each>
 </xsl:function>
 
+<!-- Function opfun:is-valid-nut-code returns true if the given string is a valid NUTS code (string length > 4) -->
+<xsl:function name="opfun:is-valid-nuts-code" as="xs:boolean">
+	<xsl:param name="nuts-code" as="xs:string"/>
+	<xsl:sequence select="fn:string-length($nuts-code) &gt; 4"/>
+</xsl:function>
 
 <!-- FORM TYPES AND SUBTYPES -->
 
@@ -177,7 +228,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:param name="ted-form-document-code"/>
 	<xsl:variable name="notice-mapping-file" select="fn:document('notice-type-mapping.xml')"/>
 	<!-- get rows from notice-type-mapping.xml with values matching the given parameters -->
-	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $ted-form-legal-basis) or (legal-basis eq 'ANY')][document-code eq $ted-form-document-code]"/>
+	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $ted-form-legal-basis) or (legal-basis eq 'ANY')][(document-code eq $ted-form-document-code) or (document-code eq 'ANY')]"/>
 	<!-- exit with an error if there is not exactly one matching row -->
 	<xsl:if test="fn:count($mapping-row) != 1">
 		<xsl:message terminate="yes">

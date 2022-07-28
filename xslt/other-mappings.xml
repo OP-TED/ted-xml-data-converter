@@ -178,7 +178,7 @@
 
 <procedure-types>
 	<description>Mapping for Procedure Type (BT-105)</description>
-	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/(PT_OPEN|PT_RESTRICTED|PT_COMPETITIVE_NEGOTIATION|PT_COMPETITIVE_DIALOGUE|PT_INNOVATION_PARTNERSHIP)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/(PT_OPEN|PT_RESTRICTED|PT_COMPETITIVE_NEGOTIATION|PT_COMPETITIVE_DIALOGUE|PT_INNOVATION_PARTNERSHIP|PT_AWARD_CONTRACT_WITHOUT_CALL)/fn:local-name()</ted-context>
 	<eforms-context>/*/cac:TenderingProcess/cbc:ProcedureCode</eforms-context>
 	<eforms-codelist>procurement-procedure-type</eforms-codelist>
 	<mapping>
@@ -216,7 +216,89 @@
 		<eforms-value>neg-w-call</eforms-value>
 		<label>Negotiated with prior publication of a call for competition / competitive with negotiation</label>
 	</mapping>
+	<mapping>
+		<ted-value>PT_AWARD_CONTRACT_WITHOUT_CALL</ted-value>
+		<eforms-value>neg-wo-call</eforms-value>
+		<label>Negotiated without prior call for competition</label>
+	</mapping>
 </procedure-types>
+
+<direct-award-justifications>
+	<description>Direct Award Justification (BT-136)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/PT_AWARD_CONTRACT_WITHOUT_CALL/(D_ACCORDANCE_ARTICLE/*|D_OUTSIDE_SCOPE)/fn:local-name()</ted-context>
+	<eforms-context>/ContractAwardNotice​/cac:TenderingProcess​/cac:ProcessJustification/cbc:ProcessReasonCode</eforms-context>
+	<eforms-codelist>direct-award-justification</eforms-codelist>
+	<mapping>
+		<ted-value>D_PROC_OPEN</ted-value>
+		<eforms-value>unsuitable</eforms-value>
+		<label>No suitable tenders, requests to participate, or applications were received in response to a previous notice</label>
+	</mapping>
+		<mapping>
+		<ted-value>D_PROC_RESTRICTED</ted-value>
+		<eforms-value>irregular</eforms-value>
+		<label>Only irregular or unacceptable tenders were received in response to a previous notice. All and only those tenderers of the previous procedure which have satisfied the selection criteria, have not fulfilled the exclusion grounds and have satisfied formal requirements, were included in the negotiations</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_MANUF_FOR_RESEARCH</ted-value>
+		<eforms-value>resd</eforms-value>
+		<label>Purpose of the contract is purely research, experiment, study or development under the conditions stated in the Directive</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_TECHNICAL</ted-value>
+		<eforms-value>technical</eforms-value>
+		<label>The contract can be provided only by a particular economic operator because of an absence of competition for technical reasons</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_ARTISTIC</ted-value>
+		<eforms-value>artistic</eforms-value>
+		<label>The contract can be provided only by a particular economic operator because of creation or acquisition of a unique work of art or artistic</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_PROTECT_RIGHTS</ted-value>
+		<eforms-value>exclusive</eforms-value>
+		<label>The contract can be provided only by a particular economic operator because of exclusive rights, including intellectual property rights</label>
+	</mapping>	
+	<mapping>
+		<ted-value>D_EXTREME_URGENCY</ted-value>
+		<eforms-value>urgency</eforms-value>
+		<label>Extreme urgency brought about by events unforeseeable for the buyer</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_ADD_DELIVERIES_ORDERED</ted-value>
+		<eforms-value>additional</eforms-value>
+		<label>Need for additional works or services by the original contractor</label>
+	</mapping>	
+	<mapping>
+		<ted-value>D_REPETITION_EXISTING</ted-value>
+		<eforms-value>repetition</eforms-value>
+		<label>New works or services, constituting a repetition of existing works or services and ordered in accordance with the strict conditions stated in the Directive</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_CONTRACT_AWARDED_DESIGN_CONTEST</ted-value>
+		<eforms-value>contest</eforms-value>
+		<label>Service contract to be awarded to the winner or one of winners under the rules of a design contest</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_COMMODITY_MARKET</ted-value>
+		<eforms-value>commodity</eforms-value>
+		<label>Procurement of supplies quoted and purchased on a commodity market</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_FROM_WINDING_PROVIDER</ted-value>
+		<eforms-value>closure</eforms-value>
+		<label>Purchase on particularly advantageous terms from an economic operator which is definitely winding up its business activities</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_FROM_LIQUIDATOR_CREDITOR</ted-value>
+		<eforms-value>liquidator</eforms-value>
+		<label>Purchase on particularly advantageous terms from the liquidator in an insolvency procedure, an arrangement with creditors or a similar procedure under national laws and regulations</label>
+	</mapping>
+	<mapping>
+		<ted-value>D_OUTSIDE_SCOPE</ted-value>
+		<eforms-value>dir24-list</eforms-value>
+		<label>Contracts listed in Directive 2014/24/EU Art. 7, but not falling within the scope of Directive 2014/25/EU</label>
+	</mapping>
+</direct-award-justifications>
 
 <contract-nature-types>
 	<description>Mapping for Main and Additional Nature (BT-23, BT-531)</description>
@@ -230,7 +312,7 @@
 
 <selection-criterion-types>
 	<description>Mapping for Main and Additional Nature (BT-23, BT-531)</description>
-	<ted-context>/TED_EXPORT/FORM_SECTION/*/LEFTI/(SUITABILITY|ECONOMIC_FINANCIAL_INFO|ECONOMIC_FINANCIAL_MIN_LEVEL|TECHNICAL_PROFESSIONAL_INFO|TECHNICAL_PROFESSIONAL_MIN_LEVEL|RULES_CRITERIA)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/LEFTI/(SUITABILITY|ECONOMIC_FINANCIAL_INFO|ECONOMIC_FINANCIAL_MIN_LEVEL|TECHNICAL_PROFESSIONAL_INFO|TECHNICAL_PROFESSIONAL_MIN_LEVEL|RULES_CRITERIA|QUALIFICATION/CONDITIONS|QUALIFICATION/METHODS)/fn:local-name()</ted-context>
 	<eforms-context>/*/cac:ProcurementProjectLot/cac:SelectionCriteria/cbc:CriterionTypeCode</eforms-context>
 	<eforms-codelist>selection-criterion</eforms-codelist>
 	<mapping>
@@ -268,8 +350,66 @@
 		<eforms-value>other</eforms-value>
 		<label>Other</label>
 	</mapping>
+	<mapping>
+		<ted-value>CONDITIONS</ted-value>
+		<eforms-value>other</eforms-value>
+		<label>Other</label>
+	</mapping>
+	<mapping>
+		<ted-value>METHODS</ted-value>
+		<eforms-value>other</eforms-value>
+		<label>Other</label>
+	</mapping>
 </selection-criterion-types>
 
- 
+<non-award-justifications>
+	<description>Not Awarded Reason (BT-144)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/AWARD_CONTRACT/NO_AWARDED_CONTRACT/(PROCUREMENT_DISCONTINUED|PROCUREMENT_UNSUCCESSFUL)/fn:local-name()</ted-context>
+	<eforms-context>/ContractAwardNotice/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:DecisionReason/efbc:DecisionReasonCode</eforms-context>
+	<eforms-codelist>non-award-justification</eforms-codelist>
+	<mapping>
+		<ted-value>PROCUREMENT_DISCONTINUED</ted-value>
+		<eforms-value>other</eforms-value>
+		<label>Other</label>
+	</mapping>
+	<mapping>
+		<ted-value>PROCUREMENT_UNSUCCESSFUL</ted-value>
+		<eforms-value>all-rej</eforms-value>
+		<label>All tenders, requests to participate or projects were withdrawn or found inadmissible</label>
+	</mapping>
+		
+</non-award-justifications> 
+
+<received-submission-types>
+	<description>Received Submissions Type (BT-760)</description>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/AWARD_CONTRACT/AWARDED_CONTRACT/TENDERS/*/fn:local-name()</ted-context>
+	<eforms-context>/ContractAwardNotice/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:ReceivedSubmissionsStatistics/efbc:StatisticsCode</eforms-context>
+	<eforms-codelist>received-submission-type</eforms-codelist>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED</ted-value>
+		<eforms-value>tenders</eforms-value>
+		<label>Tenders</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_SME</ted-value>
+		<eforms-value>t-sme</eforms-value>
+		<label>Tenders from micro, small or medium tenderers</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_OTHER_EU</ted-value>
+		<eforms-value>t-oth-eea</eforms-value>
+		<label>Tenders from tenderers registered in other European Economic Area countries than the country of the buyer</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_NON_EU</ted-value>
+		<eforms-value>t-no-eea</eforms-value>
+		<label>Tenders from tenders registered in countries outside of the European Economic Area</label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_TENDERS_RECEIVED_EMEANS</ted-value>
+		<eforms-value>t-esubm</eforms-value>
+		<label>Tenders submitted electronically</label>
+	</mapping>
+</received-submission-types> 
  
 </mappings>

@@ -13,15 +13,13 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">17</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations -->
                <efac:Organizations>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
-                     <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
-                     <!--Organization Role : Acquiring CPB-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>http://f4e.europa.eu/</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -29,35 +27,38 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Fusion for Energy Joint Undertaking (‘Fusion for Energy’)</cbc:Name>
+                           <cbc:Name>Skive Fjernvarme A.m.b.A.</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>c/Josep Pla 2 — Torre Diagonal Litoral — Edeficio B3</cbc:StreetName>
+                           <cbc:StreetName>Marius Jensens Vej 3</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Barcelona</cbc:CityName>
+                           <cbc:CityName>Skive</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>08019</cbc:PostalZone>
+                           <cbc:PostalZone>7800</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">ES511</cbc:CountrySubentityCode>
+                           <cbc:CountrySubentityCode listName="nuts">DK050</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">DNK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+34 934897432</cbc:Telephone>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>68326214</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Niels Otto Clausen</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+45 24696712</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>tenders-operational-PMS-H.CD@f4e.europa.eu</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>ncl@cowi.com</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)-->
-                     <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
-                     <!--Organization Role : Acquiring CPB-->
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>http://f4e.europa.eu/</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>https://naevneneshus.dk/start-din-klage/klagenaevnet-for-udbud/</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -65,33 +66,32 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Fusion for Energy Joint Undertaking (‘Fusion for Energy’)</cbc:Name>
+                           <cbc:Name>Klagenævnet for Udbud</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>c/Josep Pla 2 — Torre Diagonal Litoral — Edeficio B3</cbc:StreetName>
+                           <cbc:StreetName>Toldboden 2</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Barcelona</cbc:CityName>
+                           <cbc:CityName>Viborg</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>08019</cbc:PostalZone>
+                           <cbc:PostalZone>8800</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">ES511</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">DNK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+34 933201800</cbc:Telephone>
+                           <cbc:Telephone>+45 72405600</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>tenders-operational-PMS-H.CD@f4e.europa.eu</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>klfu@naevneneshus.dk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>http://curia.europa.eu</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>www.kfst.dk</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -99,27 +99,26 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>General Court</cbc:Name>
+                           <cbc:Name>Konkurrence- og Forbrugerstyrelsen</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>rue du Fort Niedergrünewald</cbc:StreetName>
+                           <cbc:StreetName>Carl Jacobsens Vej 35</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:CityName>Valby</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>L-2925</cbc:PostalZone>
+                           <cbc:PostalZone>2500</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">DNK</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+35 243031</cbc:Telephone>
+                           <cbc:Telephone>+45 41715000</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
-                           <cbc:Telefax>+35 43032100</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>GeneralCourt.Registry@curia.europa.eu</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>kfst@kfst.dk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -145,150 +144,34 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2021-02-10+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32018R1046</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>DAN</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>DEU</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>SPA</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>FIN</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>FRA</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>ELL</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>ITA</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>NLD</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>POR</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>SWE</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>CES</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>EST</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>HUN</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>LIT</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>LAV</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>MLT</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>POL</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>SLK</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>SLV</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>GLE</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>BUL</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>RON</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
-   <cac:AdditionalNoticeLanguage>
-      <cbc:ID>HRV</cbc:ID>
-   </cac:AdditionalNoticeLanguage>
+   <cbc:NoticeLanguageCode>DAN</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
-      <cbc:BuyerProfileURI>https://industryportal.f4e.europa.eu/default.aspx</cbc:BuyerProfileURI>
+      <cbc:BuyerProfileURI>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:BuyerProfileURI>
       <!--Buyer Legal Type (BT-11)-->
-      <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
-      </cac:ContractingPartyType>
+      <!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.-->
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10)-->
       <!--Activity Entity (BT-610)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="entity-activity">gas-heat</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
-         </cac:PartyIdentification>
-         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
-         <!--The service provider is an eSender-->
-         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
-         <!--Service Provider Technical Identifier Reference (OPT-300)-->
-         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
-         <!--Service Provider Technical Identifier Reference (OPT-300)-->
-         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
-      </cac:Party>
-   </cac:ContractingParty>
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
-      <cbc:BuyerProfileURI>https://industryportal.f4e.europa.eu/default.aspx</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11)-->
-      <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
-      </cac:ContractingPartyType>
-      <!--Buyer Contracting Entity (BT-740)-->
-      <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
-      </cac:ContractingPartyType>
-      <!--Activity Authority (BT-10)-->
-      <!--Activity Entity (BT-610)-->
-      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
-         <cac:PartyIdentification>
-            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
          </cac:PartyIdentification>
          <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
          <!--The service provider is an eSender-->
@@ -317,9 +200,6 @@
       <!--PIN Competition Termination (BT-756)-->
       <cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
       <!--Previous Planning Identifier (BT-125)-->
-      <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2020/S 222-542947</cbc:ID>
-      </cac:NoticeDocumentReference>
       <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
@@ -327,22 +207,18 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">F4E-OMF-1108</cbc:ID>
+      <cbc:ID schemeName="InternalID">A225983</cbc:ID>
       <!--Title (BT-21)-->
-      <cbc:Name languageID="ENG">Joint Procurement for Electron Cyclotron (EC) RF Sources/Gyrotrons</cbc:Name>
+      <cbc:Name languageID="DAN">Skive Biomassevarme - flisfyret kedelanlæg til fjernvarmeproduktion</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="ENG">— for F4E: Supply of six gyrotrons of 1 MW at 170 GHz with continuous wave long pulse of up to 3 600s to be delivered at ITER site; — for Divertor Tokamak Test facility (DTT): Supply of up to sixteen gyrotrons of 1 MW at 170 GHz with pulse length of 100s. Two pre-series gyrotrons will be delivered to the Falcon test Facility, SPC (Lausanne, CH); the other fourteen series gyrotrons will be delivered to the DTT site (Frascati, Italy).</cbc:Description>
+      <cbc:Description languageID="DAN">Totalentreprise vedrørende levering, montering, idriftssættelse af flisfyret kedelcentral med fjernvarmeproduktion og med træflis som brændsel.</cbc:Description>
       <!--Main Nature (BT-23)-->
-      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
-      <cbc:Note languageID="ENG">Tenderers are informed that the awarded contract will not be signed in paper. See internet address provided in Section I.3) for more details. 1) This notice and the rest of the procurement documents will be published also on the joint undertaking's buyer's profile. Economic operators are strongly advised to regularly visit the webpage in section I) of this notice; 2) This procurement procedure is governed by the rules laid down by: (a) Regulation (EU, Euratom) 2018/1046; referred to as the ‘General Financial Regulation’ (GFR); and (b) complemented, where it derogates, by the: Financial Regulation for Fusion for Energy adopted by Governing Board decision of 10 December 2019. All legislation can be found on: http://www.fusionforenergy.europa.eu/procurementsgrants/keyreference.aspx</cbc:Note>
       <!--Estimated Value (BT-27)-->
-      <cac:RequestedTenderTotal>
-         <cbc:EstimatedOverallContractAmount currencyID="EUR">60000000.00</cbc:EstimatedOverallContractAmount>
-      </cac:RequestedTenderTotal>
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">31670000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -363,10 +239,34 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
                         <!--Selection Criteria Name (BT-749)-->
                         <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="ENG">See internet address provided in section I.3).</cbc:Description>
+                        <cbc:Description languageID="DAN">Ansøger skal oplyse følgende vedrørende ansøgers økonomiske og finansielle formåen (i ESPD-dokumentet Del IV, pkt. B): - Soliditetsgrad, defineret som egenkapital/(Aktiver i alt) x 100, i det seneste afsluttede regnskabsår.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="DAN">Soliditetsgrad på minimum 10 % i det seneste afsluttede regnskabsår.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="DAN">Ansøgeren skal oplyse referencer på levering af en tilsvarende eller lignende komplette maskinentrepriser i totalentreprise for kedelcentraler med en tilsvarende kedelydelse og med træflis som brændsel, indenfor de seneste 10 år. Anlæggene skal i længere perioder har kørt med et bredt sortiment af brændsler i forskellige grovheder og fugtigheder. Der skal angives kontaktoplysninger på driftspersonale som bygherren kan kontakte for nærmere oplysninger.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="DAN">- Minimum 2 referencer i henhold til ovenstående kriterie.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
@@ -385,13 +285,19 @@
          <!--Variants (BT-63)-->
          <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
-         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
          <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
+         <!--Guarantee Required (BT-751)-->
+         <!--Guarantee Required Description (BT-75)-->
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="DAN">Sikkerhedsstillelse og garantier i henhold til udbudsmaterialet.</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -402,11 +308,15 @@
             <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://industryportal.f4e.europa.eu/default.aspx</cbc:URI>
+                  <cbc:URI>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
+         <!--WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML.-->
+         <cac:PaymentTerms>
+            <cbc:Note languageID="DAN"/>
+         </cac:PaymentTerms>
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
@@ -416,6 +326,9 @@
          </cac:TendererQualificationRequest>
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
+         <cac:TendererQualificationRequest>
+            <cbc:CompanyLegalFormCode listName="required">false</cbc:CompanyLegalFormCode>
+         </cac:TendererQualificationRequest>
          <!--Late Tenderer Information (BT-771)-->
          <!--Subcontracting Tender Indication (BT-651)-->
          <!--Subcontracting Obligation (BT-65)-->
@@ -427,12 +340,13 @@
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
+         <!--WARNING: Terms Performance (BT-70) is Mandatory for eForms subtypes 17, 18 and 22, but no PERFORMANCE_CONDITIONS was found in TED XML.-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-            <cbc:Description languageID="ENG">See internet address provided in section I.3).</cbc:Description>
+            <cbc:Description languageID="DAN"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Catalog (BT-764)-->
          <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
@@ -440,20 +354,10 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
-            <cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
-            <!--Award Criteria Order Justification (BT-733)-->
-            <!--Award Criteria Complicated (BT-543)-->
-            <!--Award Criterion Number Weight (BT-5421)-->
-            <!--Award Criterion Number Fixed (BT-5422)-->
-            <!--Award Criterion Number Threshold (BT-5423)-->
-            <!--Award Criterion Number (BT-541)-->
-            <!--Award Criterion Type (BT-539)-->
-            <!--Award Criterion Name (BT-734)-->
-            <!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+                  <cbc:Description languageID="DAN">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
@@ -466,31 +370,37 @@
          </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
-            <cbc:EndpointID>https://industryportal.f4e.europa.eu/default.aspx</cbc:EndpointID>
+            <cbc:EndpointID>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
          <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
          <!--cac:AppealInformationParty: Review Information Providing Organization-->
          <!--cac:AppealReceiverParty: Review organization-->
          <!--cac:MediationParty: Mediation organization-->
          <cac:AppealTerms>
-            <cac:PresentationPeriod>
-               <cbc:Description languageID="ENG">Within 2 months of notice of the award decision, you may launch an action for annulment of the award decision. Any request you may make and any reply from us, or any complaint for maladministration, will have neither the purpose nor the effect of suspending the time-limit for launching an action for annulment or to open a new period for launching an action for annulment. The body responsible for hearing annulment procedures is indicated in Section VI.4.1) of the contract notice. If you believe that there was maladministration, you may lodge a complaint to the European Ombudsman within 2 years of the date when you became aware of the facts on which the complaint is based (see http://www.ombudsman.europa.eu)</cbc:Description>
-            </cac:PresentationPeriod>
-            <cac:AppealReceiverParty>
+            <cac:AppealInformationParty>
                <cac:PartyIdentification>
                   <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                </cac:PartyIdentification>
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>
-            <cbc:ID>ENG</cbc:ID>
+            <cbc:ID>DAN</cbc:ID>
          </cac:Language>
-         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
-            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
-            <!--Electronic Payment (BT-93)-->
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)--><!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
@@ -504,9 +414,8 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
                      <efac:InterestExpressionReceptionPeriod>
-                        <cbc:EndDate>2021-03-10+01:00</cbc:EndDate>
-                        <!--WARNING: TIME_RECEIPT_TENDERS was not found in TED XML. In order to obtain valid XML for this notice, a time of 23:59+01:00 was used.-->
-                        <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
+                        <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
                      </efac:InterestExpressionReceptionPeriod>
                   </efext:EformsExtension>
                </ext:ExtensionContent>
@@ -514,20 +423,17 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
-         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
-         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
-         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2021-03-10+01:00</cbc:EndDate>
-            <!--WARNING: TIME_RECEIPT_TENDERS was not found in TED XML. In order to obtain valid XML for this notice, a time of 23:59+01:00 was used.-->
-            <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
+            <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2021-04-07+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-08-16+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
@@ -555,12 +461,8 @@
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)-->
-            <cbc:MaximumOperatorQuantity>3</cbc:MaximumOperatorQuantity>
-            <!--Framework Duration Justification (BT-109)-->
-         </cac:FrameworkAgreement>
          <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
          </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
          <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
@@ -572,11 +474,11 @@
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="ENG">Joint Procurement for Electron Cyclotron (EC) RF Sources/Gyrotrons</cbc:Name>
+         <cbc:Name languageID="DAN">Skive Biomassevarme - flisfyret kedelanlæg til fjernvarmeproduktion</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="ENG">F4E and DTT will carry out jointly this procurement procedure. As an outcome of the procedure, F4E will award two separate multiple framework contracts (MFC) for each respective scope: 1) MFWC signed by F4E: Up to six gyrotrons of 1 MW at 170 GHz with continuous wave long pulse of up to 3 600s for F4E. The scope of work includes detailed design development based on functional specifications, engineering design, procurement, assembly and factory testing, disassembly in modular form, packaging, shipment to ITER site, on-site installation, supervision of on-site installation, and commissioning at ITER site. F4E will award and sign one (or more) specific contract, according to the cascade system, provided that the contractor can demonstrate it has reached the following conditions: 1 MW at 170 GHz, CW for longer than 100s and demonstrated capability for stable operation in Continues Wave (CW) by the time of launching of the F4E Task Order (expected Q4 2022). 2) MFWC signed by DTT: Up to sixteen gyrotrons of 1 MW at 170 GHz with pulse length of 100s for DTT. The scope of work includes procurement, assembly and factory testing, disassembly in modular form, packaging, shipment to SPC, Lausanne for the pre-series gyrotrons and to the DTT site, Frascati for the series gyrotrons, supervision of installation and commissioning at SPC, Lausanne or DTT site, Frascati. DTT will sign a Specific Contract for one pre-series gyrotron with the first ranked contractor. DTT will sign a Specific Contract for one pre-series gyrotron with the second ranked contractor. If both are successful, they will both be required to procure up to seven series gyrotrons each.</cbc:Description>
+         <cbc:Description languageID="DAN">Totalentreprise vedrørende levering, montering, idriftssættelse af flisfyret kedelcentral med fjernvarmeproduktion og med træflis som brændsel.</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
          <!--Additional Nature (different from Main) (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -589,14 +491,13 @@
          <!--Unit (BT-625)-->
          <!--Suitable for SMEs (BT-726)-->
          <!--Additional Information (BT-300)-->
-         <cbc:Note languageID="ENG">1) Tenderers can only submit a tender via the foreseen e-Submission tool detailed in the procurement documents.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <cac:RequestedTenderTotal>
-            <cbc:EstimatedOverallContractAmount currencyID="EUR">60000000.00</cbc:EstimatedOverallContractAmount>
+            <cbc:EstimatedOverallContractAmount currencyID="DKK">40000000</cbc:EstimatedOverallContractAmount>
          </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">31670000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
          <!--Place of Performance Additional Information (BT-728)-->
@@ -609,16 +510,7 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:StreetName>For F4E: ITER site in Cadarache, France: route de Vinon-sur-Verdon, 13115 Saint Paul-lès-Durance, France.</cbc:StreetName>
-               <cbc:AdditionalStreetName>For DTT: DTT Consortium c/o C.R. ENEA, Via Enrico Fermi 45, I-00044 Frascati (RM), Italy</cbc:AdditionalStreetName>
-               <cbc:CountrySubentityCode listName="nuts">FRL04</cbc:CountrySubentityCode>
-            </cac:Address>
-         </cac:RealizedLocation>
-         <cac:RealizedLocation>
-            <cac:Address>
-               <cbc:StreetName>For F4E: ITER site in Cadarache, France: route de Vinon-sur-Verdon, 13115 Saint Paul-lès-Durance, France.</cbc:StreetName>
-               <cbc:AdditionalStreetName>For DTT: DTT Consortium c/o C.R. ENEA, Via Enrico Fermi 45, I-00044 Frascati (RM), Italy</cbc:AdditionalStreetName>
-               <cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
+               <cbc:StreetName>Holstebrovej 101, 7800 Skive</cbc:StreetName>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -626,13 +518,14 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <cac:PlannedPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">68</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
          <!--Renewal maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
          <cac:ContractExtension>
-            <cbc:OptionsDescription languageID="ENG">See internet address provided in section I.3).</cbc:OptionsDescription>
+            <cbc:OptionsDescription languageID="DAN">Optionspris vedrørende: 1) Levering, montering og idriftssættelse af en ekstra fliskran 2) Strategiske reservedele 3) AMS måling af NOx 4) SNCR anlæg.</cbc:OptionsDescription>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

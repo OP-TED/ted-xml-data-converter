@@ -1,14 +1,17 @@
-# TED XML Data Converter 0.3.0 Release Notes
-Below is a list of the updates made to the Converter repository in this release. 
 
-## Contract Notices
-Templates have been added to convert elements in TED XML Contract Notice forms F05, F12, F21, F22, F23, F24
+# TED XML Data Converter 0.4.0 Release Notes
 
-## Bug fixes and minor changes
+## Contract Award Notices - TED form F03
 
-* Missing listName attributes have been added, and some listName attribute values have been corrected.
-* Additional CPV codes are now included
-* TED XML element ADDRESS_FURTHER_INFO_IDEM included in conversion
-* NUTS2021 codes are now included
-* Country codes are now converted from 2-letter codes in TED XML to 3-letter codes from "Countries" codelist in eForms XML
-* Namespace declarations are now harmonised across all XSLT files
+The majority of changes included in this release are for the conversion of TED form F03, a Contract Award Notice. A new XSLT stylesheet, notice-result.xslt, has been created for this.
+
+New mappings for "direct-award-justification", "non-award-justification" and "received-submission-type" have been added to other-mappings.xslt 
+
+
+## Minor changes
+
+Minor fixes for:
+* Buyer Legal Type (BT-11)
+* Buyer Contracting Entity (BT-740)
+* Electronic Auction (BT-767)
+* PIN Competition Termination (BT-756)
