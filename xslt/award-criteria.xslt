@@ -98,6 +98,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Award Criterion Number (BT-541): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:comment>Award Criterion Number (BT-541)</xsl:comment>
 		<xsl:apply-templates select="ted:AC_WEIGHTING"/>
+		<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
+		<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 		<xsl:apply-templates select="ted:AC_CRITERION"/>
 	</cac:SubordinateAwardingCriterion>
 </xsl:template>
@@ -105,6 +107,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:AC_COST">
 	<cac:SubordinateAwardingCriterion>
 		<xsl:apply-templates select="ted:AC_WEIGHTING"/>
+		<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
+		<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
 		<xsl:apply-templates select="ted:AC_CRITERION"/>
 	</cac:SubordinateAwardingCriterion>
 </xsl:template>
@@ -112,6 +116,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:AC_PRICE">
 	<cac:SubordinateAwardingCriterion>
 		<xsl:apply-templates select="ted:AC_WEIGHTING"/>
+		<xsl:comment>Award Criterion Type (BT-539)</xsl:comment>
+		<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
 	</cac:SubordinateAwardingCriterion>
 </xsl:template>
 
