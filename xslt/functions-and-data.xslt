@@ -96,29 +96,26 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Variable language-codes-map holds a mapping of language codes from TED two-letter format to eForms three-letter format -->
 <xsl:variable name="language-codes-map">
-	<xsl:variable name="source-language-file" select="fn:document('languages.xml')"/>
+	<xsl:variable name="source-language-file" select="fn:document('languages-map.xml')"/>
 	<languages>
-		<xsl:for-each select="$source-language-file//record[@deprecated='false'][op-mapped-code/@source='TED']">
+		<xsl:for-each select="$source-language-file//language">
 			<language>
-				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
-				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
-				<ted><xsl:value-of select="$ted-form"/></ted>
-				<eforms><xsl:value-of select="$eforms-form"/></eforms>
+				<ted><xsl:value-of select="ted"/></ted>
+				<eforms><xsl:value-of select="eforms"/></eforms>
 			</language>
 		</xsl:for-each>
 	</languages>
 </xsl:variable>
 
+
 <!-- Variable country-codes-map holds a mapping of country codes from TED two-letter format to eForms three-letter format -->
 <xsl:variable name="country-codes-map">
-	<xsl:variable name="source-country-file" select="fn:document('countries.xml')"/>
+	<xsl:variable name="source-country-file" select="fn:document('countries-map.xml')"/>
 	<countries>
-		<xsl:for-each select="$source-country-file//record[@deprecated='false'][op-mapped-code/@source='TED']">
+		<xsl:for-each select="$source-country-file//country">
 			<country>
-				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
-				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
-				<ted><xsl:value-of select="$ted-form"/></ted>
-				<eforms><xsl:value-of select="$eforms-form"/></eforms>
+				<ted><xsl:value-of select="ted"/></ted>
+				<eforms><xsl:value-of select="eforms"/></eforms>
 			</country>
 		</xsl:for-each>
 	</countries>

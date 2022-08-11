@@ -295,6 +295,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="FRA">Performance</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -311,6 +313,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="FRA">Prix</cbc:Description>
                </cac:SubordinateAwardingCriterion>

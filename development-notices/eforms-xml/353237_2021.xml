@@ -356,6 +356,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Funktionalität der Software</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -372,6 +374,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Reaktions- und Entstörzeiten</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -388,6 +392,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Referenzen Projektleiter</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -404,6 +410,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->

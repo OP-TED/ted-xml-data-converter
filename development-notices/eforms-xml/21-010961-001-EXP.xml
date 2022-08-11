@@ -348,6 +348,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Qualification</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -364,6 +366,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Adequacy and quality of the proposed methodology and work plan in responding to the terms of reference</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -380,6 +384,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Key experts</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -396,6 +402,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Overall weighted assessment</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -412,6 +420,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Overall weighted assessment (%)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -428,6 +438,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Proposal price under consideration (EUR)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -444,6 +456,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Fm (Lowest financial proposal following arithmetic corrections)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -460,6 +474,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Sf (Bidder with the lowest financial proposal following arithmetic corrections)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -476,6 +492,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">F (Price of proposal under consideration)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -492,6 +510,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Sf bidder</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -508,6 +528,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">St bidder (Technical score)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -524,6 +546,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Weighted technical score</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -540,6 +564,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Weighted financial score</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -556,6 +582,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">S: Combined weighted technical and financial score</cbc:Description>
                </cac:SubordinateAwardingCriterion>
