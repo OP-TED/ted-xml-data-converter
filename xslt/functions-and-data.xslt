@@ -13,6 +13,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- include FunctX XSLT Function Library -->
 <xsl:include href="lib/functx-1.0.1-doc.xsl"/>
 
+<!-- application parameters -->
+<xsl:param name="showwarnings" select="1" as="xs:integer"/>
+<xsl:param name="includewarnings" select="1" as="xs:integer"/>
+<xsl:param name="includecomments" select="1" as="xs:integer"/>
+
+
 <!-- MAPPING FILES -->
 	
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
@@ -311,4 +317,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:value-of select="fn:string-join(($prefix,$name),':')"/>
 </xsl:function>
 	
+
+<!-- Message Functions -->
+
+<xsl:template name="report-warning">
+	<xsl:param name="message" as="xs:string"/>
+	<xsl:if test="$showwarnings=1">
+		<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
+	</xsl:if>
+	<xsl:if test="$includewarnings=1">
+		<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template name="include-comment">
+	<xsl:param name="comment" as="xs:string"/>
+	<xsl:if test="$includecomments=1">
+		<xsl:comment><xsl:value-of select="$comment"/></xsl:comment>
+	</xsl:if>
+</xsl:template>
 </xsl:stylesheet>

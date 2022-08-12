@@ -28,10 +28,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 	<cac:LotDistribution>
 		<!-- Lots Max Awarded (BT-33) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
-		<xsl:comment>Lots Max Awarded (BT-33)</xsl:comment>
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Lots Max Awarded (BT-33)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:LOT_MAX_ONE_TENDERER"/>
 		<!-- Lots Max Allowed (BT-31) cardinality ? Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
-		<xsl:comment>Lots Max Allowed (BT-31)</xsl:comment>
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Lots Max Allowed (BT-31)'"/></xsl:call-template>
 		<!-- Tenders may be submitted for: LOT_ALL LOT_MAX_NUMBER LOT_ONE_ONLY -->
 		<xsl:apply-templates select="ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY"/>
 	</cac:LotDistribution>
@@ -39,14 +39,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="main-features-award">
 	<!-- Procedure Features (BT-88) cardinality ? Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
-	<xsl:comment>Procedure Features (BT-88)</xsl:comment>
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Features (BT-88)'"/></xsl:call-template>
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:MAIN_FEATURES_AWARD/ted:P, ' '))"/>
 		<xsl:choose>
 			<xsl:when test="$text ne ''">
 					<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
 			</xsl:when>
 			<xsl:when test="$eforms-notice-subtype = ('12','13', '20', '21')">
-					<cbc:Description languageID="{$eforms-first-language}"><xsl:comment>WARNING: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.</xsl:comment></cbc:Description>
+					<cbc:Description languageID="{$eforms-first-language}"><xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'WARNING: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.'"/></xsl:call-template></cbc:Description>
 			</xsl:when>
 		</xsl:choose>
 </xsl:template>
@@ -59,7 +59,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="pin-competition-termination">
 <!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
-<xsl:comment>PIN Competition Termination (BT-756)</xsl:comment>
+<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'PIN Competition Termination (BT-756)'"/></xsl:call-template>
 	<xsl:if test="ted:PROCEDURE/(ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_COMPETITIVE_NEGOTIATION)">
 		<xsl:choose>
 			<xsl:when test="ted:PROCEDURE/ted:TERMINATION_PIN">
@@ -83,10 +83,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<cac:ProcessJustification>
 		<!-- Procedure Accelerated (BT-106) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:comment>Procedure Accelerated (BT-106)</xsl:comment>
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Accelerated (BT-106)'"/></xsl:call-template>
 		<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
 		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:comment>Procedure Accelerated Justification (BT-1351)</xsl:comment>
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Accelerated Justification (BT-1351)'"/></xsl:call-template>
 		<xsl:if test="$text ne ''">
 			<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
 		</xsl:if>
@@ -95,11 +95,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="direct-award-justification">
 	<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes. No equivalent element in TED XML-->
-	<xsl:comment>Direct Award Justification Previous Procedure Identifier (BT-1252)</xsl:comment>
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification Previous Procedure Identifier (BT-1252)'"/></xsl:call-template>
 	<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-	<xsl:comment>Direct Award Justification (BT-136)</xsl:comment>
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-136)'"/></xsl:call-template>
 	<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-	<xsl:comment>Direct Award Justification (BT-135)</xsl:comment>
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-135)'"/></xsl:call-template>
 
 	<xsl:if test="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/ted:D_JUSTIFICATION/ted:P, ' '))"/>
