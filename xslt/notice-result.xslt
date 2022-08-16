@@ -318,7 +318,7 @@ These instructions can be un-commented to show the variables
 				<!-- Subcontracting Value (BT-553), Subcontracting Description (BT-554), Subcontracting Percentage (BT-555), Subcontracting (BT-773), Subcontracting Percentage Known (BT-731), Subcontracting Value Known (BT-730) -->
 				<xsl:call-template name="subcontracting"/>
 
-				<!-- Tendering Party ID Reference (OPT-310) eForms documentation cardinality (LotTender) = 1 | efac:TenderingParty​/cbc:ID -->
+				<!-- Tendering Party ID Reference (OPT-310): eForms documentation cardinality (LotTender) = 1 | efac:TenderingParty​/cbc:ID -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tendering Party ID Reference (OPT-310)'"/></xsl:call-template>
 				<xsl:variable name="tendering-party-id" select="$ted-contractor-groups-unique-with-id//ted-contractor-group/path[fn:contains(., $path)]/../tendering-party-id"/>
 				<efac:TenderingParty>
@@ -384,8 +384,8 @@ These instructions can be un-commented to show the variables
 			<!-- Used asset (OPP-021): eForms documentation cardinality (SettledContract) = * (T02 form only) | efac:DurationJustification​/efac:AssetsList​/efac:Asset​/efbc:AssetDescription -->
 			<!-- Significance (%) (OPP-022): eForms documentation cardinality (SettledContract) = * (T02 form only) | efac:DurationJustification​/efac:AssetsList​/efac:Asset​/efbc:AssetSignificance -->
 			<!-- Predominance (%) (OPP-023): eForms documentation cardinality (SettledContract) = * (T02 form only) | efac:DurationJustification​/efac:AssetsList​/efac:Asset​/efbc:AssetPredominance -->
-			<!-- Contract Tender ID (Reference, BT-3202): eForms documentation cardinality (SettledContract) = + | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes efac:LotTender​/cbc:ID *ORDER* -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Tender ID (Reference, BT-3202)'"/></xsl:call-template>
+			<!-- Contract Tender Identifier (BT-3202): eForms documentation cardinality (SettledContract) = + | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes efac:LotTender​/cbc:ID *ORDER* -->
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Tender Identifier (BT-3202)'"/></xsl:call-template>
 			<xsl:for-each select="awards/path">
 				<xsl:variable name="path" select="fn:string(.)"/>
 				<efac:LotTender>
@@ -402,17 +402,17 @@ These instructions can be un-commented to show the variables
 		<!-- Tendering Parties -->
 		<xsl:for-each select="$ted-contractor-groups-unique-with-id//contractor-group">
 			<efac:TenderingParty>
-				<!-- Tendering Party ID (OPT-210): eForms documentation cardinality (TenderingParty) = 1 | cbc:ID -->
-				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tendering Party ID (OPT-210)'"/></xsl:call-template>
+				<!-- Tendering Party Identifier (OPT-210): eForms documentation cardinality (TenderingParty) = 1 | cbc:ID -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tendering Party Identifier (OPT-210)'"/></xsl:call-template>
 				<cbc:ID schemeName="tendering-party"><xsl:value-of select="../tendering-party-id"/></cbc:ID>
 				<xsl:variable name="ted-contractor-count" select="fn:count(ted-contractor)"/>
 				<xsl:for-each select="ted-contractor">
 					<efac:Tenderer>
-						<!-- Tenderer ID Reference (OPT-300): eForms documentation cardinality (TenderingParty) = + -->
-						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tenderer ID Reference (OPT-300)'"/></xsl:call-template>
+						<!-- Tenderer Identifier Reference (OPT-300): eForms documentation cardinality (TenderingParty) = + -->
+						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tenderer Identifier Reference (OPT-300)'"/></xsl:call-template>
 						<cbc:ID schemeName="organization"><xsl:value-of select="."/></cbc:ID>
-						<!-- Tendering Party Leader (OPT-170): eForms documentation cardinality (TenderingParty) = * -->
 						<!-- Assume if more than one CONTRACTOR that the first one is a Group Leader -->
+						<!-- Tendering Party Leader (OPT-170): eForms documentation cardinality (TenderingParty) = * -->
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tendering Party Leader (OPT-170)'"/></xsl:call-template>
 						<xsl:if test="$ted-contractor-count &gt; 1">
 							<xsl:choose>
@@ -531,11 +531,11 @@ These instructions can be un-commented to show the variables
 	</efac:DecisionReason>
 </xsl:template>
 
-<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
 <xsl:template name="framework-estimated-value">
 	<xsl:param name="result-lot-identifier"/>
 	<!-- set variable to the set of all VAL_ESTIMATED_TOTAL elements for this lot-result element -->
 	<xsl:variable name="lot-result-val-estimated-total" select="awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_ESTIMATED_TOTAL"/>
+	<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Estimated Value (BT-660)'"/></xsl:call-template>
 	<!-- if there is at least one VAL_ESTIMATED_TOTAL within this lot-result element -->
 	<xsl:if test="$lot-result-val-estimated-total">

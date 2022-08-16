@@ -5255,7 +5255,7 @@
                      <efac:ContractReference>
                         <cbc:ID/>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
@@ -5791,337 +5791,337 @@
                         <cbc:ID schemeName="tender">TEN-0178</cbc:ID>
                      </efac:LotTender>
                   </efac:SettledContract>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0006</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0007</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0007</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0008</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0008</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0009</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0009</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0010</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0010</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0011</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                         <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
                      </efac:Tenderer>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                         <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0011</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0012</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0014</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0013</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0015</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0014</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0016</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0015</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0017</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0016</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0018</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0017</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0019</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0018</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0020</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0019</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0021</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0020</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0022</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0021</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0023</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0022</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0024</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0023</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0025</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0024</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0026</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0025</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0027</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0026</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0028</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0027</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0029</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0028</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0030</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0029</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0031</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0030</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0032</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0031</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0033</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0032</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0034</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0033</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0035</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0034</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0036</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0035</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0037</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0036</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0038</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0037</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0039</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0038</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0040</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0039</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0041</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0040</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0042</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0041</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0043</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0042</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0044</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0043</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0045</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0044</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0046</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0045</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0047</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0046</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0048</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0047</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0049</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
@@ -7511,7 +7511,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -7525,7 +7525,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -7570,13 +7570,13 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -7589,7 +7589,6 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2019/S 033-073319</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -7647,7 +7646,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -7686,14 +7685,17 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -7727,6 +7729,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -7771,7 +7774,7 @@
          <cbc:Description languageID="ENG">The lot category of housing and residential will be open to public sector organisations based within the GreaterLondon and the Home Counties identified above and cover all types of construction projects in the followingvalue bands, based for the regions of London (split into 5 sub-lots being the central, north, east, south and westLondon regions), of a value between 1-5 000 000 GBP GBP; 5-10 000 000 GBP GBP (pan London); 10-20000 000 GBP (pan London) and 20 000 000 plus GBP (pan London), provided that they can be categorisedas housing and residential (but which may form part of an overall estate regeneration scheme). Public sectorbodies located in the Home Counties can access the nearest London regional sub lot to their location, forcontracts up to a value range of 1 000 000-5 000 000 GBP. The works and related services will comprise of alltypes of building construction works and associated mechanical, electrical works and services and may includedesign and other services as required for a regeneration programme, develop and construct/refurbishment/turnkey or design and build works and projects that can be categorised as housing and residential. Non-publicbody organisations can use the framework to comply with conditions associated with the use of public funds forworks projects. Construction firms selected to join the Lot 1 MWF for both the individual London regions and panLondon will be expected to work collaboratively with LCP members, either by single or 2 stage tendering andif following 2 stage tendering to provide clear project support throughout the pre-construction services phaseincluding providing firms prices for the main works programme that complies with KPI 11. This Lot has 5 sub-lotsbased on the regions of London for projects in the value band 1-5 000 000 GBP. There is a restriction pursuantto Regulation 46 of the PCRs 2015, in that Suppliers can only apply and be awarded places on 3 of the regionalsub-lots, those being Lot 1.1A central region, Lot 1.1B north region, Lot 1.1C east region, Lot 1.1D south regionand Lot 1.1E west region. Furthermore, suppliers applying or being awarded places on 3 of the regional sub-lots should not apply and will not be awarded places on Lot 1.2, 5-10 000 000 GBP (pan London), Lot 1.3 (panLondon) 10-20 000 000 GBP and Lot 1.4 (pan London) 20 000 0000 GBP plus. There is no restriction on Suppliers applying for, or being awarded places on Lot 1.2, 5-10 000 000 GBP (panLondon), Lot 1.3 (pan London) 10-20 000 000 GBP and/or Lot 1.4 (pan London) 20 000 000 GBP plus, providedthat they should not also apply for any of the 5 regional sub-lots for projects in the value band of 1-5 000 000GBP. The Council will appoint up to 6 of the top scoring Suppliers to each lot, or regional sub-lot. In the eventthat 2 or more Suppliers score equal at 6th place for any of the 8 lots/sub-lots within Lot 1, the Council reservesthe right to appoint both/all 6th place ranked Suppliers to the MWF.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -7905,7 +7908,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -7937,7 +7940,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -7976,14 +7979,17 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -8017,6 +8023,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -8061,7 +8068,7 @@
          <cbc:Description languageID="ENG">The lot category of education and leisure will be open to public sector organisations based within the GreaterLondon and the Home Counties identified above and cover all types of construction projects in the followingvalue bands, based for the regions of London (split into 5 sub-lots being central, north, east, south and westLondon regions) of a value between 1-5 000 000 GBP; 5-10 000 000 GBP (pan London); 10-20 000 000 GBP(pan London) and over 20 000 000 plus GBP (pan London), provided that they can be categorised as educationand leisure. Public sector bodies located in the Home Counties can access the nearest London regional sub lotto their location for contracts up to a value range of 1 000 000-5 000 000 GBP. The works and related serviceswill comprise of all types of building construction works and associated mechanical, electrical and servicesworks and may include design and other services as required for a regeneration programme, develop andconstruct/refurbishment/turnkey or design and build works project work that can be categorised as educationand leisure. Non-public body organisations can use the framework to comply with conditions associated with theuse of public funds for works projects. Construction firms selected to join the Lot 2 MWF for both the individualLondon regions and pan London will be expected to work collaboratively with LCP members, either by singleor 2 stage tendering and if following 2 stage tendering to provide clear project support throughout the pre-construction services phase including providing firms prices for the main works programme. This lot has 5sub-lots based on the regions of London for projects in the value band 1-5 000 000 GBP. There is a restrictionpursuant to Regulation 46 of the PCRs 2015, in that Suppliers can only apply and be awarded places on 3of the regional sub-lots, those being Lot 2.1A central region, Lot 2.1B north region, Lot 2.1C east region, Lot2.1D south region and Lot 2.1E west region. Furthermore, Suppliers applying or being awarded places on 3of the regional sub-lots should not apply and will not be awarded places on Lot 2.2, 5-10 000 000 GBP (panLondon), Lot 2.3 (pan London) 10-20 000 000 GBP and Lot 2.4 (pan London) 20 000 000 GBP plus. There isno restriction on suppliers applying for, or being awarded places on Lot 2.2, 5-10 000 000 GBP (pan London),Lot 2.3 (pan London) 10-20 000 000 GBP and/or Lot 2.4 (pan London) 20 000 000 GBP plus, provided that theyshould not also apply for any of the 5 regional sub-lots for projects in the value band of 1-5 000 000 GBP.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -8135,7 +8142,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -8167,7 +8174,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -8206,14 +8213,17 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -8247,6 +8257,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -8291,7 +8302,7 @@
          <cbc:Description languageID="ENG">The lot category of capital projects will be open to public sector organisations based within the Greater Londonand the Home Counties identified above and cover all types of construction projects in the following valuebands, based for the regions of London (split into 5 sub-lots being the central, north, east, south and westLondon regions) of a value between 1-5 000 000 GBP; 5-10 000 000 GBP (pan London); 10-20 000 000 GBP(pan London) and over 20 000 000 plus GBP (pan London), provided that they can be categorised as capitalprojects. Public sector bodies located in the Home Counties can access the nearest London regional sub-lotto their location for contracts up to a value range of 1 000 000-5 000 000 GBP. The works and related serviceswill comprise of all types of building construction works and associated mechanical, electrical and servicesworks and may include design and other services as required for a regeneration programme, develop andconstruct/refurbishment/turnkey or design and build works project work that can be categorised as capitalprojects. Non-public body organisations can use the framework to comply with conditions associated with theuse of public funds for works projects. Construction firms selected to join the Lot 3 of LCP MWF for both theindividual London regions and pan London will be expected to work collaboratively with LCP members, eitherby single or 2 stage tendering and if following 2 stage tendering to provide clear project support throughout thepre-construction services phase including providing firms prices for the main works programme. This lot has 5sub-lots based on the regions of London for projects in the value band 1-5 000 000 GBP. There is a restrictionpursuant to Regulation 46 of the PCRs 2015, in that Suppliers can only apply and be awarded places on 3of the regional sub-lots, those being Lot 3.1A central region, Lot 3.1B north region, Lot 3.1C east region, Lot3.1D south region and Lot 3.1E west region. Furthermore, suppliers applying or being awarded places on 3of the regional sub-lots should not apply and will not be awarded places on Lot 3.2, 5-10 000 000 GBP (panLondon), Lot 3.3 (pan London) 10-20 000 000 GBP and Lot 3.4 (pan London) 20 000 000 GBP plus. There isno restriction on suppliers applying for, or being awarded places on Lot 3.2, 5-10 000 000 GBP (pan London),Lot 3.3 (pan London) 10-20 000 000 GBP and/or Lot 3.4 (pan London) 20 000 000 GBP plus, provided that theyshould not also apply for any of the 5 regional sub-lots for projects in the value band of 1-5 000 000 GBP.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -8362,7 +8373,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -8394,7 +8405,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -8433,14 +8444,17 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -8474,6 +8488,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -8518,7 +8533,7 @@
          <cbc:Description languageID="ENG">The lot category of heritage and historical projects will be open to public sector organisations based withinGreater London and the Home Counties identified above and cover all types of construction projects within Lot4 for projects valued at 1 000 000 GBP plus (pan London), provided they can be categorised as heritage andhistorical projects. The works and related services will comprise of all types of building construction works andassociated mechanical, electrical and services works and may include design and other services as requiredfor a regeneration programme, develop and construct/refurbishment /turnkey or design and build works projectwork that can be categorised as heritage and historical projects. Non-public body organisations can use theframework to comply with conditions associated with the use of public funds for works projects. Constructionfirms selected to join the Lot 4 MWF for both the individual London regions and pan London will be expected towork collaboratively with LCP members, either by single or 2 stage tendering and if following 2 stage tenderingto provide clear project support throughout the pre-construction services phase including providing firms pricesfor the main works programme.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -8571,7 +8586,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -8603,7 +8618,7 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -8642,14 +8657,17 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -8683,6 +8701,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -8727,7 +8746,7 @@
          <cbc:Description languageID="ENG">The lot category of highways and public realm projects will be open to public sector organisations based withinGreater London and the Home Counties identified above and cover all types of construction projects of 1000 000 plus GBP (pan London) provided they can be categorised as heritage and historical projects. Theworks and related services will comprise of all types of highways/building construction works and associatedmechanical, electrical and services works and may include design and other services as required for aregeneration programme, develop and construct/refurbishment/turnkey or design and build works project workthat can be categorised as highways and public realm projects. Non-public body organisations can use theframework to comply with conditions associated with the use of public funds for works projects. Constructionfirms selected to join the Lot 5 MWF pan London will be expected to work collaboratively with LCP members,either by single or two stage tendering and if following 2 stage tendering to provide clear project supportthroughout the pre-construction services phase including providing firms prices for the main works programme.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -8789,7 +8808,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

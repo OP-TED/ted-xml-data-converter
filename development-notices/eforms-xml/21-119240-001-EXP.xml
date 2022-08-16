@@ -76,7 +76,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -90,7 +90,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -135,7 +135,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
       <cac:LotDistribution><!--Lots Max Awarded (BT-33)-->
          <cbc:MaximumLotsAwardedNumeric>1</cbc:MaximumLotsAwardedNumeric>
          <!--Lots Max Allowed (BT-31)-->
@@ -149,7 +149,7 @@
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -160,7 +160,6 @@
       <!--PIN Competition Termination (BT-756)-->
       <cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
       <!--Previous Planning Identifier (BT-125)-->
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -301,7 +300,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -309,6 +308,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -327,10 +329,10 @@
             <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
@@ -429,7 +431,7 @@
          <cbc:Description languageID="ENG">Will manage and deliver all civil and associated works at Dublin Airport Campus (see attached RFI for further information). The contracting authority reserves the right to use this framework partner to undertake associated civil works at Cork Airport.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -475,7 +477,7 @@
             <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
          <cac:ContractExtension>
             <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
@@ -589,7 +591,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -597,6 +599,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -615,10 +620,10 @@
             <cbc:DurationMeasure unitCode="DAY">222</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
@@ -717,7 +722,7 @@
          <cbc:Description languageID="ENG">Will manage and deliver all civil and associated work with the Underpass construction at Dublin Airport Campus (see attached RFI for further details). The contracting authority reserves the right to use this framework partner to undertake associated civil works at Cork Airport.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -781,7 +786,7 @@
             <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
          <cac:ContractExtension>
             <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>

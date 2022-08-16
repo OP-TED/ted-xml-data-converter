@@ -15,52 +15,52 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="awarding-terms">
 	<!-- TBD: will need to determine rules for including main element cac:AwardingTerms -->
 	<cac:AwardingTerms>
-		<!-- Following Contract (BT-41) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<!-- Following Contract (BT-41): eForms documentation cardinality (Lot) = + | Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Following Contract (BT-41)'"/></xsl:call-template>
 		<xsl:apply-templates select="../../ted:PROCEDURE/(ted:FOLLOW_UP_CONTRACTS|ted:NO_FOLLOW_UP_CONTRACTS)"/>
 
-		<!-- Jury Decision Binding (BT-42) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<!-- Jury Decision Binding (BT-42): eForms documentation cardinality (Lot) = + | Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Jury Decision Binding (BT-42)'"/></xsl:call-template>
 		<xsl:apply-templates select="../../ted:PROCEDURE/(ted:DECISION_BINDING_CONTRACTING|ted:NO_DECISION_BINDING_CONTRACTING)"/>
 
-		<!-- No Negotiation Necessary (BT-120) cardinality + Optional for CN subtypes 16 and 20; Forbidden for other subtypes -->
+		<!-- No Negotiation Necessary (BT-120): eForms documentation cardinality (Lot) = + | Optional for CN subtypes 16 and 20; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'No Negotiation Necessary (BT-120)'"/></xsl:call-template>
 		<xsl:apply-templates select="../../ted:PROCEDURE/ted:RIGHT_CONTRACT_INITIAL_TENDERS"/>
 
-		<!-- Award Criteria Order Justification (BT-733) cardinality ? No equivalent element in TED XML -->
-		<!-- Award Criteria Complicated (BT-543) cardinality ? No equivalent element in TED XML -->
-		<!-- Award Criterion Number (BT-541): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Award Criterion Number Weight (BT-5421): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Award Criterion Number Fixed (BT-5422): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Award Criterion Number Threshold (BT-5423): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Award Criterion Type (BT-539): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Award Criterion Name (BT-734): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Award Criteria Order Justification (BT-733): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criteria Order Justification (BT-733)'"/></xsl:call-template>
+		<!-- Award Criteria Complicated (BT-543): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criteria Complicated (BT-543)'"/></xsl:call-template>
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number Weight (BT-5421)'"/></xsl:call-template>
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number Fixed (BT-5422)'"/></xsl:call-template>
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number Threshold (BT-5423)'"/></xsl:call-template>
+		<!-- Award Criterion Number (BT-541): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number (BT-541)'"/></xsl:call-template>
+		<!-- Award Criterion Number Weight (BT-5421): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number Weight (BT-5421)'"/></xsl:call-template>
+		<!-- Award Criterion Number Fixed (BT-5422): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number Fixed (BT-5422)'"/></xsl:call-template>
+		<!-- Award Criterion Number Threshold (BT-5423): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number Threshold (BT-5423)'"/></xsl:call-template>
+		<!-- Award Criterion Type (BT-539): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Type (BT-539)'"/></xsl:call-template>
+		<!-- Award Criterion Name (BT-734): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Name (BT-734)'"/></xsl:call-template>
+		<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Description (BT-540)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:AC|../../ted:PROCEDURE/ted:CRITERIA_EVALUATION"/>
 
-		<!-- Jury Member Name (BT-46) cardinality * Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<!-- Jury Member Name (BT-46): eForms documentation cardinality (Lot) = * | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Jury Member Name (BT-46)'"/></xsl:call-template>
 		<xsl:apply-templates select="../../ted:PROCEDURE/ted:MEMBER_NAME"/>
 
 		<!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
-		<!-- Prize Rank (BT-44) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-		<!-- Value Prize (BT-644) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-		<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<!-- Prize Rank (BT-44): eForms documentation cardinality (Lot) = 1 | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<!-- Value Prize (BT-644): eForms documentation cardinality (Lot) = 1 | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<!-- Rewards Other (BT-45): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))'"/></xsl:call-template>
 		<xsl:call-template name="prize"/>
 	</cac:AwardingTerms>
 </xsl:template>
 
-<!-- Following Contract (BT-41) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+<!-- Following Contract (BT-41): eForms documentation cardinality (Lot) = + | Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 <xsl:template match="ted:FOLLOW_UP_CONTRACTS">
 	<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
 </xsl:template>
@@ -69,7 +69,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:FollowupContractIndicator>false</cbc:FollowupContractIndicator>
 </xsl:template>
 
-<!-- Jury Decision Binding (BT-42) cardinality + Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
+<!-- Jury Decision Binding (BT-42): eForms documentation cardinality (Lot) = + | Mandatory for CN subtypes 23 and 24; Forbidden for other subtypes -->
 <xsl:template match="ted:DECISION_BINDING_CONTRACTING">
 	<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
 </xsl:template>
@@ -78,7 +78,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:BindingOnBuyerIndicator>false</cbc:BindingOnBuyerIndicator>
 </xsl:template>
 
-<!-- Jury Member Name (BT-46) cardinality * Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+<!-- Jury Member Name (BT-46): eForms documentation cardinality (Lot) = * | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 <xsl:template match="ted:MEMBER_NAME">
 	<cac:TechnicalCommitteePerson>
 		<cbc:FamilyName><xsl:value-of select="(.)"/></cbc:FamilyName>
@@ -222,27 +222,33 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 <!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
-<!-- Prize Rank (BT-44) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-<!-- Value Prize (BT-644) cardinality 1 Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-<!-- Rewards Other (BT-45) cardinality ? Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 <xsl:template name="prize">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/(ted:NUMBER_VALUE_PRIZE|ted:DETAILS_PAYMENT)/ted:P, ' '))"/>
-	<xsl:if test="$text ne ''" >
-		<cac:Prize>
+	<xsl:choose>
+		<xsl:when test="$text ne ''">
+			<cac:Prize>
+				<!-- Prize Rank (BT-44): eForms documentation cardinality (Lot) = 1 | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Prize Rank (BT-44)'"/></xsl:call-template>
+				<!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
+				<xsl:variable name="message">WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.</xsl:variable>
+				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+				<cbc:RankCode>1</cbc:RankCode>
+				<!-- Value Prize (BT-644): eForms documentation cardinality (Lot) = 1 | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Value Prize (BT-644)'"/></xsl:call-template>
+				<!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
+				<xsl:variable name="message">WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.</xsl:variable>
+				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+				<!-- Rewards Other (BT-45): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Rewards Other (Prize Description) (BT-45): may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT'"/></xsl:call-template>
+				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			</cac:Prize>
+		</xsl:when>
+		<xsl:otherwise>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Prize Rank (BT-44)'"/></xsl:call-template>
-			<!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
-			<xsl:variable name="message">WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.</xsl:variable>
-			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-			<cbc:RankCode>1</cbc:RankCode>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Value Prize (BT-644)'"/></xsl:call-template>
-			<!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
-			<xsl:variable name="message">WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.</xsl:variable>
-			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Rewards Other (Prize Description) (BT-45)'"/></xsl:call-template>
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Rewards Other (Prize Description) (BT-45) may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT'"/></xsl:call-template>
-			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
-		</cac:Prize>
-	</xsl:if>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>

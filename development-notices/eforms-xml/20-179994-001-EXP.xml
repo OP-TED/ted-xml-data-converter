@@ -156,7 +156,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -170,7 +170,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -215,13 +215,13 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -231,7 +231,6 @@
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -333,10 +332,10 @@
             <!--No Negotiation Necessary (BT-120)-->
             <!--Award Criteria Order Justification (BT-733)-->
             <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Number Weight (BT-5421)-->
             <!--Award Criterion Number Fixed (BT-5422)-->
             <!--Award Criterion Number Threshold (BT-5423)-->
-            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Type (BT-539)-->
             <!--Award Criterion Name (BT-734)-->
             <!--Award Criterion Description (BT-540)-->
@@ -366,8 +365,7 @@
                <cbc:RankCode>1</cbc:RankCode>
                <!--Value Prize (BT-644)-->
                <!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
-               <!--Rewards Other (Prize Description) (BT-45)-->
-               <!--Rewards Other (Prize Description) (BT-45) may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT-->
+               <!--Rewards Other (Prize Description) (BT-45): may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT-->
                <cbc:Description languageID="FRA">Les trois concurrents (candidats admis à concourir) recevront une indemnisation forfaitaire maximale de 10 000 EUR HT. Pour les prestations fournies, sous réserve de la recevabilité de leurs prestations au regard du règlement du concours et du respect du programme. Les indemnisations sont forfaitaires, conformément aux dispositions de l'article R. 2172-4 du code de la commande publique, l'acheteur, sur proposition du jury, se réserve le droit, dans le cas d'un projet qu'il jugerait incomplet ou dont les prestations seraient non conformes par rapport au règlement de concours et ou au programme, de supprimer totalement ou partiellement l'indemnité. Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
             </cac:Prize>
          </cac:AwardingTerms>
@@ -382,10 +380,10 @@
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="FRA">— référé précontractuel: avant la conclusion du marché (articles L. 551-1 à 12 et R. 551-1 à 4 du code de justice administrative); — référé contractuel (articles L. 551-13 à 23 et R. 551-7 à 10 du code de justice administrative).</cbc:Description>
@@ -425,6 +423,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
@@ -462,7 +461,7 @@
          <!--Description (BT-24)-->
          <cbc:Description languageID="FRA">Concours restreint de maîtrise d'œuvre en vue de la construction d'un nouvel accueil périscolaire à Burnhaupt-Le-Bas (68520). — Le présent marché a pour objet de confier au maître d'œuvre une mission de base, constituée des éléments suivants: — les études d'Esquisse (ESQ); — les études d'Avant-projet (AVP): Avant-projet sommaire (APS), Avant-projet définitif (APD); — les études de Projet (PRO-DCE); — l'Assistance à la passation des contrats de travaux (ACT); — la Direction de l'exécution des contrats de travaux (DET); — l'assistance lors des opérations de réception et pendant la période de garantie de parfait achèvement (AOR). La mission comprend également les missions complémentaires suivantes: — les études d'exécution (EXE); — Ordonnancement, pilotage et coordination (OPC). Le contenu de chaque élément de mission est celui qui figure à l'annexe I de l'arrêté du 22.3.2019 détaillant les modalités techniques d'exécution des éléments de mission de maîtrise d'œuvre; — la mission de coordination en matière de Système sécurité incendie (SSI), telle que définie par les textes réglementaires et normes en vigueur, est intégrée dans la mission du maître d'œuvre (mission de base).</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -501,7 +500,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

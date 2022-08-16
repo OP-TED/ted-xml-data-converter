@@ -805,7 +805,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -819,7 +819,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -1438,7 +1438,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
       <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>3</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
@@ -1450,7 +1450,7 @@
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -1460,7 +1460,6 @@
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -1576,7 +1575,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -1584,6 +1583,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -1596,10 +1598,10 @@
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -1700,7 +1702,7 @@
          <cbc:Description languageID="ENG">The Provider will create an environment in which the Services operate that has continuous improvement at its core. Services will be flexible, responsive and creative, in order to deliver provision that meets the needs of the Learner. Ofsted (or an equivalent body approved by the Secretary of State for Education under section 106 of the Education and Skills Act 2008) inspection reports will be used as one of the key quality measures for this framework. The Provider will deliver education and/or training appropriate to the age, ability, aptitude and special educational needs of the Learner in accordance with their EHC Plan or Annual Review (whichever is most up to date for the Learner). The Provider will deliver a programme of education and activities which meet the Learner’s outcomes, as stated in their EHC Plan or annual review paperwork (whichever is most up to date for the Learner). This will include supporting the Learner to work towards qualifications that meet their ability and demonstrate the Learner is making academic progression or acquiring skills. The Provider will endeavour to ensure the Learner does not repeat qualifications or courses. The service specification sets out the outcomes the Provider will be expected to deliver in respect of: • the service overall (the Outcomes), and • individual placements (the Individual Outcomes). In respect of the service overall, the Provider will be expected to participate fully in the North West Performance Monitoring and Outcomes Framework, providing the required data and key performance indicators (in the format requested by the placing authorities) In respect of individual placements, the Provider will be expected to work with the Placing Authority to achieve positive outcomes for the Learner and meet the objectives as described in the Education, Health and Care Plan accompanying each placement. The North West local authorities are committed to collaboration, co-production and best practice with Parents/ Carers and Providers, to ensure the regional contract remains fit for purpose. This FPS will be regularly reviewed by the North West Regional Governance Group to ensure that the required outcomes are being delivered and further developments and innovation are included.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1745,7 +1747,7 @@
             <cbc:DurationMeasure unitCode="MONTH">120</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1831,7 +1833,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -1839,6 +1841,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -1851,10 +1856,10 @@
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -1955,7 +1960,7 @@
          <cbc:Description languageID="ENG">The Provider will create an environment in which the Services operate that has continuous improvement at its core. Services will be flexible, responsive and creative, in order to deliver provision that meets the needs of the Learner. Ofsted (or an equivalent body approved by the Secretary of State for Education under section 106 of the Education and Skills Act 2008) inspection reports will be used as one of the key quality measures for this framework. The Provider will deliver education and/or training appropriate to the age, ability, aptitude and special educational needs of the Learner in accordance with their EHC Plan or Annual Review (whichever is most up to date for the Learner). The Provider will deliver a programme of education and activities which meet the Learner’s outcomes, as stated in their EHC Plan or annual review paperwork (whichever is most up to date for the Learner). This will include supporting the Learner to work towards qualifications that meet their ability and demonstrate the Learner is making academic progression or acquiring skills. The Provider will endeavour to ensure the Learner does not repeat qualifications or courses. The service specification sets out the outcomes the Provider will be expected to deliver in respect of: • the service overall (the Outcomes), and • individual placements (the Individual Outcomes). In respect of the service overall, the Provider will be expected to participate fully in the North West Performance Monitoring and Outcomes Framework, providing the required data and key performance indicators (in the format requested by the placing authorities) In respect of individual placements, the Provider will be expected to work with the Placing Authority to achieve positive outcomes for the Learner and meet the objectives as described in the Education, Health and Care Plan accompanying each placement. The North West local authorities are committed to collaboration, co-production and best practice with Parents/ Carers and Providers, to ensure the regional contract remains fit for purpose. This FPS will be regularly reviewed by the North West Regional Governance Group to ensure that the required outcomes are being delivered and further developments and innovation are included. The Provider will be required to meet the requisite accommodation standards and requirements for children’s homes specified within the Children and Young People’s Residential Placements Flexible Procurement System.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2000,7 +2005,7 @@
             <cbc:DurationMeasure unitCode="MONTH">120</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -2086,7 +2091,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -2094,6 +2099,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -2106,10 +2114,10 @@
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealInformationParty>
                <cac:PartyIdentification>
@@ -2210,7 +2218,7 @@
          <cbc:Description languageID="ENG">The Provider will create an environment in which the Services operate that has continuous improvement at its core. Services will be flexible, responsive and creative, in order to deliver provision that meets the needs of the Learner. Ofsted (or an equivalent body approved by the Secretary of State for Education under section 106 of the Education and Skills Act 2008) inspection reports will be used as one of the key quality measures for this framework. The Provider will deliver education and/or training appropriate to the age, ability, aptitude and special educational needs of the Learner in accordance with their EHC Plan or Annual Review (whichever is most up to date for the Learner). The Provider will deliver a programme of education and activities which meet the Learner’s outcomes, as stated in their EHC Plan or annual review paperwork (whichever is most up to date for the Learner). This will include supporting the Learner to work towards qualifications that meet their ability and demonstrate the Learner is making academic progression or acquiring skills. The Provider will endeavour to ensure the Learner does not repeat qualifications or courses. The service specification sets out the outcomes the Provider will be expected to deliver in respect of: • the service overall (the Outcomes), and • individual placements (the Individual Outcomes). In respect of the service overall, the Provider will be expected to participate fully in the North West Performance Monitoring and Outcomes Framework, providing the required data and key performance indicators (in the format requested by the placing authorities) In respect of individual placements, the Provider will be expected to work with the Placing Authority to achieve positive outcomes for the Learner and meet the objectives as described in the Education, Health and Care Plan accompanying each placement. The North West local authorities are committed to collaboration, co-production and best practice with Parents/ Carers and Providers, to ensure the regional contract remains fit for purpose. This FPS will be regularly reviewed by the North West Regional Governance Group to ensure that the required outcomes are being delivered and further developments and innovation are included. The Provider will be required to meet the requisite accommodation standards and requirements for children’s homes specified within the Children and Young People’s Residential Placements Flexible Procurement System.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2255,7 +2263,7 @@
             <cbc:DurationMeasure unitCode="MONTH">120</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

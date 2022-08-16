@@ -125,7 +125,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -139,7 +139,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -300,13 +300,13 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -320,7 +320,6 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2020/S 222-542947</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -444,10 +443,10 @@
             <cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
             <!--Award Criteria Order Justification (BT-733)-->
             <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Number Weight (BT-5421)-->
             <!--Award Criterion Number Fixed (BT-5422)-->
             <!--Award Criterion Number Threshold (BT-5423)-->
-            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Type (BT-539)-->
             <!--Award Criterion Name (BT-734)-->
             <!--Award Criterion Description (BT-540)-->
@@ -458,6 +457,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -470,10 +472,10 @@
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="ENG">Within 2 months of notice of the award decision, you may launch an action for annulment of the award decision. Any request you may make and any reply from us, or any complaint for maladministration, will have neither the purpose nor the effect of suspending the time-limit for launching an action for annulment or to open a new period for launching an action for annulment. The body responsible for hearing annulment procedures is indicated in Section VI.4.1) of the contract notice. If you believe that there was maladministration, you may lodge a complaint to the European Ombudsman within 2 years of the date when you became aware of the facts on which the complaint is based (see http://www.ombudsman.europa.eu)</cbc:Description>
@@ -577,7 +579,7 @@
          <cbc:Description languageID="ENG">F4E and DTT will carry out jointly this procurement procedure. As an outcome of the procedure, F4E will award two separate multiple framework contracts (MFC) for each respective scope: 1) MFWC signed by F4E: Up to six gyrotrons of 1 MW at 170 GHz with continuous wave long pulse of up to 3 600s for F4E. The scope of work includes detailed design development based on functional specifications, engineering design, procurement, assembly and factory testing, disassembly in modular form, packaging, shipment to ITER site, on-site installation, supervision of on-site installation, and commissioning at ITER site. F4E will award and sign one (or more) specific contract, according to the cascade system, provided that the contractor can demonstrate it has reached the following conditions: 1 MW at 170 GHz, CW for longer than 100s and demonstrated capability for stable operation in Continues Wave (CW) by the time of launching of the F4E Task Order (expected Q4 2022). 2) MFWC signed by DTT: Up to sixteen gyrotrons of 1 MW at 170 GHz with pulse length of 100s for DTT. The scope of work includes procurement, assembly and factory testing, disassembly in modular form, packaging, shipment to SPC, Lausanne for the pre-series gyrotrons and to the DTT site, Frascati for the series gyrotrons, supervision of installation and commissioning at SPC, Lausanne or DTT site, Frascati. DTT will sign a Specific Contract for one pre-series gyrotron with the first ranked contractor. DTT will sign a Specific Contract for one pre-series gyrotron with the second ranked contractor. If both are successful, they will both be required to procure up to seven series gyrotrons each.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -629,7 +631,7 @@
             <cbc:DurationMeasure unitCode="MONTH">68</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
          <cac:ContractExtension>
             <cbc:OptionsDescription languageID="ENG">See internet address provided in section I.3).</cbc:OptionsDescription>

@@ -133,7 +133,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<xsl:if test="$eforms-form-type eq 'CAN'">
 						<xsl:call-template name="notice-result"/>
 					</xsl:if>
-					<!-- Notice SubType (OPP-070) -->
+					<!-- Notice SubType (OPP-070): eForms documentation cardinality (Procedure) = 1 -->
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice SubType (OPP-070)'"/></xsl:call-template>
 					<efac:NoticeSubType>
 						<cbc:SubTypeCode listName="notice-subtype"><xsl:value-of select="$eforms-notice-subtype"/></cbc:SubTypeCode>
@@ -154,45 +154,45 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<!-- Customization ID (UBL) -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Customization ID (UBL)'"/></xsl:call-template>
 	<!-- TBD: hard-coded for now -->
-	<cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
-	<!-- Notice Identifier (BT-701) -->
+	<cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+	<!-- Notice Identifier (BT-701): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Identifier (BT-701)'"/></xsl:call-template>
 	<!-- TBD: hard-coded for now -->
 	<cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
-	<!-- Procedure Identifier (BT-04) -->
+	<!-- Procedure Identifier (BT-04): eForms documentation cardinality (Procedure) = * | Forbidden for PIN subtypes 1-9, E1 and E2; Mandatory for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Identifier (BT-04)'"/></xsl:call-template>
 	<!-- TBD: hard-coded for now -->
 	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
-	<!-- Notice Dispatch Date (BT-05) -->
+	<!-- Notice Dispatch Date (BT-05): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Dispatch Date (BT-05)'"/></xsl:call-template>
 	<!-- TBD: cater for when DATE_DISPATCH_NOTICE does not exist -->
 	<cbc:IssueDate><xsl:value-of select="ted:COMPLEMENTARY_INFO/ted:DATE_DISPATCH_NOTICE"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
 	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
-	<!-- Notice Version (BT-757) -->
+	<!-- Notice Version (BT-757): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Version (BT-757)'"/></xsl:call-template>
 	<!-- TBD: hard-coded for now -->
 	<cbc:VersionID>01</cbc:VersionID>
-	<!-- Future Notice (BT-127) -->
-	<!-- TBD: hard-coded for now -->
+	<!-- Future Notice (BT-127): eForms documentation cardinality (Procedure) = * | Mandatory for PIN subtypes 4 and 6; Optional for PIN subtypes 5, 7-9, E1 and E2; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Future Notice (BT-127)'"/></xsl:call-template>
 	<!-- The "cbc:PlannedDate" is used for planning notices (PIN only excluded) [Notice subtypes 1,2,3, 7,8,9] to specify when the competition notice will be published. -->
 	<!-- F01, F04 element is TED_EXPORT/FORM_SECTION/F01_2014/OBJECT_CONTRACT/DATE_PUBLICATION_NOTICE -->
 	<!-- F16 PRIOR_INFORMATION_DEFENCE does not have an equivalent element -->
+	<!-- TBD: hard-coded for now -->
 	<xsl:if test="$eforms-notice-subtype = ('1', '2', '3', '7', '8', '9')">
 		<cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
 	</xsl:if>
-	<!-- Procedure Legal Basis (BT-01) -->
+	<!-- Procedure Legal Basis (BT-01): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Legal Basis (BT-01)'"/></xsl:call-template>
 	<cbc:RegulatoryDomain><xsl:value-of select="$legal-basis"/></cbc:RegulatoryDomain>
-	<!-- Form Type (BT-03) and Notice Type (BT-02) -->
+	<!-- Form Type (BT-03) and Notice Type (BT-02): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Form Type (BT-03) and Notice Type (BT-02)'"/></xsl:call-template>
 	<!-- TBD: hard-coded for now; to use tailored codelists -->
 	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
-	<!-- Notice Official Language (BT-702) (first)-->
+	<!-- Notice Official Language (BT-702) (first): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Official Language (BT-702) (first)'"/></xsl:call-template>
 	<cbc:NoticeLanguageCode><xsl:value-of select="$eforms-first-language"/></cbc:NoticeLanguageCode>
 	<xsl:for-each select="$ted-form-additional-languages">
-	<!-- Notice Official Language (BT-702) (additional)-->
+	<!-- Notice Official Language (BT-702) (additional): eForms documentation cardinality (Procedure) = * | Optional for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Official Language (BT-702) (additional)'"/></xsl:call-template>
 		<cac:AdditionalNoticeLanguage>
 			<cbc:ID><xsl:value-of select="opfun:get-eforms-language(.)"/></cbc:ID>
@@ -211,15 +211,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="publication">
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' efac:Publication '"/></xsl:call-template>
 	<efac:Publication>
-		<!-- Notice Publication ID (OPP-010) cardinality ? -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Publication ID (OPP-010)'"/></xsl:call-template>
+		<!-- Notice Publication Identifier (OPP-010): eForms documentation cardinality (Procedure) = ? -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Publication Identifier (OPP-010)'"/></xsl:call-template>
 		<!-- TBD: hard-coded for now -->
 		<efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
-		<!-- OJEU Identifier (OPP-011) cardinality ? -->
+		<!-- OJEU Identifier (OPP-011): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'OJEU Identifier (OPP-011)'"/></xsl:call-template>
 		<!-- TBD: hard-coded for now -->
 		<efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
-		<!-- OJEU Publication Date (OPP-012) cardinality ? -->
+		<!-- OJEU Publication Date (OPP-012): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'OJEU Publication Date (OPP-012)'"/></xsl:call-template>
 		<!-- TBD: hard-coded for now -->
 		<efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
@@ -249,22 +249,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cac:TenderingTerms>
 		<!-- A limited number of BTs are specified for tendering terms at root level -->
 		<!-- no BTs at root level require Extensions -->
-		<!-- Cross Border Law (BT-09) cardinality * No equivalent element in TED XML -->
+		<!-- Cross Border Law (BT-09): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Cross Border Law (BT-09)'"/></xsl:call-template>
-		<!-- BT-01 Legal Basis Local - Code cardinality * No equivalent element in TED XML -->
-		<!-- BT-01 Legal Basis Local - Text cardinality * Element PROCUREMENT_LAW -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'BT-01 Legal Basis Local - Text'"/></xsl:call-template>
+		<!-- Legal Basis (BT-01) Local - Code: eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML -->
+		<!-- Legal Basis (BT-01) Local - Text: eForms documentation cardinality (Procedure) = * | Element PROCUREMENT_LAW -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Legal Basis (BT-01) Local - Text'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:PROCUREMENT_LAW"/>
-		<!-- Exclusion Grounds (BT-67) cardinality ? No Exclusion Grounds in TED XML-->
+		<!-- Exclusion Grounds (BT-67): eForms documentation cardinality (Procedure) = ? | No Exclusion Grounds in TED XML-->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Exclusion Grounds (BT-67)'"/></xsl:call-template>
-		<!-- Lots Max Awarded (BT-33) cardinality 1 Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
+		<!-- Lots Max Awarded (BT-33): eForms documentation cardinality (Procedure) = 1 | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Lots Max Awarded (BT-33)'"/></xsl:call-template>
-		<!-- Lots Max Allowed (BT-31) cardinality 1 Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
+		<!-- Lots Max Allowed (BT-31): eForms documentation cardinality (Procedure) = 1 | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Lots Max Allowed (BT-31)'"/></xsl:call-template>
 		<xsl:apply-templates select="//ted:LOT_DIVISION[ted:LOT_MAX_ONE_TENDERER|ted:LOT_ALL|ted:LOT_MAX_NUMBER|ted:LOT_ONE_ONLY]"/>
-		<!-- Group Identifier (BT-330) cardinality 1 Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
+		<!-- Group Identifier (BT-330): eForms documentation cardinality (Procedure) = 1 | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Group Identifier (BT-330)'"/></xsl:call-template> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
-		<!-- Group Lot Identifier (BT-1375) cardinality 1 Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
+		<!-- Group Lot Identifier (BT-1375): eForms documentation cardinality (Procedure) = 1 | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Group Lot Identifier (BT-1375)'"/></xsl:call-template> <!-- should it have cardinality 1? No LotsGroup in TED XML -->
 	</cac:TenderingTerms>
 </xsl:template>
@@ -282,12 +282,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<ext:UBLExtension>
 				<ext:ExtensionContent>
 					<efext:EformsExtension>
-						<!-- Tool Name (BT-632) Optional for PIN subtypes 1-9, E1, and E2, CN subtypes 10-24 and E3; Forbidden for other subtypes -->
-						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tool Name (BT-632)'"/></xsl:call-template>
-						<!-- Deadline Receipt Expressions (BT-630) Mandatory for CN subtypes 10-14; Optional for CN subtypes 20 and 21; Forbidden for other subtypes -->
-						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Deadline Receipt Expressions (BT-630)'"/></xsl:call-template>
-						<!-- Procurement Relaunch (BT-634) cardinality ? Optional for CN subtypes 10-24 and E3, CAN subtypes 29-37 and E4; Forbidden for other subtypes -->
 						<!-- TBD: review after meeting on BT-634 and email from DG GROW -->
+						<!-- Procurement Relaunch (BT-634): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 10-24 and E3, CAN subtypes 29-37 and E4; Forbidden for other subtypes -->
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procurement Relaunch (BT-634)'"/></xsl:call-template>
 					</efext:EformsExtension>
 				</ext:ExtensionContent>
@@ -295,37 +291,34 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</ext:UBLExtensions>
 		<!-- A limited number of BTs are specified for tendering process at root level -->
 
-		<!-- Procedure Features (BT-88) cardinality ? Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Procedure Features (BT-88): eForms documentation cardinality (Procedure) = ? | Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="main-features-award"/>
 
 
-		<!-- Procedure Type (BT-105) cardinality 1 Mandatory for CN subtypes 10, 11, 16-18, 23, and 24, CAN subtypes 25-31, 36, and 37; Optional for PIN subtypes 7-9, CN subtypes 12, 13, 20-22, and E3, CAN subtypes 33, 34, and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Procedure Type (BT-105): eForms documentation cardinality (Procedure) = 1 | Mandatory for CN subtypes 10, 11, 16-18, 23, and 24, CAN subtypes 25-31, 36, and 37; Optional for PIN subtypes 7-9, CN subtypes 12, 13, 20-22, and E3, CAN subtypes 33, 34, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Type (BT-105)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:PROCEDURE/(ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_AWARD_CONTRACT_WITHOUT_CALL)"/>
 
-		<!-- Lots All Required (BT-763) cardinality ? No equivalent element in TED XML -->
+		<!-- Lots All Required (BT-763): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Lots All Required (BT-763)'"/></xsl:call-template>
-		<!-- PIN Competition Termination (BT-756) cardinality ? Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
+		<!-- PIN Competition Termination (BT-756): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
 		<xsl:call-template name="pin-competition-termination"/>
 
-		<!-- Previous Planning Identifier (BT-125) cardinality - Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. -->
+		<!-- Previous Planning Identifier (BT-125): eForms documentation cardinality (Procedure) = - | Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Planning Identifier (BT-125)'"/></xsl:call-template>
 		<!-- TBD: Discussion about methods of linking to previous notices is ongoing. This mapping/conversion may change. -->
 		<!-- TBD: When the notice linked to is of type PIN Only, BT-125 and BT-1251 should be specified at Lot level, not at notice level. -->
 
 		<xsl:apply-templates select="ted:PROCEDURE/ted:NOTICE_NUMBER_OJ"/>
 
-		<!-- Previous Planning Part Identifier (BT-1251) cardinality - Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. No equivalent element in TED XML. -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Planning Part Identifier (BT-1251)'"/></xsl:call-template>
-
-		<!-- Procedure Accelerated (BT-106) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Procedure Accelerated Justification (BT-1351) cardinality ? Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Procedure Accelerated (BT-106): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Procedure Accelerated Justification (BT-1351): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:apply-templates select="ted:PROCEDURE/ted:ACCELERATED_PROC"/>
 
 
-		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252) cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Direct Award Justification (BT-136) ​/ Code cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Direct Award Justification (BT-135) ​/ Text cardinality ? Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Direct Award Justification (BT-136) ​/ Code: eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Direct Award Justification (BT-135) ​/ Text: eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="direct-award-justification"/>
 
 	</cac:TenderingProcess>
@@ -341,47 +334,48 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' cac:ProcurementProject '"/></xsl:call-template>
 	<cac:ProcurementProject>
 		<!-- A limited number of BTs are specified for procurement project at root level -->
-		<!-- Internal Identifier (BT-22) cardinality 1 Optional for ALL Notice subtypes -->
+		<!-- Internal Identifier (BT-22): eForms documentation cardinality (Procedure) = 1 | Optional for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Internal Identifier (BT-22)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:REFERENCE_NUMBER"/>
-		<!-- Title (BT-21) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
+		<!-- Title (BT-21): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Title (BT-21)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TITLE"/>
-		<!-- Description (BT-24) cardinality 1 Mandatory for ALL Notice subtypes -->
+		<!-- Description (BT-24): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>
-		<!-- Main Nature (BT-23) cardinality 1 Optional for ALL Notice subtypes -->
+		<!-- Main Nature (BT-23): eForms documentation cardinality (Procedure) = 1 | Optional for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>
-		<!-- Additional Nature (different from Main) (BT-531) cardinality * No equivalent element in TED XML -->
-		<!-- Additional Information (BT-300) cardinality ? Optional for ALL Notice subtypes -->
+		<!-- Additional Nature (BT-531): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML -->
+		<!-- Additional Information (BT-300): eForms documentation cardinality (Procedure) = ? | Optional for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Information (BT-300)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:COMPLEMENTARY_INFO/ted:INFO_ADD"/>
 
-		<!-- Estimated Value (BT-27) cardinality ? -->
+		<!-- Estimated Value (BT-27): eForms documentation cardinality (Procedure) = ? | Optional for PIN subtypes 4-9, E1 and E2, CN subtypes 10-14, 16-22, and E3, CAN subtypes 29-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Estimated Value (BT-27)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>
-		<!-- Classification Type (e.g. CPV) (BT-26) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
-		<!-- Main Classification Code (BT-262) cardinality 1 Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
+		<!-- Classification Type (BT-26): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
+		<!-- Main Classification Code (BT-262): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Classification Code (BT-262)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>
-		<!-- Additional Classification Code (BT-263) cardinality * No equivalent element in TED XML at Procedure level -->
+		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML at Procedure level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
-		<!-- Place of Performance (*) -> RealizedLocation No equivalent element in TED XML at Procedure level -->
+
+		<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
 		<!-- No location elements exist in TED F02 schema at Procedure level. TBD: Question: if NO_LOT_DIVISION, should we copy the location details from the single Lot in OBJECT_DESCR? -->
 			<!-- Place of Performance Additional Information (BT-728) -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
-			<!-- Place Performance City (BT-5131) -->
+			<!-- Place Performance City (BT-5131): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance City (BT-5131)'"/></xsl:call-template>
-			<!-- Place Performance Post Code (BT-5121) -->
+			<!-- Place Performance Post Code (BT-5121): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Post Code (BT-5121)'"/></xsl:call-template>
-			<!-- Place Performance Country Subdivision (BT-5071) -->
+			<!-- Place Performance Country Subdivision (BT-5071): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Subdivision (BT-5071)'"/></xsl:call-template>
-			<!-- Place Performance Services Other (BT-727) -->
+			<!-- Place Performance Services Other (BT-727): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Services Other (BT-727)'"/></xsl:call-template>
-			<!-- Place Performance Street (BT-5101) -->
+			<!-- Place Performance Street (BT-5101): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
-			<!-- Place Performance Country Code (BT-5141) -->
+			<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
 	</cac:ProcurementProject>
 </xsl:template>

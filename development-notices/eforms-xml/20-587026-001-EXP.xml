@@ -230,7 +230,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -244,7 +244,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -369,7 +369,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text-->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text-->
       <cac:ProcurementLegislationDocumentReference>
          <cbc:ID>LocalLegalBasis</cbc:ID>
          <cbc:DocumentDescription languageID="DAN">Udbud for: - Region Sjælland - Region Hovedstaden - Region Nordjylland - Region Midtjylland. Region Sjælland er udbudsansvarlig.</cbc:DocumentDescription>
@@ -385,7 +385,7 @@
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -399,7 +399,6 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2020/S 187-448857</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -545,10 +544,10 @@
             <cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
             <!--Award Criteria Order Justification (BT-733)-->
             <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Number Weight (BT-5421)-->
             <!--Award Criterion Number Fixed (BT-5422)-->
             <!--Award Criterion Number Threshold (BT-5423)-->
-            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Type (BT-539)-->
             <!--Award Criterion Name (BT-734)-->
             <!--Award Criterion Description (BT-540)-->
@@ -590,6 +589,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -608,10 +610,10 @@
             <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DAN">Ved et udbud med prækvalifikation efter udbudsloven, forsyningsvirksomhedsdirektivet eller tilbudsloven skal en klage over ikke at være blevet prækvalificeret indgives inden 20 kalenderdage regnet fra dagen efter ordregiverens afsendelse af underretning om prækvalifikation. Andre klager over udbud eller beslutninger, f.eks. tildeling af kontrakter, omfattet af udbudslovens afsnit II eller III eller forsyningsvirksomhedsdirektivet skal være indgivet til Klagenævnet inden 45 kalenderdage regnet fra dagen efter ordregiverens offentliggørelse af en bekendtgørelse i EU-Tidende om indgåelse af kontrakt. Klager over indgåelse af en rammeaftale efter udbudsloven (afsnit II, III og § § 191 og 192), forsyningsvirksomhedsdirektivet eller tilbudsloven skal være indgivet til Klagenævnet inden 6 måneder regnet fra dagen efter ordregiverens underretning om tildelingsbeslutningen. Klager over indgåelse af en kontrakt baseret på en rammeaftale med genåbning af konkurrencen eller et dynamisk indkøbssystem omfattet af udbudslovens afsnit II eller III eller forsyningsvirksomhedsdirektivet skal være indgivet til Klagenævnet inden 30 kalenderdage regnet fra dagen efter ordregiverens underretning om tildelingsbeslutningen. Samtidig med klagens fremsendelse til Klagenævnet for Udbud skal klageren sende en kopi af klagen med bilag til ordregiveren, gerne pr. e-mail.</cbc:Description>
@@ -723,7 +725,7 @@
          <cbc:Description languageID="DAN">Udbuddet gennemføres som et udbud med forhandling, jf. udbudslovens § § 61-66, hvilket betyder, at enhver økonomisk aktør kan ansøge om at deltage, men kun ansøgere som ordregiver opfordrer hertil, kan deltage i den videre proces. Ordregiver har til hensigt at prækvalificere 5 ansøgere. Når prækvalifikationsfasen er afsluttet, underretter ordregiver skriftligt tilbudsgiverne herom med samtidig oplysning om, at udbudsforretningens anden fase - tilbudsfasen - indledes. Herefter opfordres tilbudsgiverne til at afgive det indledende tilbud. Derefter kan ordregiver vælge at enten tildele rammeaftalen på baggrund af indledende tilbud eller indlede en forhandlingsfase. Ordregiver påtænker at tildele rammeaftale til 3 tilbudsgivere. Rammeaftale vedrører indkøb af IT-Klientudstyr, herunder bærbar Pc'er, stationære Pc'er, tyndeklienter, Pc skærme, monitorer, tablets, små printere, digitale infostandere, klinisk stuegangsvogne, telefoner og IT-tilbehør samt indsamling og bortskaffelse af udtjent IT-hardware.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -799,7 +801,7 @@
             <cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

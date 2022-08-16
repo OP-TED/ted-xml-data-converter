@@ -259,7 +259,7 @@
                      <efac:ContractReference>
                         <cbc:ID>11</cbc:ID>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
@@ -278,7 +278,7 @@
                      <efac:ContractReference>
                         <cbc:ID>12</cbc:ID>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
                      </efac:LotTender>
@@ -297,7 +297,7 @@
                      <efac:ContractReference>
                         <cbc:ID>13</cbc:ID>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
                      </efac:LotTender>
@@ -316,7 +316,7 @@
                      <efac:ContractReference>
                         <cbc:ID>15</cbc:ID>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
                      </efac:LotTender>
@@ -335,7 +335,7 @@
                      <efac:ContractReference>
                         <cbc:ID>16</cbc:ID>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
                      </efac:LotTender>
@@ -354,48 +354,48 @@
                      <efac:ContractReference>
                         <cbc:ID>17</cbc:ID>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
                      </efac:LotTender>
                   </efac:SettledContract>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0012</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0013</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0014</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0015</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                         <efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
                      </efac:Tenderer>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0016</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                         <efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
                      </efac:Tenderer>
                   </efac:TenderingParty>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0005</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0017</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
@@ -943,7 +943,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -957,7 +957,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -1262,7 +1262,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text-->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text-->
       <cac:ProcurementLegislationDocumentReference>
          <cbc:ID>LocalLegalBasis</cbc:ID>
          <cbc:DocumentDescription languageID="DEU">Abschluss von Rabattvereinbarungen gem. § 130a Abs. 8 SGB V für den Zeitraum vom 1. Juni 2021 bis zum 31. Mai 2023</cbc:DocumentDescription>
@@ -1278,7 +1278,7 @@
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -1291,7 +1291,6 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2020/S 182-436882</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -1350,14 +1349,14 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Für die Einlegung von Rechtsbehelfen gelten u. a. die folgenden Bestimmungen des Gesetzes gegen Wettbewerbsbeschränkungen (GWB) in der aktuell geltenden Fassung: § 134 Informations- und Wartepflicht. (1) Öffentliche Auftraggeber haben die Bieter, deren Angebote nicht berücksichtigt werden sollen, über den Namen des Unternehmens, dessen Angebot angenommen werden soll, über die Gründe der vorgesehenen Nichtberücksichtigung ihres Angebots und über den frühesten Zeitpunkt des Vertragsschlusses unverzüglich in Textform zu informieren. Dies gilt auch für Bewerber, denen keine Information über die Ablehnung ihrer Bewerbung zur Verfügung gestellt wurde, bevor die Mitteilung über die Zuschlagsentscheidung an die betroffenen Bieter ergangen ist. (2) Ein Vertrag darf erst 15 Kalendertage nach Absendung der Information nach Absatz 1 geschlossen werden. Wird die Information auf elektronischem Weg oder per Fax versendet, verkürzt sich die Frist auf 10 Kalendertage. Die Frist beginnt am Tag nach der Absendung der Information durch den Auftraggeber; auf den Tag des Zugangs beim betroffenen Bieter und Bewerber kommt es nicht an. (3) [...] § 135 Unwirksamkeit. (1) Ein öffentlicher Auftrag ist von Anfang an unwirksam, wenn der öffentliche Auftraggeber 1. gegen § 134 verstoßen hat oder 2. den Auftrag ohne vorherige Veröffentlichung einer Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetzes gestattet ist, und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. (2) Die Unwirksamkeit nach Absatz 1 kann nur festgestellt werden, wenn sie im Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrags, jedoch nicht später als 6 Monate nach Vertragsschluss geltend gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union. § 160 Einleitung, Antrag. (1) Die Vergabekammer leitet ein Nachprüfungsverfahren nur auf Antrag ein. (2) Antragsbefugt ist jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag oder der Konzession hat und eine Verletzung in seinen Rechten nach § 97 Absatz 6 durch Nichtbeachtung von Vergabevorschriften geltend macht. Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schaden entstanden ist oder zu entstehen droht. (3) Der Antrag ist unzulässig, soweit 1. der Antragsteller den geltend gemachten Verstoß gegen Vergabevorschriften vor Einreichen des Nachprüfungsantrags erkannt und gegenüber dem Auftraggeber nicht innerhalb einer Frist von 10 Kalendertagen gerügt hat; der Ablauf der Frist nach § 134 Absatz 2 bleibt unberührt, 2. Verstöße gegen Vergabevorschriften, die aufgrund der Bekanntmachung erkennbar sind, nicht spätestens bis zum Ablauf der in der Bekanntmachung benannten Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 3. Verstöße gegen Vergabevorschriften, die erst in den Vergabeunterlagen erkennbar sind, nicht spätestens bis zum Ablauf der Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 4. mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, einer Rüge nicht abhelfen zu wollen, vergangen sind. [...] § 168 Entscheidung der Vergabekammer. (1) Die Vergabekammer entscheidet, ob der Antragsteller in seinen Rechten verletzt ist und trifft die geeigneten Maßnahmen, um eine Rechtsverletzung zu beseitigen und eine Schädigung der betroffenen Interessen zu verhindern. Sie ist an die Anträge nicht gebunden und kann auch unabhängig davon auf die Rechtmäßigkeit des Vergabeverfahrens einwirken. (2) Ein wirksam erteilter Zuschlag kann nicht aufgehoben werden.</cbc:Description>
@@ -1384,6 +1383,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -1428,7 +1428,7 @@
          <cbc:Description languageID="DEU">Es wird auf die kurze Beschreibung des Auftragsgegenstandes (s. o.) sowie insbesondere auf Folgendes hingewiesen: Für den ausschreibungsgegenständlichen Wirkstoff werden acht Teillose (Gebietslose) gebildet, und zwar wie folgt: — Gebietslos 1: AOK Bayern — Die Gesundheitskasse, — Gebietslos 2: AOK — Die Gesundheitskasse in Hessen, AOK PLUS — Die Gesundheitskasse für Sachsen und Thüringen, — Gebietslos 3: AOK Baden-Württemberg, — Gebietslos 4: AOK NordWest — Die Gesundheitskasse, — Gebietslos 5: AOK Rheinland / Hamburg — Die Gesundheitskasse, — Gebietslos 6: AOK Bremen / Bremerhaven, AOK — Die Gesundheitskasse für Niedersachsen, AOK Sachsen-Anhalt — Die Gesundheitskasse, — Gebietslos 7: AOK Nordost — Die Gesundheitskasse, — Gebietslos 8: AOK Rheinland-Pfalz / Saarland — Die Gesundheitskasse. Darüber hinaus gelten die näheren Angaben zu den Fachlosen in den Vergabeunterlagen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1467,7 +1467,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1499,14 +1499,14 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Für die Einlegung von Rechtsbehelfen gelten u. a. die folgenden Bestimmungen des Gesetzes gegen Wettbewerbsbeschränkungen (GWB) in der aktuell geltenden Fassung: § 134 Informations- und Wartepflicht. (1) Öffentliche Auftraggeber haben die Bieter, deren Angebote nicht berücksichtigt werden sollen, über den Namen des Unternehmens, dessen Angebot angenommen werden soll, über die Gründe der vorgesehenen Nichtberücksichtigung ihres Angebots und über den frühesten Zeitpunkt des Vertragsschlusses unverzüglich in Textform zu informieren. Dies gilt auch für Bewerber, denen keine Information über die Ablehnung ihrer Bewerbung zur Verfügung gestellt wurde, bevor die Mitteilung über die Zuschlagsentscheidung an die betroffenen Bieter ergangen ist. (2) Ein Vertrag darf erst 15 Kalendertage nach Absendung der Information nach Absatz 1 geschlossen werden. Wird die Information auf elektronischem Weg oder per Fax versendet, verkürzt sich die Frist auf 10 Kalendertage. Die Frist beginnt am Tag nach der Absendung der Information durch den Auftraggeber; auf den Tag des Zugangs beim betroffenen Bieter und Bewerber kommt es nicht an. (3) [...] § 135 Unwirksamkeit. (1) Ein öffentlicher Auftrag ist von Anfang an unwirksam, wenn der öffentliche Auftraggeber 1. gegen § 134 verstoßen hat oder 2. den Auftrag ohne vorherige Veröffentlichung einer Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetzes gestattet ist, und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. (2) Die Unwirksamkeit nach Absatz 1 kann nur festgestellt werden, wenn sie im Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrags, jedoch nicht später als 6 Monate nach Vertragsschluss geltend gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union. § 160 Einleitung, Antrag. (1) Die Vergabekammer leitet ein Nachprüfungsverfahren nur auf Antrag ein. (2) Antragsbefugt ist jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag oder der Konzession hat und eine Verletzung in seinen Rechten nach § 97 Absatz 6 durch Nichtbeachtung von Vergabevorschriften geltend macht. Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schaden entstanden ist oder zu entstehen droht. (3) Der Antrag ist unzulässig, soweit 1. der Antragsteller den geltend gemachten Verstoß gegen Vergabevorschriften vor Einreichen des Nachprüfungsantrags erkannt und gegenüber dem Auftraggeber nicht innerhalb einer Frist von 10 Kalendertagen gerügt hat; der Ablauf der Frist nach § 134 Absatz 2 bleibt unberührt, 2. Verstöße gegen Vergabevorschriften, die aufgrund der Bekanntmachung erkennbar sind, nicht spätestens bis zum Ablauf der in der Bekanntmachung benannten Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 3. Verstöße gegen Vergabevorschriften, die erst in den Vergabeunterlagen erkennbar sind, nicht spätestens bis zum Ablauf der Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 4. mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, einer Rüge nicht abhelfen zu wollen, vergangen sind. [...] § 168 Entscheidung der Vergabekammer. (1) Die Vergabekammer entscheidet, ob der Antragsteller in seinen Rechten verletzt ist und trifft die geeigneten Maßnahmen, um eine Rechtsverletzung zu beseitigen und eine Schädigung der betroffenen Interessen zu verhindern. Sie ist an die Anträge nicht gebunden und kann auch unabhängig davon auf die Rechtmäßigkeit des Vergabeverfahrens einwirken. (2) Ein wirksam erteilter Zuschlag kann nicht aufgehoben werden.</cbc:Description>
@@ -1533,6 +1533,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -1577,7 +1578,7 @@
          <cbc:Description languageID="DEU">Es wird auf die kurze Beschreibung des Auftragsgegenstandes (s. o.) sowie insbesondere auf Folgendes hingewiesen: Für den ausschreibungsgegenständlichen Wirkstoff werden acht Teillose (Gebietslose) gebildet, und zwar wie folgt: — Gebietslos 1: AOK Bayern — Die Gesundheitskasse, — Gebietslos 2: AOK — Die Gesundheitskasse in Hessen, AOK PLUS — Die Gesundheitskasse für Sachsen und Thüringen, — Gebietslos 3: AOK Baden-Württemberg, — Gebietslos 4: AOK NordWest — Die Gesundheitskasse, — Gebietslos 5: AOK Rheinland / Hamburg — Die Gesundheitskasse, — Gebietslos 6: AOK Bremen / Bremerhaven, AOK — Die Gesundheitskasse für Niedersachsen, AOK Sachsen-Anhalt — Die Gesundheitskasse, — Gebietslos 7: AOK Nordost — Die Gesundheitskasse, — Gebietslos 8: AOK Rheinland-Pfalz / Saarland — Die Gesundheitskasse. Darüber hinaus gelten die näheren Angaben zu den Fachlosen in den Vergabeunterlagen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1616,7 +1617,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1648,14 +1649,14 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Für die Einlegung von Rechtsbehelfen gelten u. a. die folgenden Bestimmungen des Gesetzes gegen Wettbewerbsbeschränkungen (GWB) in der aktuell geltenden Fassung: § 134 Informations- und Wartepflicht. (1) Öffentliche Auftraggeber haben die Bieter, deren Angebote nicht berücksichtigt werden sollen, über den Namen des Unternehmens, dessen Angebot angenommen werden soll, über die Gründe der vorgesehenen Nichtberücksichtigung ihres Angebots und über den frühesten Zeitpunkt des Vertragsschlusses unverzüglich in Textform zu informieren. Dies gilt auch für Bewerber, denen keine Information über die Ablehnung ihrer Bewerbung zur Verfügung gestellt wurde, bevor die Mitteilung über die Zuschlagsentscheidung an die betroffenen Bieter ergangen ist. (2) Ein Vertrag darf erst 15 Kalendertage nach Absendung der Information nach Absatz 1 geschlossen werden. Wird die Information auf elektronischem Weg oder per Fax versendet, verkürzt sich die Frist auf 10 Kalendertage. Die Frist beginnt am Tag nach der Absendung der Information durch den Auftraggeber; auf den Tag des Zugangs beim betroffenen Bieter und Bewerber kommt es nicht an. (3) [...] § 135 Unwirksamkeit. (1) Ein öffentlicher Auftrag ist von Anfang an unwirksam, wenn der öffentliche Auftraggeber 1. gegen § 134 verstoßen hat oder 2. den Auftrag ohne vorherige Veröffentlichung einer Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetzes gestattet ist, und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. (2) Die Unwirksamkeit nach Absatz 1 kann nur festgestellt werden, wenn sie im Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrags, jedoch nicht später als 6 Monate nach Vertragsschluss geltend gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union. § 160 Einleitung, Antrag. (1) Die Vergabekammer leitet ein Nachprüfungsverfahren nur auf Antrag ein. (2) Antragsbefugt ist jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag oder der Konzession hat und eine Verletzung in seinen Rechten nach § 97 Absatz 6 durch Nichtbeachtung von Vergabevorschriften geltend macht. Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schaden entstanden ist oder zu entstehen droht. (3) Der Antrag ist unzulässig, soweit 1. der Antragsteller den geltend gemachten Verstoß gegen Vergabevorschriften vor Einreichen des Nachprüfungsantrags erkannt und gegenüber dem Auftraggeber nicht innerhalb einer Frist von 10 Kalendertagen gerügt hat; der Ablauf der Frist nach § 134 Absatz 2 bleibt unberührt, 2. Verstöße gegen Vergabevorschriften, die aufgrund der Bekanntmachung erkennbar sind, nicht spätestens bis zum Ablauf der in der Bekanntmachung benannten Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 3. Verstöße gegen Vergabevorschriften, die erst in den Vergabeunterlagen erkennbar sind, nicht spätestens bis zum Ablauf der Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 4. mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, einer Rüge nicht abhelfen zu wollen, vergangen sind. [...] § 168 Entscheidung der Vergabekammer. (1) Die Vergabekammer entscheidet, ob der Antragsteller in seinen Rechten verletzt ist und trifft die geeigneten Maßnahmen, um eine Rechtsverletzung zu beseitigen und eine Schädigung der betroffenen Interessen zu verhindern. Sie ist an die Anträge nicht gebunden und kann auch unabhängig davon auf die Rechtmäßigkeit des Vergabeverfahrens einwirken. (2) Ein wirksam erteilter Zuschlag kann nicht aufgehoben werden.</cbc:Description>
@@ -1682,6 +1683,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -1726,7 +1728,7 @@
          <cbc:Description languageID="DEU">Es wird auf die kurze Beschreibung des Auftragsgegenstandes (s. o.) sowie insbesondere auf Folgendes hingewiesen: Für den ausschreibungsgegenständlichen Wirkstoff werden acht Teillose (Gebietslose) gebildet, und zwar wie folgt: — Gebietslos 1: AOK Bayern — Die Gesundheitskasse, — Gebietslos 2: AOK — Die Gesundheitskasse in Hessen, AOK PLUS — Die Gesundheitskasse für Sachsen und Thüringen, — Gebietslos 3: AOK Baden-Württemberg, — Gebietslos 4: AOK NordWest — Die Gesundheitskasse, — Gebietslos 5: AOK Rheinland / Hamburg — Die Gesundheitskasse, — Gebietslos 6: AOK Bremen / Bremerhaven, AOK — Die Gesundheitskasse für Niedersachsen, AOK Sachsen-Anhalt — Die Gesundheitskasse, — Gebietslos 7: AOK Nordost — Die Gesundheitskasse, — Gebietslos 8: AOK Rheinland-Pfalz / Saarland — Die Gesundheitskasse. Darüber hinaus gelten die näheren Angaben zu den Fachlosen in den Vergabeunterlagen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1765,7 +1767,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1797,14 +1799,14 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Für die Einlegung von Rechtsbehelfen gelten u. a. die folgenden Bestimmungen des Gesetzes gegen Wettbewerbsbeschränkungen (GWB) in der aktuell geltenden Fassung: § 134 Informations- und Wartepflicht. (1) Öffentliche Auftraggeber haben die Bieter, deren Angebote nicht berücksichtigt werden sollen, über den Namen des Unternehmens, dessen Angebot angenommen werden soll, über die Gründe der vorgesehenen Nichtberücksichtigung ihres Angebots und über den frühesten Zeitpunkt des Vertragsschlusses unverzüglich in Textform zu informieren. Dies gilt auch für Bewerber, denen keine Information über die Ablehnung ihrer Bewerbung zur Verfügung gestellt wurde, bevor die Mitteilung über die Zuschlagsentscheidung an die betroffenen Bieter ergangen ist. (2) Ein Vertrag darf erst 15 Kalendertage nach Absendung der Information nach Absatz 1 geschlossen werden. Wird die Information auf elektronischem Weg oder per Fax versendet, verkürzt sich die Frist auf 10 Kalendertage. Die Frist beginnt am Tag nach der Absendung der Information durch den Auftraggeber; auf den Tag des Zugangs beim betroffenen Bieter und Bewerber kommt es nicht an. (3) [...] § 135 Unwirksamkeit. (1) Ein öffentlicher Auftrag ist von Anfang an unwirksam, wenn der öffentliche Auftraggeber 1. gegen § 134 verstoßen hat oder 2. den Auftrag ohne vorherige Veröffentlichung einer Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetzes gestattet ist, und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. (2) Die Unwirksamkeit nach Absatz 1 kann nur festgestellt werden, wenn sie im Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrags, jedoch nicht später als 6 Monate nach Vertragsschluss geltend gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union. § 160 Einleitung, Antrag. (1) Die Vergabekammer leitet ein Nachprüfungsverfahren nur auf Antrag ein. (2) Antragsbefugt ist jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag oder der Konzession hat und eine Verletzung in seinen Rechten nach § 97 Absatz 6 durch Nichtbeachtung von Vergabevorschriften geltend macht. Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schaden entstanden ist oder zu entstehen droht. (3) Der Antrag ist unzulässig, soweit 1. der Antragsteller den geltend gemachten Verstoß gegen Vergabevorschriften vor Einreichen des Nachprüfungsantrags erkannt und gegenüber dem Auftraggeber nicht innerhalb einer Frist von 10 Kalendertagen gerügt hat; der Ablauf der Frist nach § 134 Absatz 2 bleibt unberührt, 2. Verstöße gegen Vergabevorschriften, die aufgrund der Bekanntmachung erkennbar sind, nicht spätestens bis zum Ablauf der in der Bekanntmachung benannten Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 3. Verstöße gegen Vergabevorschriften, die erst in den Vergabeunterlagen erkennbar sind, nicht spätestens bis zum Ablauf der Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 4. mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, einer Rüge nicht abhelfen zu wollen, vergangen sind. [...] § 168 Entscheidung der Vergabekammer. (1) Die Vergabekammer entscheidet, ob der Antragsteller in seinen Rechten verletzt ist und trifft die geeigneten Maßnahmen, um eine Rechtsverletzung zu beseitigen und eine Schädigung der betroffenen Interessen zu verhindern. Sie ist an die Anträge nicht gebunden und kann auch unabhängig davon auf die Rechtmäßigkeit des Vergabeverfahrens einwirken. (2) Ein wirksam erteilter Zuschlag kann nicht aufgehoben werden.</cbc:Description>
@@ -1831,6 +1833,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -1875,7 +1878,7 @@
          <cbc:Description languageID="DEU">Es wird auf die kurze Beschreibung des Auftragsgegenstandes (s. o.) sowie insbesondere auf Folgendes hingewiesen: Für den ausschreibungsgegenständlichen Wirkstoff werden acht Teillose (Gebietslose) gebildet, und zwar wie folgt: — Gebietslos 1: AOK Bayern — Die Gesundheitskasse, — Gebietslos 2: AOK — Die Gesundheitskasse in Hessen, AOK PLUS — Die Gesundheitskasse für Sachsen und Thüringen, — Gebietslos 3: AOK Baden-Württemberg, — Gebietslos 4: AOK NordWest — Die Gesundheitskasse, — Gebietslos 5: AOK Rheinland / Hamburg — Die Gesundheitskasse, — Gebietslos 6: AOK Bremen / Bremerhaven, AOK — Die Gesundheitskasse für Niedersachsen, AOK Sachsen-Anhalt — Die Gesundheitskasse, — Gebietslos 7: AOK Nordost — Die Gesundheitskasse, — Gebietslos 8: AOK Rheinland-Pfalz / Saarland — Die Gesundheitskasse. Darüber hinaus gelten die näheren Angaben zu den Fachlosen in den Vergabeunterlagen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1914,7 +1917,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1946,14 +1949,14 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Für die Einlegung von Rechtsbehelfen gelten u. a. die folgenden Bestimmungen des Gesetzes gegen Wettbewerbsbeschränkungen (GWB) in der aktuell geltenden Fassung: § 134 Informations- und Wartepflicht. (1) Öffentliche Auftraggeber haben die Bieter, deren Angebote nicht berücksichtigt werden sollen, über den Namen des Unternehmens, dessen Angebot angenommen werden soll, über die Gründe der vorgesehenen Nichtberücksichtigung ihres Angebots und über den frühesten Zeitpunkt des Vertragsschlusses unverzüglich in Textform zu informieren. Dies gilt auch für Bewerber, denen keine Information über die Ablehnung ihrer Bewerbung zur Verfügung gestellt wurde, bevor die Mitteilung über die Zuschlagsentscheidung an die betroffenen Bieter ergangen ist. (2) Ein Vertrag darf erst 15 Kalendertage nach Absendung der Information nach Absatz 1 geschlossen werden. Wird die Information auf elektronischem Weg oder per Fax versendet, verkürzt sich die Frist auf 10 Kalendertage. Die Frist beginnt am Tag nach der Absendung der Information durch den Auftraggeber; auf den Tag des Zugangs beim betroffenen Bieter und Bewerber kommt es nicht an. (3) [...] § 135 Unwirksamkeit. (1) Ein öffentlicher Auftrag ist von Anfang an unwirksam, wenn der öffentliche Auftraggeber 1. gegen § 134 verstoßen hat oder 2. den Auftrag ohne vorherige Veröffentlichung einer Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetzes gestattet ist, und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. (2) Die Unwirksamkeit nach Absatz 1 kann nur festgestellt werden, wenn sie im Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrags, jedoch nicht später als 6 Monate nach Vertragsschluss geltend gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union. § 160 Einleitung, Antrag. (1) Die Vergabekammer leitet ein Nachprüfungsverfahren nur auf Antrag ein. (2) Antragsbefugt ist jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag oder der Konzession hat und eine Verletzung in seinen Rechten nach § 97 Absatz 6 durch Nichtbeachtung von Vergabevorschriften geltend macht. Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schaden entstanden ist oder zu entstehen droht. (3) Der Antrag ist unzulässig, soweit 1. der Antragsteller den geltend gemachten Verstoß gegen Vergabevorschriften vor Einreichen des Nachprüfungsantrags erkannt und gegenüber dem Auftraggeber nicht innerhalb einer Frist von 10 Kalendertagen gerügt hat; der Ablauf der Frist nach § 134 Absatz 2 bleibt unberührt, 2. Verstöße gegen Vergabevorschriften, die aufgrund der Bekanntmachung erkennbar sind, nicht spätestens bis zum Ablauf der in der Bekanntmachung benannten Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 3. Verstöße gegen Vergabevorschriften, die erst in den Vergabeunterlagen erkennbar sind, nicht spätestens bis zum Ablauf der Frist zur Bewerbung oder zur Angebotsabgabe gegenüber dem Auftraggeber gerügt werden, 4. mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, einer Rüge nicht abhelfen zu wollen, vergangen sind. [...] § 168 Entscheidung der Vergabekammer. (1) Die Vergabekammer entscheidet, ob der Antragsteller in seinen Rechten verletzt ist und trifft die geeigneten Maßnahmen, um eine Rechtsverletzung zu beseitigen und eine Schädigung der betroffenen Interessen zu verhindern. Sie ist an die Anträge nicht gebunden und kann auch unabhängig davon auf die Rechtmäßigkeit des Vergabeverfahrens einwirken. (2) Ein wirksam erteilter Zuschlag kann nicht aufgehoben werden.</cbc:Description>
@@ -1980,6 +1983,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -2024,7 +2028,7 @@
          <cbc:Description languageID="DEU">Es wird auf die kurze Beschreibung des Auftragsgegenstandes (s. o.) sowie insbesondere auf Folgendes hingewiesen: Für den ausschreibungsgegenständlichen Wirkstoff werden acht Teillose (Gebietslose) gebildet, und zwar wie folgt: — Gebietslos 1: AOK Bayern — Die Gesundheitskasse, — Gebietslos 2: AOK — Die Gesundheitskasse in Hessen, AOK PLUS — Die Gesundheitskasse für Sachsen und Thüringen, — Gebietslos 3: AOK Baden-Württemberg, — Gebietslos 4: AOK NordWest — Die Gesundheitskasse, — Gebietslos 5: AOK Rheinland / Hamburg — Die Gesundheitskasse, — Gebietslos 6: AOK Bremen / Bremerhaven, AOK — Die Gesundheitskasse für Niedersachsen, AOK Sachsen-Anhalt — Die Gesundheitskasse, — Gebietslos 7: AOK Nordost — Die Gesundheitskasse, — Gebietslos 8: AOK Rheinland-Pfalz / Saarland — Die Gesundheitskasse. Darüber hinaus gelten die näheren Angaben zu den Fachlosen in den Vergabeunterlagen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2063,7 +2067,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

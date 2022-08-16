@@ -129,15 +129,16 @@ These instructions can be un-commented to show the variables holding the organiz
 <!-- Create efac:Company structure -->
 <xsl:template name="org-address">
 	<efac:Company>
-		<!-- Organization Internet Address (BT-505) cardinality ? Optional for ALL subtypes -->
+		<!-- Organization Internet Address (BT-505): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Internet Address (BT-505)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:URL_GENERAL|ted:URL"/>
+		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Winner Size (BT-165)'"/></xsl:call-template>
-		<!-- Winner Size (BT-165): eForms documentation cardinality = (?) at Organisation level | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
 		<xsl:call-template name="winner-size"/>
+		<!-- Organization Technical Identifier (OPT-200) -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Technical Identifier (OPT-200)'"/></xsl:call-template>
 		<cac:PartyIdentification><cbc:ID schemeName="organization"><xsl:value-of select="../orgid"/></cbc:ID></cac:PartyIdentification>
-		<!-- Organization Name (BT-500) cardinality ? Optional for ALL subtypes -->
+		<!-- Organization Name (BT-500): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Name (BT-500)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
@@ -149,7 +150,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <xsl:template name="winner-size">
-		<!-- Winner Size (BT-165): eForms documentation cardinality = (?) at Organisation level | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
+		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
 		<xsl:if test="../path[fn:ends-with(., 'ADDRESS_CONTRACTOR')]">
 			<xsl:choose>
 				<xsl:when test="ted:SME">
@@ -167,20 +168,20 @@ These instructions can be un-commented to show the variables holding the organiz
 <!-- Create cac:PostalAddress structure -->
 <xsl:template name="address">
 	<cac:PostalAddress>
-		<!-- Organization Street (BT-510) cardinality ? Optional for ALL subtypes -->
+		<!-- Organization Street (BT-510): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Street (BT-510)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:ADDRESS"/>
-		<!-- Organization City (BT-513) cardinality ? Optional for ALL subtypes -->
+		<!-- Organization City (BT-513): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization City (BT-513)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:TOWN"/>
-		<!-- Organization Post Code (BT-512) cardinality ? Optional for ALL subtypes -->
+		<!-- Organization Post Code (BT-512): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Post Code (BT-512)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:POSTAL_CODE"/>
-		<!-- Organization Country Subdivision (BT-507) cardinality ? Optional for ALL subtypes -->
+		<!-- Organization Country Subdivision (BT-507): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Country Subdivision (BT-507)'"/></xsl:call-template>
 		<!-- Convert only NUTS level 3 codes -->
 		<xsl:apply-templates select="*:NUTS[opfun:is-valid-nuts-code(@CODE)]"/>
-		<!-- Organization Country Code (BT-514) cardinality ? Optional for ALL subtypes -->
+		<!-- Organization Country Code (BT-514): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Country Code (BT-514)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:COUNTRY"/>
 	</cac:PostalAddress>
@@ -200,16 +201,16 @@ These instructions can be un-commented to show the variables holding the organiz
 	<xsl:choose>
 		<xsl:when test="ted:PHONE|ted:FAX|ted:E_MAIL|ted:CONTACT_POINT">
 			<cac:Contact>
-				<!-- Organization Contact Point (BT-502) cardinality ? Optional for ALL subtypes -->
+				<!-- Organization Contact Point (BT-502): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Point (BT-502)'"/></xsl:call-template>
 				<xsl:apply-templates select="ted:CONTACT_POINT"/>
-				<!-- Organization Contact Telephone Number (BT-503) cardinality ? Optional for ALL subtypes -->
+				<!-- Organization Contact Telephone Number (BT-503): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Telephone Number (BT-503)'"/></xsl:call-template>
 				<xsl:apply-templates select="ted:PHONE"/>
-				<!-- Organization Contact Fax (BT-739) cardinality ? Optional for ALL subtypes -->
+				<!-- Organization Contact Fax (BT-739): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Fax (BT-739)'"/></xsl:call-template>
 				<xsl:apply-templates select="ted:FAX"/>
-				<!-- Organization Contact Email Address (BT-506) cardinality ? Optional for ALL subtypes -->
+				<!-- Organization Contact Email Address (BT-506): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Email Address (BT-506)'"/></xsl:call-template>
 				<xsl:apply-templates select="ted:E_MAIL"/>
 			</cac:Contact>
@@ -234,12 +235,12 @@ These instructions can be un-commented to show the variables holding the organiz
 		<xsl:call-template name="buyer-legal-type"/>
 		<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="buyer-contracting-entity"/>
-		<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
-		<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 		<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
+		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
+		<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Authority (BT-10)'"/></xsl:call-template>
 		<xsl:apply-templates select="../ted:CA_ACTIVITY"/>
+		<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Entity (BT-610)'"/></xsl:call-template>
 		<xsl:apply-templates select="../ted:CE_ACTIVITY"/>
 		<cac:Party>
@@ -256,6 +257,7 @@ These instructions can be un-commented to show the variables holding the organiz
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'The service provider is an eSender'"/></xsl:call-template>
 			<!-- Reference (Tech. ID) to the legal organization acting as an eSender. -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reference (Tech. ID) to the legal organization acting as an eSender.'"/></xsl:call-template>
+			<!-- Service Provider Technical Identifier Reference (OPT-300) -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Service Provider Technical Identifier Reference (OPT-300)'"/></xsl:call-template>
 			<!-- Reference (Technical ID) to the legal organization acting as a Buyer. -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reference (Technical ID) to the legal organization acting as a Buyer.'"/></xsl:call-template>
