@@ -532,11 +532,10 @@
          <!--Duration End Date (BT-537)-->
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
-         <!--Options Description (BT-54)-->
-         <!--Renewal Maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Vertragsverlängerung.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

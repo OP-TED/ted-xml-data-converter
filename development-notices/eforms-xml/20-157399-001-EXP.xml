@@ -855,11 +855,10 @@
          <!--Duration End Date (BT-537)-->
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
-         <!--Options Description (BT-54)-->
-         <!--Renewal Maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="ENG">The contract can be extended for up to 2 years (1 year + 1 year).</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

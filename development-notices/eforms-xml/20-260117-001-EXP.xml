@@ -443,10 +443,9 @@
             <cbc:StartDate>2020-07-20+01:00</cbc:StartDate>
             <cbc:EndDate>2020-11-30+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal Maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)--><!--Renewal Maximum (BT-58)--><!--WARNING: the source TED notice contains information for Renewal Description (BT-57), but does not contain information for the maximum number of times a contract may be renewed (Renewal Maximum, BT-58).-->
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+            <!--Renewal Description (BT-57)-->
             <cac:Renewal>
                <cac:Period>
                   <cbc:Description languageID="ENG">The contract will be renewed in the event of delays occasioned by exogenous factors.</cbc:Description>

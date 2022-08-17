@@ -649,11 +649,12 @@
          <cac:PlannedPeriod>
             <cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal Maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="NLD">Zie beschrijving verlengingen.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--WARNING: the source TED notice contains information for Renewal Description (BT-57), but does not contain information for the maximum number of times a contract may be renewed (Renewal Maximum, BT-58).-->
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+            <!--Renewal Description (BT-57)-->
             <cac:Renewal>
                <cac:Period>
                   <cbc:Description languageID="NLD">Er wordt een raamovereenkomst afgesloten voor een periode van twee jaar met een optie tot eenzijdige verlenging door de opdrachtgever van twee keer een jaar.</cbc:Description>

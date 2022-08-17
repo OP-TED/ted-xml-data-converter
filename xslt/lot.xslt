@@ -1022,13 +1022,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0) -->
 		<!-- cbc:MaximumNumberNumeric refers to the number of possible renewals; an encoded value of "3" involves an initial contract followed by up to 3 renewals -->
 		<!-- Contract Extensions group -->
-		<!-- Note: the presence of Options Description (BT-54) implies Options (BT-53) -->
-		<!-- Options Description (BT-54): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Options Description (BT-54)'"/></xsl:call-template>
-		<!-- Renewal Maximum (BT-58): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 15, 17, and 18; Optional for PIN subtypes 7-9, CN subtypes 10-13, 16, 19-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Maximum (BT-58)'"/></xsl:call-template>
-		<!-- Renewal Description (BT-57): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-13, 15-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>
 		<xsl:call-template name="contract-extension"/>
 	</cac:ProcurementProject>
 </xsl:template>
@@ -1137,30 +1130,52 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 <xsl:template name="contract-extension">
-	<xsl:if test="($eforms-notice-subtype = ('15', '17', '18') or (ted:OPTIONS) or (ted:RENEWAL))">
-		<cac:ContractExtension>
-			<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:OPTIONS_DESCR/ted:P, ' '))"/>
-			<xsl:if test="$text ne ''">
-				<cbc:OptionsDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:OptionsDescription>
-			</xsl:if>
-			<!--cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)-->
-			<xsl:if test="$eforms-notice-subtype = ('15', '17', '18')">
-				<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
-			</xsl:if>
-			<xsl:if test="(ted:RENEWAL)">
-				<!-- TBD: if subtype is not 15, 17 or 18, but RENEWAL exists, should cbc:MaximumNumberNumeric be used, and if so, with what value? -->
-				<cac:Renewal>
-					<cac:Period>
-						<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:RENEWAL_DESCR/ted:P, ' '))"/>
-						<!--<xsl:value-of select="functx:path-to-node(.)"/>-->
-						<xsl:if test="$text ne ''">
-							<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
-						</xsl:if>
-					</cac:Period>
-				</cac:Renewal>
-			</xsl:if>
-		</cac:ContractExtension>
-	</xsl:if>
+		<!-- Note: the presence of Options Description (BT-54) implies Options (BT-53) -->
+	<xsl:choose>
+		<xsl:when test="($eforms-notice-subtype = ('15', '17', '18') or (ted:OPTIONS) or (ted:RENEWAL))">
+			<cac:ContractExtension>
+				<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:OPTIONS_DESCR/ted:P, ' '))"/>
+				<!-- Options Description (BT-54): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Options Description (BT-54)'"/></xsl:call-template>
+				<xsl:if test="$text ne ''">
+					<cbc:OptionsDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:OptionsDescription>
+				</xsl:if>
+				<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:RENEWAL_DESCR/ted:P, ' '))"/>
+				<!--cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)-->
+				<!-- Renewal Maximum (BT-58): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 15, 17, and 18; Optional for PIN subtypes 7-9, CN subtypes 10-13, 16, 19-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Maximum (BT-58)'"/></xsl:call-template>
+				<xsl:choose>
+					<xsl:when test="$text ne ''">
+						<!-- WARNING: the source TED notice contains information for Renewal Description (BT-57), but does not contain information for the maximum number of times a contract may be renewed (Renewal Maximum, BT-58). -->
+						<xsl:variable name="message">WARNING: the source TED notice contains information for Renewal Description (BT-57), but does not contain information for the maximum number of times a contract may be renewed (Renewal Maximum, BT-58).</xsl:variable>
+						<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+						<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+						<!-- Renewal Description (BT-57): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-13, 15-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
+						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>
+						<cac:Renewal>
+							<cac:Period>
+								<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+							</cac:Period>
+						</cac:Renewal>
+					</xsl:when>
+					<xsl:when test="$eforms-notice-subtype = ('15', '17', '18')">
+						<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+						<!-- Renewal Description (BT-57): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-13, 15-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
+						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>
+					</xsl:when>
+					<xsl:otherwise>
+						<!-- Renewal Description (BT-57): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-13, 15-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
+						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>
+					</xsl:otherwise>
+				</xsl:choose>
+			</cac:ContractExtension>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Options Description (BT-54)'"/></xsl:call-template>
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Maximum (BT-58)'"/></xsl:call-template>
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>	
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <!-- end of Lot Procurement Process templates -->

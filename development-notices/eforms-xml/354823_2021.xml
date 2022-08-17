@@ -523,12 +523,11 @@
          <cac:PlannedPeriod>
             <cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal Maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DAN">Optionspris vedrørende: 1) Levering, montering og idriftssættelse af en ekstra fliskran 2) Strategiske reservedele 3) AMS måling af NOx 4) SNCR anlæg.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
             <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

@@ -495,11 +495,10 @@
          <cac:PlannedPeriod>
             <cbc:DurationMeasure unitCode="MONTH">72</cbc:DurationMeasure>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal Maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="ENG">The contract will be an initial 3 year period with three annual options to extend by a further 12 months each, up to a maximum 6 years total contract term.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
