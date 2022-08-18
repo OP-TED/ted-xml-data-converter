@@ -26,13 +26,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
 </xsl:template>
 	
-<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD|ted:COMPLEMENTARY_INFO/ted:INFO_ADD">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<xsl:if test="$text ne ''">
-		<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
-	</xsl:if>
-</xsl:template>
-
 <xsl:template match="ted:CPV_MAIN">
 	<xsl:variable name="ted-value" select="fn:normalize-space(ted:CPV_CODE/@CODE)"/>
 	<cac:MainCommodityClassification>

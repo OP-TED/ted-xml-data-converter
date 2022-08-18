@@ -116,6 +116,24 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
+<xsl:template name="procedure-note">
+	<!--<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'"/></xsl:call-template>-->
+	<xsl:variable name="text">
+		<xsl:variable name="info-add" select="fn:normalize-space(fn:string-join(ted:COMPLEMENTARY_INFO/ted:INFO_ADD/ted:P, ' '))"/>
+		<xsl:variable name="url-national-procedure" select="fn:normalize-space(ted:PROCEDURE/ted:URL_NATIONAL_PROCEDURE)"/>
+		<xsl:value-of select="$info-add"/>
+		<!--<xsl:if test="$info-add and fn:not(fn:matches($info-add, '\.$'))"><xsl:text>.</xsl:text></xsl:if>-->
+		<xsl:if test="$url-national-procedure">
+			<xsl:if test="$info-add"><xsl:text> </xsl:text></xsl:if>
+			<xsl:text>Information about national procedures is available at: </xsl:text>
+			<xsl:value-of select="$url-national-procedure"/>
+		</xsl:if>
+	</xsl:variable>
+	<xsl:if test="$text ne ''">
+		<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+	</xsl:if>
+</xsl:template>
+
 <xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>

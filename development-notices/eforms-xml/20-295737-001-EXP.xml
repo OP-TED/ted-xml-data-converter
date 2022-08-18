@@ -209,6 +209,7 @@
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">Information about national procedures is available at: https://constructionprocurement.gov.ie/</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <cac:RequestedTenderTotal>
          <cbc:EstimatedOverallContractAmount currencyID="EUR">6000433.00</cbc:EstimatedOverallContractAmount>

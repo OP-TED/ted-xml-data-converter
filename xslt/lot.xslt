@@ -1026,6 +1026,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:ProcurementProject>
 </xsl:template>
 
+<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:if test="$text ne ''">
+		<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+	</xsl:if>
+</xsl:template>
+
+
 <xsl:template name="place-performance">
 	<!-- the BG-708 Place of Performance is Mandatory for most form subtypes, but none of its child BTs are Mandatory -->
 	<!-- Note: it is not possible to convert the content of MAIN_SITE to any eForms elements that will pass the business rules validation. -->
