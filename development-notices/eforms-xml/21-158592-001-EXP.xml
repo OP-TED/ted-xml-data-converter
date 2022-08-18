@@ -13,7 +13,7 @@
          <ext:ExtensionContent>
             <efext:EformsExtension>
                <efac:NoticeResult><!--Notice Value (BT-161)-->
-                  <cbc:TotalAmount currencyID="EUR">1220020</cbc:TotalAmount>
+                  <cbc:TotalAmount currencyID="EUR">182000.00</cbc:TotalAmount>
                   <!--Notice Framework Value (BT-118)-->
                   <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
@@ -24,21 +24,9 @@
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
                      <!--Framework Estimated Value (BT-660)-->
-                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
-                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
-                        <!--Received Submissions Count (BT-759)-->
-                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
-                     </efac:ReceivedSubmissionsStatistics>
-                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
-                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
-                        <!--Received Submissions Count (BT-759)-->
-                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
-                     </efac:ReceivedSubmissionsStatistics>
-                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
-                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
-                        <!--Received Submissions Count (BT-759)-->
-                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
-                     </efac:ReceivedSubmissionsStatistics>
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -54,14 +42,15 @@
                      <!--Tender Variant (BT-193)-->
                      <!--Tender Value (BT-720)-->
                      <cac:LegalMonetaryTotal>
-                        <cbc:PayableAmount currencyID="EUR">1220020</cbc:PayableAmount>
+                        <cbc:PayableAmount currencyID="EUR">179488.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
                      <!--Subcontracting (BT-773)-->
-                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
-                        <efbc:TermCode listName="applicability">no</efbc:TermCode>
-                        <!--Subcontracting Percentage Known (BT-731)-->
-                        <!--Subcontracting Value Known (BT-730)-->
-                     </efac:SubcontractingTerm>
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
                      <!--Tendering Party ID Reference (OPT-310)-->
                      <efac:TenderingParty>
                         <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
@@ -75,9 +64,8 @@
                      <cbc:ID schemeName="contract">CON-0001</cbc:ID>
                      <!--Winner Decision Date (BT-1451)-->
                      <!--Contract Conclusion Date (BT-145)-->
-                     <cbc:IssueDate>2021-06-15+01:00</cbc:IssueDate>
+                     <cbc:IssueDate>2021-03-24+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
-                     <cbc:Title>Beschaffung eines GPS-Systems für Kraftfahrzeuge</cbc:Title>
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
@@ -98,13 +86,13 @@
                </efac:NoticeResult>
                <!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">26</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>https://www.hausbetreuung-wien.at/</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>www.efs.sante.fr</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -112,27 +100,27 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Wiener Wohnen Hausbetreuung GmbH</cbc:Name>
+                           <cbc:Name>Établissement français du sang Île-de-France</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Erdbergstraße 200</cbc:StreetName>
+                           <cbc:StreetName>122/130 rue Marcel Hartmann</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Wien</cbc:CityName>
+                           <cbc:CityName>Ivry-sur-Seine</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>1030</cbc:PostalZone>
+                           <cbc:PostalZone>94200</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">AT130</cbc:CountrySubentityCode>
+                           <cbc:CountrySubentityCode listName="nuts">FR107</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+43 160766430</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>ausschreibungen@hausbetreuung-wien.at</cbc:ElectronicMail>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>42882285201811</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>marches-publics.idf@efs.sante.fr</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -145,63 +133,51 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>ITBinder GmbH</cbc:Name>
+                           <cbc:Name>CPE Maintenance</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Hirnsdorf 80</cbc:StreetName>
+                           <cbc:StreetName>1 rue des Marronniers</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Feistritztal</cbc:CityName>
+                           <cbc:CityName>Haÿ-les-Roses</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>8221</cbc:PostalZone>
+                           <cbc:PostalZone>94240</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">FR107</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:PartyLegalEntity>
-                           <cbc:CompanyID>9110016767246</cbc:CompanyID>
-                        </cac:PartyLegalEntity>
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+43 311351510</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>itb@fuhrpark.at</cbc:ElectronicMail>
-                        </cac:Contact>
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>http://www.verwaltungsgericht.wien.gv.at</cbc:WebsiteURI>
-                        <!--Winner Size (BT-165)-->
-                        <!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Verwaltungsgericht Wien</cbc:Name>
+                           <cbc:Name>Tribunal administratif de Melun</cbc:Name>
                         </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Muthgasse 62</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Wien</cbc:CityName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Melun</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>1190</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">AUT</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+43 1400038500</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>post@vgw.wien.gv.at</cbc:ElectronicMail>
-                        </cac:Contact>
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
                      </efac:Company>
                   </efac:Organization>
                </efac:Organizations>
@@ -226,30 +202,27 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-03-24+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
-      <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
-      </cac:ContractingPartyType>
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>www.marches-publics.gouv.fr/?page=entreprise.EntrepriseHome</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11)-->
+      <!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.-->
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10)-->
-      <cac:ContractingActivity>
-         <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
-      </cac:ContractingActivity>
       <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
@@ -277,30 +250,27 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
       <!--Previous Planning Identifier (BT-125)-->
-      <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2020/S 078-183831</cbc:ID>
-      </cac:NoticeDocumentReference>
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
-      <cbc:Name languageID="DEU">Beschaffung eines GPS Systems für Kraftfahrzeuge</cbc:Name>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">2020EFSIDFR581</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="FRA">Travaux de remplacement du groupe froid et de et de la sécurisation de la salle de BNSPR des locaux de l'Établissement français du sang situés dans l'enceinte de l'hôpital Mondor à Créteil-Porte 35</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="DEU">Implementierung und Wartung eines GPS-Systems zur Ortung von Kraftfahrzeugen und zur Erfassung der Fahrtzeiten in Übereinstimmung mit den gesetzlichen Vorgaben.</cbc:Description>
+      <cbc:Description languageID="FRA">Travaux de remplacement du groupe froid et de et de la sécurisation de la salle de BNSPR des locaux de l'Établissement français du sang situés dans l'enceinte de l'hôpital Mondor à Créteil-Porte 35.</cbc:Description>
       <!--Main Nature (BT-23)-->
-      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">38112100</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -349,7 +319,7 @@
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>15</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -358,7 +328,25 @@
                   <!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="DEU">Funktionalität der Software</cbc:Description>
+                  <cbc:Description languageID="FRA">Méthodologie d’intervention et compréhension des contraintes de site</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>15</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="FRA">Moyens humains et matériels affectés à l’opération</cbc:Description>
                </cac:SubordinateAwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
@@ -376,25 +364,7 @@
                   <!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="DEU">Reaktions- und Entstörzeiten</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Type (BT-539)-->
-                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="DEU">Referenzen Projektleiter</cbc:Description>
+                  <cbc:Description languageID="FRA">Mesures prises en matière d’hygiène, sécurité et environnement</cbc:Description>
                </cac:SubordinateAwardingCriterion>
                <cac:SubordinateAwardingCriterion>
                   <ext:UBLExtensions>
@@ -403,7 +373,7 @@
                            <efext:EformsExtension>
                               <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
                                  <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>60</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -412,7 +382,7 @@
                   <!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
                   <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
-                  <cbc:Description languageID="DEU"/>
+                  <cbc:Description languageID="FRA"/>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
@@ -468,34 +438,25 @@
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
-            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
-            <!--Electronic Auction Description (BT-122)-->
-            <!--Electronic Auction URL (BT-123)-->
-         </cac:AuctionTerms>
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
-         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="DEU">Beschaffung eines GPS Systems für Kraftfahrzeuge</cbc:Name>
+         <cbc:Name languageID="FRA">Travaux de remplacement du groupe froid et de et de la sécurisation de la salle de BNSPR des locaux de l'Établissement français du sang situés dans l'enceinte de l'hôpital Mondor à Créteil-Porte 35</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="DEU">Nähere Angaben finden Sie in den Beschaffungsunterlagen.</cbc:Description>
+         <cbc:Description languageID="FRA">Le projet s’articule autour de deux objectifs principaux qui consistent à: — sécuriser le rafraîchissement de la salle BNSPR, en installant des systèmes de climatisation redondant à détente directe type VRV; — rénover la centrale de production d’eau glacée de l’établissement ainsi que ses organes annexes (condenseurs, station de pompage, etc.). En parallèle de ces deux objectifs, l’opération de travaux prévoit également de remplacer l’unité de climatisation du local «baie informatique». Le site est situé dans l’enceinte du Centre hospitalier Henri Mondor à Créteil. Les espaces occupés par l’EFS sont situés au RDC de la porte 35 pour une surface de 850 m2 environ.</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
          <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -511,12 +472,9 @@
          <!--Estimated Value (BT-27)-->
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">38112100</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
-         <cac:AdditionalCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">72263000</cbc:ItemClassificationCode>
-         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -527,18 +485,16 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:StreetName>Wien</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FR107</cbc:CountrySubentityCode>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
          <!--Duration End Date (BT-537)-->
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
-         <cac:ContractExtension><!--Options Description (BT-54)-->
-            <cbc:OptionsDescription languageID="DEU">Vertragsverlängerung.</cbc:OptionsDescription>
-            <!--Renewal Maximum (BT-58)-->
-            <!--Renewal Description (BT-57)-->
-         </cac:ContractExtension>
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:TenderResult>

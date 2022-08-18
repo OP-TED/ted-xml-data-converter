@@ -46,8 +46,13 @@ This table lists the TED XML files selected to test development of the Converter
 | 20-157543-001-EXP.xml | F03 | CAN | SettledContract | FRAMEWORK |
 | 22-086633-001-EXP.xml | F03 | CAN | SettledContract | Multiple AWARD_CONTRACT collated into one SettledContract |
 | 22-091559-001-EXP.xml | F03 | CAN | SettledContract | NO_AWARDED_CONTRACT |
-
-
-
+| 21-139343-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_24_EU/AC/AC_PRICE |
+| 22-023722-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_24_EU/AC/AC_COST |
+| 21-158592-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_25_EU/AC/AC_PRICE |
+| 21-149886-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_23_EU |
+| 21-298854-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2009_81_EC/AC/AC_PRICE |
+| 22-073124-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2009_81_EC/AC/AC_CRITERIA |
+| 21-119282-001-EXP.xml | F24 | CAN | Award Criteria | AC/AC_CRITERION |
+| 21-205737-001-EXP.xml | F25 | CAN | Award Criteria | AC/AC_CRITERION |
 
 

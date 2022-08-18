@@ -13,13 +13,13 @@
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">19</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>https://livvhousinggroup.com/</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>https://www.skyss.no/</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -27,27 +27,31 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Livv Housing Group</cbc:Name>
+                           <cbc:Name>Skyss</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Lakeview, Kings Business Park</cbc:StreetName>
+                           <cbc:StreetName>Postboks 7900</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Prescot</cbc:CityName>
+                           <cbc:CityName>Bergen</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>L34 1PJ</cbc:PostalZone>
+                           <cbc:PostalZone>5020</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">NO0A2</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">NOR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>992 051 825</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
                         <cac:Contact><!--Organization Contact Point (BT-502)-->
-                           <cbc:Name>Mrs Claire Paton</cbc:Name>
+                           <cbc:Name>Joachim Viken</cbc:Name>
                            <!--Organization Contact Telephone Number (BT-503)-->
                            <!--Organization Contact Fax (BT-739)-->
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>tenders@cirruspurchasing.co.uk</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>Joachim.Viken@vlfk.no</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -58,16 +62,15 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Royal Court of Justice</cbc:Name>
+                           <cbc:Name>Bergen tingrett</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
-                           <cbc:CityName>London</cbc:CityName>
+                           <cbc:CityName>Bergen</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>WC2A 2LL</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">NOR</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
@@ -99,23 +102,21 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <cbc:IssueDate>2020-04-23+01:00</cbc:IssueDate>
+   <cbc:IssueDate>2021-03-04+01:00</cbc:IssueDate>
    <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain>32014L0023</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
-      <cbc:BuyerProfileURI>https://livvhousinggroup.com/</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
@@ -123,7 +124,7 @@
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
@@ -152,7 +153,6 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
@@ -162,21 +162,22 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">DN475213</cbc:ID>
+      <cbc:ID schemeName="InternalID">SKYSS/21/6</cbc:ID>
       <!--Title (BT-21)-->
-      <cbc:Name languageID="ENG">Empty Homes Security</cbc:Name>
+      <cbc:Name languageID="ENG">Pre-qualification: Express Boat Bergen-Nordfjord/Sogn for the Period 2022-2024</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="ENG">This tender is issued in accordance with Regulation 74 ‘Award of contracts for social and other specific services’ under the Public Contracts Regulations 2015 #102. The client is seeking bids from service providers to participate in a tender exercise for the procurement of service providers to deliver empty homes security services. Livv Housing Group is looking for a single service provider to deliver empty home security services across a number of sites within the North West. Services required under this contract are expected to include the fitting of steel security doors, window screens and monitored alarms with PIR detectors to empty properties. The service provider will also provide glazing services, however Livv Housing Group reserve the right to remove this service if it does not prove to be of the expected quality and value for money. Livv Housing Group currently receives approximately 900 empty properties a year, typically fluctuating between 60 and 150 removals/installations per month. In addition to this approximately 100 properties will be managed by the Livv Homes Team. The estimated volume per year is based on historical usage. This is for information only, and no guarantees are given, nor are implied as to the value or quantity of business that will be placed with successful bidder. The outcome of the tender process will be a single contract with one service provider. The contract will be for an initial 3 years, with three annual options to extend by a further 12 months on each occasion, up to a maximum 6 years total contract term, subject to Livv Housing Group requirements and the performance of the successful service provider. The anticipated commencement date is estimated to be June 2020.</cbc:Description>
+      <cbc:Description languageID="ENG">The aim of the procurement is to get an operator in place for the temporary operation of the express boat between Bergen and Nordfjord/Sogn called 'express boat Bergen-Nordfjord/Sogn for the period 2022-2024'. The contracting authority would like to enter into a contract with one operator for the entire contract. The contract period is from the date the contract is signed until and including 30 November 2024, with an option for up to 2 years. The start-up of route will be 1 May 2022.</cbc:Description>
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">Visma notice: https://opic.com/id/afevkgiowh</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <cac:RequestedTenderTotal>
-         <cbc:EstimatedOverallContractAmount currencyID="GBP">1200000</cbc:EstimatedOverallContractAmount>
+         <cbc:EstimatedOverallContractAmount currencyID="NOK">596000000</cbc:EstimatedOverallContractAmount>
       </cac:RequestedTenderTotal>
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">79711000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">60600000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -200,7 +201,23 @@
                         <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
                         <!--Selection Criteria Name (BT-749)-->
                         <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="ENG">(a) conspiracy within the meaning of section 1 or 1A of the Criminal Law Act 1977(a) or article 9 or 9A of the Criminal Attempts and Conspiracy (Northern Ireland) Order 1983(b) where that conspiracy relates to participation in a criminal organisation as defined in Article 2 of Council Framework Decision 2008/841/JHA on the fight against organised crime(c); (b) corruption within the meaning of section 1(2) of the Public Bodies Corrupt Practices Act 1889(d) or section 1 of the Prevention of Corruption Act 1906(e); (c) the common law offence of bribery; (d) bribery within the meaning of sections 1, 2 or 6 of the Bribery Act 2010(f) or section 113 of the Representation of the People Act 1983(g); (e) where the offence relates to fraud affecting the European Communities’ financial interests as defined by Article 1 of the Convention on the protection of the financial interests of the European Communities(h): (i) the common law offence of cheating the revenue, (ii) the common law offence of conspiracy to defraud, (iii) fraud or theft within the meaning of the Theft Act 1968(i), the Theft Act (Northern Ireland) 1969(j), the Theft Act 1978(k) or the Theft (Northern Ireland) Order 1978(l), (iv) fraudulent trading within the meaning of section 458 of the Companies Act 1985(m), article 451 of the Companies (Northern Ireland) Order 1986(n) or section 993 of the Companies Act 2006(o), (v) fraudulent evasion within the meaning of section 170 of the Customs and Excise Management Act 1979(p) or section 72 of the Value Added Tax Act 1994(q), (vi) an offence in connection with taxation in the European Union within the meaning of section 71 of the Criminal Justice Act 1993(r), (vii) destroying, defacing or concealing of documents or procuring the execution of a valuable security within the meaning of section 20 of the Theft Act 1968(s) or section 19 of the Theft Act (Northern Ireland) 1969(t), (viii) fraud within the meaning of section 2, 3 or 4 of the Fraud Act 2006(u), or (ix) the possession of articles for use in frauds within the meaning of section 6 of the Fraud Act 2006 or the making, adapting, supplying or offering to supply articles for use in frauds within the meaning of section 7 of that Act; (f) any offence listed: (i) in section 41 of the Counter Terrorism Act 2008(a), or (ii) in Schedule 2 to that Act where the court has determined that there is a terrorist connection; (g) any offence under sections 44 to 46 of the Serious Crime Act 2007(b) which relates to an offence covered by subparagraph (f); (h) money laundering within the meaning of sections 340(11) and 415 of the Proceeds of Crime Act 2002(c); (i) an offence in connection with the proceeds of criminal conduct within the meaning of section 93A, 93B or 93C of the Criminal Justice Act 1988(d) or article 45, 46 or 47 of the Proceeds of Crime (Northern Ireland) Order 1996(e); (j) an offence under section 4 of the Asylum and Immigration (Treatment of Claimants, etc.) Act 2004(f); (k) an offence under section 59A of the Sexual Offences Act 2003(g); (l) an offence under section 71 of the Coroners and Justice Act 2009(h); (m) an offence in connection with the proceeds of drug trafficking within the meaning of section 49, 50 or 51 of the Drug Trafficking Act 1994(i); or (n) any other offence within the meaning of Article 57(1) of the Public Contracts Directive: (i) as defined by the law of any jurisdiction outside England and Wales and Northern Ireland, or (ii) created, after the day on which these Regulations were made, in the law of England and Wales or Northern Ireland.</cbc:Description>
+                        <cbc:Description languageID="ENG">Tenderers must have their tax, payroll tax and VAT payments in order. Tenderers must be a legally established company.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">Tenderers must have adequate economic and financial strength to fulfil the contract.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">Tenderers must have good competence and experience from operation of express boats for passengers.</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
@@ -217,14 +234,12 @@
             </ext:UBLExtension>
          </ext:UBLExtensions>
          <!--Variants (BT-63)-->
-         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
-         <cbc:RecurringProcurementIndicator>true</cbc:RecurringProcurementIndicator>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <!--Recurrence Description (BT-95)-->
-         <cbc:RecurringProcurementDescription languageID="ENG">72 months depending upon the ongoing needs of Livv Housing Group.</cbc:RecurringProcurementDescription>
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
          <!--Documents Restricted Justification (BT-707)-->
@@ -237,7 +252,7 @@
             <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://procontract.due-north.com/Advert/Index?advertId=a4368af9-4e85-ea11-80ff-005056b64545</cbc:URI>
+                  <cbc:URI>https://tendsign.no/doc.aspx?UniqueId=afevkgiowh&amp;GoTo=Docs</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
@@ -262,52 +277,36 @@
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
-         <!--Submission Electronic Catalog (BT-764)-->
-         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">See the attached contract.</cbc:Description>
          </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
-            <cac:AwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>30</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Type (BT-539)-->
+            <cac:AwardingCriterion><!--WARNING: Award Criterion Type (BT-539) is required, but the source TED notice does not contain this information. The type "quality" has been used as a default.-->
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="ENG">Quality</cbc:Description>
+                  <cbc:Description languageID="ENG">Price</cbc:Description>
                </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion>
-                  <ext:UBLExtensions>
-                     <ext:UBLExtension>
-                        <ext:ExtensionContent>
-                           <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
-                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>70</efbc:ParameterNumeric>
-                              </efac:AwardCriterionParameter>
-                           </efext:EformsExtension>
-                        </ext:ExtensionContent>
-                     </ext:UBLExtension>
-                  </ext:UBLExtensions>
-                  <!--Award Criterion Type (BT-539)-->
-                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
-                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
-                  <cbc:Description languageID="ENG"/>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Water jet as the propulsion method</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Number of seats on board</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">Play area</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
@@ -323,21 +322,15 @@
          </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
-            <cbc:EndpointID>https://procontract.due-north.com/Advert/Index?advertId=a4368af9-4e85-ea11-80ff-005056b64545</cbc:EndpointID>
+            <cbc:EndpointID>https://tendsign.no/doc.aspx?UniqueId=afevkgiowh&amp;GoTo=Tender</cbc:EndpointID>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
-         <cac:TenderValidityPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">4</cbc:DurationMeasure>
-         </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
          <!--Review Deadline Description (BT-99)-->
          <!--Review Information Providing Organization-->
          <!--Review organization-->
          <!--Mediation organization-->
          <cac:AppealTerms>
-            <cac:PresentationPeriod>
-               <cbc:Description languageID="ENG">This tender process will incorporate a minimum 10 calendar days standstill period at the point information on the award is communicated to bidders. Appeals can be directly raised via the contact points detailed in section VI.4.1) of this contract notice. The Public Contracts Regulations 2015 #102 provide for aggrieved parties who have been harmed or are at risk of harm by a breach of the rules to take action in the High Court (England,Wales and Northern Ireland).</cbc:Description>
-            </cac:PresentationPeriod>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
                   <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -346,13 +339,8 @@
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>
-            <cbc:ID>ENG</cbc:ID>
+            <cbc:ID>NOR</cbc:ID>
          </cac:Language>
-         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
-            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
-            <!--Electronic Payment (BT-93)-->
-            <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
-         </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
@@ -364,7 +352,7 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
                      <efac:InterestExpressionReceptionPeriod>
-                        <cbc:EndDate>2020-05-25+01:00</cbc:EndDate>
+                        <cbc:EndDate>2021-04-06+01:00</cbc:EndDate>
                         <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
                      </efac:InterestExpressionReceptionPeriod>
                   </efext:EformsExtension>
@@ -374,13 +362,11 @@
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
          <!--Successive Reduction Indicator (Procedure) (BT-52)-->
-         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
-         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2020-05-25+01:00</cbc:EndDate>
+            <cbc:EndDate>2021-04-06+01:00</cbc:EndDate>
             <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
@@ -392,45 +378,26 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>false</cbc:LimitationDescription>
-            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
-            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
-         </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <cac:OpenTenderEvent>
-            <cbc:OccurrenceDate>2020-05-25+01:00</cbc:OccurrenceDate>
-            <cbc:OccurrenceTime>12:05:00+01:00</cbc:OccurrenceTime>
-            <cbc:Description languageID="ENG">Livv Housing Group staff members and their authorised agents only.</cbc:Description>
-         </cac:OpenTenderEvent>
-         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
-            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
-            <!--Electronic Auction Description (BT-122)-->
-            <!--Electronic Auction URL (BT-123)-->
-         </cac:AuctionTerms>
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Estimated Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
-         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
-         <cac:ContractingSystem>
-            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
-         </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="ENG">Empty Homes Security</cbc:Name>
+         <cbc:Name languageID="ENG">Pre-qualification: Express Boat Bergen-Nordfjord/Sogn for the Period 2022-2024</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="ENG">Services required under this contract are expected to include the fitting of steel security doors, window screens and monitored alarms with PIR detectors to empty properties. The service provider will also provide glazing services, however Livv Housing Group reserve the right to remove this service if it does not prove to be of the expected quality and value for money. Livv Housing Group currently receives approximately 900 empty properties a year, typically fluctuating between 60 and 150 removals/installations per month. In addition to this approximately 100 properties will be managed by the Livv Homes Team. The estimated volume per year is based on historical usage. This is for information only and no guarantees are given, nor are implied as to the value or quantity of business that will be placed with successful bidder.</cbc:Description>
+         <cbc:Description languageID="ENG">The aim of the procurement is to get an operator in place for the temporary operation of the express boat between Bergen and Nordfjord/Sogn called 'express boat Bergen-Nordfjord/Sogn for the period 2022-2024'. The contracting authority would like to enter into a contract with one operator for the entire contract. The contract period is from the date the contract is signed until and including 30 November 2024, with an option for up to 2 years. The start-up of route will be 1 May 2022.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
          <!--Additional Nature (BT-531)-->
@@ -445,21 +412,21 @@
          <!--Unit (BT-625)-->
          <!--Suitable for SMEs (BT-726)-->
          <!--Additional Information (BT-300)-->
-         <cbc:Note languageID="ENG">The contract will be available to the following, such that each of the following will be entitled to purchase services from the successful service provider at the discretion of Livv Housing Group: — Livv Housing Group and all subsidiary undertakings, both current and future; — all parts of any current or future group structure of which Livv Housing Group is or may become, a part; — any joint venture entities (whether companies, limited liability partnerships or otherwise) in which any member of the Group participates from time to time (whether as a shareholder, member or otherwise) and are permitted by Livv Housing Group to make particular purchases from the service provider from time to time.</cbc:Note>
+         <cbc:Note languageID="ENG">The contracting authority has the unilateral right to extend the option for up to 24 months split between 2 extensions, based on the same terms as stated in the contract.</cbc:Note>
          <!--Estimated Value (BT-27)-->
          <cac:RequestedTenderTotal>
-            <cbc:EstimatedOverallContractAmount currencyID="GBP">1200000</cbc:EstimatedOverallContractAmount>
+            <cbc:EstimatedOverallContractAmount currencyID="NOK">596000000</cbc:EstimatedOverallContractAmount>
          </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">79711000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">60600000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
          <cac:AdditionalCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">35120000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">60000000</cbc:ItemClassificationCode>
          </cac:AdditionalCommodityClassification>
          <cac:AdditionalCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">44212329</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">63721300</cbc:ItemClassificationCode>
          </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
@@ -471,23 +438,7 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:StreetName>Livv Housing Group is looking for a single service provider to deliver empty home security services across a number of sites within the North West.</cbc:StreetName>
-               <cbc:AdditionalStreetName>Current stock consists of approximately 13 100 properties within the Borough of Knowsley, Merseyside. Plus, another 83 properties located within the North West area:</cbc:AdditionalStreetName>
-               <cac:AddressLine>
-                  <cbc:Line>— 46 Cheshire,</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>— 6 Halton,</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>— 6 Preston,</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>— 5 St Helens,</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>— 10 Stockport.</cbc:Line>
-               </cac:AddressLine>
+               <cbc:Region>anyw</cbc:Region>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -495,13 +446,11 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <cac:PlannedPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">72</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="MONTH">31</cbc:DurationMeasure>
          </cac:PlannedPeriod>
-         <cac:ContractExtension><!--Options Description (BT-54)-->
-            <cbc:OptionsDescription languageID="ENG">The contract will be an initial 3 year period with three annual options to extend by a further 12 months each, up to a maximum 6 years total contract term.</cbc:OptionsDescription>
-            <!--Renewal Maximum (BT-58)-->
-            <!--Renewal Description (BT-57)-->
-         </cac:ContractExtension>
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

@@ -1466,6 +1466,8 @@
                   </ext:UBLExtensions>
                   <!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="ENG"/>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
@@ -1776,6 +1778,8 @@
                   </ext:UBLExtensions>
                   <!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="ENG"/>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
