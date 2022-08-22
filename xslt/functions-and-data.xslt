@@ -22,6 +22,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- MAPPING FILES -->
 	
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
+<xsl:variable name="translations" select="fn:document('translations.xml')"/>
 
 
 
