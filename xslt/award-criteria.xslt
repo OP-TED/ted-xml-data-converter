@@ -191,31 +191,69 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:AC_WEIGHTING">
 	<xsl:variable name="text" select="fn:normalize-space(.)"/>
 	<xsl:variable name="part1" select="fn:substring-before($text, ' ')"/>
-	<xsl:variable name="rest" select="fn:lower-case(fn:substring-after($text, ' '))"/>
+	<xsl:variable name="rest" select="fn:lower-case(fn:normalize-space(fn:substring-after($text, ' ')))"/>
 	<ext:UBLExtensions>
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:AwardCriterionParameter>
-		<!-- Award Criterion Number Weight (BT-5421): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+						<!-- Award Criterion Number Weight (BT-5421): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number Weight (BT-5421)'"/></xsl:call-template>
-		<!-- Award Criterion Number (BT-541): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
+						<!-- Award Criterion Number (BT-541): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number (BT-541)'"/></xsl:call-template>
+						<!-- The content of Award Criterion Number (BT-541) must fulfil the decimal XSM Schema primitive data type -->
+						<!-- Values and labels from "number-weight" codelist:
+							per-exa Weight (percentage, exact)
+							per-mid Weight (percentage, middle of a range)
+							dec-exa Weight (decimal, exact)
+							dec-mid Weight (decimal, middle of a range)
+							poi-exa Weight (points, exact)
+							poi-mid Weight (points, middle of a range)
+							ord-imp Order of importance 
+						-->
 						<xsl:choose>
+							<!-- digits only -->
 							<xsl:when test="matches($text, '^[0-9]+$')">
 								<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
 								<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
 							</xsl:when>
-							<xsl:when test="fn:matches($text,'^[0-9]+(,[0-9]{3})+$') or fn:matches($text,'^[0-9]+(\.[0-9]{3})+$')">
-								<xsl:variable name="number" select="fn:replace($text, '[,.]', '')"/>
+							<!-- comma as thousands separator -->
+							<xsl:when test="fn:matches($text,'^[0-9]+(,[0-9]{3})+(\.[0-9]+)?$')">
+								<xsl:variable name="number" select="fn:replace($text, '[,]', '')"/>
 								<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
 								<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
 							</xsl:when>
-							<xsl:when test="fn:matches($text, '^[0-9.,]+ *%$')">
+							<!-- period as thousands separator -->
+							<xsl:when test="fn:matches($text,'^[0-9]+(\.[0-9]{3})+(,[0-9]+)?$')">
+								<xsl:variable name="number" select="fn:replace(fn:replace($text, '[.]', ''), ',', '.')"/>
+								<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+								<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
+							</xsl:when>
+							<!-- period as decimal point-->
+							<xsl:when test="fn:matches($text,'^[0-9]+(\.[0-9]{2})$')">
+								<xsl:variable name="number" select="$text"/>
+								<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+								<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
+							</xsl:when>
+							<!-- comma as decimal point-->
+							<xsl:when test="fn:matches($text,'^[0-9]+(,[0-9]{2})$')">
+								<xsl:variable name="number" select="fn:replace($text, ',', '.')"/>
+								<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+								<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
+							</xsl:when>
+							<!-- digits only, or period as decimal point, followed by % -->
+							<xsl:when test="fn:matches($text, '^[0-9]+(\.[0-9]{2})? *%$')">
 								<xsl:variable name="number" select="fn:replace($text, ' *%', '')"/>
 								<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
 								<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
 							</xsl:when>
+							<!-- comma as decimal point, followed by % -->
+							<xsl:when test="fn:matches($text, '^[0-9]+,[0-9]{2} *%$')">
+								<xsl:variable name="number" select="fn:replace(fn:replace($text, ' *%', ''), ',', '.')"/>
+								<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+								<efbc:ParameterNumeric><xsl:value-of select="$number"/></efbc:ParameterNumeric>
+							</xsl:when>
+							<!-- digits, followed by a word meaning "points" -->
 							<xsl:when test="fn:matches($part1, '^[0-9]+$') and fn:matches($rest, '^(points|punkte|punten|puntos|bodova|punti|punkts|pointes|pts)$')">
 								<efbc:ParameterCode listName="number-weight">poi-exa</efbc:ParameterCode>
 								<efbc:ParameterNumeric><xsl:value-of select="$part1"/></efbc:ParameterNumeric>
