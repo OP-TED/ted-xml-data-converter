@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
+                  <cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">684000.00</cbc:EstimatedOverallFrameworkContractsAmount>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">170000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">1 / Primo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">170000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">1/ Secondo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">170000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">1/ terzo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">255000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">2/ Primo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">255000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">2/ Secondo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">145000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">132000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">1 / Primo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">155000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">1/ Secondo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">189000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">1/ terzo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">157000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">2/ Primo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">347000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">2/ Secondo in cascata</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">148000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
+                        <efbc:TermCode listName="applicability">yes</efbc:TermCode>
+                        <!--Subcontracting Percentage Known (BT-731)-->
+                        <efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+                        <!--Subcontracting Value Known (BT-730)-->
+                        <efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+                     </efac:SubcontractingTerm>
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2022-02-15+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Lotto 1 — Medici d'urgenza per 2 giorni alla settimana presso il CCR di Ispra (VA)</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>HR/IPR/2021/OP/0007</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0004</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://ec.europa.eu/info/departments/human-resources-and-security_en</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Commissione europea, Direzione generale Risorse umane e sicurezza (HR), DDG HR R1 Gare d'appalto, controllo interno e reporting</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Rue de la Loi 107</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Bruxelles</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>1000</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>HR-CONTRATS-MARCHES@ec.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Roberto Monico</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Ispra</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>21027</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>MNCRRT54B15F132U</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Francesco Perlasca</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Buguggiate</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>21020</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>03629550124</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Lorenza Cinquepalmi</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Luvinate</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>21020</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>CNQLNZ75C66L682L</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Ilaria Giacomazzi</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Laveno Mombello</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>21014</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>GCMJLR78E53L682U</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://curia.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Tribunale dell'Unione europea</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Rue du Fort Niedergrünewald</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>L-2925</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+352 4303-1</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>GC.Registry@curia.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2022-02-24+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32018R1046</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ITA</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DAN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DEU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ENG</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SPA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FIN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FRA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ELL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NLD</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SWE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EST</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HUN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LIT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LAV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MLT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GLE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BUL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RON</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HRV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">2021/S 160-421470</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">HR/IPR/2021/OP/0007</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="ITA">Servizi di medicina d'urgenza e assistente sociale per il servizio medico di Ispra (VA) in Italia</cbc:Name>
+      <cbc:Name languageID="DAN">Akutte lægetjenester og socialrådgiver til lægetjenesten i Ispra (VA) i Italien</cbc:Name>
+      <cbc:Name languageID="DEU">Notfallmedizindienstleistungen und Sozialarbeiter für den medizinischen Dienst in Ispra (VA) in Italien</cbc:Name>
+      <cbc:Name languageID="ENG">Emergency medicine services and social worker for the medical service of Ispra (VA) in Italy</cbc:Name>
+      <cbc:Name languageID="SPA">Servicios de medicina de emergencia y trabajador social para el servicio médico de Ispra (VA) en Italia</cbc:Name>
+      <cbc:Name languageID="FIN">Terveydenhuollon päivystyspalvelut ja sosiaalityöntekijä Ispran (VA) terveydenhuoltoyksikköä varten Italiassa</cbc:Name>
+      <cbc:Name languageID="FRA">Prestations de services de médecine d’urgence et assistant social pour le service médical d’Ispra (VA) en Italie</cbc:Name>
+      <cbc:Name languageID="ELL">Υπηρεσίες ιατρικής έκτακτης ανάγκης και κοινωνικός λειτουργός για την ιατρική υπηρεσία της Ίσπρα (VA) στην Ιταλία</cbc:Name>
+      <cbc:Name languageID="NLD">Diensten voor spoedeisende geneeskunde en maatschappelijk werker voor de medische dienst van Ispra (VA) in Italië</cbc:Name>
+      <cbc:Name languageID="POR">Serviços de medicina de emergência e assistente social a favor do serviço médico de Ispra (VA) em Itália</cbc:Name>
+      <cbc:Name languageID="SWE">Tjänster avseende akutsjukvård och socialarbetare för läkarmottagningen i Ispra (VA) i Italien</cbc:Name>
+      <cbc:Name languageID="CES">Služby pohotovostního lékařství a sociální pracovník pro lékařské služby v Ispře (VA) v Itálii</cbc:Name>
+      <cbc:Name languageID="EST">Erakorralise meditsiini teenused ja sotsiaaltöötaja Ispra (VA) meditsiiniteenistuse jaoks Itaalias</cbc:Name>
+      <cbc:Name languageID="HUN">Sürgősségi orvosi ellátás és szociális munkás biztosítása az isprai (VA, Olaszország) egészségügyi szolgálat számára</cbc:Name>
+      <cbc:Name languageID="LIT">Skubiosios medicinos paslaugos ir socialinis darbuotojas medicinos tarnybai Isproje (VA) Italijoje</cbc:Name>
+      <cbc:Name languageID="LAV">Neatliekamās medicīniskās palīdzības pakalpojumi un sociālais darbinieks medicīniskās aprūpes dienestā Isprā (VA), Itālijā</cbc:Name>
+      <cbc:Name languageID="MLT">Servizzi tal-mediċina ta’ emerġenza u ħaddiem soċjali għas-servizz mediku ta’ Ispra (VA) fl-Italja</cbc:Name>
+      <cbc:Name languageID="POL">Usługi w zakresie medycyny ratunkowej i pracownik socjalny dla służby medycznej w Isprze (VA) we Włoszech</cbc:Name>
+      <cbc:Name languageID="SLK">Služby pohotovostnej medicíny a sociálny pracovník pre zdravotnícke služby v Ispre (VA) v Taliansku</cbc:Name>
+      <cbc:Name languageID="SLV">Storitve nujne medicinske pomoči in socialnega delavca za zdravstveno službo v Ispri (VA) v Italiji</cbc:Name>
+      <cbc:Name languageID="GLE">Seirbhísí míochaine éigeandála agus oibrí sóisialta do sheirbhís míochaine Ispra (VA) san Iodáil</cbc:Name>
+      <cbc:Name languageID="BUL">Услуги по спешна медицина и социални работници за медицинската служба в Испра (VA) в Италия</cbc:Name>
+      <cbc:Name languageID="RON">Servicii de medicină de urgență și de asistent social pentru serviciul medical din Ispra (VA) din Italia</cbc:Name>
+      <cbc:Name languageID="HRV">Usluge hitne medicine i socijalni radnici za medicinsku službu u Ispri (VA) u Italiji</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="ITA">Lotto 1 — Medici d'urgenza per 2 giorni alla settimana, Lotto 2 — Medici d'urgenza per 3 giorni alla settimana, Lotto 3 — Assistente sociale.</cbc:Description>
+      <cbc:Description languageID="DAN">Parti 1 — Akutlæger to dage om ugen Parti 2 — Akutlæger tre dage om ugen Parti 3 — Socialrådgiver.</cbc:Description>
+      <cbc:Description languageID="DEU">Los 1 — Notfallärzte 2 Tage die Woche, Los 2 — Notfallärzte 3 Tage die Woche, Los 3 — Sozialarbeiter.</cbc:Description>
+      <cbc:Description languageID="ENG">Lot 1 — Emergency doctors 2 days a week, Lot 2 — Emergency doctors 3 days a week, Lot 3 — Social worker.</cbc:Description>
+      <cbc:Description languageID="SPA">Lote 1: Médicos de urgencias 2 días a la semana, Lote 2: Médicos de urgencias 3 días a la semana, Lote 3: Trabajador social.</cbc:Description>
+      <cbc:Description languageID="FIN">Erä 1 – päivystävät lääkärit kahtena päivänä viikossa Erä 2 – päivystävät lääkärit kolmena päivänä viikossa Erä 3 – sosiaalityöntekijä</cbc:Description>
+      <cbc:Description languageID="FRA">Lot 1 — urgentistes deux jours par semaine, Lot 2 — urgentistes trois jours par semaine, Lot 3 — travailleur social.</cbc:Description>
+      <cbc:Description languageID="ELL">Παρτίδα 1 – Ιατροί έκτακτης ανάγκης 2 ημέρες την εβδομάδα, Παρτίδα 2 – Ιατροί έκτακτης ανάγκης 3 ημέρες την εβδομάδα, Παρτίδα 3 – Κοινωνικός λειτουργός.</cbc:Description>
+      <cbc:Description languageID="NLD">Perceel 1 – spoedartsen twee dagen per week; Perceel 2 – spoedartsen drie dagen per week; Perceel 3 – maatschappelijk werker.</cbc:Description>
+      <cbc:Description languageID="POR">Lote 1 – Médicos de emergência 2 dias por semana, Lote 2 – Médicos de emergência 3 dias por semana, Lote 3 – Assistente social.</cbc:Description>
+      <cbc:Description languageID="SWE">Del 1 – akutläkare 2 dagar i veckan Del 2 – akutläkare 3 dagar i veckan Del 3 – socialarbetare.</cbc:Description>
+      <cbc:Description languageID="CES">Položka č. 1 – pohotovostní lékaři dva dny v týdnu, Položka č. 2 – pohotovostní lékaři tři dny v týdnu, Položka č. 3 – sociální pracovník.</cbc:Description>
+      <cbc:Description languageID="EST">1. osa – kiirabiarstid kahel päeval nädalas; 2. osa – kiirabiarstid kolmel päeval nädalas; 3. osa – sotsiaaltöötaja.</cbc:Description>
+      <cbc:Description languageID="HUN">1. tétel – Sürgősségi orvosok hetente 2 napon, 2. tétel – Sürgősségi orvosok hetente 3 napon, 3. tétel – Szociális munkás.</cbc:Description>
+      <cbc:Description languageID="LIT">1 dalis – greitosios pagalbos gydytojai 2 dienas per savaitę, 2 dalis – greitosios pagalbos gydytojai 3 dienas per savaitę, 3 dalis – socialinis darbuotojas.</cbc:Description>
+      <cbc:Description languageID="LAV">1. daļa – neatliekamās medicīniskās palīdzības ārsti 2 dienas nedēļā, 2. daļa – neatliekamās medicīniskās palīdzības ārsti 3 dienas nedēļā, 3. daļa – sociālais darbinieks.</cbc:Description>
+      <cbc:Description languageID="MLT">Lott 1 – It-tobba tal-emerġenza jumejn fil-ġimgħa, Lott 2 – It-tobba tal-emerġenza tlett ijiem fil-ġimgħa, Lott 3 – Ħaddiem soċjali.</cbc:Description>
+      <cbc:Description languageID="POL">Część 1 — lekarze ratownictwa medycznego przez 2 dni w tygodniu, Część 2 — lekarze ratownictwa medycznego przez 3 dni w tygodniu, Część 3 — pracownik socjalny.</cbc:Description>
+      <cbc:Description languageID="SLK">časť 1 – pohotovostní lekári na 2 dni v týždni, časť 2 – pohotovostní lekári na 3 dni v týždni, časť 3 – sociálny pracovník.</cbc:Description>
+      <cbc:Description languageID="SLV">sklop 1 – zdravniki za zagotavljanje nujne medicinske pomoči 2 dneva v tednu, sklop 2 – zdravniki za zagotavljanje nujne medicinske pomoči 3 dni v tednu, sklop 3 – socialni delavec.</cbc:Description>
+      <cbc:Description languageID="GLE">Beart a haon — Dochtúirí éigeandála dhá lá sa tseachtain, Beart a dó — Dochtúirí éigeandála trí lá sa tseachtain, Beart a trí — Oibrí sóisialta.</cbc:Description>
+      <cbc:Description languageID="BUL">Обособена позиция 1 — Лекари в спешното 2 дни седмично, Обособена позиция 2 — Лекари в спешното 3 дни седмично, Обособена позиция 3 — Социален работник.</cbc:Description>
+      <cbc:Description languageID="RON">Lotul 1 – Medici de urgență două zile pe săptămână, Lotul 2 – Medici de urgență trei zile pe săptămână, Lotul 3 – Asistent social.</cbc:Description>
+      <cbc:Description languageID="HRV">Grupa 1 – liječnici za hitne slučajeve dva dana tjedno, Grupa 2 – liječnici za hitne slučajeve tri dana tjedno, Grupa 3 – socijalni radnik.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">85120000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Description>
+               <cbc:Description languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Description>
+               <cbc:Description languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Description>
+               <cbc:Description languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Description>
+               <cbc:Description languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Description>
+               <cbc:Description languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Description>
+               <cbc:Description languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Description>
+               <cbc:Description languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Description>
+               <cbc:Description languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Description>
+               <cbc:Description languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Description>
+               <cbc:Description languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Description>
+               <cbc:Description languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Description>
+               <cbc:Description languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Description>
+               <cbc:Description languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Description>
+               <cbc:Description languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Description>
+               <cbc:Description languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Description>
+               <cbc:Description languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Description>
+               <cbc:Description languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Description>
+               <cbc:Description languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Description>
+               <cbc:Description languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Description>
+               <cbc:Description languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Description>
+               <cbc:Description languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Description>
+               <cbc:Description languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Description>
+               <cbc:Description languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ITA">Medici d'urgenza per 2 giorni alla settimana presso il CCR di Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="DAN">Akutlæger to dage om ugen ved JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="DEU">Notfallärzte 2 Tage die Woche in der JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="ENG">Emergency doctors 2 days a week at JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="SPA">Médicos de urgencias 2 días a la semana en el JRC de Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="FIN">Päivystävät lääkärit kahtena päivänä viikossa JRC:n Ispran-toimipaikassa (VA)</cbc:Name>
+         <cbc:Name languageID="FRA">Urgentistes deux jours par semaine au JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="ELL">Ιατροί έκτακτης ανάγκης 2 ημέρες την εβδομάδα στο JRC, Ίσπρα (VA)</cbc:Name>
+         <cbc:Name languageID="NLD">Spoedartsen twee dagen per week bij het JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="POR">Médicos de emergência 2 dias por semana no JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="SWE">Akutläkare 2 dagar i veckan vid JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="CES">Pohotovostní lékaři dva dny v týdnu ve Společném výzkumném středisku (JRC) v Ispře (VA)</cbc:Name>
+         <cbc:Name languageID="EST">Kiirabiarstid kahel päeval nädalas JRC Ispras (VA)</cbc:Name>
+         <cbc:Name languageID="HUN">Sürgősségi orvosok hetente 2 napon a JRC isprai (VA) helyszínén</cbc:Name>
+         <cbc:Name languageID="LIT">Skubios pagalbos gydytojai 2 dienas per savaitę JRC Isproje (VA)</cbc:Name>
+         <cbc:Name languageID="LAV">Ārkārtas ārsti 2 dienas nedēļā JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="MLT">It-tobba tal-emerġenza jumejn fil-ġimgħa fil-JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="POL">Lekarze ratownictwa medycznego 2 dni w tygodniu w JRC w Isprze (VA)</cbc:Name>
+         <cbc:Name languageID="SLK">Pohotovostní lekári na 2 dni v týždni na pracovisku JRC v Ispre (VA)</cbc:Name>
+         <cbc:Name languageID="SLV">Zdravniki za zagotavljanje nujne medicinske pomoči 2 dneva v tednu v JRC v Ispri (VA)</cbc:Name>
+         <cbc:Name languageID="GLE">Dochtúirí éigeandála dhá lá in aghaidh na seachtaine ag JRC, Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="BUL">Лекари в спешното 2 дни седмично в JRC, Испра (VA)</cbc:Name>
+         <cbc:Name languageID="RON">Medici de urgență două zile pe săptămână la JRC Ispra (VA)</cbc:Name>
+         <cbc:Name languageID="HRV">Liječnici za hitne slučajeve dva dana tjedno u JRC-u, Ispra (VA)</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ITA">Prestazioni di medici d'urgenza per 2 giorni alla settimana presso il servizio medico di Ispra (VA) del Centro comune di ricerca della Commissione europea in Italia.</cbc:Description>
+         <cbc:Description languageID="DAN">Akutte lægetjenester to dage om ugen ved lægetjenesten i Ispra (VA), Europa-Kommissionens Fælles Forskningscenter i Italien.</cbc:Description>
+         <cbc:Description languageID="DEU">Dienstleistungen von Notärzten 2 Tage die Woche für den medizinischen Dienst von Ispra (VA), der Gemeinsamen Forschungsstelle der Europäischen Kommission in Italien.</cbc:Description>
+         <cbc:Description languageID="ENG">Services of emergency doctors 2 days a week at the medical service of Ispra (VA),European Commission's Joint Research Centre in Italy.</cbc:Description>
+         <cbc:Description languageID="SPA">Servicios de médicos de urgencias 2 días a la semana en el servicio médico de Ispra (VA), Centro Común de Investigación de la Comisión Europea en Italia.</cbc:Description>
+         <cbc:Description languageID="FIN">Sopimuksen kohteena ovat päivystävien lääkäreiden palvelut kahtena päivänä viikossa Euroopan komission yhteisen tutkimuskeskuksen Ispran-terveydenhuoltoyksikköä varten Italiassa.</cbc:Description>
+         <cbc:Description languageID="FRA">Services d’urgentistes deux jours par semaine au service médical d'Ispra (VA), Centre commun de recherche de la Commission européenne en Italie.</cbc:Description>
+         <cbc:Description languageID="ELL">Υπηρεσίες ιατρών έκτακτης ανάγκης 2 ημέρες την εβδομάδα στην ιατρική υπηρεσία της Ίσπρα (VA), Κοινό Κέντρο Ερευνών της Ευρωπαϊκής Επιτροπής στην Ιταλία.</cbc:Description>
+         <cbc:Description languageID="NLD">Diensten van spoedartsen voor twee dagen per week bij de medische dienst van Ispra (VA), het Gemeenschappelijk Centrum voor onderzoek van de Europese Commissie in Italië.</cbc:Description>
+         <cbc:Description languageID="POR">Serviços de médicos de emergência 2 dias por semana ao serviço médico de Ispra (VA), Centro Comum de Investigação da Comissão Europeia em Itália.</cbc:Description>
+         <cbc:Description languageID="SWE">Akutläkartjänster 2 dagar i veckan vid läkarmottagningen i Ispra (VA), Europeiska kommissionens gemensamma forskningscentrum i Italien.</cbc:Description>
+         <cbc:Description languageID="CES">Služby pohotovostních lékařů dva dny v týdnu v rámci lékařské služby v Ispře (VA), Společné výzkumné středisko Evropské komise v Itálii.</cbc:Description>
+         <cbc:Description languageID="EST">Kiirabiarstide teenused kahel päeval nädalas Euroopa Komisjoni Teadusuuringute Ühiskeskuse Ispra (VA) meditsiiniteenistuses Itaalias.</cbc:Description>
+         <cbc:Description languageID="HUN">Sürgősségi orvosi ellátás heti 2 napon az Európai Bizottság Közös Kutatóközpontjának isprai (VA, Olaszország) egészségügyi szolgálatánál.</cbc:Description>
+         <cbc:Description languageID="LIT">Skubios pagalbos gydytojų paslaugos 2 dienas per savaitę Europos Komisijos Jungtinio tyrimų centro Isproje (VA) medicinos tarnyboje Italijoje.</cbc:Description>
+         <cbc:Description languageID="LAV">Neatliekamās medicīniskās palīdzības ārstu pakalpojumi divas dienas nedēļā medicīniskās aprūpes dienestā Isprā (VA), Eiropas Komisijas Kopīgajā pētniecības centrā Itālijā.</cbc:Description>
+         <cbc:Description languageID="MLT">Servizzi ta’ tobba tal-emerġenza jumejn (2) fil-ġimgħa għas-servizz mediku ta’ Ispra (VA), iċ-Ċentru Konġunt tar-Riċerka tal-Kummissjoni Ewropea fl-Italja.</cbc:Description>
+         <cbc:Description languageID="POL">Usługi lekarzy ratownictwa medycznego przez 2 dni w tygodniu w placówce Wspólnego Centrum Badawczego Komisji Europejskiej we Włoszech.</cbc:Description>
+         <cbc:Description languageID="SLK">Služby pohotovostných lekárov na 2 dni v týždni v lekárskej službe v Ispre (VA), Spoločné výskumné centrum Európskej komisie v Taliansku.</cbc:Description>
+         <cbc:Description languageID="SLV">Storitve nujne medicinske pomoči 2 dneva v tednu v zdravstveni službi Skupnega raziskovalnega središča Evropske komisije v Ispri (VA), Italija.</cbc:Description>
+         <cbc:Description languageID="GLE">Seirbhísí dochtúirí éigeandála dhá lá in aghaidh na seachtaine ag seirbhís míochaine Ispra (VA), Airmheán Comhpháirteach Taighde an Choimisiúin Eorpaigh san Iodáil.</cbc:Description>
+         <cbc:Description languageID="BUL">Услуги на лекари при извънредни ситуации 2 дни седмично в медицинската служба на Испра (VA), Съвместния изследователски център на Европейската комисия в Италия.</cbc:Description>
+         <cbc:Description languageID="RON">Servicii de medici de urgență, timp de două zile pe săptămână, în cadrul serviciului medical din Ispra (VA), Centrul Comun de Cercetare al Comisiei Europene din Italia.</cbc:Description>
+         <cbc:Description languageID="HRV">Usluge liječnika hitne pomoći dva dana tjedno u medicinskoj službi u Ispri (VA), Zajedničkog istraživačkog centra Europske komisije u Italiji.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Note>
+         <cbc:Note languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Note>
+         <cbc:Note languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Note>
+         <cbc:Note languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Note>
+         <cbc:Note languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Note>
+         <cbc:Note languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Note>
+         <cbc:Note languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Note>
+         <cbc:Note languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Note>
+         <cbc:Note languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Note>
+         <cbc:Note languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Note>
+         <cbc:Note languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Note>
+         <cbc:Note languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Note>
+         <cbc:Note languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Note>
+         <cbc:Note languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Note>
+         <cbc:Note languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Note>
+         <cbc:Note languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Note>
+         <cbc:Note languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Note>
+         <cbc:Note languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Note>
+         <cbc:Note languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Note>
+         <cbc:Note languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Note>
+         <cbc:Note languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Note>
+         <cbc:Note languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Note>
+         <cbc:Note languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Note>
+         <cbc:Note languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85120000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85120000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85300000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Centro comune di ricerca in Via Enrico Fermi, 2749 21027 Ispra (VA) Italia</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Description>
+               <cbc:Description languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Description>
+               <cbc:Description languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Description>
+               <cbc:Description languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Description>
+               <cbc:Description languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Description>
+               <cbc:Description languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Description>
+               <cbc:Description languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Description>
+               <cbc:Description languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Description>
+               <cbc:Description languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Description>
+               <cbc:Description languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Description>
+               <cbc:Description languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Description>
+               <cbc:Description languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Description>
+               <cbc:Description languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Description>
+               <cbc:Description languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Description>
+               <cbc:Description languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Description>
+               <cbc:Description languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Description>
+               <cbc:Description languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Description>
+               <cbc:Description languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Description>
+               <cbc:Description languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Description>
+               <cbc:Description languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Description>
+               <cbc:Description languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Description>
+               <cbc:Description languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Description>
+               <cbc:Description languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Description>
+               <cbc:Description languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ITA">Medici d'urgenza per 3 giorni alla settimana</cbc:Name>
+         <cbc:Name languageID="DAN">Akutlæger tre dage om ugen</cbc:Name>
+         <cbc:Name languageID="DEU">Notfallärzte 3 Tage die Woche</cbc:Name>
+         <cbc:Name languageID="ENG">Emergency doctors 3 days a week</cbc:Name>
+         <cbc:Name languageID="SPA">Médicos de urgencias 3 días a la semana</cbc:Name>
+         <cbc:Name languageID="FIN">Päivystävät lääkärit kolmena päivänä viikossa</cbc:Name>
+         <cbc:Name languageID="FRA">Urgentistes trois jours par semaine</cbc:Name>
+         <cbc:Name languageID="ELL">Ιατροί έκτακτης ανάγκης 3 ημέρες την εβδομάδα</cbc:Name>
+         <cbc:Name languageID="NLD">Spoedartsen drie dagen per week</cbc:Name>
+         <cbc:Name languageID="POR">Médicos de emergência 3 dias por semana</cbc:Name>
+         <cbc:Name languageID="SWE">Akutläkare 3 dagar i veckan</cbc:Name>
+         <cbc:Name languageID="CES">Pohotovostní lékaři tři dny v týdnu</cbc:Name>
+         <cbc:Name languageID="EST">Kiirabiarstid kolmel päeval nädalas</cbc:Name>
+         <cbc:Name languageID="HUN">Sürgősségi orvosok heti 3 napon</cbc:Name>
+         <cbc:Name languageID="LIT">Skubios pagalbos gydytojai 3 dienas per savaitę</cbc:Name>
+         <cbc:Name languageID="LAV">Neatliekamās medicīniskās palīdzības ārsti trīs dienas nedēļā</cbc:Name>
+         <cbc:Name languageID="MLT">Tobba tal-emerġenza tlett ijiem fil-ġimgħa</cbc:Name>
+         <cbc:Name languageID="POL">Lekarze ratownictwa medycznego przez 3 dni w tygodniu</cbc:Name>
+         <cbc:Name languageID="SLK">Pohotovostný lekár 3 dni v týždni</cbc:Name>
+         <cbc:Name languageID="SLV">Zdravniki za zagotavljanje nujne medicinske pomoči 3 dni v tednu</cbc:Name>
+         <cbc:Name languageID="GLE">Dochtúirí éigeandála trí lá in aghaidh na seachtaine</cbc:Name>
+         <cbc:Name languageID="BUL">Лекари в спешното 3 дни в седмицата</cbc:Name>
+         <cbc:Name languageID="RON">Medici de urgență, trei zile pe săptămână</cbc:Name>
+         <cbc:Name languageID="HRV">Liječnici za hitne slučajeve tri dana tjedno</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ITA">Prestazioni di medici d'urgenza per 3 giorni alla settimana presso il servizio medico di Ispra (VA) del Centro comune di ricerca della Commissione europea in Italia.</cbc:Description>
+         <cbc:Description languageID="DAN">Tjenesteydelser fra akutlæger tre dage om ugen ved lægetjenesten i Ispra (VA), Europa-Kommissionens Fælles Forskningscenter i Italien.</cbc:Description>
+         <cbc:Description languageID="DEU">Dienstleistungen von Notärzten 3 Tage die Woche für den medizinischen Dienst von Ispra (VA), der Gemeinsamen Forschungsstelle der Europäischen Kommission in Italien.</cbc:Description>
+         <cbc:Description languageID="ENG">Services of emergency doctors 3 days a week at the medical service of Ispra (VA),European Commission's Joint Research Centre in Italy.</cbc:Description>
+         <cbc:Description languageID="SPA">Servicios de médicos de urgencias 3 días a la semana en el servicio médico de Ispra (VA), Centro Común de Investigación de la Comisión Europea en Italia.</cbc:Description>
+         <cbc:Description languageID="FIN">Sopimuksen kohteena ovat päivystävien lääkäreiden palvelut kolmena päivänä viikossa Euroopan komission yhteisen tutkimuskeskuksen Ispran-terveydenhuoltoyksikköä varten Italiassa.</cbc:Description>
+         <cbc:Description languageID="FRA">Services d’urgentistes trois jours par semaine au service médical d'Ispra (VA), Centre commun de recherche de la Commission européenne en Italie.</cbc:Description>
+         <cbc:Description languageID="ELL">Υπηρεσίες ιατρών έκτακτης ανάγκης 3 ημέρες την εβδομάδα στην ιατρική υπηρεσία της Ίσπρα (VA), Κοινό Κέντρο Ερευνών της Ευρωπαϊκής Επιτροπής στην Ιταλία.</cbc:Description>
+         <cbc:Description languageID="NLD">Diensten van spoedartsen voor drie dagen per week bij de medische dienst van Ispra (VA), het Gemeenschappelijk Centrum voor onderzoek van de Europese Commissie in Italië.</cbc:Description>
+         <cbc:Description languageID="POR">Serviços de médicos de emergência 3 dias por semana ao serviço médico de Ispra (VA), Centro Comum de Investigação da Comissão Europeia em Itália.</cbc:Description>
+         <cbc:Description languageID="SWE">Akutläkartjänster 3 dagar i veckan vid läkarmottagningen i Ispra (VA), Europeiska kommissionens gemensamma forskningscentrum i Italien.</cbc:Description>
+         <cbc:Description languageID="CES">Služby pohotovostních lékařů tři dny v týdnu v rámci lékařské služby v Ispře (VA), Společné výzkumné středisko Evropské komise v Itálii.</cbc:Description>
+         <cbc:Description languageID="EST">Kiirabiarstide teenused kolmel päeval nädalas Euroopa Komisjoni Teadusuuringute Ühiskeskuse Ispra (VA) meditsiiniteenistuses Itaalias.</cbc:Description>
+         <cbc:Description languageID="HUN">Sürgősségi orvosi ellátás heti 3 napon az Európai Bizottság Közös Kutatóközpontjának isprai (VA, Olaszország) egészségügyi szolgálatánál.</cbc:Description>
+         <cbc:Description languageID="LIT">Skubios pagalbos gydytojų paslaugos 3 dienas per savaitę Europos Komisijos Jungtinio tyrimų centro Isproje (VA) medicinos tarnyboje Italijoje.</cbc:Description>
+         <cbc:Description languageID="LAV">Neatliekamās medicīniskās palīdzības ārstu pakalpojumi trīs dienas nedēļā medicīniskās aprūpes dienestā Isprā (VA), Eiropas Komisijas Kopīgajā pētniecības centrā Itālijā.</cbc:Description>
+         <cbc:Description languageID="MLT">Servizzi ta’ tobba tal-emerġenza tlett ijiem fil-ġimgħa fis-servizz mediku ta’ Ispra (VA), iċ-Ċentru Konġunt tar-Riċerka tal-Kummissjoni Ewropea fl-Italja.</cbc:Description>
+         <cbc:Description languageID="POL">Usługi ratownictwa medycznego przez 3 dni w tygodniu dla służby medycznej w Isprze (VA), Wspólne Centrum Badawcze Komisji Europejskiej we Włoszech.</cbc:Description>
+         <cbc:Description languageID="SLK">Služby pohotovostných lekárov na 3 dni v týždni v lekárskej službe v Ispre (VA), Spoločné výskumné centrum Európskej komisie v Taliansku.</cbc:Description>
+         <cbc:Description languageID="SLV">Storitve nujne medicinske pomoči 3 dni v tednu v zdravstveni službi Skupnega raziskovalnega središča Evropske komisije v Ispri (VA), Italija.</cbc:Description>
+         <cbc:Description languageID="GLE">Seirbhísí dochtúirí éigeandála trí lá in aghaidh na seachtaine ag seirbhís míochaine Ispra (VA), Airmheán Comhpháirteach Taighde an Choimisiúin Eorpaigh san Iodáil.</cbc:Description>
+         <cbc:Description languageID="BUL">Услуги на лекари при извънредни ситуации 3 дни седмично в медицинската служба на Испра (VA), Съвместния изследователски център на Европейската комисия в Италия.</cbc:Description>
+         <cbc:Description languageID="RON">Servicii de medici de urgență timp de trei zile pe săptămână în cadrul serviciului medical al Ispra (VA), Centrul Comun de Cercetare al Comisiei Europene din Italia.</cbc:Description>
+         <cbc:Description languageID="HRV">Usluge liječnika hitne pomoći tri dana tjedno u medicinskoj službi u Ispri (VA), Zajedničkog istraživačkog centra Europske komisije u Italiji.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Note>
+         <cbc:Note languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Note>
+         <cbc:Note languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Note>
+         <cbc:Note languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Note>
+         <cbc:Note languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Note>
+         <cbc:Note languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Note>
+         <cbc:Note languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Note>
+         <cbc:Note languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Note>
+         <cbc:Note languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Note>
+         <cbc:Note languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Note>
+         <cbc:Note languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Note>
+         <cbc:Note languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Note>
+         <cbc:Note languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Note>
+         <cbc:Note languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Note>
+         <cbc:Note languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Note>
+         <cbc:Note languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Note>
+         <cbc:Note languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Note>
+         <cbc:Note languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Note>
+         <cbc:Note languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Note>
+         <cbc:Note languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Note>
+         <cbc:Note languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Note>
+         <cbc:Note languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Note>
+         <cbc:Note languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Note>
+         <cbc:Note languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85120000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85120000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85300000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Centro comune di ricerca in Via Enrico Fermi, 2749 21027 Ispra (VA) Italia</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Description>
+               <cbc:Description languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Description>
+               <cbc:Description languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Description>
+               <cbc:Description languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Description>
+               <cbc:Description languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Description>
+               <cbc:Description languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Description>
+               <cbc:Description languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Description>
+               <cbc:Description languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Description>
+               <cbc:Description languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Description>
+               <cbc:Description languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Description>
+               <cbc:Description languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Description>
+               <cbc:Description languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Description>
+               <cbc:Description languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Description>
+               <cbc:Description languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Description>
+               <cbc:Description languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Description>
+               <cbc:Description languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Description>
+               <cbc:Description languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Description>
+               <cbc:Description languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Description>
+               <cbc:Description languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Description>
+               <cbc:Description languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Description>
+               <cbc:Description languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Description>
+               <cbc:Description languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Description>
+               <cbc:Description languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Description>
+               <cbc:Description languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ITA">Assistente sociale</cbc:Name>
+         <cbc:Name languageID="DAN">Socialrådgiver</cbc:Name>
+         <cbc:Name languageID="DEU">Sozialarbeiter</cbc:Name>
+         <cbc:Name languageID="ENG">Social worker</cbc:Name>
+         <cbc:Name languageID="SPA">Trabajador social</cbc:Name>
+         <cbc:Name languageID="FIN">Sosiaalityöntekijä</cbc:Name>
+         <cbc:Name languageID="FRA">Travailleur social</cbc:Name>
+         <cbc:Name languageID="ELL">Κοινωνικός λειτουργός</cbc:Name>
+         <cbc:Name languageID="NLD">Maatschappelijk werker</cbc:Name>
+         <cbc:Name languageID="POR">Assistente social</cbc:Name>
+         <cbc:Name languageID="SWE">Socialarbetare</cbc:Name>
+         <cbc:Name languageID="CES">Sociální pracovník</cbc:Name>
+         <cbc:Name languageID="EST">Sotsiaaltöötaja</cbc:Name>
+         <cbc:Name languageID="HUN">Szociális munkás</cbc:Name>
+         <cbc:Name languageID="LIT">Socialinis darbuotojas</cbc:Name>
+         <cbc:Name languageID="LAV">Sociālais darbinieks</cbc:Name>
+         <cbc:Name languageID="MLT">Ħaddiem soċjali</cbc:Name>
+         <cbc:Name languageID="POL">Pracownik socjalny</cbc:Name>
+         <cbc:Name languageID="SLK">Sociálny pracovník</cbc:Name>
+         <cbc:Name languageID="SLV">Socialni delavec</cbc:Name>
+         <cbc:Name languageID="GLE">Oibrí sóisialta</cbc:Name>
+         <cbc:Name languageID="BUL">Социален работник</cbc:Name>
+         <cbc:Name languageID="RON">Asistent social</cbc:Name>
+         <cbc:Name languageID="HRV">Socijalni radnik</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ITA">Prestazioni di un assistente sociale per 5 mezze giornate alla settimana presso il servizio medico di Ispra (VA) del Centro comune di ricerca della Commissione europea in Italia.</cbc:Description>
+         <cbc:Description languageID="DAN">Tjenesteydelser fra en socialarbejder fem halve dage om ugen ved lægetjenesten i Ispra (VA), Europa-Kommissionens Fælles Forskningscenter i Italien.</cbc:Description>
+         <cbc:Description languageID="DEU">Dienstleistungen eines Sozialarbeiters 5 halbe Tage die Woche für den medizinischen Dienst von Ispra (VA), der Gemeinsamen Forschungsstelle der Europäischen Kommission in Italien.</cbc:Description>
+         <cbc:Description languageID="ENG">Services of a social worker 5 half days a week at the medical service of Ispra (VA),European Commission's Joint Research Centre in Italy.</cbc:Description>
+         <cbc:Description languageID="SPA">Servicios de un trabajador social 5 días y medio a la semana en el servicio médico de Ispra (VA), Centro Común de Investigación de la Comisión Europea en Italia.</cbc:Description>
+         <cbc:Description languageID="FIN">Sopimuksen kohteena ovat sosiaalityöntekijän palvelut viitenä puolikkaana päivänä viikossa Euroopan komission yhteisen tutkimuskeskuksen Ispran-terveydenhuoltoyksikköä varten Italiassa.</cbc:Description>
+         <cbc:Description languageID="FRA">Services d'un travailleur social cinq demi-journées par semaine au service médical d’Ispra (VA), Centre commun de recherche de la Commission européenne en Italie.</cbc:Description>
+         <cbc:Description languageID="ELL">Υπηρεσίες κοινωνικού λειτουργού 5 μισές ημέρες την εβδομάδα στην ιατρική υπηρεσία της Ίσπρα (VA), Κοινό Κέντρο Ερευνών της Ευρωπαϊκής Επιτροπής στην Ιταλία.</cbc:Description>
+         <cbc:Description languageID="NLD">Diensten van een sociaal werker voor vijf halve dagen per week bij de medische dienst van Ispra (VA), het Gemeenschappelijk Centrum voor onderzoek van de Europese Commissie in Italië.</cbc:Description>
+         <cbc:Description languageID="POR">Serviços de um assistente social 5 meio dias por semana ao serviço médico de Ispra (VA), Centro Comum de Investigação da Comissão Europeia em Itália.</cbc:Description>
+         <cbc:Description languageID="SWE">Socialarbetartjänster 5 halvdagar i veckan vid läkarmottagningen i Ispra (VA), Europeiska kommissionens gemensamma forskningscentrum i Italien.</cbc:Description>
+         <cbc:Description languageID="CES">Služby sociálního pracovníka pět půldnů v týdnu v rámci lékařské služby v Ispře (VA), Společné výzkumné středisko Evropské komise v Itálii.</cbc:Description>
+         <cbc:Description languageID="EST">Sotsiaaltöötaja teenused viiel poolikul päeval nädalas Euroopa Komisjoni Teadusuuringute Ühiskeskuse Ispra (VA) meditsiiniteenistuses Itaalias.</cbc:Description>
+         <cbc:Description languageID="HUN">Szociális munkás által hetente 5 alkalommal fél napon át nyújtott szolgáltatások az Európai Bizottság Közös Kutatóközpontjának isprai (VA, Olaszország) egészségügyi szolgálatánál.</cbc:Description>
+         <cbc:Description languageID="LIT">Socialinio darbuotojo paslaugos, teikiamos 5 pusdienius per savaitę medicinos tarnyboje Isproje (VA), Europos Komisijos Jungtiniame tyrimų centre Italijoje.</cbc:Description>
+         <cbc:Description languageID="LAV">Sociālā darbinieka pakalpojumi piecas nepilnas dienas nedēļā medicīniskās aprūpes dienestā Isprā (VA), Eiropas Komisijas Kopīgajā pētniecības centrā Itālijā.</cbc:Description>
+         <cbc:Description languageID="MLT">Servizzi ta’ ħaddiem soċjali ħames nofsijiet ta’ jum fil-ġimgħa għas-servizz mediku ta’ Ispra (VA), iċ-Ċentru Konġunt tar-Riċerka tal-Kummissjoni Ewropea fl-Italja.</cbc:Description>
+         <cbc:Description languageID="POL">Usługi pracownika socjalnego 5 razy w tygodniu po pół dnia w służbie medycznej placówki w Isprze (VA), we Wspólnym Centrum Badawczym Komisji Europejskiej we Włoszech.</cbc:Description>
+         <cbc:Description languageID="SLK">Služby sociálneho pracovníka na 5 poldní týždenne v lekárskej službe v Ispre (VA), Spoločné výskumné centrum Európskej komisie v Taliansku.</cbc:Description>
+         <cbc:Description languageID="SLV">Storitve socialnega delavca 5 polovičnih dni v tednu v zdravstveni službi Skupnega raziskovalnega središča Evropske komisije v Ispri (VA), Italija.</cbc:Description>
+         <cbc:Description languageID="GLE">Seirbhísí dochtúirí éigeandála cúig lá in aghaidh na seachtaine ag seirbhís míochaine Ispra (VA), Airmheán Comhpháirteach Taighde an Choimisiúin Eorpaigh san Iodáil.</cbc:Description>
+         <cbc:Description languageID="BUL">Услуги на социален работник 5 половин дни седмично в службата по медицина на Испра (VA), Съвместния изследователски център на Европейската комисия в Италия.</cbc:Description>
+         <cbc:Description languageID="RON">Servicii ale unui asistent social cu cinci jumătăți de zi pe săptămână în cadrul serviciului medical din Ispra (VA), Centrul Comun de Cercetare al Comisiei Europene din Italia.</cbc:Description>
+         <cbc:Description languageID="HRV">Usluge socijalnog radnika pet dana tjedno u medicinskoj službi u Ispri (VA), Zajedničkog istraživačkog centra Europske komisije u Italiji.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Note>
+         <cbc:Note languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Note>
+         <cbc:Note languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Note>
+         <cbc:Note languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Note>
+         <cbc:Note languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Note>
+         <cbc:Note languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Note>
+         <cbc:Note languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Note>
+         <cbc:Note languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Note>
+         <cbc:Note languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Note>
+         <cbc:Note languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Note>
+         <cbc:Note languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Note>
+         <cbc:Note languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Note>
+         <cbc:Note languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Note>
+         <cbc:Note languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Note>
+         <cbc:Note languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Note>
+         <cbc:Note languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Note>
+         <cbc:Note languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Note>
+         <cbc:Note languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Note>
+         <cbc:Note languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Note>
+         <cbc:Note languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Note>
+         <cbc:Note languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Note>
+         <cbc:Note languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Note>
+         <cbc:Note languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Note>
+         <cbc:Note languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85120000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85120000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85300000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Centro comune di ricerca in Via Enrico Fermi, 2749 21027 Ispra (VA) Italia</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
+</ContractAwardNotice>

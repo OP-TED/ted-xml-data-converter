@@ -16,7 +16,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:if test="$text ne ''">
 		<cac:ProcurementLegislationDocumentReference>
 			<cbc:ID>LocalLegalBasis</cbc:ID>
-			<cbc:DocumentDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:DocumentDescription>
+			<xsl:call-template name="multilingual">
+				<xsl:with-param name="contexts" select="."/>
+				<xsl:with-param name="local" select="'P'"/>
+				<xsl:with-param name="element" select="'cbc:DocumentDescription'"/>
+			</xsl:call-template>
 		</cac:ProcurementLegislationDocumentReference>
 	</xsl:if>
 </xsl:template>
@@ -43,10 +47,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:MAIN_FEATURES_AWARD/ted:P, ' '))"/>
 		<xsl:choose>
 			<xsl:when test="$text ne ''">
-					<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="ted:PROCEDURE/ted:MAIN_FEATURES_AWARD"/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Description'"/>
+				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="$eforms-notice-subtype = ('12','13', '20', '21')">
-					<cbc:Description languageID="{$eforms-first-language}"><xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'WARNING: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.'"/></xsl:call-template></cbc:Description>
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'WARNING: Procedure Features (BT-88) is Mandatory for eForms subtypes 12, 13, 20 and 21, but no MAIN_FEATURES_AWARD was found in TED XML.'"/></xsl:call-template>
+				<cbc:Description languageID="{$eforms-first-language}"></cbc:Description>
 			</xsl:when>
 		</xsl:choose>
 </xsl:template>
@@ -88,7 +97,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Procedure Accelerated Justification (BT-1351): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Accelerated Justification (BT-1351)'"/></xsl:call-template>
 		<xsl:if test="$text ne ''">
-			<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
+			<xsl:call-template name="multilingual">
+				<xsl:with-param name="contexts" select="."/>
+				<xsl:with-param name="local" select="'P'"/>
+				<xsl:with-param name="element" select="'cbc:ProcessReason'"/>
+			</xsl:call-template>
 		</xsl:if>
 	</cac:ProcessJustification>
 </xsl:template>
@@ -109,7 +122,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:variable name="justification" select="$mappings//direct-award-justifications/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 			<cbc:ProcessReasonCode listName="direct-award-justification"><xsl:value-of select="$justification"/></cbc:ProcessReasonCode>
 			<xsl:if test="$text ne ''">
-				<cbc:ProcessReason languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:ProcessReason>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/ted:D_JUSTIFICATION"/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:ProcessReason'"/>
+				</xsl:call-template>
 			</xsl:if>
 		</cac:ProcessJustification>
 		</xsl:for-each>
@@ -117,21 +134,66 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 <xsl:template name="procedure-note">
-	<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-form-first-language]/fn:string()"/>
-	<xsl:variable name="text">
-		<xsl:variable name="info-add" select="fn:normalize-space(fn:string-join(ted:COMPLEMENTARY_INFO/ted:INFO_ADD/ted:P, ' '))"/>
-		<xsl:variable name="url-national-procedure" select="fn:normalize-space(ted:PROCEDURE/ted:URL_NATIONAL_PROCEDURE)"/>
-		<xsl:value-of select="$info-add"/>
-		<!--<xsl:if test="$info-add and fn:not(fn:matches($info-add, '\.$'))"><xsl:text>.</xsl:text></xsl:if>-->
-		<xsl:if test="$url-national-procedure">
-			<xsl:if test="$info-add"><xsl:text> </xsl:text></xsl:if>
-			<!--<xsl:text>Information about national procedures is available at: </xsl:text>-->
-			<xsl:value-of select="$form-text"/>
-			<xsl:value-of select="$url-national-procedure"/>
-		</xsl:if>
-	</xsl:variable>
-	<xsl:if test="$text ne ''">
-		<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+	<xsl:variable name="info-add" select="fn:normalize-space(fn:string-join(ted:COMPLEMENTARY_INFO/ted:INFO_ADD/ted:P, ' '))"/>
+	<xsl:variable name="url-national-procedure" select="fn:normalize-space(ted:PROCEDURE/ted:URL_NATIONAL_PROCEDURE)"/>
+	<xsl:if test="($info-add ne '') or ($url-national-procedure ne '')">
+		<xsl:choose>
+			<xsl:when test="fn:false()">
+				<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
+					<xsl:variable name="form-element" select="."/>
+					<xsl:variable name="ted-language" select="fn:string(@LG)"/>
+						<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
+						<xsl:variable name="info-add-lang" as="xs:string">
+							<xsl:if test="$info-add">
+								<xsl:variable name="parent">
+									<xsl:call-template name="find-element">
+										<xsl:with-param name="context" select="$form-element"/>
+										<xsl:with-param name="relative-context" select="'COMPLEMENTARY_INFO/INFO_ADD'"/>
+									</xsl:call-template>
+								</xsl:variable>
+								<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/ted:P, ' '))"/>
+							</xsl:if>
+						</xsl:variable>
+						<xsl:variable name="url-national-procedure-lang">
+							<xsl:if test="$url-national-procedure">
+								<xsl:variable name="parent">
+									<xsl:call-template name="find-element">
+										<xsl:with-param name="context" select="$form-element"/>
+										<xsl:with-param name="relative-context" select="'PROCEDURE/URL_NATIONAL_PROCEDURE'"/>
+									</xsl:call-template>
+								</xsl:variable>
+								<xsl:value-of select="fn:normalize-space($parent/*)"/>
+							</xsl:if>
+						</xsl:variable>
+					<xsl:variable name="text">
+						<xsl:value-of select="$info-add-lang"/>
+						<xsl:if test="$url-national-procedure-lang">
+							<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-language]/fn:string()"/>
+							<xsl:if test="$info-add-lang"><xsl:text> </xsl:text></xsl:if>
+							<xsl:value-of select="$form-text"/>
+							<xsl:value-of select="$url-national-procedure-lang"/>
+						</xsl:if>
+					</xsl:variable>
+					<xsl:if test="$text ne ''">
+						<cbc:Note languageID="{$language}"><xsl:value-of select="$text"/></cbc:Note>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-form-first-language]/fn:string()"/>
+				<xsl:variable name="text">
+					<xsl:value-of select="$info-add"/>
+					<xsl:if test="$url-national-procedure">
+						<xsl:if test="$info-add"><xsl:text> </xsl:text></xsl:if>
+						<xsl:value-of select="$form-text"/>
+						<xsl:value-of select="$url-national-procedure"/>
+					</xsl:if>
+				</xsl:variable>
+				<xsl:if test="$text ne ''">
+					<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+				</xsl:if>
+		</xsl:otherwise>
+	</xsl:choose>
 	</xsl:if>
 </xsl:template>
 

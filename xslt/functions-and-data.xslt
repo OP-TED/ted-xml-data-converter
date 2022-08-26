@@ -44,7 +44,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:variable name="ted-form-element-name" select="$ted-form-main-element/fn:local-name()"/> <!-- F06_2014 or CONTRACT_DEFENCE or MOVE or OTH_NOT or ... -->
 <!-- Variable ted-form-name holds the name of the main form element as held in the @FORM attribute -->
 <xsl:variable name="ted-form-name" select="$ted-form-main-element/fn:string(@FORM)"/><!-- F06 or 17 or T02 or ... -->
-<!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element. -->
+<!-- Variable ted-form-element-xpath holds the XPath with positional predicates of the main form element -->
+<xsl:variable name="ted-form-element-xpath" select="functx:path-to-node-with-pos($ted-form-main-element)"/>
+<!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element -->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
 <!-- Variable ted-form-document-code holds the value of the @TYPE attribute of the NOTICE element -->
 <xsl:variable name="ted-form-document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
@@ -317,7 +319,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="prefix" select="fn:prefix-from-QName(fn:node-name($elem))"/>
 	<xsl:value-of select="fn:string-join(($prefix,$name),':')"/>
 </xsl:function>
-	
+
+<!-- Function opfun:name-with-pos returns the name of the given element, and its sequence number as a predicate if there are more than one instance within its parent -->
+<!-- Adapted from functx:path-to-node-with-pos, FunctX XSLT Function Library -->
+<xsl:function name="opfun:name-with-pos" as="xs:string">
+  <xsl:param name="element" as="element()"/>
+  <xsl:variable name="sibsOfSameName" select="$element/../*[name() = name($element)]"/>
+  <xsl:sequence select="concat(name($element),
+         if (count($sibsOfSameName) &lt;= 1)
+         then ''
+         else concat('[',functx:index-of-node($sibsOfSameName,$element),']'))"/>
+</xsl:function>
+
 
 <!-- Message Functions -->
 
@@ -337,4 +350,121 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment><xsl:value-of select="$comment"/></xsl:comment>
 	</xsl:if>
 </xsl:template>
+
+
+<xsl:template name="multilingual-old">
+	<xsl:param name="context"/>
+	<xsl:param name="local"/>
+	<xsl:param name="element"/>
+	<xsl:variable name="relative-context" select="fn:substring-after($context, $ted-form-element-xpath)"/>
+	<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
+	<xsl:variable name="this-context" select="fn:concat(functx:path-to-node-with-pos(.), $relative-context)"/>
+		<xsl:variable name="language" select="opfun:get-eforms-language(@LG)"/>
+		<xsl:for-each select=".//*[functx:path-to-node-with-pos(.) = $this-context]">
+			<xsl:variable name="text">
+				<xsl:choose>
+					<xsl:when test="$local eq ''">
+						<xsl:value-of select="fn:normalize-space(.)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="fn:normalize-space(fn:string-join(*[fn:local-name() = $local], ' '))"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:element name="{$element}">
+				<xsl:attribute name="languageID" select="$language"/>
+				<xsl:value-of select="$text"/>
+			</xsl:element>
+<!--
+			<cbc:paul><xsl:value-of select="$context"/></cbc:paul>
+			<cbc:paul><xsl:value-of select="$ted-form-element-xpath"/></cbc:paul>
+			<cbc:paul><xsl:value-of select="$relative-context"/></cbc:paul>
+			<cbc:paul><xsl:value-of select="$this-context"/></cbc:paul>
+-->
+ 		</xsl:for-each>
+	</xsl:for-each>
+</xsl:template>
+
+<xsl:template name="find-element">
+	<xsl:param name="context" as="element()"/>
+	<xsl:param name="relative-context" as="xs:string"/>
+	<xsl:variable name="child-name-and-pos" select="functx:substring-before-if-contains($relative-context, '/')"/>
+	<xsl:variable name="next-context" select="fn:substring-after($relative-context, '/')"/>
+	<xsl:variable name="element" select="$context/*[opfun:name-with-pos(.) = $child-name-and-pos]"/>
+	<xsl:variable name="result">
+		<xsl:choose>
+			<xsl:when test="not($element)"><xsl:sequence select="()"/></xsl:when>
+			<xsl:when test="$next-context">
+				<xsl:call-template name="find-element">
+					<xsl:with-param name="context" select="$element"/>
+					<xsl:with-param name="relative-context" select="$next-context"/>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:otherwise><xsl:sequence select="$element"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:sequence select="$result"/>
+</xsl:template>
+
+<xsl:template name="multilingual">
+	<xsl:param name="contexts" as="node()*"/>
+	<xsl:param name="local"/>
+	<xsl:param name="element"/>
+	<xsl:variable name="relative-contexts" select="for $context in $contexts return fn:substring-after(functx:path-to-node-with-pos($context), fn:concat($ted-form-element-xpath, '/'))"/>
+	<xsl:choose>
+		<xsl:when test="$ted-form-additional-elements">
+			<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
+				<xsl:variable name="language" select="opfun:get-eforms-language(@LG)"/>
+				<xsl:variable name="form-element" select="."/>
+				<xsl:variable name="text-content">
+				<xsl:for-each select="$relative-contexts">
+					<xsl:variable name="relative-context" select="."/>
+					<xsl:variable name="this-context" select="fn:concat(functx:path-to-node-with-pos($form-element), .)"/>
+					<xsl:variable name="parent">
+						<xsl:call-template name="find-element">
+							<xsl:with-param name="context" select="$form-element"/>
+							<xsl:with-param name="relative-context" select="$relative-context"/>
+						</xsl:call-template>
+					</xsl:variable>
+					<xsl:choose>
+						<xsl:when test="$local eq ''">
+							<xsl:value-of select="fn:normalize-space($parent/*)"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*[fn:local-name() = $local], ' '))"/>
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:text> </xsl:text>
+				</xsl:for-each>
+				</xsl:variable>
+				<xsl:element name="{$element}">
+					<xsl:attribute name="languageID" select="$language"/>
+					<xsl:value-of select="fn:normalize-space(fn:string-join($text-content, ' '))"/>
+				</xsl:element>
+			</xsl:for-each>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:variable name="text" as="xs:string">
+				<xsl:choose>
+					<xsl:when test="$local eq ''">
+						<xsl:value-of select="fn:normalize-space($contexts)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="fn:normalize-space(fn:string-join($contexts/*[fn:local-name() = $local], ' '))"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:element name="{$element}">
+				<xsl:attribute name="languageID" select="$eforms-first-language"/>
+				<xsl:value-of select="$text"/>
+			</xsl:element>
+		</xsl:otherwise>
+	</xsl:choose>
+<!--
+			<cbc:paul><xsl:value-of select="$context"/></cbc:paul>
+			<cbc:paul><xsl:value-of select="$ted-form-element-xpath"/></cbc:paul>
+			<cbc:paul><xsl:value-of select="$relative-context"/></cbc:paul>
+-->
+</xsl:template>
+
 </xsl:stylesheet>

@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
+                  <cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">1500000.00</cbc:EstimatedOverallFrameworkContractsAmount>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <efac:FrameworkAgreementValues>
+                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000.00</cbc:EstimatedMaximumValueAmount>
+                     </efac:FrameworkAgreementValues>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>9</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>4</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>8</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">1500000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">1500000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2021-11-24+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Learning and Development Services in the Field of Data Science and Computer Science</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2021-11-19+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title>Learning and Development Services in the Field of Data Science and Computer Science</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.-->
+                     <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">33</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.ecb.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Central Bank</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Sonnemannstrasse 22</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Frankfurt am Main</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>60314</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">DE712</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Natascha Graff</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+49 69/13440</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+49 69/13447110</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>procurement@ecb.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Krisolis Ltd</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>28-32 Pembroke Street Upper</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Dublin</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>D02 EK84</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">IE061</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">IRL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--WARNING: Winner Size (BT-165) is Mandatory for eForms subtypes 29, 30, 32, 33, 34, 35, 36 and 37 where the Organisation type is Winner or Tenderer, but no equivalent element was found in TED XML.--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>IE University</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Calle Cardinal Zuniga</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Segovia</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>40003</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">ES416</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.ecb.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Procurement Review Body of the European Central Bank, c/o Legal Advice Team</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Sonnemannstrasse 22</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Frankfurt am Main</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>60314</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+49 6913440</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+49 6913446886</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Ombudsman</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>1 avenue du Président Robert Schuman</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Strasbourg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>67001</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.ecb.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Central Procurement Office</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Sonnemannstrasse 22</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Frankfurt am Main</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>60314</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+49 6913440</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2021-11-26+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DAN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DEU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SPA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FIN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FRA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ELL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ITA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NLD</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SWE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EST</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HUN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LIT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LAV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MLT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GLE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BUL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RON</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HRV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">econ-aff</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">neg-wo-call</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">2020/S 251-626986</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">PRO-005499</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">Provision of Learning and Development Services in the Field of Data Science, Computer Science and Information and Communications Technology - Lot 1</cbc:Name>
+      <cbc:Name languageID="DAN">Levering af lærings- og udviklingstjenester inden for datavidenskab, computervidenskab og informations- og kommunikationsteknologi — Parti 1</cbc:Name>
+      <cbc:Name languageID="DEU">Bereitstellung von Dienstleistungen im Bereich Lernen und Entwicklung, Datenwissenschaft, Informatik und Informations- und Kommunikationstechnologie — Los 1</cbc:Name>
+      <cbc:Name languageID="SPA">Prestación de servicios de aprendizaje y desarrollo en el ámbito de la ciencia de datos, la informática y las tecnologías de información y comunicación (lote 1)</cbc:Name>
+      <cbc:Name languageID="FIN">Oppimis- ja kehityspalveluiden toimittaminen datatieteen, tietokonetieteen sekä tieto- ja viestintäteknologian alalla - erä 1</cbc:Name>
+      <cbc:Name languageID="FRA">Prestation de services d’apprentissage et de développement dans le domaine de la science des données, de l’informatique et des technologies de l’information et de la communication - Lot 1</cbc:Name>
+      <cbc:Name languageID="ELL">Παροχή υπηρεσιών μάθησης και ανάπτυξης στον τομέα της επιστήμης δεδομένων, της Πληροφορικής και της Τεχνολογίας των πληροφοριών και των επικοινωνιών - Παρτίδα 1</cbc:Name>
+      <cbc:Name languageID="ITA">Prestazione di servizi di apprendimento e sviluppo nel settore della scienza dei dati, dell'informatica e delle tecnologie dell'informazione e della comunicazione — Lotto 1</cbc:Name>
+      <cbc:Name languageID="NLD">Verlening van leer- en ontwikkelingsdiensten op het gebied van datawetenschap, computerwetenschap en informatie- en communicatietechnologie - perceel 1</cbc:Name>
+      <cbc:Name languageID="POR">Prestação de serviços de aprendizagem e desenvolvimento no domínio da ciência de dados, ciência informática e tecnologia da informação e comunicação - Lote 1</cbc:Name>
+      <cbc:Name languageID="SWE">Tillhandahållande av utbildnings- och utvecklingstjänster inom områdena data science, datorkunskap och informations- och kommunikationsteknik - del 1</cbc:Name>
+      <cbc:Name languageID="CES">Poskytnutí služeb v oblasti vzdělávání a rozvoje v oblasti datové vědy, počítačové vědy a informační a komunikační technologie – položka č. 1</cbc:Name>
+      <cbc:Name languageID="EST">Andmeteaduse, informaatika ning info- ja kommunikatsioonitehnoloogia valdkonnas õppimis- ja arendamisteenuste osutamine – 1. osa</cbc:Name>
+      <cbc:Name languageID="HUN">Képzési és fejlesztési szolgáltatások nyújtása az adattudomány, informatika, valamint információs és kommunikációs technológia területén – 1. tétel</cbc:Name>
+      <cbc:Name languageID="LIT">Mokymosi ir plėtros paslaugų teikimas duomenų mokslo, kompiuterių mokslo ir informacinių bei ryšių technologijų srityje – 1 dalis</cbc:Name>
+      <cbc:Name languageID="LAV">Mācību un pilnveides pakalpojumu sniegšana datu zinātnes, datorzinātnes un informācijas, un komunikācijas tehnoloģiju jomā – 1. daļa</cbc:Name>
+      <cbc:Name languageID="MLT">Provvista ta’ Servizzi ta’ Tagħlim u ta’ Żvilupp fil-Qasam ta’ Xjenza tad-Data, Xjenza tal-Kompjuters u Teknoloġija tal-Informazzjoni u l-Komunikazzjoni - Lott 1</cbc:Name>
+      <cbc:Name languageID="POL">Świadczenie usług w zakresie szkolenia i doskonalenia w dziedzinie nauki o danych, informatyki i technologii informacyjno-komunikacyjnych – część 1</cbc:Name>
+      <cbc:Name languageID="SLK">Poskytovanie služieb vzdelávania a rozvoja v oblasti dátových vied, informatiky a informačných a komunikačných technológií – časť 1</cbc:Name>
+      <cbc:Name languageID="SLV">Zagotavljanje storitev učenja in razvoja na področju podatkovne znanosti, računalniške znanosti ter informacijske in komunikacijske tehnologije – sklop 1</cbc:Name>
+      <cbc:Name languageID="GLE">Seirbhísí Foghlama agus Forbartha a Sholáthar i Réimse na hEolaíochta Sonraí, na Ríomheolaíochta agus na Teicneolaíochta Faisnéise agus Cumarsáide - Beart a haon</cbc:Name>
+      <cbc:Name languageID="BUL">Предоставяне на услуги за обучение и развитие в областта на науката за данните, компютърните науки и информационните и комуникационните технологии — Обособена позиция 1</cbc:Name>
+      <cbc:Name languageID="RON">Prestare de servicii de învățare și dezvoltare în domeniul științei datelor, informaticii și tehnologiei informației și comunicațiilor - lotul 1</cbc:Name>
+      <cbc:Name languageID="HRV">Pružanje usluga učenja i razvoja u području podatkovne znanosti, računalne znanosti i informacijske i komunikacijske tehnologije - Grupa 1</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="ENG">The European Central Bank (ECB) awarded through this negotiated procurement procedure contracts for the provision of learning and development services in the field of Data Science, Computer Science and Information and Communications Technology. For this lot the ECB awarded two non-exclusive framework service agreements (the ‘Contracts’) to the suppliers having submitted the most economically advantageous tenders (the ‘Contractors’). The contracts were awarded in ranking system.</cbc:Description>
+      <cbc:Description languageID="DAN">Den Europæiske Centralbank (ECB) tildelte gennem dette udbud med forhandling en kontrakt vedrørende levering af lærings- og udviklingstjenester inden for datavidenskab, computervidenskab og informations- og kommunikationsteknologi. ECB tildelte for dette parti to ikke-eksklusive rammetjenesteydelsesaftaler (»kontrakterne) til de udbydere, der har afgivet de økonomisk mest fordelagtige bud (»kontrahenterne«). Kontrakterne blev tildelt i rangorden.</cbc:Description>
+      <cbc:Description languageID="DEU">Die Europäische Zentralbank (EZB) hat im Rahmen dieses Verhandlungsverfahrens Aufträge für Dienstleistungen im Bereich Lernen und Entwicklung, Datenwissenschaft, Informatik und Informations- und Kommunikationstechnologie vergeben. Für dieses Los hat die EZB zwei nicht-exklusive Dienstleistungsrahmenverträge (die „Verträge“) an die Lieferanten vergeben, die die wirtschaftlich günstigsten Angebote eingereicht haben (die „Auftragnehmer“). Die Aufträge wurden in der Rangfolge vergeben.</cbc:Description>
+      <cbc:Description languageID="SPA">El Banco Central Europeo (BCE) adjudicó a través de este procedimiento de contratación negociado contratos para la prestación de servicios de aprendizaje y desarrollo en el ámbito de la ciencia de datos, la informática y las tecnologías de información y comunicación. Para este lote, el BCE adjudicó dos acuerdos marco de servicios no exclusivos (los «contratos») a los proveedores que presentaron las ofertas económicamente más ventajosas (los «contratistas»). Los contratos se adjudicaron según un sistema de clasificación.</cbc:Description>
+      <cbc:Description languageID="FIN">Euroopan keskuspankki (EKP) solmi tämän neuvottelumenettelyn avulla oppimis- ja kehittämispalveluita koskevia sopimuksia datatieteen, tietokonetieteen sekä tieto- ja viestintäteknologian alalla. Tätä erää varten EKP solmi kaksi palveluja koskevaa ei-yksinomaista puitesopimusta (“sopimukset”) sellaisten palveluntarjoajien (“sopimusosapuolet”) kanssa, jotka olivat tehneet taloudellisesti kannattavimmat tarjoukset. Sopimukset tehtiin paremmuusjärjestyksen mukaisesti.</cbc:Description>
+      <cbc:Description languageID="FRA">La Banque centrale européenne (BCE) a attribué des contrats, dans le cadre de la présente procédure négociée, pour la prestation de services d’apprentissage et de développement dans le domaine de la science des données, de l’informatique et des technologies de l’information et de la communication. Pour ce lot, la BCE a attribué deux contrats-cadres de services non exclusifs (les «contrats») aux prestataires qui auront présenté les offres économiquement les plus avantageuses (les «contractants»). L’attribution de contrats a eu lieu en suivant un système de classement.</cbc:Description>
+      <cbc:Description languageID="ELL">Η Ευρωπαϊκή Κεντρική Τράπεζα (ΕΚΤ) ανέθεσε μέσω της παρούσας διαδικασίας σύναψης συμβάσεων με διαπραγμάτευση την παροχή υπηρεσιών μάθησης και ανάπτυξης στον τομέα της επιστήμης δεδομένων, της πληροφορικής και της τεχνολογίας των πληροφοριών και των επικοινωνιών. Για την εν λόγω παρτίδα, η ΕΚΤ ανέθεσε δύο μη αποκλειστικές συμφωνίες-πλαίσια παροχής υπηρεσιών («Συμβάσεις») στους προμηθευτές που υπέβαλαν τις πλέον συμφέρουσες από οικονομική άποψη προσφορές («Ανάδοχοι»). Ανατέθηκαν οι συμβάσεις κατά σειρά κατάταξης.</cbc:Description>
+      <cbc:Description languageID="ITA">La Banca centrale europea (BCE) ha aggiudicato mediante la presente procedura d'appalto negoziata contratti per la prestazione di servizi di apprendimento e sviluppo nel settore della scienza dei dati, dell'informatica e delle tecnologie dell'informazione e della comunicazione. Per il presente lotto, la BCE ha aggiudicato due accordi quadro di servizi non esclusivi (i "contratti") ai fornitori che hanno presentato le offerte economicamente più vantaggiose (i "contraenti"). I contratti sono stati aggiudicati secondo un sistema di classificazione.</cbc:Description>
+      <cbc:Description languageID="NLD">De Europese Centrale Bank (ECB) heeft via deze aanbestedingsprocedure opdrachten gegund voor de verlening van leer- en ontwikkelingsdiensten op het gebied van datawetenschap, computerwetenschap en informatie- en communicatietechnologie. Voor dit perceel heeft de ECB twee niet-exclusieve raamovereenkomsten voor diensten (de „opdrachten”) gegund aan de leveranciers die de economisch meest voordelige inschrijvingen hebben ingediend (de "contractanten”). De opdrachten werden gegund op basis van een rangschikkingssysteem.</cbc:Description>
+      <cbc:Description languageID="POR">O Banco Central Europeu (BCE) adjudicou, através do presente processo de adjudicação por negociação, contratos para a prestação de serviços de aprendizagem e desenvolvimento no domínio da ciência de dado, ciência informática e tecnologias da informação e comunicação. Para o presente lote, o BCE adjudicou dois acordos-quadro de serviços não exclusivos (os «Contratos») aos fornecedores que tenham apresentado as propostas economicamente mais vantajosas (os «Contratantes»). Os contratos foram adjudicados em sistema de classificação.</cbc:Description>
+      <cbc:Description languageID="SWE">Europeiska centralbanken (ECB) har genom detta förhandlade upphandlingsförfarande tilldelat kontrakt för tillhandahållande av tjänster avseende utbildning och utveckling inom området data science, datorkunskap och informations- och kommunikationsteknik. För denna del tilldelade ECB två icke-exklusiva ramavtal för tjänster (kontrakten) till de leverantörer som har lämnat de ekonomiskt mest fördelaktiga anbuden (uppdragstagarna). Kontrakten tilldelades enligt ett rangordningssystem.</cbc:Description>
+      <cbc:Description languageID="CES">Evropská centrální banka (ECB) zadala prostřednictvím tohoto jednacího řízení zakázky na poskytnutí služeb vzdělávání a rozvoje v oblasti datové vědy, počítačové vědy a informační a komunikační technologie. V případě této položky uzavřela ECB dvě nevýhradní rámcové smlouvy („smlouvy“) s dodavateli, kteří předložili ekonomicky nejvýhodnější nabídky („poskytovatelé služeb“). Zakázky byly zadány v systému hodnocení.</cbc:Description>
+      <cbc:Description languageID="EST">Euroopa Keskpank (EKP) sõlmis kõnealuse läbirääkimistega hankemenetluse kaudu lepingud andmeteaduse, arvutiteaduse ning info- ja kommunikatsioonitehnoloogia valdkonnas õppimis- ja arendamisteenuste osutamiseks. EKP sõlmis kõnealuse osa kohta kaks ainuõiguseta teenuste raamlepingut (edaspidi „lepingud“) majanduslikult soodsaimad pakkumised esitanud tarnijatega (edaspidi „töövõtjad“). Lepingud sõlmiti paremusjärjestuse alusel.</cbc:Description>
+      <cbc:Description languageID="HUN">Az Európai Központi Bank (EKB) a tárgyalásos közbeszerzési eljárás keretében az adattudomány, számítástechnika, valamint információs és kommunikációs technológia területén nyújtandó képzési és fejlesztési szolgáltatásokra irányuló szerződéseket ítélt oda. Az EKB e tétel esetében két nem kizárólagos szolgáltatási keretmegállapodást (a „szerződések”) ítélt oda a gazdasági szempontból legkedvezőbb ajánlatot benyújtó szolgáltatók (a „nyertes ajánlattevők”) számára. A szerződések rangsorolási rendszerben kerültek odaítélésre.</cbc:Description>
+      <cbc:Description languageID="LIT">Europos Centrinis Bankas (ECB) per šią derybų pirkimo procedūrą paskyrė sutartis dėl mokymosi ir plėtros paslaugų teikimo duomenų mokslo, kompiuterių mokslo ir informacinių ir ryšių technologijų srityje. Šiai daliai ECB paskyrė dvi neišimtines preliminariąsias paslaugų pirkimo sutartis (toliau – Sutartys) ekonomiškai naudingiausius pasiūlymus pateikusiems tiekėjams (toliau – Rangovai). Sutartys buvo paskirtos pagal reitingavimo sistemą.</cbc:Description>
+      <cbc:Description languageID="LAV">Eiropas Centrālā banka (ECB) šīs sarunu procedūras rezultātā piešķīra līgumus par mācību un pilnveides pakalpojumu sniegšanu datu zinātnes, datorzinātnes un informācijas un komunikācijas tehnoloģiju jomā. Par šo daļu ECB piešķīra neekskluzīvus pakalpojumu pamatnolīgumus ("līgumus") pakalpojumu sniedzējiem, kas iesnieguši saimnieciski visizdevīgākos piedāvājumus ("darbuzņēmēji"). Līgumu slēgšanas tiesības tika piešķirtas novērtējuma sistēmā.</cbc:Description>
+      <cbc:Description languageID="MLT">Il-Bank Ċentrali Ewropew (BĊE) permezz ta’ din il-proċedura ta’ ksib nnegozjata, ta kuntratti għall-provvista ta’ servizzi ta’ tagħlim u ta’ żvilupp fil-qasam ta’ Xjenza tad-Data, Xjenza tal-Kompjuters u Teknoloġija tal-Informazzjoni u l-Komunikazzjoni. Għal dan il-lott il-BĊE ta żewġ oqfsa ta’ ftehim ta’ servizz mhux esklussivi (il-“Kuntratti”) lill-fornituri li ssottomettew l-aktar offerti ekonomikament vantaġġużi (il-“Kuntratturi”). Il-kuntratti ngħataw f’sistema ta’ klassifikazzjoni.</cbc:Description>
+      <cbc:Description languageID="POL">Europejski Bank Centralny (EBC) udzielił w drodze procedury negocjacyjnej zamówień na świadczenie usług w zakresie szkolenia i doskonalenia w dziedzinie nauki o danych, informatyki i technologii informacyjno-komunikacyjnych. W ramach niniejszej części EBC zawarł dwie umowy ramowe o usługi na zasadzie niewyłączności („umowy”) z usługodawcami, którzy przedstawią oferty najkorzystniejsze ekonomicznie („wykonawcy). Udzielono zamówień wykonawcom uszeregowanym według rankingu.</cbc:Description>
+      <cbc:Description languageID="SLK">Európska centrálna banka (ECB) uzatvorila prostredníctvom tohto rokovacieho obstarávacieho konania zmluvy o poskytovaní vzdelávacích a rozvojových služieb v oblasti dátových vied, počítačových vied a informačných a komunikačných technológií. V prípade tejto časti ECB uzatvorila dve nevýlučné rámcové dohody o poskytovaní služieb (ďalej len „zmluvy“) s dodávateľmi, ktorí predložili ekonomicky najvýhodnejšie ponuky (ďalej len „dodávatelia“). Zmluvy boli pridelené v systéme hodnotenia.</cbc:Description>
+      <cbc:Description languageID="SLV">Evropska centralna banka (ECB) je v okviru tega razpisnega postopka s pogajanji oddala naročili za zagotavljanje storitev učenja in razvoja na področju podatkovne znanosti, računalniške znanosti ter informacijske in komunikacijske tehnologije. ECB je za ta sklop s ponudnikoma, ki sta predložila ekonomsko najugodnejšo ponudbo (izvajalcema), sklenila neizključna okvirna sporazuma o storitvah (pogodbi). Pogodbi sta bili sklenjeni na podlagi sistema razvrščanja.</cbc:Description>
+      <cbc:Description languageID="GLE">Dhámh an Banc Ceannais Eorpach (BCE) conarthaí trí mheán an nóis imeachta idirbheartaithe seo do sholáthar seirbhísí foghlama agus forbartha i réimse na hEolaíochta Sonraí, na Ríomheolaíochta agus na Teicneolaíochta Faisnéise agus Cumarsáide. Maidir leis an mbeart seo dhámh BCE dhá chreat-chomhaontú seirbhíse neamheisiacha (na 'Conarthaí') ar na soláthraithe a bhfuil na tairiscintí is buntáistí go heacnamaíoch curtha isteach acu (na 'Conraitheoirí'). Dámhadh na conarthaí de réir córais rangaithe.</cbc:Description>
+      <cbc:Description languageID="BUL">Европейската централна банка (ЕЦБ) възложи чрез тази процедура за възлагане на обществени поръчки договори за предоставяне на услуги по обучение и развитие в областта на науката, компютърна наука и информационни и комуникационни технологии. За тази обособена позиция ЕЦБ възложи два неизключителни рамкови договора за услуги („Договори“) на доставчиците, които са подали най-изгодните от икономическа гледна точка оферти („Изпълнители“). Поръчките бяха възложени спрямо система за класиране.</cbc:Description>
+      <cbc:Description languageID="RON">Banca Centrală Europeană (BCE) a acordat, prin intermediul acestei proceduri de achiziții publice negociate, contracte pentru prestarea de servicii de învățare și dezvoltare în domeniul științei datelor, informaticii și al tehnologiei informației și comunicațiilor. Pentru acest lot, BCE a atribuit două acorduri-cadru neexclusive de servicii („Contractele”) acelor prestatori care au depus cele mai avantajoase oferte din punct de vedere economic („contractanții”). Contractele au fost atribuite în ordinea clasificării.</cbc:Description>
+      <cbc:Description languageID="HRV">Europska središnja banka (ESB) dodijelila je s pomoću ovog pregovaračkog postupka nabave ugovore za pružanje usluga učenja i razvoja u području podatkovne znanosti, računalne znanosti i informacijske i komunikacijske tehnologije. Za ovu je grupu ESB dodijelio dva neisključiva okvirna sporazuma o uslugama („ugovori”) dobavljačima koji su dostavili ekonomski najisplativije ponude („izvoditelji”). Ugovori su dodijeljeni na temelju sustava rangiranja.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">The procurement procedure has been conducted in accordance with Art. 35 and 36 Decision ECB/2016/2 of 9 February 2016 laying down the rules on procurement, OJ L 45, 20.2.2016, p. 15 (as amended) available on the ECB website: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html The total values of the procurement and contract(s) indicated in Section II.1.7) and Section(s) V.2.4) are an indicative non-binding spending estimate at the time of contract award. The estimated value indicated per contract for multi-supplier framework agreements in each case represents the total value of the overall procurement/lot as the value of orders awarded per contractor may not be determined upfront. The actual value of the contract(s) may differ and will be determined by actual business needs. Information about national procedures is available at: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">80570000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">The time-limit to bring proceedings under Article 263 of the Treaty on the Functioning of the European Union shall begin to run two months from receipt of the appeal decision. A complaint to the European Ombudsman does not affect the deadline for lodging appeals.</cbc:Description>
+               <cbc:Description languageID="DAN">Fristen for indgivelse af klage i henhold til artikel 263 i traktaten om Den Europæiske Unions funktionsmåde begynder at løbe to måneder fra modtagelsen af klageafgørelsen. En klage til Den Europæiske Ombudsmand medfører ikke, at fristen for indgivelse af en klage forlænges.</cbc:Description>
+               <cbc:Description languageID="DEU">Die Frist für die Erhebung einer Klage nach Artikel 263 des Vertrags über die Arbeitsweise der Europäischen Union beginnt zwei Monate nach Eingang der Beschwerdeentscheidung. Eine Beschwerde beim Europäischen Bürgerbeauftragten hat keinen Einfluss auf die Frist für die Einlegung von Rechtsbehelfen.</cbc:Description>
+               <cbc:Description languageID="SPA">El plazo para interponer recursos previsto en el artículo 263 del Tratado de Funcionamiento de la Unión Europea empezará a contar a partir de la recepción de la decisión de recurso. Una reclamación al Defensor del Pueblo Europeo no afecta al plazo de presentación de recursos.</cbc:Description>
+               <cbc:Description languageID="FIN">Euroopan unionin toiminnasta tehdyn sopimuksen 263 artiklan mukainen kanteen nostamisen määräaika alkaa kulua kahden kuukauden kuluttua valituspäätöksen vastaanottamisesta. Euroopan oikeusasiamiehelle tehty kantelu ei vaikuta muutoksenhakuaikaan.</cbc:Description>
+               <cbc:Description languageID="FRA">Le délai de recours prévu à l'article 263 du traité sur le fonctionnement de l'Union européenne court pendant deux mois à compter de la réception de la décision de recours. L'introduction d'une plainte auprès du Médiateur européen n'a aucune incidence sur la date limite de recours.</cbc:Description>
+               <cbc:Description languageID="ELL">Η προθεσμία ασκήσεως προσφυγής που προβλέπεται στο άρθρο 263 της Συνθήκης για τη λειτουργία της Ευρωπαϊκής Ένωσης θα ισχύει δύο μήνες από την παραλαβή της απόφασης προσφυγής. Οι καταγγελίες στον Ευρωπαίο Διαμεσολαβητή δεν επηρεάζουν την προθεσμία για την υποβολή προσφυγών.</cbc:Description>
+               <cbc:Description languageID="ITA">Il termine per avviare un procedimento ai sensi dell'articolo 263 del trattato sul funzionamento dell'Unione europea inizia a decorrere dopo due mesi dal ricevimento della decisione sul ricorso. Un eventuale ricorso al Mediatore europeo non avrà effetto sul termine ultimo per la presentazione di ricorsi.</cbc:Description>
+               <cbc:Description languageID="NLD">De in artikel 263 van het Verdrag betreffende de werking van de Europese Unie bedoelde termijn voor het instellen van een beroep begint te lopen twee maanden na ontvangst van het besluit op het beroep. Een klacht bij de Europese Ombudsman heeft geen invloed op de termijn voor het instellen van een beroep.</cbc:Description>
+               <cbc:Description languageID="POR">O prazo de recurso previsto no artigo 263.º do Tratado sobre o Funcionamento da União Europeia começa a correr dois meses a contar da receção da decisão de recurso. As queixas efetuadas ao Provedor de Justiça Europeu não afetam o prazo para a interposição de recursos.</cbc:Description>
+               <cbc:Description languageID="SWE">Tidsfristen för att väcka talan enligt artikel 263 i fördraget om Europeiska unionens funktionssätt ska börja löpa 2 månader efter mottagandet av överklagandet. Ett klagomål till Europeiska ombudsmannen påverkar inte tidsfristen för begäran om överklagande.</cbc:Description>
+               <cbc:Description languageID="CES">Lhůta pro podání žaloby podle článku 263 Smlouvy o fungování Evropské unie začíná běžet dva měsíce od obdržení rozhodnutí o odvolání. Stížnost podaná evropskému veřejnému ochránci práv nemá vliv na konečnou lhůtu pro podání odvolání.</cbc:Description>
+               <cbc:Description languageID="EST">Euroopa Liidu toimimise lepingu artikli 263 kohase menetluse algatamise tähtaeg algab kaks kuud pärast kaebuse otsuse kättesaamist. Euroopa Ombudsmanile kaebuse esitamine ei mõjuta vaidlustuste esitamise tähtaega.</cbc:Description>
+               <cbc:Description languageID="HUN">Az Európai Unió működéséről szóló szerződés 263. cikke szerinti eljárás megindításának határideje a fellebbezési határozat kézhezvételétől számított két hónap. Az európai ombudsmanhoz benyújtott panasz nincs hatással a fellebbezési határidőre.</cbc:Description>
+               <cbc:Description languageID="LIT">Bylos nagrinėjimo pagal Sutarties dėl Europos Sąjungos veikimo 263 straipsnį terminas pradedamas skaičiuoti praėjus dviem mėnesiams nuo skundo sprendimo gavimo. Europos ombudsmenui pateiktas skundas neturės įtakos apeliacijų teikimo terminui.</cbc:Description>
+               <cbc:Description languageID="LAV">Termiņš tiesvedības uzsākšanai saskaņā ar Līguma par Eiropas Savienības darbību 263. pantu sākas divus mēnešus pēc pārsūdzības lēmuma saņemšanas. Sūdzība Eiropas Ombudam neietekmē pārsūdzību iesniegšanas termiņu.</cbc:Description>
+               <cbc:Description languageID="MLT">Il-limitu ta’ żmien biex jinbdew proċedimenti skont l-Artikolu 263 tat-Trattat dwar il-Funzjonament tal-Unjoni Ewropea għandu jibda japplika xahrejn (2) mill-wasla tad-deċiżjoni tal-appell. It-tressiq ta' lment quddiem l-Ombudsman Ewropew mhux se jħalli effett fuq id-data tal-għeluq għat-tressiq tal-appelli.</cbc:Description>
+               <cbc:Description languageID="POL">Termin wnoszenia skarg zgodnie z artykułem 263 Traktatu o funkcjonowaniu Unii Europejskiej rozpoczyna się dwa miesiące od otrzymania decyzji odwoławczej. Wniesienie skargi do Europejskiego Rzecznika Praw Obywatelskich nie wpływa na termin składania odwołań.</cbc:Description>
+               <cbc:Description languageID="SLK">Lehota na začatie konania podľa článku 263 Zmluvy o fungovaní Európskej únie začína plynúť dva mesiace od prijatia rozhodnutia o odvolaní. Sťažnosť predložená európskemu ombudsmanovi nebude mať vplyv na tento termín na podanie odvolania.</cbc:Description>
+               <cbc:Description languageID="SLV">Rok za vložitev tožbe na podlagi člena 263 Pogodbe o delovanju Evropske unije začne teči dva meseca od prejema sklepa o pritožbi. Pritožba Evropskemu varuhu človekovih pravic ne vpliva na rok za vložitev pritožb.</cbc:Description>
+               <cbc:Description languageID="GLE">Tosóidh an teorainn ama chun imeachtaí a thionscnamh faoi Airteagal 263 den Chonradh ar Fheidhmiú an Aontais Eorpaigh ag rith dhá mhí ón gcinneadh achomhairc a fháil. Ní bheidh tionchar ag gearán chuig an Ombudsman Eorpach ar an spriocdháta le haghaidh achomhairc a thaisceadh.</cbc:Description>
+               <cbc:Description languageID="BUL">Срокът за предявяване на жалба съгласно член 263 на Договора за функционирането на Европейския съюз започва да тече два месеца от получаването на решението за обжалване. Жалба до Европейския омбудсман не оказва влияние на крайните срокове за подаване на жалби.</cbc:Description>
+               <cbc:Description languageID="RON">Termenul de introducere a acțiunii prevăzut la articolul 263 din Tratatul privind funcționarea Uniunii Europene începe să curgă două luni de la data primirii deciziei de introducere a căii de atac. O plângere depusă la Ombudsmanul European nu are niciun efect asupra termenului-limită de utilizare a căilor de atac.</cbc:Description>
+               <cbc:Description languageID="HRV">Rok za pokretanje postupka u skladu s člankom 263. Ugovora o funkcioniranju Europske unije počinje teći dva mjeseca od primitka odluke o žalbi. Podnošenje pritužbe Europskom ombudsmanu ne utječe na rok za podnošenje žalbi.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+            <cac:MediationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:MediationParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Learning and Development Services in the Field of Data Science and Computer Science</cbc:Name>
+         <cbc:Name languageID="DAN">Undervisnings- og udviklingstjenester inden for datavidenskab og computervidenskab</cbc:Name>
+         <cbc:Name languageID="DEU">Lern- und Entwicklungsdienste im Bereich Datenwissenschaft und Informatik</cbc:Name>
+         <cbc:Name languageID="SPA">Servicios de aprendizaje y desarrollo en el ámbito de la ciencia de datos y la informática</cbc:Name>
+         <cbc:Name languageID="FIN">Oppimista ja kehitystä koskevat palvelut data- ja tietokonetieteen alalla</cbc:Name>
+         <cbc:Name languageID="FRA">Services d’apprentissage et de développement dans le domaine de la science des données et de l’informatique</cbc:Name>
+         <cbc:Name languageID="ELL">Υπηρεσίες μάθησης και ανάπτυξης στον τομέα της Επιστήμης Δεδομένων και της Πληροφορικής</cbc:Name>
+         <cbc:Name languageID="ITA">Servizi di apprendimento e sviluppo nel settore della scienza dei dati e dell'informatica</cbc:Name>
+         <cbc:Name languageID="NLD">Leer- en ontwikkelingsdiensten op het gebied van datawetenschap en computerwetenschap</cbc:Name>
+         <cbc:Name languageID="POR">Serviços de aprendizagem e desenvolvimento no domínio da ciência de dados e da ciência informática</cbc:Name>
+         <cbc:Name languageID="SWE">Utbildnings- och utvecklingstjänster inom områdena data science och datavetenskap</cbc:Name>
+         <cbc:Name languageID="CES">Služby v oblasti vzdělání a rozvoje v oblasti datové vědy a počítačové vědy</cbc:Name>
+         <cbc:Name languageID="EST">Õppe- ja arendamisteenused andmeteaduse ja informaatika valdkonnas</cbc:Name>
+         <cbc:Name languageID="HUN">Képzési és fejlesztési szolgáltatások az adattudomány és az informatika területén</cbc:Name>
+         <cbc:Name languageID="LIT">Mokymosi ir tobulinimosi paslaugos duomenų mokslo ir kompiuterių mokslo srityje</cbc:Name>
+         <cbc:Name languageID="LAV">Mācību un pilnveides pakalpojumi datu zinātnes un datorzinātnes jomā</cbc:Name>
+         <cbc:Name languageID="MLT">Servizzi ta’ Tagħlim u Żvilupp fil-Qasam tax-Xjenza tad-Data u x-Xjenza tal-Kompjuters</cbc:Name>
+         <cbc:Name languageID="POL">Szkolenie i doskonalenie w dziedzinie nauki o danych i informatyki</cbc:Name>
+         <cbc:Name languageID="SLK">Služby vzdelávania a rozvoja v oblasti dátových vied a informatiky</cbc:Name>
+         <cbc:Name languageID="SLV">Storitve učenja in razvoja na področju podatkovne znanosti in računalniške znanosti</cbc:Name>
+         <cbc:Name languageID="GLE">Seirbhísí Foghlama agus Forbartha i Réimse na hEolaíochta Sonraí agus na Ríomheolaíochta</cbc:Name>
+         <cbc:Name languageID="BUL">Услуги за обучение и развитие в областта на науката за данните и компютърните науки</cbc:Name>
+         <cbc:Name languageID="RON">Servicii de învățare și dezvoltare în domeniul științei datelor și informaticii</cbc:Name>
+         <cbc:Name languageID="HRV">Usluge učenja i razvoja u području podatkovne znanosti i računalne znanosti</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The ECB awarded through this procurement contracts to further strengthen the learning programme of its data academy as well as enrich the overall data, technology and ICT offer. Against this background, the ECB was therefore looking to procure the following services: Lot 1: Up to three providers to design, and/or co-create, deliver and administer blended learning and development services provided in English in the field of data science and computer science, and the specialisations covered by the ECB Data Academy. The ECB Data Academy is open to staff members across business areas with the following main objectives: (i) close knowledge gaps and upskill staff in the field of data science, information technology and data skills; (ii) improve general data literacy among staff; (iii) support the organisation’s data transformation; (iv) standardise data skills across business areas using e.g. cross-functional synergies; and (v) encourage participants to learn from each other and put learning in to practice e.g. in the form of (cross) business area projects. The procured services are open to all staff of the ECB, and where applicable, to employees of NCAs of the SSM and NCBs of the ESCB. The on-site services will be mainly delivered in Frankfurt am Main and in exceptional cases delivered in local NCB/NCAs locations within the EU.</cbc:Description>
+         <cbc:Description languageID="DAN">ECB tildelte kontrakter gennem dette udbud med henblik på yderligere at styrke dets dataakademis læringsprogram samt berige det overordnede udbud af data, teknologi og IKT. På denne baggrund ønskede ECB derfor at indkøbe følgende tjenesteydelser: Parti 1: Op til tre udbydere til at designe og/eller sammen skabe, levere og administrere blandede lærings- og udviklingstjenester leveret på engelsk inden for datavidenskab og computervidenskab samt specialiseringer omfattet af ECB's dataakademi. ECB's dataakademi er åbent for medarbejdere på tværs af forretningsområder med følgende hovedmål: i) at lukke videnhuller og opkvalificere personalet inden for datavidenskab, informationsteknologi og datafærdigheder ii) at forbedre personalets generelle digitale kompetencer iii) at understøtte organisationens digitale omstilling iv) at standardisere datafærdigheder på tværs af forretningsområder ved hjælp af f.eks. tværgående synergier v) at tilskynde deltagerne til at lære af hinanden og omsætte læringen til praksis, f.eks. i form af (tværgående) projekter inden for forretningsområder. De erhvervede tjenesteydelser er tilgængelige for alle ECB's ansatte og, hvor det er relevant, for ansatte i de kompetente nationale myndigheder i FTM og de nationale centralbanker i ESCB. Tjenesteydelserne på stedet skal hovedsageligt leveres i Frankfurt am Main og i undtagelsestilfælde leveres på lokale nationale centralbankers/nationale myndigheders lokaliteter i EU.</cbc:Description>
+         <cbc:Description languageID="DEU">Die EZB hat im Rahmen dieser Beschaffungsaufträge das Lernprogramm ihrer Datenakademie weiter gestärkt und das Gesamtangebot an Daten, Technologien und IKT bereichert. Vor diesem Hintergrund beabsichtigte die EZB daher die Beschaffung der folgenden Dienstleistungen: Los 1: Bis zu drei Anbieter, die gemischte Lern- und Entwicklungsdienste in englischer Sprache im Bereich Datenwissenschaft und Informatik sowie die von der EZB-Datenakademie abgedeckten Spezialisierungen entwickeln und/oder gemeinsam erstellen, erbringen und verwalten. Die EZB-Datenakademie steht Mitarbeitern in allen Geschäftsbereichen mit folgenden Hauptzielen offen: i) Schließung von Wissenslücken und Weiterbildung des Personals im Bereich Datenwissenschaft, Informationstechnologie und Datenkompetenz; ii) Verbesserung der allgemeinen Datenkompetenz des Personals; iii) Unterstützung der Datentransformation der Organisation; iv) Standardisierung von Datenkompetenzen in allen Geschäftsbereichen unter Verwendung von z. B. funktionsübergreifenden Synergien und v) Ermutigung der Teilnehmer, voneinander zu lernen und das Lernen in die Praxis umzusetzen, z. B. in Form von (übergreifenden) Geschäftsbereichsprojekten. Die beschafften Dienstleistungen stehen allen Mitarbeitern der EZB und gegebenenfalls Mitarbeitern der nationalen Aufsichtsbehörden (NCA) des SSM und der NZB des ESZB offen. Die Dienstleistungen vor Ort werden hauptsächlich in Frankfurt am Main und in Ausnahmefällen an lokalen Standorten der NZB/NCAs innerhalb der EU erbracht.</cbc:Description>
+         <cbc:Description languageID="SPA">El BCE adjudicó, a través de esta licitación, contratos para seguir reforzando el programa de aprendizaje de su academia de datos y enriquecer la oferta global de datos, tecnología y TIC. En este contexto, el BCE buscaba, por tanto, contratar los siguientes servicios: Lote 1: Un máximo de tres proveedores para diseñar o crear conjuntamente, prestar y administrar servicios mixtos de aprendizaje y desarrollo prestados en inglés en el ámbito de la ciencia de datos y la informática, así como las especializaciones cubiertas por la Academia de Datos del BCE. La Academia de Datos del BCE está abierta a miembros del personal de todas las áreas comerciales con los siguientes objetivos principales: i) reducir las brechas de conocimiento y mejorar las capacidades del personal en el ámbito de la ciencia de datos, las tecnologías de la información y las competencias en materia de datos; ii) mejorar el conocimiento general de ciencia de datos entre el personal; iii) apoyar la transformación de datos de la organización; iv) normalizar las competencias en materia de datos en las áreas empresariales utilizando, por ejemplo, sinergias interfuncionales, y v) estimular a los participantes a aprender unos de otros y a poner en práctica el aprendizaje, por ejemplo, en forma de proyectos de áreas empresariales (transversales). Los servicios adquiridos están abiertos a todo el personal del BCE y, en su caso, a los empleados de las ANC del MUS y de los BCN del SEBC. Los servicios «in situ» se prestarán principalmente en Fráncfort del Meno y, en casos excepcionales, en las ubicaciones de los BCN/ANC locales dentro de la Unión Europea.</cbc:Description>
+         <cbc:Description languageID="FIN">EKP teki tämän hankintamenettelyn avulla sopimuksia parantaakseen data-akatemiansa oppimisohjelmaa sekä rikastuttaakseen datan, teknologian ja tieto- ja viestintätekniikan kokonaistarjontaansa. EKP etsi näin ollen tätä taustaa vasten toimittajia seuraaville palveluille: Erä 1: enintään kolme palveluntarjoajaa, joiden tehtävänä on suunnitella ja/tai luoda yhdessä, toimittaa sekä antaa yhdistelmätyyppisiä oppimis- ja kehityspalveluja englannin kielellä datatieteen ja tietokonetieteen alalla sekä EKP:n data-akatemian kattamilla erikoisaloilla. EKP:n data-akatemia on avoin eri liiketoiminta-aloihin kuuluville henkilöstön jäsenille. Data akatemian päätavoitteet ovat seuraavat: i) täydentää puutteita tiedoissa sekä lisätä henkilöstön taitoja datatieteen, tietoteknologian ja datataitojen alalla, ii) parantaa yleistä dataa koskevaa ymmärtämistä henkilöstön parissa, iii) tukea organisaation dataa koskevaa muutosta, iv) standardoida eri liiketoiminta-alojen datataitoja käyttämällä esimerkiksi ristiin toimivia synergioita sekä v) kannustaa osallistujia oppimaan toisiltaan ja panemaan oppimansa asiat käytäntöön esimerkiksi liiketoiminta-alojen rajat ylittävien hankkeiden muodossa. Toimitetut palvelut ovat avoimia koko EKP:n henkilöstölle sekä soveltuvassa määrin yhteiseen valvontamekanismiin kuuluvien kansallisten valvontaviranomaisten sekä Euroopan keskuspankkijärjestelmään kuuluvien kansallisten keskuspankkien työntekijöille. Paikan päällä suoritettavat palvelut tapahtuvat pääasiassa Frankfurt am Mainissa sekä poikkeuksellisissa tapauksissa paikallisten kansallisten keskuspankkien tai kansallisten valvontaviranomaisten sijaintipaikoissa EU:n sisällä.</cbc:Description>
+         <cbc:Description languageID="FRA">La BCE a attribué des contrats dans le cadre du présent marché, pour renforcer encore le programme d’apprentissage de l’école d’informatique et enrichir l'offre globale de données, de technologies et de TIC. Dans ce contexte, la BCE envisageait donc de fournir les services suivants: Lot 1: Trois prestataires au maximum pour la conception et/ou la cocréation, la fourniture et l'administration de services d'apprentissage et de développement mixtes fournis en anglais dans le domaine de la science des données et de l'informatique, ainsi que des spécialisations couvertes par l’école d’informatique de la BCE. L’école d’informatique de la BCE est ouverte aux membres du personnel dans tous les domaines d'activité avec les principaux objectifs suivants: i) combler les lacunes en matière de connaissances et améliorer les compétences du personnel dans le domaine de la science des données, des technologies de l'information et des compétences en matière de données; ii) améliorer la connaissance générale des données au sein du personnel; iii) soutenir la transformation des données de l’organisation; iv) normaliser les compétences en matière de données dans les différents domaines d’activité en utilisant par exemple des synergies interfonctionnelles; et v) encourager les participants à apprendre les uns des autres et à mettre l’apprentissage en pratique, par exemple sous la forme de projets (interentreprises). Les services sont ouverts à tout le personnel de la BCE et, le cas échéant, aux employés des ACN du MSU et des BCN du SEBC. Les services sur site seront principalement fournis à Francfort-sur-le-Main et, dans des cas exceptionnels, livrés dans les locaux des BCN/ANC locales au sein de l’UE.</cbc:Description>
+         <cbc:Description languageID="ELL">Η ΕΚΤ ανέθεσε μέσω των εν λόγω συμβάσεων προμηθειών την περαιτέρω ενίσχυση του προγράμματος μάθησης της ακαδημίας δεδομένων της καθώς και τον εμπλουτισμό της συνολικής προσφοράς δεδομένων, τεχνολογίας και ΤΠΕ. Στο πλαίσιο αυτό, η ΕΚΤ επεδίωκε, συνεπώς, να συνάψει τις ακόλουθες υπηρεσίες: Παρτίδα 1: Έως τρεις πάροχοι για τον σχεδιασμό και/ή τη συν δημιουργία, παράδοση και διαχείριση υπηρεσιών συνδυαστικής μάθησης και ανάπτυξης που παρέχονται στα αγγλικά στον τομέα της επιστήμης δεδομένων και της πληροφορικής, καθώς και των ειδικοτήτων που καλύπτονται από την Ακαδημία Δεδομένων της ΕΚΤ. Η Ακαδημία Δεδομένων της ΕΚΤ είναι ανοικτή σε μέλη του προσωπικού σε διάφορους επιχειρηματικούς τομείς με τους ακόλουθους κύριους στόχους: (i) την κάλυψη των κενών γνώσης και την αναβάθμιση του προσωπικού στον τομέα που αφορά τις δεξιότητες σχετικά με την επιστήμη των δεδομένων, την τεχνολογία των πληροφοριών και δεδομένων, (ii) τη βελτίωση της γνώσης των γενικών δεδομένων μεταξύ του προσωπικού, (iii) την υποστήριξη της μετατροπής δεδομένων του οργανισμού, (iv) την τυποποίηση των δεξιοτήτων δεδομένων σε επιχειρηματικούς τομείς χρησιμοποιώντας π.χ. διαλειτουργικές συνέργειες, και (v) την ενθάρρυνση των συμμετεχόντων προκειμένου να μάθουν ο ένας από τον άλλο και να εφαρμόσουν την εκπαίδευση στην πράξη, π.χ. με τη μορφή σχεδίων σε διάφορους επιχειρηματικούς τομείς. Οι παρεχόμενες υπηρεσίες είναι ανοικτές σε όλο το προσωπικό της ΕΚΤ και, κατά περίπτωση, σε υπαλλήλους των ΕΑΑ του ΕΕΜ και των ΕθνΚΤ του ΕΣΚΤ. Οι επιτόπιες υπηρεσίες θα παρασχεθούν κυρίως στη Φρανκφούρτη (Frankfurt am Main) και σε εξαιρετικές περιπτώσεις θα παραδοθούν σε τοπικές τοποθεσίες ΕθνΚΤ/ΕΑΑ εντός της ΕΕ.</cbc:Description>
+         <cbc:Description languageID="ITA">La BCE, attraverso il presente appalto, ha aggiudicato contratti per rafforzare ulteriormente il programma di apprendimento della sua accademia di dati e arricchire l'offerta complessiva di dati, tecnologia e TIC. Pertanto, in questo contesto, la BCE intendeva acquisire i seguenti servizi: Lotto 1: fino a tre fornitori per progettare e/o co-creare, fornire e gestire servizi di sviluppo e apprendimento misto prestati in inglese nel settore della scienza dei dati e dell'informatica, e le specializzazioni coperte dall'accademia di dati della BCE. L'accademia di dati della BCE è aperta ai membri del personale in tutti i settori di attività con i seguenti obiettivi principali: i) colmare le lacune di conoscenze e di competenze nel settore della scienza dei dati, della tecnologia dell'informazione e delle competenze in materia di dati; ii) migliorare l'alfabetizzazione generale dei dati tra il personale; iii) sostenere la trasformazione dei dati dell'organizzazione; iv) standardizzare le competenze in materia di dati tra le aree aziendali utilizzando ad es. sinergie trasversali; e v) incoraggiare i partecipanti a imparare gli uni dagli altri e a mettere in pratica quanto appreso, ad esempio sotto forma di progetti (trasversali) nelle aree aziendali. I servizi appaltati sono aperti a tutto il personale della BCE e, se del caso, ai dipendenti delle autorità nazionali competenti del meccanismo di vigilanza unico e delle banche centrali nazionali del Sistema europeo di banche centrali. I servizi in loco saranno prestati principalmente a Francoforte sul Meno e, in casi eccezionali, nelle sedi locali delle banche centrali/delle autorità nazionali competenti all'interno dell'UE.</cbc:Description>
+         <cbc:Description languageID="NLD">De ECB heeft via deze aanbesteding opdrachten gegund om het leerprogramma van haar data-academie verder te versterken en het algemene aanbod aan gegevens, technologie en ICT te verrijken. Tegen deze achtergrond streefde de ECB er daarom naar de volgende diensten te werven: Perceel 1: Maximaal drie dienstverleners voor het ontwerpen en/of co-creëren, leveren en beheren van gemengde leer- en ontwikkelingsdiensten in het Engels op het gebied van datawetenschap en computerwetenschap en de specialisaties die onder de Data Academy van de ECB vallen. De Data Academy van de ECB staat open voor medewerkers van alle bedrijfsonderdelen met de volgende hoofddoelstellingen: i) het dichten van kennislacunes en het bijscholen van het personeel op het gebied van datawetenschap, informatietechnologie en datavaardigheden; ii) verbetering van de algemene kennis en vaardigheden van het personeel op het gebied van data; iii) ondersteuning van de gegevenstransformatie van de organisatie; iv) vaardigheden met betrekking tot data in alle bedrijfssectoren standaardiseren met behulp van bijvoorbeeld functieoverschrijdende synergieën; v) deelnemers aanmoedigen om van elkaar te leren en het geleerde in de praktijk te brengen, bijvoorbeeld door projecten tussen verschillende bedrijfssectoren. De aanbestede diensten staan open voor alle ECB-personeelsleden en, indien van toepassing, voor personeelsleden van NCA's van het GTM en de NCB's van het ESCB. De diensten ter plaatse worden voornamelijk verleend in Frankfurt am Main en in uitzonderlijke gevallen geleverd op lokale NCB/NMA-locaties binnen de EU.</cbc:Description>
+         <cbc:Description languageID="POR">O BCE adjudicou um contrato através do presente concurso para reforçar ainda mais o programa de aprendizagem da sua academia de dados, bem como enriquecer a oferta global de dados, tecnologia e TIC. Neste contexto, o BCE pretendia, por conseguinte, obter os seguintes serviços: Lote 1: Até três prestadores para conceber, e/ou co-criar, fornecer e administrar serviços de desenvolvimento e aprendizagem mista prestados em inglês no domínio da ciência de dados e informática, e as especializações abrangidas pela Academia de Dados do BCE. A Academia de Dados do BCE está aberta a membros do pessoal em todas as áreas de negócio com os seguintes objetivos principais: (i) colmatar as lacunas de conhecimentos e qualificar o pessoal no domínio da ciência dos dados, das tecnologias da informação e das competências em matéria de dados; (ii) melhorar a literacia geral em matéria de dados entre o pessoal; (iii) apoiar a transformação de dados da organização; (iv) normalizar as competências de dados em todas as áreas de negócio utilizando, por exemplo, sinergias interfuncionais; e (v) incentivar os participantes a aprenderem uns com os outros e a pôr a aprendizagem em prática, por exemplo, sob a forma de projetos (transversais) às áreas empresariais. Os serviços adquiridos estão abertos a todo o pessoal do BCE e, quando aplicável, aos funcionários das autoridades nacionais de supervisão do MUS e dos BCN do SEBC. Os serviços no local serão prestados principalmente em Francoforte no Meno e, em casos excecionais, nos locais dos BCN/Autoridades nacionais de supervisão locais na UE.</cbc:Description>
+         <cbc:Description languageID="SWE">ECB tilldelade genom denna upphandling kontrakt för att ytterligare stärka sin egen dataakademis utbildningsprogram samt förbättra det övergripande anbudet avseende data, teknik och IKT. Mot denna bakgrund ville ECB därför upphandla följande tjänster: Del 1: Upp till tre leverantörer för att utforma och/eller gemensamt skapa, leverera och administrera blandade utbildnings- och utvecklingstjänster som tillhandahålls på engelska inom områdena data science och datavetenskap samt de specialiseringar som omfattas av ECB:s dataakademi. ECB:s dataakademi är öppen för personal inom alla affärsområden med följande huvudsakliga mål: (i) överbrygga kunskapsluckor och höja kompetensen inom områdena data science, informationsteknik och datorkunskap (ii) förbättra personalens allmänna datorkunskaper (iii) stödja organisationens dataomvandling (iv) standardisera datorkunskaper inom olika affärsområden med hjälp av exempelvis tvärfunktionella synergier (v) uppmuntra deltagarna att lära av varandra och omsätta lärandet i praktiken, exempelvis i form av (övergripande) projekt inom affärsområdet. De upphandlade tjänsterna är öppna för all personal vid ECB, och i tillämpliga fall för anställda vid de nationella behöriga myndigheterna i den gemensamma tillsynsmekanismen och de nationella centralbankerna i ESCB. Tjänsterna på plats kommer huvudsakligen att levereras till Frankfurt am Main och i undantagsfall till lokala nationella centralbanker/nationella myndigheter inom EU.</cbc:Description>
+         <cbc:Description languageID="CES">ECB zadala prostřednictvím tohoto výběrového řízení zakázky na další posílení vzdělávacího programu své datové akademie a obohatila celkovou nabídku údajů, technologií a IKT. Z těchto důvodů ECB měla v úmyslu zajistit následující služby: Položka č. 1: Až tři poskytovatelé služeb, kteří navrhnou a/nebo spoluvytvoří a poskytnou služby smíšeného vzdělávání a rozvoje poskytované v angličtině v oblasti datové a počítačové vědy a specializací, na které se vztahuje datová akademie ECB. Datová akademie ECB je otevřena zaměstnancům v obchodních oblastech s následujícími hlavními cíli: i) hluboké znalosti a pracovníci prohlubování dovedností v oblasti datové vědy, informačních technologií a datových dovedností; ii) zlepšení obecné gramotnosti v oblasti údajů mezi zaměstnanci; iii) podpora transformace dat organizace; iv) standardizace datových dovedností napříč obchodními oblastmi za použití např. multifunkčních synergických efektů; a v) podpora účastníků při vzdělávání se jeden od druhého a zapojení do praxe, např. ve formě (křížových) projektů v oblasti podnikání. Pořízené služby jsou otevřeny všem zaměstnancům ECB a případně zaměstnancům národních centrálních bank jednotného mechanismu dohledu a národních centrálních bank ESCB. Místní služby budou poskytovány převážně ve Frankfurtu nad Mohanem a ve výjimečných případech budou poskytovány v místních lokalitách národní centrální banky / NCA v rámci EU.</cbc:Description>
+         <cbc:Description languageID="EST">EKP sõlmis kõnealuse hanke kaudu lepingud EKP andmeakadeemia õppekava edasiseks tugevdamiseks ning ka üldise andmete, tehnoloogia ja IKT alase pakkumise täiustamiseks. EKP soovis kirjeldatud tagamaid arvesse võttes seega hankida järgmisi teenuseid: 1. osa: kuni kolm teenusepakkujat, et projekteerida ja/või kaasluua, edastada ja hallata ingliskeelseid ühendatud õppimis- ja arendamisteenuseid andmeteaduse ja informaatika valdkonnas ning EKP andmeakadeemias hõlmatud erialadel. EKP andmeakadeemia on avatud erinevate ettevõtlusalade koosseisulistele töötajatele, kelle peamised eesmärgid on järgmised: i) töötajate teadmuslünkade kaotamine ja täiendõpe andmeteaduse, infotehnoloogia ja andmeoskuste valdkonnas; ii) töötajate seas üldise andmealase kirjaoskuse täiustamine; iii) toetus organisatsiooni andmete teisendusele; iv) erinevate ettevõtlusalade vaheliste andmeoskuste normimine kasutades nt funktsiooniüleseid sünergiaid; ja v) julgustada osalejaid üksteiselt õppima ning rakendama õpitavat praktikas, nt ettevõtlusvaldkondade (vaheliste) projektide vormis. Hangitavad teenused on avatud kõigile EKP koosseisulistele töötajatele ja, kui see on rakendatav, ühtse järelevalvemehhanismi (SSM) riiklike pädevate asutuste (NCA) ja Euroopa keskpankade süsteemi riiklike keskpankade (NCB) töötajatele. Kohapealseid teenuseid osutatakse peamiselt Frankfurt Maini ääres ja erandkorras kohalike riiklike keskpankade / pädevate asutuste asukohtades ELi piires.</cbc:Description>
+         <cbc:Description languageID="HUN">Az EKB e közbeszerzés keretében a „Data Academy” képzési programjának további erősítésére, valamint az általános adat-, technológia- és IKT-kínálat gazdagítására irányuló szerződéseket ítélt oda. Mindezek alapján az EKB a következő szolgáltatásokat kívánta beszerezni: 1. tétel: Legfeljebb három szolgáltató angolul nyújtott szolgáltatásai vegyes képzési és fejlesztési szolgáltatások tervezésére és/vagy közös létrehozására, biztosítására és adminisztrálására az adattudomány és az informatika területén, valamint az EKB „Data Academy” programja által lefedett szakterületeken. Az EKB „Data Academy” programja a különböző tevékenységi területeken dolgozó munkatársak számára nyitott, az alábbi fő célkitűzésekkel: (i) ismeretbeli hiányosságok megszüntetése, valamint a személyzet továbbképzése az adattudomány, információs technológia és adatkezelési készségek területén; (ii) az általános adatműveltség javítása a személyzet körében; (iii) az intézmény adatátalakításának támogatása; (iv) adatkezelési készségek szabványosítása különböző tevékenységi területeken pl. keresztfunkcionális szinergiák használata révén; valamint (v) a résztvevők ösztönzése, hogy tanuljanak egymástól, és a tanultakat alkalmazzák a gyakorlatban, pl. különböző tevékenységi területek közötti (kereszt)projektek formájában. A beszerzett szolgáltatások hozzáférhetők az EKB összes munkatársa, valamint adott esetben az egységes felügyeleti mechanizmus illetékes nemzeti hatóságai és a Központi Bankok Európai Rendszerének nemzeti központi bankjai alkalmazottai számára. A helyszíni szolgáltatásokat főként Frankfurt am Mainban, kivételes esetekben a helyi NKB-k/illetékes nemzeti hatóságok EU-ban található helyszínein kell teljesíteni.</cbc:Description>
+         <cbc:Description languageID="LIT">ECB šia pirkimo sutartimi paskyrė dar labiau sustiprinti savo duomenų akademijos mokymosi programą bei praturtinti bendrus duomenis, technologijas ir IRT pasiūlymą. Todėl ECB siekė įsigyti šias paslaugas: 1 dalis: Iki trijų paslaugų teikėjų, kurie projektuotų ir (arba) bendrai kurtų, teiktų ir administruotų mišrias mokymosi ir plėtros paslaugas, teikiamas anglų kalba duomenų mokslo ir kompiuterių mokslo srityje, ir specializuotas paslaugas, kurias teikia ECB duomenų akademija. ECB duomenų akademijoje gali dalyvauti visų verslo sričių darbuotojai, siekiantys šių pagrindinių tikslų: i) užpildyti žinių spragas ir pakelti darbuotojų kvalifikaciją duomenų mokslo, informacinių technologijų ir duomenų įgūdžių srityje; ii) gerinti bendrą darbuotojų duomenų naudojimo raštingumą; iii) remti organizacijos duomenų transformavimą; iv) standartizuoti įvairių verslo sričių duomenų įgūdžius, pvz., naudojant daugiafunkcę sinergiją; ir v) skatinti dalyvius mokytis vieniems iš kitų ir praktiškai mokytis, pvz., vykdant verslo srities (įvairių verslo sričių) projektus. Įsigytas paslaugas gali teikti visi ECB darbuotojai ir, kai taikoma, BPM NKI ir ECBS NCB darbuotojai. Paslaugos vietoje bus daugiausia teikiamos Frankfurte prie Maino ir išskirtiniais atvejais teikiamos vietos NCB / NKI vietose ES.</cbc:Description>
+         <cbc:Description languageID="LAV">ECB šī iepirkuma ietvaros piešķīra līgumu slēgšanas tiesības, lai turpinātu stiprināt tās datu akadēmijas mācību programmu, kā arī uzlabotu vispārējo datu, tehnoloģiju un IKT piedāvājumu. Ņemot vērā iepriekš minēto, ECB meklēja šādus pakalpojumus: 1. daļa: ne vairāk kā trīs pakalpojumu sniedzēji, kas izstrādās un/vai kopā izveidos, piegādās un pārvaldīs jaukta tipa mācību un pilnveides pakalpojumus, kuri sniegti angļu valodā, datu zinātnes un datorzinātnes jomā, kā arī saistībā ar ECB datu akadēmijas aptvertajām specializācijām. ECB datu akadēmija ir atvērta darbiniekiem visās uzņēmējdarbības jomās ar šādiem galvenajiem mērķiem: i) novērst zināšanu nepilnības un pilnveidot darbinieku prasmes datu zinātnes, informācijas tehnoloģiju un datu prasmju jomā; ii) uzlabot darbinieku vispārējo datu lietotprasmi; iii) atbalstīt organizācijas datu pārveidošanu; iv) standartizēt datu prasmes uzņēmējdarbības jomās, izmantojot, piemēram, transversālas sinerģijas; v) mudināt dalībniekus mācīties vienam no otra un izmantot iegūtās zināšanas praksē, piemēram, (transversālu) uzņēmējdarbības jomas projektu veidā. Iepirktie pakalpojumi ir pieejami visiem ECB darbiniekiem un attiecīgā gadījumā SSM NCA un ESCB NCB darbiniekiem. Pakalpojumi uz vietas galvenokārt tiks sniegti Frankfurtē pie Mainas un izņēmuma gadījumos – vietējās NCB/NCA vietās ES.</cbc:Description>
+         <cbc:Description languageID="MLT">Il-BĊE permezz ta’ dan il-ksib ta kuntratti biex ikompli jsaħħaħ il-programm ta’ tagħlim tal-akkademja tad-data tiegħu kif ukoll isaħħaħ id-data ġenerali, it-teknoloġija u l-offerta tat-TIK. F’dan l-isfond, il-BĊE għalhekk kien qiegħed ifittex li jikseb is-servizzi li ġejjin: Lott 1: Sa tliet fornituri għad-disinn, u/jew kokreazzjoni, kunsinna u amministrazzjoni tas-servizzi ta’ tagħlim imħallat u żvilupp ipprovdut bl-Ingliż fil-qasam tax-xjenza tad-data u x-xjenza tal-kompjuters, u l-ispeċjalizzazzjonijiet koperti mill-Akkademja tad-Data tal-BĊE. L-Akkademja tad-Data tal-BĊE hija miftuħa għall-membri tal-persunal fost l-oqsma tan-negozji bl-għanijiet ewlenin li ġejjin: (i) li jingħalqu l-lakuni tal-għarfien u jittejbu l-ħiliet tal-persunal fil-qasam tax-xjenza tad-data, it-teknoloġija tal-informazzjoni u l-ħiliet tad-data; (ii) li jittejjeb il-litteriżmu tad-data ġenerali fost il-persunal; (iii) li tiġi appoġġjata t-trasformazzjoni tad-data tal-organizzazzjoni; (iv) l-istandardizzazzjoni ta’ ħiliet tad-data fost l-oqsma tan-negozju bl-użu ta’ eż. sinerġiji trasversali; u (v) li jiġu mħeġġa l-parteċipanti biex jitgħallmu minn xulxin u jużaw it-tagħlim fil-prattika eż. fl-għamla ta’ proġetti tal-qasam tan-negozju (transkonfinali). Is-servizzi miksuba huma miftuħa għall-persunal kollu tal-BĊE, u fejn applikabbli, għall-impjegati tal-NCAs tal-MSU u l-BĊN tas-SEBĊ. Is-servizzi fuq is-sit se jitwasslu prinċipalment fi Frankfurt am Main u f’każijiet eċċezzjonali f’postijiet lokali ta’ BĊN/NCAs fi ħdan l-UE.</cbc:Description>
+         <cbc:Description languageID="POL">W drodze niniejszego postępowania EBC udzielił zamówień w celu dalszego wzmocnienia programu edukacyjnego Akademii Danych oraz wzbogacenia ogólnej oferty dotyczącej danych, technologii i ICT. W związku z tym EBC zamierzał zamówić następujące usługi: Część 1: do trzech usługodawców, którzy zaprojektują i/lub wspólnie stworzą, zapewnią mieszane usługi w zakresie uczenia się i rozwoju świadczone w języku angielskim w dziedzinie nauki o danych i informatyki oraz specjalizacji w ramach Akademii Danych EBC. Akademia Danych EBC jest otwarta dla pracowników z różnych obszarów działalności, realizujących następujące główne cele: (i) uzupełnianie luk w wiedzy i doskonalenie personelu w dziedzinie nauki o danych, technologii informacyjnej i umiejętności w zakresie danych; (ii) poprawa ogólnej wiedzy na temat danych wśród personelu; (iii) wsparcie procesu transformacji organizacji w dziedzinie danych; (iv) standaryzacja umiejętności związanych z danymi w poszczególnych obszarach działalności z wykorzystaniem np. synergii między różnymi zadaniami; oraz (v) zachęcanie uczestników do wzajemnego uczenia się i stosowania uczenia się w praktyce, np. w formie projektów obejmujących obszary biznesowe. Zamawiane usługi są otwarte dla wszystkich pracowników EBC oraz, w stosownych przypadkach, dla pracowników krajowych urzędów ds. nadzoru w ramach jednolitego mechanizmu nadzorczego i krajowych banków centralnych należących do Europejskiego Systemu Banków Centralnych. Usługi na miejscu będą świadczone głównie we Frankfurcie nad Menem, a w wyjątkowych przypadkach również w lokalizacjach lokalnych krajowych banków centralnych / krajowych urzędów ds. nadzoru na terytorium UE.</cbc:Description>
+         <cbc:Description languageID="SLK">ECB pridelila prostredníctvom tohto verejného obstarávania zmluvy na ďalšie posilnenie vzdelávacieho programu svojej Dátovej akadémie, ako aj obohatenie celkovej ponuky v oblasti dát, technológií a IKT. Na základe tohto plánovala ECB obstarať nasledujúce služby: Časť 1: Najviac 3 poskytovatelia budú navrhovať a/alebo spoluvytvárať, dodávať a spravovať zmiešané vzdelávacie a rozvojové služby poskytované v angličtine v oblasti dátových vied a informatiky a špecializácie zahrnuté do Dátovej akadémie ECB. Dátová akadémia ECB je otvorená pre zamestnancov vo všetkých obchodných oblastiach s nasledujúcimi hlavnými cieľmi: i) odstránenie nedostatkov v poznatkoch a zvýšenie kvalifikácie zamestnancov v oblasti dátovej vedy, informačných technológií a dátových zručností; ii) zlepšenie všeobecnej gramotnosti zamestnancov v oblasti dát; iii) podpora transformácie dát organizácie; iv) štandardizácia dátových zručností vo všetkých obchodných oblastiach pomocou napr. multifunkčných synergií; a v) podnietenie účastníkov, aby sa navzájom učili a učenie využili v praxi, napr. vo forme projektov v (medziodborových) obchodných oblastiach. Obstarané služby sú prístupné pre všetkých zamestnancov ECB a prípadne pre zamestnancov príslušných vnútroštátnych orgánov jednotného mechanizmu dohľadu (Single Supervisory Mechanism – SSM) a národných centrálnych bánk ESCB. Služby na mieste sa budú dodávať najmä vo Frankfurte nad Mohanom a vo výnimočných prípadoch sa budú dodávať v lokalitách miestnych národných centrálnych bánk/príslušných vnútroštátnych orgánov v rámci EÚ.</cbc:Description>
+         <cbc:Description languageID="SLV">ECB je v okviru tega razpisnega postopka oddala naročili za dodatno okrepitev učnega programa svoje podatkovne akademije ter obogatitev splošne ponudbe podatkov, tehnologij in IKT. Glede na to je ECB zato želela naročiti naslednje storitve: Sklop 1: največ trije ponudniki storitev oblikovanja in/ali soustvarjanja, zagotavljanja in upravljanja mešanih storitev učenja in razvoja, zagotovljenih v angleščini, na področju podatkovne znanosti in računalniške znanosti, in specializacij, ki jih zajema podatkovna akademija ECB. Podatkovna akademija ECB je odprta za uslužbence na naslednjih poslovnih področjih z naslednjimi glavnimi cilji: (i) zapolnitev vrzeli v znanju in izboljšanje spretnosti osebja na področju podatkovne znanosti, informacijske tehnologije in podatkovnih spretnosti; (ii) izboljšanje splošne podatkovne pismenosti med osebjem; (iii) podpora pri preoblikovanju podatkov organizacije; (iv) standardizacija podatkovnih spretnosti na poslovnih področjih z uporabo npr. medfunkcijskih sinergij in (v) spodbujanje udeležencev, da se učijo drug od drugega in znanje pretvorijo v prakso, npr. v obliki projektov na (medsektorskem) poslovnem področju. Naročene storitve so na voljo vsem zaposlenim na ECB in, kjer je ustrezno, zaposlenim v nacionalnih nadzornih organih EMN in na nacionalnih centralnih bankah, vključenih v Evropski sistem centralnih bank (ESCB). Storitve se bodo zagotavljale na lokaciji, in sicer v Frankfurtu na Majni, izjemoma pa na lokacijah lokalnih nacionalnih centralnih bank/nacionalnih pristojnih organov v EU.</cbc:Description>
+         <cbc:Description languageID="GLE">Dhámh BCE tríd an soláthar seo conarthaí chun clár foghlama a acadaimh sonraí a neartú a thuilleadh chomh maith leis an tairiscint sonraí, teicneolaíochta agus TFC fhoriomlán a shaibhriú. Is os coinne an chúlra sin a bhí BCE ag féachaint dá réir chun na seirbhísí a leanas a sholáthar: Beart a haon: Suas le triúr soláthraithe chun seirbhísí foghlama agus forbartha cumaiscthe a dhearadh, agus/nó a chomhchruthú, a sheachadadh agus a riaradh sa Bhéarla i réimse na heolaíochta sonraí agus na ríomheolaíochta, agus na speisialtóireachtaí a chlúdaítear le hAcadamh Sonraí BCE. Bíonn Acadamh Sonraí BCE ar oscailt do bhaill foirne ar fud na limistéar gnó leis na príomhchuspóirí a leanas aige: (i) easnaimh feasa a líonadh agus scileanna foirne a mhéadú i réimse na heolaíochta sonraí, na teicneolaíochta faisnéise agus scileanna sonraí; (ii) an litearthacht ghinearálta maidir le sonraí i measc na foirne a fheabhsú; (iii) tacú le claochlú sonraí na heagraíochta; (iv) scileanna sonraí a chaighdeánú ar fud limistéar gnó trí leas a bhaint as e.g. sineirgí trasfheidhmeacha; agus (v) spreagadh a thabhairt do rannpháirtithe chun foghlaim óna chéile agus an fhoghlaim a chur i mbun feidhme e.g. i bhfoirm tionscadal (tras)limistéar gnó. Tá na seirbhísí arna soláthar ar oscailt do gach ball foirne BCE, agus de réir mar is infheidhme, d’fhostaithe NCAnna de chuid SAM agus BCNanna de chuid CEBC. Is in Frankfurt am Main a sholáthrófar na seirbhísí ar an láthair den chuid is mó, agus sholáthrófaí i gcásanna eisceachtúla iad i suíomhanna áitiúla BCN/NCAnna taobh istigh den Aontas Eorpach.</cbc:Description>
+         <cbc:Description languageID="BUL">Чрез тази обществена поръчка ЕЦБ възложи поръчки за допълнително подсилване на програмата за обучение на своята Академия за данни, както и да обогати общото предложение за данни, технология и ИКТ. В този контекст, ЕЦБ следователно иска да осигури следните услуги: Обособена позиция 1: До 3-ма доставчици да проектират и/или създадат съвместно, предоставят и администрират смесени услуги за обучение и развитие, предоставени на английски език, в областта на науката за данни и компютърните науки, и специализациите, обхванати от Академията за данни на ЕЦБ. Академията за данни на ЕЦБ е отворена за членове на персонала в бизнес областите със следните основни цели: i) запълване на пропуски в знанията и надграждане на уменията на персонала в областта на науките за данни, информационните технологии и уменията за боравене с данни; ii) подобряване на общата грамотност относно данните сред персонала; iii) подпомагане на трансформацията на данните на организацията; iv) стандартизиране на уменията за данни в бизнес областите, като се използват напр. междусекторни синергии; и v) насърчаване на участниците да се научат един от друг и да приложат обучението на практика, напр. под формата на проекти в бизнес области (кръстосани). Закупените услуги са отворени за всички служители на ЕЦБ, и където е приложимо, за служители на NCA на SSM и NCB на ESCB. Услугите на място ще се предоставят главно във Франкфурт на Майн и в изключителни случаи, предоставени в местни обекти на NCB/NCA в рамките на ЕС.</cbc:Description>
+         <cbc:Description languageID="RON">BCE a atribuit prin aceste contracte de achiziții publice pentru a continua consolidarea programului de învățare al academiei sale de date, precum și pentru a îmbogăți oferta generală de date, tehnologie și TIC. În acest context, BCE dorea, prin urmare, să achiziționeze următoarele servicii: Lotul 1: Până la trei furnizori pentru proiectarea și/sau co-crearea, livrarea și administrarea de servicii de învățare și dezvoltare mixte furnizate în limba engleză în domeniul științei datelor și informaticii și al specializărilor acoperite de academia de date a BCE. Academia de date a BCE este deschisă membrilor personalului din toate domeniile de afaceri, cu următoarele obiective principale: (i) eliminarea lacunelor de cunoștințe și dobândirea de către personal de competențe suplimentare în domeniul științei datelor, al tehnologiei informației și al competențelor în materie de date; (ii) îmbunătățirea educației generale în materie de date în rândul membrilor personalului; (iii) sprijini transformarea datelor organizației; (iv) standardizarea competențelor în materie de date în toate domeniile de afaceri utilizând, de exemplu, sinergiile multifuncționale; și (v) să încurajeze participanții să învețe unii de la alții și să pună învățarea în practică, de exemplu, sub formă de proiecte (transversale) în domeniul afacerilor. Serviciile achiziționate sunt deschise întregului personal al BCE și, dacă este cazul, angajaților ANC din MUS și BCN din SEBC. Serviciile la fața locului vor fi prestate în principal în Frankfurt pe Main și în cazuri excepționale livrate la locațiile BCN/ANC locale din UE.</cbc:Description>
+         <cbc:Description languageID="HRV">ESB je s pomoću ove nabave dodijelio ugovore za daljnje jačanje programa učenja povezanih s njegovom podatkovnom akademijom te obogaćivanje ukupne ponude za podatke, tehnologiju i IKT. U tom kontekstu, ESB je stoga želio nabaviti sljedeće usluge: Grupa 1: Do tri pružatelja usluga za osmišljavanje i/ili zajedničko stvaranje, isporuku i vođenje usluga mješovitog učenja i razvoja koje se pružaju na engleskom jeziku u području podatkovne znanosti i računalne znanosti te specijalizacija obuhvaćenih akademijom podataka ESB-a. Akademija podataka ESB-a otvorena je zaposlenicima u poslovnim područjima sa sljedećim glavnim ciljevima: (i) popunjavanje praznina u znanju i unaprjeđenja osoblja u području podatkovne znanosti, informacijske tehnologije i podatkovnih vještina; (ii) poboljšanje opće pismenost o podacima među osobljem; (iii) pružanje podrške transformaciji podataka organizacije; (iv) standardizacija podatkovnih vještina u poslovnim područjima upotrebom, npr. višenamjenske sinergije; i (v) poticanje sudionika da uče jedni od drugih i provode učenje u praksu, primjerice u obliku projekata u više poslovnih područja. Nabavljene usluge otvorene su svim djelatnicima ESB-a i, prema potrebi, zaposlenicima nacionalnih nadležnih tijela SSM-a i nacionalnim središnjim bankama Europskog sustava središnjih banaka. Usluge na lokaciji prvenstveno će se pružati u Frankfurtu na Majni, a u iznimnim se slučajevima isporučuju na lokacijama lokalnih nacionalnih središnjih banaka/nacionalnih nadležnih tijela u EU-u.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80570000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80500000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">DE712</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
+</ContractAwardNotice>

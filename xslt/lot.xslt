@@ -222,7 +222,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Selection Criteria Name (BT-749)'"/></xsl:call-template>
 			<!-- Selection Criteria Description (BT-750): eForms documentation cardinality (Lot) = ? -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Selection Criteria Description (BT-750)'"/></xsl:call-template>
-			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			<xsl:call-template name="multilingual">
+				<xsl:with-param name="contexts" select="."/>
+				<xsl:with-param name="local" select="'P'"/>
+				<xsl:with-param name="element" select="'cbc:Description'"/>
+			</xsl:call-template>
 			<!-- Selection Criteria Used (BT-748): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3; Forbidden for other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Selection Criteria Used (BT-748)'"/></xsl:call-template>
 			<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
@@ -239,7 +243,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:if test="$text ne ''">
 		<cac:RequiredFinancialGuarantee>
 			<cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
-			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			<xsl:call-template name="multilingual">
+				<xsl:with-param name="contexts" select="."/>
+				<xsl:with-param name="local" select="'P'"/>
+				<xsl:with-param name="element" select="'cbc:Description'"/>
+			</xsl:call-template>
 		</cac:RequiredFinancialGuarantee>
 	</xsl:if>
 </xsl:template>
@@ -281,7 +289,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:choose>
 		<xsl:when test="$text ne ''">
 			<cac:PaymentTerms>
-				<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="$ted-form-main-element/ted:LEFTI/ted:MAIN_FINANCING_CONDITION"/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Note'"/>
+				</xsl:call-template>
 			</cac:PaymentTerms>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
@@ -305,7 +317,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:when test="$text ne ''">
 			<cac:TendererQualificationRequest>
 				<cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
-				<cbc:CompanyLegalForm languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:CompanyLegalForm>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="$ted-form-main-element/ted:LEFTI/ted:LEGAL_FORM"/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:CompanyLegalForm'"/>
+				</xsl:call-template>
 			</cac:TendererQualificationRequest>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
@@ -389,7 +405,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:when test="$text ne ''" >
 			<cac:ContractExecutionRequirement>
 				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="$ted-form-main-element/ted:LEFTI/ted:PERFORMANCE_CONDITIONS"/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Description'"/>
+				</xsl:call-template>
 			</cac:ContractExecutionRequirement>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
@@ -477,7 +497,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
 		<cac:PresentationPeriod>
-			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			<xsl:call-template name="multilingual">
+				<xsl:with-param name="contexts" select="."/>
+				<xsl:with-param name="local" select="'P'"/>
+				<xsl:with-param name="element" select="'cbc:Description'"/>
+			</xsl:call-template>
 		</cac:PresentationPeriod>
 	</xsl:if>
 </xsl:template>
@@ -788,7 +812,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:OPENING_CONDITION/ted:INFO_ADD">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
-		<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="''"/>
+			<xsl:with-param name="element" select="'cbc:Description'"/>
+		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
 
@@ -796,7 +824,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
 		<cac:OccurenceLocation>
-			<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+			<xsl:call-template name="multilingual">
+				<xsl:with-param name="contexts" select="."/>
+				<xsl:with-param name="local" select="'P'"/>
+				<xsl:with-param name="element" select="'cbc:Description'"/>
+			</xsl:call-template>
 		</cac:OccurenceLocation>
 	</xsl:if>
 </xsl:template>
@@ -807,17 +839,21 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<cac:AuctionTerms>
 				<!-- Electronic Auction (BT-767): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 16-18 and 22, CAN subtypes 29-31; Optional for PIN subtypes 7-9, CN subtypes 10-14, 19-21, and E3, CAN subtypes 32-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 				<xsl:choose>
-					<xsl:when test="../../ted:PROCEDURE/ted:EAUCTION_USED">
+					<xsl:when test="$ted-form-main-element/ted:PROCEDURE/ted:EAUCTION_USED">
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Electronic Auction (BT-767)'"/></xsl:call-template>
 						<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
 						<!-- Electronic Auction Description (BT-122): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3; Forbidden for other subtypes -->
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Electronic Auction Description (BT-122)'"/></xsl:call-template>
 						<!-- When Electronic Auction (BT-767) is "true", Electronic Auction Description (BT-122) and Electronic Auction URL (BT-123) should be specified -->
 						<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '16', '17', '18', '19', '20', '21', '22', 'E3')">
-							<xsl:variable name="text" select="fn:normalize-space(fn:string-join(../../ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
+							<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/ted:INFO_ADD_EAUCTION/ted:P, ' '))"/>
 							<xsl:choose>
 								<xsl:when test="$text ne ''">
-									<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+									<xsl:call-template name="multilingual">
+										<xsl:with-param name="contexts" select="$ted-form-main-element/ted:PROCEDURE/ted:INFO_ADD_EAUCTION"/>
+										<xsl:with-param name="local" select="'P'"/>
+										<xsl:with-param name="element" select="'cbc:Description'"/>
+									</xsl:call-template>
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:variable name="message">WARNING: source TED XML notice does not contain information for Electronic Auction Description (BT-122).</xsl:variable>
@@ -900,7 +936,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:JUSTIFICATION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
-		<cbc:Justification languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Justification>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'cbc:Justification'"/>
+		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
 
@@ -1029,7 +1069,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
-		<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'cbc:Note'"/>
+		</xsl:call-template>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="ted:OBJECT_DESCR/ted:TITLE">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<xsl:if test="$text ne ''">
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'cbc:Name'"/>
+		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
 
@@ -1146,7 +1201,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<!-- Options Description (BT-54): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Options Description (BT-54)'"/></xsl:call-template>
 				<xsl:if test="$text ne ''">
-					<cbc:OptionsDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:OptionsDescription>
+					<xsl:call-template name="multilingual">
+						<xsl:with-param name="contexts" select="ted:OPTIONS_DESCR"/>
+						<xsl:with-param name="local" select="'P'"/>
+						<xsl:with-param name="element" select="'cbc:OptionsDescription'"/>
+					</xsl:call-template>
 				</xsl:if>
 				<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:RENEWAL_DESCR/ted:P, ' '))"/>
 				<!--cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)-->
@@ -1162,7 +1221,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>
 						<cac:Renewal>
 							<cac:Period>
-								<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+								<xsl:call-template name="multilingual">
+									<xsl:with-param name="contexts" select="ted:RENEWAL_DESCR"/>
+									<xsl:with-param name="local" select="'P'"/>
+									<xsl:with-param name="element" select="'cbc:Description'"/>
+								</xsl:call-template>
 							</cac:Period>
 						</cac:Renewal>
 					</xsl:when>

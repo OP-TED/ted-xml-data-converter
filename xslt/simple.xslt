@@ -113,7 +113,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:ESTIMATED_TIMING">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
-		<cbc:RecurringProcurementDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:RecurringProcurementDescription>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'cbc:RecurringProcurementDescription'"/>
+		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
 

@@ -174,7 +174,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:AC_CRITERION">
 	<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Description (BT-540)'"/></xsl:call-template>
-	<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Description>
+	<xsl:call-template name="multilingual">
+		<xsl:with-param name="contexts" select="."/>
+		<xsl:with-param name="local" select="''"/>
+		<xsl:with-param name="element" select="'cbc:Description'"/>
+	</xsl:call-template>
 </xsl:template>
 
 <xsl:template match="ted:AC/ted:AC_CRITERION">
@@ -184,7 +188,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 		<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Description (BT-540)'"/></xsl:call-template>
-		<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Description>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="''"/>
+			<xsl:with-param name="element" select="'cbc:Description'"/>
+		</xsl:call-template>
 	</cac:SubordinateAwardingCriterion>
 </xsl:template>
 
@@ -290,7 +298,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
 			<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Description (BT-540)'"/></xsl:call-template>
-				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="."/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Description'"/>
+				</xsl:call-template>
 			</cac:SubordinateAwardingCriterion>
 			<cac:SubordinateAwardingCriterion>
 				<!-- Award Criterion Type (BT-539): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
@@ -298,7 +310,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
 			<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Description (BT-540)'"/></xsl:call-template>
-				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="."/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Description'"/>
+				</xsl:call-template>
 			</cac:SubordinateAwardingCriterion>
 			<cac:SubordinateAwardingCriterion>
 				<!-- Award Criterion Type (BT-539): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
@@ -306,7 +322,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 			<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Description (BT-540)'"/></xsl:call-template>
-				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="."/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Description'"/>
+				</xsl:call-template>
 			</cac:SubordinateAwardingCriterion>
 		</cac:AwardingCriterion>
 	</xsl:if>
@@ -314,6 +334,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Prize information is only for notices of type "CN design", and covers Prize Rank (BT-44), Value Prize (BT-644) and Rewards Other (BT-45); the last one being for prizes not having equivalent monetary value. -->
 <xsl:template name="prize">
+	<!-- NUMBER_VALUE_PRIZE and DETAILS_PAYMENT often occur in the same notice -->
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:PROCEDURE/(ted:NUMBER_VALUE_PRIZE|ted:DETAILS_PAYMENT)/ted:P, ' '))"/>
 	<xsl:choose>
 		<xsl:when test="$text ne ''">
@@ -331,7 +352,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 				<!-- Rewards Other (BT-45): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Rewards Other (Prize Description) (BT-45): may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT'"/></xsl:call-template>
-				<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+				<xsl:if test="$text ne ''">
+					<xsl:call-template name="multilingual">
+						<xsl:with-param name="contexts" select="$ted-form-main-element/ted:PROCEDURE/(ted:NUMBER_VALUE_PRIZE|ted:DETAILS_PAYMENT)"/>
+						<xsl:with-param name="local" select="'P'"/>
+						<xsl:with-param name="element" select="'cbc:Description'"/>
+					</xsl:call-template>
+				</xsl:if>
 			</cac:Prize>
 		</xsl:when>
 		<xsl:otherwise>

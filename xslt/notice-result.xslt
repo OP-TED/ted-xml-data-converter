@@ -705,7 +705,13 @@ These instructions can be un-commented to show the variables
 <xsl:template match="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:INFO_ADD_SUBCONTRACTING">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
-		<efbc:TermDescription languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></efbc:TermDescription>
+		<!-- as the context of this template is within a variable, to process multilingual versions of the context, it is required to find the same element within the context of the $ted-form-main-element variable -->
+		<xsl:variable name="award-id" select="./ancestor::ted:AWARD_CONTRACT/fn:string(@ITEM)"/>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="$ted-form-main-element/ted:AWARD_CONTRACT[@ITEM=$award-id]/ted:AWARDED_CONTRACT/ted:INFO_ADD_SUBCONTRACTING"/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'efbc:TermDescription'"/>
+		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
 
