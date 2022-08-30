@@ -222,8 +222,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<xsl:choose>
 							<!-- digits only -->
 							<xsl:when test="matches($text, '^[0-9]+$')">
-								<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
-								<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
+								<!-- check if the sum of all AC_WEIGHTING elements in this Lot is exactly 100 -->
+								<xsl:choose>
+									<xsl:when test="fn:not(ancestor::ted:AC//ted:AC_WEIGHTING[fn:not(functx:is-a-number(.))]) and fn:sum(ancestor::ted:AC//ted:AC_WEIGHTING) = 100">
+										<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+										<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
+									</xsl:when>
+									<xsl:otherwise>
+										<efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+										<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:when>
 							<!-- comma as thousands separator -->
 							<xsl:when test="fn:matches($text,'^[0-9]+(,[0-9]{3})+(\.[0-9]+)?$')">

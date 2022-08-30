@@ -10,6 +10,7 @@ This table is under development. Elements used in Contract Award Notices and PIN
 | CE_ACTIVITY_OTHER | R.2.0.9 | Text | Alternative to CE_ACTIVITY, containing textual description | Cannot convert text to a code |
 | CA_TYPE_OTHER | R.2.0.9 | Text | Alternative to CA_TYPE, containing textual description | Cannot convert text to a code |
 | CRITERIA_CANDIDATE | R.2.0.9 | Text | Objective criteria for choosing the limited number of candidates | eForms does not record the criteria used for selecting candidates for the second stage |
+| NO_OPTIONS | R.2.0.9 | Empty | Information about options | No need to convert as no eForms output is required to state that there are no options available |
 | ECONOMIC_CRITERIA_DOC | R.2.0.9 | Text | Selection criteria as stated in the procurement documents | eForms does not allow for Selection Criteria to be contained in external documents |
 | TECHNICAL_CRITERIA_DOC | R.2.0.9 | Text | Selection criteria as stated in the procurement documents | eForms does not allow for Selection Criteria to be contained in external documents |
 | FT | R.2.0.9 | Text | Subscript and Superscript text within P (paragraph) elements | eForms does not support emphasised text. |

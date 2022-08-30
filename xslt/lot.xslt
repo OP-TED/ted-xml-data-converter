@@ -757,7 +757,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 <xsl:template name="limit-candidate">
-	<xsl:if test="ted:NB_MAX_LIMIT_CANDIDATE or ted:NB_MIN_LIMIT_CANDIDATE or $eforms-notice-subtype = '16' or ted:NB_ENVISAGED_CANDIDATE">
+	<xsl:if test="ted:NB_MAX_LIMIT_CANDIDATE or ted:NB_MIN_LIMIT_CANDIDATE or ted:NB_ENVISAGED_CANDIDATE or $eforms-notice-subtype = '16'">
 		<cac:EconomicOperatorShortList>
 			<xsl:choose>
 				<xsl:when test="ted:NB_ENVISAGED_CANDIDATE">
