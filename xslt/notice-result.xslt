@@ -357,7 +357,7 @@ These instructions can be un-commented to show the variables
 			<xsl:call-template name="contract-conclusion-date"/>
 			<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Title (BT-721)'"/></xsl:call-template>
-			<xsl:apply-templates select="awards/ted:AWARD_CONTRACT[1]/ted:TITLE"/>
+			<xsl:call-template name="settled-contract-title"/>
 
 			<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:URI -->
 
@@ -496,11 +496,18 @@ These instructions can be un-commented to show the variables
 	</xsl:choose>
 </xsl:template>
 
-<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
-<xsl:template match="ted:AWARD_CONTRACT/ted:TITLE">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+<xsl:template name="settled-contract-title">
+	<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
+	<!-- efac:SettledContract may contain information from multiple AWARD_CONTRACT elements, grouped by CONTRACT_NO. Thus multiple distinct TITLE elements are possible -->
+	<!-- As the context of this template is within a variable, to process multilingual versions of the context, it is required to find the same elements within the context of the $ted-form-main-element variable -->
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(awards/ted:AWARD_CONTRACT/ted:TITLE/ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
-		<cbc:Title><xsl:value-of select="$text"/></cbc:Title>
+		<xsl:variable name="award-ids" select="awards/ted:AWARD_CONTRACT/fn:string(@ITEM)"/>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="$ted-form-main-element/ted:AWARD_CONTRACT[@ITEM=$award-ids]/ted:TITLE"/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'cbc:Title'"/>
+		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
 

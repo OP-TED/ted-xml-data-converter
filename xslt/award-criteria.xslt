@@ -45,8 +45,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Name (BT-734)'"/></xsl:call-template>
 		<!-- Award Criterion Description (BT-540): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Mandatory for CAN subtypes 29, 31, and 32; Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-28, 30, 33-37, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Description (BT-540)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:AC|(ted:DIRECTIVE_2014_24_EU|ted:DIRECTIVE_2014_25_EU|ted:DIRECTIVE_2014_23_EU)/ted:AC|../../ted:PROCEDURE/ted:CRITERIA_EVALUATION"/>
-		<xsl:apply-templates select="ted:DIRECTIVE_2009_81_EC/ted:AC"/>
+		<xsl:apply-templates select="ted:AC|(ted:DIRECTIVE_2014_24_EU|ted:DIRECTIVE_2014_25_EU|ted:DIRECTIVE_2014_23_EU|ted:DIRECTIVE_2009_81_EC)/ted:AC|../../ted:PROCEDURE/ted:CRITERIA_EVALUATION"/>
 
 		<!-- Jury Member Name (BT-46): eForms documentation cardinality (Lot) = * | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Jury Member Name (BT-46)'"/></xsl:call-template>

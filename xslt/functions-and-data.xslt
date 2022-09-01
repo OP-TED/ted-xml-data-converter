@@ -23,6 +23,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
 <xsl:variable name="translations" select="fn:document('translations.xml')"/>
+<xsl:variable name="country-codes-map" select="fn:document('countries-map.xml')"/>
+<xsl:variable name="language-codes-map" select="fn:document('languages-map.xml')"/>
 
 
 
@@ -102,33 +104,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
 <xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
-
-<!-- Variable language-codes-map holds a mapping of language codes from TED two-letter format to eForms three-letter format -->
-<xsl:variable name="language-codes-map">
-	<xsl:variable name="source-language-file" select="fn:document('languages-map.xml')"/>
-	<languages>
-		<xsl:for-each select="$source-language-file//language">
-			<language>
-				<ted><xsl:value-of select="ted"/></ted>
-				<eforms><xsl:value-of select="eforms"/></eforms>
-			</language>
-		</xsl:for-each>
-	</languages>
-</xsl:variable>
-
-
-<!-- Variable country-codes-map holds a mapping of country codes from TED two-letter format to eForms three-letter format -->
-<xsl:variable name="country-codes-map">
-	<xsl:variable name="source-country-file" select="fn:document('countries-map.xml')"/>
-	<countries>
-		<xsl:for-each select="$source-country-file//country">
-			<country>
-				<ted><xsl:value-of select="ted"/></ted>
-				<eforms><xsl:value-of select="eforms"/></eforms>
-			</country>
-		</xsl:for-each>
-	</countries>
-</xsl:variable>
 
 <!-- Variable lot-numbers-map holds a mapping of the TED XML Lots (OBJECT_DESCR XPath) to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
@@ -351,39 +326,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-
-<xsl:template name="multilingual-old">
-	<xsl:param name="context"/>
-	<xsl:param name="local"/>
-	<xsl:param name="element"/>
-	<xsl:variable name="relative-context" select="fn:substring-after($context, $ted-form-element-xpath)"/>
-	<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
-	<xsl:variable name="this-context" select="fn:concat(functx:path-to-node-with-pos(.), $relative-context)"/>
-		<xsl:variable name="language" select="opfun:get-eforms-language(@LG)"/>
-		<xsl:for-each select=".//*[functx:path-to-node-with-pos(.) = $this-context]">
-			<xsl:variable name="text">
-				<xsl:choose>
-					<xsl:when test="$local eq ''">
-						<xsl:value-of select="fn:normalize-space(.)"/>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="fn:normalize-space(fn:string-join(*[fn:local-name() = $local], ' '))"/>
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:variable>
-			<xsl:element name="{$element}">
-				<xsl:attribute name="languageID" select="$language"/>
-				<xsl:value-of select="$text"/>
-			</xsl:element>
-<!--
-			<cbc:paul><xsl:value-of select="$context"/></cbc:paul>
-			<cbc:paul><xsl:value-of select="$ted-form-element-xpath"/></cbc:paul>
-			<cbc:paul><xsl:value-of select="$relative-context"/></cbc:paul>
-			<cbc:paul><xsl:value-of select="$this-context"/></cbc:paul>
--->
- 		</xsl:for-each>
-	</xsl:for-each>
-</xsl:template>
 
 <xsl:template name="find-element">
 	<xsl:param name="context" as="element()"/>
