@@ -33,32 +33,32 @@
 	<mapping>
 		<ted-value>BODY_PUBLIC</ted-value>
 		<eforms-value>body-pl</eforms-value>
-		<label>Body governed by public law</label>
+		<eforms-label>Body governed by public law</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>EU_INSTITUTION</ted-value>
 		<eforms-value>eu-ins-bod-ag</eforms-value>
-		<label>EU institution, body or agency</label>
+		<eforms-label>EU institution, body or agency</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>MINISTRY</ted-value>
 		<eforms-value>cga</eforms-value>
-		<label>Central government authority</label>
+		<eforms-label>Central government authority</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>NATIONAL_AGENCY</ted-value>
 		<eforms-value>cga</eforms-value>
-		<label>Central government authority</label>
+		<eforms-label>Central government authority</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>REGIONAL_AGENCY</ted-value>
 		<eforms-value>body-pl-ra</eforms-value>
-		<label>Body governed by public law, controlled by a regional authority</label>
+		<eforms-label>Body governed by public law, controlled by a regional authority</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>REGIONAL_AUTHORITY</ted-value>
 		<eforms-value>ra</eforms-value>
-		<label>Regional authority</label>
+		<eforms-label>Regional authority</eforms-label>
 	</mapping>
 </ca-types>
 
@@ -70,52 +70,52 @@
 	<mapping>
 		<ted-value>DEFENCE</ted-value>
 		<eforms-value>defence</eforms-value>
-		<label>Defence</label>
+		<eforms-label>Defence</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>ECONOMIC_AND_FINANCIAL_AFFAIRS</ted-value>
 		<eforms-value>econ-aff</eforms-value>
-		<label>Economic affairs</label>
+		<eforms-label>Economic affairs</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>EDUCATION</ted-value>
 		<eforms-value>education</eforms-value>
-		<label>Education</label>
+		<eforms-label>Education</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>ENVIRONMENT</ted-value>
 		<eforms-value>env-pro</eforms-value>
-		<label>Environmental protection</label>
+		<eforms-label>Environmental protection</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>GENERAL_PUBLIC_SERVICES</ted-value>
 		<eforms-value>gen-pub</eforms-value>
-		<label>General public services</label>
+		<eforms-label>General public services</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>HEALTH</ted-value>
 		<eforms-value>health</eforms-value>
-		<label>Health</label>
+		<eforms-label>Health</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>HOUSING_AND_COMMUNITY_AMENITIES</ted-value>
 		<eforms-value>hc-am</eforms-value>
-		<label>Housing and community amenities</label>
+		<eforms-label>Housing and community amenities</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PUBLIC_ORDER_AND_SAFETY</ted-value>
 		<eforms-value>pub-os</eforms-value>
-		<label>Public order and safety</label>
+		<eforms-label>Public order and safety</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>RECREATION_CULTURE_AND_RELIGION</ted-value>
 		<eforms-value>rcr</eforms-value>
-		<label>Recreation, culture and religion</label>
+		<eforms-label>Recreation, culture and religion</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>SOCIAL_PROTECTION</ted-value>
 		<eforms-value>soc-pro</eforms-value>
-		<label>Social protection</label>
+		<eforms-label>Social protection</eforms-label>
 	</mapping>
 </authority-activity-types>
 
@@ -127,177 +127,305 @@
 	<mapping>
 		<ted-value>AIRPORT_RELATED_ACTIVITIES</ted-value>
 		<eforms-value>airport</eforms-value>
-		<label>Airport-related activities</label>
+		<eforms-label>Airport-related activities</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>ELECTRICITY</ted-value>
 		<eforms-value>electricity</eforms-value>
-		<label>Electricity-related activities</label>
+		<eforms-label>Electricity-related activities</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>EXPLORATION_EXTRACTION_COAL_OTHER_SOLID_FUEL</ted-value>
 		<eforms-value>solid-fuel</eforms-value>
-		<label>Exploration or extraction of coal or other solid fuels</label>
+		<eforms-label>Exploration or extraction of coal or other solid fuels</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>EXPLORATION_EXTRACTION_GAS_OIL</ted-value>
 		<eforms-value>gas-oil</eforms-value>
-		<label>Extraction of gas or oil</label>
+		<eforms-label>Extraction of gas or oil</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PORT_RELATED_ACTIVITIES</ted-value>
 		<eforms-value>port</eforms-value>
-		<label>Port-related activities</label>
+		<eforms-label>Port-related activities</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>POSTAL_SERVICES</ted-value>
 		<eforms-value>post</eforms-value>
-		<label>Postal services</label>
+		<eforms-label>Postal services</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PRODUCTION_TRANSPORT_DISTRIBUTION_GAS_HEAT</ted-value>
 		<eforms-value>gas-heat</eforms-value>
-		<label>Production, transport or distribution of gas or heat</label>
+		<eforms-label>Production, transport or distribution of gas or heat</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>RAILWAY_SERVICES</ted-value>
 		<eforms-value>rail</eforms-value>
-		<label>Railway services</label>
+		<eforms-label>Railway services</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>URBAN_RAILWAY_TRAMWAY_TROLLEYBUS_BUS_SERVICES</ted-value>
 		<eforms-value>urttb</eforms-value>
-		<label>Urban railway, tramway, trolleybus or bus services</label>
+		<eforms-label>Urban railway, tramway, trolleybus or bus services</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>WATER</ted-value>
 		<eforms-value>water</eforms-value>
-		<label>Water-related activities</label>
+		<eforms-label>Water-related activities</eforms-label>
 	</mapping>
 </entity-activity-types>
 
 <procedure-types>
 	<description>Mapping for Procedure Type (BT-105)</description>
 	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/(PT_OPEN|PT_RESTRICTED|PT_COMPETITIVE_NEGOTIATION|PT_COMPETITIVE_DIALOGUE|PT_INNOVATION_PARTNERSHIP|PT_AWARD_CONTRACT_WITHOUT_CALL)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/F15_2014/PROCEDURE/(DIRECTIVE_2009_81_EC|DIRECTIVE_2014_23_EU|DIRECTIVE_2014_24_EU|DIRECTIVE_2014_25_EU)/(PT_AWARD_CONTRACT_WITHOUT_CALL|PT_AWARD_CONTRACT_WITHOUT_PUBLICATION|PT_NEGOTIATED_WITHOUT_PUBLICATION)/fn:local-name()</ted-context>
 	<eforms-context>/*/cac:TenderingProcess/cbc:ProcedureCode</eforms-context>
 	<eforms-codelist>procurement-procedure-type</eforms-codelist>
 	<mapping>
 		<ted-value>PT_OPEN</ted-value>
 		<eforms-value>open</eforms-value>
-		<label>Open</label>
+		<ted-label>Open procedure</ted-label>
+		<eforms-label>Open</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PT_RESTRICTED</ted-value>
 		<eforms-value>restricted</eforms-value>
-		<label>Restricted</label>
+		<ted-label>Restricted procedure</ted-label>
+		<eforms-label>Restricted</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PT_COMPETITIVE_NEGOTIATION</ted-value>
 		<eforms-value>neg-w-call</eforms-value>
-		<label>Negotiated with prior publication of a call for competition / competitive with negotiation</label>
+		<ted-label>Competitive procedure with negotiation</ted-label>
+		<eforms-label>Negotiated with prior publication of a call for competition / competitive with negotiation</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PT_COMPETITIVE_DIALOGUE</ted-value>
 		<eforms-value>comp-dial</eforms-value>
-		<label>Competitive dialogue</label>
+		<ted-label>Competitive dialogue</ted-label>
+		<eforms-label>Competitive dialogue</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PT_INNOVATION_PARTNERSHIP</ted-value>
 		<eforms-value>innovation</eforms-value>
-		<label>Innovation partnership</label>
+		<ted-label>Innovation partnership</ted-label>
+		<eforms-label>Innovation partnership</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PT_INVOLVING_NEGOTIATION</ted-value>
-		<eforms-value>neg-wo-call</eforms-value>
-		<label>Negotiated without prior call for competition</label>
+		<eforms-value>UNKNOWN</eforms-value>
+		<ted-label>Procedure involving negotiation</ted-label>
+		<eforms-label></eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PT_NEGOTIATED_WITH_PRIOR_CALL</ted-value>
 		<eforms-value>neg-w-call</eforms-value>
-		<label>Negotiated with prior publication of a call for competition / competitive with negotiation</label>
+		<ted-label>Negotiated procedure with prior call for competition</ted-label>
+		<eforms-label>Negotiated with prior publication of a call for competition / competitive with negotiation</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PT_AWARD_CONTRACT_WITHOUT_CALL</ted-value>
 		<eforms-value>neg-wo-call</eforms-value>
-		<label>Negotiated without prior call for competition</label>
+		<ted-label>Award of a contract/concession without prior publication of a call for competition/concession notice</ted-label>
+		<eforms-label>Negotiated without prior call for competition</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_AWARD_CONTRACT_WITH_PRIOR_PUBLICATION</ted-value>
+		<eforms-value>neg-w-call</eforms-value>
+		<ted-label>Award procedure with prior publication of a concession notice</ted-label>
+		<eforms-label>Negotiated with prior publication of a call for competition / competitive with negotiation</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_AWARD_CONTRACT_WITHOUT_PUBLICATION</ted-value>
+		<eforms-value>neg-wo-call</eforms-value>
+		<ted-label>Award of a concession without prior publication of a concession notice</ted-label>
+		<eforms-label>Negotiated without prior call for competition</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>PT_NEGOTIATED_WITHOUT_PUBLICATION</ted-value>
+		<eforms-value>neg-wo-call</eforms-value>
+		<ted-label>Negotiated procedure without publication of a contract notice / Negotiated procedure without prior call for competition</ted-label>
+		<eforms-label>Negotiated without prior call for competition</eforms-label>
 	</mapping>
 </procedure-types>
 
 <direct-award-justifications>
 	<description>Direct Award Justification (BT-136)</description>
-	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/PT_AWARD_CONTRACT_WITHOUT_CALL/(D_ACCORDANCE_ARTICLE/*|D_OUTSIDE_SCOPE)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/PROCEDURE/(PT_AWARD_CONTRACT_WITHOUT_CALL|PT_AWARD_CONTRACT_WITHOUT_PUBLICATION)/(D_ACCORDANCE_ARTICLE/*|D_OUTSIDE_SCOPE|D_SERVICES_LISTED)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/F15_2014/PROCEDURE/(DIRECTIVE_2009_81_EC|DIRECTIVE_2014_23_EU|DIRECTIVE_2014_24_EU|DIRECTIVE_2014_25_EU)/(PT_AWARD_CONTRACT_WITHOUT_PUBLICATION|PT_NEGOTIATED_WITHOUT_PUBLICATION)/D_ACCORDANCE_ARTICLE/*/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/F15_2014/PROCEDURE/(DIRECTIVE_2009_81_EC|DIRECTIVE_2014_23_EU|DIRECTIVE_2014_24_EU|DIRECTIVE_2014_25_EU)/PT_AWARD_CONTRACT_WITHOUT_CALL/(D_OUTSIDE_SCOPE|D_SERVICES_LISTED)/fn:local-name()</ted-context>
 	<eforms-context>/ContractAwardNotice​/cac:TenderingProcess​/cac:ProcessJustification/cbc:ProcessReasonCode</eforms-context>
 	<eforms-codelist>direct-award-justification</eforms-codelist>
 	<mapping>
 		<ted-value>D_PROC_OPEN</ted-value>
 		<eforms-value>unsuitable</eforms-value>
-		<label>No suitable tenders, requests to participate, or applications were received in response to a previous notice</label>
+		<ted-label>No tenders or no suitable tenders / requests to participate in response to: open procedure</ted-label>
+		<eforms-label>No suitable tenders, requests to participate, or applications were received in response to a previous notice</eforms-label>
 	</mapping>
 		<mapping>
 		<ted-value>D_PROC_RESTRICTED</ted-value>
 		<eforms-value>irregular</eforms-value>
-		<label>Only irregular or unacceptable tenders were received in response to a previous notice. All and only those tenderers of the previous procedure which have satisfied the selection criteria, have not fulfilled the exclusion grounds and have satisfied formal requirements, were included in the negotiations</label>
+		<ted-label>No tenders or no suitable tenders / requests to participate in response to: restricted procedure</ted-label>
+		<eforms-label>Only irregular or unacceptable tenders were received in response to a previous notice. All and only those tenderers of the previous procedure which have satisfied the selection criteria, have not fulfilled the exclusion grounds and have satisfied formal requirements, were included in the negotiations</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_MANUF_FOR_RESEARCH</ted-value>
 		<eforms-value>resd</eforms-value>
-		<label>Purpose of the contract is purely research, experiment, study or development under the conditions stated in the Directive</label>
+		<ted-label>The products involved are manufactured purely for the purpose of research, experiment, study or development under the conditions stated in the Directive</ted-label>
+		<eforms-label>Purpose of the contract is purely research, experiment, study or development under the conditions stated in the Directive</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_TECHNICAL</ted-value>
 		<eforms-value>technical</eforms-value>
-		<label>The contract can be provided only by a particular economic operator because of an absence of competition for technical reasons</label>
+		<ted-label>The works, supplies or services can be provided only by a particular economic operator for the following reason: absence of competition for technical reasons
+</ted-label>
+		<eforms-label>The contract can be provided only by a particular economic operator because of an absence of competition for technical reasons</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_ARTISTIC</ted-value>
 		<eforms-value>artistic</eforms-value>
-		<label>The contract can be provided only by a particular economic operator because of creation or acquisition of a unique work of art or artistic</label>
+		<ted-label>The works or services can be provided only by a particular economic operator for the following reason: procurement or concession aiming at the creation or acquisition of a unique work of art or artistic performance</ted-label>
+		<eforms-label>The contract can be provided only by a particular economic operator because of creation or acquisition of a unique work of art or artistic</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_PROTECT_RIGHTS</ted-value>
 		<eforms-value>exclusive</eforms-value>
-		<label>The contract can be provided only by a particular economic operator because of exclusive rights, including intellectual property rights</label>
+		<ted-label>The works, supplies or services can be provided only by a particular economic operator for the following reason: protection of exclusive rights, including intellectual property rights</ted-label>
+		<ted-label>The works or services can be provided only by a particular economic operator for the following reason: protection of intellectual property rights and exclusive rights other than those defined in point (10) of Article 5 of the Directive</ted-label>
+		<eforms-label>The contract can be provided only by a particular economic operator because of exclusive rights, including intellectual property rights</eforms-label>
 	</mapping>	
 	<mapping>
 		<ted-value>D_EXTREME_URGENCY</ted-value>
 		<eforms-value>urgency</eforms-value>
-		<label>Extreme urgency brought about by events unforeseeable for the buyer</label>
+		<ted-label>Extreme urgency brought about by events unforeseeable by the contracting authority/entity and in accordance with the strict conditions stated in the Directive</ted-label>
+		<eforms-label>Extreme urgency brought about by events unforeseeable for the buyer</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_ADD_DELIVERIES_ORDERED</ted-value>
 		<eforms-value>additional</eforms-value>
-		<label>Need for additional works or services by the original contractor</label>
+		<ted-label>Additional deliveries by the original supplier ordered under the strict conditions stated in the Directive</ted-label>
+		<eforms-label>Need for additional works or services by the original contractor</eforms-label>
 	</mapping>	
 	<mapping>
 		<ted-value>D_REPETITION_EXISTING</ted-value>
 		<eforms-value>repetition</eforms-value>
-		<label>New works or services, constituting a repetition of existing works or services and ordered in accordance with the strict conditions stated in the Directive</label>
+		<ted-label>New works / services, constituting a repetition of existing works / services and ordered in accordance with the strict conditions stated in the Directive</ted-label>
+		<eforms-label>New works or services, constituting a repetition of existing works or services and ordered in accordance with the strict conditions stated in the Directive</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_CONTRACT_AWARDED_DESIGN_CONTEST</ted-value>
 		<eforms-value>contest</eforms-value>
-		<label>Service contract to be awarded to the winner or one of winners under the rules of a design contest</label>
+		<ted-label>Service contract to be awarded to the winner or one of winners under the rules of a design contest</ted-label>
+		<eforms-label>Service contract to be awarded to the winner or one of winners under the rules of a design contest</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_COMMODITY_MARKET</ted-value>
 		<eforms-value>commodity</eforms-value>
-		<label>Procurement of supplies quoted and purchased on a commodity market</label>
+		<ted-label>Procurement of supplies quoted and purchased on a commodity market</ted-label>
+		<eforms-label>Procurement of supplies quoted and purchased on a commodity market</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_FROM_WINDING_PROVIDER</ted-value>
 		<eforms-value>closure</eforms-value>
-		<label>Purchase on particularly advantageous terms from an economic operator which is definitely winding up its business activities</label>
+		<ted-label>Purchase of supplies or services on particularly advantageous terms: from a supplier which is definitely winding up its business activities</ted-label>
+		<eforms-label>Purchase on particularly advantageous terms from an economic operator which is definitely winding up its business activities</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>D_FROM_LIQUIDATOR_CREDITOR</ted-value>
 		<eforms-value>liquidator</eforms-value>
-		<label>Purchase on particularly advantageous terms from the liquidator in an insolvency procedure, an arrangement with creditors or a similar procedure under national laws and regulations</label>
+		<ted-label>Purchase of supplies or services on particularly advantageous terms: from the liquidator in an insolvency procedure, an arrangement with creditors or a similar procedure under national laws and regulations</ted-label>
+		<eforms-label>Purchase on particularly advantageous terms from the liquidator in an insolvency procedure, an arrangement with creditors or a similar procedure under national laws and regulations</eforms-label>
 	</mapping>
+
+<!-- Original mapping, specific to Directive 24
 	<mapping>
 		<ted-value>D_OUTSIDE_SCOPE</ted-value>
 		<eforms-value>dir24-list</eforms-value>
-		<label>Contracts listed in Directive 2014/24/EU Art. 7, but not falling within the scope of Directive 2014/25/EU</label>
+		<ted-label>The procurement falls outside the scope of application of the Directive</ted-label>
+		<eforms-label>Contracts listed in Directive 2014/24/EU Art. 7, but not falling within the scope of Directive 2014/25/EU</eforms-label>
 	</mapping>
+-->
+
+<!-- Temporary mapping to UNKOWN, as TED element D_OUTSIDE_SCOPE is used for all 4 Directives -->
+	<mapping>
+		<ted-value>D_OUTSIDE_SCOPE</ted-value>
+		<eforms-value>UNKNOWN</eforms-value>
+		<ted-label>The procurement falls outside the scope of application of the Directive</ted-label>
+		<eforms-label></eforms-label>
+	</mapping>
+
+
+	<mapping>
+		<ted-value>D_ALL_TENDERS</ted-value>
+		<eforms-value>irregular</eforms-value>
+		<ted-label>All tenders submitted in reply to a restricted procedure, negotiated procedure with prior publication of a contract notice or competitive dialogue were irregular or unacceptable. Only those tenderers were included in the negotiations which have satisfied the qualitative selection criteria</ted-label>
+		<eforms-label>Only irregular or unacceptable tenders were received in response to a previous notice. All and only those tenderers of the previous procedure which have satisfied the selection criteria, have not fulfilled the exclusion grounds and have satisfied formal requirements, were included in the negotiations</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_BARGAIN_PURCHASE</ted-value>
+		<eforms-value>bargain</eforms-value>
+		<ted-label>Bargain purchase taking advantage of a particularly advantageous opportunity available for a very short time at a price considerably lower than market prices</ted-label>
+		<eforms-label>Bargain purchase taking advantage of a particularly advantageous opportunity available for a very short time at a price considerably lower than market prices</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_EXCLUSIVE_RIGHT</ted-value>
+		<eforms-value>exclusive</eforms-value>
+		<ted-label>The works or services can be provided only by a particular economic operator for the following reason: existence of an exclusive right</ted-label>
+		<eforms-label>The contract can be provided only by a particular economic operator because of exclusive rights, including intellectual property rights</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_MARITIME_SERVICES</ted-value>
+		<eforms-value>dir81-transport</eforms-value>
+		<ted-label>Contract related to the provision of air and maritime transport services for the armed forces of a Member State deployed or to be deployed abroad, under the strict conditions stated in the Directive</ted-label>
+		<eforms-label>Contract related to the provision of air and maritime transport services for the armed forces of a Member State deployed or to be deployed abroad, under the strict conditions stated in the Directive</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_NO_TENDERS_REQUESTS</ted-value>
+		<eforms-value>unsuitable</eforms-value>
+		<ted-label>No tenders or no suitable tenders / requests to participate in response to a procedure with prior call for competition or concession award procedure</ted-label>
+		<eforms-label>No suitable tenders, requests to participate, or applications were received in response to a previous notice</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_PERIODS_INCOMPATIBLE</ted-value>
+		<eforms-value>crisis</eforms-value>
+		<ted-label>The periods for the restricted procedure and the negotiated procedure with prior publication of a contract notice are incompatible with the urgency resulting from a crisis</ted-label>
+		<eforms-label>The periods for the restricted procedure and the negotiated procedure with prior publication of a contract notice are incompatible with the urgency resulting from a crisis</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_PROC_COMPETITIVE_DIALOGUE</ted-value>
+		<eforms-value>unsuitable</eforms-value>
+		<ted-label>No tenders or no suitable tenders / requests to participate in response to: competitive dialogue</ted-label>
+		<eforms-label>No suitable tenders, requests to participate, or applications were received in response to a previous notice</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_PROC_NEGOTIATED_PRIOR_CALL_COMPETITION</ted-value>
+		<eforms-value>unsuitable</eforms-value>
+		<ted-label>No tenders or no suitable tenders / requests to participate in response to: negotiated procedure with prior publication of a contract notice</ted-label>
+		<eforms-label>No suitable tenders, requests to participate, or applications were received in response to a previous notice</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_PURE_RESEARCH</ted-value>
+		<eforms-value>resd</eforms-value>
+		<ted-label>The contract involved is purely for the purpose of research, experiment, study or development under the conditions stated in the Directive</ted-label>
+		<eforms-label>Purpose of the contract is purely research, experiment, study or development under the conditions stated in the Directive</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_SERVICES_LISTED</ted-value>
+		<eforms-value>dir81-annexii</eforms-value>
+		<ted-label>Other justification for the award of the concession without prior publication of a concession in the Official Journal of the European Union. The contract has as its object services listed in Annex II B to the Directive</ted-label>
+		<eforms-label>The contract falls within the services listed in Annex II of the Directive 2009/81/EC</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>D_OTHER_SERVICES</ted-value>
+		<eforms-value>rd</eforms-value>
+		<ted-label>The contract concerns research and development services other than those referred to in Article 13 of Directive 2009/81/EC (for services and supplies only)</ted-label>
+		<eforms-label>The contract concerns research and development services other than those referred to in Directive 2009/81/EC Art. 13</eforms-label>
+	</mapping>
+
+
+
+
 </direct-award-justifications>
 
 <contract-nature-types>
@@ -318,47 +446,47 @@
 	<mapping>
 		<ted-value>SUITABILITY</ted-value>
 		<eforms-value>sui-act</eforms-value>
-		<label>Suitability to pursue the professional activity</label>
+		<eforms-label>Suitability to pursue the professional activity</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>ECONOMIC_FINANCIAL_INFO</ted-value>
 		<eforms-value>ef-stand</eforms-value>
-		<label>Economic and financial standing</label>
+		<eforms-label>Economic and financial standing</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>ECONOMIC_FINANCIAL_MIN_LEVEL</ted-value>
 		<eforms-value>ef-stand</eforms-value>
-		<label>Economic and financial standing</label>
+		<eforms-label>Economic and financial standing</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>TECHNICAL_PROFESSIONAL_INFO</ted-value>
 		<eforms-value>tp-abil</eforms-value>
-		<label>Technical and professional ability</label>
+		<eforms-label>Technical and professional ability</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>TECHNICAL_PROFESSIONAL_MIN_LEVEL</ted-value>
 		<eforms-value>tp-abil</eforms-value>
-		<label>Technical and professional ability</label>
+		<eforms-label>Technical and professional ability</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>RULES_CRITERIA</ted-value>
 		<eforms-value>other</eforms-value>
-		<label>Other</label>
+		<eforms-label>Other</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>CRITERIA_SELECTION</ted-value>
 		<eforms-value>other</eforms-value>
-		<label>Other</label>
+		<eforms-label>Other</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>CONDITIONS</ted-value>
 		<eforms-value>other</eforms-value>
-		<label>Other</label>
+		<eforms-label>Other</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>METHODS</ted-value>
 		<eforms-value>other</eforms-value>
-		<label>Other</label>
+		<eforms-label>Other</eforms-label>
 	</mapping>
 </selection-criterion-types>
 
@@ -370,12 +498,12 @@
 	<mapping>
 		<ted-value>PROCUREMENT_DISCONTINUED</ted-value>
 		<eforms-value>other</eforms-value>
-		<label>Other</label>
+		<eforms-label>Other</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>PROCUREMENT_UNSUCCESSFUL</ted-value>
 		<eforms-value>all-rej</eforms-value>
-		<label>All tenders, requests to participate or projects were withdrawn or found inadmissible</label>
+		<eforms-label>All tenders, requests to participate or projects were withdrawn or found inadmissible</eforms-label>
 	</mapping>
 		
 </non-award-justifications> 
@@ -388,27 +516,27 @@
 	<mapping>
 		<ted-value>NB_TENDERS_RECEIVED</ted-value>
 		<eforms-value>tenders</eforms-value>
-		<label>Tenders</label>
+		<eforms-label>Tenders</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>NB_TENDERS_RECEIVED_SME</ted-value>
 		<eforms-value>t-sme</eforms-value>
-		<label>Tenders from micro, small or medium tenderers</label>
+		<eforms-label>Tenders from micro, small or medium tenderers</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>NB_TENDERS_RECEIVED_OTHER_EU</ted-value>
 		<eforms-value>t-oth-eea</eforms-value>
-		<label>Tenders from tenderers registered in other European Economic Area countries than the country of the buyer</label>
+		<eforms-label>Tenders from tenderers registered in other European Economic Area countries than the country of the buyer</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>NB_TENDERS_RECEIVED_NON_EU</ted-value>
 		<eforms-value>t-no-eea</eforms-value>
-		<label>Tenders from tenders registered in countries outside of the European Economic Area</label>
+		<eforms-label>Tenders from tenders registered in countries outside of the European Economic Area</eforms-label>
 	</mapping>
 	<mapping>
 		<ted-value>NB_TENDERS_RECEIVED_EMEANS</ted-value>
 		<eforms-value>t-esubm</eforms-value>
-		<label>Tenders submitted electronically</label>
+		<eforms-label>Tenders submitted electronically</eforms-label>
 	</mapping>
 </received-submission-types> 
  
