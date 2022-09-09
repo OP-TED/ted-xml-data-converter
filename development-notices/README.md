@@ -64,4 +64,4 @@ This table lists the TED XML files selected to test development of the Converter
 | 21-419119-001-EXP.xml | F12 | CN | Multilingual | 1 ORIGINAL language, 23 TRANSLATION languages, DETAILS_PAYMENT and NUMBER_VALUE_PRIZE |
 | 22-011421-001-EXP.xml | F03 | CAN | Multilingual | 1 ORIGINAL language, 23 TRANSLATION languages, INFO_ADD_SUBCONTRACTING |
 | 21-635824-001-EXP.xml | F21 | CAN | Multilingual | 1 ORIGINAL language, 23 TRANSLATION languages, modified to add URL_NATIONAL_PROCEDURE |
-
+| 19-289373-001-EXP.xml | F22 | CN | Subtype mapping | Notice type QSU_CALL_COMPETITION |

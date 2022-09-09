@@ -4,726 +4,1188 @@
       <form-element>F01_2014</form-element>
       <form-number>F01</form-number>
       <notice-type>PRI_CALL_COMPETITION</notice-type>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>A</document-code>
       <document-type>Prior information notice with call for competition</document-type>
-      <enotices-form-name>Prior information notice</enotices-form-name>
       <eforms-subtype>10</eforms-subtype>
       <notice-description>Prior information notice used as a call for competition - general directive, standard regime</notice-description>
    </row>
-   <row rowpos="3">
+   <row rowpos="6">
       <form-element>F01_2014</form-element>
       <form-number>F01</form-number>
       <notice-type>PRI_ONLY</notice-type>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>0</document-code>
       <document-type>Prior information notice without call for competition</document-type>
-      <enotices-form-name>Prior information notice</enotices-form-name>
       <eforms-subtype>4</eforms-subtype>
       <notice-description>Prior information notice used only for information – general directive</notice-description>
    </row>
-   <row rowpos="4">
+   <row rowpos="11">
       <form-element>F01_2014</form-element>
       <form-number>F01</form-number>
       <notice-type>PRI_REDUCING_TIME_LIMITS</notice-type>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>0</document-code>
       <document-type>Prior information notice without call for competition</document-type>
-      <enotices-form-name>Prior information notice</enotices-form-name>
       <eforms-subtype>7</eforms-subtype>
       <notice-description>Prior information notice used to shorten time limits for receipt of tenders – general directive</notice-description>
    </row>
-   <row rowpos="5">
+   <row rowpos="16">
       <form-element>F02_2014</form-element>
       <form-number>F02</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>3</document-code>
-      <document-type>Contract notice / Dynamic purchasing system</document-type>
-      <enotices-form-name>Contract notice</enotices-form-name>
+      <document-type>Contract notice</document-type>
       <eforms-subtype>16</eforms-subtype>
       <notice-description>Contract notice – general directive, standard regime</notice-description>
    </row>
-   <row rowpos="6">
+   <row rowpos="18">
       <form-element>F02_2014</form-element>
       <form-number>F02</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>Y</document-code>
-      <document-type>Contract notice / Dynamic purchasing system</document-type>
-      <enotices-form-name>Contract notice</enotices-form-name>
+      <document-type>Dynamic purchasing system</document-type>
       <eforms-subtype>16</eforms-subtype>
       <notice-description>Contract notice – general directive, standard regime</notice-description>
    </row>
-   <row rowpos="7">
+   <row rowpos="24">
       <form-element>F03_2014</form-element>
       <form-number>F03</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
-      <enotices-form-name>Contract award notice</enotices-form-name>
       <eforms-subtype>29</eforms-subtype>
       <notice-description>Contract award notice – general directive, standard regime</notice-description>
    </row>
-   <row rowpos="8">
+   <row rowpos="29">
       <form-element>F04_2014</form-element>
       <form-number>F04</form-number>
       <notice-type>PER_CALL_COMPETITION</notice-type>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>M</document-code>
       <document-type>Periodic indicative notice with call for competition</document-type>
-      <enotices-form-name>Periodic indicative notice – utilities</enotices-form-name>
       <eforms-subtype>11</eforms-subtype>
       <notice-description>Periodic indicative notice used as a call for competition - sectoral directive, standard regime</notice-description>
    </row>
-   <row rowpos="9">
+   <row rowpos="31">
       <form-element>F04_2014</form-element>
       <form-number>F04</form-number>
       <notice-type>PER_ONLY</notice-type>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>P</document-code>
       <document-type>Periodic indicative notice without call for competition</document-type>
-      <enotices-form-name>Periodic indicative notice – utilities</enotices-form-name>
       <eforms-subtype>5</eforms-subtype>
       <notice-description>Periodic indicative notice used only for information – sectoral directive</notice-description>
    </row>
-   <row rowpos="10">
+   <row rowpos="33">
       <form-element>F04_2014</form-element>
       <form-number>F04</form-number>
       <notice-type>PER_REDUCING_TIME_LIMITS</notice-type>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>P</document-code>
       <document-type>Periodic indicative notice without call for competition</document-type>
-      <enotices-form-name>Periodic indicative notice – utilities</enotices-form-name>
       <eforms-subtype>8</eforms-subtype>
       <notice-description>Periodic indicative notice used to shorten time limits for receipt of tenders – sectoral directive</notice-description>
    </row>
-   <row rowpos="11">
+   <row rowpos="35">
       <form-element>F05_2014</form-element>
       <form-number>F05</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>3</document-code>
-      <document-type>Contract notice / Dynamic purchasing system</document-type>
-      <enotices-form-name>Contract notice – utilities</enotices-form-name>
+      <document-type>Contract notice</document-type>
       <eforms-subtype>17</eforms-subtype>
       <notice-description>Contract notice – sectoral directive, standard regime</notice-description>
    </row>
-   <row rowpos="12">
+   <row rowpos="36">
       <form-element>F05_2014</form-element>
       <form-number>F05</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>Y</document-code>
-      <document-type>Contract notice / Dynamic purchasing system</document-type>
-      <enotices-form-name>Contract notice – utilities</enotices-form-name>
+      <document-type>Dynamic purchasing system</document-type>
       <eforms-subtype>17</eforms-subtype>
       <notice-description>Contract notice – sectoral directive, standard regime</notice-description>
    </row>
-   <row rowpos="13">
+   <row rowpos="39">
       <form-element>F06_2014</form-element>
       <form-number>F06</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
-      <enotices-form-name>Contract award notice – utilities</enotices-form-name>
       <eforms-subtype>30</eforms-subtype>
       <notice-description>Contract award notice – sectoral directive, standard regime</notice-description>
    </row>
-   <row rowpos="14">
+   <row rowpos="41">
       <form-element>F07_2014</form-element>
       <form-number>F07</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>Q</document-code>
       <document-type>Qualification system without call for competition</document-type>
-      <enotices-form-name>Qualification system – utilities</enotices-form-name>
       <eforms-subtype>15</eforms-subtype>
       <notice-description>Notice on the existence of a qualification system – sectoral directive</notice-description>
    </row>
-   <row rowpos="15">
+   <row rowpos="43">
       <form-element>F07_2014</form-element>
       <form-number>F07</form-number>
       <notice-type>QSU_CALL_COMPETITION</notice-type>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>O</document-code>
       <document-type>Qualification system with call for competition</document-type>
-      <enotices-form-name>Qualification system – utilities</enotices-form-name>
       <eforms-subtype>15</eforms-subtype>
       <notice-description>Notice on the existence of a qualification system – sectoral directive</notice-description>
    </row>
-   <row rowpos="16">
+   <row rowpos="45">
       <form-element>F08_2014</form-element>
       <form-number>F08</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32009L0081</legal-basis>
       <document-code>B</document-code>
       <document-type>Buyer profile</document-type>
-      <enotices-form-name>Notice on a buyer profile</enotices-form-name>
       <eforms-subtype>3</eforms-subtype>
       <notice-description>Notice of the publication of a prior information notice on a buyer profile - defence directive</notice-description>
    </row>
-   <row rowpos="17">
+   <row rowpos="46">
       <form-element>F08_2014</form-element>
       <form-number>F08</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32014L0024</legal-basis>
       <document-code>B</document-code>
       <document-type>Buyer profile</document-type>
-      <enotices-form-name>Notice on a buyer profile</enotices-form-name>
       <eforms-subtype>1</eforms-subtype>
       <notice-description>Notice of the publication of a prior information notice on a buyer profile - general directive</notice-description>
    </row>
-   <row rowpos="18">
+   <row rowpos="47">
       <form-element>F08_2014</form-element>
       <form-number>F08</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32014L0025</legal-basis>
       <document-code>B</document-code>
       <document-type>Buyer profile</document-type>
-      <enotices-form-name>Notice on a buyer profile</enotices-form-name>
       <eforms-subtype>2</eforms-subtype>
       <notice-description>Notice of the publication of a periodic indicative notice on a buyer profile - sectoral directive</notice-description>
    </row>
-   <row rowpos="19">
+   <row rowpos="48">
+      <form-element>F08_2014</form-element>
+      <form-number>F08</form-number>
+      <notice-type/>
+      <directive>2009/81/EC</directive>
+      <legal-basis/>
+      <document-code>B</document-code>
+      <document-type>Buyer profile</document-type>
+      <eforms-subtype>3</eforms-subtype>
+      <notice-description>Notice of the publication of a prior information notice on a buyer profile - defence directive</notice-description>
+   </row>
+   <row rowpos="49">
+      <form-element>F08_2014</form-element>
+      <form-number>F08</form-number>
+      <notice-type/>
+      <directive>2014/24/EU</directive>
+      <legal-basis/>
+      <document-code>B</document-code>
+      <document-type>Buyer profile</document-type>
+      <eforms-subtype>1</eforms-subtype>
+      <notice-description>Notice of the publication of a prior information notice on a buyer profile - general directive</notice-description>
+   </row>
+   <row rowpos="50">
+      <form-element>F08_2014</form-element>
+      <form-number>F08</form-number>
+      <notice-type/>
+      <directive>2014/25/EU</directive>
+      <legal-basis/>
+      <document-code>B</document-code>
+      <document-type>Buyer profile</document-type>
+      <eforms-subtype>2</eforms-subtype>
+      <notice-description>Notice of the publication of a periodic indicative notice on a buyer profile - sectoral directive</notice-description>
+   </row>
+   <row rowpos="51">
       <form-element>F12_2014</form-element>
       <form-number>F12</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32014L0024</legal-basis>
       <document-code>D</document-code>
       <document-type>Design contest</document-type>
-      <enotices-form-name>Design contest notice</enotices-form-name>
       <eforms-subtype>23</eforms-subtype>
       <notice-description>Design contest notice – general directive, design</notice-description>
    </row>
-   <row rowpos="20">
+   <row rowpos="52">
       <form-element>F12_2014</form-element>
       <form-number>F12</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32014L0025</legal-basis>
       <document-code>D</document-code>
       <document-type>Design contest</document-type>
-      <enotices-form-name>Design contest notice</enotices-form-name>
       <eforms-subtype>24</eforms-subtype>
       <notice-description>Design contest notice – sectoral directive, design</notice-description>
    </row>
-   <row rowpos="21">
+   <row rowpos="53">
+      <form-element>F12_2014</form-element>
+      <form-number>F12</form-number>
+      <notice-type/>
+      <directive>2014/24/EU</directive>
+      <legal-basis/>
+      <document-code>D</document-code>
+      <document-type>Design contest</document-type>
+      <eforms-subtype>23</eforms-subtype>
+      <notice-description>Design contest notice – general directive, design</notice-description>
+   </row>
+   <row rowpos="54">
+      <form-element>F12_2014</form-element>
+      <form-number>F12</form-number>
+      <notice-type/>
+      <directive>2014/25/EU</directive>
+      <legal-basis/>
+      <document-code>D</document-code>
+      <document-type>Design contest</document-type>
+      <eforms-subtype>24</eforms-subtype>
+      <notice-description>Design contest notice – sectoral directive, design</notice-description>
+   </row>
+   <row rowpos="55">
       <form-element>F13_2014</form-element>
       <form-number>F13</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32014L0024</legal-basis>
       <document-code>R</document-code>
       <document-type>Results of design contests</document-type>
-      <enotices-form-name>Results of design contest</enotices-form-name>
       <eforms-subtype>36</eforms-subtype>
       <notice-description>Design contest result notice – general directive, design</notice-description>
    </row>
-   <row rowpos="22">
+   <row rowpos="56">
       <form-element>F13_2014</form-element>
       <form-number>F13</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32014L0025</legal-basis>
       <document-code>R</document-code>
       <document-type>Results of design contests</document-type>
-      <enotices-form-name>Results of design contest</enotices-form-name>
       <eforms-subtype>37</eforms-subtype>
       <notice-description>Design contest result notice – sectoral directive, design</notice-description>
    </row>
-   <row rowpos="23">
-      <form-element>F14_2014</form-element>
-      <form-number>F14</form-number>
+   <row rowpos="57">
+      <form-element>F13_2014</form-element>
+      <form-number>F13</form-number>
       <notice-type/>
-      <legal-basis>ANY</legal-basis>
-      <document-code>2</document-code>
-      <document-type>Additional information</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>CHANGE</eforms-subtype>
-      <notice-description/>
+      <directive>2014/24/EU</directive>
+      <legal-basis/>
+      <document-code>R</document-code>
+      <document-type>Results of design contests</document-type>
+      <eforms-subtype>36</eforms-subtype>
+      <notice-description>Design contest result notice – general directive, design</notice-description>
    </row>
-   <row rowpos="24">
+   <row rowpos="58">
+      <form-element>F13_2014</form-element>
+      <form-number>F13</form-number>
+      <notice-type/>
+      <directive>2014/25/EU</directive>
+      <legal-basis/>
+      <document-code>R</document-code>
+      <document-type>Results of design contests</document-type>
+      <eforms-subtype>37</eforms-subtype>
+      <notice-description>Design contest result notice – sectoral directive, design</notice-description>
+   </row>
+   <row rowpos="59">
       <form-element>F14_2014</form-element>
       <form-number>F14</form-number>
       <notice-type/>
+      <directive>ANY</directive>
       <legal-basis>ANY</legal-basis>
       <document-code>1</document-code>
       <document-type>Corrigendum</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>CHANGE</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="25">
-      <form-element>F15_2014</form-element>
-      <form-number>F15</form-number>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>V</document-code>
-      <document-type>Voluntary ex ante transparency notice</document-type>
-      <enotices-form-name>Voluntary ex ante transparency notice</enotices-form-name>
-      <eforms-subtype>27</eforms-subtype>
-      <notice-description>Voluntary ex-ante transparency notice – defence directive</notice-description>
-   </row>
-   <row rowpos="26">
-      <form-element>F15_2014</form-element>
-      <form-number>F15</form-number>
-      <notice-type/>
-      <legal-basis>32014L0023</legal-basis>
-      <document-code>V</document-code>
-      <document-type>Voluntary ex ante transparency notice</document-type>
-      <enotices-form-name>Voluntary ex ante transparency notice</enotices-form-name>
-      <eforms-subtype>28</eforms-subtype>
-      <notice-description>Voluntary ex-ante transparency notice – concession directive</notice-description>
-   </row>
-   <row rowpos="27">
-      <form-element>F15_2014</form-element>
-      <form-number>F15</form-number>
-      <notice-type/>
-      <legal-basis>32014L0024</legal-basis>
-      <document-code>V</document-code>
-      <document-type>Voluntary ex ante transparency notice</document-type>
-      <enotices-form-name>Voluntary ex ante transparency notice</enotices-form-name>
-      <eforms-subtype>25</eforms-subtype>
-      <notice-description>Voluntary ex-ante transparency notice – general directive</notice-description>
-   </row>
-   <row rowpos="28">
-      <form-element>F15_2014</form-element>
-      <form-number>F15</form-number>
-      <notice-type/>
-      <legal-basis>32014L0025</legal-basis>
-      <document-code>V</document-code>
-      <document-type>Voluntary ex ante transparency notice</document-type>
-      <enotices-form-name>Voluntary ex ante transparency notice</enotices-form-name>
-      <eforms-subtype>26</eforms-subtype>
-      <notice-description>Voluntary ex-ante transparency notice – sectoral directive</notice-description>
-   </row>
-   <row rowpos="29">
-      <form-element>PRIOR_INFORMATION_DEFENCE</form-element>
-      <form-number>16</form-number>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>0</document-code>
-      <document-type>Prior information notice without call for competition</document-type>
-      <enotices-form-name>Prior information notice for contracts in the field of defence and security</enotices-form-name>
-      <eforms-subtype>6</eforms-subtype>
-      <notice-description>Prior information notice used only for information – defence directive</notice-description>
-   </row>
-   <row rowpos="30">
-      <form-element>CONTRACT_DEFENCE</form-element>
-      <form-number>17</form-number>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>3</document-code>
-      <document-type>Contract notice</document-type>
-      <enotices-form-name>Contract notice for contracts in the field of defence and security</enotices-form-name>
-      <eforms-subtype>18</eforms-subtype>
-      <notice-description>Contract notice – defence directive, standard regime </notice-description>
-   </row>
-   <row rowpos="31">
-      <form-element>CONTRACT_AWARD_DEFENCE</form-element>
-      <form-number>18</form-number>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>7</document-code>
-      <document-type>Contract award notice</document-type>
-      <enotices-form-name> Contract award notice for contracts in the field of defence and security</enotices-form-name>
-      <eforms-subtype>31</eforms-subtype>
-      <notice-description>Contract award notice – defence directive, standard regime</notice-description>
-   </row>
-   <row rowpos="32">
-      <form-element>CONTRACT_CONCESSIONAIRE_DEFENCE</form-element>
-      <form-number>19</form-number>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>F</document-code>
-      <document-type>Subcontract notice (in the fields of defence and security)</document-type>
-      <enotices-form-name>Subcontract notice</enotices-form-name>
-      <eforms-subtype>22</eforms-subtype>
-      <notice-description>Subcontract notice – defence directive</notice-description>
-   </row>
-   <row rowpos="33">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32004L0017</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>39</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="34">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32004L0018</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>38</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="35">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32007R1370</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>MOVE</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="36">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>ERROR</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="37">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32014L0023</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>40</eforms-subtype>
-      <notice-description>Contract modification notice – concessions directive</notice-description>
-   </row>
-   <row rowpos="38">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32014L0024</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>38</eforms-subtype>
-      <notice-description>Contract modification notice – general directive</notice-description>
-   </row>
-   <row rowpos="39">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32014L0025</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>39</eforms-subtype>
-      <notice-description>Contract modification notice – sectoral directive</notice-description>
-   </row>
-   <row rowpos="40">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>32018R1046</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>38</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="41">
-      <form-element>F20_2014</form-element>
-      <form-number>F20</form-number>
-      <notice-type/>
-      <legal-basis>OTHER</legal-basis>
-      <document-code>K</document-code>
-      <document-type>Modification of a contract/concession during its term</document-type>
-      <enotices-form-name>Modification notice</enotices-form-name>
-      <eforms-subtype>ERROR</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="42">
-      <form-element>F21_2014</form-element>
-      <form-number>F21</form-number>
-      <notice-type>AWARD_CONTRACT</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>7</document-code>
-      <document-type>Contract award notice</document-type>
-      <enotices-form-name>Social and other specific services – public contracts</enotices-form-name>
-      <eforms-subtype>33</eforms-subtype>
-      <notice-description>Contract award notice – general directive, light regime</notice-description>
-   </row>
-   <row rowpos="43">
-      <form-element>F21_2014</form-element>
-      <form-number>F21</form-number>
-      <notice-type>CONTRACT</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>3</document-code>
-      <document-type>Contract notice</document-type>
-      <enotices-form-name>Social and other specific services – public contracts</enotices-form-name>
-      <eforms-subtype>20</eforms-subtype>
-      <notice-description>Contract notice – general directive, light regime</notice-description>
-   </row>
-   <row rowpos="44">
-      <form-element>F21_2014</form-element>
-      <form-number>F21</form-number>
-      <notice-type>PRI_CALL_COMPETITION</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>A</document-code>
-      <document-type>Prior information notice with call for competition</document-type>
-      <enotices-form-name>Social and other specific services – public contracts</enotices-form-name>
-      <eforms-subtype>12</eforms-subtype>
-      <notice-description>Prior information notice used as a call for competition - general directive, light regime</notice-description>
-   </row>
-   <row rowpos="45">
-      <form-element>F21_2014</form-element>
-      <form-number>F21</form-number>
-      <notice-type>PRI_ONLY</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>0</document-code>
-      <document-type>Prior information notice without call for competition</document-type>
-      <enotices-form-name>Social and other specific services – public contracts</enotices-form-name>
-      <eforms-subtype>4</eforms-subtype>
-      <notice-description>Prior information notice used only for information – general directive</notice-description>
-   </row>
-   <row rowpos="46">
-      <form-element>F22_2014</form-element>
-      <form-number>F22</form-number>
-      <notice-type>AWARD_CONTRACT</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>7</document-code>
-      <document-type>Contract award notice</document-type>
-      <enotices-form-name>Social and other specific services – utilities</enotices-form-name>
-      <eforms-subtype>34</eforms-subtype>
-      <notice-description>Contract award notice – sectoral directive, light regime</notice-description>
-   </row>
-   <row rowpos="47">
-      <form-element>F22_2014</form-element>
-      <form-number>F22</form-number>
-      <notice-type>CONTRACT</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>3</document-code>
-      <document-type>Contract notice</document-type>
-      <enotices-form-name>Social and other specific services – utilities</enotices-form-name>
-      <eforms-subtype>21</eforms-subtype>
-      <notice-description>Contract notice – sectoral directive, light regime</notice-description>
-   </row>
-   <row rowpos="48">
-      <form-element>F22_2014</form-element>
-      <form-number>F22</form-number>
-      <notice-type>PER_CALL_COMPETITION</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>M</document-code>
-      <document-type>Periodic indicative notice with call for competition</document-type>
-      <enotices-form-name>Social and other specific services – utilities</enotices-form-name>
-      <eforms-subtype>13</eforms-subtype>
-      <notice-description>Periodic indicative notice used as a call for competition - sectoral directive, light regime</notice-description>
-   </row>
-   <row rowpos="49">
-      <form-element>F22_2014</form-element>
-      <form-number>F22</form-number>
-      <notice-type>PER_ONLY</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>P</document-code>
-      <document-type>Periodic indicative notice without call for competition</document-type>
-      <enotices-form-name>Social and other specific services – utilities</enotices-form-name>
-      <eforms-subtype>5</eforms-subtype>
-      <notice-description>Periodic indicative notice used only for information – sectoral directive</notice-description>
-   </row>
-   <row rowpos="50">
-      <form-element>F22_2014</form-element>
-      <form-number>F22</form-number>
-      <notice-type>QSU_ONLY</notice-type>
-      <legal-basis>ANY</legal-basis>
-      <document-code>Q</document-code>
-      <document-type>Qualification system without call for competition</document-type>
-      <enotices-form-name>Social and other specific services – utilities</enotices-form-name>
-      <eforms-subtype>15</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="51">
-      <form-element>F23_2014</form-element>
-      <form-number>F23</form-number>
-      <notice-type>CONCESSION_AWARD_CONTRACT</notice-type>
-      <legal-basis>32014L0023</legal-basis>
-      <document-code>J</document-code>
-      <document-type>Concession award notice</document-type>
-      <enotices-form-name>Social and other specific services – concessions</enotices-form-name>
-      <eforms-subtype>35</eforms-subtype>
-      <notice-description>Concession award notice – concessions directive, light regime</notice-description>
-   </row>
-   <row rowpos="52">
-      <form-element>F23_2014</form-element>
-      <form-number>F23</form-number>
-      <notice-type>PRI</notice-type>
-      <legal-basis>32014L0023</legal-basis>
-      <document-code>H</document-code>
-      <document-type>Services concession</document-type>
-      <enotices-form-name>Social and other specific services – concessions</enotices-form-name>
-      <eforms-subtype>35</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="53">
-      <form-element>F24_2014</form-element>
-      <form-number>F24</form-number>
-      <notice-type/>
-      <legal-basis>32014L0023</legal-basis>
-      <document-code>C</document-code>
-      <document-type>Works concession / Services concession</document-type>
-      <enotices-form-name>Concession notice</enotices-form-name>
-      <eforms-subtype>19</eforms-subtype>
-      <notice-description>Concession notice – concessions directive, standard regime</notice-description>
-   </row>
-   <row rowpos="54">
-      <form-element>F24_2014</form-element>
-      <form-number>F24</form-number>
-      <notice-type/>
-      <legal-basis>32014L0023</legal-basis>
-      <document-code>H</document-code>
-      <document-type>Works concession / Services concession</document-type>
-      <enotices-form-name>Concession notice</enotices-form-name>
-      <eforms-subtype>19</eforms-subtype>
-      <notice-description>Concession notice – concessions directive, standard regime</notice-description>
-   </row>
-   <row rowpos="55">
-      <form-element>F25_2014</form-element>
-      <form-number>F25</form-number>
-      <notice-type/>
-      <legal-basis>32014L0023</legal-basis>
-      <document-code>J</document-code>
-      <document-type>Concession award notice</document-type>
-      <enotices-form-name>Concession award notice</enotices-form-name>
-      <eforms-subtype>32</eforms-subtype>
-      <notice-description>Concession award notice – concession directive, standard regime</notice-description>
-   </row>
-   <row rowpos="56">
-      <form-element>MOVE</form-element>
-      <form-number>T01</form-number>
-      <notice-type/>
-      <legal-basis>32007R1370</legal-basis>
-      <document-code>0</document-code>
-      <document-type>Prior information notice without call for competition</document-type>
-      <enotices-form-name>Prior information notice for public service contract</enotices-form-name>
-      <eforms-subtype>T01</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="57">
-      <form-element>MOVE</form-element>
-      <form-number>T02</form-number>
-      <notice-type/>
-      <legal-basis>32007R1370</legal-basis>
-      <document-code>7</document-code>
-      <document-type>Contract award notice</document-type>
-      <enotices-form-name>Information notice for award of public service contract</enotices-form-name>
-      <eforms-subtype>T02</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="58">
-      <form-element>EEIG</form-element>
-      <form-number/>
-      <notice-type/>
-      <legal-basis/>
-      <document-code>G</document-code>
-      <document-type>European economic interest grouping (EEIG)</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>X01</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="59">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>0</document-code>
-      <document-type>Prior information notice without call for competition</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>3,6,9</eforms-subtype>
+      <eforms-subtype/>
       <notice-description/>
    </row>
    <row rowpos="60">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
+      <form-element>F14_2014</form-element>
+      <form-number>F14</form-number>
       <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>1</document-code>
-      <document-type>Corrigendum</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>CHANGE</eforms-subtype>
-      <notice-description/>
-   </row>
-   <row rowpos="61">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
       <document-code>2</document-code>
       <document-type>Additional information</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>CHANGE</eforms-subtype>
+      <eforms-subtype/>
       <notice-description/>
    </row>
-   <row rowpos="62">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
+   <row rowpos="82">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32009L0081</legal-basis>
-      <document-code>3</document-code>
-      <document-type>Contract notice</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>18</eforms-subtype>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>27</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – defence directive</notice-description>
+   </row>
+   <row rowpos="83">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0023</legal-basis>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>28</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – concession directive</notice-description>
+   </row>
+   <row rowpos="84">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0024</legal-basis>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>25</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – general directive</notice-description>
+   </row>
+   <row rowpos="85">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0025</legal-basis>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>26</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – sectoral directive</notice-description>
+   </row>
+   <row rowpos="86">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
+      <notice-type/>
+      <directive>2009/81/EC</directive>
+      <legal-basis/>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>27</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – defence directive</notice-description>
+   </row>
+   <row rowpos="87">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
+      <notice-type/>
+      <directive>2014/23/EU</directive>
+      <legal-basis/>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>28</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – concession directive</notice-description>
+   </row>
+   <row rowpos="88">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
+      <notice-type/>
+      <directive>2014/24/EU</directive>
+      <legal-basis/>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>25</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – general directive</notice-description>
+   </row>
+   <row rowpos="89">
+      <form-element>F15_2014</form-element>
+      <form-number>F15</form-number>
+      <notice-type/>
+      <directive>2014/25/EU</directive>
+      <legal-basis/>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>28</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – concession directive</notice-description>
+   </row>
+   <row rowpos="90">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32004L0017</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>39</eforms-subtype>
+      <notice-description>Contract modification notice – sectoral directive</notice-description>
+   </row>
+   <row rowpos="91">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32004L0018</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>38</eforms-subtype>
+      <notice-description>Contract modification notice – general directive</notice-description>
+   </row>
+   <row rowpos="92">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32007R1370</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>MOVE</eforms-subtype>
       <notice-description/>
    </row>
-   <row rowpos="63">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
+   <row rowpos="93">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
       <notice-type/>
+      <directive/>
       <legal-basis>32009L0081</legal-basis>
-      <document-code>5</document-code>
-      <document-type>Request for proposals</document-type>
-      <enotices-form-name/>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
       <eforms-subtype>ERROR</eforms-subtype>
       <notice-description/>
    </row>
-   <row rowpos="64">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
+   <row rowpos="94">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
       <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
+      <directive/>
+      <legal-basis>32012R0966</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>38</eforms-subtype>
+      <notice-description>Contract modification notice – general directive</notice-description>
+   </row>
+   <row rowpos="95">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0023</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>40</eforms-subtype>
+      <notice-description>Contract modification notice – concessions directive</notice-description>
+   </row>
+   <row rowpos="96">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0024</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>38</eforms-subtype>
+      <notice-description>Contract modification notice – general directive</notice-description>
+   </row>
+   <row rowpos="97">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0025</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>39</eforms-subtype>
+      <notice-description>Contract modification notice – sectoral directive</notice-description>
+   </row>
+   <row rowpos="98">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32018R1046</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>38</eforms-subtype>
+      <notice-description>Contract modification notice – general directive</notice-description>
+   </row>
+   <row rowpos="99">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>OTHER</legal-basis>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>ERROR</eforms-subtype>
+      <notice-description/>
+   </row>
+   <row rowpos="100">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive>2014/23/EU</directive>
+      <legal-basis/>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>40</eforms-subtype>
+      <notice-description>Contract modification notice – concessions directive</notice-description>
+   </row>
+   <row rowpos="101">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive>2014/24/EU</directive>
+      <legal-basis/>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>38</eforms-subtype>
+      <notice-description>Contract modification notice – general directive</notice-description>
+   </row>
+   <row rowpos="102">
+      <form-element>F20_2014</form-element>
+      <form-number>F20</form-number>
+      <notice-type/>
+      <directive>2014/25/EU</directive>
+      <legal-basis/>
+      <document-code>K</document-code>
+      <document-type>Modification of a contract/concession during its term</document-type>
+      <eforms-subtype>39</eforms-subtype>
+      <notice-description>Contract modification notice – sectoral directive</notice-description>
+   </row>
+   <row rowpos="103">
+      <form-element>F21_2014</form-element>
+      <form-number>F21</form-number>
+      <notice-type>AWARD_CONTRACT</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>31</eforms-subtype>
-      <notice-description/>
+      <eforms-subtype>33</eforms-subtype>
+      <notice-description>Contract award notice – general directive, light regime</notice-description>
    </row>
-   <row rowpos="65">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
-      <document-code>I</document-code>
-      <document-type>Call for expressions of interest</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>CEI</eforms-subtype>
-      <notice-description/>
+   <row rowpos="105">
+      <form-element>F21_2014</form-element>
+      <form-number>F21</form-number>
+      <notice-type>CONTRACT</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype>20</eforms-subtype>
+      <notice-description>Contract notice – general directive, light regime</notice-description>
    </row>
-   <row rowpos="66">
-      <form-element>OTH_NOT</form-element>
-      <form-number/>
-      <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
+   <row rowpos="107">
+      <form-element>F21_2014</form-element>
+      <form-number>F21</form-number>
+      <notice-type>PRI_CALL_COMPETITION</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>A</document-code>
+      <document-type>Prior information notice with call for competition</document-type>
+      <eforms-subtype>12</eforms-subtype>
+      <notice-description>Prior information notice used as a call for competition - general directive, light regime</notice-description>
+   </row>
+   <row rowpos="109">
+      <form-element>F21_2014</form-element>
+      <form-number>F21</form-number>
+      <notice-type>PRI_ONLY</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>0</document-code>
+      <document-type>Prior information notice without call for competition</document-type>
+      <eforms-subtype>4</eforms-subtype>
+      <notice-description>Prior information notice used only for information – general directive</notice-description>
+   </row>
+   <row rowpos="111">
+      <form-element>F22_2014</form-element>
+      <form-number>F22</form-number>
+      <notice-type>AWARD_CONTRACT</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>7</document-code>
+      <document-type>Contract award notice</document-type>
+      <eforms-subtype>34</eforms-subtype>
+      <notice-description>Contract award notice – sectoral directive, light regime</notice-description>
+   </row>
+   <row rowpos="113">
+      <form-element>F22_2014</form-element>
+      <form-number>F22</form-number>
+      <notice-type>CONTRACT</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype>21</eforms-subtype>
+      <notice-description>Contract notice – sectoral directive, light regime</notice-description>
+   </row>
+   <row rowpos="115">
+      <form-element>F22_2014</form-element>
+      <form-number>F22</form-number>
+      <notice-type>PER_CALL_COMPETITION</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>M</document-code>
+      <document-type>Periodic indicative notice with call for competition</document-type>
+      <eforms-subtype>13</eforms-subtype>
+      <notice-description>Periodic indicative notice used as a call for competition - sectoral directive, light regime</notice-description>
+   </row>
+   <row rowpos="117">
+      <form-element>F22_2014</form-element>
+      <form-number>F22</form-number>
+      <notice-type>PER_ONLY</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
       <document-code>P</document-code>
       <document-type>Periodic indicative notice without call for competition</document-type>
-      <enotices-form-name/>
+      <eforms-subtype>5</eforms-subtype>
+      <notice-description>Periodic indicative notice used only for information – sectoral directive</notice-description>
+   </row>
+   <row rowpos="119">
+      <form-element>F22_2014</form-element>
+      <form-number>F22</form-number>
+      <notice-type>QSU_CALL_COMPETITION</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>O</document-code>
+      <document-type>Qualification system with call for competition</document-type>
+      <eforms-subtype>15</eforms-subtype>
+      <notice-description>Notice on the existence of a qualification system — sectoral directive</notice-description>
+   </row>
+   <row rowpos="120">
+      <form-element>F22_2014</form-element>
+      <form-number>F22</form-number>
+      <notice-type>QSU_ONLY</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>Q</document-code>
+      <document-type>Qualification system without call for competition</document-type>
+      <eforms-subtype>15</eforms-subtype>
+      <notice-description>Notice on the existence of a qualification system — sectoral directive</notice-description>
+   </row>
+   <row rowpos="121">
+      <form-element>F23_2014</form-element>
+      <form-number>F23</form-number>
+      <notice-type>CONCESSION_AWARD_CONTRACT</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>J</document-code>
+      <document-type>Concession award notice</document-type>
+      <eforms-subtype>35</eforms-subtype>
+      <notice-description>Concession award notice – concessions directive, light regime</notice-description>
+   </row>
+   <row rowpos="123">
+      <form-element>F23_2014</form-element>
+      <form-number>F23</form-number>
+      <notice-type>PRI</notice-type>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>H</document-code>
+      <document-type>Services concession</document-type>
+      <eforms-subtype>14</eforms-subtype>
+      <notice-description>Prior information notice used as a call for competition — concessions directive, light regime</notice-description>
+   </row>
+   <row rowpos="125">
+      <form-element>F24_2014</form-element>
+      <form-number>F24</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>C</document-code>
+      <document-type>Works concession</document-type>
+      <eforms-subtype>19</eforms-subtype>
+      <notice-description>Concession notice – concessions directive, standard regime</notice-description>
+   </row>
+   <row rowpos="126">
+      <form-element>F24_2014</form-element>
+      <form-number>F24</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0023</legal-basis>
+      <document-code>H</document-code>
+      <document-type>Services concession</document-type>
+      <eforms-subtype>19</eforms-subtype>
+      <notice-description>Concession notice – concessions directive, standard regime</notice-description>
+   </row>
+   <row rowpos="127">
+      <form-element>F24_2014</form-element>
+      <form-number>F24</form-number>
+      <notice-type/>
+      <directive/>
+      <legal-basis>32014L0024</legal-basis>
+      <document-code>H</document-code>
+      <document-type>Services concession</document-type>
       <eforms-subtype>ERROR</eforms-subtype>
       <notice-description/>
    </row>
-   <row rowpos="67">
+   <row rowpos="129">
+      <form-element>F24_2014</form-element>
+      <form-number>F24</form-number>
+      <notice-type/>
+      <directive>2014/23/EU</directive>
+      <legal-basis/>
+      <document-code>H</document-code>
+      <document-type>Services concession</document-type>
+      <eforms-subtype>19</eforms-subtype>
+      <notice-description>Concession notice – concessions directive, standard regime</notice-description>
+   </row>
+   <row rowpos="130">
+      <form-element>F25_2014</form-element>
+      <form-number>F25</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>J</document-code>
+      <document-type>Concession award notice</document-type>
+      <eforms-subtype>32</eforms-subtype>
+      <notice-description>Concession award notice – concession directive, standard regime</notice-description>
+   </row>
+   <row rowpos="132">
+      <form-element>PRIOR_INFORMATION</form-element>
+      <form-number>1</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>0</document-code>
+      <document-type>Prior information notice without call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="133">
+      <form-element>CONTRACT</form-element>
+      <form-number>2</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="134">
+      <form-element>CONTRACT</form-element>
+      <form-number>2</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>Y</document-code>
+      <document-type>Dynamic purchasing system</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="135">
+      <form-element>CONTRACT_AWARD</form-element>
+      <form-number>3</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>7</document-code>
+      <document-type>Contract award notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="136">
+      <form-element>PERIODIC_INDICATIVE_UTILITIES</form-element>
+      <form-number>4</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>0</document-code>
+      <document-type>Prior information notice without call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="137">
+      <form-element>PERIODIC_INDICATIVE_UTILITIES</form-element>
+      <form-number>4</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>M</document-code>
+      <document-type>Periodic indicative notice with call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="138">
+      <form-element>PERIODIC_INDICATIVE_UTILITIES</form-element>
+      <form-number>4</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>P</document-code>
+      <document-type>Periodic indicative notice without call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="139">
+      <form-element>CONTRACT_UTILITIES</form-element>
+      <form-number>5</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="140">
+      <form-element>CONTRACT_UTILITIES</form-element>
+      <form-number>5</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>Y</document-code>
+      <document-type>Dynamic purchasing system</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="141">
+      <form-element>CONTRACT_AWARD_UTILITIES</form-element>
+      <form-number>6</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>7</document-code>
+      <document-type>Contract award notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="142">
+      <form-element>QUALIFICATION_SYSTEM_UTILITIES</form-element>
+      <form-number>7</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>O</document-code>
+      <document-type>Qualification system with call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="143">
+      <form-element>QUALIFICATION_SYSTEM_UTILITIES</form-element>
+      <form-number>7</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>Q</document-code>
+      <document-type>Qualification system without call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="144">
+      <form-element>BUYER_PROFILE</form-element>
+      <form-number>8</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>B</document-code>
+      <document-type>Buyer profile</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="147">
+      <form-element>SIMPLIFIED_CONTRACT</form-element>
+      <form-number>9</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="149">
+      <form-element>CONCESSION</form-element>
+      <form-number>10</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>C</document-code>
+      <document-type>Works concession</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="150">
+      <form-element>CONTRACT_CONCESSIONAIRE</form-element>
+      <form-number>11</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>E</document-code>
+      <document-type>Works contracts awarded by the concessionnaire</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="151">
+      <form-element>DESIGN_CONTEST</form-element>
+      <form-number>12</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>D</document-code>
+      <document-type>Design contest</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="153">
+      <form-element>RESULT_DESIGN_CONTEST</form-element>
+      <form-number>13</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>R</document-code>
+      <document-type>Results of design contests</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="155">
+      <form-element>VOLUNTARY_EX_ANTE_TRANSPARENCY_NOTICE</form-element>
+      <form-number>15</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="158">
+      <form-element>PRIOR_INFORMATION_DEFENCE</form-element>
+      <form-number>16</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>0</document-code>
+      <document-type>Prior information notice without call for competition</document-type>
+      <eforms-subtype>6</eforms-subtype>
+      <notice-description>Prior information notice used only for information – defence directive</notice-description>
+   </row>
+   <row rowpos="159">
+      <form-element>CONTRACT_DEFENCE</form-element>
+      <form-number>17</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype>18</eforms-subtype>
+      <notice-description>Contract notice – defence directive, standard regime </notice-description>
+   </row>
+   <row rowpos="160">
+      <form-element>CONTRACT_AWARD_DEFENCE</form-element>
+      <form-number>18</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>7</document-code>
+      <document-type>Contract award notice</document-type>
+      <eforms-subtype>31</eforms-subtype>
+      <notice-description>Contract award notice – defence directive, standard regime</notice-description>
+   </row>
+   <row rowpos="161">
+      <form-element>CONTRACT_CONCESSIONAIRE_DEFENCE</form-element>
+      <form-number>19</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>F</document-code>
+      <document-type>Subcontract notice (in the fields of defence and security)</document-type>
+      <eforms-subtype>22</eforms-subtype>
+      <notice-description>Subcontract notice – defence directive</notice-description>
+   </row>
+   <row rowpos="162">
+      <form-element>PRIOR_INFORMATION_MOVE</form-element>
+      <form-number>T01</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>0</document-code>
+      <document-type>Prior information notice without call for competition</document-type>
+      <eforms-subtype>T01</eforms-subtype>
+      <notice-description/>
+   </row>
+   <row rowpos="163">
+      <form-element>PRIOR_INFORMATION_MOVE</form-element>
+      <form-number>T01</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype>T01</eforms-subtype>
+      <notice-description/>
+   </row>
+   <row rowpos="164">
+      <form-element>CONTRACT_MOVE</form-element>
+      <form-number>T02</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>7</document-code>
+      <document-type>Contract award notice</document-type>
+      <eforms-subtype>T02</eforms-subtype>
+      <notice-description/>
+   </row>
+   <row rowpos="165">
+      <form-element>MOVE</form-element>
+      <form-number>T01</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>0</document-code>
+      <document-type>Prior information notice without call for competition</document-type>
+      <eforms-subtype>T01</eforms-subtype>
+      <notice-description/>
+   </row>
+   <row rowpos="166">
+      <form-element>MOVE</form-element>
+      <form-number>T02</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>7</document-code>
+      <document-type>Contract award notice</document-type>
+      <eforms-subtype>T02</eforms-subtype>
+      <notice-description/>
+   </row>
+   <row rowpos="167">
+      <form-element>EEIG</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>G</document-code>
+      <document-type>European economic interest grouping (EEIG)</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="168">
       <form-element>OTH_NOT</form-element>
       <form-number/>
       <notice-type/>
-      <legal-basis>32009L0081</legal-basis>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>0</document-code>
+      <document-type>Prior information notice without call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="169">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>1</document-code>
+      <document-type>Corrigendum</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="170">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>2</document-code>
+      <document-type>Additional information</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="171">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="172">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>4</document-code>
+      <document-type>Prequalification notices</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="173">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>5</document-code>
+      <document-type>Request for proposals</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="174">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>7</document-code>
+      <document-type>Contract award notice</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="175">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>9</document-code>
+      <document-type>Not applicable</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="176">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>I</document-code>
+      <document-type>Call for expressions of interest</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="177">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>P</document-code>
+      <document-type>Periodic indicative notice without call for competition</document-type>
+      <eforms-subtype/>
+      <notice-description/>
+   </row>
+   <row rowpos="178">
+      <form-element>OTH_NOT</form-element>
+      <form-number/>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
       <document-code>S</document-code>
       <document-type>European company</document-type>
-      <enotices-form-name/>
-      <eforms-subtype>X02</eforms-subtype>
+      <eforms-subtype/>
       <notice-description/>
    </row>
 </mapping>
