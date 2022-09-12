@@ -60,7 +60,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:choose>
 </xsl:template>
 
-<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_AWARD_CONTRACT_WITHOUT_CALL">
+<xsl:template match="ted:PT_OPEN|ted:PT_RESTRICTED|ted:PT_COMPETITIVE_NEGOTIATION|ted:PT_COMPETITIVE_DIALOGUE|ted:PT_INNOVATION_PARTNERSHIP|ted:PT_INVOLVING_NEGOTIATION|ted:PT_NEGOTIATED_WITH_PRIOR_CALL|ted:PT_AWARD_CONTRACT_WITHOUT_CALL|ted:PT_AWARD_CONTRACT_WITH_PRIOR_PUBLICATION|ted:PT_AWARD_CONTRACT_WITHOUT_PUBLICATION|ted:PT_NEGOTIATED_WITHOUT_PUBLICATION">
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="eforms-procedure-type" select="$mappings//procedure-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 	<cbc:ProcedureCode listName="procurement-procedure-type"><xsl:value-of select="$eforms-procedure-type"/></cbc:ProcedureCode>
@@ -114,8 +114,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<!-- Direct Award Justification (BT-135): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-135)'"/></xsl:call-template>
 
-	<xsl:if test="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/ted:D_JUSTIFICATION/ted:P, ' '))"/>
+	<xsl:if test="ted:PROCEDURE/(ted:PT_AWARD_CONTRACT_WITHOUT_CALL|PT_AWARD_CONTRACT_WITHOUT_PUBLICATION)">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:PROCEDURE/(ted:PT_AWARD_CONTRACT_WITHOUT_CALL|PT_AWARD_CONTRACT_WITHOUT_PUBLICATION)/ted:D_JUSTIFICATION/ted:P, ' '))"/>
 		<xsl:for-each select="ted:PROCEDURE/ted:PT_AWARD_CONTRACT_WITHOUT_CALL/(ted:D_ACCORDANCE_ARTICLE/*|ted:D_OUTSIDE_SCOPE)">
 		<cac:ProcessJustification>
 			<xsl:variable name="element-name" select="fn:local-name(.)"/>
