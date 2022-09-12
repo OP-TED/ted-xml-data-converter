@@ -1058,6 +1058,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Duration Other (BT-538): eForms documentation cardinality (Lot) = ? | Forbidden for CN subtypes 23 and 24, CAN subtypes 36 and 37, CM subtype E5; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Duration Other (BT-538)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
+		<xsl:apply-templates select="ted:QS/(ted:INDEFINITE_DURATION|ted:DATE_START)"/>
+
 		<!-- cbc:MaximumNumberNumeric is mandatory for Notice subtypes 15 (Notice on the existence of a qualification system), 17 and 18 (Contract, or concession, notice — standard regime, Directives 2014/25/EU and 2009/81/EC) -->
 		<!-- cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0) -->
 		<!-- cbc:MaximumNumberNumeric refers to the number of possible renewals; an encoded value of "3" involves an initial contract followed by up to 3 renewals -->
@@ -1167,6 +1169,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:PlannedPeriod>
 </xsl:template>
 
+<xsl:template match="ted:INDEFINITE_DURATION">
+	<cac:PlannedPeriod>
+		<cbc:DescriptionCode listName="timeperiod">UNLIMITED</cbc:DescriptionCode>
+	</cac:PlannedPeriod>
+</xsl:template>
+
 <xsl:template match="ted:DATE_START">
 	<cac:PlannedPeriod>
 		<cbc:StartDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:StartDate>
@@ -1195,7 +1203,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="contract-extension">
 		<!-- Note: the presence of Options Description (BT-54) implies Options (BT-53) -->
 	<xsl:choose>
-		<xsl:when test="($eforms-notice-subtype = ('15', '17', '18') or (ted:OPTIONS) or (ted:RENEWAL))">
+		<xsl:when test="($eforms-notice-subtype = ('15', '17', '18') or (ted:OPTIONS) or (ted:RENEWAL) or (ted:QS/ted:RENEWAL))">
 			<cac:ContractExtension>
 				<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:OPTIONS_DESCR/ted:P, ' '))"/>
 				<!-- Options Description (BT-54): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
@@ -1207,7 +1215,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<xsl:with-param name="element" select="'cbc:OptionsDescription'"/>
 					</xsl:call-template>
 				</xsl:if>
-				<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:RENEWAL_DESCR/ted:P, ' '))"/>
+				<xsl:variable name="text" select="fn:normalize-space(fn:string-join((ted:RENEWAL_DESCR|ted:QS/ted:RENEWAL_DESCR)/ted:P, ' '))"/>
 				<!--cbc:MaximumNumberNumeric shall be a whole number (when no extension is foreseen, the element shouldn’t be used, except for Notice subtypes 15, 17 and 18, where it should have the value 0)-->
 				<!-- Renewal Maximum (BT-58): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 15, 17, and 18; Optional for PIN subtypes 7-9, CN subtypes 10-13, 16, 19-22, and E3, CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden for other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Maximum (BT-58)'"/></xsl:call-template>
@@ -1222,7 +1230,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<cac:Renewal>
 							<cac:Period>
 								<xsl:call-template name="multilingual">
-									<xsl:with-param name="contexts" select="ted:RENEWAL_DESCR"/>
+									<xsl:with-param name="contexts" select="ted:RENEWAL_DESCR|ted:QS/ted:RENEWAL_DESCR"/>
 									<xsl:with-param name="local" select="'P'"/>
 									<xsl:with-param name="element" select="'cbc:Description'"/>
 								</xsl:call-template>
