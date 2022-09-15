@@ -35,8 +35,8 @@
                      <efac:FrameworkAgreementValues>
                         <cbc:EstimatedMaximumValueAmount currencyID="EUR">214000.00</cbc:EstimatedMaximumValueAmount>
                      </efac:FrameworkAgreementValues>
-                     <!--Received Submissions Type (BT-760)-->
-                     <!--Received Submissions Count (BT-759)-->
+                     <!--WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
+                     <!--WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -61,8 +61,8 @@
                      </efac:DecisionReason>
                      <!--Tender Identifier Reference (OPT-320)-->
                      <!--Framework Estimated Value (BT-660)-->
-                     <!--Received Submissions Type (BT-760)-->
-                     <!--Received Submissions Count (BT-759)-->
+                     <!--WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
+                     <!--WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
                      <!--Contract Identifier Reference (OPT-315)-->
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
@@ -115,6 +115,9 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>
@@ -138,6 +141,9 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>
@@ -161,6 +167,9 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>
@@ -184,6 +193,9 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>
@@ -207,6 +219,9 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>
@@ -230,6 +245,9 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">214000.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>

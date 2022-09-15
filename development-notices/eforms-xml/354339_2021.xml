@@ -23,8 +23,8 @@
                      </efac:DecisionReason>
                      <!--Tender Identifier Reference (OPT-320)-->
                      <!--Framework Estimated Value (BT-660)-->
-                     <!--Received Submissions Type (BT-760)-->
-                     <!--Received Submissions Count (BT-759)-->
+                     <!--WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
+                     <!--WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
                      <!--Contract Identifier Reference (OPT-315)-->
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>

@@ -598,11 +598,11 @@ These instructions can be un-commented to show the variables
 			</xsl:for-each>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('29','30','31','32','33','34','35','36','37')">
-			<!-- WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no equivalent element was found in TED XML. -->
-			<xsl:variable name="message">WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no equivalent element was found in TED XML.</xsl:variable>
+			<!-- WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.</xsl:variable>
 			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>	
-			<!-- WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no equivalent element was found in TED XML. -->
-					<xsl:variable name="message">WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no equivalent element was found in TED XML.</xsl:variable>
+			<!-- WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML. -->
+					<xsl:variable name="message">WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.</xsl:variable>
 					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>		
 		</xsl:when>
 		<xsl:otherwise>
@@ -615,14 +615,11 @@ These instructions can be un-commented to show the variables
 
 
 <xsl:template name="concession">
-	<!-- Concession Revenue Buyer (BT-160): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes efac:ConcessionRevenue​/efbc:RevenueBuyerAmount -->
-	<!-- Concession Revenue User (BT-162): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes efac:ConcessionRevenue​/efbc:RevenueUserAmount -->
-	<!-- Concession Value Description (BT-163): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes efac:ConcessionRevenue​/efbc:ValueDescription -->
 	<xsl:choose>
 		<xsl:when test="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/(ted:VAL_REVENUE|ted:VAL_PRICE_PAYMENT|ted:INFO_ADD_VALUE) or ($eforms-notice-subtype = ('32','35'))">
 		<efac:ConcessionRevenue>
 			<!-- Concession Revenue Buyer (BT-160): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue Buyer (BT-160)'"/></xsl:call-template>
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue Buyer (BT-160)'"/></xsl:call-template>
 			<xsl:choose>
 				<xsl:when test="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_REVENUE">
 					<xsl:variable name="ted-value" select="fn:normalize-space(ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_REVENUE)"/>
@@ -637,7 +634,7 @@ These instructions can be un-commented to show the variables
 			</xsl:choose>
 			
 			<!-- Concession Revenue User (BT-162): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue User (BT-162)'"/></xsl:call-template>
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue User (BT-162)'"/></xsl:call-template>
 			<xsl:choose>
 				<xsl:when test="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_PRICE_PAYMENT">
 					<xsl:variable name="ted-value" select="fn:normalize-space(ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_PRICE_PAYMENT)"/>
@@ -652,7 +649,7 @@ These instructions can be un-commented to show the variables
 			</xsl:choose>
 			
 			<!-- Concession Value Description (BT-163): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Value Description (BT-163)'"/></xsl:call-template>
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Value Description (BT-163)'"/></xsl:call-template>
 			<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:INFO_ADD_VALUE/ted:P, ' '))"/>
 			<xsl:choose>
 				<xsl:when test="$text ne ''">
