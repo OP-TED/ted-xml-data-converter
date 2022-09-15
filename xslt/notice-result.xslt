@@ -678,13 +678,6 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 
-<!--<xsl:template match="ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_TOTAL">
-	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
-	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
-	<cac:LegalMonetaryTotal>
-		<cbc:PayableAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:PayableAmount>
-	</cac:LegalMonetaryTotal>
-</xsl:template>-->
 <!-- Tender Value (BT-720): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and 35; Optional (O or EM or CM) for CAN subtypes 25-35 and E4; Forbidden (blank) for all other subtypes cac:LegalMonetaryTotal​/cbc:PayableAmount *ORDER* -->
 <xsl:template name="values">
 	<xsl:choose>
@@ -703,10 +696,10 @@ These instructions can be un-commented to show the variables
 			</cac:LegalMonetaryTotal>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('38','39','40','35')">
-					<!-- WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 38-40 and 35, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML. -->
-					<xsl:variable name="message">WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 38-40 and 35, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML.</xsl:variable>
-					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-				</xsl:when>
+			<!-- WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 38-40 and 35, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML. -->
+			<xsl:variable name="message">WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 38-40 and 35, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
 	</xsl:choose>	
 </xsl:template>
 

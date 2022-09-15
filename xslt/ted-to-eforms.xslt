@@ -165,9 +165,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
 	<!-- Notice Dispatch Date (BT-05): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Dispatch Date (BT-05)'"/></xsl:call-template>
-	<!-- TBD: cater for when DATE_DISPATCH_NOTICE does not exist -->
-	<cbc:IssueDate><xsl:value-of select="ted:COMPLEMENTARY_INFO/ted:DATE_DISPATCH_NOTICE"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
-	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+	<xsl:choose>
+	  <xsl:when test="ted:COMPLEMENTARY_INFO/ted:DATE_DISPATCH_NOTICE">
+		<cbc:IssueDate><xsl:value-of select="ted:COMPLEMENTARY_INFO/ted:DATE_DISPATCH_NOTICE"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
+		<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+	  </xsl:when>
+	  <xsl:otherwise>
+		<!-- WARNING: Notice Dispatch Date (BT-05) is Mandatory for all eForms subtypes, but no DATE_DISPATCH_NOTICE was found in TED XML. -->
+		<xsl:variable name="message">WARNING: Notice Dispatch Date (BT-05) is Mandatory for all eForms subtypes, but no DATE_DISPATCH_NOTICE was found in TED XML.</xsl:variable>
+		<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+	  </xsl:otherwise>
+	</xsl:choose>
 	<!-- Notice Version (BT-757): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Version (BT-757)'"/></xsl:call-template>
 	<!-- TBD: hard-coded for now -->
