@@ -388,9 +388,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="procurement-project-lots">
 <!-- The following line can be un-commented to show the variable lot-numbers-map -->
-<!--
-<xsl:copy-of select="$lot-numbers-map" copy-namespaces="no"/>
--->
+<!-- <xsl:copy-of select="$lot-numbers-map" copy-namespaces="no"/> -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' multiple cac:ProcurementProjectLot '"/></xsl:call-template>
 	<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:OBJECT_DESCR"/>
 </xsl:template>
