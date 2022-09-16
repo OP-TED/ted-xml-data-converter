@@ -287,23 +287,23 @@
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
-            <cac:AwardingCriterion><!--WARNING: Award Criterion Type (BT-539) is required, but the source TED notice does not contain this information. The type "quality" has been used as a default.-->
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--WARNING: Award Criterion Type (BT-539) is required, but the source TED notice does not contain this information. The type "quality" has been used as a default.--><!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Price</cbc:Description>
                </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+               <cac:SubordinateAwardingCriterion><!--WARNING: Award Criterion Type (BT-539) is required, but the source TED notice does not contain this information. The type "quality" has been used as a default.--><!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Water jet as the propulsion method</cbc:Description>
                </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+               <cac:SubordinateAwardingCriterion><!--WARNING: Award Criterion Type (BT-539) is required, but the source TED notice does not contain this information. The type "quality" has been used as a default.--><!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Number of seats on board</cbc:Description>
                </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+               <cac:SubordinateAwardingCriterion><!--WARNING: Award Criterion Type (BT-539) is required, but the source TED notice does not contain this information. The type "quality" has been used as a default.--><!--Award Criterion Type (BT-539)-->
                   <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Play area</cbc:Description>

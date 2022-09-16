@@ -178,13 +178,13 @@ These instructions can be un-commented to show the variables
 <xsl:copy-of select="$ted-contractor-groups-unique-with-id" copy-namespaces="no"/>
 -->
 
-		<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
-			<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
+		<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+			<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 		<xsl:call-template name="notice-values"/>
 
 		<!-- efac:GroupFramework -->
-			<!-- Group Framework Value (BT-156): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efbc:GroupFrameworkValueAmount -->
-			<!-- Group Framework Value Lot Identifier (BT-556): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:TenderLot -->
+			<!-- Group Framework Value (BT-156): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+			<!-- Group Framework Value Lot Identifier (BT-556): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 
 
 		<!-- Lot Results -->
@@ -229,20 +229,20 @@ These instructions can be un-commented to show the variables
 					</xsl:otherwise>
 				</xsl:choose>
 
-				<!-- Dynamic Purchasing System Termination (BT-119): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29, 30, 33, 34 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efbc:DPSTerminationIndicator -->
+				<!-- Dynamic Purchasing System Termination (BT-119): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29, 30, 33, 34 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Dynamic Purchasing System Termination (BT-119)'"/></xsl:call-template>
 				<xsl:apply-templates select="$ted-form-main-element/ted:PROCEDURE/ted:TERMINATION_DPS"/>
 
-				<!-- Financing Party: eForms documentation cardinality (LotResult) = * | cac:FinancingParty​/cac:PartyIdentification​/cbc:ID -->
-				<!-- Payer Party: eForms documentation cardinality (LotResult) = * cac:PayerParty​/cac:PartyIdentification/cbc:ID -->
-				<!-- Buyer Review Complainants (BT-712): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:AppealRequestsStatistics[efbc:StatisticsCode​/@listName='review-type']​/efbc:StatisticsNumeric -->
-				<!-- Buyer Review Requests Irregularity Type (BT-636): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:AppealRequestsStatistics[efbc:StatisticsCode​/@listName='irregularity-type']​/efbc:StatisticsCode -->
-				<!-- Buyer Review Requests Count (BT-635): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:AppealRequestsStatistics[efbc:StatisticsCode​/@listName='irregularity-type']​/efbc:StatisticsNumeric -->
-				<!-- Not Awarded Reason (BT-144): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:DecisionReason​/efbc:DecisionReasonCode -->
+				<!-- Financing Party: eForms documentation cardinality (LotResult) = * -->
+				<!-- Payer Party: eForms documentation cardinality (LotResult) = * -->
+				<!-- Buyer Review Complainants (BT-712): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+				<!-- Buyer Review Requests Irregularity Type (BT-636): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+				<!-- Buyer Review Requests Count (BT-635): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+				<!-- Not Awarded Reason (BT-144): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Not Awarded Reason (BT-144)'"/></xsl:call-template>
 				<xsl:apply-templates select="awards/ted:AWARD_CONTRACT[1]/ted:NO_AWARDED_CONTRACT/(ted:PROCUREMENT_DISCONTINUED|ted:PROCUREMENT_UNSUCCESSFUL)"/>
 
-				<!-- Tender Identifier Reference (OPT-320): eForms documentation cardinality (LotResult) = * | efac:LotTender​/cbc:ID -->
+				<!-- Tender Identifier Reference (OPT-320): eForms documentation cardinality (LotResult) = * -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tender Identifier Reference (OPT-320)'"/></xsl:call-template>
 				<xsl:variable name="lot-tender-ids" select="$lot-tenders-unique-with-id//lot-tender[path = $paths]/lot-tender-id/fn:string()"/>
 
@@ -252,18 +252,18 @@ These instructions can be un-commented to show the variables
 					</efac:LotTender>
 				</xsl:for-each>
 
-				<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
+				<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="framework-estimated-value">
 					<xsl:with-param name="result-lot-identifier" select="$result-lot-identifier"/>
 				</xsl:call-template>
 
-				<!-- Framework Maximum Value (BT-709): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:MaximumValueAmount -->
+				<!-- Framework Maximum Value (BT-709): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 
-				<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsCode -->
-				<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsNumeric -->
+				<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
+				<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="received-submissions-type"/>
 
-				<!-- Contract Identifier Reference (OPT-315): eForms documentation cardinality (LotResult) = * | efac:SettledContract​/cbc:ID -->
+				<!-- Contract Identifier Reference (OPT-315): eForms documentation cardinality (LotResult) = * -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Identifier Reference (OPT-315)'"/></xsl:call-template>
 				<xsl:variable name="contract-ids" select="$contracts-unique-with-id//contract[awards/path = $paths]/contract-id/fn:string()"/>
 				<xsl:for-each select="$contract-ids">
@@ -272,8 +272,8 @@ These instructions can be un-commented to show the variables
 					</efac:SettledContract>
 				</xsl:for-each>
 
-				<!-- Vehicle Type (OPT-155): eForms documentation cardinality (LotResult) = * | efac:StrategicProcurementStatistics​/efbc:StatisticsCode -->
-				<!-- Vehicle Numeric (OPT-156): eForms documentation cardinality (LotResult) = * | efac:StrategicProcurementStatistics​/efbc:StatisticsNumeric -->
+				<!-- Vehicle Type (OPT-155): eForms documentation cardinality (LotResult) = * -->
+				<!-- Vehicle Numeric (OPT-156): eForms documentation cardinality (LotResult) = * -->
 				<!-- Result Lot Identifier (BT-13713): eForms documentation cardinality (LotResult) = 1 -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Result Lot Identifier (BT-13713)'"/></xsl:call-template>
 				<!-- Get Result Lot Identifier from first Lot with matching LOT_NO. If no matching Lot, use AWARD_CONTRACT/LOT_NO -->
@@ -290,7 +290,7 @@ These instructions can be un-commented to show the variables
 			<efac:LotTender>
 				<xsl:variable name="path" select="fn:string(path)"/>
 				<!-- The Tender Technical Identifier (OPT-321) is determined from the number of preceding AWARD_CONTRACT with AWARDED_CONTRACT -->
-				<!-- Tender Technical Identifier (OPT-321): eForms documentation cardinality (LotTender) = 1 | cbc:ID -->
+				<!-- Tender Technical Identifier (OPT-321): eForms documentation cardinality (LotTender) = 1 -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tender Technical Identifier (OPT-321)'"/></xsl:call-template>
 				<cbc:ID schemeName="tender"><xsl:value-of select="lot-tender-id"/></cbc:ID>
 				<!-- Tender Rank (BT-171): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34, 36, 37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes | No equivalent element in TED XML -->
@@ -298,18 +298,18 @@ These instructions can be un-commented to show the variables
 				<!-- Kilometers Public Transport (OPP-080): eForms documentation cardinality (LotTender) = 1 (T02 form only) -->
 				<!-- Tender Variant (BT-193): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtype 30; Optional (O or EM or CM) for CAN subtypes 29, 31-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | No equivalent element in TED XML -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tender Variant (BT-193)'"/></xsl:call-template>
-				<!-- Tender Value (BT-720): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and 35; Optional (O or EM or CM) for CAN subtypes 25-35 and E4; Forbidden (blank) for all other subtypes cac:LegalMonetaryTotal​/cbc:PayableAmount *ORDER* -->
+				<!-- Tender Value (BT-720): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 35 and 38-40; Optional (O or EM or CM) for CAN subtypes 25-35 and E4; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tender Value (BT-720)'"/></xsl:call-template>
 				<xsl:call-template name="values"/>
 
 
-				<!-- Tender Payment Value (BT-779): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtype E5; Forbidden (blank) for all other subtypes efac:AggregatedAmounts​/cbc:PaidAmount *ORDER* -->
-				<!-- Tender Payment Value Additional Information (BT-780): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CM subtype E5; Forbidden (blank) for all other subtypes efac:AggregatedAmounts​/efbc:PaidAmountDescription *ORDER* -->
-				<!-- Tender Penalties (BT-782): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtype E5; Forbidden (blank) for all other subtypes efac:AggregatedAmounts​/efbc:PenaltiesAmount *ORDER* -->
+				<!-- Tender Payment Value (BT-779): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtype E5; Forbidden (blank) for all other subtypes -->
+				<!-- Tender Payment Value Additional Information (BT-780): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CM subtype E5; Forbidden (blank) for all other subtypes -->
+				<!-- Tender Penalties (BT-782): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtype E5; Forbidden (blank) for all other subtypes -->
 				
-				<!-- Concession Revenue Buyer (BT-160): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes efac:ConcessionRevenue​/efbc:RevenueBuyerAmount -->
-				<!-- Concession Revenue User (BT-162): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes efac:ConcessionRevenue​/efbc:RevenueUserAmount -->
-				<!-- Concession Value Description (BT-163): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes efac:ConcessionRevenue​/efbc:ValueDescription -->
+				<!-- Concession Revenue Buyer (BT-160): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
+				<!-- Concession Revenue User (BT-162): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
+				<!-- Concession Value Description (BT-163): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="concession"/>
 				
 				<!-- Penalties and Rewards Code (OPP-033): eForms documentation cardinality (LotTender) = ? (T02 form only) | efac:ContractTerm​/efbc:TermCode[@listName='rewards-penalties'] -->
@@ -317,12 +317,12 @@ These instructions can be un-commented to show the variables
 				<!-- Contract conditions Code (OPP-030): eForms documentation cardinality (LotTender) = * (T02 form only) | efac:ContractTerm​/efbc:TermCode[@listName='contract-term'] -->
 				<!-- Contract conditions Description (other than revenue allocation) (OPP-031): eForms documentation cardinality (LotTender) = * (T02 form only) | efac:ContractTerm[not(efbc:TermCode​/text()='all-rev-tic')][efbc:TermCode​/@listName='contract-term']​/efbc:TermDescription -->
 				<!-- Revenues Allocation (OPP-032): eForms documentation cardinality (LotTender) = ? (T02 form only) | efac:ContractTerm[efbc:TermCode​/text()='all-rev-tic']​/efbc:TermPercent -->
-				<!-- Country Origin (BT-191): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtype 30; Forbidden (blank) for all other subtypes efac:Origin​/efbc:AreaCode *ORDER* -->
+				<!-- Country Origin (BT-191): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtype 30; Forbidden (blank) for all other subtypes -->
 
 				<!-- Subcontracting Value (BT-553), Subcontracting Description (BT-554), Subcontracting Percentage (BT-555), Subcontracting (BT-773), Subcontracting Percentage Known (BT-731), Subcontracting Value Known (BT-730) -->
 				<xsl:call-template name="subcontracting"/>
 
-				<!-- Tendering Party ID Reference (OPT-310): eForms documentation cardinality (LotTender) = 1 | efac:TenderingParty​/cbc:ID -->
+				<!-- Tendering Party ID Reference (OPT-310): eForms documentation cardinality (LotTender) = 1 -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tendering Party ID Reference (OPT-310)'"/></xsl:call-template>
 				<xsl:variable name="tendering-party-id" select="$ted-contractor-groups-unique-with-id//ted-contractor-group/path[fn:contains(., $path)]/../tendering-party-id"/>
 				<efac:TenderingParty>
@@ -344,7 +344,7 @@ These instructions can be un-commented to show the variables
 					</xsl:choose>
 				</efac:TenderLot>
 
-				<!-- Tender Identifier (BT-3201): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 25-28; 	Forbidden (blank) for all other subtypes efac:TenderReference​/cbc:ID | No equivalent element in TED XML -->
+				<!-- Tender Identifier (BT-3201): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 25-28; 	Forbidden (blank) for all other subtypes | No equivalent element in TED XML -->
 			</efac:LotTender>
 		</xsl:for-each>
 
@@ -355,15 +355,15 @@ These instructions can be un-commented to show the variables
 				<!-- Contract Technical Identifier (OPT-316): eForms documentation cardinality (SettledContract) = 1 -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Technical Identifier (OPT-316)'"/></xsl:call-template>
 				<cbc:ID schemeName="contract"><xsl:value-of select="contract-id"/></cbc:ID>
-				<!-- Winner Decision Date (BT-1451): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtype 36, Optional (O or EM or CM) for CAN subtypes 25-35, 37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:AwardDate -->
+				<!-- Winner Decision Date (BT-1451): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtype 36, Optional (O or EM or CM) for CAN subtypes 25-35, 37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Winner Decision Date (BT-1451)'"/></xsl:call-template>
-			<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes cbc:IssueDate -->
+			<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes-->
 			<xsl:call-template name="contract-conclusion-date"/>
-			<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
+			<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Title (BT-721)'"/></xsl:call-template>
 			<xsl:call-template name="settled-contract-title"/>
 
-			<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:URI -->
+			<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 
 			<!-- Contract Framework Agreement (BT-768): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-35 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Framework Agreement (BT-768)'"/></xsl:call-template>
@@ -376,19 +376,19 @@ These instructions can be un-commented to show the variables
 				<efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
 			</xsl:if>
 
-			<!-- Framework Notice Identifier (OPT-100): eForms documentation cardinality (SettledContract) = ? | cac:NoticeDocumentReference/cbc:ID -->
-			<!-- Signatory Identifier Reference (OPT-300): eForms documentation cardinality (SettledContract) = + | cac:SignatoryParty​/cac:PartyIdentification​/cbc:ID -->
+			<!-- Framework Notice Identifier (OPT-100): eForms documentation cardinality (SettledContract) = ? -->
+			<!-- Signatory Identifier Reference (OPT-300): eForms documentation cardinality (SettledContract) = + -->
 			<!-- Contract Identifier (BT-150): eForms documentation cardinality (SettledContract) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Identifier (BT-150)'"/></xsl:call-template>
 			<efac:ContractReference>
 				<cbc:ID><xsl:value-of select="@contract-number"/></cbc:ID>
 			</efac:ContractReference>
 
-			<!-- Assets related contract extension indicator (OPP-020): eForms documentation cardinality (SettledContract) = 1 (T02 form only) | efac:DurationJustification​/efbc:ExtendedDurationIndicator -->
-			<!-- Used asset (OPP-021): eForms documentation cardinality (SettledContract) = * (T02 form only) | efac:DurationJustification​/efac:AssetsList​/efac:Asset​/efbc:AssetDescription -->
-			<!-- Significance (%) (OPP-022): eForms documentation cardinality (SettledContract) = * (T02 form only) | efac:DurationJustification​/efac:AssetsList​/efac:Asset​/efbc:AssetSignificance -->
-			<!-- Predominance (%) (OPP-023): eForms documentation cardinality (SettledContract) = * (T02 form only) | efac:DurationJustification​/efac:AssetsList​/efac:Asset​/efbc:AssetPredominance -->
-			<!-- Contract Tender Identifier (BT-3202): eForms documentation cardinality (SettledContract) = + | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes efac:LotTender​/cbc:ID *ORDER* -->
+			<!-- Assets related contract extension indicator (OPP-020): eForms documentation cardinality (SettledContract) = 1 (T02 form only) -->
+			<!-- Used asset (OPP-021): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
+			<!-- Significance (%) (OPP-022): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
+			<!-- Predominance (%) (OPP-023): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
+			<!-- Contract Tender Identifier (BT-3202): eForms documentation cardinality (SettledContract) = + | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Tender Identifier (BT-3202)'"/></xsl:call-template>
 			<xsl:for-each select="awards/path">
 				<xsl:variable name="path" select="fn:string(.)"/>
@@ -397,8 +397,8 @@ These instructions can be un-commented to show the variables
 					<cbc:ID schemeName="tender"><xsl:value-of select="$lot-tender-id"/></cbc:ID>
 				</efac:LotTender>
 			</xsl:for-each>
-			<!-- Contract EU Funds Identifier (BT-5011): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:Funding​/cbc:FundingProgramCode -->
-			<!-- Contract EU Funds Name (BT-722): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:Funding​/cbc:FundingProgram -->
+			<!-- Contract EU Funds Identifier (BT-5011): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+			<!-- Contract EU Funds Name (BT-722): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			</efac:SettledContract>
 		</xsl:for-each>
 
@@ -406,7 +406,7 @@ These instructions can be un-commented to show the variables
 		<!-- Tendering Parties -->
 		<xsl:for-each select="$ted-contractor-groups-unique-with-id//contractor-group">
 			<efac:TenderingParty>
-				<!-- Tendering Party Identifier (OPT-210): eForms documentation cardinality (TenderingParty) = 1 | cbc:ID -->
+				<!-- Tendering Party Identifier (OPT-210): eForms documentation cardinality (TenderingParty) = 1 -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tendering Party Identifier (OPT-210)'"/></xsl:call-template>
 				<cbc:ID schemeName="tendering-party"><xsl:value-of select="../tendering-party-id"/></cbc:ID>
 				<xsl:variable name="ted-contractor-count" select="fn:count(ted-contractor)"/>
@@ -477,7 +477,7 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 <xsl:template name="contract-conclusion-date">
-	<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes cbc:IssueDate -->
+	<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Conclusion Date (BT-145)'"/></xsl:call-template>
 	<!-- Get list of unique values for DATE_CONCLUSION_CONTRACT for this group -->
 	<xsl:variable name="date-conclusion-contract-list" select="fn:distinct-values(.//*:AWARDED_CONTRACT/*:DATE_CONCLUSION_CONTRACT)" as="xs:string*"/>
@@ -501,7 +501,7 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 <xsl:template name="settled-contract-title">
-	<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:Title -->
+	<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 	<!-- efac:SettledContract may contain information from multiple AWARD_CONTRACT elements, grouped by CONTRACT_NO. Thus multiple distinct TITLE elements are possible -->
 	<!-- As the context of this template is within a variable, to process multilingual versions of the context, it is required to find the same elements within the context of the $ted-form-main-element variable -->
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(awards/ted:AWARD_CONTRACT/ted:TITLE/ted:P, ' '))"/>
@@ -520,7 +520,7 @@ These instructions can be un-commented to show the variables
 	<efbc:DPSTerminationIndicator>true</efbc:DPSTerminationIndicator>
 </xsl:template>
 
-<!-- Not Awarded Reason (BT-144): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:DecisionReason​/efbc:DecisionReasonCode -->
+<!-- Not Awarded Reason (BT-144): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 <xsl:template match="ted:PROCUREMENT_DISCONTINUED">
 	<xsl:variable name="element-name" select="fn:local-name(.)"/>
 	<xsl:variable name="justification" select="$mappings//non-award-justifications/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
@@ -546,7 +546,7 @@ These instructions can be un-commented to show the variables
 	<xsl:param name="result-lot-identifier"/>
 	<!-- set variable to the set of all VAL_ESTIMATED_TOTAL elements for this lot-result element -->
 	<xsl:variable name="lot-result-val-estimated-total" select="awards/ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_ESTIMATED_TOTAL"/>
-	<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:FrameworkAgreementValues​/cbc:EstimatedMaximumValueAmount -->
+	<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Estimated Value (BT-660)'"/></xsl:call-template>
 	<!-- if there is at least one VAL_ESTIMATED_TOTAL within this lot-result element -->
 	<xsl:if test="$lot-result-val-estimated-total">
@@ -582,8 +582,8 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 <xsl:template name="received-submissions-type">
-	<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsCode -->
-	<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes efac:ReceivedSubmissionsStatistics​/efbc:StatisticsNumeric -->
+	<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
+	<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 	<xsl:choose>
 		<xsl:when test="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:TENDERS/*">
 			<xsl:for-each select="awards/ted:AWARD_CONTRACT[1]/ted:AWARDED_CONTRACT/ted:TENDERS/*">
@@ -678,33 +678,33 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 
-<!-- Tender Value (BT-720): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and 35; Optional (O or EM or CM) for CAN subtypes 25-35 and E4; Forbidden (blank) for all other subtypes cac:LegalMonetaryTotal​/cbc:PayableAmount *ORDER* -->
+<!-- Tender Value (BT-720): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 35 and 38-40; Optional (O or EM or CM) for CAN subtypes 25-35 and E4; Forbidden (blank) for all other subtypes -->
 <xsl:template name="values">
 	<xsl:choose>
 		<xsl:when test="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_TOTAL">
 			<xsl:variable name="ted-value" select="fn:normalize-space(ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_TOTAL)"/>
 			<xsl:variable name="currency" select="fn:normalize-space(ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VALUES/ted:VAL_TOTAL/@CURRENCY)"/>
 			<cac:LegalMonetaryTotal>
-			<cbc:PayableAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:PayableAmount>
+				<cbc:PayableAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:PayableAmount>
 			</cac:LegalMonetaryTotal>
 		</xsl:when>
 		<xsl:when test="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_BARGAIN_PURCHASE">
 			<xsl:variable name="ted-value" select="fn:normalize-space(ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_BARGAIN_PURCHASE)"/>
 			<xsl:variable name="currency" select="fn:normalize-space(ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_BARGAIN_PURCHASE/@CURRENCY)"/>
 			<cac:LegalMonetaryTotal>
-			<cbc:PayableAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:PayableAmount>
+				<cbc:PayableAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:PayableAmount>
 			</cac:LegalMonetaryTotal>
 		</xsl:when>
-		<xsl:when test="$eforms-notice-subtype = ('38','39','40','35')">
-			<!-- WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 38-40 and 35, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML. -->
-			<xsl:variable name="message">WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 38-40 and 35, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML.</xsl:variable>
+		<xsl:when test="$eforms-notice-subtype = ('35','38','39','40')">
+			<!-- WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 35 and 38-40, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML. -->
+			<xsl:variable name="message">WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 35 and 38-40, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML.</xsl:variable>
 			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 		</xsl:when>
 	</xsl:choose>	
 </xsl:template>
 
 <xsl:template name="subcontracting">
-<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermCode -->
+<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting (BT-773)'"/></xsl:call-template>
 	<xsl:variable name="is-subcontracted">
 		<xsl:choose>
@@ -715,23 +715,23 @@ These instructions can be un-commented to show the variables
 	<xsl:choose>
 		<xsl:when test="$is-subcontracted = ('yes')">
 			<efac:SubcontractingTerm>
-			<!-- Subcontracting Value (BT-553): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermAmount -->
+			<!-- Subcontracting Value (BT-553): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Value (BT-553)'"/></xsl:call-template>
 			<xsl:apply-templates select="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_SUBCONTRACTING"/>
 
-			<!-- Subcontracting Description (BT-554): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermDescription -->
+			<!-- Subcontracting Description (BT-554): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Description (BT-554)'"/></xsl:call-template>
 			<xsl:apply-templates select="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:INFO_ADD_SUBCONTRACTING"/>
 
-			<!-- Subcontracting Percentage (BT-555): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermPercent -->
+			<!-- Subcontracting Percentage (BT-555): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Percentage (BT-555)'"/></xsl:call-template>
 			<xsl:apply-templates select="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:PCT_SUBCONTRACTING"/>
 
-			<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermCode -->
+			<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting (BT-773)'"/></xsl:call-template>
 			<efbc:TermCode listName="applicability"><xsl:value-of select="$is-subcontracted"/></efbc:TermCode>
 
-			<!-- Subcontracting Percentage Known (BT-731): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm/efbc:PercentageKnownIndicator -->
+			<!-- Subcontracting Percentage Known (BT-731): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Percentage Known (BT-731)'"/></xsl:call-template>
 			<xsl:choose>
 					<xsl:when test="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:PCT_SUBCONTRACTING">
@@ -742,7 +742,7 @@ These instructions can be un-commented to show the variables
 					</xsl:otherwise>
 				</xsl:choose>
 
-				<!-- Subcontracting Value Known (BT-730): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:ValueKnownIndicator -->
+				<!-- Subcontracting Value Known (BT-730): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Value Known (BT-730)'"/></xsl:call-template>
 				<xsl:choose>
 					<xsl:when test="ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:VAL_SUBCONTRACTING">
@@ -756,43 +756,43 @@ These instructions can be un-commented to show the variables
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('29', '30', '31')">
 			<efac:SubcontractingTerm>
-			<!-- Subcontracting Value (BT-553): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermAmount -->
+			<!-- Subcontracting Value (BT-553): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Value (BT-553)'"/></xsl:call-template>
 
-			<!-- Subcontracting Description (BT-554): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermDescription -->
+			<!-- Subcontracting Description (BT-554): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Description (BT-554)'"/></xsl:call-template>
 
-			<!-- Subcontracting Percentage (BT-555): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermPercent -->
+			<!-- Subcontracting Percentage (BT-555): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Percentage (BT-555)'"/></xsl:call-template>
 
-			<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermCode -->
+			<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting (BT-773)'"/></xsl:call-template>
 			<efbc:TermCode listName="applicability"><xsl:value-of select="$is-subcontracted"/></efbc:TermCode>
 
-				<!-- Subcontracting Percentage Known (BT-731): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm/efbc:PercentageKnownIndicator -->
+				<!-- Subcontracting Percentage Known (BT-731): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Percentage Known (BT-731)'"/></xsl:call-template>
 
-			<!-- Subcontracting Value Known (BT-730): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:ValueKnownIndicator -->
+			<!-- Subcontracting Value Known (BT-730): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Value Known (BT-730)'"/></xsl:call-template>
 			</efac:SubcontractingTerm>
 		</xsl:when>
 		<xsl:otherwise>
-			<!-- Subcontracting Value (BT-553): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermAmount -->
+			<!-- Subcontracting Value (BT-553): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Value (BT-553)'"/></xsl:call-template>
 
-			<!-- Subcontracting Description (BT-554): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermDescription -->
+			<!-- Subcontracting Description (BT-554): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Description (BT-554)'"/></xsl:call-template>
 
-			<!-- Subcontracting Percentage (BT-555): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermPercent -->
+			<!-- Subcontracting Percentage (BT-555): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Percentage (BT-555)'"/></xsl:call-template>
 
-			<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:TermCode -->
+			<!-- Subcontracting (BT-773): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-31; Optional (O or EM or CM) for CAN subtypes 25-28, 32-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting (BT-773)'"/></xsl:call-template>
 
-			<!-- Subcontracting Percentage Known (BT-731): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm/efbc:PercentageKnownIndicator -->
+			<!-- Subcontracting Percentage Known (BT-731): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Percentage Known (BT-731)'"/></xsl:call-template>
 
-			<!-- Subcontracting Value Known (BT-730): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes efac:SubcontractingTerm​/efbc:ValueKnownIndicator -->
+			<!-- Subcontracting Value Known (BT-730): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Subcontracting Value Known (BT-730)'"/></xsl:call-template>
 		</xsl:otherwise>
 	</xsl:choose>
@@ -822,8 +822,8 @@ These instructions can be un-commented to show the variables
 	<efbc:TermPercent><xsl:value-of select="$ted-value"/></efbc:TermPercent>
 </xsl:template>
 
-<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:TotalAmount -->
-<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes cbc:EstimatedOverallFrameworkContractsAmount -->
+<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 <!--If  the CAN TED XML notice  contains the element FRAMEWORK, then VAL_TOTAL should be mapped to BT-118 Notice Framework Value. Otherwise, VAL_TOTAL should be mapped to BT-161 Notice Value-->
 <xsl:template name="notice-values">
 	<xsl:choose>
