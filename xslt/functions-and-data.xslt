@@ -13,9 +13,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- include FunctX XSLT Function Library -->
 <xsl:include href="lib/functx-1.0.1-doc.xsl"/>
 
+<!-- application parameters -->
+<xsl:param name="showwarnings" select="1" as="xs:integer"/>
+<xsl:param name="includewarnings" select="1" as="xs:integer"/>
+<xsl:param name="includecomments" select="1" as="xs:integer"/>
+
+
 <!-- MAPPING FILES -->
 	
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
+<xsl:variable name="translations" select="fn:document('translations.xml')"/>
+<xsl:variable name="country-codes-map" select="fn:document('countries-map.xml')"/>
+<xsl:variable name="language-codes-map" select="fn:document('languages-map.xml')"/>
 
 
 
@@ -23,6 +32,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:variable name="newline" select="'&#10;'"/>
 <xsl:variable name="tab" select="'&#09;'"/>
+
+<xsl:variable name="source-document" select="fn:base-uri()"/>
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
@@ -37,10 +48,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:variable name="ted-form-element-name" select="$ted-form-main-element/fn:local-name()"/> <!-- F06_2014 or CONTRACT_DEFENCE or MOVE or OTH_NOT or ... -->
 <!-- Variable ted-form-name holds the name of the main form element as held in the @FORM attribute -->
 <xsl:variable name="ted-form-name" select="$ted-form-main-element/fn:string(@FORM)"/><!-- F06 or 17 or T02 or ... -->
-<!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element. -->
+<!-- Variable ted-form-element-xpath holds the XPath with positional predicates of the main form element -->
+<xsl:variable name="ted-form-element-xpath" select="functx:path-to-node-with-pos($ted-form-main-element)"/>
+<!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element -->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
-<!-- Variable ted-form-document-code holds the value of the @TYPE attribute of the NOTICE element -->
-<xsl:variable name="ted-form-document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+<!-- Variable document-code holds the value of the @TYPE attribute of the NOTICE element -->
+<xsl:variable name="document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
 <!-- Variable ted-form-additional-languages holds the values of the @LG attribute of the remaining form elements -->
@@ -58,9 +71,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:choose>
 </xsl:variable>
 
+<!-- Variable directive holds the value of the @VALUE attribute of the element DIRECTIVE, if it exists. Othewise it holds the empty string -->
+<xsl:variable name="directive" select="fn:string(/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:DIRECTIVE/@VALUE)"/>
+
+
 <!-- Variable eforms-notice-subtype holds the computed eForms notice subtype value -->
 <xsl:variable name="eforms-notice-subtype">
-	<xsl:value-of select="opfun:get-eforms-notice-subtype($ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $ted-form-document-code)"/>
+	<xsl:value-of select="opfun:get-eforms-notice-subtype($ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $directive, $document-code)"/>
 </xsl:variable>
 
 <!-- Variable eforms-subtypes-pin holds the values of eForms notice subtypes for notices of Document Type PIN -->
@@ -93,36 +110,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
 <xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
-
-<!-- Variable language-codes-map holds a mapping of language codes from TED two-letter format to eForms three-letter format -->
-<xsl:variable name="language-codes-map">
-	<xsl:variable name="source-language-file" select="fn:document('languages.xml')"/>
-	<languages>
-		<xsl:for-each select="$source-language-file//record[@deprecated='false'][op-mapped-code/@source='TED']">
-			<language>
-				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
-				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
-				<ted><xsl:value-of select="$ted-form"/></ted>
-				<eforms><xsl:value-of select="$eforms-form"/></eforms>
-			</language>
-		</xsl:for-each>
-	</languages>
-</xsl:variable>
-
-<!-- Variable country-codes-map holds a mapping of country codes from TED two-letter format to eForms three-letter format -->
-<xsl:variable name="country-codes-map">
-	<xsl:variable name="source-country-file" select="fn:document('countries.xml')"/>
-	<countries>
-		<xsl:for-each select="$source-country-file//record[@deprecated='false'][op-mapped-code/@source='TED']">
-			<country>
-				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
-				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
-				<ted><xsl:value-of select="$ted-form"/></ted>
-				<eforms><xsl:value-of select="$eforms-form"/></eforms>
-			</country>
-		</xsl:for-each>
-	</countries>
-</xsl:variable>
 
 <!-- Variable lot-numbers-map holds a mapping of the TED XML Lots (OBJECT_DESCR XPath) to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
@@ -224,11 +211,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:param name="ted-form-element"/>
 	<xsl:param name="ted-form-name"/>
 	<xsl:param name="ted-form-notice-type"/>
-	<xsl:param name="ted-form-legal-basis"/><!-- could be value 'ANY' -->
+	<xsl:param name="legal-basis"/><!-- could be value 'ANY' -->
+	<xsl:param name="directive"/><!-- could be value 'ANY' -->
 	<xsl:param name="ted-form-document-code"/>
 	<xsl:variable name="notice-mapping-file" select="fn:document('notice-type-mapping.xml')"/>
 	<!-- get rows from notice-type-mapping.xml with values matching the given parameters -->
-	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $ted-form-legal-basis) or (legal-basis eq 'ANY')][(document-code eq $ted-form-document-code) or (document-code eq 'ANY')]"/>
+	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $legal-basis) or (legal-basis eq 'ANY')][(directive eq $directive) or (directive eq 'ANY')][(document-code eq $ted-form-document-code) or (document-code eq 'ANY')]"/>
 	<!-- exit with an error if there is not exactly one matching row -->
 	<xsl:if test="fn:count($mapping-row) != 1">
 		<xsl:message terminate="yes">
@@ -237,11 +225,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:when test="fn:count($mapping-row) = 0">no</xsl:when>
 				<xsl:otherwise><xsl:value-of select="fn:count($mapping-row)"/> different</xsl:otherwise>
 			</xsl:choose>
-			<xsl:text> eForms subtype mappings for this Notice: </xsl:text><xsl:value-of select="$newline"/>
+			<xsl:text> eForms subtype mappings for this Notice: </xsl:text><xsl:value-of select="$source-document"/><xsl:value-of select="$newline"/>
 			<xsl:text>TED form element name: </xsl:text><xsl:value-of select="$ted-form-element"/><xsl:value-of select="$newline"/>
 			<xsl:text>TED form name: </xsl:text><xsl:value-of select="$ted-form-name"/><xsl:value-of select="$newline"/>
 			<xsl:text>TED form notice type: </xsl:text><xsl:value-of select="$ted-form-notice-type"/><xsl:value-of select="$newline"/>
-			<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$ted-form-legal-basis"/><xsl:value-of select="$newline"/>
+			<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$legal-basis"/><xsl:value-of select="$newline"/>
+			<xsl:text>TED form directive: </xsl:text><xsl:value-of select="$directive"/><xsl:value-of select="$newline"/>
 			<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
 		</xsl:message>
 	</xsl:if>
@@ -251,21 +240,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:choose>
 		<xsl:when test="$eforms-subtype eq ''">
 			<xsl:message terminate="yes">
-				<xsl:text>ERROR: no eForms subtype mapping available for this Notice:</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:text>ERROR: no eForms subtype mapping available for this Notice:</xsl:text><xsl:value-of select="$source-document"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form element name: </xsl:text><xsl:value-of select="$ted-form-element"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form name: </xsl:text><xsl:value-of select="$ted-form-name"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form notice type: </xsl:text><xsl:value-of select="$ted-form-notice-type"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$ted-form-legal-basis"/><xsl:value-of select="$newline"/>
+				<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$legal-basis"/><xsl:value-of select="$newline"/>
+				<xsl:text>TED form directive: </xsl:text><xsl:value-of select="$directive"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
 			</xsl:message>
 		</xsl:when>
 		<xsl:when test="$eforms-subtype eq 'ERROR'">
 			<xsl:message terminate="yes">
-				<xsl:text>ERROR: The combination of data in this Notice is considered an error:</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:text>ERROR: The combination of data in this Notice is considered an error:</xsl:text><xsl:value-of select="$source-document"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form element name: </xsl:text><xsl:value-of select="$ted-form-element"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form name: </xsl:text><xsl:value-of select="$ted-form-name"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form notice type: </xsl:text><xsl:value-of select="$ted-form-notice-type"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$ted-form-legal-basis"/><xsl:value-of select="$newline"/>
+				<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$legal-basis"/><xsl:value-of select="$newline"/>
+				<xsl:text>TED form directive: </xsl:text><xsl:value-of select="$directive"/><xsl:value-of select="$newline"/>
 				<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
 			</xsl:message>
 		</xsl:when>
@@ -313,5 +304,119 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="prefix" select="fn:prefix-from-QName(fn:node-name($elem))"/>
 	<xsl:value-of select="fn:string-join(($prefix,$name),':')"/>
 </xsl:function>
-	
+
+<!-- Function opfun:name-with-pos returns the name of the given element, and its sequence number as a predicate if there are more than one instance within its parent -->
+<!-- Adapted from functx:path-to-node-with-pos, FunctX XSLT Function Library -->
+<xsl:function name="opfun:name-with-pos" as="xs:string">
+  <xsl:param name="element" as="element()"/>
+  <xsl:variable name="sibsOfSameName" select="$element/../*[name() = name($element)]"/>
+  <xsl:sequence select="concat(name($element),
+         if (count($sibsOfSameName) &lt;= 1)
+         then ''
+         else concat('[',functx:index-of-node($sibsOfSameName,$element),']'))"/>
+</xsl:function>
+
+
+<!-- Message Functions -->
+
+<xsl:template name="report-warning">
+	<xsl:param name="message" as="xs:string"/>
+	<xsl:if test="$showwarnings=1">
+		<xsl:message terminate="no"><xsl:value-of select="$message"/></xsl:message>
+	</xsl:if>
+	<xsl:if test="$includewarnings=1">
+		<xsl:comment><xsl:value-of select="$message"/></xsl:comment>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template name="include-comment">
+	<xsl:param name="comment" as="xs:string"/>
+	<xsl:if test="$includecomments=1">
+		<xsl:comment><xsl:value-of select="$comment"/></xsl:comment>
+	</xsl:if>
+</xsl:template>
+
+
+<xsl:template name="find-element">
+	<xsl:param name="context" as="element()"/>
+	<xsl:param name="relative-context" as="xs:string"/>
+	<xsl:variable name="child-name-and-pos" select="functx:substring-before-if-contains($relative-context, '/')"/>
+	<xsl:variable name="next-context" select="fn:substring-after($relative-context, '/')"/>
+	<xsl:variable name="element" select="$context/*[opfun:name-with-pos(.) = $child-name-and-pos]"/>
+	<xsl:variable name="result">
+		<xsl:choose>
+			<xsl:when test="not($element)"><xsl:sequence select="()"/></xsl:when>
+			<xsl:when test="$next-context">
+				<xsl:call-template name="find-element">
+					<xsl:with-param name="context" select="$element"/>
+					<xsl:with-param name="relative-context" select="$next-context"/>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:otherwise><xsl:sequence select="$element"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:sequence select="$result"/>
+</xsl:template>
+
+<xsl:template name="multilingual">
+	<xsl:param name="contexts" as="node()*"/>
+	<xsl:param name="local"/>
+	<xsl:param name="element"/>
+	<xsl:variable name="relative-contexts" select="for $context in $contexts return fn:substring-after(functx:path-to-node-with-pos($context), fn:concat($ted-form-element-xpath, '/'))"/>
+	<xsl:choose>
+		<xsl:when test="$ted-form-additional-elements">
+			<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
+				<xsl:variable name="language" select="opfun:get-eforms-language(@LG)"/>
+				<xsl:variable name="form-element" select="."/>
+				<xsl:variable name="text-content">
+				<xsl:for-each select="$relative-contexts">
+					<xsl:variable name="relative-context" select="."/>
+					<xsl:variable name="this-context" select="fn:concat(functx:path-to-node-with-pos($form-element), .)"/>
+					<xsl:variable name="parent">
+						<xsl:call-template name="find-element">
+							<xsl:with-param name="context" select="$form-element"/>
+							<xsl:with-param name="relative-context" select="$relative-context"/>
+						</xsl:call-template>
+					</xsl:variable>
+					<xsl:choose>
+						<xsl:when test="$local eq ''">
+							<xsl:value-of select="fn:normalize-space($parent/*)"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*[fn:local-name() = $local], ' '))"/>
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:text> </xsl:text>
+				</xsl:for-each>
+				</xsl:variable>
+				<xsl:element name="{$element}">
+					<xsl:attribute name="languageID" select="$language"/>
+					<xsl:value-of select="fn:normalize-space(fn:string-join($text-content, ' '))"/>
+				</xsl:element>
+			</xsl:for-each>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:variable name="text" as="xs:string">
+				<xsl:choose>
+					<xsl:when test="$local eq ''">
+						<xsl:value-of select="fn:normalize-space($contexts)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="fn:normalize-space(fn:string-join($contexts/*[fn:local-name() = $local], ' '))"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:element name="{$element}">
+				<xsl:attribute name="languageID" select="$eforms-first-language"/>
+				<xsl:value-of select="$text"/>
+			</xsl:element>
+		</xsl:otherwise>
+	</xsl:choose>
+<!--
+			<cbc:paul><xsl:value-of select="$context"/></cbc:paul>
+			<cbc:paul><xsl:value-of select="$ted-form-element-xpath"/></cbc:paul>
+			<cbc:paul><xsl:value-of select="$relative-context"/></cbc:paul>
+-->
+</xsl:template>
+
 </xsl:stylesheet>

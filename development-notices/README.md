@@ -37,17 +37,32 @@ This table lists the TED XML files selected to test development of the Converter
 | 353820_2021.xml | F02 | CN |  |  |
 | 352444_2021.xml | F02 | CN |  |  |
 | 352458_2021.xml | F02 | CN |  |  |
-| 354625_2021.xml | F12 | CN |  |  |
+| 354625_2021.xml | F12 | CN | Award Criteria | MEMBER_NAME |
 | 354626_2021.xml | F12 | CN |  |  |
 | 354823_2021.xml | F12 | CN |  |  |
 | 352425_2021.xml | F03 | CAN | Contract award | PT_AWARD_CONTRACT_WITHOUT_CALL |
 | 353237_2021.xml | F03 | CAN | Contract award | TERMINATION_PIN |
+| 352732_2021.xml | F03 | CAN |  |  |
+| 354339_2021.xml | F03 | CAN |  |  |
 | 20-157399-001-EXP.xml | F03 | CAN | SettledContract | No DPS, no FRAMEWORK |
 | 20-157543-001-EXP.xml | F03 | CAN | SettledContract | FRAMEWORK |
 | 22-086633-001-EXP.xml | F03 | CAN | SettledContract | Multiple AWARD_CONTRACT collated into one SettledContract |
 | 22-091559-001-EXP.xml | F03 | CAN | SettledContract | NO_AWARDED_CONTRACT |
-
-
-
-
-
+| 21-139343-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_24_EU/AC/AC_PRICE |
+| 22-023722-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_24_EU/AC/AC_COST |
+| 21-158592-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_25_EU/AC/AC_PRICE |
+| 21-149886-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_23_EU |
+| 21-298854-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2009_81_EC/AC/AC_PRICE |
+| 22-073124-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2009_81_EC/AC/AC_CRITERIA |
+| 21-119282-001-EXP.xml | F24 | CAN | Award Criteria | AC/AC_CRITERION |
+| 21-205737-001-EXP.xml | F25 | CAN | Award Criteria | AC/AC_CRITERION |
+| 19-271873-001-EXP.xml | F03 | CAN | Framework | 109 Lots, 5 Awards |
+| 20-168879-001-EXP.xml | F03 | CAN | Performance analysis | 652 Lots, 1105 Awards |
+| 20-537923-001-EXP.xml | F03 | CAN | Performance analysis | 5 Lots, 178 Awards |
+| 22-104446-001-EXP.xml | F02 | CN | Multilingual | 3 ORIGINAL languages, 3 Lots |
+| 22-109282-001-EXP.xml | F03 | CAN | Multilingual | 1 ORIGINAL language, 23 TRANSLATION languages, 3 Lots, 6 Awards |
+| 21-419119-001-EXP.xml | F12 | CN | Multilingual | 1 ORIGINAL language, 23 TRANSLATION languages, DETAILS_PAYMENT and NUMBER_VALUE_PRIZE |
+| 22-011421-001-EXP.xml | F03 | CAN | Multilingual | 1 ORIGINAL language, 23 TRANSLATION languages, INFO_ADD_SUBCONTRACTING |
+| 21-635824-001-EXP.xml | F21 | CAN | Multilingual | 1 ORIGINAL language, 23 TRANSLATION languages, modified to add URL_NATIONAL_PROCEDURE |
+| 19-289373-001-EXP.xml | F22 | CN | Subtype mapping | Notice type QSU_CALL_COMPETITION |
+| 20-318547-001-EXP.xml | F22 | CN | Lot | QS/INDEFINITE_DURATION |

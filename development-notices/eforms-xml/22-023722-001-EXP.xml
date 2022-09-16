@@ -1,0 +1,1518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeResult><!--Notice Value (BT-161)-->
+                  <cbc:TotalAmount currencyID="GBP">21000000.00</cbc:TotalAmount>
+                  <!--Notice Framework Value (BT-118)-->
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0003</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">6000000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">4500000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">9000000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="GBP">12000000.00</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-02-20+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title languageID="ENG">Strategic and Lead Creative Agency</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>1</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-02-20+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title languageID="ENG">Online Media Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>2</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0003</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-02-20+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title languageID="ENG">Offline Media Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>3</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2020-02-20+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title languageID="ENG">Design, Marketing and Content Services</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>4</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">25</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://www.tourismni.com/</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Tourism Northern Ireland</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Linum Chambers, Bedford Square</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>BELFAST</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>BT2 7ES</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>SSDAdmin.CPD@finance-ni.gov.uk</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://etendersni.gov.uk/epps</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>TRAMWAY INVESTMENT HOLDINGS LIMITED</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>17 Gilford Road</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Dublin</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>4</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">IRL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+44 12060600</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>susanmcentegart@bbdo.ie</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://etendersni.gov.uk/epps</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>LOUD MOUTH MEDIA LTD</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Thomas House 14 -16 James Street South</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Belfast</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>BT2 7GA</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+44 2890997001</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>mark@loudmouth-media.com</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://etendersni.gov.uk/epps</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>MAMMOTH DESIGN CONSULTANTS LTD</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>84-94 Great Patrick Street</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Belfast</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>BT1 2LU</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+44 2890240250</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>sara.magee@mammoth.com</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>The UK does not have any such bodies with responsibility for appeal/mediation procedures. Instead; any challenges are dealt with by the High Court, Commercial Division, to which proceedings may be issued regarding alleged breaches of the PCR 2015 as amended.</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Belfast</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2022-01-13+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>https://etendersni.gov.uk/epps</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">neg-wo-call</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">2020/S 040-095930</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">ID 2342618</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">ID 2342618 DfE TNI - Advertising and Marketing Services</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="ENG">Following a competition advertised in the Official Journal of the EU on 29/09/2019 the Department for the Economy Tourism NI entered into a contract for the supply and delivery of its marketing and associated services, but due to the impact of Covid-19 the level of support required by the tourism industry has been unprecedented and unforeseen at the time of securing the contract. This contract has 8 months remaining on the initial contract period, with 3 x 12 month options to extend. Therefore, Tourism NI requires a variation to the value of the contract to avoid an imminent change in supplier which would incur substantial inconvenience/duplication of cost, and to ensure continuity of service to cover until 16/02/2024. This will allow sufficient time to retender the contract. Tourism NI wishes to increase the value of the contract by £10,500,000 ex VAT (50% of the original contract value), to cover requirements until 16/02/2024. Tourism NI is relying on the Regulation 72(1)(c) provision as the need for change could not have been foreseen by a “diligent” Department, the changes do not affect the overall nature of the contract or exceed 50% of the value of the original contract value. Covid-19 could not have been predicted; therefore, these increased requirements could not have been foreseen or accounted for when estimating the contract value at the time of tender. The services provided through the contract will remain in line with those specified at the time of going to tender. The proposed change to the estimated contract value does not exceed this threshold.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">The successful contractor’s performance on the contract will be regularly monitored in line with PGN 01/12. Contractors not delivering on contract requirements is a serious matter. It means the public purse is not getting what it is paying for. If a contractor fails to reach satisfactory levels of contract performance they will be given a specified time to improve. If, after the specified time, they still fail to reach satisfactory levels of contract performance, the matter will be escalated to senior management in CPD for further action. If this occurs and their performance still does not improve to satisfactory levels within the specified period, it may be regarded as an act of grave professional misconduct and they may be issued with a Certificate of Unsatisfactory Performance and the contract may be terminated. The issue of a Certificate of Unsatisfactory Performance will result in the contractor being excluded from all procurement competitions being undertaken by Centres of Procurement Expertise on behalf of bodies covered by the Northern Ireland Procurement Policy for a period of twelve months from the date of issue of the certificate.</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC1 Contract Management</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC2 Business Continuity</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>64</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC3 Presentation of Marketing Strategy</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC4 Average Hourly Rate</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">CPD complied with the Public Contracts Regulations 2015 (as amended) and incorporated a standstill period (i.e. a minimum of 10 calendar days) at the point information on the award of contract was communicated to tenderers. That notification provided full information on the award decision. This provided time for the unsuccessful tenderers to challenge the award decision before the contract was entered into.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Strategic and Lead Creative Agency</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">Tourism Northern Ireland wishes to appoint a Contractor or Contractors for the supply and delivery of its marketing and associated services. These requirements have been split into 4 Lots as detailed below. Whilst no spend is guaranteed against any of the Lots, the anticipated value of each Lot over the lifetime of the contract is detailed below. Lot 1: Strategic and Lead Creative Agency with an estimated contract value of £4m Lot 2: Online Media Services with an estimated contract value of £3m Lot 3: Offline Media Services with an estimated contract value of £6m Lot 4: Design, Marketing and Content Services with an estimated contract value of £8m.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341200</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341400</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:ContractExtension><!--Options Description (BT-54)-->
+            <cbc:OptionsDescription languageID="ENG">3 options to extend for periods of 1 year each</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>64</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC1 Digital Marketing Strategy</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC2 Contract Management</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC3 Business Continuity</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC4 Average Hourly Rate</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">CPD complied with the Public Contracts Regulations 2015 (as amended) and incorporated a standstill period (i.e. a minimum of 10 calendar days) at the point information on the award of contract was communicated to tenderers. That notification provided full information on the award decision. This provided time for the unsuccessful tenderers to challenge the award decision before the contract was entered into.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Online Media Services</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">Tourism Northern Ireland wishes to appoint a Contractor or Contractors for the supply and delivery of its marketing and associated services. These requirements have been split into 4 Lots as detailed below. Whilst no spend is guaranteed against any of the Lots, the anticipated value of each Lot over the lifetime of the contract is detailed below. Lot 1: Strategic and Lead Creative Agency with an estimated contract value of £4m Lot 2: Online Media Services with an estimated contract value of £3m Lot 3: Offline Media Services with an estimated contract value of £6m Lot 4: Design, Marketing and Content Services with an estimated contract value of £8m.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341200</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341400</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:ContractExtension><!--Options Description (BT-54)-->
+            <cbc:OptionsDescription languageID="ENG">3 options to extend for periods of 1 year each</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>48</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC1 Offline Media Strategy</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>16</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC2 Audience led</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC3 Contract Management</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC4 Business Continuity</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC5 Media Commission Rebate</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC6 Average Hourly Rate</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">CPD complied with the Public Contracts Regulations 2015 (as amended) and incorporated a standstill period (i.e. a minimum of 10 calendar days) at the point information on the award of contract was communicated to tenderers. That notification provided full information on the award decision. This provided time for the unsuccessful tenderers to challenge the award decision before the contract was entered into.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Offline Media Services</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">Tourism Northern Ireland wishes to appoint a Contractor or Contractors for the supply and delivery of its marketing and associated services. These requirements have been split into 4 Lots as detailed below. Whilst no spend is guaranteed against any of the Lots, the anticipated value of each Lot over the lifetime of the contract is detailed below. Lot 1: Strategic and Lead Creative Agency with an estimated contract value of £4m Lot 2: Online Media Services with an estimated contract value of £3m Lot 3: Offline Media Services with an estimated contract value of £6m Lot 4: Design, Marketing and Content Services with an estimated contract value of £8m.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341200</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341400</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:ContractExtension><!--Options Description (BT-54)-->
+            <cbc:OptionsDescription languageID="ENG">3 options to extend for periods of 1 year each</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>64</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC1 Content Commissioning</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC2 Contract Management</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>8</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC3 Business Continuity</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">AC4 Hourly Rates</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">CPD complied with the Public Contracts Regulations 2015 (as amended) and incorporated a standstill period (i.e. a minimum of 10 calendar days) at the point information on the award of contract was communicated to tenderers. That notification provided full information on the award decision. This provided time for the unsuccessful tenderers to challenge the award decision before the contract was entered into.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Design, Marketing and Content Services</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">Tourism Northern Ireland wishes to appoint a Contractor or Contractors for the supply and delivery of its marketing and associated services. These requirements have been split into 4 Lots as detailed below. Whilst no spend is guaranteed against any of the Lots, the anticipated value of each Lot over the lifetime of the contract is detailed below. Lot 1: Strategic and Lead Creative Agency with an estimated contract value of £4m Lot 2: Online Media Services with an estimated contract value of £3m Lot 3: Offline Media Services with an estimated contract value of £6m Lot 4: Design, Marketing and Content Services with an estimated contract value of £8m.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341200</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341400</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79340000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79341000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:ContractExtension><!--Options Description (BT-54)-->
+            <cbc:OptionsDescription languageID="ENG">3 options to extend for periods of 1 year each</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
+</ContractAwardNotice>

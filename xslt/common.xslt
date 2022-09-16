@@ -10,14 +10,22 @@ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-o
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-<xsl:template match="ted:OBJECT_CONTRACT//ted:TITLE">
+<xsl:template match="ted:OBJECT_CONTRACT/ted:TITLE">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<cbc:Name languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Name>
+	<xsl:call-template name="multilingual">
+		<xsl:with-param name="contexts" select="."/>
+		<xsl:with-param name="local" select="'P'"/>
+		<xsl:with-param name="element" select="'cbc:Name'"/>
+	</xsl:call-template>
 </xsl:template>
 
 <xsl:template match="ted:SHORT_DESCR">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+	<xsl:call-template name="multilingual">
+		<xsl:with-param name="contexts" select="."/>
+		<xsl:with-param name="local" select="'P'"/>
+		<xsl:with-param name="element" select="'cbc:Description'"/>
+	</xsl:call-template>
 </xsl:template>
 
 <xsl:template match="ted:TYPE_CONTRACT">
@@ -26,13 +34,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
 </xsl:template>
 	
-<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD|ted:COMPLEMENTARY_INFO/ted:INFO_ADD">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
-	<xsl:if test="$text ne ''">
-		<cbc:Note languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Note>
-	</xsl:if>
-</xsl:template>
-
 <xsl:template match="ted:CPV_MAIN">
 	<xsl:variable name="ted-value" select="fn:normalize-space(ted:CPV_CODE/@CODE)"/>
 	<cac:MainCommodityClassification>
