@@ -36,11 +36,15 @@ Clone the TED XML Data Converter from https://github.com/OP-TED/ted-xml-data-con
 
 A typical Unix command using Saxon HE to convert a file is:
 
-`java  -Xms6291456  -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform  -dtd:off -expand:off -strip:all  -s:development-notices/ted-xml/21-000061-001-EXP.xml -xsl:xslt/ted-to-eforms.xslt -o:development-notices/eforms-xml/21-000061-001-EXP.xml`
+`java -Xms6291456 -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform -dtd:off -expand:off -strip:all -s:development-notices/ted-xml/21-000061-001-EXP.xml -xsl:xslt/ted-to-eforms.xslt -o:development-notices/eforms-xml/21-000061-001-EXP.xml`
 
+### Warnings and comments
 
+Each leaf element in the output eForms XML will be preceded by an HTML comment naming the Business Term it is associated with.
+Where the eForms XML standard requires information that is not present in the source TED XML, or the information is not of the 
+required format, the XSLT application will report a warning, and the warning will be included in the output XML as an HTML comment.
 
+These warnings and comments can be suppressed by the use of the "includecomments", "includewarnings" and "showwarnings" parameters:
 
-
-
+`java -Xms6291456 -cp [path to saxon folder]/saxon9he.jar net.sf.saxon.Transform -dtd:off -expand:off -strip:all -s:development-notices/ted-xml/21-000061-001-EXP.xml -xsl:xslt/ted-to-eforms.xslt -o:development-notices/eforms-xml/21-000061-001-EXP.xml includecomments=0 includewarnings=0 showwarnings=0`
 

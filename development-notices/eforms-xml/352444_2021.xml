@@ -90,7 +90,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -104,7 +104,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -149,13 +149,13 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -165,7 +165,6 @@
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -280,7 +279,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--></cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
                <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -295,10 +294,10 @@
             <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="CES">Podmínkou pro podání návrhu k ÚOHS je podání námitek k Zadavateli, které je nutné doručit do 15 dnů ode dne, kdy se stěžovatel dozvěděl o domnělém porušení zákona Zadavatelem, nejpozději však do uzavření smlouvy nebo do chvíle, kdy se soutěž o návrh považuje po výběru návrhu za ukončenou. Námitky proti úkonům oznamovaným v dokumentech, které je Zadavatel povinen podle zákona uveřejnit či odeslat stěžovateli, musí být doručeny Zadavateli do 15 dnů od jejich uveřejnění či doručení stěžovateli. Pokud je v zadávacím řízení stanovena lhůta pro podání žádostí o účast, musí být námitky proti podmínkám vztahujícím se ke kvalifikaci dodavatele doručeny Zadavateli nejpozději do skončení této lhůty. Pokud je v zadávacím řízení stanovena lhůta pro podání nabídek, musí být námitky proti zadávací dokumentaci doručeny Zadavateli nejpozději do skončení této lhůty, v případě jednacího řízení s uveřejněním musí být námitky proti zadávací dokumentaci doručeny Zadavateli nejpozději do skončení lhůty pro podání předběžných nabídek. Námitky proti dobrovolnému oznámení o záměru uzavřít smlouvu podle § 212 odst. 2 zákona musí být doručeny Zadavateli do 30 dnů od uveřejnění tohoto oznámení. Zadavatel je povinen námitky vyřídit do 15 dnů. Návrh je nutné doručit ÚOHS i Zadavateli do 10 dnů ode dne, v němž stěžovatel obdržel rozhodnutí, kterým Zadavatel námitky odmítl nebo do 25 dnů od odeslání námitek, pokud Zadavatel o námitkách nerozhodl. Po uzavření smlouvy na veřejnou zakázku či rámcové dohody lze podat pouze návrh na uložení zákazu plnění smlouvy, a to i bez předchozího podání námitek. Návrh na uložení zákazu plnění smlouvy doručí navrhovatel ÚOHS a ve stejnopisu Zadavateli do 1 měsíce ode dne, kdy Zadavatel uveřejnil oznámení o uzavření smlouvy způsobem podle § 212 odst. 2 zákona s uvedením důvodu pro zadání veřejné zakázky bez uveřejnění oznámení o zahájení zadávacího řízení, předběžného oznámení nebo výzvy k podání nabídek ve zjednodušeném podlimitním řízení, nejpozději však do 6 měsíců od uzavření této smlouvy. Návrh na uložení zákazu plnění smlouvy podle § 254 odstavce 1 písm. d) zákona doručí navrhovatel ÚOHS a ve stejnopisu Zadavateli do 1 měsíce ode dne, kdy Zadavatel uveřejnil oznámení o uzavření smlouvy na základě rámcové dohody podle § 137 zákona nebo oznámení o uzavření smlouvy v dynamickém nákupním systému podle § 142 zákona, nejpozději však do 6 měsíců od uzavření této smlouvy. Ve lhůtě pro doručení návrhu je navrhovatel povinen složit na účet ÚOHS kauci ve výši 1 % z nabídkové ceny navrhovatele za celou dobu plnění veřejné zakázky nebo za dobu prvních čtyř let plnění v případě smluv na dobu neurčitou, nejméně však ve výši 50 000 českých korun (CZK), nejvýše ve výši 10 000 000 CZK. V případě, že navrhovatel nemůže stanovit celkovou nabídkovou cenu, je povinen složit kauci ve výši 100 000 CZK. V případě návrhu na uložení zákazu plnění smlouvy je navrhovatel povinen složit kauci ve výši 200 000 CZK. Jde-li o řízení o přezkoumání postupu pro zadávání koncesí, je navrhovatel povinen ve lhůtě pro doručení návrhu složit na účet ÚOHS kauci ve výši 1 % z předpokládané hodnoty koncese uveřejněné ve Věstníku veřejných zakázek nebo na profilu Zadavatele, nejméně však ve výši 50 000 CZK, nejvýše ve výši 10 000 000 CZK. V případě, že Zadavatel neuveřejní ve Věstníku veřejných zakázek nebo na profilu Zadavatele předpokládanou hodnotu koncese, je navrhovatel povinen složit kauci ve výši 100 000 CZK. V případě návrhu na uložení zákazu plnění koncesní smlouvy je navrhovatel povinen složit kauci ve výši 200 000 CZK.</cbc:Description>
@@ -402,7 +401,7 @@
          <cbc:Description languageID="CES">Předmětem plnění této veřejné zakázky jsou stavební práce, na jejímž základě bude realizován projekt s názvem „FN Motol - centrální zdroj chladu pro objekt A - VZT a chlazení“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -448,7 +447,7 @@
             <cbc:EndDate>2021-11-30+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

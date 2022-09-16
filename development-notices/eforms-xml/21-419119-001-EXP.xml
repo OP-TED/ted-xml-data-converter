@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">23</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>https://euipo.europa.eu/ohimportal/en/public-procurement</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Union Intellectual Property Office (EUIPO)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Avenida de Europa, 4</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Alicante</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>03008</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">ES521</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>V-03965324</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>procurement@euipo.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://curia.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>General Court</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>rue du Fort Niedergrünewald</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>2925</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+352 4303-1</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+352 4303-2100</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>generalcourt.registry@curia.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://ombudsman.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Ombudsman</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>1 avenue du Président Robert Schuman, PO Box 403</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Strasbourg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>67001</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>eo@ombudsman.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2021-08-05+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DAN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DEU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SPA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FIN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FRA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ELL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ITA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NLD</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SWE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EST</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HUN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LIT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LAV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MLT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GLE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BUL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RON</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HRV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">OTH/1239/21</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">Anti-counterfeiting Blockathon Infrastructure Design Contest</cbc:Name>
+      <cbc:Name languageID="DAN">Blockathon-konkurrence vedrørende infrastrukturdesign til bekæmpelse af forfalskning</cbc:Name>
+      <cbc:Name languageID="DEU">Wettbewerb zum Entwurf einer fälschungssicheren Blockathon-Infrastruktur</cbc:Name>
+      <cbc:Name languageID="SPA">Concurso de diseño de infraestructura de «blockathon» para combatir la falsificación</cbc:Name>
+      <cbc:Name languageID="FIN">Väärennösten vastaisen infrastruktuurin suunnittelukilpailu</cbc:Name>
+      <cbc:Name languageID="FRA">Blockathon de conception d’infrastructures anti-contrefaçon</cbc:Name>
+      <cbc:Name languageID="ELL">Διαγωνισμός Blockathon σχεδιασμού υποδομών για την καταπολέμηση της παραποίησης</cbc:Name>
+      <cbc:Name languageID="ITA">Concorso di progettazione di infrastrutture Blockathon anticontraffazione</cbc:Name>
+      <cbc:Name languageID="NLD">Wedstrijd voor het ontwerpen van een infrastructuur ter bestrijding van vervalsing in het kader van de Blockathon</cbc:Name>
+      <cbc:Name languageID="POR">Concurso de conceção de infraestruturas Blockathon para combate à contrafação</cbc:Name>
+      <cbc:Name languageID="SWE">Designtävlingen ”Anti-Counterfeiting Blockathon Infrastructure”</cbc:Name>
+      <cbc:Name languageID="CES">Soutěž Blockathon o návrh infrastruktury proti padělání peněz</cbc:Name>
+      <cbc:Name languageID="EST">Võltsimisvastase blokatoni taristu kavandikonkurss</cbc:Name>
+      <cbc:Name languageID="HUN">Hamisítás elleni blockathon-infrastruktúra tervezői pályázat</cbc:Name>
+      <cbc:Name languageID="LIT">Kovos su klastojimu „Blockathon“ infrastruktūros projektavimo konkursas</cbc:Name>
+      <cbc:Name languageID="LAV">Viltošanas novēršanas Blockathon infrastruktūras izstrādes konkurss</cbc:Name>
+      <cbc:Name languageID="MLT">Kompetizzjoni ta’ Disinn ta’ Infrastruttura ta’ Blockathon ta’ Dwar il-Ġlieda Kontra l-Falsifikazzjoni</cbc:Name>
+      <cbc:Name languageID="POL">Blockathon — konkurs na zaprojektowanie infrastruktury w celu przeciwdziałania podrabianiu produktów</cbc:Name>
+      <cbc:Name languageID="SLK">Súťaž týkajúca sa návrhu infraštruktúry Blockathonu na boj proti falšovaniu</cbc:Name>
+      <cbc:Name languageID="SLV">Natečaj za zasnovo infrastrukture v okviru tekmovanja Blockathon na področju boja proti ponarejanju</cbc:Name>
+      <cbc:Name languageID="GLE">Comórtas dearaidh Bonneagair um Blocatón Frith-Ghóchumtha</cbc:Name>
+      <cbc:Name languageID="BUL">Конкурс за проектиране на инфраструктура за борба с прането на пари</cbc:Name>
+      <cbc:Name languageID="RON">Concurs de proiectare a infrastructurii concursului „blockathon“ de combatere a contrafacerii</cbc:Name>
+      <cbc:Name languageID="HRV">Natječaj za projektiranje infrastrukture za borbu protiv krivotvorenja s pomoću Blockathona</cbc:Name>
+      <!--Description (BT-24)-->
+      <!--Main Nature (BT-23)-->
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">The contest documents will be available for download at the address indicated under heading I.3). The website will be updated regularly and it is the tenderers' responsibility to check for updates, modifications or answers to questions during the tendering period. In case of unavailability or disruptions in the functioning of the electronic means of communication provided in section I.3) in the last five calendar days before the time limit for receipt indicated in section IV.2.2), the contracting authority reserves the right to extend this time limit and publish the extension at the Internet address provided in section I.3), without a preceding publication of a corrigendum to this notice. Economic operators interested in this procurement are invited to subscribe to the call for tenders at the address in section I.3) in order to get notified when new information or documents are published.</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">71230000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
+                        <cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
+                        <!--Selection Criteria Name (BT-749)-->
+                        <!--Selection Criteria Description (BT-750)-->
+                        <cbc:Description languageID="ENG">The criteria are detailed in the contest rules of competition.</cbc:Description>
+                        <cbc:Description languageID="DAN">Kriterierne er nærmere beskrevet i konkurrencereglerne.</cbc:Description>
+                        <cbc:Description languageID="DEU">Die Kriterien sind in den Wettbewerbsregeln erläutert.</cbc:Description>
+                        <cbc:Description languageID="SPA">Los criterios se detallan en las normas de competencia del concurso.</cbc:Description>
+                        <cbc:Description languageID="FIN">Kriteerit esitetään yksityiskohtaisesti kilpailun säännöissä.</cbc:Description>
+                        <cbc:Description languageID="FRA">Les critères sont détaillés dans les règles de concurrence du concours.</cbc:Description>
+                        <cbc:Description languageID="ELL">Τα κριτήρια αναφέρονται λεπτομερώς στους κανόνες ανταγωνισμού.</cbc:Description>
+                        <cbc:Description languageID="ITA">I criteri sono descritti in dettaglio nelle regole di concorrenza del concorso.</cbc:Description>
+                        <cbc:Description languageID="NLD">De criteria zijn nader omschreven in de wedstrijdreglement.</cbc:Description>
+                        <cbc:Description languageID="POR">Os critérios são pormenorizados nas regras de concurso.</cbc:Description>
+                        <cbc:Description languageID="SWE">Kriterierna beskrivs närmare i tävlingsreglerna.</cbc:Description>
+                        <cbc:Description languageID="CES">Kritéria jsou podrobně popsána v pravidlech hospodářské soutěže.</cbc:Description>
+                        <cbc:Description languageID="EST">Kriteeriumeid on üksikasjalikult kirjeldatud konkursi eeskirjades.</cbc:Description>
+                        <cbc:Description languageID="HUN">A kritériumok részletes leírása a versenyszabályzatban található.</cbc:Description>
+                        <cbc:Description languageID="LIT">Kriterijai išsamiai aprašyti konkurso taisyklėse.</cbc:Description>
+                        <cbc:Description languageID="LAV">Kritēriji ir izklāstīti konkursa noteikumos.</cbc:Description>
+                        <cbc:Description languageID="MLT">Il-kriterji huma imniżżla fir-regoli tal-kompetizzjoni.</cbc:Description>
+                        <cbc:Description languageID="POL">Kryteria te zostały określone w zasadach konkursu.</cbc:Description>
+                        <cbc:Description languageID="SLK">Kritériá sú podrobne uvedené v pravidlách súťaže.</cbc:Description>
+                        <cbc:Description languageID="SLV">Merila so podrobno opisana v pravilih o konkurenci.</cbc:Description>
+                        <cbc:Description languageID="GLE">Tá na critéir mionsonraithe i rialacha iomaíochta an chomórtais.</cbc:Description>
+                        <cbc:Description languageID="BUL">Критериите са подробно описани в конкурсните правила.</cbc:Description>
+                        <cbc:Description languageID="RON">Criteriile sunt detaliate în regulile de concurență ale concursului.</cbc:Description>
+                        <cbc:Description languageID="HRV">Kriteriji su detaljno opisani u pravilima natječaja.</cbc:Description>
+                        <!--Selection Criteria Used (BT-748)-->
+                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+                     </efac:SelectionCriteria>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://etendering.ted.europa.eu/cft/cft-display.html?cftId=9147</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)-->
+            <cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+            <!--Jury Decision Binding (BT-42)-->
+            <cbc:BindingOnBuyerIndicator>false</cbc:BindingOnBuyerIndicator>
+            <!--No Negotiation Necessary (BT-120)-->
+            <!--Award Criteria Order Justification (BT-733)-->
+            <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number (BT-541)-->
+            <!--Award Criterion Number Weight (BT-5421)-->
+            <!--Award Criterion Number Fixed (BT-5422)-->
+            <!--Award Criterion Number Threshold (BT-5423)-->
+            <!--Award Criterion Type (BT-539)-->
+            <!--Award Criterion Name (BT-734)-->
+            <!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion><!--WARNING: The content of TED XML element CRITERIA_EVALUATION has been copied to three Award Criterion Description (BT-540), to assist with editing and correction.-->
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">The criteria are detailed in the contest rules of competition.</cbc:Description>
+                  <cbc:Description languageID="DAN">Kriterierne er nærmere beskrevet i konkurrencereglerne.</cbc:Description>
+                  <cbc:Description languageID="DEU">Die Kriterien sind in den Wettbewerbsregeln erläutert.</cbc:Description>
+                  <cbc:Description languageID="SPA">Los criterios se detallan en las normas de competencia del concurso.</cbc:Description>
+                  <cbc:Description languageID="FIN">Kriteerit esitetään yksityiskohtaisesti kilpailun säännöissä.</cbc:Description>
+                  <cbc:Description languageID="FRA">Les critères sont détaillés dans les règles de concurrence du concours.</cbc:Description>
+                  <cbc:Description languageID="ELL">Τα κριτήρια αναφέρονται λεπτομερώς στους κανόνες ανταγωνισμού.</cbc:Description>
+                  <cbc:Description languageID="ITA">I criteri sono descritti in dettaglio nelle regole di concorrenza del concorso.</cbc:Description>
+                  <cbc:Description languageID="NLD">De criteria zijn nader omschreven in de wedstrijdreglement.</cbc:Description>
+                  <cbc:Description languageID="POR">Os critérios são pormenorizados nas regras de concurso.</cbc:Description>
+                  <cbc:Description languageID="SWE">Kriterierna beskrivs närmare i tävlingsreglerna.</cbc:Description>
+                  <cbc:Description languageID="CES">Kritéria jsou podrobně popsána v pravidlech hospodářské soutěže.</cbc:Description>
+                  <cbc:Description languageID="EST">Kriteeriumeid on üksikasjalikult kirjeldatud konkursi eeskirjades.</cbc:Description>
+                  <cbc:Description languageID="HUN">A kritériumok részletes leírása a versenyszabályzatban található.</cbc:Description>
+                  <cbc:Description languageID="LIT">Kriterijai išsamiai aprašyti konkurso taisyklėse.</cbc:Description>
+                  <cbc:Description languageID="LAV">Kritēriji ir izklāstīti konkursa noteikumos.</cbc:Description>
+                  <cbc:Description languageID="MLT">Il-kriterji huma imniżżla fir-regoli tal-kompetizzjoni.</cbc:Description>
+                  <cbc:Description languageID="POL">Kryteria te zostały określone w zasadach konkursu.</cbc:Description>
+                  <cbc:Description languageID="SLK">Kritériá sú podrobne uvedené v pravidlách súťaže.</cbc:Description>
+                  <cbc:Description languageID="SLV">Merila so podrobno opisana v pravilih o konkurenci.</cbc:Description>
+                  <cbc:Description languageID="GLE">Tá na critéir mionsonraithe i rialacha iomaíochta an chomórtais.</cbc:Description>
+                  <cbc:Description languageID="BUL">Критериите са подробно описани в конкурсните правила.</cbc:Description>
+                  <cbc:Description languageID="RON">Criteriile sunt detaliate în regulile de concurență ale concursului.</cbc:Description>
+                  <cbc:Description languageID="HRV">Kriteriji su detaljno opisani u pravilima natječaja.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">The criteria are detailed in the contest rules of competition.</cbc:Description>
+                  <cbc:Description languageID="DAN">Kriterierne er nærmere beskrevet i konkurrencereglerne.</cbc:Description>
+                  <cbc:Description languageID="DEU">Die Kriterien sind in den Wettbewerbsregeln erläutert.</cbc:Description>
+                  <cbc:Description languageID="SPA">Los criterios se detallan en las normas de competencia del concurso.</cbc:Description>
+                  <cbc:Description languageID="FIN">Kriteerit esitetään yksityiskohtaisesti kilpailun säännöissä.</cbc:Description>
+                  <cbc:Description languageID="FRA">Les critères sont détaillés dans les règles de concurrence du concours.</cbc:Description>
+                  <cbc:Description languageID="ELL">Τα κριτήρια αναφέρονται λεπτομερώς στους κανόνες ανταγωνισμού.</cbc:Description>
+                  <cbc:Description languageID="ITA">I criteri sono descritti in dettaglio nelle regole di concorrenza del concorso.</cbc:Description>
+                  <cbc:Description languageID="NLD">De criteria zijn nader omschreven in de wedstrijdreglement.</cbc:Description>
+                  <cbc:Description languageID="POR">Os critérios são pormenorizados nas regras de concurso.</cbc:Description>
+                  <cbc:Description languageID="SWE">Kriterierna beskrivs närmare i tävlingsreglerna.</cbc:Description>
+                  <cbc:Description languageID="CES">Kritéria jsou podrobně popsána v pravidlech hospodářské soutěže.</cbc:Description>
+                  <cbc:Description languageID="EST">Kriteeriumeid on üksikasjalikult kirjeldatud konkursi eeskirjades.</cbc:Description>
+                  <cbc:Description languageID="HUN">A kritériumok részletes leírása a versenyszabályzatban található.</cbc:Description>
+                  <cbc:Description languageID="LIT">Kriterijai išsamiai aprašyti konkurso taisyklėse.</cbc:Description>
+                  <cbc:Description languageID="LAV">Kritēriji ir izklāstīti konkursa noteikumos.</cbc:Description>
+                  <cbc:Description languageID="MLT">Il-kriterji huma imniżżla fir-regoli tal-kompetizzjoni.</cbc:Description>
+                  <cbc:Description languageID="POL">Kryteria te zostały określone w zasadach konkursu.</cbc:Description>
+                  <cbc:Description languageID="SLK">Kritériá sú podrobne uvedené v pravidlách súťaže.</cbc:Description>
+                  <cbc:Description languageID="SLV">Merila so podrobno opisana v pravilih o konkurenci.</cbc:Description>
+                  <cbc:Description languageID="GLE">Tá na critéir mionsonraithe i rialacha iomaíochta an chomórtais.</cbc:Description>
+                  <cbc:Description languageID="BUL">Критериите са подробно описани в конкурсните правила.</cbc:Description>
+                  <cbc:Description languageID="RON">Criteriile sunt detaliate în regulile de concurență ale concursului.</cbc:Description>
+                  <cbc:Description languageID="HRV">Kriteriji su detaljno opisani u pravilima natječaja.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <!--Award Criterion Description (BT-540)-->
+                  <cbc:Description languageID="ENG">The criteria are detailed in the contest rules of competition.</cbc:Description>
+                  <cbc:Description languageID="DAN">Kriterierne er nærmere beskrevet i konkurrencereglerne.</cbc:Description>
+                  <cbc:Description languageID="DEU">Die Kriterien sind in den Wettbewerbsregeln erläutert.</cbc:Description>
+                  <cbc:Description languageID="SPA">Los criterios se detallan en las normas de competencia del concurso.</cbc:Description>
+                  <cbc:Description languageID="FIN">Kriteerit esitetään yksityiskohtaisesti kilpailun säännöissä.</cbc:Description>
+                  <cbc:Description languageID="FRA">Les critères sont détaillés dans les règles de concurrence du concours.</cbc:Description>
+                  <cbc:Description languageID="ELL">Τα κριτήρια αναφέρονται λεπτομερώς στους κανόνες ανταγωνισμού.</cbc:Description>
+                  <cbc:Description languageID="ITA">I criteri sono descritti in dettaglio nelle regole di concorrenza del concorso.</cbc:Description>
+                  <cbc:Description languageID="NLD">De criteria zijn nader omschreven in de wedstrijdreglement.</cbc:Description>
+                  <cbc:Description languageID="POR">Os critérios são pormenorizados nas regras de concurso.</cbc:Description>
+                  <cbc:Description languageID="SWE">Kriterierna beskrivs närmare i tävlingsreglerna.</cbc:Description>
+                  <cbc:Description languageID="CES">Kritéria jsou podrobně popsána v pravidlech hospodářské soutěže.</cbc:Description>
+                  <cbc:Description languageID="EST">Kriteeriumeid on üksikasjalikult kirjeldatud konkursi eeskirjades.</cbc:Description>
+                  <cbc:Description languageID="HUN">A kritériumok részletes leírása a versenyszabályzatban található.</cbc:Description>
+                  <cbc:Description languageID="LIT">Kriterijai išsamiai aprašyti konkurso taisyklėse.</cbc:Description>
+                  <cbc:Description languageID="LAV">Kritēriji ir izklāstīti konkursa noteikumos.</cbc:Description>
+                  <cbc:Description languageID="MLT">Il-kriterji huma imniżżla fir-regoli tal-kompetizzjoni.</cbc:Description>
+                  <cbc:Description languageID="POL">Kryteria te zostały określone w zasadach konkursu.</cbc:Description>
+                  <cbc:Description languageID="SLK">Kritériá sú podrobne uvedené v pravidlách súťaže.</cbc:Description>
+                  <cbc:Description languageID="SLV">Merila so podrobno opisana v pravilih o konkurenci.</cbc:Description>
+                  <cbc:Description languageID="GLE">Tá na critéir mionsonraithe i rialacha iomaíochta an chomórtais.</cbc:Description>
+                  <cbc:Description languageID="BUL">Критериите са подробно описани в конкурсните правила.</cbc:Description>
+                  <cbc:Description languageID="RON">Criteriile sunt detaliate în regulile de concurență ale concursului.</cbc:Description>
+                  <cbc:Description languageID="HRV">Kriteriji su detaljno opisani u pravilima natječaja.</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <cac:Prize><!--Prize Rank (BT-44)--><!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
+               <cbc:RankCode>1</cbc:RankCode>
+               <!--Value Prize (BT-644)-->
+               <!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
+               <!--Rewards Other (Prize Description) (BT-45): may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT-->
+               <cbc:Description languageID="ENG">The maximum budget for this design contest amounts to EUR 100 000. EUR 50 000 is for honoraria and EUR 50 000 for the prize to the winner of the contest. The maximum budget for honoraria will amount to EUR 10 000 per candidate (or group of candidates). The prize and the honoraria will be paid to the participant’s representative (in case of joint application, to the representative of the consortium) in one instalment by bank transfer within a maximum of 60 days from the date of the notification of the results.</cbc:Description>
+               <cbc:Description languageID="DAN">Maksimumsbudgettet for denne designkonkurrence er 100 000 EUR. 50 000 EUR går til honorarer og 50 000 EUR til prisen til vinderen af konkurrencen. Maksimumsbudgettet for honorarer vil beløbe sig til 10 000 EUR pr. ansøger (eller gruppe af ansøgere). Prisen og honorarerne udbetales til deltagerens repræsentant (i tilfælde af fælles ansøgning til repræsentanten for konsortiet) i én rate ved bankoverførsel senest 60 dage efter datoen for meddelelse af resultaterne.</cbc:Description>
+               <cbc:Description languageID="DEU">Das maximale Budget für diesen Designwettbewerb beträgt 100 000 EUR. 50 000 Euro sind für die Honorare und 50 000 EUR für den Preis an den Sieger des Wettbewerbs. Das maximale Budget für die Honorare beträgt 10 000 EUR pro Bewerber (oder Gruppe von Bewerbern). Der Preis und die Honorare werden dem Vertreter des Teilnehmers (im Falle einer gemeinsamen Bewerbung an den Vertreter des Konsortiums) in einer Rate durch Überweisung innerhalb von maximal 60 Tagen ab dem Datum der Mitteilung der Ergebnisse ausgezahlt.</cbc:Description>
+               <cbc:Description languageID="SPA">El presupuesto máximo para este concurso de diseño es de 100 000 EUR. 50 000 EUR para honorarios y 50 000 EUR para el premio al ganador del concurso. El presupuesto máximo para honorarios ascenderá a 10 000 EUR por candidato (o grupo de candidatos). El premio y los honorarios se abonarán al representante del participante (en caso de solicitud conjunta, al representante del consorcio) en una sola cuota mediante transferencia bancaria en un plazo máximo de 60 días a partir de la fecha de notificación de los resultados.</cbc:Description>
+               <cbc:Description languageID="FIN">Suunnittelukilvan maksimibudjetti on 100 000 EUR. 50 000 EUR muodostuu palkkioista, ja kilpailun voittajan palkinto on 50 000 EUR. Palkkioiden maksimibudjetti on 10 000 EUR osallistujaa (tai osallistujaryhmää) kohden. Palkinto ja palkkiot maksetaan osallistujan edustajalle (osallistujan ollessa ryhmä, ryhmän edustajalle) yhdessä erässä tilisiirtona 60 päivän kuluessa tulosten julkistamisesta.</cbc:Description>
+               <cbc:Description languageID="FRA">Le budget maximal de ce concours s'élève à 100 000 EUR. 50 000 euros pour les honoraires et 50 000 euros pour le prix décerné au lauréat du concours. Le budget maximal alloué aux honoraires s'élèvera à 10 000 EUR par candidat (ou groupe de candidats). Le prix et les honoraires seront versés au représentant du participant (en cas de candidature conjointe, au représentant du consortium) en une fois par virement bancaire dans un délai maximal de 60 jours à compter de la date de notification des résultats.</cbc:Description>
+               <cbc:Description languageID="ELL">Ο ανώτατος προϋπολογισμός για τον εν λόγω διαγωνισμό μελετών ανέρχεται σε 100 000 EUR. 50 000 EUR προορίζονται για αμοιβές και 50 000 EUR για το βραβείο του νικητή του διαγωνισμού. Ο ανώτατος προϋπολογισμός για αμοιβές θα ανέρχεται σε 10 000 EUR ανά υποψήφιο (ή ομάδα υποψηφίων). Το βραβείο και οι αμοιβές θα καταβληθούν στον εκπρόσωπο του συμμετέχοντος (σε περίπτωση κοινής αίτησης, στον εκπρόσωπο της κοινοπραξίας) σε μία δόση με τραπεζική μεταφορά εντός 60 ημερών το μέγιστο από την ημερομηνία κοινοποίησης των αποτελεσμάτων.</cbc:Description>
+               <cbc:Description languageID="ITA">L'importo massimo per il concorso di progettazione ammonta a 100 000 EUR. 50 000 EUR sono destinati agli onorari e 50 000 EUR al premio per il vincitore del concorso. L'importo massimo per gli onorari sarà pari a 10 000 EUR per candidato (o gruppo di candidati). Il premio e gli onorari saranno versati al rappresentante del partecipante (in caso di domanda congiunta, al rappresentante del consorzio) in un'unica rata mediante bonifico bancario entro un termine massimo di 60 giorni dalla data di notifica dei risultati.</cbc:Description>
+               <cbc:Description languageID="NLD">De maximumbegroting voor deze ontwerpwedstrijd bedraagt 100 000 EUR. 50 000 EUR is bestemd voor honoraria en 50 000 EUR voor de prijs voor de winnaar van de wedstrijd. De maximumbegroting voor honoraria bedraagt 10 000 EUR per gegadigde (of groep gegadigden). De prijs en de honoraria worden binnen 60 dagen na de datum van kennisgeving van de resultaten in één keer per bankoverschrijving betaald aan de vertegenwoordiger van de deelnemer (in geval van gezamenlijke aanvraag aan de vertegenwoordiger van het consortium).</cbc:Description>
+               <cbc:Description languageID="POR">O orçamento máximo para este concurso de conceção ascende a 100 000 EUR. 50 000 EUR destinam-se a honorários e 50 000 EUR ao vencedor do concurso. O orçamento máximo para honorários elevar-se-á a 10 000 EUR por candidato (ou grupo de candidatos). O prémio e os honorários serão pagos ao representante do participante (em caso de candidatura conjunta, ao representante do consórcio) numa única prestação, por transferência bancária, no prazo máximo de 60 dias a contar da data de notificação dos resultados.</cbc:Description>
+               <cbc:Description languageID="SWE">Den högsta budgeten för denna designtävling uppgår till 100 000 EUR. 50 000 EUR är till arvoden och 50 000 EUR till vinnaren av tävlingen. Den högsta budgeten för arvoden kommer att uppgå till 10 000 EUR per sökande (eller grupp av sökande). Priset och arvoden kommer att betalas ut till deltagarens företrädare (vid gemensam ansökan, till konsortiets företrädare) i form av en banköverföring inom högst 60 dagar från dagen för meddelandet om resultaten.</cbc:Description>
+               <cbc:Description languageID="CES">Maximální rozpočet pro tuto soutěž o návrh činí 100 000 EUR. 50 000 EUR je určeno na honoráře a 50 000 EUR na cenu pro vítěze soutěže. Maximální rozpočet na honoráře bude činit 10 000 EUR na uchazeče (nebo skupinu uchazečů). Cena a honoráře budou vyplaceny zástupci účastníka (v případě společné žádosti zástupci konsorcia) v jedné splátce bankovním převodem ve lhůtě nejvýše šedesáti dnů ode dne oznámení výsledků.</cbc:Description>
+               <cbc:Description languageID="EST">Kõnealuse kavandikonkursi maksimaalne eelarve on 100 000 eurot. 50 000 eurot on nähtud ette osalemistasudeks ja 50 000 eurot konkursi võitjale preemiaks. Osalemistasu maksimaalne eelarve on 10 000 eurot kandidaadi (või kandidaatide rühma) kohta. Preemia ja osalemistasud makstakse osaleja esindajale (ühistaotluse korral konsortsiumi esindajale) ühe sissemaksega maksimaalselt 60 päeva jooksul alates tulemuste teatavakstegemise kuupäevast.</cbc:Description>
+               <cbc:Description languageID="HUN">A tervezői pályázat maximális költségvetése 100 000 EUR. Ebből 50 000 EUR a honorárium, további 50 000 EUR pedig a pályázat győztesének díja. A honoráriumokra szánt maximális költségvetés jelentkezőnként (vagy jelentkezők csoportjaként) 10 000 EUR. A díjat és a honoráriumot egy összegben, banki átutalással fizetik majd ki a résztvevő képviselőjének (közös pályázat esetén a konzorcium képviselőjének), az eredmények kihirdetésének napjától számított 60 napon belül.</cbc:Description>
+               <cbc:Description languageID="LIT">Didžiausias šio projekto konkurso biudžetas – 100 000 EUR. 50 000 EUR skirta honorarams, 50 000 EUR – prizui konkurso laimėtojui. Didžiausias honoraro biudžetas vienam kandidatui (ar kandidatų grupei) – 10 000 EUR. Prizas ir honorarai bus sumokėti dalyvio atstovui (jei teikiama bendra paraiška, konsorciumo atstovui) vienu mokėjimu banko pavedimu ne vėliau kaip per 60 dienų nuo rezultatų pranešimo dienos.</cbc:Description>
+               <cbc:Description languageID="LAV">Šā izstrādes konkursa maksimālais budžets ir 100 000 EUR. 50 000 EUR ir paredzēti honorāriem un 50 000 EUR konkursa uzvarētāja godalgai. Maksimālais budžets honorāriem būs 10 000 EUR uz kandidātu (vai to grupu). Balva un honorāri tiks maksāti dalībnieka pārstāvim (kopīga pieteikuma gadījumā – konsorcija pārstāvim) vienā maksājumā ar bankas pārskaitījumu ne vēlāk kā 60 dienu laikā no rezultātu paziņošanas dienas.</cbc:Description>
+               <cbc:Description languageID="MLT">L-ogħla baġit għal din il-kompetizzjoni ta’ disinn jammonta għal EUR 100 000. EUR 50 000 huma għall-onorarji u EUR 50 000 għall-premju lir-rebbieħ tal-kompetizzjoni. L-ogħla baġit għall-onorarji se jammonta għal EUR 10 000 għal kull kandidat (jew grupp ta’ kandidati). Il-premju u l-onorarji jitħallsu lir-rappreżentant tal-parteċipant (fil-każ ta’ applikazzjoni konġunta, lir-rappreżentant tal-konsorzju) f’pagament wieħed permezz ta’ trasferiment bankarju fi żmien massimu ta’ 60 jum mid-data tan-notifika tar-riżultati.</cbc:Description>
+               <cbc:Description languageID="POL">Maksymalny budżet niniejszego konkursu na projekt wynosi 100 000 EUR. 50 000 euro to honoraria i 50 000 euro na nagrodę dla zwycięzcy konkursu. Maksymalny budżet na honoraria wyniesie 10 000 EUR dla każdego kandydata (lub grupy kandydatów). Nagroda i honoraria zostaną wypłacone przedstawicielowi uczestnika (w przypadku wspólnego wniosku, przedstawicielowi konsorcjum) w jednej racie przelewem bankowym w ciągu maksymalnie 60 dni od daty powiadomienia o wynikach.</cbc:Description>
+               <cbc:Description languageID="SLK">Maximálny rozpočet pre túto súťaž o návrh je 100 000 EUR. Odmena je 50 000 EUR a cena pre víťaza súťaže je 50 000 EUR. Maximálny rozpočet na odmenu bude vo výške 10 000 EUR na uchádzača (alebo skupinu uchádzačov). Cena a odmena sa vyplatia zástupcovi účastníka (v prípade spoločnej žiadosti zástupcovi konzorcia) v jednej splátke bankovým prevodom najneskôr do 60 dní odo dňa oznámenia výsledkov.</cbc:Description>
+               <cbc:Description languageID="SLV">Najvišji proračun za ta natečaj na področju zasnove infrastrukture znaša 100 000 EUR. 50 000 EUR je namenjenih honorarjem, drugih 50 000 EUR pa izplačilu nagrade zmagovalcu natečaja. Najvišji proračun za honorarje bo znašal 10 000 EUR na kandidata (ali skupino kandidatov). Nagrada in honorar se plačata predstavniku udeleženca (v primeru skupne prijave predstavniku konzorcija) v enem obroku z bančnim nakazilom v roku največ 60 dni od datuma obvestila o rezultatih.</cbc:Description>
+               <cbc:Description languageID="GLE">Is ionann agus EUR 100 000 uas-bhuiséad an chomórtais dearaidh seo. Airgead oinigh atá in EUR 50 000 agus EUR 50 000 mar dhuais do bhuaiteoir an chomórtais. Is é EUR 10 000 an t-uasbhuiséad le haghaidh airgead oinigh in aghaidh an iarrthóra (nó grúpa iarrthóirí). Íocfar an duais agus an t-airgead oinigh le hionadaí an rannpháirtí (i gcás comhiarratais, le hionadaí an chuibhreannais) i dtráthchuid amháin trí aistriú bainc laistigh de 60 lá ar a mhéad ó dháta an fhógra faoi na torthaí.</cbc:Description>
+               <cbc:Description languageID="BUL">Максималният бюджет за този конкурс за проект възлиза на 100 000 EUR. 50 000 EUR са за хонорари, а 50 000 EUR за наградата за победителя в конкурса. Максималният бюджет за хонорари ще възлиза на 10 000 EUR за кандидат (или група от кандидати). Наградата и хонорарът ще бъдат изплатени на представителя на участника (в случай на съвместно заявление, на представителя на консорциума) на една вноска с банков трансфер в рамките на максимум 60 дни от датата на обявяване на резултатите.</cbc:Description>
+               <cbc:Description languageID="RON">Bugetul maxim pentru acest concurs de proiecte se ridică la 100 000 EUR. 50 000 EUR sunt pentru onorarii și 50 000 EUR pentru premiul acordat câștigătorului concursului. Bugetul maxim pentru onorarii va fi de 10 000 EUR pentru fiecare candidat (sau grup de candidați). Premiul și onorariile vor fi plătite reprezentantului participantului (în cazul unei cereri comune, reprezentantului consorțiului) într-o singură tranșă prin virament bancar, în termen de maximum 60 de zile de la data notificării rezultatelor.</cbc:Description>
+               <cbc:Description languageID="HRV">Najveći proračun za ovaj projektni natječaj iznosi 100 000 EUR. 50 000 EUR za honorar i 50 000 EUR za nagradu pobjedniku natječaja. Najveći proračun za honorar iznosit će 10 000 EUR po natjecatelju (ili skupini natjecatelja). Nagrada i honorari bit će isplaćeni predstavniku sudionika (u slučaju zajedničke prijave predstavniku konzorcija) jednokratno bankovnim prijenosom u roku od najviše 60 dana od datuma obavijesti o rezultatima.</cbc:Description>
+            </cac:Prize>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://etendering.ted.europa.eu/cft/cft-display.html?cftId=9147</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">Within two months of the notification to the plaintiff, or, in absence thereof, of the day on which it came to the knowledge.</cbc:Description>
+               <cbc:Description languageID="DAN">Senest to måneder efter meddelelse til klageren eller, i mangel heraf, efter den dag, sagen er taget til efterretning.</cbc:Description>
+               <cbc:Description languageID="DEU">Binnen zwei Monaten ab Mitteilung an den Kläger oder, in Ermangelung dessen, ab dem Zeitpunkt der Kenntnisnahme.</cbc:Description>
+               <cbc:Description languageID="SPA">En un plazo de dos meses a partir de la notificación al recurrente o, en su defecto, del día en que este haya tenido conocimiento del acto en cuestión.</cbc:Description>
+               <cbc:Description languageID="FIN">Muutosta on haettava kahden kuukauden kuluessa ilmoituksesta asianosaiselle tai, jos ilmoitus puuttuu, siitä päivästä, jona asia tuli hänen tietoonsa.</cbc:Description>
+               <cbc:Description languageID="FRA">Dans les deux mois à compter de la notification au requérant, ou, à défaut, du jour où celui-ci en a eu connaissance.</cbc:Description>
+               <cbc:Description languageID="ELL">Εντός δύο μηνών από την κοινοποίηση στον προσφεύγοντα ή, ελλείψει τέτοιας, από την ημέρα που ο ίδιος έλαβε γνώση.</cbc:Description>
+               <cbc:Description languageID="ITA">Entro due mesi dalla notifica al ricorrente o, in assenza, dal giorno in cui ne è venuto a conoscenza.</cbc:Description>
+               <cbc:Description languageID="NLD">Binnen twee maanden na de kennisgeving aan de klager, of, bij gebreke daarvan, op de dag waarop de klager er kennis van heeft gekregen.</cbc:Description>
+               <cbc:Description languageID="POR">Num prazo de dois meses a contar da data de notificação ao requerente ou, na sua falta, a contar do dia em que o requerente tenha tomado conhecimento do ato.</cbc:Description>
+               <cbc:Description languageID="SWE">Inom 2 månader från den dag då meddelandet delgavs käranden eller, i avsaknad av det, från den dag då det blev känt.</cbc:Description>
+               <cbc:Description languageID="CES">Ve lhůtě dvou měsíců od oznámení žalobci nebo, není-li k dispozici, ode dne, kdy vstoupilo ve známost.</cbc:Description>
+               <cbc:Description languageID="EST">Kahe kuu jooksul hageja teavitamisest, või kui teavitamist ei toimu, päevast, mil asjast teada saadi.</cbc:Description>
+               <cbc:Description languageID="HUN">A vesztes fél értesítésétől, illetve – ennek hiányában – az eredmény ismertté válásától számított 2 hónapon belül.</cbc:Description>
+               <cbc:Description languageID="LIT">Per du mėnesius nuo dienos, kai apie tai pranešama ieškovui, arba, jei nepranešama, nuo dienos, kai tai tampa žinoma.</cbc:Description>
+               <cbc:Description languageID="LAV">Divu mēnešu laikā no prasītāja informēšanas vai, ja tā nav notikusi, no dienas, kad prasītājs to uzzinājis.</cbc:Description>
+               <cbc:Description languageID="MLT">Fi żmien xahrejn (2) mill-avviż li jintbagħat lil min qiegħed iressaq l-appell, jew, fin-nuqqas ta’ dan, mill-jum li fih sar magħruf.</cbc:Description>
+               <cbc:Description languageID="POL">W ciągu dwóch miesięcy od zawiadomienia strony skarżącej lub, w przypadku braku zawiadomienia, od dnia podania do wiadomości.</cbc:Description>
+               <cbc:Description languageID="SLK">Do 2 mesiacov od vyrozumenia osoby podávajúcej odvolanie alebo, ak to nie je možné, odo dňa, keď túto skutočnosť zistila.</cbc:Description>
+               <cbc:Description languageID="SLV">V dveh mesecih od uradnega obvestila tožniku ali, če tega ni bilo, od dneva, ko je tožnik zanj izvedel.</cbc:Description>
+               <cbc:Description languageID="GLE">Laistigh de dhá mhí ón bhfógra chuig an ngearánaí, nó ina éagmais sin, ón lá a fuarthas an t-eolas ina leith.</cbc:Description>
+               <cbc:Description languageID="BUL">В рамките на 2 месеца от получаването на известието от ищеца или, в случай че такова липсва, от деня, в който е станало известно.</cbc:Description>
+               <cbc:Description languageID="RON">În termen de două luni de la notificarea reclamantului sau, în absența acesteia, de la ziua în care acesta a luat cunoștință de actul respectiv.</cbc:Description>
+               <cbc:Description languageID="HRV">U roku od dva mjeseca od slanja obavijesti podnositelju žalbe ili, u slučaju izostanka obavijesti, od dana primanja dotičnih okolnosti na znanje.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+            <cac:MediationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:MediationParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>BUL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>DAN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>DEU</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>EST</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>FIN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>FRA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>GLE</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>HRV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>HUN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ITA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>LAV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>LIT</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>MLT</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>NLD</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>POL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>POR</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>RON</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SLK</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SLV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SPA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SWE</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>CES</cbc:ID>
+         </cac:Language>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2021-09-30+01:00</cbc:EndDate>
+                        <cbc:EndTime>13:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2021-09-30+01:00</cbc:EndDate>
+            <cbc:EndTime>13:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2021-11-25+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Anti-counterfeiting Blockathon Infrastructure Design Contest</cbc:Name>
+         <cbc:Name languageID="DAN">Blockathon-konkurrence vedrørende infrastrukturdesign til bekæmpelse af forfalskning</cbc:Name>
+         <cbc:Name languageID="DEU">Wettbewerb zum Entwurf einer fälschungssicheren Blockathon-Infrastruktur</cbc:Name>
+         <cbc:Name languageID="SPA">Concurso de diseño de infraestructura de «blockathon» para combatir la falsificación</cbc:Name>
+         <cbc:Name languageID="FIN">Väärennösten vastaisen infrastruktuurin suunnittelukilpailu</cbc:Name>
+         <cbc:Name languageID="FRA">Blockathon de conception d’infrastructures anti-contrefaçon</cbc:Name>
+         <cbc:Name languageID="ELL">Διαγωνισμός Blockathon σχεδιασμού υποδομών για την καταπολέμηση της παραποίησης</cbc:Name>
+         <cbc:Name languageID="ITA">Concorso di progettazione di infrastrutture Blockathon anticontraffazione</cbc:Name>
+         <cbc:Name languageID="NLD">Wedstrijd voor het ontwerpen van een infrastructuur ter bestrijding van vervalsing in het kader van de Blockathon</cbc:Name>
+         <cbc:Name languageID="POR">Concurso de conceção de infraestruturas Blockathon para combate à contrafação</cbc:Name>
+         <cbc:Name languageID="SWE">Designtävlingen ”Anti-Counterfeiting Blockathon Infrastructure”</cbc:Name>
+         <cbc:Name languageID="CES">Soutěž Blockathon o návrh infrastruktury proti padělání peněz</cbc:Name>
+         <cbc:Name languageID="EST">Võltsimisvastase blokatoni taristu kavandikonkurss</cbc:Name>
+         <cbc:Name languageID="HUN">Hamisítás elleni blockathon-infrastruktúra tervezői pályázat</cbc:Name>
+         <cbc:Name languageID="LIT">Kovos su klastojimu „Blockathon“ infrastruktūros projektavimo konkursas</cbc:Name>
+         <cbc:Name languageID="LAV">Viltošanas novēršanas Blockathon infrastruktūras izstrādes konkurss</cbc:Name>
+         <cbc:Name languageID="MLT">Kompetizzjoni ta’ Disinn ta’ Infrastruttura ta’ Blockathon ta’ Dwar il-Ġlieda Kontra l-Falsifikazzjoni</cbc:Name>
+         <cbc:Name languageID="POL">Blockathon — konkurs na zaprojektowanie infrastruktury w celu przeciwdziałania podrabianiu produktów</cbc:Name>
+         <cbc:Name languageID="SLK">Súťaž týkajúca sa návrhu infraštruktúry Blockathonu na boj proti falšovaniu</cbc:Name>
+         <cbc:Name languageID="SLV">Natečaj za zasnovo infrastrukture v okviru tekmovanja Blockathon na področju boja proti ponarejanju</cbc:Name>
+         <cbc:Name languageID="GLE">Comórtas dearaidh Bonneagair um Blocatón Frith-Ghóchumtha</cbc:Name>
+         <cbc:Name languageID="BUL">Конкурс за проектиране на инфраструктура за борба с прането на пари</cbc:Name>
+         <cbc:Name languageID="RON">Concurs de proiectare a infrastructurii concursului „blockathon“ de combatere a contrafacerii</cbc:Name>
+         <cbc:Name languageID="HRV">Natječaj za projektiranje infrastrukture za borbu protiv krivotvorenja s pomoću Blockathona</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">The objective of the challenge is to design a blockchain-based compliance infrastructure that authenticates products and exchange data between all parties in the supply chain. Its protocol would support the recording of goods scanned by manufacturers, logistics operators, customs and other enforcement authorities. The combination of product identification, tokenisation, serialisation and the cryptographic safeguards of blockchain will provide a substantial increase in anticounterfeiting measures.</cbc:Description>
+         <cbc:Description languageID="DAN">Formålet med udfordringen er at udforme en »blockchain«-baseret infrastruktur til overensstemmelse, der autentificerer produkter og udveksler data mellem alle parter i forsyningskæden. Protokollen vil støtte registrering af varer, der scannes af producenter, logistikoperatører, toldmyndigheder og andre håndhævelsesmyndigheder. Kombinationen af produktidentifikation, tokenisering, serialisering og den kryptografisk sikring fra »blockchain« vil betydeligt øge foranstaltningerne til bekæmpelse af forfalskning.</cbc:Description>
+         <cbc:Description languageID="DEU">Ziel der Herausforderung ist es, eine Blockchain-basierte Compliance-Infrastruktur zu entwerfen, die Produkte authentifiziert und Daten zwischen allen Beteiligten der Lieferkette ausgetauscht. Ihr Protokoll würde die Erfassung von Waren unterstützen, die von Herstellern, Logistikunternehmen, Zollbehörden und anderen Durchsetzungsbehörden gescannt werden. Die Kombination aus Produktidentifikation, Tokenisierung, Serialisierung und kryptographischen Sicherheitsvorkehrungen der Blockchain wird eine erhebliche Erhöhung der Maßnahmen zur Bekämpfung von Nachahmungen bewirken.</cbc:Description>
+         <cbc:Description languageID="SPA">El objetivo de este desafío consiste en diseñar una infraestructura de cumplimiento basada en blockchain que autentifique productos e intercambie datos entre todas las partes de la cadena de suministro. Su protocolo apoyaría el registro de mercancías escaneadas por fabricantes, operadores logísticos, aduanas y otras autoridades competentes. La combinación de la identificación del producto, la autenticación por token, la serialización y las salvaguardias criptográficas de blockchain proporcionará un aumento sustancial de las medidas para combatir la falsificación.</cbc:Description>
+         <cbc:Description languageID="FIN">Kilpailun tavoitteena on suunnitella lohkoketjuperusteinen, vaatimustenmukainen infrastruktuuri tuotteiden aitouden todistamiseksi sekä tiedon vaihtamiseksi tuotantoketjun kaikkien osallistujien välillä. Infrastruktuurin protokollan on tarkoitus mahdollistaa valmistajien, logistiikan toimijoiden, asiakkaiden sekä muiden täytäntöönpanoviranomaisten skannaamien tuotteiden tallentaminen. Tuotteen tunnistamisen, tokenisaation, serialisoinnin ja lohkoketjun salauksen yhdistäminen parantaa huomattavasti väärennösten vastaisia toimia.</cbc:Description>
+         <cbc:Description languageID="FRA">L'objectif du défi est de concevoir une infrastructure de conformité basée sur la blockchain qui authentifie les produits et échange les données entre toutes les parties de la chaîne d'approvisionnement. Son protocole soutiendrait l'enregistrement des marchandises scannées par les fabricants, les opérateurs logistiques, les douanes et d'autres autorités chargées de faire appliquer la législation. La combinaison de l'identification des produits, de la tokenisation, de la sérialisation et des garanties cryptographiques de la blockchain entraînera une augmentation substantielle des mesures de lutte contre la contrefaçon.</cbc:Description>
+         <cbc:Description languageID="ELL">Στόχος της πρόκλησης είναι ο σχεδιασμός μιας υποδομής συμμόρφωσης βάσει αλυσίδας συστοιχιών που θα πιστοποιεί τα προϊόντα και θα ανταλλάσσει δεδομένα μεταξύ όλων των μερών της αλυσίδας εφοδιασμού. Το πρωτόκολλό της θα υποστηρίξει την καταγραφή των αγαθών που έχουν σαρωθεί από κατασκευαστές, φορείς υλικοτεχνικής υποστήριξης, τελωνειακές και άλλες αρχές επιβολής του νόμου. Ο συνδυασμός της ταυτοποίησης των προϊόντων, της σήμανσης, της σειράς και των κρυπτογραφικών διασφαλίσεων της αλυσίδας συστοιχιών θα επιφέρει σημαντική αύξηση των μέτρων κατά της παραποίησης.</cbc:Description>
+         <cbc:Description languageID="ITA">L'obiettivo del concorso è di progettare un'infrastruttura di conformità basata sulla blockchain che autentichi i prodotti e scambi i dati tra tutte le parti della catena di approvvigionamento. Il suo protocollo favorirà la registrazione delle merci sottoposte a scansione da parte di fabbricanti, operatori logistici, autorità doganali e altre autorità preposte all'applicazione della legge. La combinazione di identificazione, tokenizzazione e serializzazione dei prodotti, unitamente alle protezioni crittografiche della blockchain, comporteranno un aumento sostanziale delle misure anticontraffazione.</cbc:Description>
+         <cbc:Description languageID="NLD">De doelstelling van de uitdaging is het ontwerpen van een op blockchain gebaseerde nalevingsinfrastructuur die producten authentiseert en gegevens uitwisselt tussen alle partijen in de toeleveringsketen. Het protocol moet ondersteuning bieden voor de registratie van goederen die door fabrikanten, logistieke bedrijven, douane en andere handhavingsinstanties worden gescand. De combinatie van productidentificatie, tokenisering, serieomzetting en de cryptografische waarborgen van blockchains zal zorgen voor een aanzienlijke toename van de maatregelen ter bestrijding van vervalsing.</cbc:Description>
+         <cbc:Description languageID="POR">O objetivo do desafio consiste em conceber uma infraestrutura de conformidade baseada em blockchain que autentica produtos e troca dados entre todas as partes na cadeia de abastecimento. O seu protocolo apoiaria o registo de produtos digitalizados por fabricantes, operadores logísticos, autoridades aduaneiras e outras autoridades responsáveis pela aplicação da lei. A combinação da identificação do produto, da tokenização, da serialização e das salvaguardas criptográficas da blockchain proporcionará um aumento substancial das medidas anticontrafação.</cbc:Description>
+         <cbc:Description languageID="SWE">Målet med utmaningen är att utforma en blockkedjebaserad infrastruktur gällande efterlevnad, som autentiserar produkter och utbyter data mellan alla parter i distributionskedjan. Dess protokoll kommer att stödja registrering av varor som skannas av tillverkare, logistikoperatörer, tullmyndigheter och andra tillsynsmyndigheter. Kombinationen av produktidentifiering, tokenisering, serialisering och kryptoskydd i blockkedjan kommer att innebära en betydande ökning av åtgärderna mot förfalskning.</cbc:Description>
+         <cbc:Description languageID="CES">Cílem této výzvy je navrhnout infrastrukturu souladu založenou na technologii „blockchain“, která autentizuje produkty a vyměňuje údaje mezi všemi stranami dodavatelského řetězce. Její protokol by podpořil zaznamenávání zboží naskenovaného výrobci, logistickými subjekty, celními a jinými donucovacími orgány. Kombinace identifikace výrobku, tokenizace, seřazení a šifrovacích ochranných opatření blockchain umožní podstatné zvýšení opatření proti padělání.</cbc:Description>
+         <cbc:Description languageID="EST">Konkursi eesmärk on tooteid autentiva ja kõigi tarneahela osaliste vahel andmeid vahetava plokiahelapõhise vastavustaristu kavandamine. Selle protokoll peaks toetama valmistajatehaste, logistikaoperaatorite, tolliasutuste ja muude järelevalveasutuste poolt skaneeritud kaupade andmete salvestamist. Toote identimise, sõnestuse, sarjastuse ja krüptograafilise plokiahela turvameetmete ühendus tagab võltsimisvastaste meetmete olulise tõusu.</cbc:Description>
+         <cbc:Description languageID="HUN">A kihívás célkitűzése olyan blockchain alapú megfelelőségi infrastruktúra megtervezése, amely termékeket hitelesít, valamint az ellátási lánc összes szereplője között adatokat cserél. A rendszer protokollja támogatná a gyártók, a logisztikai szolgáltatók, illetve a vámhatóságok és egyéb bűnüldöző hatóságok által leolvasott áruk nyilvántartását. A termékazonosítás, a tokenizáció, a sorosítás és a blockchain kriptográfiai biztosítékainak kombinációja lehetővé teszi majd a hamisításellenes intézkedések jelentős fokozását.</cbc:Description>
+         <cbc:Description languageID="LIT">Uždavinio tikslas – sukurti blokų grandinės atitikties užtikrinimo infrastruktūrą, kuria būtų patvirtinami produktai ir keičiamasi duomenimis tarp visų tiekimo grandinės šalių. Šiuo protokolu būtų remiamas gamintojų, logistikos operatorių, muitinių ir kitų vykdymo užtikrinimo institucijų nuskaitytų prekių registravimas. Produktų identifikavimo, atpažinties, atpažinties, serijinės gamybos ir blokų grandinės kriptografinių garantijų derinys labai padidins kovos su klastojimu priemones.</cbc:Description>
+         <cbc:Description languageID="LAV">Mērķis ir izstrādāt uz blokķēdi balstītu atbilstības infrastruktūru, kas autentificē produktus un informācijas apmaiņu starp visām piegādes ķēdē iesaistītajām pusēm. Tā protokols atbalstītu ražotāju, loģistikas operatoru, muitas un citu uzraudzības iestāžu skenētu preču reģistrēšanu. Produktu identifikācijas, marķēšanas, sērijas veidošanas un blokķēdes kriptogrāfiskās drošības nodrošināšanas kombinācija ievērojami palielinās viltošanas novēršanas pasākumu efektivitāti.</cbc:Description>
+         <cbc:Description languageID="MLT">L-għan tal-isfida huwa li titfassal infrastruttura ta’ konformità bbażata fuq il-blockchain li tawtentifika l-prodotti u jiskambjaw id-dejta bejn il-partijiet kollha fil-katina tal-provvista. Il-protokoll tiegħu jappoġġa r-reġistrazzjoni tal-oġġetti skanjati mill-manifatturi, l-operaturi tal-loġistika, id-dwana u awtoritajiet oħra tal-infurzar. Il-kombinament tal-identifikazzjoni tal-prodott, it-tokenizzazzjoni, is-serjelizzazzjoni u s-salvagwardji kriptografiċi tal-blockchain se tipprovdi żieda sostanzjali fil-miżuri kontra l-falsifikazzjoni.</cbc:Description>
+         <cbc:Description languageID="POL">Celem wyzwania jest zaprojektowanie infrastruktury zgodności opartej na technologii blockchain, która uwierzytelnia produkty i wymienia dane pomiędzy wszystkimi stronami łańcucha dostaw. Protokół ten wspiera rejestrowanie towarów zeskanowanych przez producentów, operatorów logistycznych, organy celne i inne organy egzekwowania prawa. Połączenie identyfikacji produktu, tokenizacji, serializacji i zabezpieczeń kryptograficznych blockhain zapewni znaczny wzrost środków przeciwdziałających podrabianiu towarów.</cbc:Description>
+         <cbc:Description languageID="SLK">Cieľom výzvy je navrhnúť infraštruktúru na zabezpečenie súladu založenú na technológii blockchain. Prostredníctvom infraštruktúry sa budú overovať výrobky a vymieňať údaje medzi všetkými stranami v dodávateľskom reťazci. Jej protokol bude podporovať evidenciu tovaru naskenovaného výrobcami, logistickými operátormi, colnými a inými orgánmi presadzovania práva. Kombinácia identifikácie produktov, tokenizácie, serializácie a kryptografických záruk technológie blockchain zabezpečí podstatné zvýšenie opatrení na boj proti falšovaniu.</cbc:Description>
+         <cbc:Description languageID="SLV">Cilj izziva je zasnovati infrastrukturo za zagotavljanje skladnosti, ki bo temeljila na tehnologiji veriženja podatkovnih blokov ter bo omogočala preverjanje pristnosti proizvodov in izmenjavo podatkov med vsemi udeleženci v dobavni verigi. S protokolom te infrastrukture bo podprto evidentiranje blaga, ki ga skenirajo proizvajalci, logistični upravljavci, carinski organi in drugi izvršilni organi. Kombinacija identifikacije proizvodov, tokenizacije, serializacije in kriptografskih zaščitnih ukrepov v zvezi z veriženjem podatkovnih blokov bo zagotovila znatno okrepitev ukrepov proti ponarejanju.</cbc:Description>
+         <cbc:Description languageID="GLE">Is é is cuspóir leis an dúshlán bonneagar comhlíonta bunaithe ar bhlocshlabhra a dhearadh a fhíordheimhníonn táirgí agus a mhalartaíonn sonraí idir na páirtithe uile sa slabhra soláthair. Thacódh a phrótacal le taifeadadh earraí arna scanadh ag déantóirí, oibreoirí lóistíochta, custaim agus údaráis forfheidhmithe eile. Soláthrófar leis an teaglaim de shainaithint táirgí, téacschomharthú, srathú agus cosaintí cripteagrafacha blocshlabhra méadú suntasach ar bhearta um fhrith-ghóchumadh.</cbc:Description>
+         <cbc:Description languageID="BUL">Целта на предизвикателството е да се проектира инфраструктура, базирана на блоковата верига, която удостоверява продукти и обменя данни между всички страни във веригата за доставки. Нейният протокол ще подпомогне регистрирането на стоки, сканирани от производители, логистични оператори, митнически и други правоприлагащи органи. Комбинацията от идентифициране на продукти, монетизиране, номериране и криптографските предпазни мерки на блоковата верига ще осигури значително увеличаване на мерките против фалшифициране.</cbc:Description>
+         <cbc:Description languageID="RON">Obiectivul provocării este de a proiecta o infrastructură de conformitate bazată pe blockchain care să autentifice produsele și să facă schimb de date între toate părțile din lanțul de aprovizionare. Protocolul său ar sprijini înregistrarea mărfurilor scanate de producători, operatori logistici, autorități vamale și alte autorități de aplicare a legii. Combinația dintre identificarea produselor, tokenizarea, serializarea și garanțiile criptografice ale blockchain va asigura o creștere substanțială a măsurilor de combatere a contrafacerii.</cbc:Description>
+         <cbc:Description languageID="HRV">Cilj je izazova projektirati infrastrukturu za usklađivanje temeljenu na tehnologiji lanca blokova kojom će se provjeravati identitet proizvoda i razmjenjivati podaci među svim stranama u lancu opskrbe. Njezinim protokolom poduprijet će se evidentiranje robe koju su skenirali proizvođači, logistički subjekti, carinska i druga provedbena tijela. Kombiniranjem identifikacije proizvoda, tokenizacijom, serijskom nabavom i kriptografskim zaštitnim mjerama lanca blokova osigurat će se značajno poboljšanje mjera protiv krivotvorenja.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71230000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72222300</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:Region>anyw</cbc:Region>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

@@ -56,6 +56,9 @@
                      <!--Tender Rank (BT-171)-->
                      <!--Tender Variant (BT-193)-->
                      <!--Tender Value (BT-720)-->
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
                      <!--Subcontracting (BT-773)-->
                      <efac:SubcontractingTerm><!--Subcontracting Value (BT-553)--><!--Subcontracting Description (BT-554)--><!--Subcontracting Percentage (BT-555)--><!--Subcontracting (BT-773)-->
                         <efbc:TermCode listName="applicability">no</efbc:TermCode>
@@ -77,20 +80,20 @@
                      <!--Contract Conclusion Date (BT-145)-->
                      <cbc:IssueDate>2020-07-10+01:00</cbc:IssueDate>
                      <!--Contract Title (BT-721)-->
-                     <cbc:Title>Design Review and Construction Supervision Services in Relation to the Design and Build of Water and Wastewater Treatment Facilities</cbc:Title>
+                     <cbc:Title languageID="ENG">Design Review and Construction Supervision Services in Relation to the Design and Build of Water and Wastewater Treatment Facilities</cbc:Title>
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
                         <cbc:ID>ZWS2-C4XD-C-002</cbc:ID>
                      </efac:ContractReference>
-                     <!--Contract Tender ID (Reference, BT-3202)-->
+                     <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
                   </efac:SettledContract>
-                  <efac:TenderingParty><!--Tendering Party ID (OPT-210)-->
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
                      <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
-                     <efac:Tenderer><!--Tenderer ID Reference (OPT-300)-->
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
                         <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         <!--Tendering Party Leader (OPT-170)-->
                      </efac:Tenderer>
@@ -200,7 +203,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -214,7 +217,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -256,13 +259,13 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -275,7 +278,6 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2017/S 129-262839</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -333,21 +335,23 @@
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Number (BT-541)-->
                   <ext:UBLExtensions>
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>82.40</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Qualification</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -356,14 +360,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>317.83</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Adequacy and quality of the proposed methodology and work plan in responding to the terms of reference</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -372,14 +378,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>399.61</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Key experts</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -388,14 +396,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>799.85</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Overall weighted assessment</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -412,6 +422,8 @@
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Overall weighted assessment (%)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -420,14 +432,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>1,900,000.000</efbc:ParameterNumeric>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>1900000.000</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Proposal price under consideration (EUR)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -436,14 +450,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>1,900,000.000</efbc:ParameterNumeric>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>1900000.000</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Fm (Lowest financial proposal following arithmetic corrections)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -452,14 +468,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>100.00</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Sf (Bidder with the lowest financial proposal following arithmetic corrections)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -468,14 +486,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>1,900,000.000</efbc:ParameterNumeric>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>1900000.000</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">F (Price of proposal under consideration)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -484,14 +504,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>100.00</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Sf bidder</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -500,14 +522,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>79.98</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">St bidder (Technical score)</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -516,14 +540,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>63.98</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Weighted technical score</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -532,14 +558,16 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>20.00</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">Weighted financial score</cbc:Description>
                </cac:SubordinateAwardingCriterion>
@@ -548,28 +576,33 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
-                                 <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)-->
+                                 <efbc:ParameterCode listName="number-weight">dec-exa</efbc:ParameterCode>
                                  <efbc:ParameterNumeric>83.98</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
                      </ext:UBLExtension>
                   </ext:UBLExtensions>
+                  <!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
                   <!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="ENG">S: Combined weighted technical and financial score</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <!--Submission URL (BT-18)-->
          <!--Tender Validity Deadline (BT-98)-->
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
@@ -593,6 +626,7 @@
          </ext:UBLExtensions>
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
          <!--GPA Coverage (BT-115)-->
          <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
@@ -637,7 +671,7 @@
          <cbc:Description languageID="ENG">A Design and Build (D&amp;B) contractor procured by MWSC will undertake designs and subsequent rehabilitation and/or upgrade of water and wastewater sewage treatment facilities to enable sustainable provision of services within the towns of Mufulira, Chingola and Chililabombwe. MWSC therefore requires the services of a design review and Construction Supervision Consultant (DRCS) to ensure that the D&amp;B contractor adheres to the specifications and performance requirements set out in the D&amp;B Contract with MWSC.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -673,7 +707,7 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

@@ -81,7 +81,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -95,7 +95,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -140,7 +140,7 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
       <cac:LotDistribution><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)-->
          <cbc:MaximumLotsSubmittedNumeric>30</cbc:MaximumLotsSubmittedNumeric>
       </cac:LotDistribution>
@@ -152,7 +152,7 @@
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -162,7 +162,6 @@
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -282,7 +281,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -290,6 +289,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -308,10 +310,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -410,7 +412,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Entwicklung digitaler Kompetenz an Schulen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -454,11 +456,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -552,7 +553,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -560,6 +561,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -578,10 +582,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -680,7 +684,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Digitale Ressourcen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -724,11 +728,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -822,7 +825,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -830,6 +833,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -848,10 +854,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -950,7 +956,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Lehren und Lernen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -994,11 +1000,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1092,7 +1097,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -1100,6 +1105,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -1118,10 +1126,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -1220,7 +1228,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Evaluation“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1264,11 +1272,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1362,7 +1369,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -1370,6 +1377,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -1388,10 +1398,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -1490,7 +1500,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Lernerorientierung“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1534,11 +1544,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1632,7 +1641,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -1640,6 +1649,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -1658,10 +1670,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -1760,7 +1772,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Digitale Kompetenz Lernender“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -1804,11 +1816,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -1902,7 +1913,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -1910,6 +1921,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -1928,10 +1942,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -2030,7 +2044,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Entwicklung digitaler Kompetenz an Schulen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2074,11 +2088,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -2172,7 +2185,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -2180,6 +2193,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -2198,10 +2214,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -2300,7 +2316,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Digitale Ressourcen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2344,11 +2360,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -2442,7 +2457,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -2450,6 +2465,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -2468,10 +2486,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -2570,7 +2588,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Lehren und Lernen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2614,11 +2632,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -2712,7 +2729,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -2720,6 +2737,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -2738,10 +2758,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -2840,7 +2860,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Evaluation“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -2884,11 +2904,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -2982,7 +3001,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -2990,6 +3009,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -3008,10 +3030,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -3110,7 +3132,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Lernerorientierung“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -3154,11 +3176,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -3252,7 +3273,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -3260,6 +3281,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -3278,10 +3302,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -3380,7 +3404,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Digitale Kompetenz Lernender“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -3424,11 +3448,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -3522,7 +3545,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -3530,6 +3553,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -3548,10 +3574,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -3650,7 +3676,7 @@
          <cbc:Description languageID="DEU">Online-Kursangebot zum Schwerpunkt „Entwicklung digitaler Kompetenz an Schulen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -3694,11 +3720,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -3792,7 +3817,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -3800,6 +3825,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -3818,10 +3846,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -3920,7 +3948,7 @@
          <cbc:Description languageID="DEU">Angebot eines Selbstlernkurses zum Schwerpunkt „Entwicklung digitaler Kompetenz an Schulen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -3964,11 +3992,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -4062,7 +4089,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -4070,6 +4097,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -4088,10 +4118,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -4190,7 +4220,7 @@
          <cbc:Description languageID="DEU">Kursangebot zum Schwerpunkt „Digitale Ressourcen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -4234,11 +4264,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -4332,7 +4361,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -4340,6 +4369,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -4358,10 +4390,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -4460,7 +4492,7 @@
          <cbc:Description languageID="DEU">Angebot eines Selbstlernkurses zum Schwerpunkt „Digitale Ressourcen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -4504,11 +4536,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -4602,7 +4633,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -4610,6 +4641,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -4628,10 +4662,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -4730,7 +4764,7 @@
          <cbc:Description languageID="DEU">Online-Kursangebot zum Schwerpunkt „Lehren und Lernen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -4774,11 +4808,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -4872,7 +4905,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -4880,6 +4913,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -4898,10 +4934,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -5000,7 +5036,7 @@
          <cbc:Description languageID="DEU">Angebot eines Selbstlernkurses zum Schwerpunkt „Lehren und Lernen“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -5044,11 +5080,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -5142,7 +5177,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -5150,6 +5185,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -5168,10 +5206,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -5270,7 +5308,7 @@
          <cbc:Description languageID="DEU">Online-Kursangebot zum Schwerpunkt „Evaluation“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -5314,11 +5352,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -5412,7 +5449,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -5420,6 +5457,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -5438,10 +5478,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -5540,7 +5580,7 @@
          <cbc:Description languageID="DEU">Angebot eines Selbstlernkurses zum Schwerpunkt „Evaluation“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -5584,11 +5624,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -5682,7 +5721,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -5690,6 +5729,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -5708,10 +5750,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -5810,7 +5852,7 @@
          <cbc:Description languageID="DEU">Online-Kursangebot zum Schwerpunkt „Lernerorientierung“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -5854,11 +5896,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -5952,7 +5993,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -5960,6 +6001,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -5978,10 +6022,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -6080,7 +6124,7 @@
          <cbc:Description languageID="DEU">Angebot eines Selbstlernkurses zum Schwerpunkt „Lernerorientierung“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -6124,11 +6168,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -6222,7 +6265,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -6230,6 +6273,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -6248,10 +6294,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -6350,7 +6396,7 @@
          <cbc:Description languageID="DEU">Online-Kursangebot zum Schwerpunkt „Digitale Kompetenz Lernender“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -6394,11 +6440,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -6492,7 +6537,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -6500,6 +6545,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -6518,10 +6566,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -6620,7 +6668,7 @@
          <cbc:Description languageID="DEU">Angebot eines Selbstlernkurses zum Schwerpunkt „Digitale Kompetenz Lernender“.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -6664,11 +6712,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -6762,7 +6809,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -6770,6 +6817,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -6788,10 +6838,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -6890,7 +6940,7 @@
          <cbc:Description languageID="DEU">Kursangebot zu einem oder mehreren Schwerpunkten der Fortbildung in Modul A: Entwicklung digitaler Kompetenz an Schulen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -6934,11 +6984,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -7032,7 +7081,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -7040,6 +7089,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -7058,10 +7110,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -7160,7 +7212,7 @@
          <cbc:Description languageID="DEU">Kursangebot zu einem oder mehreren Schwerpunkten der Fortbildung in Modul B: Digitale Ressourcen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -7204,11 +7256,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -7302,7 +7353,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -7310,6 +7361,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -7328,10 +7382,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -7430,7 +7484,7 @@
          <cbc:Description languageID="DEU">Kursangebot zu einem oder mehreren Schwerpunkten der Fortbildung in Modul C: Lehren und Lernen.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -7474,11 +7528,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -7572,7 +7625,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -7580,6 +7633,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -7598,10 +7654,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -7700,7 +7756,7 @@
          <cbc:Description languageID="DEU">Kursangebot zu einem oder mehreren Schwerpunkten der Fortbildung in Modul D: Evaluation.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -7744,11 +7800,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -7842,7 +7897,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -7850,6 +7905,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -7868,10 +7926,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -7970,7 +8028,7 @@
          <cbc:Description languageID="DEU">Kursangebot zu einem oder mehreren Schwerpunkten der Fortbildung in Modul E: Lernerorientierung.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -8014,11 +8072,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
@@ -8112,7 +8169,7 @@
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
                   <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
@@ -8120,6 +8177,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -8138,10 +8198,10 @@
             <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Die Einlegung von Rechtsbehelfen richtet sich nach § 160 GWB. Gem. § 160 Abs. 1 GWB leitet die Vergabekammer ein Nachprüfungsverfahren nur auf Antrag ein. Antragsbefugt ist hierbei nach § 160 Abs. 2 GWB jedes Unternehmen, das ein Interesse an dem öffentlichen Auftrag hat und eine Verletzung in seinen Rechten nach § 97 Abs. 6 GWB durch Nichtbeachtung von Vergabevorschriften geltend macht.Dabei ist darzulegen, dass dem Unternehmen durch die behauptete Verletzung der Vergabevorschriften ein Schadenentstanden ist oder zu entstehen droht. Die Regelung des § 160 Abs. 3 Satz 1 GWB zu den Fristen für die Einlegung von Rechtbehelfen gilt nicht bei einem Antrag auf Feststellung der Unwirksamkeit des Vertrages gem. § 135 Abs. 1 Nr. 2 GWB. Nach § 135 Abs. 1 Nr. 2 GWB ist ein öffentlicher Auftrag von Anfang an unwirksam, wenn der öffentliche Auftraggeber den Auftrag ohne Veröffentlichung einer vorherigen Bekanntmachung im Amtsblatt der Europäischen Union vergeben hat, ohne dass dies aufgrund Gesetztes gestattet ist und dieser Verstoß in einem Nachprüfungsverfahren festgestellt worden ist. Nach § 135 Abs. 2 GWB kann die Unwirksamkeit gem. § 135 Abs. 1 Nr. 2 GWB nur festgestellt werden, wenn sie in einem Nachprüfungsverfahren innerhalb von 30 Kalendertagen nach der Information der betroffenen Bieter und Bewerber durch den öffentlichen Auftraggeber über den Abschluss des Vertrages, jedoch nicht später als 6 Monate nach Vertragsschluss gelten gemacht worden ist. Hat der Auftraggeber die Auftragsvergabe im Amtsblatt der Europäischen Union bekannt gemacht, endet die Frist zur Geltendmachung der Unwirksamkeit 30 Kalendertage nach Veröffentlichung der Bekanntmachung der Auftragsvergabe im Amtsblatt der Europäischen Union.</cbc:Description>
@@ -8240,7 +8300,7 @@
          <cbc:Description languageID="DEU">Kursangebot zu einem oder mehreren Schwerpunkten der Fortbildung in Modul F: Digitale Kompetenz Lernender.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -8284,11 +8344,10 @@
             <cbc:StartDate>2021-04-01+01:00</cbc:StartDate>
             <cbc:EndDate>2022-12-31+01:00</cbc:EndDate>
          </cac:PlannedPeriod>
-         <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
-         <!--Renewal Description (BT-57)-->
-         <cac:ContractExtension>
+         <cac:ContractExtension><!--Options Description (BT-54)-->
             <cbc:OptionsDescription languageID="DEU">Siehe Leistungsbeschreibung Teil A.</cbc:OptionsDescription>
+            <!--Renewal Maximum (BT-58)-->
+            <!--Renewal Description (BT-57)-->
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

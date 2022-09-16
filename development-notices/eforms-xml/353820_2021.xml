@@ -81,7 +81,7 @@
                   </efac:Organization>
                </efac:Organizations>
                <!-- efac:Publication -->
-               <efac:Publication><!--Notice Publication ID (OPP-010)-->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
@@ -95,7 +95,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.6</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -140,13 +140,13 @@
       </cac:Party>
    </cac:ContractingParty>
    <!-- cac:TenderingTerms -->
-   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--BT-01 Legal Basis Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
    <!-- cac:TenderingProcess -->
    <cac:TenderingProcess>
       <ext:UBLExtensions>
          <ext:UBLExtension>
             <ext:ExtensionContent>
-               <efext:EformsExtension><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
             </ext:ExtensionContent>
          </ext:UBLExtension>
       </ext:UBLExtensions>
@@ -157,7 +157,6 @@
       <!--PIN Competition Termination (BT-756)-->
       <cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
       <!--Previous Planning Identifier (BT-125)-->
-      <!--Previous Planning Part Identifier (BT-1251)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -273,10 +272,10 @@
             <cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
             <!--Award Criteria Order Justification (BT-733)-->
             <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Number Weight (BT-5421)-->
             <!--Award Criterion Number Fixed (BT-5422)-->
             <!--Award Criterion Number Threshold (BT-5423)-->
-            <!--Award Criterion Number (BT-541)-->
             <!--Award Criterion Type (BT-539)-->
             <!--Award Criterion Name (BT-734)-->
             <!--Award Criterion Description (BT-540)-->
@@ -287,6 +286,9 @@
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
             <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
          </cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -302,10 +304,10 @@
             <cbc:DurationMeasure unitCode="DAY">112</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
-         <!--cac:PresentationPeriod: Review Deadline Description (BT-99)-->
-         <!--cac:AppealInformationParty: Review Information Providing Organization-->
-         <!--cac:AppealReceiverParty: Review organization-->
-         <!--cac:MediationParty: Mediation organization-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
          <cac:AppealTerms>
             <cac:PresentationPeriod>
                <cbc:Description languageID="DEU">Ergeht eine Mitteilung des Auftraggebers, der Rüge nicht abhelfen zu wollen, kann der Bieter wegen Nichtbeachtung der Vergabevorschriften ein Nachprüfungsverfahren nur innerhalb von 15 Kalendertagen nach Eingang vor der Vergabekammer beantragen. Nach Ablauf der Frist ist der Antrag unzulässig. (§ 160 Abs. 3 Nr. 4 GWB)</cbc:Description>
@@ -404,7 +406,7 @@
          <cbc:Description languageID="DEU">Die Universitätsstadt Gießen plant die Neukonzeption des Oberhessischen Museums. Gegenstand des Auftrags ist die Sanierung und der Umbau des Wallenfels´schen und Leib´schen Hauses. Der Fachplaner HLS muss unter Berücksichtigung der denkmalpflegerischen Aspekte (s. o.) den Entwurf in technischer Hinsicht in den beiden Bestandsgebäuden sowie dem neu hinzuzufügenden Zwischenbau planen und umsetzen. Wichtig sind hierbei insbesondere eine große Erfahrung mit Instandsetzungen und Bauen im Bestand im Allgemeinen, mit museumstechnischer Ausstattung und den speziellen Anforderungen eines Museums an die Klimatisierung im Besonderen. Die bisher vorhandenen Anlagen, Leitungen etc. werden vollständig bis zum Hausanschluss entfernt. Gegenstand dieses VgV-Verfahrens ist hinsichtlich der Fachplanerleistungen Heizung/Lüftung/Sanitär/Klimatisierung (Anlagengruppen 1 bis 3 und 8 + KG 480) die Durchführung der LPH 1-4 und 5 bis 9, für die Gesamtmaßnahme, d.h. die Grundlagenermittlung, die Vorplanung, die Entwurfs- und (sofern und soweit erforderlich) die Genehmigungsplanung zu erbringen, sowie die Ausführungsplanung, die Vorbereitung und die Mitwirkung bei der Vergabe, die Objektüberwachung und ggf. die Objektbetreuung und Dokumentation.</cbc:Description>
          <!--Main Nature (BT-23)-->
          <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-         <!--Additional Nature (different from Main) (BT-531)-->
+         <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
@@ -455,7 +457,7 @@
             <cbc:DurationMeasure unitCode="MONTH">36</cbc:DurationMeasure>
          </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
-         <!--Renewal maximum (BT-58)-->
+         <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>

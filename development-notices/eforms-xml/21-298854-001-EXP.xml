@@ -1,0 +1,1602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeResult><!--Notice Value (BT-161)-->
+                  <cbc:TotalAmount currencyID="EUR">35360</cbc:TotalAmount>
+                  <!--Notice Framework Value (BT-118)-->
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Received Submissions Type (BT-760)-->
+                     <!--Received Submissions Count (BT-759)-->
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">10900</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">5510</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">1920</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">4030</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">11700</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
+                     <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     <!--Tender Rank (BT-171)-->
+                     <!--Tender Variant (BT-193)-->
+                     <!--Tender Value (BT-720)-->
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="EUR">1300</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <!--Concession Revenue Buyer (BT-160)-->
+                     <!--Concession Revenue User (BT-162)-->
+                     <!--Concession Value Description (BT-163)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Value (BT-553)-->
+                     <!--Subcontracting Description (BT-554)-->
+                     <!--Subcontracting Percentage (BT-555)-->
+                     <!--Subcontracting (BT-773)-->
+                     <!--Subcontracting Percentage Known (BT-731)-->
+                     <!--Subcontracting Value Known (BT-730)-->
+                     <!--Tendering Party ID Reference (OPT-310)-->
+                     <efac:TenderingParty>
+                        <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     </efac:TenderingParty>
+                     <!--Tender Lot Identifier (BT-13714)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotTender>
+                  <efac:SettledContract><!--Contract Technical Identifier (OPT-316)-->
+                     <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     <!--Winner Decision Date (BT-1451)-->
+                     <!--Contract Conclusion Date (BT-145)-->
+                     <cbc:IssueDate>2021-05-21+01:00</cbc:IssueDate>
+                     <!--Contract Title (BT-721)-->
+                     <cbc:Title languageID="FRA">Sonorisation et animation des manifestations sportives Sonorisation des cérémonies commémoratives Sonorisation et animation des manifestations de la vie sociale Sonorisation et animations des manifestations de type commercial Sonorisation des manifestations de type festif Création et diffusion musicale des manifestations festives</cbc:Title>
+                     <!--Contract Framework Agreement (BT-768)-->
+                     <!--Contract Identifier (BT-150)-->
+                     <efac:ContractReference>
+                        <cbc:ID>Prestations de sonorisation et/ou animation des manifestations organisées par la ville de Troyes</cbc:ID>
+                     </efac:ContractReference>
+                     <!--Contract Tender Identifier (BT-3202)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+                  <efac:TenderingParty><!--Tendering Party Identifier (OPT-210)-->
+                     <cbc:ID schemeName="tendering-party">TPA-0003</cbc:ID>
+                     <efac:Tenderer><!--Tenderer Identifier Reference (OPT-300)-->
+                        <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        <!--Tendering Party Leader (OPT-170)-->
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">27</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.ville-troyes.fr</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Mairie de Troyes</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
+                           <cbc:CityName>Troyes</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>commande.publique@ville-troyes.fr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Discobus — AZ-Production</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>1 rue des Cumines</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Troyes</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>10000</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Concept Audio</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>44,chemin des Grèves</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Nogent-sur-Seine</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>10400</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)-->
+                        <efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Concept Audio</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>44 chemin des Grèves</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Nogent-sur-Seine</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>10400</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Tribunal administratif de Châlons-en-Champagne</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>25 rue du Lycée</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Châlons-en-Champagne</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.ville-troyes.fr</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Mairie de Troyes — direction commande publique et achats transversaux</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>place Alexandre Israël</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Troyes Cedex</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>10026</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+33 325423333</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+33 325423447</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>commande.publique@ville-troyes.fr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2021-06-07+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>http://www.xmarches.fr</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">cga</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">neg-wo-call</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Planning Identifier (BT-125)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">AC sonorisation 2021</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="FRA">Accord-cadre mono-attributaire à bons de commande relatif aux prestations de sonorisation et/ou animation des manifestations organisées par la ville de Troyes</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="FRA">Le présent accord-cadre porte sur des prestations de services de sonorisation et/ou animation des manifestations organisées par la ville de Troyes, décomposée en six lots tels que décrits au sein du cahier des clauses techniques particulières. Sont exclues du présent marché, les prestations de sonorisation ou d'animation des manifestations ou opérations incluant plusieurs intervenants et pour lesquelles une coordination technique et/ou synchronisée est indispensable (spectacles de son et lumière, d'arts vivants, ville en lumières, etc.).</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="FRA">Le présent accord-cadre est passé pour une période de un an à compter de la date de réception de la notification au titulaire. Il pourra ensuite être renouvelé deux fois, tacitement, par période de un an. Sa durée ne pourra donc excéder trois ans. L'émission et l'exécution des bons de commande ne peuvent intervenir que pendant la durée de validité de l'accord-cadre. Le titulaire ne pourra pas refuser la reconduction tacite de l'accord-cadre. Si la collectivité décide de ne pas reconduire l'accord-cadre, elle adressera au titulaire, un mois avant son échéance, une lettre de non reconduction en recommandé avec accusé de réception par voie dématérialisée.</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">75200000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="FRA"/>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="FRA">Sonorisation et animation des manifestations sportives</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="FRA">Sonorisation et animation des manifestations sportives.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="FRA">Cet accord-cadre mono-attributaire à bons de commande est régi en application de l'article R. 2162-4 alinéa 2º du code de la commande publique avec un maximum annuel fixé en valeur: 19 000 EUR HT.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">75200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48952000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Troyes.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="FRA"/>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="FRA">Sonorisation des cérémonies commémoratives</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="FRA">Sonorisation des cérémonies commémoratives.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="FRA">Cet accord-cadre mono-attributaire à bons de commande est régi en application de l'article R. 2162-4 alinéa 2º du code de la commande publique avec un maximum annuel fixé en valeur: 9 000 EUR HT.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">75200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48952000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Troyes.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="FRA"/>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="FRA">Sonorisation et animation des manifestations de la vie sociale</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="FRA">Sonorisation et animation des manifestations de la vie sociale.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="FRA">Cet accord-cadre mono-attributaire à bons de commande est régi en application de l'article R. 2162-4 alinéa 2º du code de la commande publique avec un maximum annuel fixé en valeur: 5 000 EUR HT.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">75200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48952000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Troyes.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="FRA"/>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="FRA">Sonorisation et animations des manifestations de type commercial</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="FRA">Sonorisation et animations des manifestations de type commercial.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="FRA">Cet accord-cadre mono-attributaire à bons de commande est régi en application de l'article R. 2162-4 alinéa 2º du code de la commande publique avec un maximum annuel fixé en valeur: 10 000 EUR HT.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">75200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48952000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Troyes.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="FRA"/>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="FRA">Sonorisation des manifestations de type festif</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="FRA">Sonorisation des manifestations de type festif.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="FRA">Cet accord-cadre mono-attributaire à bons de commande est régi en application de l'article R. 2162-4 alinéa 2º du code de la commande publique avec un maximum annuel fixé en valeur: 16 000 EUR HT.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">75200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48952000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Troyes.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Reserved Participation (BT-71)-->
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <!--WARNING: Award Criterion Description (BT-540) is required, but the source TED notice does not contain this information.-->
+                  <cbc:Description languageID="FRA"/>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+            <!--Jury Member Name (BT-46)-->
+            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
+            <!--Prize Rank (BT-44)-->
+            <!--Value Prize (BT-644)-->
+            <!--Rewards Other (Prize Description) (BT-45)-->
+         </cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <!--Dynamic Purchasing System (BT-766)-->
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="FRA">Création et diffusion musicale des manifestations festives</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="FRA">Création et diffusion musicale des manifestations festives.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="FRA">Cet accord-cadre mono-attributaire à bons de commande est régi en application de l'article R. 2162-4 alinéa 2º du code de la commande publique avec un maximum annuel fixé en valeur: 3 000 EUR HT.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">75200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48952000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Troyes.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FRF22</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
+</ContractAwardNotice>
