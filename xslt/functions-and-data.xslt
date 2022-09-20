@@ -124,34 +124,70 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:if test="$lot-no-is-convertible"><is-convertible/></xsl:if>
 				<lot-id>
 					<xsl:choose>
-						<!-- When LOT_NO exists -->
-						<xsl:when test="$lot-no">
+						<xsl:when test="$eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', 'E2','7', '8', '9', '10', '11','12', '13', '14')">
 							<xsl:choose>
-								<!-- LOT_NO is a positive integer between 1 and 9999 -->
-								<xsl:when test="$lot-no-is-convertible">
-									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/>
+								<!-- When LOT_NO exists -->
+								<xsl:when test="$lot-no">
+									<xsl:choose>
+										<!-- LOT_NO is a positive integer between 1 and 9999 -->
+										<xsl:when test="$lot-no-is-convertible">
+											<xsl:value-of select="fn:concat('PAR-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="fn:concat('PAR-', ted:LOT_NO)"/>
+										</xsl:otherwise>							
+									</xsl:choose>
 								</xsl:when>
+								<!-- When LOT_NO does not exist -->
 								<xsl:otherwise>
-									<xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/>
-								</xsl:otherwise>							
+									<xsl:choose>
+										<!-- This is the only Lot in the notice -->
+										<xsl:when test="$count-lots = 1">
+											<!-- use identifier LOT-0000 -->
+											<xsl:value-of select="'PAR-0000'"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<!-- not tested, no examples found -->
+											<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
+											<xsl:value-of select="fn:concat('PAR-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
-						<!-- When LOT_NO does not exist -->
 						<xsl:otherwise>
 							<xsl:choose>
-								<!-- This is the only Lot in the notice -->
-								<xsl:when test="$count-lots = 1">
-									<!-- use identifier LOT-0000 -->
-									<xsl:value-of select="'LOT-0000'"/>
+								<!-- When LOT_NO exists -->
+								<xsl:when test="$lot-no">
+									<xsl:choose>
+										<!-- LOT_NO is a positive integer between 1 and 9999 -->
+										<xsl:when test="$lot-no-is-convertible">
+											<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/>
+										</xsl:otherwise>							
+									</xsl:choose>
 								</xsl:when>
+								<!-- When LOT_NO does not exist -->
 								<xsl:otherwise>
-									<!-- not tested, no examples found -->
-									<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
-									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/>
+									<xsl:choose>
+										<!-- This is the only Lot in the notice -->
+										<xsl:when test="$count-lots = 1">
+											<!-- use identifier LOT-0000 -->
+											<xsl:value-of select="'LOT-0000'"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<!-- not tested, no examples found -->
+											<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
+											<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/>
+										</xsl:otherwise>
+									</xsl:choose>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:otherwise>
 					</xsl:choose>
+
 				</lot-id>
 			</lot>
 		</xsl:for-each>

@@ -32,8 +32,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Only one Lot in the TED notice'"/></xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
-		<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
-
+<!--		<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
+-->
+		<xsl:choose>
+			<xsl:when test="$eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', 'E2','7', '8', '9', '10', '11','12', '13', '14')">
+				<cbc:ID schemeName="Part"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
+			</xsl:when>
+			<xsl:otherwise>
+				<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
+			</xsl:otherwise>
+		</xsl:choose>
+		
 		<xsl:call-template name="lot-tendering-terms"/>
 		<xsl:call-template name="lot-tendering-process"/>
 		<xsl:call-template name="lot-procurement-project"/>
