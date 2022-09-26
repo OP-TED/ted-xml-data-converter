@@ -14,35 +14,31 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template match="ted:OBJECT_DESCR">
 	<cac:ProcurementProjectLot>
 		<!-- For form F02, the element OBJECT_DESCR is the same, whether there is one lot (NO_LOT_DIVISION) or more than one lot (LOT_DIVISION) -->
-		<!-- But, for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
+		<!-- But for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
+		<!-- The same logic is true for Parts, using "PAR-" instead of "LOT-" -->
 		<!-- In TED LOT_NO, if present, usually contains a positive integer. This will be converted to the new eForms format -->
-
 		<!-- Purpose Lot Identifier (BT-137): eForms documentation cardinality (Lot) = 1 | eForms Regulation Annex table conditions = Forbidden for PIN subtypes 1-3; Optional (O or EM or CM) for all other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Purpose Lot Identifier (BT-137)'"/></xsl:call-template>
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<xsl:variable name="lot-info" select="$lot-numbers-map//lot[path = $path]"/>
-
 		<xsl:choose>
 			<!-- When LOT_NO exists -->
 			<xsl:when test="fn:not($lot-info/is-convertible)">
-				<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:variable>
+				<xsl:variable name="message"> WARNING: Cannot convert original TED lot or part number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			</xsl:when>
 			<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Only one Lot in the TED notice'"/></xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
-<!--		<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
--->
 		<xsl:choose>
-			<xsl:when test="$eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', 'E2','7', '8', '9', '10', '11','12', '13', '14')">
+			<xsl:when test="$eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', 'E2')">
 				<cbc:ID schemeName="Part"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
 			</xsl:when>
 			<xsl:otherwise>
 				<cbc:ID schemeName="Lot"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
 			</xsl:otherwise>
 		</xsl:choose>
-		
 		<xsl:call-template name="lot-tendering-terms"/>
 		<xsl:call-template name="lot-tendering-process"/>
 		<xsl:call-template name="lot-procurement-project"/>
