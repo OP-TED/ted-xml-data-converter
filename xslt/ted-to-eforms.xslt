@@ -182,10 +182,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:VersionID>01</cbc:VersionID>
 	<!-- Future Notice (BT-127): eForms documentation cardinality (Procedure) = * | Mandatory for PIN subtypes 4 and 6; Optional for PIN subtypes 5, 7-9, E1 and E2; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Future Notice (BT-127)'"/></xsl:call-template>
-	<!-- The "cbc:PlannedDate" is used for planning notices (PIN only excluded) [Notice subtypes 1,2,3, 7,8,9] to specify when the competition notice will be published. -->
-	<!-- F01, F04 element is TED_EXPORT/FORM_SECTION/F01_2014/OBJECT_CONTRACT/DATE_PUBLICATION_NOTICE -->
-	<!-- F16 PRIOR_INFORMATION_DEFENCE does not have an equivalent element -->
-	<!-- TBD: hard-coded for now -->
 	<xsl:if test="$eforms-notice-subtype = ('4', '5', '6', '7', '8', '9')">
 		<xsl:choose>
 			<xsl:when test="ted:OBJECT_CONTRACT/ted:DATE_PUBLICATION_NOTICE">
