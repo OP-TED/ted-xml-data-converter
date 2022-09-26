@@ -186,16 +186,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<!-- F01, F04 element is TED_EXPORT/FORM_SECTION/F01_2014/OBJECT_CONTRACT/DATE_PUBLICATION_NOTICE -->
 	<!-- F16 PRIOR_INFORMATION_DEFENCE does not have an equivalent element -->
 	<!-- TBD: hard-coded for now -->
-	<xsl:if test="$eforms-notice-subtype = ('1', '2', '3', '7', '8', '9')">
+	<xsl:if test="$eforms-notice-subtype = ('4', '5', '6', '7', '8', '9')">
 		<xsl:choose>
 			<xsl:when test="ted:OBJECT_CONTRACT/ted:DATE_PUBLICATION_NOTICE">
 				<cbc:PlannedDate><xsl:value-of select="ted:OBJECT_CONTRACT/ted:DATE_PUBLICATION_NOTICE"/><xsl:text>+01:00</xsl:text></cbc:PlannedDate>
 			</xsl:when>
-			<xsl:otherwise>
-			<!-- WARNING: Future Notice (BT-127): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML. -->
-			<xsl:variable name="message">WARNING: Future Notice (BT-127): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML.</xsl:variable>
+			<xsl:when test="$eforms-notice-subtype = ('4', '6')">
+			<!-- WARNING: Future Notice (BT-127) is Mandatory for eForms subtypes 4 and 6, but no DATE_PUBLICATION_NOTICE was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Future Notice (BT-127) is Mandatory for eForms subtypes 4 and 6, but no DATE_PUBLICATION_NOTICE was found in TED XML.</xsl:variable>
 			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-			</xsl:otherwise>
+			</xsl:when>
 		</xsl:choose>
 	</xsl:if>
 	<!-- Procedure Legal Basis (BT-01): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
