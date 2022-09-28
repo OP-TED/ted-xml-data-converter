@@ -32,7 +32,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			</xsl:when>
 		</xsl:choose>
 		<xsl:choose>
-			<xsl:when test="$eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', 'E2')">
+			<xsl:when test="$eforms-notice-subtype = ('4', '5', '6', 'E2')">
 				<cbc:ID schemeName="Part"><xsl:value-of select="$lot-info/lot-id"/></cbc:ID>
 			</xsl:when>
 			<xsl:otherwise>

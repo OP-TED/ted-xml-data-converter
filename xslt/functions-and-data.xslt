@@ -117,7 +117,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<!-- eForms subtypes 1 to 9 are Planning type notices, and use Parts, not Lots, and the BT-137 value uses "PAR-" and not "LOT-". -->
 	<xsl:variable name="lot-prefix">
 		<xsl:choose>
-			<xsl:when test="$eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', 'E2')">
+			<xsl:when test="$eforms-notice-subtype = ('4', '5', '6', 'E2')">
 				<xsl:value-of select="'PAR-'"/>
 			</xsl:when>
 			<xsl:otherwise>
