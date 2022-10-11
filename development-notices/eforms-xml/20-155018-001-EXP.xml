@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<PriorInformationNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
-                         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                         xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                         xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                         xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                         xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+<PriorInformationNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                        xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                        xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                        xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                        xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                        xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                        xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -79,6 +79,7 @@
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
+   <cbc:PlannedDate>2020-03-30+01:00</cbc:PlannedDate>
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
@@ -156,7 +157,7 @@
    </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot -->
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
-      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+      <cbc:ID schemeName="Part">PAR-0000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)--><!--Performing Staff Qualification (BT-79)--><!--Recurrence (BT-94)--><!--Recurrence Description (BT-95)--><!--Security Clearance Deadline (BT-78)--><!--Multiple Tenders (BT-769)--><!--Documents Restricted Justification (BT-707)--><!--Documents Official Language (BT-708)--><!--Documents Unofficial Language (BT-737)--><!--Terms Financial (BT-77)--><!--Reserved Participation (BT-71)--><!--Reserved Participation (BT-71)--><!--Tenderer Legal Form (BT-761)--><!--Tenderer Legal Form Description (BT-76)--><!--Late Tenderer Information (BT-771)--><!--Subcontracting Tender Indication (BT-651)--><!--Subcontracting Obligation (BT-65)--><!--Subcontracting Obligation Maximum (BT-729)--><!--Subcontracting Obligation Minimum (BT-64)--><!--Reserved Execution (BT-736)--><!--Electronic Invoicing (BT-743)--><!--Terms Performance (BT-70)--><!--Submission Electronic Catalog (BT-764)--><!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>

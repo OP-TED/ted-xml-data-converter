@@ -3,13 +3,14 @@
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
 xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" 
+xmlns:ted-1="http://formex.publications.europa.eu/ted/schema/export/R2.0.9.S01.E01"
 xmlns:n2016-1="ted/2016/nuts" 
 xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
 xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016-1 n2016 n2021 pin cn can ccts ext" >
+exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 gc n2016-1 n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 
@@ -20,7 +21,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016-1 n2016 n
 <!-- Create temporary XML structure to hold all the TED address elements, with the XPath for each -->
 <xsl:variable name="ted-addresses" as="element()">
 	<ted-orgs>
-		<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY/(ted:ADDRESS_CONTRACTING_BODY | ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL | ted:ADDRESS_FURTHER_INFO | ted:ADDRESS_PARTICIPATION) | ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY | ted:ADDRESS_MEDIATION_BODY | ted:ADDRESS_REVIEW_INFO) | ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS/ted:CONTRACTOR/(ted:ADDRESS_CONTRACTOR | ted:ADDRESS_PARTY))">
+		<xsl:for-each select="$ted-form-main-element/(*:CONTRACTING_BODY/(*:ADDRESS_CONTRACTING_BODY | *:ADDRESS_CONTRACTING_BODY_ADDITIONAL | *:ADDRESS_FURTHER_INFO | *:ADDRESS_PARTICIPATION) | *:COMPLEMENTARY_INFO/(*:ADDRESS_REVIEW_BODY | *:ADDRESS_MEDIATION_BODY | *:ADDRESS_REVIEW_INFO) | *:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:CONTRACTORS/*:CONTRACTOR/(*:ADDRESS_CONTRACTOR | *:ADDRESS_PARTY))">
 			<ted-org>
 				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 				<path><xsl:value-of select="$path"/></path>
@@ -28,7 +29,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016-1 n2016 n
 					<xsl:for-each select="*">
 						<xsl:copy-of select="." copy-namespaces="no"/>
 					</xsl:for-each>
-					<xsl:copy-of select="../ted:SME" copy-namespaces="no"/>
+					<xsl:copy-of select="../*:SME" copy-namespaces="no"/>
 				</ted-address>
 			</ted-org>
 		</xsl:for-each>
@@ -85,8 +86,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016-1 n2016 n
 <!-- Create efac:Organizations structure -->
 <xsl:template name="organizations">
 <xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' efac:Organizations '"/></xsl:call-template>
-<xsl:variable name="is-joint-procurement" select="fn:boolean(ted:CONTRACTING_BODY/ted:JOINT_PROCUREMENT_INVOLVED)"/>
-<xsl:variable name="is-central-purchasing" select="fn:boolean(ted:CONTRACTING_BODY/ted:CENTRAL_PURCHASING)"/>
+<xsl:variable name="is-joint-procurement" select="fn:boolean(*:CONTRACTING_BODY/*:JOINT_PROCUREMENT_INVOLVED)"/>
+<xsl:variable name="is-central-purchasing" select="fn:boolean(*:CONTRACTING_BODY/*:CENTRAL_PURCHASING)"/>
 <efac:Organizations>
 	<!-- there are no F##_2014 forms that do not have ADDRESS_CONTRACTING_BODY -->
 	<xsl:for-each select="$ted-addresses-unique-with-id//ted-org/ted-address">
@@ -133,7 +134,7 @@ These instructions can be un-commented to show the variables holding the organiz
 	<efac:Company>
 		<!-- Organization Internet Address (BT-505): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Internet Address (BT-505)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:URL_GENERAL|ted:URL"/>
+		<xsl:apply-templates select="*:URL_GENERAL|*:URL"/>
 		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Winner Size (BT-165)'"/></xsl:call-template>
 		<xsl:call-template name="winner-size"/>
@@ -142,11 +143,11 @@ These instructions can be un-commented to show the variables holding the organiz
 		<cac:PartyIdentification><cbc:ID schemeName="organization"><xsl:value-of select="../orgid"/></cbc:ID></cac:PartyIdentification>
 		<!-- Organization Name (BT-500): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Name (BT-500)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:OFFICIALNAME"/>
+		<xsl:apply-templates select="*:OFFICIALNAME"/>
 		<xsl:call-template name="address"/>
 		<!-- Organization Identifier (BT-501) Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Identifier (BT-501)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:NATIONALID"/>
+		<xsl:apply-templates select="*:NATIONALID"/>
 		<xsl:call-template name="contact"/>
 	</efac:Company>
 </xsl:template>
@@ -155,7 +156,7 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
 		<xsl:if test="../path[fn:ends-with(., 'ADDRESS_CONTRACTOR')]">
 			<xsl:choose>
-				<xsl:when test="ted:SME">
+				<xsl:when test="*:SME">
 					<efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>
 				</xsl:when>
 				<xsl:when test="$eforms-notice-subtype = ('29', '30', '32', '33', '34', '35', '36', '37')">
@@ -172,25 +173,25 @@ These instructions can be un-commented to show the variables holding the organiz
 	<cac:PostalAddress>
 		<!-- Organization Street (BT-510): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Street (BT-510)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:ADDRESS"/>
+		<xsl:apply-templates select="*:ADDRESS"/>
 		<!-- Organization City (BT-513): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization City (BT-513)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:TOWN"/>
+		<xsl:apply-templates select="*:TOWN"/>
 		<!-- Organization Post Code (BT-512): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Post Code (BT-512)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:POSTAL_CODE"/>
+		<xsl:apply-templates select="*:POSTAL_CODE"/>
 		<!-- Organization Country Subdivision (BT-507): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Country Subdivision (BT-507)'"/></xsl:call-template>
 		<!-- Convert only NUTS level 3 codes -->
 		<xsl:apply-templates select="*:NUTS[opfun:is-valid-nuts-code(@CODE)]"/>
 		<!-- Organization Country Code (BT-514): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Country Code (BT-514)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:COUNTRY"/>
+		<xsl:apply-templates select="*:COUNTRY"/>
 	</cac:PostalAddress>
 </xsl:template>
 
-<!-- Convert two-letter country code in ted:COUNTRY to three-letter country code used in eForms -->
-<xsl:template match="ted:COUNTRY">
+<!-- Convert two-letter country code in *:COUNTRY to three-letter country code used in eForms -->
+<xsl:template match="*:COUNTRY">
 	<xsl:variable name="country" select="opfun:get-eforms-country(@VALUE)"/>
 	<cac:Country>
 		<cbc:IdentificationCode listName="country"><xsl:value-of select="$country"/></cbc:IdentificationCode>
@@ -201,20 +202,20 @@ These instructions can be un-commented to show the variables holding the organiz
 <xsl:template name="contact">
 	<!-- Some ADDRESS_* elements (especially ADDRESS_CONTRACTOR) do not have any "contact" elements -->
 	<xsl:choose>
-		<xsl:when test="ted:PHONE|ted:FAX|ted:E_MAIL|ted:CONTACT_POINT">
+		<xsl:when test="*:PHONE|*:FAX|*:E_MAIL|*:CONTACT_POINT">
 			<cac:Contact>
 				<!-- Organization Contact Point (BT-502): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Point (BT-502)'"/></xsl:call-template>
-				<xsl:apply-templates select="ted:CONTACT_POINT"/>
+				<xsl:apply-templates select="*:CONTACT_POINT"/>
 				<!-- Organization Contact Telephone Number (BT-503): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Telephone Number (BT-503)'"/></xsl:call-template>
-				<xsl:apply-templates select="ted:PHONE"/>
+				<xsl:apply-templates select="*:PHONE"/>
 				<!-- Organization Contact Fax (BT-739): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Fax (BT-739)'"/></xsl:call-template>
-				<xsl:apply-templates select="ted:FAX"/>
+				<xsl:apply-templates select="*:FAX"/>
 				<!-- Organization Contact Email Address (BT-506): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Email Address (BT-506)'"/></xsl:call-template>
-				<xsl:apply-templates select="ted:E_MAIL"/>
+				<xsl:apply-templates select="*:E_MAIL"/>
 			</cac:Contact>
 		</xsl:when>
 		<xsl:otherwise>
@@ -227,12 +228,12 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:ContractingParty structure -->
-<xsl:template match="ted:ADDRESS_CONTRACTING_BODY|ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
+<xsl:template match="*:ADDRESS_CONTRACTING_BODY|*:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
 	<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 	<cac:ContractingParty>
 		<!-- Buyer Profile URL (BT-508) Mandatory for PIN subtypes 1-3; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Profile URL (BT-508)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:URL_BUYER"/>
+		<xsl:apply-templates select="*:URL_BUYER"/>
 		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="buyer-legal-type"/>
 		<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
@@ -241,10 +242,10 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 		<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Authority (BT-10)'"/></xsl:call-template>
-		<xsl:apply-templates select="../ted:CA_ACTIVITY"/>
+		<xsl:apply-templates select="../*:CA_ACTIVITY"/>
 		<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Entity (BT-610)'"/></xsl:call-template>
-		<xsl:apply-templates select="../ted:CE_ACTIVITY"/>
+		<xsl:apply-templates select="../*:CE_ACTIVITY"/>
 		<cac:Party>
 			<!-- Buyer Technical Identifier Reference (OPT-300) -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Technical Identifier Reference (OPT-300)'"/></xsl:call-template>
@@ -275,8 +276,8 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Legal Type (BT-11)'"/></xsl:call-template>
 		<xsl:choose>
-			<xsl:when test="../ted:CA_TYPE">
-				<xsl:apply-templates select="../ted:CA_TYPE"/>
+			<xsl:when test="../*:CA_TYPE">
+				<xsl:apply-templates select="../*:CA_TYPE"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML. -->
@@ -290,12 +291,12 @@ These instructions can be un-commented to show the variables holding the organiz
 	<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Contracting Entity (BT-740)'"/></xsl:call-template>
 	<xsl:choose>
-		<xsl:when test="../ted:CA_ACTIVITY|../ted:CA_ACTIVITY_OTHER">
+		<xsl:when test="../*:CA_ACTIVITY|../*:CA_ACTIVITY_OTHER">
 			<cac:ContractingPartyType>
 				<cbc:PartyTypeCode listName="buyer-contracting-type"><xsl:value-of select="'not-cont-ent'"/></cbc:PartyTypeCode>
 			</cac:ContractingPartyType>
 		</xsl:when>
-		<xsl:when test="../ted:CE_ACTIVITY|../ted:CE_ACTIVITY_OTHER">
+		<xsl:when test="../*:CE_ACTIVITY|../*:CE_ACTIVITY_OTHER">
 			<cac:ContractingPartyType>
 				<cbc:PartyTypeCode listName="buyer-contracting-type"><xsl:value-of select="'cont-ent'"/></cbc:PartyTypeCode>
 			</cac:ContractingPartyType>
@@ -304,7 +305,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:ContractingPartyType structures -->
-<xsl:template match="ted:CA_TYPE">
+<xsl:template match="*:CA_TYPE">
 	<xsl:variable name="ca-type" select="@VALUE"/>
 	<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
 	<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
@@ -314,7 +315,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:ContractingActivity structures -->
-<xsl:template match="ted:CA_ACTIVITY">
+<xsl:template match="*:CA_ACTIVITY">
 	<xsl:variable name="ca-activity" select="@VALUE"/>
 	<xsl:variable name="authority-activity-type" select="$mappings//authority-activity-types/mapping[ted-value=$ca-activity]/fn:string(eforms-value)"/>
 	<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
@@ -323,7 +324,7 @@ These instructions can be un-commented to show the variables holding the organiz
 	</cac:ContractingActivity>
 </xsl:template>
 
-<xsl:template match="ted:CE_ACTIVITY">
+<xsl:template match="*:CE_ACTIVITY">
 	<xsl:variable name="ce-activity" select="@VALUE"/>
 	<xsl:variable name="entity-activity-type" select="$mappings//entity-activity-types/mapping[ted-value=$ce-activity]/fn:string(eforms-value)"/>
 	<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
@@ -333,7 +334,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:AdditionalInformationParty structure -->
-<xsl:template match="ted:ADDRESS_FURTHER_INFO">
+<xsl:template match="*:ADDRESS_FURTHER_INFO">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_FURTHER_INFO')]/../orgid"/>
 	<cac:AdditionalInformationParty>
 		<cac:PartyIdentification>
@@ -342,7 +343,7 @@ These instructions can be un-commented to show the variables holding the organiz
 	</cac:AdditionalInformationParty>
 </xsl:template>
 
-<xsl:template match="ted:ADDRESS_FURTHER_INFO_IDEM">
+<xsl:template match="*:ADDRESS_FURTHER_INFO_IDEM">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_CONTRACTING_BODY')]/../orgid"/>
 	<cac:AdditionalInformationParty>
 		<cac:PartyIdentification>
@@ -352,7 +353,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:AppealInformationParty structure -->
-<xsl:template match="ted:ADDRESS_REVIEW_INFO">
+<xsl:template match="*:ADDRESS_REVIEW_INFO">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_REVIEW_INFO')]/../orgid"/>
 	<cac:AppealInformationParty>
 		<cac:PartyIdentification>
@@ -362,7 +363,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:AppealReceiverParty structure -->
-<xsl:template match="ted:ADDRESS_REVIEW_BODY">
+<xsl:template match="*:ADDRESS_REVIEW_BODY">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_REVIEW_BODY')]/../orgid"/>
 	<cac:AppealReceiverParty>
 		<cac:PartyIdentification>
@@ -372,7 +373,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:MediationParty structure -->
-<xsl:template match="ted:ADDRESS_MEDIATION_BODY">
+<xsl:template match="*:ADDRESS_MEDIATION_BODY">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_MEDIATION_BODY')]/../orgid"/>
 	<cac:MediationParty>
 		<cac:PartyIdentification>
@@ -382,14 +383,14 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:PartyIdentification structure -->
-<xsl:template match="ted:ADDRESS_PARTICIPATION">
+<xsl:template match="*:ADDRESS_PARTICIPATION">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_PARTICIPATION')]/../orgid"/>
 	<cac:PartyIdentification>
 		<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>
 	</cac:PartyIdentification>
 </xsl:template>
 
-<xsl:template match="ted:ADDRESS_PARTICIPATION_IDEM">
+<xsl:template match="*:ADDRESS_PARTICIPATION_IDEM">
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:ends-with(., 'ADDRESS_CONTRACTING_BODY')]/../orgid"/>
 	<cac:PartyIdentification>
 		<cbc:ID schemeName="organization"><xsl:value-of select="$orgid"/></cbc:ID>

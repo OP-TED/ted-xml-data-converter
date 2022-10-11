@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
-                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -3455,7 +3455,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 11000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 11000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-11000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -3727,7 +3727,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 12000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 12000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-12000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -3999,7 +3999,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 21000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 21000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-21000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -4271,7 +4271,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 22000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 22000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-22000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -4543,7 +4543,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 31000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 31000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-31000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -4815,7 +4815,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 33000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 33000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-33000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -5087,7 +5087,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 41000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 41000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-41000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -5359,7 +5359,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 42000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 42000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-42000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -5631,7 +5631,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 51000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 51000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-51000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -5903,7 +5903,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 52000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 52000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-52000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -6175,7 +6175,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 61000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 61000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-61000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -6447,7 +6447,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 62000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 62000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-62000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -6719,7 +6719,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 71000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 71000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-71000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -6991,7 +6991,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 81000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 81000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-81000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -7263,7 +7263,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 91000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 91000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-91000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -7535,7 +7535,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 101000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 101000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-101000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -7807,7 +7807,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 111000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 111000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-111000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
@@ -8079,7 +8079,7 @@
          </cac:ContractExtension>
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
-   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot number of 121000 to eForms -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 121000 to eForms -->
       <cbc:ID schemeName="Lot">LOT-121000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
