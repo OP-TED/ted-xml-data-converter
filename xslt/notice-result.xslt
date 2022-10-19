@@ -449,8 +449,9 @@ These instructions can be un-commented to show the variables
 	<!-- Tender Value Highest (BT-711): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->
 	<!-- Tender Value Lowest (BT-710): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->
 	<xsl:choose>
-		<xsl:when test="awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL">
-			<xsl:variable name="currencies" select="fn:distinct-values(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL/@CURRENCY)"/>
+		<xsl:when test="awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL">
+			<xsl:variable name="currencies" select="fn:distinct-values(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL/@CURRENCY)"/>
+
 			<xsl:if test="fn:count($currencies) &gt; 1">
 					<!-- WARNING: Multiple different currencies were found in VAL_RANGE_TOTAL elements in AWARD_CONTRACT elements used for LotResult -->
 					<xsl:variable name="message">
@@ -462,14 +463,14 @@ These instructions can be un-commented to show the variables
 					</xsl:variable>
 					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			</xsl:if>
-			<xsl:variable name="max-value-double" select="fn:max(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL/*:HIGH)"/>
-			<xsl:variable name="max-value" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL[*:HIGH = $max-value-double])[1]/*:HIGH"/>
-			<xsl:variable name="currency" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL[*:HIGH = $max-value-double])[1]/@CURRENCY"/>
+			<xsl:variable name="max-value-double" select="fn:max(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL/*:HIGH)"/>
+			<xsl:variable name="max-value" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL[*:HIGH = $max-value-double])[1]/*:HIGH"/>
+			<xsl:variable name="currency" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL[*:HIGH = $max-value-double])[1]/@CURRENCY"/>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tender Value Highest (BT-711)'"/></xsl:call-template>
 			<cbc:HigherTenderAmount currencyID="{$currency}"><xsl:value-of select="$max-value"/></cbc:HigherTenderAmount>
-			<xsl:variable name="min-value-double" select="fn:max(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL/*:LOW)"/>
-			<xsl:variable name="min-value" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL[*:LOW = $min-value-double])[1]/*:LOW"/>
-			<xsl:variable name="currency" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_RANGE_TOTAL[*:LOW = $min-value-double])[1]/@CURRENCY"/>
+			<xsl:variable name="min-value-double" select="fn:max(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL/*:LOW)"/>
+			<xsl:variable name="min-value" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL[*:LOW = $min-value-double])[1]/*:LOW"/>
+			<xsl:variable name="currency" select="(awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_RANGE_TOTAL[*:LOW = $min-value-double])[1]/@CURRENCY"/>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tender Value Lowest (BT-710)'"/></xsl:call-template>
 			<cbc:LowerTenderAmount currencyID="{$currency}"><xsl:value-of select="$min-value"/></cbc:LowerTenderAmount>
 		</xsl:when>
@@ -549,7 +550,7 @@ These instructions can be un-commented to show the variables
 <xsl:template name="framework-estimated-value">
 	<xsl:param name="result-lot-identifier"/>
 	<!-- set variable to the set of all VAL_ESTIMATED_TOTAL elements for this lot-result element -->
-	<xsl:variable name="lot-result-val-estimated-total" select="awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_ESTIMATED_TOTAL"/>
+	<xsl:variable name="lot-result-val-estimated-total" select="awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_ESTIMATED_TOTAL"/>
 	<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Estimated Value (BT-660)'"/></xsl:call-template>
 	<!-- if there is at least one VAL_ESTIMATED_TOTAL within this lot-result element -->
@@ -559,9 +560,9 @@ These instructions can be un-commented to show the variables
 			<xsl:when test="$ted-form-main-element/*:PROCEDURE/*:FRAMEWORK">
 				<!-- If there is only one unique value of VALUES/VAL_ESTIMATED_TOTAL within the AWARDED_CONTRACT elements for this lot-result element -->
 				<xsl:if test="fn:count(fn:distinct-values($lot-result-val-estimated-total)) &gt; 1">
-					<!-- WARNING: Multiple values for VALUES/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot xxx. The first value has been used -->
+					<!-- WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot xxx. The first value has been used -->
 					<xsl:variable name="message">
-						<xsl:text>WARNING: Multiple values for VALUES/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot </xsl:text>
+						<xsl:text>WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot </xsl:text>
 							<xsl:value-of select="$result-lot-identifier"/>
 							<xsl:text>. The first value has been used.</xsl:text>
 					</xsl:variable>
@@ -685,9 +686,9 @@ These instructions can be un-commented to show the variables
 <!-- Tender Value (BT-720): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 35 and 38-40; Optional (O or EM or CM) for CAN subtypes 25-35 and E4; Forbidden (blank) for all other subtypes -->
 <xsl:template name="values">
 	<xsl:choose>
-		<xsl:when test="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_TOTAL">
-			<xsl:variable name="ted-value" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_TOTAL)"/>
-			<xsl:variable name="currency" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VALUES/*:VAL_TOTAL/@CURRENCY)"/>
+		<xsl:when test="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_TOTAL">
+			<xsl:variable name="ted-value" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_TOTAL)"/>
+			<xsl:variable name="currency" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_TOTAL/@CURRENCY)"/>
 			<cac:LegalMonetaryTotal>
 				<cbc:PayableAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:PayableAmount>
 			</cac:LegalMonetaryTotal>

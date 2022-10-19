@@ -604,7 +604,7 @@
                         <cbc:ID schemeName="tender">TEN-0095</cbc:ID>
                      </efac:LotTender>
                      <!--Framework Estimated Value (BT-660)-->
-                     <!--WARNING: Multiple values for VALUES/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot 2.2. The first value has been used.-->
+                     <!--WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot 2.2. The first value has been used.-->
                      <efac:FrameworkAgreementValues>
                         <cbc:EstimatedMaximumValueAmount currencyID="EUR">100000000.00</cbc:EstimatedMaximumValueAmount>
                      </efac:FrameworkAgreementValues>
