@@ -836,7 +836,7 @@ These instructions can be un-commented to show the variables
 		<xsl:variable name="ted-value" select="fn:normalize-space($ted-form-main-element/*:OBJECT_CONTRACT/*:VAL_TOTAL)"/>
 		<xsl:variable name="currency" select="fn:normalize-space($ted-form-main-element/*:OBJECT_CONTRACT/*:VAL_TOTAL/@CURRENCY)"/>
 			<xsl:choose>
-					<xsl:when test="$ted-form-main-element/*:PROCEDURE/*:FRAMEWORK">
+				<xsl:when test="$ted-form-main-element/*:PROCEDURE/*:FRAMEWORK">
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Value (BT-161)'"/></xsl:call-template>
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Framework Value (BT-118)'"/></xsl:call-template>
 					<cbc:EstimatedOverallFrameworkContractsAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallFrameworkContractsAmount>

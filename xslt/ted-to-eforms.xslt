@@ -359,7 +359,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:apply-templates select="*:OBJECT_CONTRACT/*:TITLE"/>
 		<!-- Description (BT-24): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-		<xsl:apply-templates select="*:OBJECT_CONTRACT/*:SHORT_DESCR"/>
+		<xsl:choose>
+			<xsl:when test="*:OBJECT_CONTRACT/*:SHORT_DESCR">
+				<xsl:apply-templates select="*:OBJECT_CONTRACT/*:SHORT_DESCR"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes, but no SHORT_DESCR was found in TED XML. -->
+				<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes, but no SHORT_DESCR was found in TED XML.</xsl:variable>
+				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Procedure) = 1 | Optional for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:apply-templates select="*:OBJECT_CONTRACT/*:TYPE_CONTRACT"/>
