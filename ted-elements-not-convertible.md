@@ -2,7 +2,7 @@
 
 This table lists the elements defined in the TED R.2.0.9 schema for Contract Notices, but whose data cannot be converted to any data structures in eForms.
 
-This table is under development. Elements used in Contract Award Notices and PINs have not been considered yet.
+This table is under development. Elements used in Contract Award Notices and PINs have not been considered yet. DATE_AWARD_SCHEDULED is present in PINs (F01, F04, F21 and F22)
 
 | TED Element | TED schema | Content format Usage | Description | Reason for inability to convert |
 | --- | --- | --- | --- | --- |
@@ -29,3 +29,4 @@ OBJECT_CONTRACT/VAL_RANGE_TOTAL/LOW | R.2.0.9 | Value | Total value of the procu
 | AWARDED_CONTRACT/VAL_ESTIMATED_TOTAL | R.2.0.9 | Value | Initial estimated total value of the contract / lot 
 (for framework agreements or dynamic purchasing systems – estimated total maximum value for the entire duration of this lot) | 
 When the notice is not part of a Framework Agreement or DPS, there is no eForms equivalent of this element |
+| DATE_AWARD_SCHEDULED | R.2.0.9 | Date | Present in forms F01, F04, F21 and F22 | eForms does not have a BT to hold a DATE_AWARD_SCHEDULED |

@@ -130,6 +130,7 @@
    <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
       <cbc:Name languageID="ITA">PON inclusione — avviso pubblico per l'accreditamento di enti promotori qualificati ai fini dell'attivazione di tirocini di inclusione sociale — azione B.2.B.</cbc:Name>
       <!--Description (BT-24)-->
+      <!--WARNING: Description (BT-24) is Mandatory for all eForms subtypes, but no SHORT_DESCR was found in TED XML.-->
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->

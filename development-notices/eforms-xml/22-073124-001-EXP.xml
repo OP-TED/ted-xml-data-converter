@@ -406,6 +406,10 @@
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="direct-award-justification">below-thres</cbc:ProcessReasonCode>
+         <cbc:ProcessReason languageID="FRA"/>
+      </cac:ProcessJustification>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
