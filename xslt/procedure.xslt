@@ -132,7 +132,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 			<xsl:if test="$text ne ''">
 				<xsl:call-template name="multilingual">
 					<!--<xsl:with-param name="contexts" select="*:PROCEDURE/*:PT_AWARD_CONTRACT_WITHOUT_CALL/*:D_JUSTIFICATION"/>-->
-					<xsl:with-param name="contexts" select="*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/*:PT_AWARD_CONTRACT_WITHOUT_CALL/*:D_JUSTIFICATION"/>
+					<!--<xsl:with-param name="contexts" select="*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/*:PT_AWARD_CONTRACT_WITHOUT_CALL/*:D_JUSTIFICATION"/>-->
+					<xsl:with-param name="contexts" select="$ted-form-main-element/*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/*:PT_AWARD_CONTRACT_WITHOUT_CALL/*:D_JUSTIFICATION"/>
 					<xsl:with-param name="local" select="'P'"/>
 					<xsl:with-param name="element" select="'cbc:ProcessReason'"/>
 				</xsl:call-template>

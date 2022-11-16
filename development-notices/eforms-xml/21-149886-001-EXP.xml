@@ -257,7 +257,7 @@
       <!--Direct Award Justification (BT-135)-->
       <cac:ProcessJustification>
          <cbc:ProcessReasonCode listName="direct-award-justification">below-thres</cbc:ProcessReasonCode>
-         <cbc:ProcessReason languageID="FRA"/>
+         <cbc:ProcessReason languageID="FRA">Le montant estimé du présent contrat de concession (3 000 000 EUR HT) est inférieur au seuil communautaire qui impose la publication au Journal officiel de l'Union européenne.</cbc:ProcessReason>
       </cac:ProcessJustification>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->

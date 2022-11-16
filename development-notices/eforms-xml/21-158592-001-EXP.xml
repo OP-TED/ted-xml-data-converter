@@ -262,7 +262,7 @@
       <!--Direct Award Justification (BT-135)-->
       <cac:ProcessJustification>
          <cbc:ProcessReasonCode listName="direct-award-justification">below-thres</cbc:ProcessReasonCode>
-         <cbc:ProcessReason languageID="FRA"/>
+         <cbc:ProcessReason languageID="FRA">Marché de travaux inférieur au seuil des procédures formalisées pour une publication au JOUE.</cbc:ProcessReason>
       </cac:ProcessJustification>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
