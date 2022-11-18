@@ -75,11 +75,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'PIN Competition Termination (BT-756)'"/></xsl:call-template>
 	<xsl:if test="*:PROCEDURE/(*:PT_NEGOTIATED_WITH_PRIOR_CALL|*:PT_COMPETITIVE_NEGOTIATION)">
 		<xsl:choose>
-			<xsl:when test="*:PROCEDURE/*:TERMINATION_PIN">
-				<cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
+			<xsl:when test="$eforms-notice-subtype = ('29', '30', '33', '34')">
+				<xsl:choose>
+					<xsl:when test="*:PROCEDURE/*:TERMINATION_PIN">
+						<cbc:TerminatedIndicator>true</cbc:TerminatedIndicator>
+					</xsl:when>
+					<xsl:otherwise>
+						<cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:when>
 			<xsl:otherwise>
-				<cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
+				<xsl:if test="*:PROCEDURE/*:TERMINATION_PIN">
+					<xsl:variable name="message"> WARNING: PIN Competition Termination (BT-756) is forbidden for this subtype but TERMINATION_PIN was found in the TED XML</xsl:variable>
+					<xsl:call-template name="report-warning">
+						<xsl:with-param name="message" select="$message"/>
+					</xsl:call-template>	
+				</xsl:if>	
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:if>
@@ -124,7 +136,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<!--<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:PROCEDURE/(*:PT_AWARD_CONTRACT_WITHOUT_CALL|PT_AWARD_CONTRACT_WITHOUT_PUBLICATION)/*:D_JUSTIFICATION/*:P, ' '))"/>-->
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/(*:PT_AWARD_CONTRACT_WITHOUT_CALL|PT_AWARD_CONTRACT_WITHOUT_PUBLICATION)/*:D_JUSTIFICATION/*:P, ' '))"/>
 		<!--<xsl:for-each select="*:PROCEDURE/*:PT_AWARD_CONTRACT_WITHOUT_CALL/(*:D_ACCORDANCE_ARTICLE/*|*:D_OUTSIDE_SCOPE)">-->
-		<xsl:for-each select="*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/*:PT_AWARD_CONTRACT_WITHOUT_CALL/(*:D_ACCORDANCE_ARTICLE/*|*:D_OUTSIDE_SCOPE)">
+		<xsl:for-each select="*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/*:PT_AWARD_CONTRACT_WITHOUT_CALL/(*:D_ACCORDANCE_ARTICLE/*|*:D_OUTSIDE_SCOPE|*:D_SERVICES_LISTED)">
 		<cac:ProcessJustification>
 			<xsl:variable name="element-name" select="fn:local-name(.)"/>
 			<xsl:variable name="justification" select="$mappings//direct-award-justifications/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
