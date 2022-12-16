@@ -38,7 +38,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
 <xsl:variable name="ted-form-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY]"/>
-<cbc:najeh><xsl:value-of select="$ted-form-elements"/></cbc:najeh>
 <!-- Variable ted-form-main-element holds the first form element that has @CATEGORY='ORIGINAL'. This is the TED form element which is processed -->
 <xsl:variable name="ted-form-main-element" select="/*/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
 <!-- Variable ted-form-additional-elements holds the form elements that are not the main form element -->
@@ -52,8 +51,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable ted-form-element-xpath holds the XPath with positional predicates of the main form element -->
 <xsl:variable name="ted-form-element-xpath" select="functx:path-to-node-with-pos($ted-form-main-element)"/>
 <!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element -->
+<!--The notice element is absent in Defence schemas (SF16 to SF19), therefore ted-form-notice-type will be empty-->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
-<!-- Variable document-code holds the value of the @TYPE attribute of the NOTICE element -->
+<!-- Variable document-code holds the value of the @CODE attribute of the TD_DOCUMENT_TYPE element -->
 <xsl:variable name="document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>

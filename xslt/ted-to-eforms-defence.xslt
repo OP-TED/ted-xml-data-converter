@@ -18,9 +18,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:include href="functions-and-data-defence.xslt"/>
 <!--<xsl:include href="simple.xslt"/>
-<xsl:include href="award-criteria.xslt"/>
-<xsl:include href="addresses.xslt"/>
-<xsl:include href="procedure.xslt"/>
+<xsl:include href="award-criteria.xslt"/>-->
+<xsl:include href="addresses-defence.xslt"/>
+<!--<xsl:include href="procedure.xslt"/>
 <xsl:include href="lot.xslt"/>
 <xsl:include href="notice-result.xslt"/>
 <xsl:include href="common.xslt"/>-->
@@ -117,6 +117,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="root-extensions">
 	<ext:UBLExtensions>
+	<xsl:copy-of select="$ted-form-main-element"/>
+	<xsl:copy-of select="$ted-addresses"/>
+<!--	<xsl:copy-of select="$ted-addresses-unique"/>
+	<xsl:copy-of select="$ted-addresses-unique-with-id"/>-->
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
@@ -137,7 +141,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<efac:NoticeSubType>
 						<cbc:SubTypeCode listName="notice-subtype"><xsl:value-of select="$eforms-notice-subtype"/></cbc:SubTypeCode>
 					</efac:NoticeSubType>
-					<!--<xsl:call-template name="organizations"/>-->
+				<xsl:call-template name="organizations"/>
 					<xsl:call-template name="publication"/>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
@@ -399,6 +403,5 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' multiple cac:ProcurementProjectLot '"/></xsl:call-template>
 	<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:OBJECT_DESCR"/>
 </xsl:template>
-
 
 </xsl:stylesheet>

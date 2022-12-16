@@ -118,6 +118,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="root-extensions">
 	<ext:UBLExtensions>
+<!--	<xsl:copy-of select="$ted-addresses"/>
+	<xsl:copy-of select="$ted-addresses-unique"/>
+	<xsl:copy-of select="$ted-addresses-unique-with-id"/>-->
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
