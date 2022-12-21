@@ -9,12 +9,17 @@
                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
    <ext:UBLExtensions>
+      <ted-orgs xmlns=""/>
+      <ted-orgs xmlns=""/>
+      <ted-orgs xmlns=""/>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
                   <cbc:SubTypeCode listName="notice-subtype">18</cbc:SubTypeCode>
                </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations/>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
@@ -46,5 +51,9 @@
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ENG</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
    <!-- cac:ContractingParty -->
 </ContractNotice>

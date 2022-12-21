@@ -17,8 +17,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <xsl:include href="functions-and-data-defence.xslt"/>
-<!--<xsl:include href="simple.xslt"/>
-<xsl:include href="award-criteria.xslt"/>-->
+<xsl:include href="simple-defence.xslt"/>
+<!--<xsl:include href="award-criteria.xslt"/>-->
 <xsl:include href="addresses-defence.xslt"/>
 <!--<xsl:include href="procedure.xslt"/>
 <xsl:include href="lot.xslt"/>
@@ -117,11 +117,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="root-extensions">
 	<ext:UBLExtensions>
-	<xsl:copy-of select="$ted-form-main-element"/>
-	<xsl:copy-of select="$ted-addresses"/>
-<!--	<xsl:copy-of select="$ted-addresses-unique"/>
-	<xsl:copy-of select="$ted-addresses-unique-with-id"/>-->
+	<!--<xsl:copy-of select="$ted-form-main-element"/>-->
 		<ext:UBLExtension>
+			<!--<xsl:copy-of select="$ted-addresses"/>
+	<xsl:copy-of select="$ted-addresses-unique"/>
+	<xsl:copy-of select="$ted-addresses-unique-with-id"/>-->
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<xsl:if test="$eforms-form-type eq 'CAN'">

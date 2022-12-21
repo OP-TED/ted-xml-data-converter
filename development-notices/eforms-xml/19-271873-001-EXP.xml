@@ -9,6 +9,340 @@
                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
                      xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
    <ext:UBLExtensions>
+      <ted-orgs xmlns="">
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">PHI Clinical Hospital Shtip</OFFICIALNAME>
+               <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">45/2018</NATIONALID>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ul.Ljuben Ivanov br.25 Shtip</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Shtip</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">2000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Aleksandar Misev</CONTACT_POINT>
+               <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 78393936</PHONE>
+               <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">aleksandar.misev@yahoo.com</E_MAIL>
+               <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 32391357</FAX>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK002"/>
+               <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://e-nabavki.gov.mk</URL_GENERAL>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[1]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Vesta Drogerija</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Jani Lukrovski 2</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[2]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Farmahem Dooel</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Kicevska 1 Skopje</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[3]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Biotek Doo</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Zagrebska 28-B</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">BI-EL Inzinering</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ILO Sopov 92</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Strumica</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK004"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[5]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Ahema Doo</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Zagrebska 28B</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">State Commission for Appeals of the</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">bul.Ilinden br.63a</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 9023251251</PHONE>
+               <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">dkzjn@gs.gov.mk</E_MAIL>
+               <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 9023251250</FAX>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bureau of Public Procurement</OFFICIALNAME>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <URL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://e-nabavki.gov.mk/PublicAccess/Home.aspx#/home</URL>
+            </ted-address>
+         </ted-org>
+      </ted-orgs>
+      <ted-orgs xmlns="">
+         <data>1:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">PHI Clinical Hospital Shtip</OFFICIALNAME>
+               <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">45/2018</NATIONALID>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ul.Ljuben Ivanov br.25 Shtip</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Shtip</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">2000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Aleksandar Misev</CONTACT_POINT>
+               <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 78393936</PHONE>
+               <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">aleksandar.misev@yahoo.com</E_MAIL>
+               <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 32391357</FAX>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK002"/>
+               <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://e-nabavki.gov.mk</URL_GENERAL>
+            </ted-address>
+         </ted-org>
+         <data>2:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[1]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Vesta Drogerija</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Jani Lukrovski 2</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <data>3:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[2]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Farmahem Dooel</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Kicevska 1 Skopje</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <data>4:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[3]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Biotek Doo</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Zagrebska 28-B</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <data>5:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">BI-EL Inzinering</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ILO Sopov 92</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Strumica</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK004"/>
+            </ted-address>
+         </ted-org>
+         <data>6:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[5]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Ahema Doo</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Zagrebska 28B</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <data>7:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">State Commission for Appeals of the</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">bul.Ilinden br.63a</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 9023251251</PHONE>
+               <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">dkzjn@gs.gov.mk</E_MAIL>
+               <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 9023251250</FAX>
+            </ted-address>
+         </ted-org>
+         <data>8:</data>
+         <ted-org>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bureau of Public Procurement</OFFICIALNAME>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <URL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://e-nabavki.gov.mk/PublicAccess/Home.aspx#/home</URL>
+            </ted-address>
+         </ted-org>
+      </ted-orgs>
+      <ted-orgs xmlns="">
+         <ted-org>
+            <orgid>ORG-0001</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/CONTRACTING_BODY/ADDRESS_CONTRACTING_BODY</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">PHI Clinical Hospital Shtip</OFFICIALNAME>
+               <NATIONALID xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">45/2018</NATIONALID>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ul.Ljuben Ivanov br.25 Shtip</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Shtip</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">2000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <CONTACT_POINT xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Aleksandar Misev</CONTACT_POINT>
+               <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 78393936</PHONE>
+               <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">aleksandar.misev@yahoo.com</E_MAIL>
+               <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 32391357</FAX>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK002"/>
+               <URL_GENERAL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://e-nabavki.gov.mk</URL_GENERAL>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <orgid>ORG-0002</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[1]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Vesta Drogerija</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Jani Lukrovski 2</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <orgid>ORG-0003</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[2]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Farmahem Dooel</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Kicevska 1 Skopje</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <orgid>ORG-0004</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[3]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Biotek Doo</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Zagrebska 28-B</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <orgid>ORG-0005</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[4]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">BI-EL Inzinering</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">ILO Sopov 92</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Strumica</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK004"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <orgid>ORG-0006</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/AWARD_CONTRACT[5]/AWARDED_CONTRACT/CONTRACTORS/CONTRACTOR/ADDRESS_CONTRACTOR</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Ahema Doo</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Zagrebska 28B</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <n2016:NUTS xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+                           CODE="MK008"/>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <orgid>ORG-0007</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_BODY</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">State Commission for Appeals of the</OFFICIALNAME>
+               <ADDRESS xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">bul.Ilinden br.63a</ADDRESS>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <PHONE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 9023251251</PHONE>
+               <E_MAIL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">dkzjn@gs.gov.mk</E_MAIL>
+               <FAX xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">+389 9023251250</FAX>
+            </ted-address>
+         </ted-org>
+         <ted-org>
+            <orgid>ORG-0008</orgid>
+            <path>TED_EXPORT/FORM_SECTION/F03_2014/COMPLEMENTARY_INFO/ADDRESS_REVIEW_INFO</path>
+            <ted-address>
+               <OFFICIALNAME xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Bureau of Public Procurement</OFFICIALNAME>
+               <TOWN xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">Skopje</TOWN>
+               <POSTAL_CODE xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">1000</POSTAL_CODE>
+               <COUNTRY xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+                        VALUE="MK"/>
+               <URL xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication">https://e-nabavki.gov.mk/PublicAccess/Home.aspx#/home</URL>
+            </ted-address>
+         </ted-org>
+      </ted-orgs>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
