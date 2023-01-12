@@ -205,7 +205,9 @@ These instructions can be un-commented to show the variables holding the organiz
 			<cac:Contact>
 				<!-- Organization Contact Point (BT-502): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Point (BT-502)'"/></xsl:call-template>
-				<xsl:apply-templates select="ted:CONTACT_POINT|ted:ATTENTION"/>
+				<xsl:if test="ted:CONTACT_POINT|ted:ATTENTION">
+					<xsl:call-template name="contact-point-attention"></xsl:call-template>
+				</xsl:if>
 				<!-- Organization Contact Telephone Number (BT-503): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Contact Telephone Number (BT-503)'"/></xsl:call-template>
 				<xsl:apply-templates select="ted:PHONE"/>

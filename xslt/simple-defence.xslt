@@ -42,8 +42,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:PartyLegalEntity>
 </xsl:template>
 
-<xsl:template match="ted:CONTACT_POINT|ted:ATTENTION">
-	<cbc:Name><xsl:apply-templates/></cbc:Name>
+<xsl:template name="contact-point-attention">
+	<xsl:variable name="text">
+		<xsl:value-of select="ted:ATTENTION"/>
+		<xsl:if test="ted:CONTACT_POINT">
+			<xsl:if test="ted:ATTENTION"><xsl:text> </xsl:text></xsl:if>
+			<xsl:value-of select="ted:CONTACT_POINT"/>
+		</xsl:if>
+	</xsl:variable>
+	<xsl:if test="$text ne ''">
+		<cbc:Name><xsl:value-of select="$text"/></cbc:Name>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template match="ted:PHONE">

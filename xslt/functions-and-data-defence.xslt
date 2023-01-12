@@ -64,12 +64,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable eforms-first-language holds the eForms three-letter code for the first language -->
 <xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
 
-<!-- Variable legal-basis holds the value of the @VALUE attribute of the element LEGAL_BASIS, if it exists. If element LEGAL_BASIS does not exist, it holds the value "OTHER" -->
+<!-- Variable legal-basis holds the value of the @VALUE attribute of the element LEGAL_BASIS, if it exists. If element LEGAL_BASIS does not exist, it holds the value "OTHER". For defence notices, legal-basis is hard coded to the "32009L0081" value (legal basis of the directive)-->
 <xsl:variable name="legal-basis">
-	<xsl:choose>
-		<xsl:when test="$ted-form-main-element/ted:LEGAL_BASIS"><xsl:value-of select="$ted-form-main-element/ted:LEGAL_BASIS/@VALUE"/></xsl:when>
-		<xsl:otherwise><xsl:text>OTHER</xsl:text></xsl:otherwise>
-	</xsl:choose>
+	<xsl:text>32009L0081</xsl:text>
 </xsl:variable>
 
 <!-- Variable directive holds the value of the @VALUE attribute of the element DIRECTIVE, if it exists. Othewise it holds the empty string -->
