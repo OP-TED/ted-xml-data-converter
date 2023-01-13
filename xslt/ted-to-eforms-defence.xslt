@@ -239,8 +239,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="contracting-party">
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' cac:ContractingParty '"/></xsl:call-template>
-	<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY"/>
-	<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL"/>
+	<!--<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY"/>-->
+	<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:AUTHORITY_PRIOR_INFORMATION_DEFENCE/ted:NAME_ADDRESSES_CONTACT_PRIOR_INFORMATION"/>
+	<!--<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL"/>-->
 </xsl:template>
 
 <!-- end of Procedure-level templates for Notice information -->

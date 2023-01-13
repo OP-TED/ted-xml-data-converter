@@ -20,6 +20,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<ted-orgs>
 	<!--	<xsl:for-each select="$ted-form-main-element/(ted:CONTRACTING_BODY/(ted:ADDRESS_CONTRACTING_BODY | ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL | ted:ADDRESS_FURTHER_INFO | ted:ADDRESS_PARTICIPATION) | ted:COMPLEMENTARY_INFO/(ted:ADDRESS_REVIEW_BODY | ted:ADDRESS_MEDIATION_BODY | ted:ADDRESS_REVIEW_INFO) | ted:AWARD_CONTRACT/ted:AWARDED_CONTRACT/ted:CONTRACTORS/ted:CONTRACTOR/(ted:ADDRESS_CONTRACTOR | ted:ADDRESS_PARTY))">-->
 			<xsl:for-each select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:AUTHORITY_PRIOR_INFORMATION_DEFENCE/ted:NAME_ADDRESSES_CONTACT_PRIOR_INFORMATION/(ted:CA_CE_CONCESSIONAIRE_PROFILE|ted:FURTHER_INFORMATION/ted:CONTACT_DATA)">
+			<!--TO BE ADDED: TED_EXPORT/FORM_SECTION/PRIOR_INFORMATION_DEFENCE/FD_PRIOR_INFORMATION_DEFENCE/AUTHORITY_PRIOR_INFORMATION_DEFENCE/TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/PURCHASING_ON_BEHALF/PURCHASING_ON_BEHALF_YES/CONTACT_DATA_OTHER_BEHALF_CONTRACTING_AUTORITHY-->
 			<ted-org>
 				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 				<path><xsl:value-of select="$path"/></path>
@@ -229,12 +230,12 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:ContractingParty structure -->
-<xsl:template match="ted:ADDRESS_CONTRACTING_BODY|ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
+<xsl:template match="ted:NAME_ADDRESSES_CONTACT_PRIOR_INFORMATION">
 	<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 	<cac:ContractingParty>
 		<!-- Buyer Profile URL (BT-508) Mandatory for PIN subtypes 1-3; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Profile URL (BT-508)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:URL_BUYER"/>
+		<xsl:apply-templates select="ted:INTERNET_ADDRESSES_PRIOR_INFORMATION/ted:URL_BUYER"/>
 		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="buyer-legal-type"/>
 		<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
@@ -277,8 +278,8 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Legal Type (BT-11)'"/></xsl:call-template>
 		<xsl:choose>
-			<xsl:when test="../ted:CA_TYPE">
-				<xsl:apply-templates select="../ted:CA_TYPE"/>
+			<xsl:when test="../ted:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/ted:TYPE_AND_ACTIVITIES/ted:TYPE_OF_CONTRACTING_AUTHORITY">
+				<xsl:apply-templates select="../ted:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/ted:TYPE_AND_ACTIVITIES/ted:TYPE_OF_CONTRACTING_AUTHORITY"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML. -->
@@ -306,7 +307,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:ContractingPartyType structures -->
-<xsl:template match="ted:CA_TYPE">
+<xsl:template match="ted:TYPE_OF_CONTRACTING_AUTHORITY">
 	<xsl:variable name="ca-type" select="@VALUE"/>
 	<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
 	<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
