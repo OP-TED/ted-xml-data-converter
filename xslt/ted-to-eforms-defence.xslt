@@ -20,9 +20,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:include href="simple-defence.xslt"/>
 <!--<xsl:include href="award-criteria.xslt"/>-->
 <xsl:include href="addresses-defence.xslt"/>
-<!--<xsl:include href="procedure.xslt"/>
-<xsl:include href="lot.xslt"/>
-<xsl:include href="notice-result.xslt"/>-->
+<!--<xsl:include href="procedure.xslt"/>-->
+<!--<xsl:include href="lot-defence.xslt"/>-->
+<!--<xsl:include href="notice-result.xslt"/>-->
 <xsl:include href="common-defence.xslt"/>
 
 
@@ -102,7 +102,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="root-tendering-terms"/>
 		<xsl:call-template name="root-tendering-process"/>
 		<xsl:call-template name="root-procurement-project"/>
-		<xsl:call-template name="procurement-project-lots"/>
+		<!--<xsl:call-template name="procurement-project-lots"/>-->
 		<!-- The ContractAwardNotice schema requires cac:TenderResult/cbc:AwardDate -->
 		<xsl:if test="$eforms-form-type eq 'CAN'">
 			<cac:TenderResult>
@@ -348,6 +348,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cac:ProcurementProject>
 		<!-- A limited number of BTs are specified for procurement project at root level -->
 		<!-- Internal Identifier (BT-22): eForms documentation cardinality (Procedure) = 1 | Optional for ALL Notice subtypes -->
+		<!--25/01/2023: An warning message should be added because it seems that there is no equivalent for Internal Identifier (BT-22) in SF-16-->   
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Internal Identifier (BT-22)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:REFERENCE_NUMBER"/>
 		<!-- Title (BT-21): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
@@ -356,7 +357,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:TITLE_CONTRACT"/>
 		<!-- Description (BT-24): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>
+		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>-->
+		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE"/>
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Procedure) = 1 | Optional for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>-->
@@ -372,7 +374,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Classification Type (BT-26): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Main Classification Code (BT-262): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Classification Code (BT-262)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>
+		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>-->
+		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:CPV/ted:CPV_MAIN"/>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML at Procedure level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
 
