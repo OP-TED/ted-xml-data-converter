@@ -56,4 +56,26 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:AdditionalCommodityClassification>
 </xsl:template>
 
+<xsl:template match="ted:SITE_OR_LOCATION[not(*:NUTS)]/ted:LABEL">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<cac:RealizedLocation>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'cbc:Description'"/>
+		</xsl:call-template>
+	</cac:RealizedLocation>
+</xsl:template>
+
+<xsl:template match="ted:SITE_OR_LOCATION/*:NUTS">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(./ted:LABEL/ted:P, ' '))"/>
+	<cac:RealizedLocation>
+		<xsl:call-template name="multilingual">
+			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="element" select="'cbc:Description'"/>
+		</xsl:call-template>
+		<cbc:CountrySubentityCode listName="nuts">UKG23</cbc:CountrySubentityCode>
+	</cac:RealizedLocation>
+</xsl:template>     
 </xsl:stylesheet>
