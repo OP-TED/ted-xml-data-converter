@@ -71,11 +71,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(./ted:LABEL/ted:P, ' '))"/>
 	<cac:RealizedLocation>
 		<xsl:call-template name="multilingual">
-			<xsl:with-param name="contexts" select="."/>
+			<xsl:with-param name="contexts" select="../ted:LABEL"/>
 			<xsl:with-param name="local" select="'P'"/>
 			<xsl:with-param name="element" select="'cbc:Description'"/>
 		</xsl:call-template>
-		<cbc:CountrySubentityCode listName="nuts">UKG23</cbc:CountrySubentityCode>
+		<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="@CODE"/></cbc:CountrySubentityCode>
 	</cac:RealizedLocation>
 </xsl:template>     
 </xsl:stylesheet>
