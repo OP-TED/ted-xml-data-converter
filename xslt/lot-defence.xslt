@@ -11,16 +11,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- template for a single Lot -->
-<xsl:template match="ted:OBJECT_DESCR">
+<!--<xsl:template match="ted:OBJECT_DESCR">
+--><xsl:template match="ted:LOT_PRIOR_INFORMATION">
 	<cac:ProcurementProjectLot>
-		<!-- For form F02, the element OBJECT_DESCR is the same, whether there is one lot (NO_LOT_DIVISION) or more than one lot (LOT_DIVISION) -->
+		<!-- For form F16, a lot is represented by the element LOT_PRIOR_INFORMATION when F16_DIV_INTO_LOT_YES exists, otherwise a lot is represented by OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION -->
 		<!-- But, for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
-		<!-- In TED LOT_NO, if present, usually contains a positive integer. This will be converted to the new eForms format -->
+		<!-- In TED LOT_NUMBER, if present, usually contains a positive integer. This will be converted to the new eForms format -->
 
 		<!-- Purpose Lot Identifier (BT-137): eForms documentation cardinality (Lot) = 1 | eForms Regulation Annex table conditions = Forbidden for PIN subtypes 1-3; Optional (O or EM or CM) for all other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Purpose Lot Identifier (BT-137)'"/></xsl:call-template>
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<xsl:variable name="lot-info" select="$lot-numbers-map//lot[path = $path]"/>
+		<!--NH:31/01/2022: Contunie here--> 
 
 		<xsl:choose>
 			<!-- When LOT_NO exists -->

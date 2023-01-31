@@ -105,17 +105,30 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
 	</xsl:choose>
 </xsl:variable>
+<xsl:variable name="lots">
+	<xsl:choose>
+			<xsl:when test="$ted-form-main-element//ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION">
+				<xsl:sequence select="$ted-form-main-element//ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:sequence select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION"/>
+			</xsl:otherwise>
+		</xsl:choose>
+</xsl:variable>
+<!-- Variable number-of-lots holds the number of Lots of the notice being converted -->
+<xsl:variable name="number-of-lots" select="count($lots)"/>
 
-<!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
-<xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
-
-<!-- Variable lot-numbers-map holds a mapping of the TED XML Lots (OBJECT_DESCR XPath) to the calculated eForms Purpose Lot Identifier (BT-137) -->
+<!-- Variable lot-numbers-map holds a mapping of the TED XML Lots to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
-	<xsl:variable name="count-lots" select="fn:count($ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR)"/>
 	<lots>
-		<xsl:for-each select="$ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR">
+<!--		<xsl:for-each select="$ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR">
+-->		
+		<xsl:for-each select="$lots">
 			<lot>
-				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NO"/></xsl:variable>
+				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NUMBER"/></xsl:variable>
+				TED_EXPORT/FORM_SECTION/PRIOR_INFORMATION_DEFENCE/FD_PRIOR_INFORMATION_DEFENCE/OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/QUANTITY_SCOPE_WORKS_DEFENCE/F16_DIVISION_INTO_LOTS/F16_DIV_INTO_LOT_YES/LOT_PRIOR_INFORMATION/LOT_NUMBER
+				<!--NH:31/01/2022: Contunie here-->
+				
 				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
 				<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
 				<lot-no><xsl:value-of select="$lot-no"/></lot-no>
@@ -138,7 +151,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<xsl:otherwise>
 							<xsl:choose>
 								<!-- This is the only Lot in the notice -->
-								<xsl:when test="$count-lots = 1">
+								<xsl:when test="$number-of-lots = 1">
 									<!-- use identifier LOT-0000 -->
 									<xsl:value-of select="'LOT-0000'"/>
 								</xsl:when>
