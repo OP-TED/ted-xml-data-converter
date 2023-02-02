@@ -22,7 +22,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Purpose Lot Identifier (BT-137)'"/></xsl:call-template>
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<xsl:variable name="lot-info" select="$lot-numbers-map//lot[path = $path]"/>
-		<!--NH:31/01/2022: Contunie here--> 
 
 		<xsl:choose>
 			<!-- When LOT_NO exists -->
@@ -30,7 +29,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			</xsl:when>
-			<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
+<!--			<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
+-->			<xsl:when test="fn:count(../ted:LOT_PRIOR_INFORMATION) = 1">
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Only one Lot in the TED notice'"/></xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
