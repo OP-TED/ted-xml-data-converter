@@ -12,7 +12,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- template for a single Lot -->
 <!--<xsl:template match="ted:OBJECT_DESCR">
---><xsl:template match="ted:LOT_PRIOR_INFORMATION">
+--><xsl:template match="ted:LOT_PRIOR_INFORMATION|ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION">
 	<cac:ProcurementProjectLot>
 		<!-- For form F16, a lot is represented by the element LOT_PRIOR_INFORMATION when F16_DIV_INTO_LOT_YES exists, otherwise a lot is represented by OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION -->
 		<!-- But, for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
@@ -22,11 +22,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Purpose Lot Identifier (BT-137)'"/></xsl:call-template>
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<xsl:variable name="lot-info" select="$lot-numbers-map//lot[path = $path]"/>
+<!--		<xsl:copy-of select="$lot-info"></xsl:copy-of>
+		<xsl:copy-of select="$path"></xsl:copy-of>-->
+
 
 		<xsl:choose>
 			<!-- When LOT_NO exists -->
 			<xsl:when test="fn:not($lot-info/is-convertible)">
-				<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NO"/> to eForms </xsl:variable>
+				<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NUMBER"/> to eForms </xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			</xsl:when>
 <!--			<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">

@@ -130,25 +130,25 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </lots>
 </xsl:variable>
 <!-- Variable number-of-lots holds the number of Lots of the notice being converted -->
-<xsl:variable name="number-of-lots" select="count($lots)"/>
+<xsl:variable name="number-of-lots" select="count($lots//lots/lot)"/>
 
 <!-- Variable lot-numbers-map holds a mapping of the TED XML Lots to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
 	<lots>
 <!--		<xsl:for-each select="$ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR">
 -->		
-		<xsl:for-each select="$lots/lots/lot/ted:LOT_PRIOR_INFORMATION">
+		<xsl:for-each select="$lots/lots/lot/(ted:LOT_PRIOR_INFORMATION|ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION)">
 			<lot>
 <!--				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NO"/></xsl:variable>
 -->				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NUMBER"/></xsl:variable>
 				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
-				<xsl:copy-of select="path"/>
+				<xsl:copy-of select="../path"/>
 				<lot-no><xsl:value-of select="$lot-no"/></lot-no>
 				<xsl:if test="$lot-no-is-convertible"><is-convertible/></xsl:if>
 				<lot-id>
 					<xsl:choose>
 						<!-- When LOT_NO exists -->
-						<xsl:when test="$lot-no">
+						<xsl:when test="$lot-no ne ''">
 							<xsl:choose>
 								<!-- LOT_NO is a positive integer between 1 and 9999 -->
 								<xsl:when test="$lot-no-is-convertible">
@@ -175,7 +175,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 									<!-- not tested, no examples found -->
 									<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
 <!--									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/>
--->									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:LOT_PRIOR_INFORMATION) + 1), 4))"/>
+-->									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(../preceding-sibling::lot) + 1), 4))"/>
 
 								</xsl:otherwise> 
 							</xsl:choose>
