@@ -895,11 +895,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="framework-agreement">
 	<!-- Framework Agreement (BT-765) -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Agreement (BT-765)'"/></xsl:call-template>
-	<xsl:if test="../../ted:PROCEDURE/ted:FRAMEWORK or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
+<!--	<xsl:if test="../../ted:PROCEDURE/ted:FRAMEWORK or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
+-->	<xsl:if test="(../../../..|.)/ted:FRAMEWORK_AGREEMENT or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
+
 		<xsl:choose>
-			<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
+<!--		<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
+-->			<!--<xsl:when test="../../../../ted:FRAMEWORK_AGREEMENT/@VALUE eq 'YES'or ted:FRAMEWORK_AGREEMENT/@VALUE eq 'YES'">-->
+			<xsl:when test="(../../../..|.)/ted:FRAMEWORK_AGREEMENT/@VALUE eq 'YES'">
+
 				<!--For CN forms F02, F05, F21, F22 FRAMEWORK has child elements specifying the number of participants and the duration justification-->
-				<xsl:apply-templates select="../../ted:PROCEDURE/ted:FRAMEWORK[*]"/>
+<!--			<xsl:apply-templates select="../../ted:PROCEDURE/ted:FRAMEWORK[*]"/>
+-->				<xsl:apply-templates select="(../../../..|.)/ted:FRAMEWORK_AGREEMENT[*]"/>
 				<cac:ContractingSystem>
 					<cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
 				</cac:ContractingSystem>
@@ -1062,7 +1068,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Duration Period (BT-36)'"/></xsl:call-template>
 		<!-- Duration Other (BT-538): eForms documentation cardinality (Lot) = ? | Forbidden for CN subtypes 23 and 24, CAN subtypes 36 and 37, CM subtype E5; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Duration Other (BT-538)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
+<!--		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
+-->		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
+
 		<xsl:apply-templates select="ted:QS/(ted:INDEFINITE_DURATION|ted:DATE_START)"/>
 
 		<!-- cbc:MaximumNumberNumeric is mandatory for Notice subtypes 15 (Notice on the existence of a qualification system), 17 and 18 (Contract, or concession, notice — standard regime, Directives 2014/25/EU and 2009/81/EC) -->
