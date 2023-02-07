@@ -919,7 +919,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="ted:FRAMEWORK">
+<!--<xsl:template match="ted:FRAMEWORK">
+--><xsl:template match="ted:FRAMEWORK_AGREEMENT">
 	<cac:FrameworkAgreement>
 		<!-- Framework Maximum Participants Number (BT-113): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-13, 16-18, 20-22, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Maximum Participants Number (BT-113)'"/></xsl:call-template>
@@ -1069,7 +1070,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Duration Other (BT-538): eForms documentation cardinality (Lot) = ? | Forbidden for CN subtypes 23 and 24, CAN subtypes 36 and 37, CM subtype E5; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Duration Other (BT-538)'"/></xsl:call-template>
 <!--		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
--->		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
+-->		<xsl:apply-templates select="ted:SCHEDULED_DATE_PERIOD/ted:PERIOD_WORK_DATE_STARTING/(ted:DAYS|ted:MONTHS|ted:INTERVAL_DATE)"/>
 
 		<xsl:apply-templates select="ted:QS/(ted:INDEFINITE_DURATION|ted:DATE_START)"/>
 
@@ -1174,11 +1175,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:RealizedLocation>
 </xsl:template>
 
-<xsl:template match="ted:DURATION">
+<xsl:template match="ted:DAYS">
 	<cac:PlannedPeriod>
-		<!--"YEAR"|"MONTH"|"DAY"-->
-		<xsl:variable name="duration-type" select="@TYPE"/>
-		<cbc:DurationMeasure unitCode="{$duration-type}"><xsl:value-of select="."/></cbc:DurationMeasure>
+		<!--DAYS|MONTHS|INTERVAL_DATE-->
+		<cbc:DurationMeasure unitCode="DAY"><xsl:value-of select="."/></cbc:DurationMeasure>
+	</cac:PlannedPeriod>
+</xsl:template>
+
+<xsl:template match="ted:MONTHS">
+	<cac:PlannedPeriod>
+		<!--DAYS|MONTHS|INTERVAL_DATE-->
+		<cbc:DurationMeasure unitCode="MONTH"><xsl:value-of select="."/></cbc:DurationMeasure>
 	</cac:PlannedPeriod>
 </xsl:template>
 
