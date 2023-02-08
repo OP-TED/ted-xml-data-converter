@@ -9,9 +9,6 @@
                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
    <ext:UBLExtensions>
-      <ted-orgs xmlns=""/>
-      <ted-orgs xmlns=""/>
-      <ted-orgs xmlns=""/>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
@@ -43,10 +40,10 @@
    <!--Notice Dispatch Date (BT-05)-->
    <!--WARNING: Notice Dispatch Date (BT-05) is Mandatory for all eForms subtypes, but no NOTICE_DISPATCH_DATE was found in TED XML.-->
    <!--Notice Version (BT-757)-->
-   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:VersionID>R2.0.8.S05.E01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>OTHER</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
@@ -56,4 +53,22 @@
       <cbc:ID>ENG</cbc:ID>
    </cac:AdditionalNoticeLanguage>
    <!-- cac:ContractingParty -->
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Type (BT-105)-->
+      <!--Lots All Required (BT-763)-->
+      <!--Previous Planning Identifier (BT-125)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)--><!--Description (BT-24)--><!--Main Nature (BT-23)--><!--Additional Information (BT-300)--><!--Estimated Value (BT-27)--><!--Main Classification Code (BT-262)--><!--Additional Classification Code (BT-263)--><!--Place of Performance Additional Information (BT-728)--><!--Place Performance City (BT-5131)--><!--Place Performance Post Code (BT-5121)--><!--Place Performance Country Subdivision (BT-5071)--><!--Place Performance Services Other (BT-727)--><!--Place Performance Street (BT-5101)--><!--Place Performance Country Code (BT-5141)--></cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
 </ContractNotice>

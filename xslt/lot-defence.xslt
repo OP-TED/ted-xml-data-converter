@@ -1195,14 +1195,32 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:PlannedPeriod>
 </xsl:template>
 
-<xsl:template match="ted:DATE_START">
+<xsl:template match="ted:INTERVAL_DATE">
+	<xsl:choose>
+		<xsl:when test="ted:START_DATE|ted:END_DATE">
+			<xsl:apply-templates select="ted:START_DATE|ted:END_DATE[fn:not(../ted:START_DATE)]"/>
+		</xsl:when>
+		<xsl:otherwise>	
+			<!-- WARNING: INTERVAL_DATE is present in the source TED notice but neither START_DATE or END_DATE is present. In this case, a duration of "UNKNOWN" has been used. -->
+			<xsl:variable name="message">WARNING: INTERVAL_DATE is present in the source TED notice but neither START_DATE or END_DATE is present. In this case, a duration of "UNKNOWN" has been used.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+			<cac:PlannedPeriod>
+				<cbc:DescriptionCode listName="timeperiod">UNKNOWN</cbc:DescriptionCode>
+			</cac:PlannedPeriod>			
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:template>
+
+
+<!--<xsl:template match="ted:DATE_START">
+--><xsl:template match="ted:START_DATE">
 	<cac:PlannedPeriod>
-		<cbc:StartDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:StartDate>
+		<cbc:StartDate><xsl:value-of select="fn:concat(ted:YEAR,'-',ted:MONTH,'-',ted:DAY)"/><xsl:text>+01:00</xsl:text></cbc:StartDate>
 		<xsl:choose>
-			<xsl:when test="../ted:DATE_END"><cbc:EndDate><xsl:value-of select="../ted:DATE_END"/><xsl:text>+01:00</xsl:text></cbc:EndDate></xsl:when>
+			<xsl:when test="../ted:END_DATE"><cbc:EndDate><xsl:value-of select="../ted:END_DATE/fn:concat(ted:YEAR,'-',ted:MONTH,'-',ted:DAY)"/><xsl:text>+01:00</xsl:text></cbc:EndDate></xsl:when>
 			<xsl:otherwise>
-				<!-- WARNING: Duration Other (BT-538) cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00) -->
-				<xsl:variable name="message">WARNING: Duration Other (BT-538) cbc:EndDate is required but the source TED notice does not contain DATE_END. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00).</xsl:variable>
+				<!-- WARNING: START_DATE is present in the source TED notice but END_DATE is not present. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00). -->
+				<xsl:variable name="message">WARNING: START_DATE is present in the source TED notice but END_DATE is not present. In order to obtain valid XML for this notice, a far future date was used (2099-12-31+01:00).</xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 				<cbc:EndDate><xsl:text>2099-12-31+01:00</xsl:text></cbc:EndDate>
 			</xsl:otherwise>
@@ -1210,13 +1228,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:PlannedPeriod>
 </xsl:template>
 
-<xsl:template match="ted:DATE_END[fn:not(../ted:DATE_START)]">
+<!--<xsl:template match="ted:DATE_END[fn:not(../ted:DATE_START)]">
+--><xsl:template match="ted:END_DATE[fn:not(../ted:START_DATE)]">
 	<cac:PlannedPeriod>
-		<!-- WARNING: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00) -->
-		<xsl:variable name="message">WARNING: cbc:StartDate is required but the source TED notice does not contain DATE_START. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00).</xsl:variable>
+		<!-- WARNING: END_DATE is present in the source TED notice but START_DATE is not present. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00). -->
+		<xsl:variable name="message">WARNING: END_DATE is present in the source TED notice but START_DATE is not present. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00).</xsl:variable>
 		<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 		<cbc:StartDate><xsl:text>1900-01-01+01:00</xsl:text></cbc:StartDate>
-		<cbc:EndDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:EndDate>
+		<cbc:EndDate><xsl:value-of select="fn:concat(ted:YEAR,'-',ted:MONTH,'-',ted:DAY)"/><xsl:text>+01:00</xsl:text></cbc:EndDate>
 	</cac:PlannedPeriod>
 </xsl:template>
 
