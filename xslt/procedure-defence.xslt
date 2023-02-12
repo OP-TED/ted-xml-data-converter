@@ -132,7 +132,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:for-each>
 	</xsl:if>
 </xsl:template>
-
+<!--
 <xsl:template name="procedure-note">
 	<xsl:variable name="info-add" select="fn:normalize-space(fn:string-join(ted:COMPLEMENTARY_INFO/ted:INFO_ADD/ted:P, ' '))"/>
 	<xsl:variable name="url-national-procedure" select="fn:normalize-space(ted:PROCEDURE/ted:URL_NATIONAL_PROCEDURE)"/>
@@ -195,7 +195,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:otherwise>
 	</xsl:choose>
 	</xsl:if>
-</xsl:template>
+</xsl:template>-->
 
 <!--<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 --><xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST">

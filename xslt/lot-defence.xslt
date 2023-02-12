@@ -996,17 +996,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<cbc:ID schemeName="InternalID"></cbc:ID>
 		<!-- Title (BT-21): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40-->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Title (BT-21)'"/></xsl:call-template>
-		<!-- if TITLE exists in OBJ_DESCR, use that, otherwise use TITLE in OBJECT_CONTRACT parent -->
+		<!-- if LOT_TITLE exists in LOT_PRIOR_INFORMATION, use that, otherwise use TITLE_CONTRACT in OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION -->
 		<xsl:choose>
-			<xsl:when test="fn:normalize-space(fn:string(ted:TITLE))"><xsl:apply-templates select="ted:TITLE"/></xsl:when>
-			<xsl:otherwise><xsl:apply-templates select="../ted:TITLE"/></xsl:otherwise>
+			<xsl:when test="fn:normalize-space(ted:LOT_TITLE)"><xsl:apply-templates select="ted:LOT_TITLE"/></xsl:when>
+			<xsl:otherwise><xsl:apply-templates select="(../../../..|.)/ted:TITLE_CONTRACT"/></xsl:otherwise>
 		</xsl:choose>
 		<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:SHORT_DESCR"/>
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Lot) = 1 | Optional for ALL Notice subtypes Equivalent element TYPE_CONTRACT in TED does not exist in OBJ_DESCR, so use TYPE_CONTRACT in OBJECT_CONTRACT parent -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
-		<xsl:apply-templates select="../ted:TYPE_CONTRACT"/>
+		<xsl:apply-templates select="(../../../..|.)/ted:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/ted:TYPE_CONTRACT_PI_DEFENCE/ted:TYPE_CONTRACT"/>
 		<!-- Additional Nature (BT-531): eForms documentation cardinality (Lot) = * | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Nature (BT-531)'"/></xsl:call-template>
 		<!-- Strategic Procurement (BT-06): eForms documentation cardinality (Lot) = * | No equivalent element in TED XML -->
@@ -1093,12 +1093,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="ted:OBJECT_DESCR/ted:TITLE">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+<!--<xsl:template match="ted:OBJECT_DESCR/ted:TITLE">
+--><xsl:template match="ted:LOT_TITLE">
+	<xsl:variable name="text" select="."/>
 	<xsl:if test="$text ne ''">
 		<xsl:call-template name="multilingual">
 			<xsl:with-param name="contexts" select="."/>
-			<xsl:with-param name="local" select="'P'"/>
+			<xsl:with-param name="local" select="''"/>
 			<xsl:with-param name="element" select="'cbc:Name'"/>
 		</xsl:call-template>
 	</xsl:if>
