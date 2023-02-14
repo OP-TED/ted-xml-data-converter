@@ -21,7 +21,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 <!--<xsl:template match="ted:SHORT_DESCR">-->
-<xsl:template match="ted:TOTAL_QUANTITY_OR_SCOPE">
+<xsl:template match="ted:TOTAL_QUANTITY_OR_SCOPE|ted:LOT_DESCRIPTION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:call-template name="multilingual">
 		<xsl:with-param name="contexts" select="."/>
@@ -78,4 +78,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="@CODE"/></cbc:CountrySubentityCode>
 	</cac:RealizedLocation>
 </xsl:template>     
+
+
 </xsl:stylesheet>

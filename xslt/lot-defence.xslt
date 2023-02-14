@@ -809,12 +809,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<!-- add ":00" for the seconds; add the TimeZone offset for CET -->
 			<xsl:text>:00+01:00</xsl:text>
 		</cbc:OccurrenceTime>
-		<xsl:apply-templates select="ted:INFO_ADD"/>
+<!--		<xsl:apply-templates select="ted:INFO_ADD"/>
+-->		<!--<xsl:apply-templates select="ted:ADDITIONAL_INFORMATION"/>--> <!--to review-->
 		<xsl:apply-templates select="ted:PLACE"/>
 	</cac:OpenTenderEvent>
 </xsl:template>
 
-<xsl:template match="ted:OPENING_CONDITION/ted:INFO_ADD">
+<!--<xsl:template match="ted:OPENING_CONDITION/ted:INFO_ADD">
+--><xsl:template match="ted:OPENING_CONDITION/ted:ADDITIONAL_INFORMATION"> <!--to review-->
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
 		<xsl:call-template name="multilingual">
@@ -1003,7 +1005,16 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:choose>
 		<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:SHORT_DESCR"/>
+<!--		<xsl:apply-templates select="ted:SHORT_DESCR"/>
+-->		<xsl:choose>
+			<xsl:when test="fn:normalize-space(ted:LOT_DESCRIPTION)"><xsl:apply-templates select="ted:LOT_DESCRIPTION"/></xsl:when>
+			<xsl:when test="fn:normalize-space((../../../..|.)/ted:TOTAL_QUANTITY_OR_SCOPE)"><xsl:apply-templates select="(../../../..|.)/ted:TOTAL_QUANTITY_OR_SCOPE"/></xsl:when>
+			<xsl:otherwise>
+				<!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither  LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML. -->
+				<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither  LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML.</xsl:variable>
+				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Lot) = 1 | Optional for ALL Notice subtypes Equivalent element TYPE_CONTRACT in TED does not exist in OBJ_DESCR, so use TYPE_CONTRACT in OBJECT_CONTRACT parent -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:apply-templates select="(../../../..|.)/ted:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/ted:TYPE_CONTRACT_PI_DEFENCE/ted:TYPE_CONTRACT"/>
@@ -1032,7 +1043,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 		<!-- Additional Information (BT-300): eForms documentation cardinality (Lot) = ? | Optional for ALL Notice subtypes. -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Information (BT-300)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:INFO_ADD"/>
+<!--		<xsl:apply-templates select="ted:INFO_ADD"/>
+-->		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:ADDITIONAL_INFORMATION"/></xsl:if>
+
 		<!-- Estimated Value (BT-27): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 4-9, E1, and E2, CN subtypes 10-14, 16-22, and E3, CAN subtypes 29-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Estimated Value (BT-27)'"/></xsl:call-template>
 		<xsl:apply-templates select="ted:VAL_OBJECT"/>
@@ -1082,7 +1095,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:ProcurementProject>
 </xsl:template>
 
-<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD">
+<!--<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD"  >-->
+<xsl:template match="ted:LOT_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
 		<xsl:call-template name="multilingual">
