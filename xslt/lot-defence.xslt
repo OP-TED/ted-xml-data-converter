@@ -1006,15 +1006,42 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
 <!--		<xsl:apply-templates select="ted:SHORT_DESCR"/>
--->		<xsl:choose>
+-->		
+		<xsl:if test="fn:local-name(.)='OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION'">
+			<xsl:choose>
+				<xsl:when test="fn:normalize-space(ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE)">
+					<xsl:apply-templates select="ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but TOTAL_QUANTITY_OR_SCOPE does not contained text in TED XML. -->
+					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but TOTAL_QUANTITY_OR_SCOPE does not contained text in TED XML.</xsl:variable>
+					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+		
+		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'">
+			<xsl:choose>
+				<xsl:when test="fn:normalize-space(ted:LOT_DESCRIPTION) or fn:normalize-space(ted:NATURE_QUANTITY_SCOPE/ted:TOTAL_QUANTITY_OR_SCOPE)">
+					<xsl:apply-templates select="(ted:LOT_DESCRIPTION|ted:NATURE_QUANTITY_SCOPE/ted:TOTAL_QUANTITY_OR_SCOPE)"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML. -->
+					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML.</xsl:variable>
+					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+		
+	<!--	<xsl:choose>
 			<xsl:when test="fn:normalize-space(ted:LOT_DESCRIPTION)"><xsl:apply-templates select="ted:LOT_DESCRIPTION"/></xsl:when>
-			<xsl:when test="fn:normalize-space((../../../..|.)/ted:TOTAL_QUANTITY_OR_SCOPE)"><xsl:apply-templates select="(../../../..|.)/ted:TOTAL_QUANTITY_OR_SCOPE"/></xsl:when>
+			<xsl:when test="fn:normalize-space((../../../..|.)/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE)"><xsl:apply-templates select="(../../../..|.)/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE"/></xsl:when>
 			<xsl:otherwise>
-				<!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither  LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML. -->
+				--><!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither  LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML. --><!--
 				<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither  LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML.</xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			</xsl:otherwise>
-		</xsl:choose>
+		</xsl:choose>-->
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Lot) = 1 | Optional for ALL Notice subtypes Equivalent element TYPE_CONTRACT in TED does not exist in OBJ_DESCR, so use TYPE_CONTRACT in OBJECT_CONTRACT parent -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:apply-templates select="(../../../..|.)/ted:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/ted:TYPE_CONTRACT_PI_DEFENCE/ted:TYPE_CONTRACT"/>
@@ -1048,14 +1075,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 		<!-- Estimated Value (BT-27): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 4-9, E1, and E2, CN subtypes 10-14, 16-22, and E3, CAN subtypes 29-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Estimated Value (BT-27)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:VAL_OBJECT"/>
+		<!--<xsl:apply-templates select="ted:VAL_OBJECT"/>-->
+		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:NATURE_QUANTITY_SCOPE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST"/></xsl:if>
 		<!-- Classification Type (BT-26): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Main Classification Code (BT-262): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Classification Code (BT-262)'"/></xsl:call-template>
-		<xsl:apply-templates select="../ted:CPV_MAIN"/>
+		<!--<xsl:apply-templates select="../ted:CPV_MAIN"/>-->
+		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:CPV/ted:CPV_MAIN"/></xsl:if>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Lot) = * | Optional for ALL Notice subtypes, No equivalent element in TED XML at Lot level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:CPV_ADDITIONAL"/>
+		<!--<xsl:apply-templates select="ted:CPV_ADDITIONAL"/>-->
+		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:CPV/ted:CPV_ADDITIONAL"/></xsl:if>
 
 		<!-- Place of Performance (BG-708) -> RealizedLocation | Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
 		<!-- Place of Performance Additional Information (BT-728): eForms documentation cardinality (Lot) = ? | Optional for ALL subtypes -->

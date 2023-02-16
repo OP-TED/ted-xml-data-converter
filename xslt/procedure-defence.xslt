@@ -198,15 +198,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>-->
 
 <!--<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
---><xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST">
+--><xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST|ted:NATURE_QUANTITY_SCOPE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
-	<xsl:variable name="currency" select="fn:normalize-space(../@CURRENCY)"/>
-	<cac:RequestedTenderTotal>
-		<cbc:EstimatedOverallContractAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallContractAmount>
-	</cac:RequestedTenderTotal>
-</xsl:template>
-<xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:COSTS_RANGE_AND_CURRENCY/ted:RANGE_VALUE_COST">
-	<xsl:variable name="ted-value" select="fn:normalize-space(./ted:HIGH_VALUE)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(../@CURRENCY)"/>
 	<cac:RequestedTenderTotal>
 		<cbc:EstimatedOverallContractAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallContractAmount>
