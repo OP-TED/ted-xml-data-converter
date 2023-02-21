@@ -99,11 +99,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
 </xsl:template>
 
-<xsl:template match="ted:EU_PROGR_RELATED">
+<!--<xsl:template match="ted:EU_PROGR_RELATED">-->
+<xsl:template match="ted:RELATES_TO_EU_PROJECT_YES">
 	<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
 </xsl:template>
 
-<xsl:template match="ted:NO_EU_PROGR_RELATED">
+<!--<xsl:template match="ted:NO_EU_PROGR_RELATED">-->
+<xsl:template match="ted:RELATES_TO_EU_PROJECT_NO">
 	<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
 </xsl:template>
 

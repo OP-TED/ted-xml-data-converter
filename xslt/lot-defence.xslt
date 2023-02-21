@@ -59,7 +59,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="ted:NO_ACCEPTED_VARIANTS|ted:ACCEPTED_VARIANTS"/>
 		<!-- EU Funds (BT-60): eForms documentation cardinality (Lot) = ? | Mandatory for PIN subtype 7, CN subtypes 10, 16, 19, and 23, CAN subtypes 29, 32, and 36; Forbidden for PIN subtypes 1-6, E1, and E2; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds (BT-60)'"/></xsl:call-template>
-		<xsl:apply-templates select="ted:NO_EU_PROGR_RELATED|ted:EU_PROGR_RELATED"/>
+		<!--<xsl:apply-templates select="ted:NO_EU_PROGR_RELATED|ted:EU_PROGR_RELATED"/>-->
+		<xsl:apply-templates select="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/(ted:RELATES_TO_EU_PROJECT_YES|ted:RELATES_TO_EU_PROJECT_NO)"/>
 		<!-- In TED XML, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->
 		<!-- Performing Staff Qualification (BT-79): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Performing Staff Qualification (BT-79)'"/></xsl:call-template>
@@ -96,7 +97,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="terms-financial"/>
 
 		<!-- Reserved Participation (BT-71): eForms documentation cardinality (Lot) = + | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Participation (BT-71)'"/></xsl:call-template>
 		<xsl:call-template name="reserved-participation"/>
 
 		<!-- Tenderer Legal Form (BT-761): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
@@ -290,20 +290,21 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="terms-financial">
 	<!-- Terms Financial (BT-77): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Terms Financial (BT-77)'"/></xsl:call-template>
-	<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:MAIN_FINANCING_CONDITION/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+	<!--<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:MAIN_FINANCING_CONDITION/fn:normalize-space(fn:string-join(ted:P, ' '))"/>-->
+	<xsl:variable name="text" select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:MAIN_FINANCING_CONDITIONS/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:choose>
 		<xsl:when test="$text ne ''">
 			<cac:PaymentTerms>
 				<xsl:call-template name="multilingual">
-					<xsl:with-param name="contexts" select="$ted-form-main-element/ted:LEFTI/ted:MAIN_FINANCING_CONDITION"/>
+					<xsl:with-param name="contexts" select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:MAIN_FINANCING_CONDITIONS"/>
 					<xsl:with-param name="local" select="'P'"/>
 					<xsl:with-param name="element" select="'cbc:Note'"/>
 				</xsl:call-template>
 			</cac:PaymentTerms>
 		</xsl:when>
 		<xsl:when test="$eforms-notice-subtype = ('17', '18', '22')">
-			<!-- WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML. -->
-			<xsl:variable name="message">WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML.</xsl:variable>
+			<!-- WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITIONS was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITIONS was found in TED XML.</xsl:variable>
 			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			<cac:PaymentTerms>
 				<cbc:Note languageID="{$eforms-first-language}"></cbc:Note>
@@ -341,11 +342,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<!-- Reserved Participation (BT-71): eForms documentation cardinality (Lot) = + | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Participation (BT-71)'"/></xsl:call-template>
 	<!-- reserved-procurement code res-pub-ser is RESERVED_ORGANISATIONS_SERVICE_MISSION in TED XML, used only in F21 -->
-	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)">
+	<!--<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)">-->
+	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_SHELTERED_WORKSHOPS">
 		<cac:TendererQualificationRequest>
 			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">
-					<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>
+				<!--<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">-->
+				<xsl:when test="fn:boolean($ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_SHELTERED_WORKSHOPS)">
+					<!--<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>-->
+					<xsl:apply-templates select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_SHELTERED_WORKSHOPS"/>
+
 				</xsl:when>
 				<xsl:otherwise>
 					<cac:SpecificTendererRequirement>
@@ -357,7 +362,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="ted:RESTRICTED_SHELTERED_WORKSHOP">
+<!--<xsl:template match="ted:RESTRICTED_SHELTERED_WORKSHOP">-->
+<xsl:template match="ted:RESTRICTED_TO_SHELTERED_WORKSHOPS">
 	<cac:SpecificTendererRequirement>
 		<cbc:TendererRequirementTypeCode listName="reserved-procurement">res-ws</cbc:TendererRequirementTypeCode>
 	</cac:SpecificTendererRequirement>
@@ -372,10 +378,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="reserved-execution">
 	<!-- Reserved Execution (BT-736): eForms documentation cardinality (Lot) = ? | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Execution (BT-736)'"/></xsl:call-template>
-	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION)">
+	<!--<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION)">
+-->	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_FRAMEWORK">
 		<xsl:variable name="is-reserved-execution">
 			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">yes</xsl:when>
+				<!--<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">yes</xsl:when>-->
+				<xsl:when test="fn:boolean($ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_FRAMEWORK)">yes</xsl:when>
 				<xsl:otherwise>no</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -405,7 +413,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="terms-performance">
 	<!-- Terms Performance (BT-70): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Terms Performance (BT-70)'"/></xsl:call-template>
+	<!--<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:LEFTI/ted:PERFORMANCE_CONDITIONS/ted:P, ' '))"/>-->
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:LEFTI/ted:PERFORMANCE_CONDITIONS/ted:P, ' '))"/>
+
 	<xsl:choose>
 		<xsl:when test="$text ne ''" >
 			<cac:ContractExecutionRequirement>
