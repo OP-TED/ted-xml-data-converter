@@ -101,12 +101,24 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!--<xsl:template match="ted:EU_PROGR_RELATED">-->
 <xsl:template match="ted:RELATES_TO_EU_PROJECT_YES">
-	<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+	<efac:Funding>
+		<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+		<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+		<xsl:if test="$text ne ''">
+			<xsl:call-template name="multilingual">
+				<xsl:with-param name="contexts" select="."/>
+				<xsl:with-param name="local" select="'P'"/>
+				<xsl:with-param name="element" select="'cbc:Description'"/>
+			</xsl:call-template>
+		</xsl:if>
+	</efac:Funding>
 </xsl:template>
 
 <!--<xsl:template match="ted:NO_EU_PROGR_RELATED">-->
 <xsl:template match="ted:RELATES_TO_EU_PROJECT_NO">
-	<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+	<efac:Funding>	
+		<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+	</efac:Funding>
 </xsl:template>
 
 <xsl:template match="ted:PERFORMANCE_STAFF_QUALIFICATION">
