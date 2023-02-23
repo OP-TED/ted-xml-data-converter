@@ -61,8 +61,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- EU Funds Details (BT-6140): eForms documentation cardinality (Lot) = ? |  -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds (BT-60)'"/></xsl:call-template>
 		<!--<xsl:apply-templates select="ted:NO_EU_PROGR_RELATED|ted:EU_PROGR_RELATED"/>-->
-		<xsl:apply-templates select="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/(ted:RELATES_TO_EU_PROJECT_YES|ted:RELATES_TO_EU_PROJECT_NO)"/>
-		<!-- In TED XML, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->
+		<!-- In TED XML, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->		
+		<xsl:choose>
+			<xsl:when test="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/(ted:RELATES_TO_EU_PROJECT_YES|ted:RELATES_TO_EU_PROJECT_NO)">
+				<xsl:apply-templates select="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/(ted:RELATES_TO_EU_PROJECT_YES|ted:RELATES_TO_EU_PROJECT_NO)"/>
+			</xsl:when>
+			<xsl:when test="($eforms-notice-subtype = ('7','10','16','19','23','29','32','36'))">
+				<!-- WARNING: EU Funds (BT-60) is Mandatory for eForms subtype 7, 10, 16, 19, 23, 29, 32, 36, but neither RELATES_TO_EU_PROJECT_YES nor RELATES_TO_EU_PROJECT_NO  were found in TED XML. -->
+				<xsl:variable name="message">WARNING: EU Funds (BT-60) is Mandatory for eForms subtype 7, 10, 16, 19, 23, 29, 32, 36, but neither RELATES_TO_EU_PROJECT_YES nor RELATES_TO_EU_PROJECT_NO  were found in TED XML.</xsl:variable>
+				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+			</xsl:when>
+		</xsl:choose>
+
 		<!-- Performing Staff Qualification (BT-79): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Performing Staff Qualification (BT-79)'"/></xsl:call-template>
 		<xsl:apply-templates select="../../ted:LEFTI/PERFORMANCE_STAFF_QUALIFICATION"/>
@@ -1044,15 +1054,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			</xsl:choose>
 		</xsl:if>
 		
-	<!--	<xsl:choose>
-			<xsl:when test="fn:normalize-space(ted:LOT_DESCRIPTION)"><xsl:apply-templates select="ted:LOT_DESCRIPTION"/></xsl:when>
-			<xsl:when test="fn:normalize-space((../../../..|.)/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE)"><xsl:apply-templates select="(../../../..|.)/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE"/></xsl:when>
-			<xsl:otherwise>
-				--><!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither  LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML. --><!--
-				<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither  LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML.</xsl:variable>
-				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>-->
+	
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Lot) = 1 | Optional for ALL Notice subtypes Equivalent element TYPE_CONTRACT in TED does not exist in OBJ_DESCR, so use TYPE_CONTRACT in OBJECT_CONTRACT parent -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:apply-templates select="(../../../..|.)/ted:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/ted:TYPE_CONTRACT_PI_DEFENCE/ted:TYPE_CONTRACT"/>

@@ -156,7 +156,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<cbc:AccessToolsURI><xsl:apply-templates/></cbc:AccessToolsURI>
 </xsl:template>
 
-<xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION">
+<!--<xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION">-->
+<xsl:template match="ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION|ted:OTH_INFO_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
 		<xsl:call-template name="multilingual">
