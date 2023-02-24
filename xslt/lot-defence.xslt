@@ -92,7 +92,19 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Guarantee Required Description (BT-75): eForms documentation cardinality (Lot) = ? | Only exists in TED form F05. Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3; Forbidden for other subtypes -->
 		<xsl:apply-templates select="../../ted:LEFTI/ted:DEPOSIT_GUARANTEE_REQUIRED"/>
 
-		<!-- Tax legislation information provider No equivalent element in TED XML -->
+		<!-- Tax legislation information provider No equivalent element in TED XML, NH 24-02-2023,to be deleted -->
+		<!-- Tax Legislation Information Provider (OPT-301): eForms documentation cardinality (Lot) =  | Mandatory for PIN subtypes 6, and 9; Optional for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tax Legislation Information Provider (OPT-301)'"/></xsl:call-template>
+		<xsl:choose>
+			<xsl:when test="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/ted:INFORMATION_REGULATORY_FRAMEWORK/ted:ENVIRONMENTAL_PROTECTION_LEGISLATION">
+				<xsl:apply-templates select="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/ted:INFORMATION_REGULATORY_FRAMEWORK/ted:ENVIRONMENTAL_PROTECTION_LEGISLATION"/>
+			</xsl:when>
+			<xsl:when test="($eforms-notice-subtype = ('6','9'))">
+				<!-- WARNING: Tax Legislation Information Provider (OPT-301) is Mandatory for eForms subtype 6, 9, but no ENVIRONMENTAL_PROTECTION_LEGISLATION  was found in TED XML. -->
+				<xsl:variable name="message">WARNING: Tax Legislation Information Provider (OPT-301) is Mandatory for eForms subtype 6, 9, but no ENVIRONMENTAL_PROTECTION_LEGISLATION  was found in TED XML.</xsl:variable>
+				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+			</xsl:when>
+		</xsl:choose>
 		<!-- Environment legislation information provider No equivalent element in TED XML -->
 		<!-- Employment legislation information provider No equivalent element in TED XML -->
 
