@@ -132,46 +132,47 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:for-each>
 	</xsl:if>
 </xsl:template>
-<!--
+
+
 <xsl:template name="procedure-note">
-	<xsl:variable name="info-add" select="fn:normalize-space(fn:string-join(ted:COMPLEMENTARY_INFO/ted:INFO_ADD/ted:P, ' '))"/>
-	<xsl:variable name="url-national-procedure" select="fn:normalize-space(ted:PROCEDURE/ted:URL_NATIONAL_PROCEDURE)"/>
-	<xsl:if test="($info-add ne '') or ($url-national-procedure ne '')">
+	<xsl:variable name="info-add-object" select="fn:normalize-space(fn:string-join(ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION/ted:P, ' '))"/>
+	<xsl:variable name="info-add-other" select="fn:normalize-space(fn:string-join(ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OTH_INFO_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION/ted:P, ' '))"/>
+	<xsl:if test="($info-add-object ne '') or ($info-add-other ne '')">
 		<xsl:choose>
 			<xsl:when test="fn:false()">
 				<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
 					<xsl:variable name="form-element" select="."/>
 					<xsl:variable name="ted-language" select="fn:string(@LG)"/>
 						<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
-						<xsl:variable name="info-add-lang" as="xs:string">
-							<xsl:if test="$info-add">
+						<xsl:variable name="info-add-object-lang" as="xs:string">
+							<xsl:if test="$info-add-object">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
 										<xsl:with-param name="context" select="$form-element"/>
-										<xsl:with-param name="relative-context" select="'COMPLEMENTARY_INFO/INFO_ADD'"/>
+										<xsl:with-param name="relative-context" select="'FD_PRIOR_INFORMATION_DEFENCE/OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ADDITIONAL_INFORMATION'"/>
 									</xsl:call-template>
 								</xsl:variable>
 								<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/ted:P, ' '))"/>
 							</xsl:if>
 						</xsl:variable>
-						<xsl:variable name="url-national-procedure-lang">
-							<xsl:if test="$url-national-procedure">
+						<xsl:variable name="info-add-other-lang">
+							<xsl:if test="$info-add-other">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
 										<xsl:with-param name="context" select="$form-element"/>
-										<xsl:with-param name="relative-context" select="'PROCEDURE/URL_NATIONAL_PROCEDURE'"/>
+										<xsl:with-param name="relative-context" select="'FD_PRIOR_INFORMATION_DEFENCE/OTH_INFO_PRIOR_INFORMATION/ADDITIONAL_INFORMATION'"/>
 									</xsl:call-template>
 								</xsl:variable>
 								<xsl:value-of select="fn:normalize-space($parent/*)"/>
 							</xsl:if>
 						</xsl:variable>
 					<xsl:variable name="text">
-						<xsl:value-of select="$info-add-lang"/>
-						<xsl:if test="$url-national-procedure-lang">
+						<xsl:value-of select="$info-add-object-lang"/>
+						<xsl:if test="$info-add-other-lang">
 							<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-language]/fn:string()"/>
-							<xsl:if test="$info-add-lang"><xsl:text> </xsl:text></xsl:if>
+							<xsl:if test="$info-add-object-lang"><xsl:text> </xsl:text></xsl:if>
 							<xsl:value-of select="$form-text"/>
-							<xsl:value-of select="$url-national-procedure-lang"/>
+							<xsl:value-of select="$info-add-other-lang"/>
 						</xsl:if>
 					</xsl:variable>
 					<xsl:if test="$text ne ''">
@@ -182,11 +183,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:otherwise>
 				<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-form-first-language]/fn:string()"/>
 				<xsl:variable name="text">
-					<xsl:value-of select="$info-add"/>
-					<xsl:if test="$url-national-procedure">
-						<xsl:if test="$info-add"><xsl:text> </xsl:text></xsl:if>
+					<xsl:value-of select="$info-add-object"/>
+					<xsl:if test="$info-add-other">
+						<xsl:if test="$info-add-object"><xsl:text> </xsl:text></xsl:if>
 						<xsl:value-of select="$form-text"/>
-						<xsl:value-of select="$url-national-procedure"/>
+						<xsl:value-of select="$info-add-other"/>
 					</xsl:if>
 				</xsl:variable>
 				<xsl:if test="$text ne ''">
@@ -195,7 +196,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:otherwise>
 	</xsl:choose>
 	</xsl:if>
-</xsl:template>-->
+</xsl:template>
 
 <!--<xsl:template match="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL|ted:VAL_OBJECT">
 --><xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST|ted:NATURE_QUANTITY_SCOPE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST">
