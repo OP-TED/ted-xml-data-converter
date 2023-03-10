@@ -43,6 +43,10 @@ The current version of the TED XML Data Converter will only convert a limited su
 Each leaf element in the output eForms XML will be preceded by an HTML comment naming the Business Term it is associated with. 
 This can be suppressed by setting the "includecomments" parameter to 0.
 
+## External Parameters
+
+The values for `BT-701 Notice Identifier` and `BT-04 Procedure Identifier` may be set using the parameters `"notice-identifier"` and `"procedure-identifier"` respectively.
+
 ## Warnings
 
 Where the eForms XML standard requires information that is not present in the source TED XML, or the information is not of the required format, the XSLT application will report a warning.

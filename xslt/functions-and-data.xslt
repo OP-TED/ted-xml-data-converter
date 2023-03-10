@@ -17,7 +17,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:param name="showwarnings" select="1" as="xs:integer"/>
 <xsl:param name="includewarnings" select="1" as="xs:integer"/>
 <xsl:param name="includecomments" select="1" as="xs:integer"/>
-
+	
+<!-- external conversion parameters -->
+<xsl:param name="notice-identifier" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'" as="xs:string"/> <!--Value for BT-701 Notice Identifier-->
+<xsl:param name="procedure-identifier" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'" as="xs:string"/> <!--Value for BT-04 Procedure Identifier -->
 
 <!-- MAPPING FILES -->
 	
