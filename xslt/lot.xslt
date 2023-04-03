@@ -873,7 +873,7 @@
 				</cac:TenderSubmissionDeadlinePeriod>
 			</xsl:when>
 			<xsl:when test="($eforms-notice-subtype = ('8'))">
-				<!-- WARNING: Deadline Receipt Tenders (BT-131) is Mandatory for eForms subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00). -->
+				<!-- WARNING: Deadline Receipt Tenders (BT-131) is Mandatory for eForms notice subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00). -->
 				<xsl:variable name="message">WARNING: Deadline Receipt Tenders (BT-131) is Mandatory for eForms subtype 8, but no DATE_RECEIPT_TENDERS was found in TED XML. In order to obtain valid XML for this notice, a far future date was used (2099-01-01+01:00).</xsl:variable>
 				<xsl:call-template name="report-warning">
 					<xsl:with-param name="message" select="$message"/>
@@ -959,7 +959,7 @@
 						</cbc:MinimumQuantity>
 					</xsl:when>
 					<xsl:when test="$eforms-notice-subtype = '16'">
-						<!-- WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used. -->
+						<!-- WARNING: Minimum Candidates (BT-50) is mandatory for eForms notice subtype 16, but no value was given in the source TED XML. The value "0" has been used. -->
 						<xsl:variable name="message">WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.</xsl:variable>
 						<xsl:call-template name="report-warning">
 							<xsl:with-param name="message" select="$message"/>

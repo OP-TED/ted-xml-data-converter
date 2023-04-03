@@ -249,9 +249,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 			<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
 		</xsl:message>
 	</xsl:if>
-	<!-- read the eForms subtype from the row -->
+	<!-- read the eForms notice subtype from the row -->
 	<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
-	<!-- exit with an error if the eForms subtype is not a recognised value for the converter -->
+	<!-- exit with an error if the eForms notice subtype is not a recognised value for the converter -->
 	<xsl:choose>
 		<xsl:when test="$eforms-subtype eq ''">
 			<xsl:message terminate="yes">
@@ -283,7 +283,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 			</xsl:message>
 		</xsl:when>
 	</xsl:choose>
-	<!-- return the valid eForms subtype -->
+	<!-- return the valid eForms notice subtype -->
 	<xsl:value-of select="$eforms-subtype"/>
 </xsl:function>
 

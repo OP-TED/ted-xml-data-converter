@@ -232,19 +232,19 @@ These instructions can be un-commented to show the variables holding the organiz
 <xsl:template match="*:ADDRESS_CONTRACTING_BODY|*:ADDRESS_CONTRACTING_BODY_ADDITIONAL">
 	<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 	<cac:ContractingParty>
-		<!-- Buyer Profile URL (BT-508) Mandatory for PIN subtypes 1-3; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
+		<!-- Buyer Profile URL (BT-508): Mandatory for PIN subtypes 1-3; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Profile URL (BT-508)'"/></xsl:call-template>
 		<xsl:apply-templates select="*:URL_BUYER"/>
-		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
+		<!-- Buyer Legal Type (BT-11): Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="buyer-legal-type"/>
 		<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="buyer-contracting-entity"/>
 		<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
-		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
-		<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
+		<!-- Activity Authority (BT-10): and Activity Entity (BT-610) both are implemented as code values from a codelist -->
+		<!-- Activity Authority (BT-10): Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Authority (BT-10)'"/></xsl:call-template>
 		<xsl:apply-templates select="../*:CA_ACTIVITY"/>
-		<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
+		<!-- Activity Entity (BT-610): Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Entity (BT-610)'"/></xsl:call-template>
 		<xsl:apply-templates select="../*:CE_ACTIVITY"/>
 		<cac:Party>
@@ -274,7 +274,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <xsl:template name="buyer-legal-type">
-		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
+		<!-- Buyer Legal Type (BT-11): Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Legal Type (BT-11)'"/></xsl:call-template>
 		<xsl:choose>
 			<xsl:when test="../*:CA_TYPE">
@@ -289,7 +289,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <xsl:template name="buyer-contracting-entity">
-	<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
+	<!-- Buyer Contracting Entity (BT-740): Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Contracting Entity (BT-740)'"/></xsl:call-template>
 	<xsl:choose>
 		<xsl:when test="../*:CA_ACTIVITY|../*:CA_ACTIVITY_OTHER">
@@ -309,7 +309,7 @@ These instructions can be un-commented to show the variables holding the organiz
 <xsl:template match="*:CA_TYPE">
 	<xsl:variable name="ca-type" select="@VALUE"/>
 	<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
-	<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
+	<!-- Buyer Legal Type (BT-11): Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 	<cac:ContractingPartyType>
 		<cbc:PartyTypeCode listName="buyer-legal-type"><xsl:value-of select="$buyer-legal-type"/></cbc:PartyTypeCode>
 	</cac:ContractingPartyType>
@@ -319,7 +319,7 @@ These instructions can be un-commented to show the variables holding the organiz
 <xsl:template match="*:CA_ACTIVITY">
 	<xsl:variable name="ca-activity" select="@VALUE"/>
 	<xsl:variable name="authority-activity-type" select="$mappings//authority-activity-types/mapping[ted-value=$ca-activity]/fn:string(eforms-value)"/>
-	<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
+	<!-- Activity Authority (BT-10): Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 	<cac:ContractingActivity>
 		<cbc:ActivityTypeCode listName="authority-activity"><xsl:value-of select="$authority-activity-type"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
@@ -328,7 +328,7 @@ These instructions can be un-commented to show the variables holding the organiz
 <xsl:template match="*:CE_ACTIVITY">
 	<xsl:variable name="ce-activity" select="@VALUE"/>
 	<xsl:variable name="entity-activity-type" select="$mappings//entity-activity-types/mapping[ted-value=$ce-activity]/fn:string(eforms-value)"/>
-	<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
+	<!-- Activity Entity (BT-610): Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<cac:ContractingActivity>
 		<cbc:ActivityTypeCode listName="entity-activity"><xsl:value-of select="$entity-activity-type"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
