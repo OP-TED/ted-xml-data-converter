@@ -136,8 +136,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 					<xsl:variable name="this-group-number" select="fn:position()"/>
 					<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
 					<lot-result number="{$this-group-number}" lot-number="{$lot-number}" award-count="{$award-count}">
-						<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
-						<lot-result-id><xsl:text>LTR-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
+						<lot-result-id><xsl:text>RES-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
 						<awards>
 							<xsl:for-each select="fn:current-group()">
 								<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
@@ -156,7 +155,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 					<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
 					<lot-result number="{$this-award-number}" lot-number="{$lot-number}" award-count="{$award-count}">
 						<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
-						<lot-result-id><xsl:text>LTR-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
+						<lot-result-id><xsl:text>RES-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
 						<awards>
 							<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
 							<xsl:copy-of select="." copy-namespaces="no"/>
@@ -208,6 +207,10 @@ These instructions can be un-commented to show the variables
 			</xsl:variable>
 
 			<efac:LotResult>
+				<xsl:variable name="lot-result-id" select="lot-result-id"/>
+				<!-- LotResult Technical ID (OPT-322) -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'LotResult Technical ID (OPT-322)'"/></xsl:call-template>
+				<cbc:ID schemeName="result"><xsl:value-of select="$lot-result-id"/></cbc:ID>
 				<xsl:variable name="paths" select="awards/path/fn:string()"/>
 				<!-- Tender Value Highest (BT-711): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->
 				<!-- Tender Value Lowest (BT-710): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-31 and E4; CM subtype E5; Forbidden (blank) for all other subtypes -->
@@ -258,7 +261,7 @@ These instructions can be un-commented to show the variables
 
 				<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="framework-estimated-value">
-					<xsl:with-param name="result-lot-identifier" select="$result-lot-identifier"/>
+					<xsl:with-param name="lot-result-id" select="$lot-result-id"/>
 				</xsl:call-template>
 
 				<!-- Framework Maximum Value (BT-709): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
@@ -282,7 +285,21 @@ These instructions can be un-commented to show the variables
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Result Lot Identifier (BT-13713)'"/></xsl:call-template>
 				<!-- Get Result Lot Identifier from first Lot with matching LOT_NO. If no matching Lot, use AWARD_CONTRACT/LOT_NO -->
 				<efac:TenderLot>
-					<cbc:ID schemeName="Lot"><xsl:value-of select="$result-lot-identifier"/></cbc:ID>
+					<xsl:choose>
+						<xsl:when test="fn:normalize-space($result-lot-identifier) ne ''">
+							<cbc:ID schemeName="Lot"><xsl:value-of select="$result-lot-identifier"/></cbc:ID>
+						</xsl:when>
+						<xsl:otherwise>
+							<!-- WARNING: No association to a Lot was found for this LotResult  -->
+							<xsl:variable name="message">
+								<xsl:text>WARNING: No association to a Lot was found for LotResult </xsl:text>
+								<xsl:value-of select="$lot-result-id"/>
+								<xsl:text>. The value "MISSING" was used.</xsl:text>
+							</xsl:variable>
+							<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+							<cbc:ID schemeName="Lot">MISSING</cbc:ID>
+						</xsl:otherwise>
+					</xsl:choose>
 				</efac:TenderLot>
 			</efac:LotResult>
 		</xsl:for-each>
@@ -548,7 +565,7 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 <xsl:template name="framework-estimated-value">
-	<xsl:param name="result-lot-identifier"/>
+	<xsl:param name="lot-result-id"/>
 	<!-- set variable to the set of all VAL_ESTIMATED_TOTAL elements for this lot-result element -->
 	<xsl:variable name="lot-result-val-estimated-total" select="awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VALUES|*:VALUE|.)/*:VAL_ESTIMATED_TOTAL"/>
 	<!-- Framework Estimated Value (BT-660): eForms documentation cardinality (LotResult) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
@@ -560,10 +577,10 @@ These instructions can be un-commented to show the variables
 			<xsl:when test="$ted-form-main-element/*:PROCEDURE/*:FRAMEWORK">
 				<!-- If there is only one unique value of VALUES/VAL_ESTIMATED_TOTAL within the AWARDED_CONTRACT elements for this lot-result element -->
 				<xsl:if test="fn:count(fn:distinct-values($lot-result-val-estimated-total)) &gt; 1">
-					<!-- WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot xxx. The first value has been used -->
+					<!-- WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for this LotResult. The first value has been used -->
 					<xsl:variable name="message">
 						<xsl:text>WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot </xsl:text>
-							<xsl:value-of select="$result-lot-identifier"/>
+							<xsl:value-of select="$lot-result-id"/>
 							<xsl:text>. The first value has been used.</xsl:text>
 					</xsl:variable>
 					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
