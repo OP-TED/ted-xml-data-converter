@@ -161,12 +161,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
 	<!-- Notice Identifier (BT-701): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Identifier (BT-701)'"/></xsl:call-template>
-	<!-- TBD: hard-coded for now -->
-	<cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+	<cbc:ID schemeName="notice-id"><xsl:value-of select="$notice-identifier"/></cbc:ID>
 	<!-- Procedure Identifier (BT-04): eForms documentation cardinality (Procedure) = * | Forbidden for PIN subtypes 1-9, E1 and E2; Mandatory for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Identifier (BT-04)'"/></xsl:call-template>
-	<!-- TBD: hard-coded for now -->
-	<cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+	<cbc:ContractFolderID><xsl:value-of select="$procedure-identifier"/></cbc:ContractFolderID>
 	<!-- Notice Dispatch Date (BT-05): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Dispatch Date (BT-05)'"/></xsl:call-template>
 	<xsl:choose>
