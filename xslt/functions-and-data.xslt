@@ -17,14 +17,21 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <!-- include FunctX XSLT Function Library -->
 <xsl:include href="lib/functx-1.0.1-doc.xsl"/>
 
+<!-- default SDK version -->
+<xsl:variable name="sdk-version-default" select="'eforms-sdk-1.7'"/>
+
 <!-- application parameters -->
 <xsl:param name="showwarnings" select="1" as="xs:integer"/>
 <xsl:param name="includewarnings" select="1" as="xs:integer"/>
 <xsl:param name="includecomments" select="1" as="xs:integer"/>
 	
 <!-- external conversion parameters -->
-<xsl:param name="notice-identifier" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'" as="xs:string"/> <!--Value for BT-701 Notice Identifier-->
-<xsl:param name="procedure-identifier" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'" as="xs:string"/> <!--Value for BT-04 Procedure Identifier -->
+<!-- Value for BT-701 Notice Identifier -->
+<xsl:param name="notice-identifier" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'" as="xs:string"/>
+<!-- Value for BT-04 Procedure Identifier -->
+<xsl:param name="procedure-identifier" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'" as="xs:string"/>
+<!-- Value for SDK version -->
+<xsl:param name="sdk-version" select="$sdk-version-default" as="xs:string"/>
 
 <!-- MAPPING FILES -->
 	

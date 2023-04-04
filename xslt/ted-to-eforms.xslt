@@ -155,10 +155,30 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<!-- UBL version ID (UBL) -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'UBL version ID (UBL)'"/></xsl:call-template>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<!-- Customization ID (UBL) -->
+	<!-- Customization ID (SDK version) -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Customization ID (UBL)'"/></xsl:call-template>
-	<!-- TBD: hard-coded for now -->
-	<cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+	<!-- check the sdk-version parameter is valid and standardise it -->
+	<xsl:variable name="sdk-version-parameter">
+		<xsl:choose>
+			<xsl:when test="fn:matches($sdk-version, '^eforms-sdk-[12]\.[0-9]{1,2}$')"><xsl:value-of select="$sdk-version"/></xsl:when>
+			<xsl:when test="fn:matches($sdk-version, '^[12]\.[0-9]{1,2}$')"><xsl:value-of select="fn:concat('eforms-sdk-', $sdk-version)"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="'invalid'"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<!-- if the sdk-version parameter is not valid, use default value -->
+	<xsl:variable name="sdk-version-value">
+		<xsl:choose>
+			<xsl:when test="$sdk-version-parameter ne 'invalid'"><xsl:value-of select="$sdk-version-parameter"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="$sdk-version-default"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<!-- if the sdk-version parameter is not valid, report warning -->
+	<xsl:if test="$sdk-version-parameter eq 'invalid'">
+		<!-- WARNING: Invalid SDK version supplied as a parameter. Using default value -->
+		<xsl:variable name="message"><xsl:text>WARNING: Invalid SDK version supplied as a parameter. Using default value "</xsl:text><xsl:value-of select="$sdk-version-default"/><xsl:text>"</xsl:text></xsl:variable>
+		<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+	</xsl:if>
+	<cbc:CustomizationID><xsl:value-of select="$sdk-version-value"/></cbc:CustomizationID>
 	<!-- Notice Identifier (BT-701): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Identifier (BT-701)'"/></xsl:call-template>
 	<cbc:ID schemeName="notice-id"><xsl:value-of select="$notice-identifier"/></cbc:ID>
