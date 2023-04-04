@@ -34,7 +34,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:param name="sdk-version" select="$sdk-version-default" as="xs:string"/>
 
 <!-- MAPPING FILES -->
-	
+
+<xsl:variable name="eforms-notice-subtypes" select="fn:document('eforms-notice-subtypes.xml')"/>
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
 <xsl:variable name="translations" select="fn:document('translations.xml')"/>
 <xsl:variable name="country-codes-map" select="fn:document('countries-map.xml')"/>
@@ -88,39 +89,27 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <!-- Variable directive holds the value of the @VALUE attribute of the element DIRECTIVE, if it exists. Othewise it holds the empty string -->
 <xsl:variable name="directive" select="fn:string(/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:DIRECTIVE/@VALUE)"/>
 
-
 <!-- Variable eforms-notice-subtype holds the computed eForms notice subtype value -->
 <xsl:variable name="eforms-notice-subtype">
 	<xsl:value-of select="opfun:get-eforms-notice-subtype($ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $directive, $document-code)"/>
 </xsl:variable>
 
-<!-- Variable eforms-subtypes-pin holds the values of eForms notice subtypes for notices of Document Type PIN -->
-<xsl:variable name="eforms-subtypes-pin" as="xs:string*">
-	<xsl:for-each select="1 to 9"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
-	<xsl:sequence select="('E1', 'E2')"/>
+<!-- Variable eforms-document-type holds the computed Document Type of the notice being converted -->
+<xsl:variable name="eforms-document-type">
+	<xsl:value-of select="$eforms-notice-subtypes//notice-subtype[id=$eforms-notice-subtype]/fn:string(document-type-id)"/>
 </xsl:variable>
 
-<!-- Variable eforms-subtypes-cn holds the values of eForms notice subtypes for notices of Document Type Contract Notice -->
-<xsl:variable name="eforms-subtypes-cn" as="xs:string*">
-	<xsl:for-each select="10 to 24"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
-	<xsl:sequence select="('E3')"/>
-</xsl:variable>
+<!-- variable eforms-form-type holds the eforms form type -->
+<xsl:variable name="eforms-form-type" select="$eforms-notice-subtypes//notice-subtype[id=$eforms-notice-subtype]/fn:string(form-type)"/>
 
-<!-- Variable eforms-subtypes-can holds the values of eForms notice subtypes for notices of Document Type Contract Award Notice -->
-<xsl:variable name="eforms-subtypes-can" as="xs:string*">
-	<xsl:for-each select="25 to 40"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
-	<xsl:sequence select="('E4')"/>
-</xsl:variable>
+<!-- variable eforms-notice-type holds the eforms notice type -->
+<xsl:variable name="eforms-notice-type" select="$eforms-notice-subtypes//notice-subtype[id=$eforms-notice-subtype]/fn:string(notice-type)"/>
 
-<!-- Variable eforms-form-type holds the computed Document Type of the notice being converted -->
-<xsl:variable name="eforms-form-type">
-	<xsl:choose>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-pin"><xsl:value-of select="'PIN'"/></xsl:when>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-cn"><xsl:value-of select="'CN'"/></xsl:when>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-can"><xsl:value-of select="'CAN'"/></xsl:when>
-		<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
-	</xsl:choose>
-</xsl:variable>
+<!-- variable eforms-element-name holds the name of the root element -->
+<xsl:variable name="eforms-element-name" select="$mappings//form-types/mapping[abbreviation=$eforms-document-type]/fn:string(element-name)"/>
+
+<!-- variable eforms-element-name holds the namespace of the root element -->
+<xsl:variable name="eforms-xmlns" select="$mappings//form-types/mapping[abbreviation=$eforms-document-type]/fn:string(xmlns)"/>
 
 <!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
 <xsl:variable name="number-of-lots" select="$ted-form-main-element/*:OBJECT_CONTRACT/fn:count(*:OBJECT_DESCR)"/>
@@ -217,19 +206,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:sequence select="fn:string-length($nuts-code) &gt; 4"/>
 </xsl:function>
 
-<!-- FORM TYPES AND SUBTYPES -->
-
-<!-- Function opfun:get-eforms-element-name returns the name of eForms schema root element, given the Document Type code, e.g. "CN" to "ContractNotice" -->
-<xsl:function name="opfun:get-eforms-element-name" as="xs:string">
-	<xsl:param name="form-abbreviation" as="xs:string"/>
-	<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
-</xsl:function>
-
-<!-- Function opfun:get-eforms-xmlns returns the eForms schema XML namespace, given the Document Type code, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
-<xsl:function name="opfun:get-eforms-xmlns" as="xs:string">
-	<xsl:param name="form-abbreviation" as="xs:string"/>
-	<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
-</xsl:function>
+<!-- FORM SUBTYPE -->
 
 <!-- Function opfun:get-eforms-notice-subtype computes the eForms notice subtype, using information from the TED notice -->
 <xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">

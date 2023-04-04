@@ -93,7 +93,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 
 	<!-- root element of output XML -->
-	<xsl:element name="{opfun:get-eforms-element-name($eforms-form-type)}" namespace="{opfun:get-eforms-xmlns($eforms-form-type)}">
+	<xsl:element name="{$eforms-element-name}" namespace="{$eforms-xmlns}">
 		<xsl:namespace name="cac" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'"/>
 		<xsl:namespace name="cbc" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'"/>
 		<xsl:namespace name="ext" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2'"/>
@@ -109,7 +109,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:call-template name="root-procurement-project"/>
 		<xsl:call-template name="procurement-project-lots"/>
 		<!-- The ContractAwardNotice schema requires cac:TenderResult/cbc:AwardDate -->
-		<xsl:if test="$eforms-form-type eq 'CAN'">
+		<xsl:if test="$eforms-document-type eq 'CAN'">
 			<cac:TenderResult>
 				<cbc:AwardDate><xsl:text>2000-01-01Z</xsl:text></cbc:AwardDate>
 			</cac:TenderResult>
@@ -125,7 +125,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
-					<xsl:if test="$eforms-form-type eq 'CAN'">
+					<xsl:if test="$eforms-document-type eq 'CAN'">
 						<!-- TBD : efac:AppealsInformation : Review Requester Organization requesting for review or Review Requester Organization that requested a review request. -->
 					</xsl:if>
 					<xsl:if test="$ted-form-notice-type eq '14'">
@@ -134,7 +134,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 					<xsl:if test="$eforms-notice-subtype = ('38', '39', '40')">
 						<xsl:call-template name="contract-modification"/>
 					</xsl:if>
-					<xsl:if test="$eforms-form-type eq 'CAN'">
+					<xsl:if test="$eforms-document-type eq 'CAN'">
 						<xsl:call-template name="notice-result"/>
 					</xsl:if>
 					<!-- Notice SubType (OPP-070): eForms documentation cardinality (Procedure) = 1 -->
@@ -224,7 +224,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<!-- Form Type (BT-03) and Notice Type (BT-02): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Form Type (BT-03) and Notice Type (BT-02)'"/></xsl:call-template>
 	<!-- TBD: hard-coded for now; to use tailored codelists -->
-	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeTypeCode listName="{$eforms-form-type}"><xsl:value-of select="$eforms-notice-type"/></cbc:NoticeTypeCode>
 	<!-- Notice Official Language (BT-702) (first): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Official Language (BT-702) (first)'"/></xsl:call-template>
 	<cbc:NoticeLanguageCode><xsl:value-of select="$eforms-first-language"/></cbc:NoticeLanguageCode>
