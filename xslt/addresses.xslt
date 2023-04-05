@@ -17,7 +17,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <!-- ADDRESSES -->
 
-<!-- #### DEDUPLICATE AND ASSIGN ID TO EACH TED XML ADDRESS ELEMENTS #### -->
+<!-- #### DEDUPLICATE AND ASSIGN ID TO EACH GROUP OF TED XML ADDRESS ELEMENTS #### -->
 
 <!-- Create temporary XML structure to hold all the TED address elements, with the XPath for each -->
 <xsl:variable name="ted-addresses" as="element()">
@@ -240,7 +240,6 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="buyer-contracting-entity"/>
 		<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
-		<!-- Activity Authority (BT-10): and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 		<!-- Activity Authority (BT-10): Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Authority (BT-10)'"/></xsl:call-template>
 		<xsl:apply-templates select="../*:CA_ACTIVITY"/>

@@ -42,7 +42,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:variable name="language-codes-map" select="fn:document('languages-map.xml')"/>
 
 
-
 <!-- #### GLOBAL VARIABLES #### -->
 
 <xsl:variable name="newline" select="'&#10;'"/>
@@ -147,7 +146,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="fn:concat($lot-prefix, *:LOT_NO)"/>
-								</xsl:otherwise>							
+								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
 						<!-- When LOT_NO does not exist -->
@@ -287,14 +286,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 			<xsl:for-each select="$node1/node()">
 				<xsl:copy-of select="."/>
 			</xsl:for-each>
-		</out>	
+		</out>
 	</xsl:variable>
 	<xsl:variable name="out2">
 		<out>
 			<xsl:for-each select="$node2/node()">
 				<xsl:copy-of select="."/>
 			</xsl:for-each>
-		</out>	
+		</out>
 	</xsl:variable>
 	<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
 </xsl:function>
@@ -337,7 +336,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:comment><xsl:value-of select="$comment"/></xsl:comment>
 	</xsl:if>
 </xsl:template>
-
 
 <xsl:template name="find-element">
 	<xsl:param name="context" as="element()"/>

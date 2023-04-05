@@ -29,11 +29,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	</xsl:if>
 </xsl:template>
 
-<!-- NO_LOT_DIVISION does not need to be converted, as it implies no need for cac:LotDistribution -->
 <xsl:template match="*:LOT_DIVISION[*:LOT_MAX_ONE_TENDERER|*:LOT_ALL|*:LOT_MAX_NUMBER|*:LOT_ONE_ONLY]">
-	<!-- LOT_DIVISION is a child only of OBJECT_CONTRACT -->
-	<!-- LOT_DIVISION has children: LOT_ALL LOT_COMBINING_CONTRACT_RIGHT LOT_MAX_NUMBER LOT_MAX_ONE_TENDERER LOT_ONE_ONLY -->
-
 	<cac:LotDistribution>
 		<!-- Lots Max Awarded (BT-33): eForms documentation cardinality (Procedure) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Lots Max Awarded (BT-33)'"/></xsl:call-template>
@@ -90,8 +86,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 					<xsl:variable name="message"> WARNING: PIN Competition Termination (BT-756) is forbidden for this subtype but TERMINATION_PIN was found in the TED XML</xsl:variable>
 					<xsl:call-template name="report-warning">
 						<xsl:with-param name="message" select="$message"/>
-					</xsl:call-template>	
-				</xsl:if>	
+					</xsl:call-template>
+				</xsl:if>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:if>
@@ -124,7 +120,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:template name="direct-award-justification">
 	<xsl:variable name="direct-award-procedure-type-elements" select="*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/(*:PT_AWARD_CONTRACT_WITHOUT_CALL|*:PT_AWARD_CONTRACT_WITHOUT_PUBLICATION)"/>
-
 	<xsl:if test="$direct-award-procedure-type-elements">
 		<xsl:variable name="text" select="fn:normalize-space(fn:string-join($direct-award-procedure-type-elements/*:D_JUSTIFICATION/*:P, ' '))"/>
 		<xsl:for-each select="$direct-award-procedure-type-elements/(*:D_ACCORDANCE_ARTICLE/*|*:D_OUTSIDE_SCOPE|*:D_SERVICES_LISTED)">
@@ -138,8 +133,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 				<!-- Direct Award Justification (BT-135): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-135)'"/></xsl:call-template>
 				<xsl:call-template name="multilingual">
-					<!--<xsl:with-param name="contexts" select="*:PROCEDURE/*:PT_AWARD_CONTRACT_WITHOUT_CALL/*:D_JUSTIFICATION"/>-->
-					<!--<xsl:with-param name="contexts" select="*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/*:PT_AWARD_CONTRACT_WITHOUT_CALL/*:D_JUSTIFICATION"/>-->
 					<xsl:with-param name="contexts" select="$direct-award-procedure-type-elements/*:D_JUSTIFICATION"/>
 					<xsl:with-param name="local" select="'P'"/>
 					<xsl:with-param name="element" select="'cbc:ProcessReason'"/>

@@ -131,7 +131,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	</cac:SubordinateAwardingCriterion>
 </xsl:template>
 
-
 <xsl:template match="*:AC/*:AC_QUALITY">
 	<cac:SubordinateAwardingCriterion>
 		<!-- Award Criterion Number (BT-541): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
@@ -214,15 +213,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 						<!-- Award Criterion Number (BT-541): eForms documentation cardinality (Lot) = ? | eForms Regulation Annex table conditions = Optional for PIN subtypes 7-9, CN subtypes 10-24 and E3, CAN subtypes 25-37 and E4, CM subtype E5; Forbidden for other subtypes -->
 						<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Award Criterion Number (BT-541)'"/></xsl:call-template>
 						<!-- The content of Award Criterion Number (BT-541) must fulfil the decimal XSM Schema primitive data type -->
-						<!-- Values and labels from "number-weight" codelist:
-							per-exa Weight (percentage, exact)
-							per-mid Weight (percentage, middle of a range)
-							dec-exa Weight (decimal, exact)
-							dec-mid Weight (decimal, middle of a range)
-							poi-exa Weight (points, exact)
-							poi-mid Weight (points, middle of a range)
-							ord-imp Order of importance 
-						-->
 						<xsl:choose>
 							<!-- digits only -->
 							<xsl:when test="matches($text, '^[0-9]+$')">

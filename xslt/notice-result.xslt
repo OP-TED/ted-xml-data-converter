@@ -104,7 +104,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:variable name="contracts-unique-with-id" as="element()">
 	<contracts>
 		<!-- process AWARD_CONTRACT containing both AWARDED_CONTRACT grouped by CONTRACT_NO -->
-
 		<!-- TBD: Decide whether to consider AWARD_CONTRACT without CONTRACT_NO as a Contract, and if so, whether to output a WARNING that the ContractReference is missing -->
 		<xsl:for-each-group select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT]" group-by="fn:string(*:CONTRACT_NO)">
 			<xsl:variable name="contract-number" select="fn:current-grouping-key()"/>
@@ -182,7 +181,7 @@ These instructions can be un-commented to show the variables
 -->
 
 		<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
-			<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+		<!-- Notice Framework Value (BT-118): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-27, 29-31, 33, 34 and E4; CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 		<xsl:call-template name="notice-values"/>
 
 		<!-- efac:GroupFramework -->
@@ -365,7 +364,7 @@ These instructions can be un-commented to show the variables
 					</xsl:choose>
 				</efac:TenderLot>
 
-				<!-- Tender Identifier (BT-3201): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 25-28; 	Forbidden (blank) for all other subtypes | No equivalent element in TED XML -->
+				<!-- Tender Identifier (BT-3201): eForms documentation cardinality (LotTender) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 25-28; Forbidden (blank) for all other subtypes | No equivalent element in TED XML -->
 			</efac:LotTender>
 		</xsl:for-each>
 
@@ -622,10 +621,10 @@ These instructions can be un-commented to show the variables
 		<xsl:when test="$eforms-notice-subtype = ('29','30','31','32','33','34','35','36','37')">
 			<!-- WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML. -->
 			<xsl:variable name="message">WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.</xsl:variable>
-			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>	
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			<!-- WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML. -->
-					<xsl:variable name="message">WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.</xsl:variable>
-					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>		
+			<xsl:variable name="message">WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Received Submissions Type (BT-760)'"/></xsl:call-template>
@@ -690,7 +689,7 @@ These instructions can be un-commented to show the variables
 				</xsl:when>
 			</xsl:choose>
 			</efac:ConcessionRevenue>
-		</xsl:when>	
+		</xsl:when>
 		<xsl:otherwise>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue Buyer (BT-160)'"/></xsl:call-template>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue User (BT-162)'"/></xsl:call-template>
@@ -722,7 +721,7 @@ These instructions can be un-commented to show the variables
 			<xsl:variable name="message">WARNING: Tender Value (BT-720) is Mandatory for eForms subtypes 35 and 38-40, but no VAL_TOTAL or VAL_BARGAIN_PURCHASE were found in TED XML.</xsl:variable>
 			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 		</xsl:when>
-	</xsl:choose>	
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template name="subcontracting">
@@ -829,7 +828,6 @@ These instructions can be un-commented to show the variables
 <xsl:template match="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:INFO_ADD_SUBCONTRACTING">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:P, ' '))"/>
 	<xsl:if test="$text ne ''">
-		<!-- as the context of this template is within a variable, to process multilingual versions of the context, it is required to find the same element within the context of the $ted-form-main-element variable -->
 		<xsl:variable name="award-id" select="./ancestor::*:AWARD_CONTRACT/fn:string(@ITEM)"/>
 		<xsl:call-template name="multilingual">
 			<xsl:with-param name="contexts" select="$ted-form-main-element/*:AWARD_CONTRACT[@ITEM=$award-id]/*:AWARDED_CONTRACT/*:INFO_ADD_SUBCONTRACTING"/>
