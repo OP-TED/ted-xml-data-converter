@@ -55,8 +55,8 @@
 			<xsl:with-param name="comment" select="' Lot cac:TenderingTerms '"/>
 		</xsl:call-template>
 		<cac:TenderingTerms>
-			<!-- Selection Criteria -->
-			<xsl:call-template name="selection-criteria"/>
+			<!-- Selection Criteria and Funding Details -->
+			<xsl:call-template name="selection-criteria-funding-details"/>
 			<!-- Variants (BT-63): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-24 and E3; Forbidden for other subtypes -->
 			<xsl:call-template name="include-comment">
 				<xsl:with-param name="comment" select="'Variants (BT-63)'"/>
@@ -67,7 +67,6 @@
 				<xsl:with-param name="comment" select="'EU Funds (BT-60)'"/>
 			</xsl:call-template>
 			<xsl:apply-templates select="*:NO_EU_PROGR_RELATED|*:EU_PROGR_RELATED"/>
-			<!-- In TED XML, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->
 			<!-- Performing Staff Qualification (BT-79): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3; Forbidden for other subtypes -->
 			<xsl:call-template name="include-comment">
 				<xsl:with-param name="comment" select="'Performing Staff Qualification (BT-79)'"/>
@@ -146,6 +145,8 @@
 			<xsl:call-template name="reserved-execution"/>
 			<!-- Electronic Invoicing (BT-743): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-15, 17-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 			<xsl:call-template name="e-invoicing"/>
+			<!-- Non Disclosure Agreement (BT-801): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
+			<!-- Non Disclosure Agreement Description (BT-802): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 			<!-- Terms Performance (BT-70): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 			<xsl:call-template name="terms-performance"/>
 			<!-- Submission Electronic Catalog (BT-764): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 16 and 17; Optional for PIN subtypes 7-9, CN subtypes 10-13, 18, 20-22, and E3; Forbidden for other subtypes -->
@@ -197,7 +198,7 @@
 		</cac:TenderingTerms>
 	</xsl:template>
 
-	<xsl:template name="selection-criteria">
+	<xsl:template name="selection-criteria-funding-details">
 		<!-- template to ensure the BT comments for selection criteria are always output -->
 		<!-- In eForms, Selection Criteria are specified at the Lot level. Multiple Selection Criteria each use a separate <efac:SelectionCriteria> element. -->
 		<!--            The different types of Selection Criteria are indicated by values from the selection-criterion codelist -->
@@ -208,12 +209,28 @@
 		<!-- All Notices (except F12) with PARTICULAR_PROFESSION also have <TYPE_CONTRACT CTYPE="SERVICES"/> -->
 		<!-- Selection Criteria information is repeatable -->
 		<!-- Clarifications requested for documentation of Selection Criteria in TEDEFO-548 -->
+		<xsl:variable name="funding-text" select="fn:normalize-space(fn:string-join(*:EU_PROGR_RELATED/*:P, ' '))"/>
 		<xsl:choose>
-			<xsl:when test="../../*:LEFTI/(*:SUITABILITY|*:ECONOMIC_FINANCIAL_INFO|*:ECONOMIC_FINANCIAL_MIN_LEVEL|*:TECHNICAL_PROFESSIONAL_INFO|*:TECHNICAL_PROFESSIONAL_MIN_LEVEL|*:RULES_CRITERIA|*:CRITERIA_SELECTION|*:QUALIFICATION/*:CONDITIONS|*:QUALIFICATION/*:METHODS)">
+			<xsl:when test="$funding-text ne '' or (../../*:LEFTI/(*:SUITABILITY|*:ECONOMIC_FINANCIAL_INFO|*:ECONOMIC_FINANCIAL_MIN_LEVEL|*:TECHNICAL_PROFESSIONAL_INFO|*:TECHNICAL_PROFESSIONAL_MIN_LEVEL|*:RULES_CRITERIA|*:CRITERIA_SELECTION|*:QUALIFICATION/*:CONDITIONS|*:QUALIFICATION/*:METHODS))">
 				<ext:UBLExtensions>
 					<ext:UBLExtension>
 						<ext:ExtensionContent>
 							<efext:EformsExtension>
+								<!-- EU Funds Financing Identifier (BT-5010): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
+								<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Financing Identifier (BT-5010)'"/></xsl:call-template>
+								<!-- EU Funds Programme (BT-7220: eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
+								<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Programme (BT-7220)'"/></xsl:call-template>
+								<!-- EU Funds Details (BT-6140): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
+								<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Details (BT-6140)'"/></xsl:call-template>
+								<xsl:if test="$funding-text ne ''">
+									<efac:Funding>
+										<xsl:call-template name="multilingual">
+											<xsl:with-param name="contexts" select="*:EU_PROGR_RELATED"/>
+											<xsl:with-param name="local" select="'P'"/>
+											<xsl:with-param name="element" select="'cbc:Description'"/>
+										</xsl:call-template>
+									</efac:Funding>
+								</xsl:if>
 								<xsl:apply-templates select="../../*:LEFTI/(*:SUITABILITY|*:ECONOMIC_FINANCIAL_INFO|*:ECONOMIC_FINANCIAL_MIN_LEVEL|*:TECHNICAL_PROFESSIONAL_INFO|*:TECHNICAL_PROFESSIONAL_MIN_LEVEL|*:RULES_CRITERIA|*:CRITERIA_SELECTION|*:QUALIFICATION/*:CONDITIONS|*:QUALIFICATION/*:METHODS)"/>
 								<!-- the empty TED elements ECONOMIC_CRITERIA_DOC and TECHNICAL_CRITERIA_DOC indicate that the economic/technical criteria are described in the procurement documents. -->
 								<!-- there are no equivalents in eForms. So these elements cannot be converted -->
@@ -834,9 +851,9 @@
 			<xsl:call-template name="include-comment">
 				<xsl:with-param name="comment" select="'Framework Duration Justification (BT-109)'"/>
 			</xsl:call-template>
-			<!-- Group Framework Estimated Maximum Value (BT-157) ? No equivalent element in TED XML -->
+			<!-- Group Framework Maximum Value (BT-157) ? No equivalent element in TED XML -->
 			<xsl:call-template name="include-comment">
-				<xsl:with-param name="comment" select="'Group Framework Estimated Maximum Value (BT-157)'"/>
+				<xsl:with-param name="comment" select="'Group Framework Maximum Value (BT-157)'"/>
 			</xsl:call-template>
 			<!-- Framework Buyer Categories (BT-111): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 			<xsl:call-template name="include-comment">
@@ -1275,9 +1292,9 @@
 			<xsl:call-template name="include-comment">
 				<xsl:with-param name="comment" select="'Social Procurement (BT-775)'"/>
 			</xsl:call-template>
-			<!-- Innovative Procurement (BT-776): eForms documentation cardinality (Lot) = * | No equivalent element in TED XML -->
+			<!-- Procurement of Innovation (BT-776): eForms documentation cardinality (Lot) = * | No equivalent element in TED XML -->
 			<xsl:call-template name="include-comment">
-				<xsl:with-param name="comment" select="'Innovative Procurement (BT-776)'"/>
+				<xsl:with-param name="comment" select="'Procurement of Innovation (BT-776)'"/>
 			</xsl:call-template>
 			<!-- Accessibility Justification (BT-755): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 			<xsl:call-template name="include-comment">
