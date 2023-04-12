@@ -590,7 +590,7 @@ These instructions can be un-commented to show the variables
 				<xsl:variable name="ted-value" select="fn:normalize-space($lot-result-val-estimated-total[1])"/>
 				<xsl:variable name="currency" select="fn:normalize-space($lot-result-val-estimated-total[1]/@CURRENCY)"/>
 				<efac:FrameworkAgreementValues>
-					<cbc:EstimatedMaximumValueAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedMaximumValueAmount>
+					<efbc:ReestimatedValueAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></efbc:ReestimatedValueAmount>
 				</efac:FrameworkAgreementValues>
 			</xsl:when>
 			<xsl:otherwise>
@@ -859,7 +859,7 @@ These instructions can be un-commented to show the variables
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Value (BT-161)'"/></xsl:call-template>
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Framework Approximate Value (BT-1118)'"/></xsl:call-template>
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Framework Maximum Value (BT-118)'"/></xsl:call-template>
-					<cbc:EstimatedOverallFrameworkContractsAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallFrameworkContractsAmount>
+					<efbc:OverallMaximumFrameworkContractsAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></efbc:OverallMaximumFrameworkContractsAmount>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Value (BT-161)'"/></xsl:call-template>
