@@ -8,7 +8,7 @@
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
-xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" 
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
 xmlns:ted-1="http://formex.publications.europa.eu/ted/schema/export/R2.0.9.S01.E01"
 xmlns:ted-2="ted/R2.0.9.S02/publication"
 xmlns:n2016-1="ted/2016/nuts"
