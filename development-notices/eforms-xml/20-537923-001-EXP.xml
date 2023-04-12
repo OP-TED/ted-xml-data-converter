@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                     xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                     xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                     xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
-               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
-                  <cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">5000000000.00</cbc:EstimatedOverallFrameworkContractsAmount>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Approximate Value (BT-1118)--><!--Notice Framework Maximum Value (BT-118)-->
+                  <efbc:OverallMaximumFrameworkContractsAmount currencyID="EUR">5000000000.00</efbc:OverallMaximumFrameworkContractsAmount>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0001</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -37,9 +41,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -55,7 +59,11 @@
                         <cbc:ID schemeName="Lot">1.1A</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0002</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -78,9 +86,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0012</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -96,7 +104,11 @@
                         <cbc:ID schemeName="Lot">1.1B</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0003</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -119,9 +131,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0018</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -137,7 +149,11 @@
                         <cbc:ID schemeName="Lot">1.1C</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0004</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -160,9 +176,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0024</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -178,7 +194,11 @@
                         <cbc:ID schemeName="Lot">1.1D</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0005</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -195,9 +215,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0028</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -213,7 +233,11 @@
                         <cbc:ID schemeName="Lot">1.1E</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0006</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -239,9 +263,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0035</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -257,7 +281,11 @@
                         <cbc:ID schemeName="Lot">1.2</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0007</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -286,9 +314,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0043</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -304,7 +332,11 @@
                         <cbc:ID schemeName="Lot">1.3</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0008</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -339,9 +371,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0053</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -357,7 +389,11 @@
                         <cbc:ID schemeName="Lot">1.4</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0009</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -380,9 +416,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0059</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1000000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1000000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -398,7 +434,11 @@
                         <cbc:ID schemeName="Lot">2.1A</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0010</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -430,9 +470,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0068</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1000000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1000000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -448,7 +488,11 @@
                         <cbc:ID schemeName="Lot">2.1B</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0011</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -474,9 +518,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0075</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1000000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1000000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -492,7 +536,11 @@
                         <cbc:ID schemeName="Lot">2.1C</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0012</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -515,9 +563,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0081</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1000000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1000000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -533,7 +581,11 @@
                         <cbc:ID schemeName="Lot">2.1D</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0013</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -556,9 +608,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0087</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1000000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1000000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -574,7 +626,11 @@
                         <cbc:ID schemeName="Lot">2.1E</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0014</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -603,10 +659,10 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0095</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
-                     <!--WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot 2.2. The first value has been used.-->
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: Multiple values for VALUE(S)/VAL_ESTIMATED_TOTAL exist within the set of AWARD_CONTRACT elements for Lot RES-0014. The first value has been used.-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">100000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">100000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -622,7 +678,11 @@
                         <cbc:ID schemeName="Lot">2.2</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0015</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -654,9 +714,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0104</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1000000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1000000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -672,7 +732,11 @@
                         <cbc:ID schemeName="Lot">2.3</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0016</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -707,9 +771,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0114</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1000000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1000000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -725,7 +789,11 @@
                         <cbc:ID schemeName="Lot">2.4</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0017</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -748,9 +816,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0120</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -766,7 +834,11 @@
                         <cbc:ID schemeName="Lot">3.1A</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0018</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -792,9 +864,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0127</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -810,7 +882,11 @@
                         <cbc:ID schemeName="Lot">3.1B</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0019</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -836,9 +912,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0134</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -854,7 +930,11 @@
                         <cbc:ID schemeName="Lot">3.1C</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0020</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -877,9 +957,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0140</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -895,7 +975,11 @@
                         <cbc:ID schemeName="Lot">3.1D</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0021</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -918,9 +1002,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0146</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -936,7 +1020,11 @@
                         <cbc:ID schemeName="Lot">3.1E</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0022</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -956,9 +1044,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0151</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -974,7 +1062,11 @@
                         <cbc:ID schemeName="Lot">3.2</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0023</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -997,9 +1089,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0157</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -1015,7 +1107,11 @@
                         <cbc:ID schemeName="Lot">3.3</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0024</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -1038,9 +1134,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0163</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -1056,7 +1152,11 @@
                         <cbc:ID schemeName="Lot">3.4</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0025</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -1091,9 +1191,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0173</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -1109,7 +1209,11 @@
                         <cbc:ID schemeName="Lot">4.1</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0026</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -1129,9 +1233,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0178</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">500000000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">500000000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -8059,9 +8163,9 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
@@ -8073,7 +8177,7 @@
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
@@ -8123,9 +8227,6 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2019/S 033-073319</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
-      <!--Direct Award Justification (BT-136)-->
-      <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
@@ -8289,7 +8390,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -8315,7 +8416,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -8531,7 +8632,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -8557,7 +8658,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -8767,7 +8868,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -8793,7 +8894,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -9000,7 +9101,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -9026,7 +9127,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -9215,7 +9316,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -9241,7 +9342,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->

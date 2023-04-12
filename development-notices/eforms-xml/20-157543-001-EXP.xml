@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                     xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                     xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                     xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
-               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
-                  <cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">9642953.44</cbc:EstimatedOverallFrameworkContractsAmount>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Approximate Value (BT-1118)--><!--Notice Framework Maximum Value (BT-118)-->
+                  <efbc:OverallMaximumFrameworkContractsAmount currencyID="EUR">9642953.44</efbc:OverallMaximumFrameworkContractsAmount>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0001</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -22,9 +26,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">7834899.64</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">7834899.64</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -40,7 +44,11 @@
                         <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0002</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -48,9 +56,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">1205369.20</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">1205369.20</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -66,7 +74,11 @@
                         <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0003</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -74,9 +86,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">602684.60</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">602684.60</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -388,9 +400,9 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
@@ -402,7 +414,7 @@
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>SPA</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
@@ -448,9 +460,6 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2019/S 237-581525</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
-      <!--Direct Award Justification (BT-136)-->
-      <!--Direct Award Justification (BT-135)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
@@ -480,7 +489,28 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
-      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--EU Funds Financing Identifier (BT-5010)--><!--EU Funds Programme (BT-7220)--><!--EU Funds Details (BT-6140)-->
+                     <efac:Funding>
+                        <cbc:Description languageID="SPA">Feaga, Feader, FEMP, Feder y FSE.</cbc:Description>
+                     </efac:Funding>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -565,7 +595,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -591,7 +621,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -717,7 +747,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -743,7 +773,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -869,7 +899,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -895,7 +925,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
