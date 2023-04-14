@@ -41,17 +41,22 @@ The current version of the TED XML Data Converter will only convert a limited su
 ## HTML Comments in output eForms XML
 
 Each leaf element in the output eForms XML will be preceded by an HTML comment naming the Business Term it is associated with. 
-This can be suppressed by setting the "includecomments" parameter to 0.
+Where the eForms XML standard requires information that is not present in the source TED XML, or the information is not of the required format, the XSLT application will report a warning.
+
+* An HTML comment will precede the XML element stating that required information was not found in the source TED XML.
+* A warning message will be sent to the XSLT processing application using \<xsl:message\>.
 
 ## External Parameters
 
-The values for `BT-701 Notice Identifier` and `BT-04 Procedure Identifier` may be set using the parameters `"notice-identifier"` and `"procedure-identifier"` respectively.
+Parameters passed to the XSLT processor may be used to set values for some Business Terms, and some processing options.
 
-## Warnings
+### Parameters to set values for Business Terms
 
-Where the eForms XML standard requires information that is not present in the source TED XML, or the information is not of the required format, the XSLT application will report a warning.
+* Use parameter `"notice-identifier"` to set `BT-701 Notice Identifier` 
+* Use parameter `"procedure-identifier"` to set `BT-04 Procedure Identifier` 
+* Use parameter `"sdk-version"` to set the SDK version 
 
-* An HTML comment will precede the XML element stating that required information was not found in the source TED XML. This can be suppressed by setting the "includewarnings" parameter to 0.
-* A warning message will be sent to the XSLT processing application using \<xsl:message\>. This can be suppressed by setting the "showwarnings" parameter to 0.
-* In some cases, such as dates, valid values will be added to make the XML schema-valid.
+### Parameters to change display of Warnings and Business Term comments
 
+* Set parameter `"includewarnings"` to 0 to suppress Warnings as HTML comments 
+* Set parameter `"showwarnings"` to 0 to suppress Warnings as application messages 
