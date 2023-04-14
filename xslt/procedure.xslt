@@ -120,29 +120,39 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:template name="direct-award-justification">
 	<xsl:variable name="direct-award-procedure-type-elements" select="*:PROCEDURE/(*:DIRECTIVE_2009_81_EC|*:DIRECTIVE_2014_23_EU|*:DIRECTIVE_2014_24_EU|*:DIRECTIVE_2014_25_EU|.)/(*:PT_AWARD_CONTRACT_WITHOUT_CALL|*:PT_AWARD_CONTRACT_WITHOUT_PUBLICATION)"/>
-	<xsl:if test="$direct-award-procedure-type-elements">
-		<xsl:variable name="text" select="fn:normalize-space(fn:string-join($direct-award-procedure-type-elements/*:D_JUSTIFICATION/*:P, ' '))"/>
-		<xsl:for-each select="$direct-award-procedure-type-elements/(*:D_ACCORDANCE_ARTICLE/*|*:D_OUTSIDE_SCOPE|*:D_SERVICES_LISTED)">
-		<cac:ProcessJustification>
-			<xsl:variable name="element-name" select="fn:local-name(.)"/>
-			<xsl:variable name="justification" select="$mappings//direct-award-justifications/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
+	<xsl:choose>
+		<xsl:when test="$direct-award-procedure-type-elements">
+			<xsl:variable name="text" select="fn:normalize-space(fn:string-join($direct-award-procedure-type-elements/*:D_JUSTIFICATION/*:P, ' '))"/>
+			<xsl:for-each select="$direct-award-procedure-type-elements/(*:D_ACCORDANCE_ARTICLE/*|*:D_OUTSIDE_SCOPE|*:D_SERVICES_LISTED)">
+			<cac:ProcessJustification>
+				<xsl:variable name="element-name" select="fn:local-name(.)"/>
+				<xsl:variable name="justification" select="$mappings//direct-award-justifications/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
+				<!-- Direct Award Justification (BT-136): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-136)'"/></xsl:call-template>
+				<cbc:ProcessReasonCode listName="direct-award-justification"><xsl:value-of select="$justification"/></cbc:ProcessReasonCode>
+				<xsl:if test="$text ne ''">
+					<!-- Direct Award Justification (BT-135): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-135)'"/></xsl:call-template>
+					<xsl:call-template name="multilingual">
+						<xsl:with-param name="contexts" select="$direct-award-procedure-type-elements/*:D_JUSTIFICATION"/>
+						<xsl:with-param name="local" select="'P'"/>
+						<xsl:with-param name="element" select="'cbc:ProcessReason'"/>
+					</xsl:call-template>
+				</xsl:if>
+				<!-- Direct Award Justification Previous Procedure Identifier (BT-1252): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes. No equivalent element in TED XML-->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification Previous Procedure Identifier (BT-1252)'"/></xsl:call-template>
+			</cac:ProcessJustification>
+			</xsl:for-each>
+		</xsl:when>
+		<xsl:otherwise>
 			<!-- Direct Award Justification (BT-136): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-136)'"/></xsl:call-template>
-			<cbc:ProcessReasonCode listName="direct-award-justification"><xsl:value-of select="$justification"/></cbc:ProcessReasonCode>
-			<xsl:if test="$text ne ''">
-				<!-- Direct Award Justification (BT-135): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-135)'"/></xsl:call-template>
-				<xsl:call-template name="multilingual">
-					<xsl:with-param name="contexts" select="$direct-award-procedure-type-elements/*:D_JUSTIFICATION"/>
-					<xsl:with-param name="local" select="'P'"/>
-					<xsl:with-param name="element" select="'cbc:ProcessReason'"/>
-				</xsl:call-template>
-			</xsl:if>
+			<!-- Direct Award Justification (BT-135): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification (BT-135)'"/></xsl:call-template>
 			<!-- Direct Award Justification Previous Procedure Identifier (BT-1252): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes. No equivalent element in TED XML-->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Direct Award Justification Previous Procedure Identifier (BT-1252)'"/></xsl:call-template>
-		</cac:ProcessJustification>
-		</xsl:for-each>
-	</xsl:if>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template name="procedure-note">
