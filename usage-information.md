@@ -28,19 +28,17 @@ The TED XML Data Converter will report these issues as comments and application-
 
 ## Limited Scope
 
-The current version of the TED XML Data Converter will only convert a limited subset of published TED notices:
+The current version of the TED XML Data Converter will convert a subset of published TED notices:
 
-* TED Schema: only TED schema R.2.0.9 is supported. Notices published under Directive 23 cannot be converted with this version of the Converter.
-* TED Schema version: only the latest version of the TED schema R.2.0.9 (S05) is supported. Notices published under earlier versions of the schema may be converted, but may contain more errors.
-* Document Types: only Contract Notices are currently supported:
-    * All elements in TED XML form F02 are supported
-    * Most elements in TED XML forms F05, F12 and the Contract Notice variants of forms F21, F22, F23 and F24 are supported
-* Languages: currently the converter only converts the main (original) language of each notice. Other languages which may be present in the TED XML are not included.
+* TED Schema: only TED schema R.2.0.9 is supported. Notices published under Directive 81 cannot be converted with this version of the Converter.
+* TED Schema version: only the latest versions of the TED schema R.2.0.9 (S01 to S05) are supported. Notices published under earlier versions of the schema may be converted, but may contain more errors.
+* Document Types: All the standard TED XML forms using the R2.0.9 TED XML schema (with the exceptions of F14 Corrigendum and F20 Modification) are currently supported
 
 
 ## HTML Comments in output eForms XML
 
-Each leaf element in the output eForms XML will be preceded by an HTML comment naming the Business Term it is associated with. 
+Each leaf element in the output eForms XML will be preceded by an HTML comment naming the Business Term it is associated with.
+ 
 Where the eForms XML standard requires information that is not present in the source TED XML, or the information is not of the required format, the XSLT application will report a warning.
 
 * An HTML comment will precede the XML element stating that required information was not found in the source TED XML.
