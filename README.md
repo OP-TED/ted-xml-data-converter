@@ -49,7 +49,8 @@ The versioning scheme which will be adopted for the TED XML Data Converter will 
 Feedback on this converter is welcome. Please address questions, comments and bug reports using [Github Discussions](https://github.com/OP-TED/ted-xml-data-converter/discussions).
 
 
-## What's next?
+## Current status
+
 All the standard TED XML forms using the R2.0.9 TED XML schema  (with the exceptions of F14 Corrigendum and F20 Modification) are now convertible:
 
 * PIN (Prior information notice / Periodic indicative notice)
@@ -60,6 +61,8 @@ All the standard TED XML forms using the R2.0.9 TED XML schema  (with the except
 
 * Contract Award Notice
 (F03, F06, F13, F15, F21, F22, F23, F24 and F25)
+
+### What's next?
 
 Work on the Defense TED XML forms using the R2.0.8 TED XML schema has begun.
 
