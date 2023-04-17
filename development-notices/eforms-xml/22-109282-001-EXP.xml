@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                     xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                     xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                     xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+                      xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                      xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                      xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                      xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                      xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                      xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
-               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
-                  <cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">684000.00</cbc:EstimatedOverallFrameworkContractsAmount>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Approximate Value (BT-1118)--><!--Notice Framework Maximum Value (BT-118)-->
+                  <efbc:OverallMaximumFrameworkContractsAmount currencyID="EUR">684000.00</efbc:OverallMaximumFrameworkContractsAmount>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0001</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -22,9 +26,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">170000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">170000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -40,7 +44,11 @@
                         <cbc:ID schemeName="Lot">1 / Primo in cascata</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0002</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -48,9 +56,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">170000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">170000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -66,7 +74,11 @@
                         <cbc:ID schemeName="Lot">1/ Secondo in cascata</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0003</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -74,9 +86,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">170000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">170000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -92,7 +104,11 @@
                         <cbc:ID schemeName="Lot">1/ terzo in cascata</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0004</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -100,9 +116,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">255000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">255000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -118,7 +134,11 @@
                         <cbc:ID schemeName="Lot">2/ Primo in cascata</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0005</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -126,9 +146,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">255000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">255000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -144,7 +164,11 @@
                         <cbc:ID schemeName="Lot">2/ Secondo in cascata</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0006</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -152,9 +176,9 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0006</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <efac:FrameworkAgreementValues>
-                        <cbc:EstimatedMaximumValueAmount currencyID="EUR">145000.00</cbc:EstimatedMaximumValueAmount>
+                        <efbc:ReestimatedValueAmount currencyID="EUR">145000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -629,9 +653,9 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
@@ -643,7 +667,7 @@
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32018R1046</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ITA</cbc:NoticeLanguageCode>
    <!--Notice Official Language (BT-702) (additional)-->
@@ -785,9 +809,9 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2021/S 160-421470</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
@@ -863,7 +887,51 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
-      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--EU Funds Financing Identifier (BT-5010)--><!--EU Funds Programme (BT-7220)--><!--EU Funds Details (BT-6140)-->
+                     <efac:Funding>
+                        <cbc:Description languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Description>
+                        <cbc:Description languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Description>
+                        <cbc:Description languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Description>
+                        <cbc:Description languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Description>
+                        <cbc:Description languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Description>
+                        <cbc:Description languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Description>
+                        <cbc:Description languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Description>
+                        <cbc:Description languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Description>
+                        <cbc:Description languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Description>
+                        <cbc:Description languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Description>
+                        <cbc:Description languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Description>
+                        <cbc:Description languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Description>
+                        <cbc:Description languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Description>
+                        <cbc:Description languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Description>
+                        <cbc:Description languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Description>
+                        <cbc:Description languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Description>
+                        <cbc:Description languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Description>
+                        <cbc:Description languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Description>
+                        <cbc:Description languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Description>
+                        <cbc:Description languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Description>
+                        <cbc:Description languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Description>
+                        <cbc:Description languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Description>
+                        <cbc:Description languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Description>
+                        <cbc:Description languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Description>
+                     </efac:Funding>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -969,7 +1037,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -1041,7 +1109,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -1110,7 +1178,51 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
       <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
-      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--EU Funds Financing Identifier (BT-5010)--><!--EU Funds Programme (BT-7220)--><!--EU Funds Details (BT-6140)-->
+                     <efac:Funding>
+                        <cbc:Description languageID="ITA">Si invita a consultare i documenti di gara disponibili all'indirizzo indicato alla sezione I.3).</cbc:Description>
+                        <cbc:Description languageID="DAN">Der henvises til udbudsmaterialet, der er tilgængeligt på adressen anført i afsnit I.3).</cbc:Description>
+                        <cbc:Description languageID="DEU">Bitte beachten Sie die Vertragsunterlagen, die unter der in Abschnitt I.3) angegebenen Adresse erhältlich sind.</cbc:Description>
+                        <cbc:Description languageID="ENG">Please refer to the contract documents available at the address indicated in Section I.3).</cbc:Description>
+                        <cbc:Description languageID="SPA">Véanse los documentos del contrato disponibles en la dirección indicada en el apartado I.3).</cbc:Description>
+                        <cbc:Description languageID="FIN">Katso sopimusasiakirjat, jotka ovat saatavilla kohdassa I.3) mainitussa osoitteessa.</cbc:Description>
+                        <cbc:Description languageID="FRA">Voir dossier relatif au marché disponible à l'adresse indiquée à la section I.3).</cbc:Description>
+                        <cbc:Description languageID="ELL">Παρακαλείσθε να ανατρέξετε στα έγγραφα της σύμβασης που διατίθενται στη διεύθυνση που αναφέρεται στο τμήμα I.3).</cbc:Description>
+                        <cbc:Description languageID="NLD">Zie de aanbestedingsstukken die beschikbaar zijn op het adres vermeld in sectie I.3).</cbc:Description>
+                        <cbc:Description languageID="POR">Consultar a documentação do concurso disponível no endereço indicado no ponto I.3).</cbc:Description>
+                        <cbc:Description languageID="SWE">Se upphandlingsdokumenten som finns tillgängliga på adressen som anges i avsnitt I.3).</cbc:Description>
+                        <cbc:Description languageID="CES">Viz zadávací dokumentace, která je k dispozici na adrese uvedené v oddílu I.3).</cbc:Description>
+                        <cbc:Description languageID="EST">Vt lepingudokumente, mis on avaldatud punktis I.3) märgitud aadressil.</cbc:Description>
+                        <cbc:Description languageID="HUN">Lásd az I.3) szakaszban megadott címen elérhető szerződéses dokumentumokat.</cbc:Description>
+                        <cbc:Description languageID="LIT">Prašome žr. sutarties dokumentus, kuriuos galima rasti I.3) dalyje nurodytu adresu.</cbc:Description>
+                        <cbc:Description languageID="LAV">Skatīt iepirkuma dokumentus, kas pieejami I.3) iedaļā norādītajā tīmekļa adresē.</cbc:Description>
+                        <cbc:Description languageID="MLT">Jekk jogħġbok irreferi għad-dokumenti tal-kuntratt disponibbli fl-indirizz indikat fit-Taqsima I.3).</cbc:Description>
+                        <cbc:Description languageID="POL">Zob. dokumentacja zamówienia dostępna pod adresem internetowym podanym w pkt I.3).</cbc:Description>
+                        <cbc:Description languageID="SLK">Ďalšie informácie nájdete v súťažných podkladoch dostupných na adrese uvedenej v oddiele I.3).</cbc:Description>
+                        <cbc:Description languageID="SLV">Glejte razpisno dokumentacijo, ki je na voljo na naslovu, navedenem v oddelku I.3).</cbc:Description>
+                        <cbc:Description languageID="GLE">Féach na doiciméid soláthair atá ar fáil ag an seoladh atá léirithe in alt I.3).</cbc:Description>
+                        <cbc:Description languageID="BUL">Моля, направете справка с документите по поръчката, достъпни на адреса, посочен в раздел I.3).</cbc:Description>
+                        <cbc:Description languageID="RON">A se consulta dosarul licitației, disponibil la adresa indicată în secțiunea I.3).</cbc:Description>
+                        <cbc:Description languageID="HRV">Pogledajte ugovornu dokumentaciju dostupnu na adresi koja je navedena u odjeljku I.3).</cbc:Description>
+                     </efac:Funding>
+                     <!--Selection Criteria Type (BT-747)-->
+                     <!--Selection Criteria Name (BT-749)-->
+                     <!--Selection Criteria Description (BT-750)-->
+                     <!--Selection Criteria Used (BT-748)-->
+                     <!--Selection Criteria Second Stage Invite (BT-40)-->
+                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
+                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
+                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--Variants (BT-63)-->
+         <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
@@ -1216,7 +1328,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -1288,7 +1400,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -1463,7 +1575,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -1535,7 +1647,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->

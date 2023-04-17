@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eforms-notice-subtypes>
+	<notice-subtype>
+		<id>1</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-buyer</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Notice of the publication of a prior information notice on a buyer profile - general directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>2</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-buyer</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Notice of the publication of a periodic indicative notice on a buyer profile - sectoral directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>3</id>
+		<legal-basis>32009L0081</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-buyer</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Notice of the publication of a prior information notice on a buyer profile - defence directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>4</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-only</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Prior information notice used only for information – general directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>5</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-only</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Periodic indicative notice used only for information – sectoral directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>6</id>
+		<legal-basis>32009L0081</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-only</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Prior information notice used only for information – defence directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>7</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-rtl</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Prior information notice used to shorten time limits for receipt of tenders – general directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>8</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-rtl</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Periodic indicative notice used to shorten time limits for receipt of tenders – sectoral directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>9</id>
+		<legal-basis>32009L0081</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-rtl</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Prior information notice used to shorten time limits for receipt of tenders – defence directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>10</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>pin-cfc-standard</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Prior information notice used as a call for competition - general directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>11</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>pin-cfc-standard</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Periodic indicative notice used as a call for competition - sectoral directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>12</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>pin-cfc-social</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Prior information notice used as a call for competition - general directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>13</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>pin-cfc-social</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Periodic indicative notice used as a call for competition - sectoral directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>14</id>
+		<legal-basis>32014L0023</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>pin-cfc-social</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Prior information notice used as a call for competition - concessions directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>15</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>qu-sy</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Notice on the existence of a qualification system – sectoral directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>16</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-standard</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Contract notice – general directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>17</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-standard</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Contract notice – sectoral directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>18</id>
+		<legal-basis>32009L0081</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-standard</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Contract notice – defence directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>19</id>
+		<legal-basis>32014L0023</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-standard</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Concession notice – concessions directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>20</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-social</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Contract notice – general directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>21</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-social</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Contract notice – sectoral directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>22</id>
+		<legal-basis>32009L0081</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>subco</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Subcontract notice – defence directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>23</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-desg</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Design contest notice – general directive, design</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>24</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-desg</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Design contest notice – sectoral directive, design</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>25</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>dir-awa-pre</form-type>
+		<notice-type>veat</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Voluntary ex-ante transparency notice – general directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>26</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>dir-awa-pre</form-type>
+		<notice-type>veat</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Voluntary ex-ante transparency notice – sectoral directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>27</id>
+		<legal-basis>32009L0081</legal-basis>
+		<form-type>dir-awa-pre</form-type>
+		<notice-type>veat</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Voluntary ex-ante transparency notice – defence directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>28</id>
+		<legal-basis>32014L0023</legal-basis>
+		<form-type>dir-awa-pre</form-type>
+		<notice-type>veat</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Voluntary ex-ante transparency notice – concession directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>29</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-standard</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract award notice – general directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>30</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-standard</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract award notice – sectoral directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>31</id>
+		<legal-basis>32009L0081</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-standard</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract award notice – defence directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>32</id>
+		<legal-basis>32014L0023</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-standard</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Concession award notice – concession directive, standard regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>33</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-social</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract award notice – general directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>34</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-social</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract award notice – sectoral directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>35</id>
+		<legal-basis>32014L0023</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-social</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Concession award notice – concessions directive, light regime</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>36</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-desg</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Design contest result notice – general directive, design</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>37</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-desg</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Design contest result notice – sectoral directive, design</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>38</id>
+		<legal-basis>32014L0024</legal-basis>
+		<form-type>cont-modif</form-type>
+		<notice-type>can-modif</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract modification notice – general directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>39</id>
+		<legal-basis>32014L0025</legal-basis>
+		<form-type>cont-modif</form-type>
+		<notice-type>can-modif</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract modification notice – sectoral directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>40</id>
+		<legal-basis>32014L0023</legal-basis>
+		<form-type>cont-modif</form-type>
+		<notice-type>can-modif</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract modification notice – concessions directive</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>E1</id>
+		<legal-basis>unknown</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>unknown</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Preliminary market consultation notice</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>E2</id>
+		<legal-basis>other</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-only</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Below Threshold Prior Information Notice (PIN) Only</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>E3</id>
+		<legal-basis>other</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>cn-standard</notice-type>
+		<document-type-id>CN</document-type-id>
+		<description>Below Threshold Contract Notice (CN) general</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>E4</id>
+		<legal-basis>other</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-standard</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Below Threshold Contract Award Notice (CAN) general</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>E5</id>
+		<legal-basis>unknown</legal-basis>
+		<form-type>completion</form-type>
+		<notice-type>unknown</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Contract Completion Notice</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>CEI</id>
+		<legal-basis>32018R1046</legal-basis>
+		<form-type>competition</form-type>
+		<notice-type>pin-cfc-standard</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Call for expressions of interest</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>T01</id>
+		<legal-basis>32007R1370</legal-basis>
+		<form-type>planning</form-type>
+		<notice-type>pin-tran</notice-type>
+		<document-type-id>PIN</document-type-id>
+		<description>Planning notice for public passenger transport services by rail and by road</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>T02</id>
+		<legal-basis>32007R1370</legal-basis>
+		<form-type>result</form-type>
+		<notice-type>can-tran</notice-type>
+		<document-type-id>CAN</document-type-id>
+		<description>Result notice for public passenger transport services by rail and by road</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>X01</id>
+		<legal-basis>31985R2137</legal-basis>
+		<form-type>bri</form-type>
+		<notice-type>brin-eeig</notice-type>
+		<document-type-id>BRIN</document-type-id>
+		<description>Notice containing information relevant to Formation or Completion of the liquidation of a EEIG.</description>
+	</notice-subtype>
+	<notice-subtype>
+		<id>X02</id>
+		<legal-basis>32001R2157</legal-basis>
+		<form-type>bri</form-type>
+		<notice-type>brin-ecs</notice-type>
+		<document-type-id>BRIN</document-type-id>
+		<description>Notice containing information about Registration, Deletion, Transfer-registration or Transfer-deletion of a European Company or European Cooperative Society</description>
+	</notice-subtype>
+</eforms-notice-subtypes>
