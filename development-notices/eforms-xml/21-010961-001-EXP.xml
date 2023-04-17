@@ -12,8 +12,10 @@
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension>
-               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Value (BT-118)-->
-                  <efac:LotResult><!--Tender Value Highest (BT-711)-->
+               <efac:NoticeResult><!--Notice Value (BT-161)--><!--Notice Framework Approximate Value (BT-1118)--><!--Notice Framework Maximum Value (BT-118)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0001</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
                      <cbc:HigherTenderAmount currencyID="EUR">2491930.00</cbc:HigherTenderAmount>
                      <!--Tender Value Lowest (BT-710)-->
                      <cbc:LowerTenderAmount currencyID="EUR">1900000.00</cbc:LowerTenderAmount>
@@ -25,7 +27,7 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
                      <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
                         <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
@@ -217,9 +219,9 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
@@ -231,7 +233,7 @@
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>OTHER</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
@@ -278,9 +280,9 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2017/S 129-262839</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
@@ -650,7 +652,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:ContractingSystem>
@@ -676,7 +678,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->

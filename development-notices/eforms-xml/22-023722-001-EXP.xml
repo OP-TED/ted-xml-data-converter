@@ -14,8 +14,13 @@
             <efext:EformsExtension>
                <efac:NoticeResult><!--Notice Value (BT-161)-->
                   <cbc:TotalAmount currencyID="GBP">21000000.00</cbc:TotalAmount>
-                  <!--Notice Framework Value (BT-118)-->
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <!--Notice Framework Approximate Value (BT-1118)-->
+                  <!--Notice Framework Maximum Value (BT-118)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0001</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -23,7 +28,7 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0001</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
                      <!--Received Submissions Type (BT-760)-->
                      <!--Received Submissions Count (BT-759)-->
@@ -36,7 +41,11 @@
                         <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0002</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -44,7 +53,7 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
                      <!--Received Submissions Type (BT-760)-->
                      <!--Received Submissions Count (BT-759)-->
@@ -57,7 +66,11 @@
                         <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0003</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -65,7 +78,7 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0003</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
                      <!--Received Submissions Type (BT-760)-->
                      <!--Received Submissions Count (BT-759)-->
@@ -78,7 +91,11 @@
                         <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
-                  <efac:LotResult><!--Tender Value Highest (BT-711)--><!--Tender Value Lowest (BT-710)--><!--Winner Chosen (BT-142)-->
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0004</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <!--Tender Value Lowest (BT-710)-->
+                     <!--Winner Chosen (BT-142)-->
                      <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
                      <!--Dynamic Purchasing System Termination (BT-119)-->
                      <!--Not Awarded Reason (BT-144)-->
@@ -86,7 +103,7 @@
                      <efac:LotTender>
                         <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
                      </efac:LotTender>
-                     <!--Framework Estimated Value (BT-660)-->
+                     <!--Framework Re-estimated Value (BT-660)-->
                      <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
                      <!--Received Submissions Type (BT-760)-->
                      <!--Received Submissions Count (BT-759)-->
@@ -476,9 +493,9 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
@@ -490,7 +507,7 @@
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode listName="dir-awa-pre">veat</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
@@ -542,9 +559,12 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2020/S 040-095930</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
-      <!--Direct Award Justification (BT-136)-->
-      <!--Direct Award Justification (BT-135)-->
+      <cac:ProcessJustification><!--Direct Award Justification (BT-136)-->
+         <cbc:ProcessReasonCode listName="direct-award-justification">below-thres</cbc:ProcessReasonCode>
+         <!--Direct Award Justification (BT-135)-->
+         <cbc:ProcessReason languageID="ENG">Regulation 72(1)(c) provision as the need for change could not have been foreseen by a “diligent” Department, the changes do not affect the overall nature of the contract or exceed 50% of the value of the original contract value. Covid-19 could not have been predicted; therefore, these increased requirements could not have been foreseen or accounted for when estimating the contract value at the time of tender. The services provided through the contract will remain in line with those specified at the time of going to tender. The proposed change to the estimated contract value does not exceed this threshold.</cbc:ProcessReason>
+         <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+      </cac:ProcessJustification>
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
@@ -736,7 +756,7 @@
          <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <!--Dynamic Purchasing System (BT-766)-->
@@ -755,7 +775,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -962,7 +982,7 @@
          <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <!--Dynamic Purchasing System (BT-766)-->
@@ -981,7 +1001,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -1224,7 +1244,7 @@
          <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <!--Dynamic Purchasing System (BT-766)-->
@@ -1243,7 +1263,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -1450,7 +1470,7 @@
          <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <!--Dynamic Purchasing System (BT-766)-->
@@ -1469,7 +1489,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->

@@ -1,0 +1,2878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TED_EXPORT xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+            xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts"
+            xsi:schemaLocation="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication TED_EXPORT.xsd"
+            VERSION="R2.0.9.S03.E01"
+            DOC_ID="054179-2021"
+            EDITION="2021023">
+   <TECHNICAL_SECTION>
+      <RECEPTION_ID>21-048169-001</RECEPTION_ID>
+      <DELETION_DATE>20210507</DELETION_DATE>
+      <FORM_LG_LIST>DA DE EN ES FI FR EL IT NL PT SV CS ET HU LT LV MT PL SK SL GA BG RO HR </FORM_LG_LIST>
+      <COMMENTS>From Convertor</COMMENTS>
+   </TECHNICAL_SECTION>
+   <LINKS_SECTION>
+      <XML_SCHEMA_DEFINITION_LINK xlink:type="simple"
+                                  xlink:href="http://ted.europa.eu"
+                                  xlink:title="TED WEBSITE"/>
+      <OFFICIAL_FORMS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <FORMS_LABELS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <ORIGINAL_CPV_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <ORIGINAL_NUTS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+   </LINKS_SECTION>
+   <CODED_DATA_SECTION>
+      <REF_OJS>
+         <COLL_OJ>S</COLL_OJ>
+         <NO_OJ>23</NO_OJ>
+         <DATE_PUB>20210203</DATE_PUB>
+      </REF_OJS>
+      <NOTICE_DATA>
+         <NO_DOC_OJS>2021/S 023-054179</NO_DOC_OJS>
+         <URI_LIST>
+            <URI_DOC LG="DA">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:DA:HTML</URI_DOC>
+            <URI_DOC LG="DE">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:DE:HTML</URI_DOC>
+            <URI_DOC LG="EN">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:EN:HTML</URI_DOC>
+            <URI_DOC LG="ES">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:ES:HTML</URI_DOC>
+            <URI_DOC LG="FI">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:FI:HTML</URI_DOC>
+            <URI_DOC LG="FR">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:FR:HTML</URI_DOC>
+            <URI_DOC LG="EL">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:EL:HTML</URI_DOC>
+            <URI_DOC LG="IT">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:IT:HTML</URI_DOC>
+            <URI_DOC LG="NL">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:NL:HTML</URI_DOC>
+            <URI_DOC LG="PT">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:PT:HTML</URI_DOC>
+            <URI_DOC LG="SV">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:SV:HTML</URI_DOC>
+            <URI_DOC LG="CS">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:CS:HTML</URI_DOC>
+            <URI_DOC LG="ET">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:ET:HTML</URI_DOC>
+            <URI_DOC LG="HU">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:HU:HTML</URI_DOC>
+            <URI_DOC LG="LT">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:LT:HTML</URI_DOC>
+            <URI_DOC LG="LV">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:LV:HTML</URI_DOC>
+            <URI_DOC LG="MT">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:MT:HTML</URI_DOC>
+            <URI_DOC LG="PL">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:PL:HTML</URI_DOC>
+            <URI_DOC LG="SK">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:SK:HTML</URI_DOC>
+            <URI_DOC LG="SL">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:SL:HTML</URI_DOC>
+            <URI_DOC LG="GA">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:GA:HTML</URI_DOC>
+            <URI_DOC LG="BG">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:BG:HTML</URI_DOC>
+            <URI_DOC LG="RO">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:RO:HTML</URI_DOC>
+            <URI_DOC LG="HR">http://ted.europa.eu/udl?uri=TED:NOTICE:054179-2021:TEXT:HR:HTML</URI_DOC>
+         </URI_LIST>
+         <LG_ORIG>EN</LG_ORIG>
+         <ISO_COUNTRY VALUE="BE"/>
+         <IA_URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</IA_URL_GENERAL>
+         <ORIGINAL_CPV CODE="73100000">Research and experimental development services</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="38970000">Research, testing and scientific technical simulator</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="42151000">Nuclear reactors</ORIGINAL_CPV>
+         <n2016:PERFORMANCE_NUTS CODE="FR">FRANCE</n2016:PERFORMANCE_NUTS>
+         <n2016:CA_CE_NUTS CODE="BE">BELGIQUE-BELGIË</n2016:CA_CE_NUTS>
+         <n2016:TENDERER_NUTS CODE="FR">FRANCE</n2016:TENDERER_NUTS>
+         <VALUES>
+            <VALUE TYPE="PROCUREMENT_TOTAL" CURRENCY="EUR">6000000.00</VALUE>
+         </VALUES>
+      </NOTICE_DATA>
+      <CODIF_DATA>
+         <DS_DATE_DISPATCH>20210127</DS_DATE_DISPATCH>
+         <AA_AUTHORITY_TYPE CODE="5">European Institution/Agency or International Organisation</AA_AUTHORITY_TYPE>
+         <TD_DOCUMENT_TYPE CODE="7">Contract award notice</TD_DOCUMENT_TYPE>
+         <NC_CONTRACT_NATURE CODE="4">Services</NC_CONTRACT_NATURE>
+         <PR_PROC CODE="T">Negotiated without a prior call for competition</PR_PROC>
+         <RP_REGULATION CODE="3">European Institution/Agency or International Organisation</RP_REGULATION>
+         <TY_TYPE_BID CODE="9">Not applicable</TY_TYPE_BID>
+         <AC_AWARD_CRIT CODE="2">The most economic tender</AC_AWARD_CRIT>
+         <MA_MAIN_ACTIVITIES CODE="S">General public services</MA_MAIN_ACTIVITIES>
+         <HEADING>ECC03</HEADING>
+         <INITIATOR>EC</INITIATOR>
+      </CODIF_DATA>
+   </CODED_DATA_SECTION>
+   <TRANSLATION_SECTION>
+      <ML_TITLES>
+         <ML_TI_DOC LG="DA">
+            <TI_CY>Belgien</TI_CY>
+            <TI_TOWN>Bruxelles</TI_TOWN>
+            <TI_TEXT>
+               <P>Indkøb ved Euratom (repræsenteret af Europa-Kommissionen) af garanterede adgangsrettigheder til bestrålingskapaciteter i Jules Horowitz-reaktoren (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="DE">
+            <TI_CY>Belgien</TI_CY>
+            <TI_TOWN>Brüssel</TI_TOWN>
+            <TI_TEXT>
+               <P>Erwerb durch Euratom (vertreten durch die Europäische Kommission) von garantierten Zugangsrechten zu Bestrahlungskapazitäten im Jules-Horowitz-Reaktor (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="EN">
+            <TI_CY>Belgium</TI_CY>
+            <TI_TOWN>Brussels</TI_TOWN>
+            <TI_TEXT>
+               <P>Purchase by Euratom (Represented by the European Commission) of Guaranteed Access Rights for Irradiation Capacities in the Jules Horowitz Reactor (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="ES">
+            <TI_CY>Bélgica</TI_CY>
+            <TI_TOWN>Bruselas</TI_TOWN>
+            <TI_TEXT>
+               <P>Adquisición por parte de Euratom (representada por la Comisión Europea) de derechos de acceso garantizado a las capacidades de irradiación del reactor Jules Horowitz (JHR).</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="FI">
+            <TI_CY>Belgia</TI_CY>
+            <TI_TOWN>Bryssel</TI_TOWN>
+            <TI_TEXT>
+               <P>Jules Horowitz -reaktorin (JHR) säteilytysvalmiuksia koskevien taattujen käyttöoikeuksien hankinta Euroopan komission edustamaa Euratomia varten</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="FR">
+            <TI_CY>Belgique</TI_CY>
+            <TI_TOWN>Bruxelles</TI_TOWN>
+            <TI_TEXT>
+               <P>Fourniture à Euratom (représentée par la Commission européenne) de droits d'accès garanti pour des capacités d'irradiation dans le réacteur Jules Horowitz (RJH)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="EL">
+            <TI_CY>Βέλγιο</TI_CY>
+            <TI_TOWN>Βρυξέλλες</TI_TOWN>
+            <TI_TEXT>
+               <P>Αγορά από την Ευρατόμ (εκπροσωπούμενη από την Ευρωπαϊκή Επιτροπή) εγγυημένων δικαιωμάτων πρόσβασης για δυνατότητες ακτινοβόλησης στον αντιδραστήρα Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="IT">
+            <TI_CY>Belgio</TI_CY>
+            <TI_TOWN>Bruxelles</TI_TOWN>
+            <TI_TEXT>
+               <P>Acquisto da parte di Euratom (rappresentata dalla Commissione europea) dei diritti di accesso garantito per le capacità di irradiazione nel reattore «Jules Horowitz» (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="NL">
+            <TI_CY>België</TI_CY>
+            <TI_TOWN>Brussel</TI_TOWN>
+            <TI_TEXT>
+               <P>Aankoop door Euratom (vertegenwoordigd door de Europese Commissie) van gewaarborgde toegangsrechten voor bestralingscapaciteiten in de Jules Horowitz Reactor (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="PT">
+            <TI_CY>Bélgica</TI_CY>
+            <TI_TOWN>Bruxelas</TI_TOWN>
+            <TI_TEXT>
+               <P>Aquisição pela Euratom (representada pela Comissão Europeia) de direitos de acesso garantido às capacidades de irradiação do reator Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SV">
+            <TI_CY>Belgien</TI_CY>
+            <TI_TOWN>Bryssel</TI_TOWN>
+            <TI_TEXT>
+               <P>Euratoms inköp (representerad av Europeiska kommissionen) av garanterade tillträdesrättigheter för bestrålningskapacitet i Jules Horowitz-reaktorn (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="CS">
+            <TI_CY>Belgie</TI_CY>
+            <TI_TOWN>Brusel</TI_TOWN>
+            <TI_TEXT>
+               <P>Nákup zaručených přístupových práv v případě ozařovacích kapacit v reaktoru Jules Horowitz (JHR) ze strany Euratomu (zastoupeného Evropskou komisí)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="ET">
+            <TI_CY>Belgia</TI_CY>
+            <TI_TOWN>Brüssel</TI_TOWN>
+            <TI_TEXT>
+               <P>Jules Horowitzi nimelises reaktoris (JHR) kiiritusvõimsustele tagatud juurdepääsuõiguse ostmine Euratomi poolt (keda esindab Euroopa Komisjon)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="HU">
+            <TI_CY>Belgium</TI_CY>
+            <TI_TOWN>Brüsszel</TI_TOWN>
+            <TI_TEXT>
+               <P>A Jules Horowitz reaktor (JHR) sugárzási kapacitásaihoz való garantált hozzáférési jogok vétele (az Európai Bizottság által képviselt) Euratom által</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="LT">
+            <TI_CY>Belgija</TI_CY>
+            <TI_TOWN>Briuselis</TI_TOWN>
+            <TI_TEXT>
+               <P>Euratomo (atstovaujamo Europos Komisijos) garantuojamų prieigos teisių pirkimas švitinimo pajėgumams Jules Horowitz reaktoriuje (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="LV">
+            <TI_CY>Beļģija</TI_CY>
+            <TI_TOWN>Brisele</TI_TOWN>
+            <TI_TEXT>
+               <P>Euratom (ko pārstāv Eiropas Komisija) iepirkums saistībā ar garantētām piekļuves tiesībām apstarošanas iespējām Jules Horowitz reaktorā (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="MT">
+            <TI_CY>il-Belġju</TI_CY>
+            <TI_TOWN>Brussell</TI_TOWN>
+            <TI_TEXT>
+               <P>Ix-xiri mill-Euratom (Irrappreżentat mill-Kummissjoni Ewropea) ta’ Drittijiet ta’ Aċċess Iggarantiti għal Ħiliet għar-Radjazzjoni fir-Reattur Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="PL">
+            <TI_CY>Belgia</TI_CY>
+            <TI_TOWN>Bruksela</TI_TOWN>
+            <TI_TEXT>
+               <P>Nabycie przez Euratom (reprezentowany przez Komisję Europejską) gwarantowanego prawa dostępu do mocy napromieniania w reaktorze Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SK">
+            <TI_CY>Belgicko</TI_CY>
+            <TI_TOWN>Brusel</TI_TOWN>
+            <TI_TEXT>
+               <P>Nákup zaručených prístupových práv pre kapacity ožarovania v reaktore Jules Horowitz (JHR) spoločenstvom Euratom (zastúpené Európskou komisiou)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SL">
+            <TI_CY>Belgija</TI_CY>
+            <TI_TOWN>Bruselj</TI_TOWN>
+            <TI_TEXT>
+               <P>Nakup s strani Euratoma (ki ga zastopa Evropska komisija) pravic do zajamčenega dostopa za zmogljivosti obsevanja v reaktorju Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="GA">
+            <TI_CY>Bheilg, an</TI_CY>
+            <TI_TOWN>An Bhruiséil</TI_TOWN>
+            <TI_TEXT>
+               <P>Ceannachán ag Euratom (Arna ionadú ag an gCoimisiún Eorpach) de Chearta Rochtana Ráthaithe maidir le Cumais Ionradaíochta in Imoibreoir Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="BG">
+            <TI_CY>Бeлгия</TI_CY>
+            <TI_TOWN>Брюксел</TI_TOWN>
+            <TI_TEXT>
+               <P>Закупуване от Евратом (представляван от Европейската комисия) на гарантирани права на достъп за възможности за облъчване в реактор Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="RO">
+            <TI_CY>Belgia</TI_CY>
+            <TI_TOWN>Bruxelles</TI_TOWN>
+            <TI_TEXT>
+               <P>Achiziționare de către Euratom (reprezentată de Comisia Europeană) de drepturi de acces garantat pentru capacitățile de iradiere de la reactorul Jules Horowitz (JHR).</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="HR">
+            <TI_CY>Belgija</TI_CY>
+            <TI_TOWN>Bruxelles</TI_TOWN>
+            <TI_TEXT>
+               <P>Kupovina od strane Euratoma (koji predstavlja Europska komisija) zajamčenih prava pristupa za kapacitete zračenja u reaktoru Jules Horowitz (JHR)</P>
+            </TI_TEXT>
+         </ML_TI_DOC>
+      </ML_TITLES>
+      <ML_AA_NAMES>
+         <AA_NAME LG="DA">Europa-Kommissionen, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="DE">Europäische Kommission, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="EN">European Commission, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="ES">Comisión Europea, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="FI">Euroopan komissio, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="FR">Commission européenne, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="EL">Ευρωπαϊκή Επιτροπή, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="IT">Commissione europea, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="NL">Europese Commissie, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="PT">Comissão Europeia, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="SV">Europeiska kommissionen, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="CS">Evropská komise, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="ET">Euroopa Komisjon, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="HU">Európai Bizottság, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="LT">Europos Komisija, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="LV">Eiropas Komisija, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="MT">Il-Kummissjoni Ewropea, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="PL">Komisja Europejska, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="SK">Európska komisia, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="SL">Evropska komisija, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="GA">An Coimisiún Eorpach, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="BG">Европейска комисия, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="RO">Comisia Europeană, Directorate-General for Research and Innovation</AA_NAME>
+         <AA_NAME LG="HR">Europska komisija, Directorate-General for Research and Innovation</AA_NAME>
+      </ML_AA_NAMES>
+   </TRANSLATION_SECTION>
+   <FORM_SECTION>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="DA">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Europa-Kommissionen, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Indkøb ved Euratom (repræsenteret af Europa-Kommissionen) af garanterede adgangsrettigheder til bestrålingskapaciteter i Jules Horowitz-reaktoren (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Formålet med indkøbet er at give Kommissionen mulighed for til på Fællesskabets vegne at få garanterede og sikre adgangsrettigheder til Jules Horowitz-reaktorens eksperimentelle bestrålingskapacitet.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Formålet med indkøbet er at give Kommissionen mulighed for til på Fællesskabets vegne at få garanterede og sikre adgangsrettigheder til Jules Horowitz-reaktorens eksperimentelle bestrålingskapacitet.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalitet af den foreslåede analyse af problem- og risikoområder samt passende afbødende foranstaltninger under hensyntagen til indkøbets krav og mål</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalitet og egnethed af den foreslåede metodologi til akkumulering af årlige adgangsrettigheder</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horisont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Anlægget er unikt set i forhold til lignende eksisterende anlæg eller anlæg under opførelse, der er beliggende i alle de stater, der har undertegnet aftalen om offentlige indkøb, og er derfor det eneste, der er i stand til at udføre bestrålingseksperimenter, der er nødvendige for gennemførelse af indirekte aktiviteter inden for rammerne af Euratoms forsknings- og uddannelsesprogram.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Da der er tale om et udbud efter forhandling uden offentliggørelse af en udbudsbekendtgørelse baseret på punkt 11.1, litra b), i bilag I til finansforordningen, er kontrakten endnu ikke underskrevet. Datoen for underskrivelse af dette kontraktpunkt er datoen for tildelingsbeslutningen.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Retten</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Indtil to måneder efter underrettelsen om tildelingsbeslutningen kan der indgives en klage til det revisionsorgan, der er omhandlet i punkt VI.4.1). De kan fremsætte bemærkninger vedrørende tildelingsproceduren til den ordregivende myndighed anført i punkt I.1). Hvis De mener, at der har været tale om fejl og forsømmelser, kan De indgive en klage til Den Europæiske Ombudsmand i to år efter, De har fået kendskab til de forhold, som klagen vedrører (se http://www.ombudsman.europa.eu). En klage bevirker ikke, at perioden for indgivelse af en klage afbrydes, eller at der påbegyndes en ny periode for indgivelse af klage.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="DE">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Europäische Kommission, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Erwerb durch Euratom (vertreten durch die Europäische Kommission) von garantierten Zugangsrechten zu Bestrahlungskapazitäten im Jules-Horowitz-Reaktor (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Gegenstand dieser Beschaffung ist das Recht der im Auftrag der Gemeinschaft agierenden Kommission auf Nutzung garantierter und sicherer Zugangsrechte zur experimentellen Bestrahlungskapazität des Jules-Horowitz-Reaktors.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Gegenstand dieser Beschaffung ist das Recht der im Auftrag der Gemeinschaft agierenden Kommission auf Nutzung garantierter und sicherer Zugangsrechte zur experimentellen Bestrahlungskapazität des Jules-Horowitz-Reaktors.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualität der vorgeschlagenen Problemanalyse und der Risikobereiche sowie geeignete Abhilfemaßnahmen unter Berücksichtigung der Anforderungen und Zielsetzungen der Beschaffung</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualität und Eignung der vorgeschlagenen Methodik für den Erwerb jährlicher Zugangsrechte</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Die Einrichtung ist im Vergleich zu ähnlichen bestehenden oder im Bau befindlichen Einrichtungen in allen Staaten, die eine Vereinbarung über das öffentliche Beschaffungswesen unterzeichnet haben, einzigartig. Daher ist sie die einzige Möglichkeit, Bestrahlungsexperimente durchzuführen, die für die Umsetzung der indirekten Maßnahmen im Rahmen des Euratom-Forschungs- und Ausbildungsprogramms erforderlich sind.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Da es sich um ein Verhandlungsverfahren ohne Veröffentlichung einer Auftragsbekanntmachung auf der Grundlage von Ziffer 11.1 b) Anhang I der Haushaltsordnung handelt, wurde der Vertrag noch nicht unterzeichnet. Das Datum der Unterzeichnung des Vertrags in diesem Abschnitt ist das Datum der Vergabeentscheidung.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Gericht</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Innerhalb von 2 Monaten nach der Benachrichtigung über die Zuschlagsentscheidung kann bei der unter Ziffer VI.4.1) genannten Prüfstelle ein Rechtsbehelf eingelegt werden. Bemerkungen zum Vergabeverfahren können an den unter Ziffer I.1) angegebenen öffentlichen Auftraggeber übermittelt werden. Bei Verdacht auf Missstände in der Verwaltungstätigkeit kann beim Europäischen Bürgerbeauftragten eine Beschwerde eingereicht werden, und zwar innerhalb von 2 Jahren ab dem Zeitpunkt der Kenntnisnahme der Tatsachen, auf denen die Beschwerde beruht (siehe http://www.ombudsman.europa.eu). Eine solche Beschwerde bewirkt weder die Aussetzung der Frist noch den Beginn eines neuen Zeitraums für die Einlegung von Rechtsbehelfen.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="ORIGINAL" FORM="F03" LG="EN">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>European Commission, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Purchase by Euratom (Represented by the European Commission) of Guaranteed Access Rights for Irradiation Capacities in the Jules Horowitz Reactor (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>The subject of the procurement is right of the Commission, acting on behalf of the Community, to benefit from guaranteed and secure access rights to the experimental irradiation capacity of the Jules Horowitz Reactor.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>The subject of the procurement is right of the Commission, acting on behalf of the Community, to benefit from guaranteed and secure access rights to the experimental irradiation capacity of the Jules Horowitz Reactor.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Quality of the proposed analysis of problem and risk areas and appropriate mitigation measures taking into account the requirements and objectives of the procurement</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Quality and suitability of the methodology proposed for the accumulation of annual access rights</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizon2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>The facility has a unique character among similar existing or under construction facilities that are located in all the states signed Agreement on Government Procurement and is, therefore, the only capable to perform irradiation experiments necessary to carry out implementation of the indirect actions in the frame of the Euratom Research and Training Programme.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Due to the fact, that a negotiated procedure without publication of a contract notice based on point 11.1 (b) Annex I FR is concerned, the contract has not been signed yet. The date of signature of the contract under this section is the date of the award decision.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>General Court</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Within 2 months of the notification of the award decision, an appeal may be lodged to the review body in heading VI.4.1). You may submit any observations concerning the award procedure to the contracting authority indicated in heading I.1). If you believe that there was maladministration, you may lodge a complaint to the European Ombudsman within 2 years of the date when you became aware of the facts on which the complaint is based (see http://www.ombudsman.europa.eu). Such complaint does not have as an effect either to suspend the time-limit to launch an appeal or to open a new period for lodging an appeal.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="ES">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Comisión Europea, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Adquisición por parte de Euratom (representada por la Comisión Europea) de derechos de acceso garantizado a las capacidades de irradiación del reactor Jules Horowitz (JHR).</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>El objeto de la licitación es el derecho de la Comisión, actuando en nombre de la Comunidad, a beneficiarse de derechos de acceso seguro y garantizado a las capacidades de irradiación experimentales del reactor Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>El objeto de la licitación es el derecho de la Comisión, actuando en nombre de la Comunidad, a beneficiarse de derechos de acceso seguro y garantizado a las capacidades de irradiación experimentales del reactor Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>calidad del análisis propuesto de los ámbitos de problemas y riesgos y medidas de mitigación adecuadas, teniendo en cuenta los requisitos y objetivos de la contratación</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>calidad e idoneidad de la metodología propuesta para la acumulación de derechos de acceso anuales</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizonte 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>La instalación tiene un carácter único entre instalaciones similares existentes o en construcción situadas en todos los Estados signatarios del Acuerdo sobre Contratación Pública y, por lo tanto, es la única capaz de realizar los experimentos de irradiación necesarios para llevar a cabo las acciones indirectas en el marco del Programa de Investigación y Formación de Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Debido a que se trata de un procedimiento negociado sin publicación de un anuncio de licitación basado en el punto 11, apartado 1 (b) del anexo I del Reglamento Financiero, el contrato todavía no se ha firmado. La fecha de la firma del contrato en el marco de este apartado es la fecha de la decisión de adjudicación.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Tribunal General</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>En un plazo de 2 meses a partir de la fecha de notificación de la decisión de adjudicación, puede presentarse un recurso ante el organismo de revisión indicado en el apartado VI.4.1). Puede comunicar cualquier observación relativa al procedimiento de adjudicación al órgano de contratación indicado en el apartado I.1). Si considera que se ha realizado una mala administración, puede presentar una reclamación ante el Defensor del Pueblo Europeo en un plazo de 2 años a partir de la fecha en la que tuvo conocimiento de los hechos en que se basa la reclamación (véase http://www.ombudsman.europa.eu). Dicha reclamación no tiene como efecto la suspensión de la fecha límite para la presentación de un recurso ni la apertura de un nuevo plazo de presentación de recursos.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="FI">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Euroopan komissio, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Jules Horowitz -reaktorin (JHR) säteilytysvalmiuksia koskevien taattujen käyttöoikeuksien hankinta Euroopan komission edustamaa Euratomia varten</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Hankinnan kohteena on yhteisön puolesta toimivan Euroopan komission oikeus hyötyä taatuista ja turvatuista käyttöoikeuksista Jules Horowitz -reaktorin kokeellisiin säteilytysvalmiuksiin.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Hankinnan kohteena on yhteisön puolesta toimivan Euroopan komission oikeus hyötyä taatuista ja turvatuista käyttöoikeuksista Jules Horowitz -reaktorin kokeellisiin säteilytysvalmiuksiin.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>ehdotetun ongelma- ja riskialueita koskevan analyysin sekä asiaankuuluvien lieventämistoimenpiteiden laatu, kun otetaan huomioon hankinnan vaatimukset ja tavoitteet</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>vuotuisten käyttöoikeuksien keräämiseen ehdotettujen menetelmien laatu ja soveltuvuus</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horisontti 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Laitos on ainutlaatuinen niiden samankaltaisten olemassa olevien tai rakenteilla olevien laitosten joukossa, jotka sijaitsevat kaikissa julkisia hankintoja koskevan sopimuksen allekirjoittaneissa valtioissa, ja se on siten ainoa, joka pystyy suorittamaan säteilytyskokeita, jotka ovat välttämättömiä epäsuorien toimien toteuttamiseksi Euratomin tutkimus- ja koulutusohjelman yhteydessä.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Sopimusta ei ole vielä allekirjoitettu, koska käytetään varainhoitoasetuksen liitteessä I olevan 11.1 kohdan b alakohdan mukaista neuvottelumenettelyä julkaisematta etukäteen hankintailmoitusta. Tässä kohdassa ilmoitettu sopimuksen allekirjoittamispäivämäärä on sopimuksentekopäätöksen päivämäärä.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Unionin yleinen tuomioistuin</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Muutosta on haettava kohdassa VI.4.1) mainitulta muutoksenhakuelimeltä kahden kuukauden kuluessa sopimuksentekoa koskevan päätöksen ilmoittamisesta. Mahdollisia sopimuksentekomenettelyä koskevia huomautuksia voidaan lähettää kohdassa I.1) ilmoitetulle hankintaviranomaiselle. Epäiltäessä hallinnollista epäkohtaa asiasta voidaan tehdä kantelu Euroopan oikeusasiamiehelle kahden vuoden kuluessa siitä päivämäärästä, jona kantelun perusteena olevat seikat havaittiin (katso http://www.ombudsman.europa.eu). Kantelu ei vaikuta muutoksenhaun määräaikaan, eikä sen vuoksi muutoksenhaulle määrätä uutta määräaikaa.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="FR">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Commission européenne, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Fourniture à Euratom (représentée par la Commission européenne) de droits d'accès garanti pour des capacités d'irradiation dans le réacteur Jules Horowitz (RJH)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Le marché porte sur l'acquisition par la Commission, agissant pour le compte de la communauté, des droits de bénéficier d'un accès garanti et sécurisé à la capacité d'irradiation expérimentale du réacteur Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Le marché porte sur l'acquisition par la Commission, agissant pour le compte de la communauté, des droits de bénéficier d'un accès garanti et sécurisé à la capacité d'irradiation expérimentale du réacteur Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualité de l'analyse proposée des domaines problématiques et à risque et mesures d'atténuation appropriées tenant compte des exigences et des objectifs du marché</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualité et pertinence de la méthode proposée pour le cumul des droits d’accès annuels</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizon 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>L'installation présente un caractère unique parmi des installations similaires existantes ou en construction situées dans tous les États signataires de l'accord sur les marchés publics et est donc la seule capable d'effectuer les expériences d'irradiation nécessaires à la mise en œuvre des actions indirectes dans le cadre du programme de recherche et de formation d'Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>En raison du fait qu'une procédure négociée sans publication d'un avis de marché sur la base du point 11.1 b) de l'annexe I du RF est concernée, le contrat n'a pas encore été signé. La date de signature du contrat au titre de cette section est la date de la décision d'attribution.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Tribunal</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Les recours peuvent être déposés auprès de l'organe de contrôle visé au point VI.4.1) dans les 2 mois à compter de la notification de la décision d'attribution. Toute observation concernant la procédure d'attribution peut être adressée au pouvoir adjudicateur indiqué au point I.1). Si le soumissionnaire estime que la gestion a été défaillante, il peut déposer une plainte auprès du Médiateur européen dans un délai de deux ans à compter de la date à laquelle il a eu connaissance des faits sur lesquels porte la plainte (voir http://www.ombudsman.europa.eu). L'introduction d'une telle plainte n'a pour effet ni la suspension du délai de recours, ni l'ouverture d'un nouveau délai de dépôt d’un recours.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="EL">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Ευρωπαϊκή Επιτροπή, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Αγορά από την Ευρατόμ (εκπροσωπούμενη από την Ευρωπαϊκή Επιτροπή) εγγυημένων δικαιωμάτων πρόσβασης για δυνατότητες ακτινοβόλησης στον αντιδραστήρα Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Αντικείμενο της σύμβασης είναι η απόκτηση δικαιώματος από την Επιτροπή, ενεργώντας εξ ονόματος της ΕΕ, να επωφελείται εγγυημένων και ασφαλών δικαιωμάτων πρόσβασης στην δυνατότητα πειραματικής ακτινοβόλησης του αντιδραστήρα Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Αντικείμενο της σύμβασης είναι η απόκτηση δικαιώματος από την Επιτροπή, ενεργώντας εξ ονόματος της ΕΕ, να επωφελείται εγγυημένων και ασφαλών δικαιωμάτων πρόσβασης στην δυνατότητα πειραματικής ακτινοβόλησης του αντιδραστήρα Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Ποιότητα της προτεινόμενης ανάλυσης του προβλήματος και των περιοχών κινδύνου καθώς και των κατάλληλων μέτρων μετριασμού του κινδύνου, λαμβάνοντας υπόψη τις απαιτήσεις και τους στόχους του διαγωνισμού</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Ποιότητα και καταλληλότητα της προτεινόμενης μεθοδολογίας για τη συσσώρευση των ετήσιων δικαιωμάτων πρόσβασης</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Ορίζων 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Η εγκατάσταση έχει μοναδικό χαρακτήρα μεταξύ παρόμοιων υφιστάμενων ή υπό κατασκευή εγκαταστάσεων που βρίσκονται σε όλα τα κράτη που έχουν υπογράψει συμφωνία για τις δημόσιες συμβάσεις και, ως εκ τούτου, είναι η μόνη ικανή να εκτελέσει πειράματα ακτινοβόλησης που απαιτούνται για την εκτέλεση των έμμεσων δράσεων στο πλαίσιο του προγράμματος έρευνας και κατάρτισης Ευρατόμ.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Λόγω του γεγονότος ότι πρόκειται για διαδικασία με διαπραγμάτευση χωρίς δημοσίευση προκήρυξης σύμβασης, βάσει του σημείου 11.1 στοιχείο β) του Παραρτήματος Ι του δημοσιονομικού κανονισμού, η σύμβαση δεν έχει ακόμη υπογραφεί. Η ημερομηνία υπογραφής της σύμβασης βάσει αυτής της ενότητας είναι η ημερομηνία της απόφασης ανάθεσης.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Γενικό Δικαστήριο</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Εντός 2 μηνών από τη γνωστοποίηση της απόφασης ανάθεσης μπορεί να υποβληθεί προσφυγή στον φορέα αναθεώρησης που αναφέρεται στο σημείο VI.4.1). Οι υποψήφιοι μπορούν να υποβάλουν τυχόν παρατηρήσεις σχετικά με τη διαδικασία ανάθεσης στην αναθέτουσα αρχή που αναφέρεται στο σημείο I.1). Εάν πιστεύετε πως υπήρξε ζήτημα κακής διοίκησης, μπορείτε να υποβάλετε καταγγελία στον Ευρωπαίο Διαμεσολαβητή εντός 2 ετών από την ημερομηνία κατά την οποία λάβατε γνώση των γεγονότων στα οποία βασίζεται η καταγγελία (βλέπε http://www.ombudsman.europa.eu). Η εν λόγω καταγγελία δεν έχει ως αποτέλεσμα ούτε την αναστολή της προθεσμίας για την υποβολή προσφυγών ούτε την έναρξη νέας περιόδου για την υποβολή προσφυγών.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="IT">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Commissione europea, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Acquisto da parte di Euratom (rappresentata dalla Commissione europea) dei diritti di accesso garantito per le capacità di irradiazione nel reattore «Jules Horowitz» (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>L’oggetto dell'appalto è assicurare alla Commissione, che agisce per conto della Comunità, il diritto di beneficiare di diritti di accesso garantito e sicuro alle capacità di irradiazione sperimentale del reattore «Jules Horowitz».</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>L’oggetto dell'appalto è assicurare alla Commissione, che agisce per conto della Comunità, il diritto di beneficiare di diritti di accesso garantito e sicuro alle capacità di irradiazione sperimentale del reattore «Jules Horowitz».</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualità dell'analisi proposta delle aree problematiche e di rischio, nonché misure di mitigazione appropriate, tenendo conto dei requisiti e degli obiettivi dell'appalto</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualità e adeguatezza della metodologia proposta per l'accumulo dei diritti di accesso annuali</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Orizzonte 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>L'impianto ha caratteristiche uniche tra gli impianti simili esistenti o in fase di costruzione situati in tutti gli Stati firmatari dell'accordo sugli appalti pubblici ed è pertanto l'unico in grado di effettuare esperimenti di irradiazione necessari per realizzare le azioni indirette nell'ambito del programma Euratom di ricerca e formazione.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Poiché si tratta di una procedura negoziata senza pubblicazione di un bando di gara d'appalto ai sensi del punto 11.1, lettera b), dell'allegato I del regolamento finanziario, il contratto non è ancora stato firmato. La data della firma del contratto ai sensi della presente sezione è la data della decisione di aggiudicazione.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Tribunale</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Entro 2 mesi dalla notifica della decisione di aggiudicazione è possibile presentare ricorsi all'organismo di cui al punto VI.4.1). Si possono presentare osservazioni relative alla procedura di aggiudicazione all'amministrazione aggiudicatrice indicata al punto I.1). Se, a parere del ricorrente, vi è stata cattiva amministrazione, esso può presentare una denuncia al Mediatore europeo entro 2 anni dalla data in cui è venuto a conoscenza dei fatti cui si riferisce la denuncia (cfr. http://www.ombudsman.europa.eu). Tale denuncia non produce né l'effetto di sospendere il termine ultimo per la presentazione di ricorsi, né di aprirne uno nuovo.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="NL">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Europese Commissie, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Aankoop door Euratom (vertegenwoordigd door de Europese Commissie) van gewaarborgde toegangsrechten voor bestralingscapaciteiten in de Jules Horowitz Reactor (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Het voorwerp van de aanbesteding is het recht van de Commissie, handelend in naam van de Gemeenschap, om te genieten van gewaarborgde en veilige toegangsrechten tot de experimentele bestralingscapaciteit van de Jules Horowitz Reactor.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Het voorwerp van de aanbesteding is het recht van de Commissie, handelend in naam van de Gemeenschap, om te genieten van gewaarborgde en veilige toegangsrechten tot de experimentele bestralingscapaciteit van de Jules Horowitz Reactor.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>kwaliteit van de voorgestelde probleemanalyse en risicogebieden en gepaste verzachtende maatregelen, rekening houdend met de vereisten en doelstellingen van de aanbesteding</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>kwaliteit en geschiktheid van de methodologie die wordt voorgesteld voor de accumulatie van jaarlijkse toegangsrechten</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizon 2020.</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>De faciliteit heeft een uniek karakter te midden van soortgelijke bestaande of in aanbouw zijnde faciliteiten die zich bevinden in alle staten die de overeenkomst inzake overheidsopdrachten hebben ondertekend en is derhalve de enige die in staat is bestralingsexperimenten uit te voeren die nodig zijn voor de uitvoering van werkzaamheden onder contract in het kader van het onderzoek- en opleidingsprogramma van Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Aangezien het gaat om een onderhandelingsprocedure zonder bekendmaking van een aankondiging van opdracht op grond van punt 11.1, onder b), van bijlage I FR, is het contract nog niet ondertekend. De datum van ondertekening van het contract in het kader van deze sectie is de datum van het gunningsbesluit.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Gerecht</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Binnen twee maanden na de kennisgeving van het gunningsbesluit kan een beroep worden ingesteld bij het evaluatiecomité vermeld in punt VI.4.1). Eventuele opmerkingen in verband met de gunningsprocedure, mogen worden gestuurd naar de aanbestedende dienst vermeld in punt I.1). Indien u van mening bent dat er sprake is van onbehoorlijk bestuur, dan mag u binnen twee jaar na de datum waarop u de desbetreffende feiten, waarop deze klacht is gebaseerd, te weten bent gekomen een klacht indienen bij de Europese Ombudsman (ga naar http://www.ombudsman.europa.eu). Een dergelijke klacht leidt niet tot een opschorting van de termijn voor het instellen van een beroep, noch tot de opening van een nieuwe termijn voor het instellen van een beroep.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="PT">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Comissão Europeia, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Aquisição pela Euratom (representada pela Comissão Europeia) de direitos de acesso garantido às capacidades de irradiação do reator Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>O objeto do concurso diz respeito à aquisição pela Comissão, agindo por conta da Comunidade, de direitos de acesso seguro e garantido à capacidade de irradiação experimental do reator Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>O objeto do concurso diz respeito à aquisição pela Comissão, agindo por conta da Comunidade, de direitos de acesso seguro e garantido à capacidade de irradiação experimental do reator Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualidade da análise proposta de áreas problemáticas e de risco e medidas de mitigação adequadas tendo em conta os requisitos e objetivos do concurso</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Qualidade e adequação da metodologia proposta para a acumulação de direitos de acesso anuais</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizonte 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>A instalação tem um carácter único entre instalações semelhantes existentes ou em construção situadas em todos os Estados signatários do Acordo sobre Contratos Públicos e é, por conseguinte, a única capaz de realizar experiências de irradiação necessárias à execução das ações indiretas no âmbito do Programa de Investigação e Formação da Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Dado que se trata de um procedimento por negociação sem publicação de um anúncio de concurso com base no ponto 11.1, alínea b), anexo I do RF, o contrato ainda não foi celebrado. A data de assinatura do contrato no âmbito desta secção é a data da decisão de adjudicação.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Tribunal Geral</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>O recurso pode ser interposto junto do organismo responsável pelos processos de recurso referido no ponto VI.4.1) num prazo de 2 meses a contar da notificação da decisão de adjudicação. Pode apresentar quaisquer observações relativas ao procedimento de adjudicação à entidade adjudicante indicada no ponto I.1). Caso acredite na existência de má administração, pode apresentar uma queixa ao Provedor de Justiça Europeu num prazo de 2 anos a contar da data em que tomou conhecimento dos factos em que se baseia a queixa (consultar http://www.ombudsman.europa.eu). A queixa em questão não tem como efeito a suspensão da data-limite para interpor um recurso nem a abertura de um novo prazo de interposição de recursos.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="SV">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Europeiska kommissionen, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Euratoms inköp (representerad av Europeiska kommissionen) av garanterade tillträdesrättigheter för bestrålningskapacitet i Jules Horowitz-reaktorn (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Upphandlingen avser rätten för kommissionen att på gemenskapens vägnar dra nytta av garanterade och säkra tillträdesrättigheter till den experimentella bestrålningskapaciteten i Jules Horowitz-reaktorn.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Upphandlingen avser rätten för kommissionen att på gemenskapens vägnar dra nytta av garanterade och säkra tillträdesrättigheter till den experimentella bestrålningskapaciteten i Jules Horowitz-reaktorn.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalitet på den föreslagna analysen av problem- och riskområden och lämpliga begränsningsåtgärder med beaktande av upphandlingens krav och mål</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalitet och lämplighet avseende den föreslagna metoden för ackumulering av årliga tillträdesrättigheter</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horisont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Anläggningen har en unik karaktär bland liknande befintliga anläggningar eller anläggningar under uppförande, som är belägna i alla stater som undertecknat avtalet om offentlig upphandling. Den är därför den enda som kan utföra bestrålningsexperiment, som krävs för att genomföra indirekta åtgärder inom ramen för Euratoms forsknings- och utbildningsprogram.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Eftersom det rör sig om ett förhandlat förfarande utan offentliggörande av ett meddelande om upphandling baserat på punkt 11.1 b) i bilaga I till budgetförordningen, har kontraktet inte undertecknats ännu. Datumet för undertecknande av kontraktet i detta avsnitt är datumet för tilldelningsbeslutet.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Tribunalen</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Inom 2 månader efter meddelandet av tilldelningsbeslutet kan en begäran om överklagande lämnas till det granskningsorgan som anges under rubrik VI.4.1). Eventuella observationer angående tilldelningsförfarandet kan lämnas till den upphandlande myndighet som anges i rubrik I.1). Vid misstanke om administrativa missförhållanden kan ett klagomål anföras till Europeiska ombudsmannen inom 2 år från det datum då de fakta som klagomålet bygger på blev kända (se http://www.ombudsman.europa.eu). Sådana klagomål leder varken till att tidsfristen för att anföra ett överklagande förlängs eller till att en ny period för att anföra ett överklagande inleds.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="CS">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Evropská komise, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Nákup zaručených přístupových práv v případě ozařovacích kapacit v reaktoru Jules Horowitz (JHR) ze strany Euratomu (zastoupeného Evropskou komisí)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Předmětem zadávacího řízení je právo Komise jednající jménem Společenství využívat zaručená a bezpečná přístupová práva k experimentální kapacitě reaktoru Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Předmětem zadávacího řízení je právo Komise jednající jménem Společenství využívat zaručená a bezpečná přístupová práva k experimentální kapacitě reaktoru Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalita navržené analýzy problémových a rizikových oblastí a příslušných zmírňovacích opatření zohledňujících požadavky a cíle této veřejné zakázky</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalita a vhodnost metodiky navrhované pro nashromáždění ročních přístupových práv</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Zařízení má jedinečný charakter mezi podobnými stávajícími nebo stavebními zařízeními, která se nacházejí ve všech státech, jež podepsaly dohodu o vládních zakázkách, a je proto jediným zařízením schopným provádět ozařovací pokusy nezbytné k provádění nepřímých akcí v rámci programu Euratom pro výzkum a odbornou přípravu.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Vzhledem k tomu, že se jedná o jednací řízení bez zveřejnění oznámení o zakázce na základě bodu 11.1 písm. b) přílohy I finančního nařízení, smlouva ještě nebyla podepsána. Datum podpisu smlouvy dle tohoto oddílu je datem rozhodnutí o zadání zakázky.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Tribunál</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Ve lhůtě 2 měsíců od oznámení o rozhodnutí lze podat odvolání orgánu pro přezkoumání uvedenému v kapitole VI.4.1). Veškeré připomínky týkající se zadávacího řízení můžete předložit veřejnému zadavateli uvedenému v kapitole I.1). Pokud si myslíte, že došlo k nesprávnému administrativnímu postupu, můžete podat stížnost evropskému veřejnému ochránci práv ve lhůtě 2 let od data, kdy jste se dozvěděli o skutečnostech, na nichž se stížnost zakládá (viz http://www.ombudsman.europa.eu). Tato stížnost nebude mít za následek ani pozastavení lhůty pro podání odvolání, ani započetí nové lhůty pro podání odvolání.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="ET">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Euroopa Komisjon, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Jules Horowitzi nimelises reaktoris (JHR) kiiritusvõimsustele tagatud juurdepääsuõiguse ostmine Euratomi poolt (keda esindab Euroopa Komisjon)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Hange käsitleb komisjoni, kes tegutseb ühenduse nimel, õigust saada kasu Jules Horowitzi nimelises reaktoris (Jules Horowitz Reactor (JHR)) katselistele kiiritusvõimsustele tagatud ja turvalisest juurdepääsuõigusest.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Hange käsitleb komisjoni, kes tegutseb ühenduse nimel, õigust saada kasu Jules Horowitzi nimelises reaktoris (Jules Horowitz Reactor (JHR)) katselistele kiiritusvõimsustele tagatud ja turvalisest juurdepääsuõigusest.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>probleemsete ja riskivaldkondade pakutud analüüsi kvaliteet ning asjakohased leevendusmeetmed, võttes arvesse hanke nõudeid ja eesmärke</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>aastase juurdepääsuõiguse omandamiseks pakutud metoodika kvaliteet ja sobivus</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizon 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>kõigis riigihangete lepingu allkirjastanud riikides asuvate sarnaste olemasolevate või ehitusjärgus rajatiste seas on JHR ainulaadne ja seetõttu ainus, kus on võimalik korraldada Euratomi teadus- ja koolitusprogrammi raames toimuvate kaudsete meetmete jaoks vajalikke kiirituskatseid.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Kuna tegu on väljakuulutamiseta läbirääkimistega hankemenetlusega finantsmääruse I lisa artikli 11.1(b) alusel, pole lepingut veel allkirjastatud. Selles jaotises esitatud lepingu allkirjastamise kuupäev on lepingu sõlmimise otsuse kuupäev.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Üldkohus</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Punktis VI.4.1) nimetatud organile võib apellatsioone esitada 2 kuu jooksul alates lepingu sõlmimise teatest. Lepingu sõlmimise menetluse kohta võib esitada tähelepanekuid punktis I.1) nimetatud avaliku sektori hankijale. Juhul kui kogetakse haldusomavoli, võib Euroopa Ombudsmanile esitada kaebuse 2 aasta jooksul päevast, mil saadakse teada faktid, millel kaebus põhineb (vt http://www.ombudsman.europa.eu). Nimetatud kaebuse esitamine ei too kaasa vaidlustuste esitamise tähtaja peatamist ega uue tähtaja määramist.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="HU">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Európai Bizottság, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>A Jules Horowitz reaktor (JHR) sugárzási kapacitásaihoz való garantált hozzáférési jogok vétele (az Európai Bizottság által képviselt) Euratom által</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>A közbeszerzés tárgya annak biztosítása az Közösség nevében eljáró Európai Bizottság számára, hogy megillessék a Jules Horowitz reaktor (JHR) kísérleti sugárzási kapacitásaihoz való garantált és biztonságos hozzáférési jogok.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>A közbeszerzés tárgya annak biztosítása az Közösség nevében eljáró Európai Bizottság számára, hogy megillessék a Jules Horowitz reaktor (JHR) kísérleti sugárzási kapacitásaihoz való garantált és biztonságos hozzáférési jogok.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>A probléma és a kockázatterületek javasolt elemzésének és a megfelelő enyhítő intézkedéseknek a minősége a közbeszerzés követelményei és célkitűzései figyelembevételével</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Az éves hozzáférési jogok felhalmozódására javasolt módszertan minősége és fenntarthatósága</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>A létesítmény a kormányzati közbeszerzésről szóló megállapodást aláírt valamennyi államban található egyéb meglévő vagy építés alatt álló létesítményhez képest egyedi jelleggel bír, ezért csak ez a létesítmény képes azon sugárzási kísérletek elvégzésére, amelyek a közvetett cselekvések végrehajtásához szükségesek az Euratom kutatási és képzési programja keretében.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Mivel a költségvetési rendelet I. melléklete 11. cikke (1) bekezdése b) pontja alapján ajánlati felhívás közzététele nélküli tárgyalásos eljárásról van szó, a szerződés aláírására még nem került sor. A jelen szakasz szerint a szerződés aláírásának dátuma az odaítélésről szóló határozat dátuma.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Törvényszék</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Az odaítélési határozatra vonatkozó értesítést követő 2 hónapon belül jogorvoslati kérelem nyújtható be a VI.4.1). pontban feltüntetett jogorvoslati szervhez. Az odaítélési eljárással kapcsolatban az I.1) pontban feltüntetett ajánlatkérőnek nyújthatja be észrevételeit. Amennyiben az ajánlattevő úgy véli, hogy hivatali visszásságra került sor, panaszt tehet az európai ombudsmannál attól a naptól számított 2 éven belül, hogy a panaszra okot adó tényről tudomást szerzett (lásd a http://www.ombudsman.europa.eu oldalon). A benyújtott panasz nem eredményezi sem a fellebbezési időszak felfüggesztését, sem új fellebbezési időszak megnyílását.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="LT">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Europos Komisija, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Euratomo (atstovaujamo Europos Komisijos) garantuojamų prieigos teisių pirkimas švitinimo pajėgumams Jules Horowitz reaktoriuje (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Pirkimo objektas yra Komisijos, veikiančios Bendrijos vardu, teisė naudotis garantuotomis ir saugiomis prieigos prie Jules Horowitz reaktoriaus eksperimentinio švitinimo galimybėmis.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Pirkimo objektas yra Komisijos, veikiančios Bendrijos vardu, teisė naudotis garantuotomis ir saugiomis prieigos prie Jules Horowitz reaktoriaus eksperimentinio švitinimo galimybėmis.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Siūlomos problemų ir rizikos sričių analizės kokybė ir tinkamos švelninimo priemonės, atsižvelgiant į pirkimo reikalavimus ir tikslus</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Metinių prieigos teisių kaupimo metodikos kokybė ir tinkamumas</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>„Horizontas 2020“</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Priemonė turi unikalų pobūdį tarp panašių esamų ar statomų statybos objektų, esančių visose valstybėse, pasirašiusiose Sutartį dėl viešųjų pirkimų, todėl yra vienintelė, galinti atlikti švitinimo eksperimentus, būtinus vykdant netiesioginius veiksmus pagal Euratomo mokslinių tyrimų ir mokymo programą.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Kadangi tai susiję su derybų procedūra neskelbiant skelbimo apie pirkimą pagal Finansinio reglamento I priedo 11.1 dalies b punktą, sutartis dar nepasirašyta. Sutarties pasirašymo data pagal šią dalį yra sprendimo dėl sutarties skyrimo data.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Bendrasis Teismas</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Per 2 mėnesius nuo sprendimo paskirti sutartį galima pateikti apeliaciją VI.4.1) dalyje nurodytai priežiūros institucijai. Galite pateikti bet kokias pastabas dėl sutarties skyrimo procedūros I.1) dalyje nurodytai perkančiajai organizacijai. Jeigu manote, kad buvo blogai administruojama, galite pateikti skundą Europos ombudsmenui per 2 metus nuo dienos, kai tapo žinomi faktai, kuriais grindžiamas skundas (žr. http://www.ombudsman.europa.eu). Dėl tokio skundo nebus sustabdytas apeliacijų teikimo laikotarpis ar pradėtas naujas apeliacijų teikimo laikotarpis.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="LV">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Eiropas Komisija, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Euratom (ko pārstāv Eiropas Komisija) iepirkums saistībā ar garantētām piekļuves tiesībām apstarošanas iespējām Jules Horowitz reaktorā (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Iepirkuma mērķis ir Komisijas, kas darbojas Kopienas interesēs, tiesības gūt labumu no garantētām un drošām piekļuves tiesībām eksperimentālās apstarošanas iespējām JHR.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Iepirkuma mērķis ir Komisijas, kas darbojas Kopienas interesēs, tiesības gūt labumu no garantētām un drošām piekļuves tiesībām eksperimentālās apstarošanas iespējām JHR.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Problēmu un riska jomu piedāvātās analīzes un attiecīgo samazināšanas pasākumu kvalitāte, ņemot vērā iepirkuma prasības un mērķus</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Tās metodikas kvalitāte un piemērotība, kura piedāvāta attiecībā uz ikgadējo piekļuves tiesību uzkrāšanu</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Apvārsnis 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Objektam ir unikāls raksturs starp līdzīgiem pastāvošiem vai būvniecības stadijā esošiem objektiem, kas atrodas visās valstīs, kuras parakstījušas Valsts iepirkuma nolīgumu, un tāpēc tikai tajā ir iespējams veikt apstarošanas eksperimentus, kas nepieciešami, lai īstenotu netiešas darbības Euratom pētniecības un apmācības programmas ietvaros.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Tā kā ir runa par sarunu procedūru bez paziņojuma par līgumu publicēšanas, pamatojoties uz Finanšu regulas I pielikuma 11.1. punkta b) apakšpunktu, līgums vēl nav parakstīts. Līguma parakstīšanas datums saskaņā ar šo iedaļu ir piešķiršanas lēmuma datums.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Vispārējā tiesa</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>pārsūdzību var iesniegt VI.4.1) iedaļā minētajai struktūrai, kas atbildīga par pārskatīšanu, divu mēnešu laikā no piešķiršanas lēmuma paziņošanas. Piezīmes par piešķiršanas procedūru var iesniegt I.1) iedaļā minētajai līgumslēdzējai iestādei. Ja uzskatāt, ka pieļauta administratīva kļūme, varat iesniegt sūdzību Eiropas Ombudam divu gadu laikā no dienas, kad esat uzzinājis par faktiem, uz kuriem balstīta sūdzība (sk. http://www.ombudsman.europa.eu). Šādas sūdzības iesniegšana nevar ne atlikt pārsūdzību iesniegšanas termiņu, ne arī noteikt jaunu periodu pārsūdzību iesniegšanai.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="MT">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Il-Kummissjoni Ewropea, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Ix-xiri mill-Euratom (Irrappreżentat mill-Kummissjoni Ewropea) ta’ Drittijiet ta’ Aċċess Iggarantiti għal Ħiliet għar-Radjazzjoni fir-Reattur Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Is-suġġett tal-ksib hu d-dritt tal-Kummissjoni, li taġixxi f’isem il-Komunità, biex tibbenefika minn drittijiet ta’ aċċess iggarantiti u siguri għall-ħila sperimentali għar-radjazzjoni tar-Reattur Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Is-suġġett tal-ksib hu d-dritt tal-Kummissjoni, li taġixxi f’isem il-Komunità, biex tibbenefika minn drittijiet ta’ aċċess iggarantiti u siguri għall-ħila sperimentali għar-radjazzjoni tar-Reattur Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Il-kwalità tal-analiżi proposta ta’ żoni ta’ problemi u ta’ riskju u miżuri ta’ tnaqqis xierqa li tieħu f'kunsiderazzjoni l-ħtiġijiet u l-objettivi tal-ksib</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Il-kwalità u kemm hija xierqa l-metodoloġija proposta għall-akkumulazzjoni ta’ drittijiet ta’ aċċess annwali</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Orizzont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Il-faċilità għandha karattru uniku fost faċilitajiet simili eżistenti jew taħt kostruzzjoni li jinsabu fl-istati kollha li ffirmaw il-Ftehim dwar il-Ksib tal-Gvern u hija, għalhekk, l-unika kapaċi twettaq esperimenti tar-radjazzjoni meħtieġa biex titwettaq implimentazzjoni tal-azzjonijiet indiretti fil-qafas tal-Programm tar-Riċerka u t-Taħriġ tal-Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Minħabba l-fatt, li hija kkonċernata proċedura nnegozjata mingħajr pubblikazzjoni ta’ avviż dwar kuntratt fuq punt 11.1(b) Anness I RF, il-kuntratt għadu ma ġiex iffirmat. Id-data tal-firma tal-kuntratt taħt din it-taqsima hija d-data tad-deċiżjoni tal-għoti.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Il-Qorti Ġenerali</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Fi żmien xahrejn (2) mill-avviż dwar id-deċiżjoni tal-għoti, jista' jitressaq appell quddiem il-korp ta' reviżjoni taħt it-titlu VI.4.1). Tista' tissottometti kwalunkwe osservazzjonijiet dwar il-proċedura tal-għoti lill-awtorità li qiegħda toħroġ il-kuntratt indikata taħt it-titlu l.1). Jekk temmen li kien hemm amministrazzjoni ħażina, tista' tressaq ilment lill-Ombudsman Ewropew fi żmien sentejn (2) mid-data li fiha sirt taf dwar il-fatti li fuqhom huwa bbażat l-ilment (ara http://www.ombudsman.europa.eu). Ilment bħal dan mhux se jwassal biex jew ikun sospiż il-limitu taż-żmien għat-tressiq ta' appell jew biex jinfetaħ perijodu ġdid għat-tressiq ta' appell.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="PL">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Komisja Europejska, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Nabycie przez Euratom (reprezentowany przez Komisję Europejską) gwarantowanego prawa dostępu do mocy napromieniania w reaktorze Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Przedmiotem zamówienia jest nabycie przez Komisję, działającą w imieniu Wspólnoty, prawa do korzystania z gwarantowanego i bezpiecznego dostępu do mocy napromieniania w reaktorze Jules Horowitz (JHR) na potrzeby badań eksperymentalnych.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Przedmiotem zamówienia jest nabycie przez Komisję, działającą w imieniu Wspólnoty, prawa do korzystania z gwarantowanego i bezpiecznego dostępu do mocy napromieniania w reaktorze Jules Horowitz (JHR) na potrzeby badań eksperymentalnych.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>jakość proponowanej analizy obszarów problemów i ryzyka oraz odpowiednich środków łagodzących, przy uwzględnieniu wymogów i celów zamówienia</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>jakość i odpowiedniość proponowanej metodyki pozyskiwania rocznych praw dostępu</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>inicjatywa „Horyzont 2020”</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Obiekt ma wyjątkowy charakter wśród podobnych istniejących obiektów lub obiektów w budowie znajdujących się we wszystkich państwach, które podpisały porozumienie w sprawie zamówień rządowych, a zatem jest jedynym zdolnym do przeprowadzania eksperymentów napromieniania koniecznych do realizacji działań pośrednich w ramach programu badawczo-szkoleniowego Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Ze względu na fakt, że dotyczy to procedury negocjacyjnej bez publikacji ogłoszenia o zamówieniu na podstawie pkt 11.1 lit. b) załącznika I do rozporządzenia finansowego, zamówienie nie zostało jeszcze podpisane. Data podpisania umowy podana w niniejszym punkcie jest datą decyzji o udzieleniu zamówienia.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Sąd</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Odwołanie do organu, o którym mowa w pkt VI.4.1), można złożyć w ciągu 2 miesięcy od zawiadomienia o decyzji o udzieleniu zamówienia. Uwagi dotyczące procedury udzielania zamówienia można przesyłać do instytucji zamawiającej wskazanej w pkt I.1). W przypadku stwierdzenia niewłaściwego administrowania istnieje możliwość złożenia skargi do Europejskiego Rzecznika Praw Obywatelskich w ciągu 2 lat od powzięcia wiadomości o faktach będących podstawą skargi (zob. http://www.ombudsman.europa.eu). Taka skarga nie skutkuje zawieszeniem ani rozpoczęciem na nowo biegu terminu składania odwołań.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="SK">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Európska komisia, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Nákup zaručených prístupových práv pre kapacity ožarovania v reaktore Jules Horowitz (JHR) spoločenstvom Euratom (zastúpené Európskou komisiou)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Predmetom obstarávania je právo Komisie, konajúcej v mene Spoločenstva, využívať zaručené a bezpečné prístupové práva k experimentálnej kapacite ožarovania v reaktore Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Predmetom obstarávania je právo Komisie, konajúcej v mene Spoločenstva, využívať zaručené a bezpečné prístupové práva k experimentálnej kapacite ožarovania v reaktore Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalita navrhovanej analýzy problému a rizikových oblastí a príslušných opatrení na zmiernenie, so zohľadnením požiadaviek a cieľov obstarávania</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvalita a vhodnosť navrhovanej metodiky na zhromažďovanie každoročných prístupových práv</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Horizont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Zariadenie má jedinečný charakter spomedzi podobných existujúcich zariadení alebo zariadení vo výstavbe, ktoré sa nachádzajú vo všetkých štátoch podpísaných v Dohode o vládnom obstarávaní, a predstavuje preto jediné zariadenie schopné vykonávať experimenty s ožarovaním potrebné na vykonávanie nepriamych činností v rámci výskumného a vzdelávacieho programu Euratomu.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Vzhľadom na to, že ide o rokovacie konanie bez uverejnenia oznámenia o vyhlásení verejného obstarávania na základe bodu 11.1 písm. b) prílohy I nariadenia o rozpočtových pravidlách, zmluva ešte nebola podpísaná. Dátum podpisu zmluvy v rámci tohto oddielu je dátumom rozhodnutia o pridelení.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Všeobecný súd</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Odvolanie môžete podať orgánu uvedenému v bode VI.4.1). do 2 mesiacov od oznámenia o pridelení zákazky. Prípadné pripomienky týkajúce sa výberového konania môžete predložiť obstarávateľovi uvedenému v bode I.1). Ak sa domnievate, že došlo k nesprávnemu úradnému postupu, môžete podať sťažnosť európskemu ombudsmanovi do 2 rokov od dátumu, keď ste sa dozvedeli o skutočnosti, na ktorej sa táto sťažnosť zakladá (pozri http://www.ombudsman.europa.eu). Táto sťažnosť nebude mať za následok prerušenie lehoty na podanie odvolania, ani stanovenie novej lehoty na podanie odvolania.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="SL">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Evropska komisija, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Nakup s strani Euratoma (ki ga zastopa Evropska komisija) pravic do zajamčenega dostopa za zmogljivosti obsevanja v reaktorju Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Predmet javnega naročila je pravica Komisije, ki deluje v imenu Skupnosti, da izkoristi pravice zajamčenega in varnega dostopa do zmogljivosti eksperimentalnega obsevanja v reaktorju Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Predmet javnega naročila je pravica Komisije, ki deluje v imenu Skupnosti, da izkoristi pravice zajamčenega in varnega dostopa do zmogljivosti eksperimentalnega obsevanja v reaktorju Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kakovost predlagane analize področij težav in tveganj ter ustreznih blažilnih ukrepov ob upoštevanju zahtev in ciljev javnega naročila</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kakovost in primernost predlagane metodologije za pridobitev letnih pravic do dostopa</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Obzorje 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Objekt ima edinstven značaj med podobnimi obstoječimi objekti ali objekti v gradnji, ki se nahajajo v vseh državah podpisnicah Sporazuma o vladnih naročilih, zato je edini sposoben izvajati poskuse obsevanja, ki so potrebni za izvajanje posrednih ukrepov v okviru programa Euratom za raziskave in usposabljanje.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Ker gre za postopek s pogajanji brez objave obvestila o naročilu v skladu s točko 11.1(b) Priloge I k finančni uredbi, pogodba še ni bila sklenjena. Datum podpisa pogodbe v okviru tega oddelka je datum sklepa o oddaji.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Splošno sodišče</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>V dveh mesecih od obvestila o oddaji naročila lahko vložite pritožbo pri revizijskem organu, navedenem v oddelku VI.4.1). Morebitne pripombe v zvezi s postopkom oddaje naročila lahko pošljete naročniku na naslov iz oddelka I.1). Če menite, da je prišlo do nepravilnosti, lahko vložite pritožbo pri Evropskem varuhu človekovih pravic v dveh letih od datuma, ko ste bili obveščeni o dejstvih, ki predstavljajo podlago za pritožbo (glejte http://www.ombudsman.europa.eu). Pritožba ne odloži roka za vložitev pritožb in ne začne novega obdobja za vložitev pritožb.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="GA">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>An Coimisiún Eorpach, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Ceannachán ag Euratom (Arna ionadú ag an gCoimisiún Eorpach) de Chearta Rochtana Ráthaithe maidir le Cumais Ionradaíochta in Imoibreoir Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Is é ábhar an tsoláthair ceart an Choimisiúin, ag feidhmiú thar ceann an Chomhphobail, tairbhe a bhaint as cearta ráthaithe um rochtain shlán ar chumas ionradaíochta turgnamhach Imoibreoir Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Is é ábhar an tsoláthair ceart an Choimisiúin, ag feidhmiú thar ceann an Chomhphobail, tairbhe a bhaint as cearta ráthaithe um rochtain shlán ar chumas ionradaíochta turgnamhach Imoibreoir Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Cáilíocht na hanailíse atá molta maidir le limistéir faidhbe agus riosca agus bearta maolaithe iomchuí agus riachtanais agus cuspóirí an tsoláthair á dtabhairt san áireamh</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Cáilíocht agus oiriúnacht na modheolaíochta atá molta le haghaidh cearta rochtana bliantúla a charnadh</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Fís 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Baineann tréithe uathúla leis an tsaoráid i measc saoráidí comhchosúla reatha nó á dtógáil, atá suite i ngach stát a shínigh Comhaontú maidir le Soláthar Rialtais; agus is amhlaidh dá réir arb í an t-aon cheann í inar féidir turgnaimh ionradaíochta a dhéanamh is gá chun na gníomhartha indíreacha a chur chun feidhme faoi chuimsiú Chlár Taighde agus Oiliúna Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Mar gheall gurb é nós imeachta idirbheartaithe gan fógra conartha a fhoilsiú roimh ré bunaithe ar phointe 11.1 (b) d’Iarscríbhinn I den RA atá i gceist, níor síníodh an conradh go fóill. Is ionann dáta sínithe an chonartha faoin alt seo agus dáta an chinnidh dhámhachtana.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>An Chúirt Ghinearálta</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Laistigh de 2 mhí óna fhógairt chinneadh na dámhachtana is féidir leat achomharc a thaisceadh leis an gcomhlacht athbhreithniúcháin faoi cheannteideal VI.4.1). Is féidir leat aon tuairimí maidir leis an nós imeachta dámhachtana a chur isteach chuig an údarás conarthach atá léirithe faoi cheannteideal I.1). Má chreideann tú go raibh míriarachán i gceist, féadfaidh tú gearán a chur chuig an Ombudsman Eorpach laistigh de 2 bhliain ón dáta a d'éirigh tú feasach ar na fíricí a bhfuil an gearán bunaithe orthu (féach http://www.ombudsman.europa.eu). Ní dhéanfar an teorainn ama a chur ar fionraí ná achomharc a thionscnamh ná tréimhse nua taiscthe achomhairc a oscailt mar thoradh ar ghearán den sórt sin.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="BG">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Европейска комисия, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Закупуване от Евратом (представляван от Европейската комисия) на гарантирани права на достъп за възможности за облъчване в реактор Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Предметът на поръчката е правото на Комисията, действаща от името на Общността, да се възползва от гарантирани и сигурни права за достъп до експерименталните възможности за облъчване на реактор Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Предметът на поръчката е правото на Комисията, действаща от името на Общността, да се възползва от гарантирани и сигурни права за достъп до експерименталните възможности за облъчване на реактор Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Качество на предложения анализ на проблемните и рискови зони и подходящи мерки за ограничаване, като се вземат предвид изискванията и целите на обществената поръчка</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Качество и уместност на предложената методология за натрупването на годишни права на достъп</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Хоризонт 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Съоръжението има уникален характер сред сходните съществуващи или в процес на изграждане съоръжения, които се намират във всички държави, подписали Споразумение за държавни поръчки, и следователно е единственото, което може да извършва експерименти по облъчване, необходими за изпълнение на непреки действия в рамките на програмата за научни изследвания и обучение на Евратом.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Поради факта, че се отнася до процедура на договаряне без публикуване на обявление за поръчка въз основа на точка 11.1, буква б) от приложение I към Финансовия регламент, договорът все още не е подписан. Датата на подписване на договора в този раздел е датата на решението за възлагане.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Общ съд</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>В рамките на 2 месеца от уведомяването за решението за възлагане, може да се подаде жалба до органа за преглед, посочен в точка VI.4.1). Можете да подадете всякакви коментари относно процедурата по възлагане до възлагащия орган, посочен в точка I.1). Ако считате, че е имало лошо управление, Вие можете да подадете жалба до Европейския омбудсман в рамките на 2 години от датата, на която сте узнали за фактите, на които се основава жалбата (вж. http://www.ombudsman.europa.eu). Такава жалба нито спира срока за отправяне на жалба, нито води до откриване на нов срок за подаване на жалба.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="RO">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Comisia Europeană, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Achiziționare de către Euratom (reprezentată de Comisia Europeană) de drepturi de acces garantat pentru capacitățile de iradiere de la reactorul Jules Horowitz (JHR).</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Obiectul contractului de achiziții publice constă în dreptul Comisiei, care acționează în numele Comunității, de a beneficia de drepturi de acces garantat și securizat la capacitatea de iradiere experimentală de la reactorul Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Obiectul contractului de achiziții publice constă în dreptul Comisiei, care acționează în numele Comunității, de a beneficia de drepturi de acces garantat și securizat la capacitatea de iradiere experimentală de la reactorul Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Calitatea analizei propuse privind domeniile problematice și de risc și măsurile de atenuare corespunzătoare, luând în considerare cerințele și obiectivele procedurii de achiziții publice</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Calitatea și caracterul adecvat ale metodologiei propuse pentru acumularea de drepturi de acces anuale</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Orizont 2020</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Instalația are un caracter unic printre instalațiile similare existente sau în construcție care sunt situate în toate statele semnatare ale Acordului privind achizițiile publice și este, prin urmare, singura capabilă să efectueze experimente de iradiere necesare pentru a realiza implementarea acțiunilor indirecte în cadrul Programului de cercetare și formare al Euratom.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Din cauza faptului că este vizată o procedură negociată fără publicarea unui anunț de participare în temeiul punctului 11.1 (b) din anexa I la Regulamentul financiar, contractul nu a fost încă semnat. Data semnării contractului în cadrul acestei secțiuni este data deciziei de atribuire.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Tribunalul</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>În termen de 2 luni de la notificarea deciziei de atribuire, se poate depune un recurs la organismul de soluționare menționat la punctul VI.4.1). Eventualele observații privind procedura de atribuire se pot depune la autoritatea contractantă indicată la punctul I.1). În cazul unei presupuse administrări necorespunzătoare, se poate depune o plângere la Ombudsmanul European în termen de 2 ani de la data la care s-a luat cunoștință de faptele pe care se bazează plângerea (a se vedea http://www.ombudsman.europa.eu). O astfel de plângere nu are drept efect suspendarea termenului pentru introducerea unei căi de atac sau deschiderea unui nou termen pentru introducerea căilor de atac.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+      <F03_2014 CATEGORY="TRANSLATION" FORM="F03" LG="HR">
+         <LEGAL_BASIS VALUE="32014L0024"/>
+         <CONTRACTING_BODY>
+            <ADDRESS_CONTRACTING_BODY>
+               <OFFICIALNAME>Europska komisija, Directorate-General for Research and Innovation</OFFICIALNAME>
+               <TOWN>Brussels</TOWN>
+               <COUNTRY VALUE="BE"/>
+               <E_MAIL>rtd-call-for-tenders@ec.europa.eu</E_MAIL>
+               <n2016:NUTS CODE="BE"/>
+               <URL_GENERAL>http://ec.europa.eu/research/index.cfm?pg=tenders-open</URL_GENERAL>
+            </ADDRESS_CONTRACTING_BODY>
+            <CA_TYPE VALUE="EU_INSTITUTION"/>
+            <CA_ACTIVITY VALUE="GENERAL_PUBLIC_SERVICES"/>
+         </CONTRACTING_BODY>
+         <OBJECT_CONTRACT>
+            <TITLE>
+               <P>Kupovina od strane Euratoma (koji predstavlja Europska komisija) zajamčenih prava pristupa za kapacitete zračenja u reaktoru Jules Horowitz (JHR)</P>
+            </TITLE>
+            <CPV_MAIN>
+               <CPV_CODE CODE="73100000"/>
+               <CPV_SUPPLEMENTARY_CODE CODE="RC08"/>
+            </CPV_MAIN>
+            <TYPE_CONTRACT CTYPE="SERVICES"/>
+            <SHORT_DESCR>
+               <P>Predmet je nabave pravo Komisije, koja djeluje u ime Zajednice, da ostvari korist od zajamčenih i sigurnih prava pristupa eksperimentalnom kapacitetu zračenja reaktora Jules Horowitz.</P>
+            </SHORT_DESCR>
+            <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+            <NO_LOT_DIVISION/>
+            <OBJECT_DESCR ITEM="1">
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="38970000"/>
+               </CPV_ADDITIONAL>
+               <CPV_ADDITIONAL>
+                  <CPV_CODE CODE="42151000"/>
+               </CPV_ADDITIONAL>
+               <n2016:NUTS CODE="FR"/>
+               <SHORT_DESCR>
+                  <P>Predmet je nabave pravo Komisije, koja djeluje u ime Zajednice, da ostvari korist od zajamčenih i sigurnih prava pristupa eksperimentalnom kapacitetu zračenja reaktora Jules Horowitz.</P>
+               </SHORT_DESCR>
+               <AC>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvaliteta predložene analize problema i rizičnih područja te primjerenih mjera ublažavanja uzimajući u obzir zahtjeve i ciljeve nabave</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_QUALITY>
+                     <AC_CRITERION>Kvaliteta i prikladnost metodologije predložene za prikupljanje godišnjih prava pristupa</AC_CRITERION>
+                     <AC_WEIGHTING>25</AC_WEIGHTING>
+                  </AC_QUALITY>
+                  <AC_PRICE>
+                     <AC_WEIGHTING>50</AC_WEIGHTING>
+                  </AC_PRICE>
+               </AC>
+               <NO_OPTIONS/>
+               <EU_PROGR_RELATED>
+                  <P>Obzor 2020.</P>
+               </EU_PROGR_RELATED>
+            </OBJECT_DESCR>
+         </OBJECT_CONTRACT>
+         <PROCEDURE>
+            <PT_AWARD_CONTRACT_WITHOUT_CALL>
+               <D_ACCORDANCE_ARTICLE>
+                  <D_TECHNICAL/>
+               </D_ACCORDANCE_ARTICLE>
+               <D_JUSTIFICATION>
+                  <P>Instrument ima jedinstveno obilježje među sličnim postojećim postrojenjima ili onima u fazi izgradnje koji se nalaze u svim državama koje su potpisale Sporazum o javnoj nabavi te je stoga jedino u stanju provesti pokuse ozračivanja potrebnih za provedbu neizravnih aktivnosti u okviru Euratomova programa za istraživanje i osposobljavanje.</P>
+               </D_JUSTIFICATION>
+            </PT_AWARD_CONTRACT_WITHOUT_CALL>
+            <CONTRACT_COVERED_GPA/>
+         </PROCEDURE>
+         <AWARD_CONTRACT ITEM="1">
+            <CONTRACT_NO>RTD/2019/NP/009</CONTRACT_NO>
+            <AWARDED_CONTRACT>
+               <DATE_CONCLUSION_CONTRACT>2021-01-26</DATE_CONCLUSION_CONTRACT>
+               <TENDERS>
+                  <NB_TENDERS_RECEIVED>1</NB_TENDERS_RECEIVED>
+               </TENDERS>
+               <CONTRACTORS>
+                  <NO_AWARDED_TO_GROUP/>
+                  <CONTRACTOR>
+                     <ADDRESS_CONTRACTOR>
+                        <OFFICIALNAME>Commissariat à l´énergie atomique et aux énergies alternatives</OFFICIALNAME>
+                        <TOWN>Paris</TOWN>
+                        <COUNTRY VALUE="FR"/>
+                        <n2016:NUTS CODE="FR"/>
+                     </ADDRESS_CONTRACTOR>
+                     <NO_SME/>
+                  </CONTRACTOR>
+               </CONTRACTORS>
+               <VALUES>
+                  <VAL_TOTAL CURRENCY="EUR">6000000.00</VAL_TOTAL>
+               </VALUES>
+            </AWARDED_CONTRACT>
+         </AWARD_CONTRACT>
+         <COMPLEMENTARY_INFO>
+            <INFO_ADD>
+               <P>Zbog činjenice da se radi o pregovaračkom postupku bez objave poziva na nadmetanje temeljem točke 11.1 (b) Priloga I. Financijskoj uredbi, ugovor još nije potpisan. Datum potpisivanja ugovora u okviru ovog odjeljka datum je odluke o sklapanju ugovora.</P>
+            </INFO_ADD>
+            <ADDRESS_REVIEW_BODY>
+               <OFFICIALNAME>Opći sud</OFFICIALNAME>
+               <TOWN>Luxemburg</TOWN>
+               <COUNTRY VALUE="LU"/>
+            </ADDRESS_REVIEW_BODY>
+            <REVIEW_PROCEDURE>
+               <P>Žalba se može uložiti tijelu nadležnom za postupak pravne zaštite iz točke VI.4.1). u roku od 2 mjeseca od obavijesti o dodjeli ugovora. Komentare u vezi s postupkom sklapanja ugovora možete dostaviti javnom naručitelju iz naslova I.1). Ako smatrate da je došlo do nepravilnosti u postupanju, pritužbu možete podnijeti Europskom ombudsmanu u roku od 2 godine od datuma kad ste doznali za okolnosti koje su uzrok pritužbi (vidjeti http://www.ombudsman.europa.eu). Takvom se pritužbom ne obustavlja rok za ulaganje žalbe niti se ne otvara novo razdoblje za ulaganje žalbe.</P>
+            </REVIEW_PROCEDURE>
+            <DATE_DISPATCH_NOTICE>2021-01-27</DATE_DISPATCH_NOTICE>
+         </COMPLEMENTARY_INFO>
+      </F03_2014>
+   </FORM_SECTION>
+</TED_EXPORT>

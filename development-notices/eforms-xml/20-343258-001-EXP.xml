@@ -97,9 +97,9 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
@@ -253,9 +253,9 @@
       <cac:NoticeDocumentReference>
          <cbc:ID schemeName="ojs-notice-id">2020/S 091-215923</cbc:ID>
       </cac:NoticeDocumentReference>
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
@@ -339,7 +339,33 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension>
+                  <efext:EformsExtension><!--EU Funds Financing Identifier (BT-5010)--><!--EU Funds Programme (BT-7220)--><!--EU Funds Details (BT-6140)-->
+                     <efac:Funding>
+                        <cbc:Description languageID="ENG">EU administrative appropriations.</cbc:Description>
+                        <cbc:Description languageID="DAN">EU's administrative bevillinger.</cbc:Description>
+                        <cbc:Description languageID="DEU">EU-Verwaltungsmittel.</cbc:Description>
+                        <cbc:Description languageID="SPA">Créditos administrativos de la Unión Europea.</cbc:Description>
+                        <cbc:Description languageID="FIN">EU:n hallintomäärärahat.</cbc:Description>
+                        <cbc:Description languageID="FRA">Crédits administratifs de l'UE.</cbc:Description>
+                        <cbc:Description languageID="ELL">Διοικητικές πιστώσεις της ΕΕ.</cbc:Description>
+                        <cbc:Description languageID="ITA">Stanziamenti amministrativi dell'UE.</cbc:Description>
+                        <cbc:Description languageID="NLD">Administratieve kredieten van de EU.</cbc:Description>
+                        <cbc:Description languageID="POR">Dotações administrativas da UE.</cbc:Description>
+                        <cbc:Description languageID="SWE">EU:s administrativa anslag.</cbc:Description>
+                        <cbc:Description languageID="CES">Administrativní rozpočtové prostředky EU.</cbc:Description>
+                        <cbc:Description languageID="EST">ELi haldusassigneeringud.</cbc:Description>
+                        <cbc:Description languageID="HUN">Európai uniós igazgatási előirányzatok.</cbc:Description>
+                        <cbc:Description languageID="LIT">ES administraciniai asignavimai.</cbc:Description>
+                        <cbc:Description languageID="LAV">ES administratīvās apropriācijas.</cbc:Description>
+                        <cbc:Description languageID="MLT">L-approprjazzjonijiet amministrattivi tal-UE.</cbc:Description>
+                        <cbc:Description languageID="POL">Środki administracyjne UE.</cbc:Description>
+                        <cbc:Description languageID="SLK">administratívne rozpočtové prostriedky EÚ.</cbc:Description>
+                        <cbc:Description languageID="SLV">Sredstva EU za upravo.</cbc:Description>
+                        <cbc:Description languageID="GLE">Leithreasuithe riaracháin AE.</cbc:Description>
+                        <cbc:Description languageID="BUL">Бюджетни кредити за административни разходи на ЕС.</cbc:Description>
+                        <cbc:Description languageID="RON">Creditele administrative ale UE.</cbc:Description>
+                        <cbc:Description languageID="HRV">Administrativna sredstva EU-a.</cbc:Description>
+                     </efac:Funding>
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
                         <!--Selection Criteria Name (BT-749)-->
@@ -713,7 +739,7 @@
          </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <cac:FrameworkAgreement><!--Framework Maximum Participants Number (BT-113)-->
@@ -789,7 +815,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->
@@ -849,13 +875,7 @@
                <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
                <cbc:CountrySubentityCode listName="nuts">BE100</cbc:CountrySubentityCode>
                <cac:AddressLine>
-                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY JRC-Petten — THE NETHERLANDS JRC-Sevilla — SPAIN</cbc:Line>
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
@@ -865,13 +885,7 @@
                <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
                <cbc:CountrySubentityCode listName="nuts">BE213</cbc:CountrySubentityCode>
                <cac:AddressLine>
-                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY JRC-Petten — THE NETHERLANDS JRC-Sevilla — SPAIN</cbc:Line>
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
@@ -881,13 +895,7 @@
                <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
                <cbc:CountrySubentityCode listName="nuts">ITC41</cbc:CountrySubentityCode>
                <cac:AddressLine>
-                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY JRC-Petten — THE NETHERLANDS JRC-Sevilla — SPAIN</cbc:Line>
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
@@ -897,13 +905,7 @@
                <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
                <cbc:CountrySubentityCode listName="nuts">NL328</cbc:CountrySubentityCode>
                <cac:AddressLine>
-                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY JRC-Petten — THE NETHERLANDS JRC-Sevilla — SPAIN</cbc:Line>
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>
@@ -913,13 +915,7 @@
                <cbc:AdditionalStreetName>JRC-Ispra — ITALY</cbc:AdditionalStreetName>
                <cbc:CountrySubentityCode listName="nuts">ES618</cbc:CountrySubentityCode>
                <cac:AddressLine>
-                  <cbc:Line>JRC-Karlsruhe — GERMANY</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Petten — THE NETHERLANDS</cbc:Line>
-               </cac:AddressLine>
-               <cac:AddressLine>
-                  <cbc:Line>JRC-Sevilla — SPAIN</cbc:Line>
+                  <cbc:Line>JRC-Karlsruhe — GERMANY JRC-Petten — THE NETHERLANDS JRC-Sevilla — SPAIN</cbc:Line>
                </cac:AddressLine>
             </cac:Address>
          </cac:RealizedLocation>

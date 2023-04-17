@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
-xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.9/publication"
+xmlns:ted-1="http://formex.publications.europa.eu/ted/schema/export/R2.0.9.S01.E01"
+xmlns:ted-2="ted/R2.0.9.S02/publication"
+xmlns:n2016-1="ted/2016/nuts"
+xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
 xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
+exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n2016-1 n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- include FunctX XSLT Function Library -->
 <xsl:include href="lib/functx-1.0.1-doc.xsl"/>
+
+<!-- default SDK version -->
+<xsl:variable name="sdk-version-default" select="'eforms-sdk-1.7'"/>
 
 <!-- application parameters -->
 <xsl:param name="showwarnings" select="1" as="xs:integer"/>
 <xsl:param name="includewarnings" select="1" as="xs:integer"/>
 <xsl:param name="includecomments" select="1" as="xs:integer"/>
 
+<!-- external conversion parameters -->
+<!-- Value for BT-701 Notice Identifier -->
+<xsl:param name="notice-identifier" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'" as="xs:string"/>
+<!-- Value for BT-04 Procedure Identifier -->
+<xsl:param name="procedure-identifier" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'" as="xs:string"/>
+<!-- Value for SDK version -->
+<xsl:param name="sdk-version" select="$sdk-version-default" as="xs:string"/>
 
 <!-- MAPPING FILES -->
-	
+
+<xsl:variable name="eforms-notice-subtypes" select="fn:document('eforms-notice-subtypes.xml')"/>
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
 <xsl:variable name="translations" select="fn:document('translations.xml')"/>
 <xsl:variable name="country-codes-map" select="fn:document('countries-map.xml')"/>
 <xsl:variable name="language-codes-map" select="fn:document('languages-map.xml')"/>
-
 
 
 <!-- #### GLOBAL VARIABLES #### -->
@@ -37,11 +51,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
-<xsl:variable name="ted-form-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY]"/>
+<xsl:variable name="ted-form-elements" select="/*/*:FORM_SECTION/*[@CATEGORY]"/>
 <!-- Variable ted-form-main-element holds the first form element that has @CATEGORY='ORIGINAL'. This is the TED form element which is processed -->
-<xsl:variable name="ted-form-main-element" select="/*/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
+<xsl:variable name="ted-form-main-element" select="/*/*:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
 <!-- Variable ted-form-additional-elements holds the form elements that are not the main form element -->
-<xsl:variable name="ted-form-additional-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
+<xsl:variable name="ted-form-additional-elements" select="/*/*:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
 <!-- Variable ted-form-elements-names holds a list of unique element names of the ted form elements -->
 <xsl:variable name="ted-form-elements-names" select="fn:distinct-values($ted-form-elements/fn:local-name())"/>
 <!-- Variable ted-form-element-name holds the element name of the main form element. -->
@@ -51,9 +65,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable ted-form-element-xpath holds the XPath with positional predicates of the main form element -->
 <xsl:variable name="ted-form-element-xpath" select="functx:path-to-node-with-pos($ted-form-main-element)"/>
 <!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element -->
-<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
+<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(*:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
 <!-- Variable document-code holds the value of the @TYPE attribute of the NOTICE element -->
-<xsl:variable name="document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+<xsl:variable name="document-code" select="/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
 <!-- Variable ted-form-additional-languages holds the values of the @LG attribute of the remaining form elements -->
@@ -66,58 +80,57 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable legal-basis holds the value of the @VALUE attribute of the element LEGAL_BASIS, if it exists. If element LEGAL_BASIS does not exist, it holds the value "OTHER" -->
 <xsl:variable name="legal-basis">
 	<xsl:choose>
-		<xsl:when test="$ted-form-main-element/ted:LEGAL_BASIS"><xsl:value-of select="$ted-form-main-element/ted:LEGAL_BASIS/@VALUE"/></xsl:when>
+		<xsl:when test="$ted-form-main-element/*:LEGAL_BASIS"><xsl:value-of select="$ted-form-main-element/*:LEGAL_BASIS/@VALUE"/></xsl:when>
 		<xsl:otherwise><xsl:text>OTHER</xsl:text></xsl:otherwise>
 	</xsl:choose>
 </xsl:variable>
 
 <!-- Variable directive holds the value of the @VALUE attribute of the element DIRECTIVE, if it exists. Othewise it holds the empty string -->
-<xsl:variable name="directive" select="fn:string(/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:DIRECTIVE/@VALUE)"/>
-
+<xsl:variable name="directive" select="fn:string(/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:DIRECTIVE/@VALUE)"/>
 
 <!-- Variable eforms-notice-subtype holds the computed eForms notice subtype value -->
 <xsl:variable name="eforms-notice-subtype">
 	<xsl:value-of select="opfun:get-eforms-notice-subtype($ted-form-element-name, $ted-form-name, $ted-form-notice-type, $legal-basis, $directive, $document-code)"/>
 </xsl:variable>
 
-<!-- Variable eforms-subtypes-pin holds the values of eForms notice subtypes for notices of Document Type PIN -->
-<xsl:variable name="eforms-subtypes-pin" as="xs:string*">
-	<xsl:for-each select="1 to 9"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
-	<xsl:sequence select="('E1', 'E2')"/>
+<!-- Variable eforms-document-type holds the computed Document Type of the notice being converted -->
+<xsl:variable name="eforms-document-type">
+	<xsl:value-of select="$eforms-notice-subtypes//notice-subtype[id=$eforms-notice-subtype]/fn:string(document-type-id)"/>
 </xsl:variable>
 
-<!-- Variable eforms-subtypes-cn holds the values of eForms notice subtypes for notices of Document Type Contract Notice -->
-<xsl:variable name="eforms-subtypes-cn" as="xs:string*">
-	<xsl:for-each select="10 to 24"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
-	<xsl:sequence select="('E3')"/>
-</xsl:variable>
+<!-- variable eforms-form-type holds the eforms form type -->
+<xsl:variable name="eforms-form-type" select="$eforms-notice-subtypes//notice-subtype[id=$eforms-notice-subtype]/fn:string(form-type)"/>
 
-<!-- Variable eforms-subtypes-can holds the values of eForms notice subtypes for notices of Document Type Contract Award Notice -->
-<xsl:variable name="eforms-subtypes-can" as="xs:string*">
-	<xsl:for-each select="25 to 40"><xsl:sequence select="xs:string(.)"/></xsl:for-each>
-	<xsl:sequence select="('E4')"/>
-</xsl:variable>
+<!-- variable eforms-notice-type holds the eforms notice type -->
+<xsl:variable name="eforms-notice-type" select="$eforms-notice-subtypes//notice-subtype[id=$eforms-notice-subtype]/fn:string(notice-type)"/>
 
-<!-- Variable eforms-form-type holds the computed Document Type of the notice being converted -->
-<xsl:variable name="eforms-form-type">
-	<xsl:choose>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-pin"><xsl:value-of select="'PIN'"/></xsl:when>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-cn"><xsl:value-of select="'CN'"/></xsl:when>
-		<xsl:when test="$eforms-notice-subtype = $eforms-subtypes-can"><xsl:value-of select="'CAN'"/></xsl:when>
-		<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
-	</xsl:choose>
-</xsl:variable>
+<!-- variable eforms-element-name holds the name of the root element -->
+<xsl:variable name="eforms-element-name" select="$mappings//form-types/mapping[abbreviation=$eforms-document-type]/fn:string(element-name)"/>
+
+<!-- variable eforms-element-name holds the namespace of the root element -->
+<xsl:variable name="eforms-xmlns" select="$mappings//form-types/mapping[abbreviation=$eforms-document-type]/fn:string(xmlns)"/>
 
 <!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
-<xsl:variable name="number-of-lots" select="$ted-form-main-element/ted:OBJECT_CONTRACT/fn:count(ted:OBJECT_DESCR)"/>
+<xsl:variable name="number-of-lots" select="$ted-form-main-element/*:OBJECT_CONTRACT/fn:count(*:OBJECT_DESCR)"/>
 
 <!-- Variable lot-numbers-map holds a mapping of the TED XML Lots (OBJECT_DESCR XPath) to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
-	<xsl:variable name="count-lots" select="fn:count($ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR)"/>
+	<xsl:variable name="count-lots" select="fn:count($ted-form-main-element/*:OBJECT_CONTRACT/*:OBJECT_DESCR)"/>
+	<!-- eForms subtypes 1 to 9 are Planning type notices, and use Parts, not Lots, and the BT-137 value uses "PAR-" and not "LOT-". -->
+	<xsl:variable name="lot-prefix">
+		<xsl:choose>
+			<xsl:when test="$eforms-notice-subtype = ('4', '5', '6', 'E2')">
+				<xsl:value-of select="'PAR-'"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="'LOT-'"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
 	<lots>
-		<xsl:for-each select="$ted-form-main-element/ted:OBJECT_CONTRACT/ted:OBJECT_DESCR">
+		<xsl:for-each select="$ted-form-main-element/*:OBJECT_CONTRACT/*:OBJECT_DESCR">
 			<lot>
-				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NO"/></xsl:variable>
+				<xsl:variable name="lot-no"><xsl:value-of select="*:LOT_NO"/></xsl:variable>
 				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
 				<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
 				<lot-no><xsl:value-of select="$lot-no"/></lot-no>
@@ -129,11 +142,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 							<xsl:choose>
 								<!-- LOT_NO is a positive integer between 1 and 9999 -->
 								<xsl:when test="$lot-no-is-convertible">
-									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NO, 4))"/>
+									<xsl:value-of select="fn:concat($lot-prefix, functx:pad-integer-to-length(*:LOT_NO, 4))"/>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="fn:concat('LOT-', ted:LOT_NO)"/>
-								</xsl:otherwise>							
+									<xsl:value-of select="fn:concat($lot-prefix, *:LOT_NO)"/>
+								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
 						<!-- When LOT_NO does not exist -->
@@ -141,13 +154,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 							<xsl:choose>
 								<!-- This is the only Lot in the notice -->
 								<xsl:when test="$count-lots = 1">
-									<!-- use identifier LOT-0000 -->
-									<xsl:value-of select="'LOT-0000'"/>
+									<!-- use identifier LOT-0000 or PAR-0000 -->
+									<xsl:value-of select="fn:concat($lot-prefix, '0000')"/>
 								</xsl:when>
 								<xsl:otherwise>
 									<!-- not tested, no examples found -->
 									<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
-									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(./preceding-sibling::ted:OBJECT_DESCR) + 1), 4))"/>
+									<xsl:value-of select="fn:concat($lot-prefix, functx:pad-integer-to-length((fn:count(./preceding-sibling::*:OBJECT_DESCR) + 1), 4))"/>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:otherwise>
@@ -192,19 +205,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:sequence select="fn:string-length($nuts-code) &gt; 4"/>
 </xsl:function>
 
-<!-- FORM TYPES AND SUBTYPES -->
-
-<!-- Function opfun:get-eforms-element-name returns the name of eForms schema root element, given the Document Type code, e.g. "CN" to "ContractNotice" -->
-<xsl:function name="opfun:get-eforms-element-name" as="xs:string">
-	<xsl:param name="form-abbreviation" as="xs:string"/>
-	<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(element-name)"/>
-</xsl:function>
-
-<!-- Function opfun:get-eforms-xmlns returns the eForms schema XML namespace, given the Document Type code, e.g. "CN" to "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" -->
-<xsl:function name="opfun:get-eforms-xmlns" as="xs:string">
-	<xsl:param name="form-abbreviation" as="xs:string"/>
-	<xsl:value-of select="$mappings//form-types/mapping[abbreviation=$form-abbreviation]/fn:string(xmlns)"/>
-</xsl:function>
+<!-- FORM SUBTYPE -->
 
 <!-- Function opfun:get-eforms-notice-subtype computes the eForms notice subtype, using information from the TED notice -->
 <xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">
@@ -234,9 +235,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
 		</xsl:message>
 	</xsl:if>
-	<!-- read the eForms subtype from the row -->
+	<!-- read the eForms notice subtype from the row -->
 	<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
-	<!-- exit with an error if the eForms subtype is not a recognised value for the converter -->
+	<!-- exit with an error if the eForms notice subtype is not a recognised value for the converter -->
 	<xsl:choose>
 		<xsl:when test="$eforms-subtype eq ''">
 			<xsl:message terminate="yes">
@@ -268,14 +269,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			</xsl:message>
 		</xsl:when>
 	</xsl:choose>
-	<!-- return the valid eForms subtype -->
+	<!-- return the valid eForms notice subtype -->
 	<xsl:value-of select="$eforms-subtype"/>
 </xsl:function>
 
 
 
 <!-- GENERAL FUNCTIONS -->
-	
+
 <!-- Function opfun:descendants-deep-equal compares the contents of two nodes, returning TRUE or FALSE. The names of the root node elements are ignored -->
 <xsl:function name="opfun:descendants-deep-equal" as="xs:boolean">
 	<xsl:param name="node1" as="node()"/>
@@ -285,14 +286,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:for-each select="$node1/node()">
 				<xsl:copy-of select="."/>
 			</xsl:for-each>
-		</out>	
+		</out>
 	</xsl:variable>
 	<xsl:variable name="out2">
 		<out>
 			<xsl:for-each select="$node2/node()">
 				<xsl:copy-of select="."/>
 			</xsl:for-each>
-		</out>	
+		</out>
 	</xsl:variable>
 	<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
 </xsl:function>
@@ -335,7 +336,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:comment><xsl:value-of select="$comment"/></xsl:comment>
 	</xsl:if>
 </xsl:template>
-
 
 <xsl:template name="find-element">
 	<xsl:param name="context" as="element()"/>
@@ -412,11 +412,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			</xsl:element>
 		</xsl:otherwise>
 	</xsl:choose>
-<!--
-			<cbc:paul><xsl:value-of select="$context"/></cbc:paul>
-			<cbc:paul><xsl:value-of select="$ted-form-element-xpath"/></cbc:paul>
-			<cbc:paul><xsl:value-of select="$relative-context"/></cbc:paul>
--->
 </xsl:template>
 
 </xsl:stylesheet>
