@@ -98,9 +98,9 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
-   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
@@ -112,7 +112,7 @@
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode listName="competition">cn-desg</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
@@ -161,9 +161,9 @@
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
-      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
@@ -171,6 +171,7 @@
       <!--Title (BT-21)-->
       <cbc:Name languageID="FRA">Marché de maîtrise d'œuvre de niveau Esquisse + pour la construction du nouveau groupe scolaire René Cassin concours restreint</cbc:Name>
       <!--Description (BT-24)-->
+      <!--WARNING: Description (BT-24) is Mandatory for all eForms subtypes, but no SHORT_DESCR was found in TED XML.-->
       <!--Main Nature (BT-23)-->
       <!--Additional Information (BT-300)-->
       <cbc:Note languageID="FRA">Les dépôts de plis doivent être impérativement remis par voie dématérialisée. Cette consultation bénéficie du service DUME. Pour retrouver cet avis intégral, accéder au DCE, poser des questions à l'acheteur, déposer un pli, allez sur http://www.mp74.fr — Mission de maîtrise d'œuvre de base (articles R. 2431-4 et R. 2431-5 du code de la commande publique) incluant l'EXE. Le marché comprend également une autre mission de maîtrise d'œuvre dans le cadre d'une Prestation supplémentaire éventuelle (PSE): Ordonnancement pilotage coordination (OPC). Candidat (ou un groupement candidat) disposant, a minima, des compétences suivantes: — architecture (en application de la loi nº 77-2 du 3.1.1977 modifiée sur l'architecture); — technique: structures; — technique: fluides; — technique: thermique; — technique: courants forts et faibles; — économie de la construction; — paysagiste; — Haute qualité environnementale (HQE); — acousticien; — Ordonnancement pilotage coordination (OPC) = prestation supplémentaire éventuelle.</cbc:Note>
@@ -196,7 +197,7 @@
          <ext:UBLExtensions>
             <ext:UBLExtension>
                <ext:ExtensionContent>
-                  <efext:EformsExtension>
+                  <efext:EformsExtension><!--EU Funds Financing Identifier (BT-5010)--><!--EU Funds Programme (BT-7220)--><!--EU Funds Details (BT-6140)-->
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
                         <cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
                         <!--Selection Criteria Name (BT-749)-->
@@ -374,7 +375,7 @@
          <!--Electronic Auction URL (BT-123)-->
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
-         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
          <!--Dynamic Purchasing System (BT-766)-->
@@ -392,7 +393,7 @@
          <!--Strategic Procurement Description (BT-777)-->
          <!--Green Procurement (BT-774)-->
          <!--Social Procurement (BT-775)-->
-         <!--Innovative Procurement (BT-776)-->
+         <!--Procurement of Innovation (BT-776)-->
          <!--Accessibility Justification (BT-755)-->
          <!--Accessibility (BT-754)-->
          <!--Quantity (BT-25)-->

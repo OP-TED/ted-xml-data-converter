@@ -265,7 +265,7 @@
 	</mapping>
 		<mapping>
 		<ted-value>D_PROC_RESTRICTED</ted-value>
-		<eforms-value>irregular</eforms-value>
+		<eforms-value>unsuitable</eforms-value>
 		<ted-label>No tenders or no suitable tenders / requests to participate in response to: restricted procedure</ted-label>
 		<eforms-label>Only irregular or unacceptable tenders were received in response to a previous notice. All and only those tenderers of the previous procedure which have satisfied the selection criteria, have not fulfilled the exclusion grounds and have satisfied formal requirements, were included in the negotiations</eforms-label>
 	</mapping>
@@ -347,14 +347,21 @@
 	</mapping>
 -->
 
-<!-- Temporary mapping to UNKOWN, as TED element D_OUTSIDE_SCOPE is used for all 4 Directives -->
+<!-- Temporary mapping to UNKOWN, as TED element D_OUTSIDE_SCOPE is used for all 4 Directives 
 	<mapping>
 		<ted-value>D_OUTSIDE_SCOPE</ted-value>
 		<eforms-value>UNKNOWN</eforms-value>
 		<ted-label>The procurement falls outside the scope of application of the Directive</ted-label>
 		<eforms-label></eforms-label>
-	</mapping>
+	</mapping>-->
 
+<!-- Final mapping to below-thres, as TED element D_OUTSIDE_SCOPE is used when the value is below the procurement thresholds -->
+	<mapping>
+		<ted-value>D_OUTSIDE_SCOPE</ted-value>
+		<eforms-value>below-thres</eforms-value>
+		<ted-label>The procurement falls outside the scope of application of the Directive</ted-label>
+		<eforms-label>Contracts with estimated value below the procurement thresholds</eforms-label>
+	</mapping>
 
 	<mapping>
 		<ted-value>D_ALL_TENDERS</ted-value>
