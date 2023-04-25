@@ -119,9 +119,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<ext:UBLExtensions>
 	<!--<xsl:copy-of select="$ted-form-main-element"/>-->
 		<ext:UBLExtension>
-			<!--<xsl:copy-of select="$ted-addresses"/>
+<!--
+	<xsl:copy-of select="$ted-addresses"/>
 	<xsl:copy-of select="$ted-addresses-unique"/>
-	<xsl:copy-of select="$ted-addresses-unique-with-id"/>-->
+	<xsl:copy-of select="$ted-addresses-unique-with-id"/>
+-->
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<xsl:if test="$eforms-form-type eq 'CAN'">
@@ -240,9 +242,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <xsl:template name="contracting-party">
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' cac:ContractingParty '"/></xsl:call-template>
-	<!--<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY"/>-->
 	<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:AUTHORITY_PRIOR_INFORMATION_DEFENCE/ted:NAME_ADDRESSES_CONTACT_PRIOR_INFORMATION"/>
-	<!--<xsl:apply-templates select="ted:CONTRACTING_BODY/ted:ADDRESS_CONTRACTING_BODY_ADDITIONAL"/>-->
 </xsl:template>
 
 <!-- end of Procedure-level templates for Notice information -->
@@ -305,7 +305,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- A limited number of BTs are specified for tendering process at root level -->
 
 		<!-- Procedure Features (BT-88): eForms documentation cardinality (Procedure) = ? | Mandatory for CN subtypes 12, 13, 20, and 21; Optional for PIN subtypes 7-9, CN subtypes 10, 11, 16-19, 22-24, and E3, CAN subtypes 29-37 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!--<xsl:call-template name="main-features-award"/>-->
 
 
 		<!-- Procedure Type (BT-105): eForms documentation cardinality (Procedure) = 1 | Mandatory for CN subtypes 10, 11, 16-18, 23, and 24, CAN subtypes 25-31, 36, and 37; Optional for PIN subtypes 7-9, CN subtypes 12, 13, 20-22, and E3, CAN subtypes 33, 34, and E4, CM subtype E5; Forbidden for other subtypes -->
@@ -315,7 +314,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Lots All Required (BT-763): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Lots All Required (BT-763)'"/></xsl:call-template>
 		<!-- PIN Competition Termination (BT-756): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
-		<!--<xsl:call-template name="pin-competition-termination"/>-->
 
 		<!-- Previous Planning Identifier (BT-125): eForms documentation cardinality (Procedure) = - | Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Planning Identifier (BT-125)'"/></xsl:call-template>
@@ -332,7 +330,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Direct Award Justification Previous Procedure Identifier (BT-1252): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<!-- Direct Award Justification (BT-136) ​/ Code: eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<!-- Direct Award Justification (BT-135) ​/ Text: eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 25-35 and E4, CM subtype E5; Forbidden for other subtypes -->
-		<!--<xsl:call-template name="direct-award-justification"/>-->
 
 	</cac:TenderingProcess>
 </xsl:template>
@@ -353,15 +350,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:REFERENCE_NUMBER"/>
 		<!-- Title (BT-21): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Title (BT-21)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TITLE"/>-->
 		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:TITLE_CONTRACT"/>
 		<!-- Description (BT-24): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:SHORT_DESCR"/>-->
 		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE"/>
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Procedure) = 1 | Optional for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:TYPE_CONTRACT"/>-->
 		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE"/>
 		<!-- Additional Nature (BT-531): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML -->
 		<!-- Additional Information (BT-300): eForms documentation cardinality (Procedure) = ? | Optional for ALL Notice subtypes -->
@@ -369,21 +363,19 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 		<xsl:choose>
 			<xsl:when test="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:F16_DIVISION_INTO_LOTS/ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION">
-			<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OTH_INFO_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION"/>
+				<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OTH_INFO_PRIOR_INFORMATION/ted:ADDITIONAL_INFORMATION"/>
 			</xsl:when>
 			<xsl:otherwise>
-			<xsl:call-template name="procedure-note"/>
+				<xsl:call-template name="procedure-note"/>
 			</xsl:otherwise>
 		</xsl:choose>
 		<!-- Estimated Value (BT-27): eForms documentation cardinality (Procedure) = ? | Optional for PIN subtypes 4-9, E1 and E2, CN subtypes 10-14, 16-22, and E3, CAN subtypes 29-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Estimated Value (BT-27)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:VAL_ESTIMATED_TOTAL"/>-->
 		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST"/>
 		
 		<!-- Classification Type (BT-26): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Main Classification Code (BT-262): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Classification Code (BT-262)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:CPV_MAIN"/>-->
 		<xsl:apply-templates select="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:CPV/ted:CPV_MAIN"/>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Procedure) = * -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
@@ -420,11 +412,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- The following line can be un-commented to show the variable lot-numbers-map -->
 <!-- <xsl:copy-of select="$lot-numbers-map" copy-namespaces="no"/> -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' multiple cac:ProcurementProjectLot '"/></xsl:call-template>
-<!--	<xsl:copy-of select="$lots"></xsl:copy-of>
+<!--
+	<xsl:copy-of select="$lots"></xsl:copy-of>
 	<xsl:copy-of select="$lot-numbers-map"></xsl:copy-of>
-	<xsl:copy-of select="$number-of-lots"></xsl:copy-of>-->
+	<xsl:copy-of select="$number-of-lots"></xsl:copy-of>
+-->
 
-<!--	<xsl:apply-templates select="ted:OBJECT_CONTRACT/ted:OBJECT_DESCR"/>
 -->	<xsl:choose>
 		<xsl:when test="ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:F16_DIVISION_INTO_LOTS/ted:F16_DIV_INTO_LOT_YES">
 			<xsl:apply-templates select="//ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION"/>

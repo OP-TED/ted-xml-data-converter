@@ -11,8 +11,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- template for a single Lot -->
-<!--<xsl:template match="ted:OBJECT_DESCR">
---><xsl:template match="ted:LOT_PRIOR_INFORMATION|ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION">
+<xsl:template match="ted:LOT_PRIOR_INFORMATION|ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION">
 	<cac:ProcurementProjectLot>
 		<!-- For form F16, a lot is represented by the element LOT_PRIOR_INFORMATION when F16_DIV_INTO_LOT_YES exists, otherwise a lot is represented by OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION -->
 		<!-- But, for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
@@ -22,8 +21,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Purpose Lot Identifier (BT-137)'"/></xsl:call-template>
 		<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 		<xsl:variable name="lot-info" select="$lot-numbers-map//lot[path = $path]"/>
-<!--		<xsl:copy-of select="$lot-info"></xsl:copy-of>
-		<xsl:copy-of select="$path"></xsl:copy-of>-->
+<!--
+		<xsl:copy-of select="$lot-info"></xsl:copy-of>
+		<xsl:copy-of select="$path"></xsl:copy-of>
+-->
 
 
 		<xsl:choose>
@@ -32,8 +33,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:variable name="message"> WARNING: Cannot convert original TED lot number of <xsl:value-of select="ted:LOT_NUMBER"/> to eForms </xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			</xsl:when>
-<!--			<xsl:when test="fn:count(../ted:OBJECT_DESCR) = 1">
--->			<xsl:when test="fn:count(../ted:LOT_PRIOR_INFORMATION) = 1">
+			<xsl:when test="fn:count(../ted:LOT_PRIOR_INFORMATION) = 1">
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Only one Lot in the TED notice'"/></xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
@@ -60,7 +60,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- EU Funds (BT-60): eForms documentation cardinality (Lot) = ? | Mandatory for PIN subtype 7, CN subtypes 10, 16, 19, and 23, CAN subtypes 29, 32, and 36; Forbidden for PIN subtypes 1-6, E1, and E2; Optional for other subtypes -->
 		<!-- EU Funds Details (BT-6140): eForms documentation cardinality (Lot) = ? |  -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds (BT-60)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:NO_EU_PROGR_RELATED|ted:EU_PROGR_RELATED"/>-->
 		<!-- In TED XML, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->		
 		<xsl:choose>
 			<xsl:when test="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/(ted:RELATES_TO_EU_PROJECT_YES|ted:RELATES_TO_EU_PROJECT_NO)">
@@ -347,7 +346,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="terms-financial">
 	<!-- Terms Financial (BT-77): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Terms Financial (BT-77)'"/></xsl:call-template>
-	<!--<xsl:variable name="text" select="$ted-form-main-element/ted:LEFTI/ted:MAIN_FINANCING_CONDITION/fn:normalize-space(fn:string-join(ted:P, ' '))"/>-->
 	<xsl:variable name="text" select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:MAIN_FINANCING_CONDITIONS/fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:choose>
 		<xsl:when test="$text ne ''">
@@ -399,15 +397,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<!-- Reserved Participation (BT-71): eForms documentation cardinality (Lot) = + | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Participation (BT-71)'"/></xsl:call-template>
 	<!-- reserved-procurement code res-pub-ser is RESERVED_ORGANISATIONS_SERVICE_MISSION in TED XML, used only in F21 -->
-	<!--<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)">-->
 	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_SHELTERED_WORKSHOPS">
 		<cac:TendererQualificationRequest>
 			<xsl:choose>
-				<!--<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION))">-->
 				<xsl:when test="fn:boolean($ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_SHELTERED_WORKSHOPS)">
-					<!--<xsl:apply-templates select="$ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_WORKSHOP|ted:RESERVED_ORGANISATIONS_SERVICE_MISSION)"/>-->
 					<xsl:apply-templates select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_SHELTERED_WORKSHOPS"/>
-
 				</xsl:when>
 				<xsl:otherwise>
 					<cac:SpecificTendererRequirement>
@@ -419,7 +413,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-<!--<xsl:template match="ted:RESTRICTED_SHELTERED_WORKSHOP">-->
 <xsl:template match="ted:RESTRICTED_TO_SHELTERED_WORKSHOPS">
 	<cac:SpecificTendererRequirement>
 		<cbc:TendererRequirementTypeCode listName="reserved-procurement">res-ws</cbc:TendererRequirementTypeCode>
@@ -435,11 +428,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="reserved-execution">
 	<!-- Reserved Execution (BT-736): eForms documentation cardinality (Lot) = ? | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Execution (BT-736)'"/></xsl:call-template>
-	<!--<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION)">
--->	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_FRAMEWORK">
+	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_FRAMEWORK">
 		<xsl:variable name="is-reserved-execution">
 			<xsl:choose>
-				<!--<xsl:when test="fn:boolean($ted-form-main-element/ted:LEFTI/(ted:RESTRICTED_SHELTERED_PROGRAM|ted:PARTICULAR_PROFESSION))">yes</xsl:when>-->
 				<xsl:when test="fn:boolean($ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:LEFTI_PRIOR_INFORMATION/ted:RESERVED_CONTRACTS/ted:RESTRICTED_TO_FRAMEWORK)">yes</xsl:when>
 				<xsl:otherwise>no</xsl:otherwise>
 			</xsl:choose>
@@ -470,7 +461,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="terms-performance">
 	<!-- Terms Performance (BT-70): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Terms Performance (BT-70)'"/></xsl:call-template>
-	<!--<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:LEFTI/ted:PERFORMANCE_CONDITIONS/ted:P, ' '))"/>-->
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/ted:LEFTI/ted:PERFORMANCE_CONDITIONS/ted:P, ' '))"/>
 
 	<xsl:choose>
@@ -835,7 +825,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				<xsl:when test="ted:NB_ENVISAGED_CANDIDATE">
 					<cbc:LimitationDescription>true</cbc:LimitationDescription>
 					<cbc:MaximumQuantity><xsl:value-of select="ted:NB_ENVISAGED_CANDIDATE"/></cbc:MaximumQuantity>
-					<!--<cbc:MinimumQuantity><xsl:value-of select="ted:NB_ENVISAGED_CANDIDATE"/></cbc:MinimumQuantity>-->
 				</xsl:when>
 				<xsl:when test="ted:NB_MAX_LIMIT_CANDIDATE">
 					<cbc:LimitationDescription>true</cbc:LimitationDescription>
@@ -876,13 +865,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<!-- add ":00" for the seconds; add the TimeZone offset for CET -->
 			<xsl:text>:00+01:00</xsl:text>
 		</cbc:OccurrenceTime>
-<!--		<xsl:apply-templates select="ted:INFO_ADD"/>
--->		<!--<xsl:apply-templates select="ted:ADDITIONAL_INFORMATION"/>--> <!--to review-->
 		<xsl:apply-templates select="ted:PLACE"/>
 	</cac:OpenTenderEvent>
 </xsl:template>
 
-<!--<xsl:template match="ted:OPENING_CONDITION/ted:INFO_ADD">
 --><xsl:template match="ted:OPENING_CONDITION/ted:ADDITIONAL_INFORMATION"> <!--to review-->
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
@@ -964,17 +950,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:template name="framework-agreement">
 	<!-- Framework Agreement (BT-765) -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Agreement (BT-765)'"/></xsl:call-template>
-<!--	<xsl:if test="../../ted:PROCEDURE/ted:FRAMEWORK or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
--->	<xsl:if test="(../../../..|.)/ted:FRAMEWORK_AGREEMENT or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
+	<xsl:if test="(../../../..|.)/ted:FRAMEWORK_AGREEMENT or $eforms-notice-subtype = ('7', '8', '9', '10', '11', '16', '17', '18', '22', '29', '30', '31')">
 
 		<xsl:choose>
-<!--		<xsl:when test="../../ted:PROCEDURE/ted:FRAMEWORK">
--->			<!--<xsl:when test="../../../../ted:FRAMEWORK_AGREEMENT/@VALUE eq 'YES'or ted:FRAMEWORK_AGREEMENT/@VALUE eq 'YES'">-->
 			<xsl:when test="(../../../..|.)/ted:FRAMEWORK_AGREEMENT/@VALUE eq 'YES'">
 
 				<!--For CN forms F02, F05, F21, F22 FRAMEWORK has child elements specifying the number of participants and the duration justification-->
-<!--			<xsl:apply-templates select="../../ted:PROCEDURE/ted:FRAMEWORK[*]"/>
--->				<xsl:apply-templates select="(../../../..|.)/ted:FRAMEWORK_AGREEMENT[*]"/>
+				<xsl:apply-templates select="(../../../..|.)/ted:FRAMEWORK_AGREEMENT[*]"/>
 				<cac:ContractingSystem>
 					<cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
 				</cac:ContractingSystem>
@@ -988,8 +970,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-<!--<xsl:template match="ted:FRAMEWORK">
---><xsl:template match="ted:FRAMEWORK_AGREEMENT">
+<xsl:template match="ted:FRAMEWORK_AGREEMENT">
 	<cac:FrameworkAgreement>
 		<!-- Framework Maximum Participants Number (BT-113): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-13, 16-18, 20-22, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Maximum Participants Number (BT-113)'"/></xsl:call-template>
@@ -1029,9 +1010,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:if test="../../ted:PROCEDURE/ted:DPS or $eforms-notice-subtype = ('7', '8', '10', '11', '16', '17', '29', '30')">
 		<!-- WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML. -->
 		<xsl:variable name="message">WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.</xsl:variable>
-		<!--
-		<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-		-->
 		<xsl:call-template name="report-warning">
 			<xsl:with-param name="message" select="$message"/>
 		</xsl:call-template>
@@ -1072,8 +1050,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:choose>
 		<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-<!--		<xsl:apply-templates select="ted:SHORT_DESCR"/>
--->		
+		
 		<xsl:if test="fn:local-name(.)='OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION'">
 			<xsl:choose>
 				<xsl:when test="fn:normalize-space(ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE)">
@@ -1129,21 +1106,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 		<!-- Additional Information (BT-300): eForms documentation cardinality (Lot) = ? | Optional for ALL Notice subtypes. -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Information (BT-300)'"/></xsl:call-template>
-<!--		<xsl:apply-templates select="ted:INFO_ADD"/>
--->		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:ADDITIONAL_INFORMATION"/></xsl:if>
+		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:ADDITIONAL_INFORMATION"/></xsl:if>
 
 		<!-- Estimated Value (BT-27): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 4-9, E1, and E2, CN subtypes 10-14, 16-22, and E3, CAN subtypes 29-35 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Estimated Value (BT-27)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:VAL_OBJECT"/>-->
 		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:NATURE_QUANTITY_SCOPE/ted:COSTS_RANGE_AND_CURRENCY/ted:VALUE_COST"/></xsl:if>
 		<!-- Classification Type (BT-26): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Main Classification Code (BT-262): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Classification Code (BT-262)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="../ted:CPV_MAIN"/>-->
 		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:CPV/ted:CPV_MAIN"/></xsl:if>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Lot) = * | Optional for ALL Notice subtypes, No equivalent element in TED XML at Lot level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
-		<!--<xsl:apply-templates select="ted:CPV_ADDITIONAL"/>-->
 		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'"><xsl:apply-templates select="ted:CPV/ted:CPV_ADDITIONAL"/></xsl:if>
 
 		<!-- Place of Performance (BG-708) -> RealizedLocation | Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
@@ -1171,8 +1144,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Duration Period (BT-36)'"/></xsl:call-template>
 		<!-- Duration Other (BT-538): eForms documentation cardinality (Lot) = ? | Forbidden for CN subtypes 23 and 24, CAN subtypes 36 and 37, CM subtype E5; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Duration Other (BT-538)'"/></xsl:call-template>
-<!--		<xsl:apply-templates select="ted:DURATION|ted:DATE_START|ted:DATE_END[fn:not(../ted:DATE_START)]"/>
--->		<xsl:apply-templates select="ted:SCHEDULED_DATE_PERIOD/ted:PERIOD_WORK_DATE_STARTING/(ted:DAYS|ted:MONTHS|ted:INTERVAL_DATE)"/>
+		<xsl:apply-templates select="ted:SCHEDULED_DATE_PERIOD/ted:PERIOD_WORK_DATE_STARTING/(ted:DAYS|ted:MONTHS|ted:INTERVAL_DATE)"/>
 
 		<xsl:apply-templates select="ted:QS/(ted:INDEFINITE_DURATION|ted:DATE_START)"/>
 
@@ -1184,7 +1156,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:ProcurementProject>
 </xsl:template>
 
-<!--<xsl:template match="ted:OBJECT_DESCR/ted:INFO_ADD"  >-->
 <xsl:template match="ted:ADDITIONAL_INFORMATION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:if test="$text ne ''">
@@ -1196,8 +1167,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
-<!--<xsl:template match="ted:OBJECT_DESCR/ted:TITLE">
---><xsl:template match="ted:LOT_TITLE">
+<xsl:template match="ted:LOT_TITLE">
 	<xsl:variable name="text" select="."/>
 	<xsl:if test="$text ne ''">
 		<xsl:call-template name="multilingual">
@@ -1316,8 +1286,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 </xsl:template>
 
 
-<!--<xsl:template match="ted:DATE_START">
---><xsl:template match="ted:START_DATE">
+<xsl:template match="ted:START_DATE">
 	<cac:PlannedPeriod>
 		<cbc:StartDate><xsl:value-of select="fn:concat(ted:YEAR,'-',ted:MONTH,'-',ted:DAY)"/><xsl:text>+01:00</xsl:text></cbc:StartDate>
 		<xsl:choose>
@@ -1332,8 +1301,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:PlannedPeriod>
 </xsl:template>
 
-<!--<xsl:template match="ted:DATE_END[fn:not(../ted:DATE_START)]">
---><xsl:template match="ted:END_DATE[fn:not(../ted:START_DATE)]">
+<xsl:template match="ted:END_DATE[fn:not(../ted:START_DATE)]">
 	<cac:PlannedPeriod>
 		<!-- WARNING: END_DATE is present in the source TED notice but START_DATE is not present. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00). -->
 		<xsl:variable name="message">WARNING: END_DATE is present in the source TED notice but START_DATE is not present. In order to obtain valid XML for this notice, a far past date was used (1900-01-01+01:00).</xsl:variable>

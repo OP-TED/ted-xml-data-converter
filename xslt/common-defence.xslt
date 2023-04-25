@@ -10,7 +10,6 @@ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-o
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-<!--<xsl:template match="ted:OBJECT_CONTRACT/ted:TITLE">
 --><xsl:template match="ted:TITLE_CONTRACT">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:call-template name="multilingual">
@@ -20,7 +19,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:call-template>
 </xsl:template>
 
-<!--<xsl:template match="ted:SHORT_DESCR">-->
 <xsl:template match="ted:TOTAL_QUANTITY_OR_SCOPE|ted:LOT_DESCRIPTION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
 	<xsl:call-template name="multilingual">
@@ -30,7 +28,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:call-template>
 </xsl:template>
 
-<!--<xsl:template match="ted:TYPE_CONTRACT"> kept it below-->
 <xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE">
 	<xsl:variable name="ted-value" select="fn:normalize-space(@CTYPE)"/>
 	<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[ted-value eq $ted-value]/fn:string(eforms-value)"/>
