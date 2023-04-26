@@ -143,7 +143,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 					<efac:NoticeSubType>
 						<cbc:SubTypeCode listName="notice-subtype"><xsl:value-of select="$eforms-notice-subtype"/></cbc:SubTypeCode>
 					</efac:NoticeSubType>
-				<xsl:call-template name="organizations"/>
+					<xsl:call-template name="organizations"/>
 					<xsl:call-template name="publication"/>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
