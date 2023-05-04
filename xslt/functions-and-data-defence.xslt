@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc" 
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
-xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.8/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.8/publication" xmlns:ted-2="ted/R2.0.8.S03/publication"
+xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts" xmlns:n2016-1="ted/2016/nuts"
 xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" 
+xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
@@ -20,7 +21,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 
 <!-- MAPPING FILES -->
-	
+
 <xsl:variable name="mappings" select="fn:document('other-mappings.xml')"/>
 <xsl:variable name="translations" select="fn:document('translations.xml')"/>
 <xsl:variable name="country-codes-map" select="fn:document('countries-map.xml')"/>
@@ -105,7 +106,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:choose>
 			<xsl:when test="$ted-form-main-element//ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION">
 				<xsl:for-each select="$ted-form-main-element//ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION">
-				<lot>					
+				<lot>
 					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 					<path><xsl:value-of select="$path"/></path>
 					<xsl:copy-of select="."></xsl:copy-of>
@@ -148,7 +149,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="fn:concat('LOT-', ted:LOT_NUMBER)"/>
-								</xsl:otherwise>							
+								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
 						<!-- When LOT_NO does not exist -->
@@ -163,7 +164,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 									<!-- not tested, no examples found -->
 									<!-- There is more than one Lot in the notice, eForms Lot identifier is derived from the position -->
 									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length((fn:count(../preceding-sibling::lot) + 1), 4))"/>
-								</xsl:otherwise> 
+								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -282,7 +283,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 
 <!-- GENERAL FUNCTIONS -->
-	
+
 <!-- Function opfun:descendants-deep-equal compares the contents of two nodes, returning TRUE or FALSE. The names of the root node elements are ignored -->
 <xsl:function name="opfun:descendants-deep-equal" as="xs:boolean">
 	<xsl:param name="node1" as="node()"/>
@@ -292,14 +293,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			<xsl:for-each select="$node1/node()">
 				<xsl:copy-of select="."/>
 			</xsl:for-each>
-		</out>	
+		</out>
 	</xsl:variable>
 	<xsl:variable name="out2">
 		<out>
 			<xsl:for-each select="$node2/node()">
 				<xsl:copy-of select="."/>
 			</xsl:for-each>
-		</out>	
+		</out>
 	</xsl:variable>
 	<xsl:value-of select="fn:deep-equal($out1, $out2)"/>
 </xsl:function>

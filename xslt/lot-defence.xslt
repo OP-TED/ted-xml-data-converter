@@ -2,7 +2,8 @@
 <xsl:stylesheet version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.pnp-software.com/XSLTdoc"
 xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:functx="http://www.functx.com" xmlns:opfun="http://data.europa.eu/p27/ted-xml-data-converter"
-xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.8/publication" xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts"
+xmlns:ted="http://publications.europa.eu/resource/schema/ted/R2.0.8/publication" xmlns:ted-2="ted/R2.0.8.S03/publication"
+xmlns:n2016="http://publications.europa.eu/resource/schema/ted/2016/nuts" xmlns:n2021="http://publications.europa.eu/resource/schema/ted/2021/nuts" xmlns:n2016-1="ted/2016/nuts"
 xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:cn="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:can="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
@@ -60,7 +61,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- EU Funds (BT-60): eForms documentation cardinality (Lot) = ? | Mandatory for PIN subtype 7, CN subtypes 10, 16, 19, and 23, CAN subtypes 29, 32, and 36; Forbidden for PIN subtypes 1-6, E1, and E2; Optional for other subtypes -->
 		<!-- EU Funds Details (BT-6140): eForms documentation cardinality (Lot) = ? |  -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds (BT-60)'"/></xsl:call-template>
-		<!-- In TED XML, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->		
+		<!-- In TED XML, there is a further information: a text field which can store the identifier of the EU Funds. There is no BT in eForms to store this information -->
 		<xsl:choose>
 			<xsl:when test="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/(ted:RELATES_TO_EU_PROJECT_YES|ted:RELATES_TO_EU_PROJECT_NO)">
 				<xsl:apply-templates select="(..|../../../../..)/ted:OTH_INFO_PRIOR_INFORMATION/(ted:RELATES_TO_EU_PROJECT_YES|ted:RELATES_TO_EU_PROJECT_NO)"/>
@@ -91,7 +92,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Guarantee Required Description (BT-75): eForms documentation cardinality (Lot) = ? | Only exists in TED form F05. Mandatory for CN subtypes 17, 18, and 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, and E3; Forbidden for other subtypes -->
 		<xsl:apply-templates select="../../ted:LEFTI/ted:DEPOSIT_GUARANTEE_REQUIRED"/>
 
-		<xsl:call-template name="tax-legislation"/>		
+		<xsl:call-template name="tax-legislation"/>
 		<xsl:call-template name="environmental-legislation"/>
 		<xsl:call-template name="employment-legislation"/>
 
@@ -1004,7 +1005,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</xsl:choose>
 		<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-		
+
 		<xsl:if test="fn:local-name(.)='OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION'">
 			<xsl:choose>
 				<xsl:when test="fn:normalize-space(ted:QUANTITY_SCOPE_WORKS_DEFENCE/ted:TOTAL_QUANTITY_OR_SCOPE)">
@@ -1017,7 +1018,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>
-		
+
 		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'">
 			<xsl:choose>
 				<xsl:when test="fn:normalize-space(ted:LOT_DESCRIPTION) or fn:normalize-space(ted:NATURE_QUANTITY_SCOPE/ted:TOTAL_QUANTITY_OR_SCOPE)">
@@ -1030,8 +1031,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>
-		
-	
+
+
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Lot) = 1 | Optional for ALL Notice subtypes Equivalent element TYPE_CONTRACT in TED does not exist in OBJ_DESCR, so use TYPE_CONTRACT in OBJECT_CONTRACT parent -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:apply-templates select="(../../../..|.)/ted:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/ted:TYPE_CONTRACT_PI_DEFENCE/ted:TYPE_CONTRACT"/>
@@ -1228,13 +1229,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:when test="ted:START_DATE|ted:END_DATE">
 			<xsl:apply-templates select="ted:START_DATE|ted:END_DATE[fn:not(../ted:START_DATE)]"/>
 		</xsl:when>
-		<xsl:otherwise>	
+		<xsl:otherwise>
 			<!-- WARNING: INTERVAL_DATE is present in the source TED notice but neither START_DATE or END_DATE is present. In this case, a duration of "UNKNOWN" has been used. -->
 			<xsl:variable name="message">WARNING: INTERVAL_DATE is present in the source TED notice but neither START_DATE or END_DATE is present. In this case, a duration of "UNKNOWN" has been used.</xsl:variable>
 			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 			<cac:PlannedPeriod>
 				<cbc:DescriptionCode listName="timeperiod">UNKNOWN</cbc:DescriptionCode>
-			</cac:PlannedPeriod>			
+			</cac:PlannedPeriod>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
@@ -1317,7 +1318,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:otherwise>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Options Description (BT-54)'"/></xsl:call-template>
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Maximum (BT-58)'"/></xsl:call-template>
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>	
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Renewal Description (BT-57)'"/></xsl:call-template>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
