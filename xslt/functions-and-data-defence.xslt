@@ -8,7 +8,7 @@ xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
+exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n2016-1 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- include FunctX XSLT Function Library -->
@@ -38,11 +38,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
-<xsl:variable name="ted-form-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY]"/>
+<xsl:variable name="ted-form-elements" select="/*/*:FORM_SECTION/*[@CATEGORY]"/>
 <!-- Variable ted-form-main-element holds the first form element that has @CATEGORY='ORIGINAL'. This is the TED form element which is processed -->
-<xsl:variable name="ted-form-main-element" select="/*/ted:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
+<xsl:variable name="ted-form-main-element" select="/*/*:FORM_SECTION/*[@CATEGORY='ORIGINAL'][1]"/>
 <!-- Variable ted-form-additional-elements holds the form elements that are not the main form element -->
-<xsl:variable name="ted-form-additional-elements" select="/*/ted:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
+<xsl:variable name="ted-form-additional-elements" select="/*/*:FORM_SECTION/*[@CATEGORY][not(@CATEGORY='ORIGINAL' and not(preceding-sibling::*[@CATEGORY='ORIGINAL']))]"/>
 <!-- Variable ted-form-elements-names holds a list of unique element names of the ted form elements -->
 <xsl:variable name="ted-form-elements-names" select="fn:distinct-values($ted-form-elements/fn:local-name())"/>
 <!-- Variable ted-form-element-name holds the element name of the main form element. -->
@@ -53,9 +53,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:variable name="ted-form-element-xpath" select="functx:path-to-node-with-pos($ted-form-main-element)"/>
 <!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element -->
 <!--The notice element is absent in Defence schemas (SF16 to SF19), therefore ted-form-notice-type will be empty-->
-<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(ted:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
+<xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(*:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
 <!-- Variable document-code holds the value of the @CODE attribute of the TD_DOCUMENT_TYPE element -->
-<xsl:variable name="document-code" select="/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
+<xsl:variable name="document-code" select="/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
 <!-- Variable ted-form-additional-languages holds the values of the @LG attribute of the remaining form elements -->
@@ -65,8 +65,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable eforms-first-language holds the eForms three-letter code for the first language -->
 <xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
 
+<!-- Variable legal-basis holds the value of the @VALUE attribute of the element LEGAL_BASIS, if it exists. If element LEGAL_BASIS does not exist, it holds the value "OTHER". For defence notices, legal-basis is hard coded to the "32009L0081" value (legal basis of the directive)-->
+<xsl:variable name="legal-basis">
+	<xsl:text>32009L0081</xsl:text>
+</xsl:variable>
+
 <!-- Variable directive holds the value of the @VALUE attribute of the element DIRECTIVE, if it exists. Othewise it holds the empty string -->
-<xsl:variable name="directive" select="fn:string(/*/ted:CODED_DATA_SECTION/ted:CODIF_DATA/ted:DIRECTIVE/@VALUE)"/>
+<xsl:variable name="directive" select="fn:string(/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:DIRECTIVE/@VALUE)"/>
 
 
 <!-- Variable eforms-notice-subtype holds the computed eForms notice subtype value -->
@@ -104,8 +109,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <xsl:variable name="lots">
 <lots>
 	<xsl:choose>
-			<xsl:when test="$ted-form-main-element//ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION">
-				<xsl:for-each select="$ted-form-main-element//ted:F16_DIV_INTO_LOT_YES/ted:LOT_PRIOR_INFORMATION">
+			<xsl:when test="$ted-form-main-element//*:F16_DIV_INTO_LOT_YES/*:LOT_PRIOR_INFORMATION">
+				<xsl:for-each select="$ted-form-main-element//*:F16_DIV_INTO_LOT_YES/*:LOT_PRIOR_INFORMATION">
 				<lot>
 					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 					<path><xsl:value-of select="$path"/></path>
@@ -114,7 +119,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:for-each select="$ted-form-main-element/ted:FD_PRIOR_INFORMATION_DEFENCE/ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION">
+				<xsl:for-each select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION">
 				<lot>
 					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 					<path><xsl:value-of select="$path"/></path>
@@ -131,9 +136,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 <!-- Variable lot-numbers-map holds a mapping of the TED XML Lots to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
 	<lots>
-		<xsl:for-each select="$lots/lots/lot/(ted:LOT_PRIOR_INFORMATION|ted:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION)">
+		<xsl:for-each select="$lots/lots/lot/(*:LOT_PRIOR_INFORMATION|*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION)">
 			<lot>
-				<xsl:variable name="lot-no"><xsl:value-of select="ted:LOT_NUMBER"/></xsl:variable>
+				<xsl:variable name="lot-no"><xsl:value-of select="*:LOT_NUMBER"/></xsl:variable>
 				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
 				<xsl:copy-of select="../path"/>
 				<lot-no><xsl:value-of select="$lot-no"/></lot-no>
@@ -145,10 +150,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 							<xsl:choose>
 								<!-- LOT_NO is a positive integer between 1 and 9999 -->
 								<xsl:when test="$lot-no-is-convertible">
-									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(ted:LOT_NUMBER, 4))"/>
+									<xsl:value-of select="fn:concat('LOT-', functx:pad-integer-to-length(*:LOT_NUMBER, 4))"/>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="fn:concat('LOT-', ted:LOT_NUMBER)"/>
+									<xsl:value-of select="fn:concat('LOT-', *:LOT_NUMBER)"/>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>

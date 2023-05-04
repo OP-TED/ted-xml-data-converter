@@ -8,11 +8,11 @@ xmlns:pin="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
 xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
-exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin cn can ccts ext" >
+exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n2016-1 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-<xsl:template match="ted:TITLE_CONTRACT">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+<xsl:template match="*:TITLE_CONTRACT">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:P, ' '))"/>
 	<xsl:call-template name="multilingual">
 		<xsl:with-param name="contexts" select="."/>
 		<xsl:with-param name="local" select="'P'"/>
@@ -20,8 +20,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:call-template>
 </xsl:template>
 
-<xsl:template match="ted:TOTAL_QUANTITY_OR_SCOPE|ted:LOT_DESCRIPTION">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+<xsl:template match="*:TOTAL_QUANTITY_OR_SCOPE|*:LOT_DESCRIPTION">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:P, ' '))"/>
 	<xsl:call-template name="multilingual">
 		<xsl:with-param name="contexts" select="."/>
 		<xsl:with-param name="local" select="'P'"/>
@@ -29,33 +29,33 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:call-template>
 </xsl:template>
 
-<xsl:template match="ted:FD_PRIOR_INFORMATION_DEFENCE">
+<xsl:template match="*:FD_PRIOR_INFORMATION_DEFENCE">
 	<xsl:variable name="ted-value" select="fn:normalize-space(@CTYPE)"/>
 	<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[ted-value eq $ted-value]/fn:string(eforms-value)"/>
 	<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
 </xsl:template>
-<xsl:template match="ted:TYPE_CONTRACT">
+<xsl:template match="*:TYPE_CONTRACT">
 	<xsl:variable name="ted-value" select="fn:normalize-space(@VALUE)"/>
 	<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[ted-value eq $ted-value]/fn:string(eforms-value)"/>
 	<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
 </xsl:template>
 
-<xsl:template match="ted:CPV_MAIN">
-	<xsl:variable name="ted-value" select="fn:normalize-space(ted:CPV_CODE/@CODE)"/>
+<xsl:template match="*:CPV_MAIN">
+	<xsl:variable name="ted-value" select="fn:normalize-space(*:CPV_CODE/@CODE)"/>
 	<cac:MainCommodityClassification>
 		<cbc:ItemClassificationCode listName="cpv"><xsl:value-of select="$ted-value"/></cbc:ItemClassificationCode>
 	</cac:MainCommodityClassification>
 </xsl:template>
 
-<xsl:template match="ted:CPV_ADDITIONAL">
-	<xsl:variable name="ted-value" select="fn:normalize-space(ted:CPV_CODE/@CODE)"/>
+<xsl:template match="*:CPV_ADDITIONAL">
+	<xsl:variable name="ted-value" select="fn:normalize-space(*:CPV_CODE/@CODE)"/>
 	<cac:AdditionalCommodityClassification>
 		<cbc:ItemClassificationCode listName="cpv"><xsl:value-of select="$ted-value"/></cbc:ItemClassificationCode>
 	</cac:AdditionalCommodityClassification>
 </xsl:template>
 
-<xsl:template match="ted:SITE_OR_LOCATION[not(*:NUTS)]/ted:LABEL">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(ted:P, ' '))"/>
+<xsl:template match="*:SITE_OR_LOCATION[not(*:NUTS)]/*:LABEL">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:P, ' '))"/>
 	<cac:RealizedLocation>
 		<xsl:call-template name="multilingual">
 			<xsl:with-param name="contexts" select="."/>
@@ -65,11 +65,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:RealizedLocation>
 </xsl:template>
 
-<xsl:template match="ted:SITE_OR_LOCATION/*:NUTS">
-	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(./ted:LABEL/ted:P, ' '))"/>
+<xsl:template match="*:SITE_OR_LOCATION/*:NUTS">
+	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(./*:LABEL/*:P, ' '))"/>
 	<cac:RealizedLocation>
 		<xsl:call-template name="multilingual">
-			<xsl:with-param name="contexts" select="../ted:LABEL"/>
+			<xsl:with-param name="contexts" select="../*:LABEL"/>
 			<xsl:with-param name="local" select="'P'"/>
 			<xsl:with-param name="element" select="'cbc:Description'"/>
 		</xsl:call-template>
