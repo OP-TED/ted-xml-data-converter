@@ -279,11 +279,11 @@ These instructions can be un-commented to show the variables holding the organiz
 			<xsl:when test="../*:CA_TYPE">
 				<xsl:apply-templates select="../*:CA_TYPE"/>
 			</xsl:when>
-			<xsl:otherwise>
+			<xsl:when test="($eforms-notice-subtype = ('1','4','7','10','14','16','19','23','29','32','35','36'))">
 				<!-- WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML. -->
 				<xsl:variable name="message">WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.</xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-			</xsl:otherwise>
+			</xsl:when>
 		</xsl:choose>
 </xsl:template>
 

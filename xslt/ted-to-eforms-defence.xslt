@@ -243,7 +243,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 
 <xsl:template name="contracting-party">
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' cac:ContractingParty '"/></xsl:call-template>
-	<xsl:apply-templates select="*:FD_PRIOR_INFORMATION_DEFENCE/*:AUTHORITY_PRIOR_INFORMATION_DEFENCE/*:NAME_ADDRESSES_CONTACT_PRIOR_INFORMATION"/>
+	<xsl:apply-templates select="$ted-form-authority-element/*/*:CA_CE_CONCESSIONAIRE_PROFILE"/>
 </xsl:template>
 
 <!-- end of Procedure-level templates for Notice information -->

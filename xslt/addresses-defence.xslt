@@ -19,7 +19,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 <!-- Create temporary XML structure to hold all the TED address elements, with the XPath for each -->
 <xsl:variable name="ted-addresses" as="element()">
 	<ted-orgs>
-		<xsl:for-each select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/(*:AUTHORITY_PRIOR_INFORMATION_DEFENCE/(*:NAME_ADDRESSES_CONTACT_PRIOR_INFORMATION/(*:CA_CE_CONCESSIONAIRE_PROFILE|*:FURTHER_INFORMATION/*:CONTACT_DATA[*])|*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:PURCHASING_ON_BEHALF/*:PURCHASING_ON_BEHALF_YES/*:CONTACT_DATA_OTHER_BEHALF_CONTRACTING_AUTORITHY)|*:OTH_INFO_PRIOR_INFORMATION/*:INFORMATION_REGULATORY_FRAMEWORK/(*:TAX_LEGISLATION|*:ENVIRONMENTAL_PROTECTION_LEGISLATION|*:EMPLOYMENT_PROTECTION_WORKING_CONDITIONS)/*:CONTACT_DATA[*])">
+		<xsl:for-each select="($ted-form-authority-element/(*/(*:CA_CE_CONCESSIONAIRE_PROFILE|*:FURTHER_INFORMATION/*:CONTACT_DATA[*])|*/*:PURCHASING_ON_BEHALF/*:PURCHASING_ON_BEHALF_YES/*:CONTACT_DATA_OTHER_BEHALF_CONTRACTING_AUTORITHY)|$ted-form-complementary-element/*:INFORMATION_REGULATORY_FRAMEWORK/(*:TAX_LEGISLATION|*:ENVIRONMENTAL_PROTECTION_LEGISLATION|*:EMPLOYMENT_PROTECTION_WORKING_CONDITIONS)/*:CONTACT_DATA[*])">
 			<ted-org>
 				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 				<path><xsl:value-of select="$path"/></path>
@@ -27,7 +27,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 					<xsl:for-each select="*">
 						<xsl:copy-of select="." copy-namespaces="no"/>
 					</xsl:for-each>
-					<xsl:copy-of select="../*:INTERNET_ADDRESSES_PRIOR_INFORMATION" copy-namespaces="no"/>
+					<xsl:copy-of select="../*[fn:contains(fn:local-name(), 'INTERNET_ADDRESSES')]" copy-namespaces="no"/>
 				</ted-address>
 			</ted-org>
 		</xsl:for-each>
@@ -228,25 +228,22 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <!-- Create cac:ContractingParty structure -->
-<xsl:template match="*:NAME_ADDRESSES_CONTACT_PRIOR_INFORMATION">
+<xsl:template match="*:CA_CE_CONCESSIONAIRE_PROFILE">
 	<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 	<cac:ContractingParty>
 		<!-- Buyer Profile URL (BT-508) Mandatory for PIN subtypes 1-3; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Profile URL (BT-508)'"/></xsl:call-template>
-		<xsl:apply-templates select="*:INTERNET_ADDRESSES_PRIOR_INFORMATION/*:URL_BUYER"/>
+		<xsl:apply-templates select="../*:INTERNET_ADDRESSES_PRIOR_INFORMATION/*:URL_BUYER"/>
 		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 		<xsl:call-template name="buyer-legal-type"/>
 		<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:call-template name="buyer-contracting-entity"/>
 		<!-- NOTE: TED elements CA_ACTIVITY_OTHER and CA_TYPE_OTHER contain text values in multiple languages. They cannot be converted to a codelist code value -->
-		<!-- Activity Authority (BT-10) and Activity Entity (BT-610) both are implemented as code values from a codelist -->
 		<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Authority (BT-10)'"/></xsl:call-template>
-		<xsl:apply-templates select="../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_ACTIVITY"/>
-
+		<xsl:call-template name="activity-authority"/>
+		
 		<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Entity (BT-610)'"/></xsl:call-template>
-		<xsl:apply-templates select="../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:ACTIVITIES_OF_CONTRACTING_ENTITY/*:ACTIVITY_OF_CONTRACTING_ENTITY"/>
+		<xsl:call-template name="activity-entity"/>
 		<cac:Party>
 			<!-- Buyer Technical Identifier Reference (OPT-300) -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Technical Identifier Reference (OPT-300)'"/></xsl:call-template>
@@ -274,30 +271,36 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <xsl:template name="buyer-legal-type">
-		<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Legal Type (BT-11)'"/></xsl:call-template>
-		<xsl:choose>
-			<xsl:when test="../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_CONTRACTING_AUTHORITY">
-				<xsl:apply-templates select="../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_CONTRACTING_AUTHORITY"/>
-			</xsl:when>
-			<xsl:otherwise>
-				<!-- WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML. -->
-				<xsl:variable name="message">WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.</xsl:variable>
-				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>
+	<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Legal Type (BT-11)'"/></xsl:call-template>
+	<xsl:choose>
+		<xsl:when test="../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_CONTRACTING_AUTHORITY">
+			<xsl:apply-templates select="../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_CONTRACTING_AUTHORITY"/>
+		</xsl:when>
+		<xsl:when test="../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_CONTRACTING_AUTHORITY_OTHER">
+			<xsl:variable name="text" select="fn:normalize-space(../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_CONTRACTING_AUTHORITY_OTHER)"/>
+			<!-- WARNING: Buyer Legal Type (BT-11) could not be identified from text content of TYPE_OF_CONTRACTING_AUTHORITY_OTHER in the TED XML. -->
+			<xsl:variable name="message">WARNING: Buyer Legal Type (BT-11) could not be identified from text content of TYPE_OF_CONTRACTING_AUTHORITY_OTHER in the TED XML: <xsl:value-of select="$text"/></xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
+		<xsl:when test="($eforms-notice-subtype = ('1','4','7','10','14','16','19','23','29','32','35','36'))">
+			<!-- WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35 and 36, but no TYPE_OF_CONTRACTING_AUTHORITY was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35 and 36, but no TYPE_OF_CONTRACTING_AUTHORITY was found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template name="buyer-contracting-entity">
 	<!-- Buyer Contracting Entity (BT-740) Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 14, 18, 19, and E3, CAN subtypes 27, 28, 31, 32, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Buyer Contracting Entity (BT-740)'"/></xsl:call-template>
 	<xsl:choose>
-		<xsl:when test="../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_ACTIVITY|../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_ACTIVITY_OTHER">
+		<xsl:when test="../../(*:TYPE_AND_ACTIVITIES_AND_PURCHASING_ON_BEHALF|*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF)/*:TYPE_AND_ACTIVITIES">
 			<cac:ContractingPartyType>
 				<cbc:PartyTypeCode listName="buyer-contracting-type"><xsl:value-of select="'not-cont-ent'"/></cbc:PartyTypeCode>
 			</cac:ContractingPartyType>
 		</xsl:when>
-		<xsl:when test="../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:ACTIVITIES_OF_CONTRACTING_ENTITY/*:ACTIVITY_OF_CONTRACTING_ENTITY|../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:ACTIVITIES_OF_CONTRACTING_ENTITY/*:ACTIVITY_OF_CONTRACTING_ENTITY_OTHER">
+		<xsl:when test="../../*:TYPE_AND_ACTIVITIES_OR_CONTRACTING_ENTITY_AND_PURCHASING_ON_BEHALF/*:ACTIVITIES_OF_CONTRACTING_ENTITY">
 			<cac:ContractingPartyType>
 				<cbc:PartyTypeCode listName="buyer-contracting-type"><xsl:value-of select="'cont-ent'"/></cbc:PartyTypeCode>
 			</cac:ContractingPartyType>
@@ -305,21 +308,59 @@ These instructions can be un-commented to show the variables holding the organiz
 	</xsl:choose>
 </xsl:template>
 
-<!-- Create cac:ContractingPartyType structures -->
+<xsl:template name="activity-authority">
+	<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Authority (BT-10)'"/></xsl:call-template>
+	<xsl:choose>
+		<xsl:when test="../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_ACTIVITY">
+			<xsl:apply-templates select="../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_ACTIVITY"/>
+		</xsl:when>
+		<xsl:when test="../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_ACTIVITY_OTHER">
+			<xsl:variable name="text" select="fn:normalize-space(../../*/*:TYPE_AND_ACTIVITIES/*:TYPE_OF_ACTIVITY_OTHER)"/>
+			<!-- WARNING: Activity Authority (BT-10) could not be identified from text content of TYPE_OF_ACTIVITY_OTHER in the TED XML. -->
+			<xsl:variable name="message">WARNING: Activity Authority (BT-10) could not be identified from text content of TYPE_OF_ACTIVITY_OTHER in the TED XML: <xsl:value-of select="$text"/></xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
+		<xsl:when test="($eforms-notice-subtype = ('1','4','7','10','16','23','29','36'))">
+			<!-- WARNING: Activity Authority (BT-10) is Mandatory for eForms subtypes 1, 4, 7, 10, 16, 23, 29 and 36, but no TYPE_OF_ACTIVITY was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Activity Authority (BT-10) is Mandatory for eForms subtypes 1, 4, 7, 10, 16, 23, 29 and 36, but no TYPE_OF_ACTIVITY was found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="activity-entity">
+	<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Activity Entity (BT-610)'"/></xsl:call-template>
+	<xsl:choose>
+		<xsl:when test="../../*/*:ACTIVITIES_OF_CONTRACTING_ENTITY/*:ACTIVITY_OF_CONTRACTING_ENTITY">
+			<xsl:apply-templates select="../../*/*:ACTIVITIES_OF_CONTRACTING_ENTITY/*:ACTIVITY_OF_CONTRACTING_ENTITY"/>
+		</xsl:when>
+		<xsl:when test="../../*/*:ACTIVITIES_OF_CONTRACTING_ENTITY/*:ACTIVITY_OF_CONTRACTING_ENTITY_OTHER">
+			<xsl:variable name="text" select="fn:normalize-space(../../*/*:ACTIVITIES_OF_CONTRACTING_ENTITY/*:ACTIVITY_OF_CONTRACTING_ENTITY_OTHER)"/>
+			<!-- WARNING: Activity Entity (BT-610) could not be identified from text content of ACTIVITY_OF_CONTRACTING_ENTITY_OTHER in the TED XML. -->
+			<xsl:variable name="message">WARNING: Activity Entity (BT-610) could not be identified from text content of ACTIVITY_OF_CONTRACTING_ENTITY_OTHER in the TED XML: <xsl:value-of select="$text"/></xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
+		<xsl:when test="($eforms-notice-subtype = ('2','5','8','11','15','17','24','30','37'))">
+			<!-- WARNING: Activity Entity (BT-610) is Mandatory for eForms subtypes 2, 5, 8, 11, 15, 17, 24, 30 and 37, but no ACTIVITY_OF_CONTRACTING_ENTITY was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Activity Entity (BT-610) is Mandatory for eForms subtypes 2, 5, 8, 11, 15, 17, 24, 30 and 37, but no ACTIVITY_OF_CONTRACTING_ENTITY was found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
 <xsl:template match="*:TYPE_OF_CONTRACTING_AUTHORITY">
 	<xsl:variable name="ca-type" select="@VALUE"/>
 	<xsl:variable name="buyer-legal-type" select="$mappings//ca-types/mapping[ted-value=$ca-type]/fn:string(eforms-value)"/>
-	<!-- Buyer Legal Type (BT-11) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 14, 16, 19, and 23, CAN subtypes 29, 32, 35, and 36; Forbidden for CM subtypes 38-40; Optional for other subtypes -->
 	<cac:ContractingPartyType>
 		<cbc:PartyTypeCode listName="buyer-legal-type"><xsl:value-of select="$buyer-legal-type"/></cbc:PartyTypeCode>
 	</cac:ContractingPartyType>
 </xsl:template>
 
-<!-- Create cac:ContractingActivity structures -->
 <xsl:template match="*:TYPE_OF_ACTIVITY">
 	<xsl:variable name="ca-activity" select="@VALUE"/>
 	<xsl:variable name="authority-activity-type" select="$mappings//authority-activity-types/mapping[ted-value=$ca-activity]/fn:string(eforms-value)"/>
-	<!-- Activity Authority (BT-10) Mandatory for PIN subtypes 1, 4, and 7, CN subtypes 10, 16, and 23, CAN subtypes 29 and 36; Forbidden for CN subtype 22, CM subtypes 38-40; Optional for other subtypes -->
 	<cac:ContractingActivity>
 		<cbc:ActivityTypeCode listName="authority-activity"><xsl:value-of select="$authority-activity-type"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
@@ -328,7 +369,6 @@ These instructions can be un-commented to show the variables holding the organiz
 <xsl:template match="*:ACTIVITY_OF_CONTRACTING_ENTITY">
 	<xsl:variable name="ce-activity" select="@VALUE"/>
 	<xsl:variable name="entity-activity-type" select="$mappings//entity-activity-types/mapping[ted-value=$ce-activity]/fn:string(eforms-value)"/>
-	<!-- Activity Entity (BT-610) Mandatory for PIN subtypes 2, 5, and 8, CN subtypes 11, 15, 17, and 24, CAN subtypes 30 and 37; Optional for PIN subtypes 3, 6, 9, E1, and E2, CN subtypes 13, 14, 18, 19, 21, and E3, CAN subtypes 26-28, 31, 32, 34, 35, and E4, CM subtype E5; Forbidden for other subtypes -->
 	<cac:ContractingActivity>
 		<cbc:ActivityTypeCode listName="entity-activity"><xsl:value-of select="$entity-activity-type"/></cbc:ActivityTypeCode>
 	</cac:ContractingActivity>
@@ -400,7 +440,8 @@ These instructions can be un-commented to show the variables holding the organiz
 
 
 <xsl:template name="tax-legislation">
-	<xsl:variable name="tax-legislation-element" select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE//*:OTH_INFO_PRIOR_INFORMATION/*:INFORMATION_REGULATORY_FRAMEWORK/*:TAX_LEGISLATION"/>
+	<pmd-tax-legislation/>
+	<xsl:variable name="tax-legislation-element" select="$ted-form-complementary-element/*:INFORMATION_REGULATORY_FRAMEWORK/*:TAX_LEGISLATION"/>
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:contains(., 'TAX_LEGISLATION')]/../orgid"/>
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($tax-legislation-element/*:TAX_LEGISLATION_VALUE/(*:P|*:FT), ' '))"/>
 	<xsl:choose>
@@ -464,7 +505,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <xsl:template name="environmental-legislation">
-	<xsl:variable name="environmental-legislation-element" select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE//*:OTH_INFO_PRIOR_INFORMATION/*:INFORMATION_REGULATORY_FRAMEWORK/*:ENVIRONMENTAL_PROTECTION_LEGISLATION"/>
+	<xsl:variable name="environmental-legislation-element" select="$ted-form-complementary-element/*:INFORMATION_REGULATORY_FRAMEWORK/*:ENVIRONMENTAL_PROTECTION_LEGISLATION"/>
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:contains(., 'ENVIRONMENTAL_PROTECTION_LEGISLATION')]/../orgid"/>
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($environmental-legislation-element/*:ENVIRONMENTAL_PROTECTION_LEGISLATION_VALUE/(*:P|*:FT), ' '))"/>
 	<xsl:choose>
@@ -528,7 +569,7 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <xsl:template name="employment-legislation">
-	<xsl:variable name="employment-legislation-element" select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE//*:OTH_INFO_PRIOR_INFORMATION/*:INFORMATION_REGULATORY_FRAMEWORK/*:EMPLOYMENT_PROTECTION_WORKING_CONDITIONS"/>
+	<xsl:variable name="employment-legislation-element" select="$ted-form-complementary-element/*:INFORMATION_REGULATORY_FRAMEWORK/*:EMPLOYMENT_PROTECTION_WORKING_CONDITIONS"/>
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:contains(., 'EMPLOYMENT_PROTECTION_WORKING_CONDITIONS')]/../orgid"/>
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($employment-legislation-element/*:EMPLOYMENT_PROTECTION_WORKING_CONDITIONS_VALUE/(*:P|*:FT), ' '))"/>
 	<xsl:choose>
