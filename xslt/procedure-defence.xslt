@@ -136,8 +136,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 
 
 <xsl:template name="procedure-note">
-	<xsl:variable name="info-add-object" select="fn:normalize-space(fn:string-join(*:FD_PRIOR_INFORMATION_DEFENCE/*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/*:ADDITIONAL_INFORMATION/*:P, ' '))"/>
-	<xsl:variable name="info-add-other" select="fn:normalize-space(fn:string-join(*:FD_PRIOR_INFORMATION_DEFENCE/*:OTH_INFO_PRIOR_INFORMATION/*:ADDITIONAL_INFORMATION/*:P, ' '))"/>
+	<!-- template to combine text from ADDITIONAL_INFORMATION elements within OBJECT* and COMPLEMENTARY_INFORMATION / OTH_INFO elements -->
+	<xsl:variable name="info-add-object" select="fn:normalize-space(fn:string-join($ted-form-object-element/(.|*)/*:ADDITIONAL_INFORMATION/*:P, ' '))"/>
+	<xsl:variable name="info-add-other" select="fn:normalize-space(fn:string-join($ted-form-complementary-element/*:ADDITIONAL_INFORMATION/*:P, ' '))"/>
 	<xsl:if test="($info-add-object ne '') or ($info-add-other ne '')">
 		<xsl:choose>
 			<xsl:when test="fn:false()">
@@ -149,8 +150,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 							<xsl:if test="$info-add-object">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
-										<xsl:with-param name="context" select="$form-element"/>
-										<xsl:with-param name="relative-context" select="'FD_PRIOR_INFORMATION_DEFENCE/OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/ADDITIONAL_INFORMATION'"/>
+										<xsl:with-param name="context" select="$ted-form-object-element"/>
+										<xsl:with-param name="relative-context" select="'ADDITIONAL_INFORMATION'"/>
 									</xsl:call-template>
 								</xsl:variable>
 								<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*:P, ' '))"/>
@@ -160,8 +161,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 							<xsl:if test="$info-add-other">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
-										<xsl:with-param name="context" select="$form-element"/>
-										<xsl:with-param name="relative-context" select="'FD_PRIOR_INFORMATION_DEFENCE/OTH_INFO_PRIOR_INFORMATION/ADDITIONAL_INFORMATION'"/>
+										<xsl:with-param name="context" select="$ted-form-complementary-element"/>
+										<xsl:with-param name="relative-context" select="'ADDITIONAL_INFORMATION'"/>
 									</xsl:call-template>
 								</xsl:variable>
 								<xsl:value-of select="fn:normalize-space($parent/*)"/>
@@ -170,9 +171,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 					<xsl:variable name="text">
 						<xsl:value-of select="$info-add-object-lang"/>
 						<xsl:if test="$info-add-other-lang">
-							<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-language]/fn:string()"/>
 							<xsl:if test="$info-add-object-lang"><xsl:text> </xsl:text></xsl:if>
-							<xsl:value-of select="$form-text"/>
 							<xsl:value-of select="$info-add-other-lang"/>
 						</xsl:if>
 					</xsl:variable>
@@ -187,7 +186,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 					<xsl:value-of select="$info-add-object"/>
 					<xsl:if test="$info-add-other">
 						<xsl:if test="$info-add-object"><xsl:text> </xsl:text></xsl:if>
-						<xsl:value-of select="$form-text"/>
 						<xsl:value-of select="$info-add-other"/>
 					</xsl:if>
 				</xsl:variable>
@@ -199,11 +197,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="*:FD_PRIOR_INFORMATION_DEFENCE/*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION/*:QUANTITY_SCOPE_WORKS_DEFENCE/*:COSTS_RANGE_AND_CURRENCY/*:VALUE_COST|*:NATURE_QUANTITY_SCOPE/*:COSTS_RANGE_AND_CURRENCY/*:VALUE_COST">
-	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
+<xsl:template match="*:COSTS_RANGE_AND_CURRENCY/*:VALUE_COST">
+	<!-- replace invalid byte sequence C2A0 with a space, and normalize -->
+	<xsl:variable name="normalized-value" select="opfun:normalize-currency-value(.)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(../@CURRENCY)"/>
 	<cac:RequestedTenderTotal>
-		<cbc:EstimatedOverallContractAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></cbc:EstimatedOverallContractAmount>
+		<cbc:EstimatedOverallContractAmount currencyID="{$currency}"><xsl:value-of select="$normalized-value"/></cbc:EstimatedOverallContractAmount>
 	</cac:RequestedTenderTotal>
 </xsl:template>
 

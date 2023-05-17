@@ -29,11 +29,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 	</xsl:call-template>
 </xsl:template>
 
-<xsl:template match="*:FD_PRIOR_INFORMATION_DEFENCE">
+<xsl:template match="*:FD_PRIOR_INFORMATION_DEFENCE|*:FD_PRIOR_INFORMATION">
 	<xsl:variable name="ted-value" select="fn:normalize-space(@CTYPE)"/>
 	<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[ted-value eq $ted-value]/fn:string(eforms-value)"/>
 	<cbc:ProcurementTypeCode listName="contract-nature"><xsl:value-of select="$eforms-contract-nature-type"/></cbc:ProcurementTypeCode>
 </xsl:template>
+
 <xsl:template match="*:TYPE_CONTRACT">
 	<xsl:variable name="ted-value" select="fn:normalize-space(@VALUE)"/>
 	<xsl:variable name="eforms-contract-nature-type" select="$mappings//contract-nature-types/mapping[ted-value eq $ted-value]/fn:string(eforms-value)"/>

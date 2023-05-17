@@ -130,28 +130,29 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 	</xsl:choose>
 </xsl:variable>
 <xsl:variable name="lots">
-<lots>
-	<xsl:choose>
-			<xsl:when test="$ted-form-main-element//*:F16_DIV_INTO_LOT_YES/*:LOT_PRIOR_INFORMATION">
-				<xsl:for-each select="$ted-form-main-element//*:F16_DIV_INTO_LOT_YES/*:LOT_PRIOR_INFORMATION">
-				<lot>
-					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
-					<path><xsl:value-of select="$path"/></path>
-					<xsl:copy-of select="."></xsl:copy-of>
-				</lot>
-				</xsl:for-each>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:for-each select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION">
-				<lot>
-					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
-					<path><xsl:value-of select="$path"/></path>
-					<xsl:copy-of select="."></xsl:copy-of>
-				</lot>
-				</xsl:for-each>
-			</xsl:otherwise>
-		</xsl:choose>
-</lots>
+	<xsl:variable name="multiple-lots" select="$ted-form-object-element//*:F16_DIV_INTO_LOT_YES/*:LOT_PRIOR_INFORMATION"/>
+	<lots>
+		<xsl:choose>
+				<xsl:when test="$multiple-lots">
+					<xsl:for-each select="$multiple-lots">
+					<lot>
+						<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+						<path><xsl:value-of select="$path"/></path>
+						<xsl:copy-of select="."></xsl:copy-of>
+					</lot>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="$ted-form-object-element">
+					<lot>
+						<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+						<path><xsl:value-of select="$path"/></path>
+						<xsl:copy-of select="."></xsl:copy-of>
+					</lot>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
+	</lots>
 </xsl:variable>
 <!-- Variable number-of-lots holds the number of Lots of the notice being converted -->
 <xsl:variable name="number-of-lots" select="count($lots//lots/lot)"/>
@@ -230,11 +231,64 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 		</xsl:for-each>
 </xsl:function>
 
-<!-- Function opfun:is-valid-nut-code returns true if the given string is a valid NUTS code (string length > 4) -->
+<!-- Function opfun:is-valid-nuts-code returns true if the given string is a valid NUTS code (string length > 4) -->
 <xsl:function name="opfun:is-valid-nuts-code" as="xs:boolean">
 	<xsl:param name="nuts-code" as="xs:string"/>
 	<xsl:sequence select="fn:string-length($nuts-code) &gt; 4"/>
 </xsl:function>
+
+<!-- Function opfun:get-main-nature-from-cpv-code checks the first two digits of the given CPV code and returns the corresponding TED Main Nature (TYPE_CONTRACT) value -->
+<xsl:function name="opfun:get-main-nature-from-cpv-code" as="xs:string">
+	<xsl:param name="cpv-code" as="xs:string"/>
+	<xsl:variable name="type-contract">
+		<xsl:choose>
+			<xsl:when test="fn:matches($cpv-code, '^([0123]|4[012348])')"><xsl:value-of select="'SUPPLIES'"/></xsl:when>
+			<xsl:when test="fn:matches($cpv-code, '^45')"><xsl:value-of select="'WORKS'"/></xsl:when>
+			<xsl:when test="fn:matches($cpv-code, '^([56789]|49)')"><xsl:value-of select="'SERVICES'"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:sequence select="$type-contract"/>
+</xsl:function>
+
+<!-- Function opfun:normalize-currency-value tries to normalize a currency value -->
+<xsl:function name="opfun:normalize-currency-value" as="xs:string">
+	<xsl:param name="value" as="xs:string"/>
+	<!-- replace invalid byte sequence C2A0 (and any non-valid currency character) with a space -->
+	<xsl:variable name="cleaned-value" select="fn:normalize-space(fn:replace($value, '[^0-9.,]', ' '))"/>
+	<!-- remove multiple 0 after decimal separator: ########.0000 -->
+	<xsl:variable name="fixed-value" select="fn:normalize-space(fn:replace($value, '[,.]000+$', ''))"/>
+	<!-- normalize the format -->
+	<xsl:variable name="normalized-value">
+		<xsl:choose>
+			<!-- already normalized: ########.## -->
+			<xsl:when test="fn:matches($fixed-value, '^[0-9]+([.][0-9][0-9]?)?$')"><xsl:value-of select="$fixed-value"/></xsl:when>
+			<!-- comma as decimal separator: ########,## or ########,#  -->
+			<xsl:when test="fn:matches($fixed-value, '^[0-9]+([,][0-9][0-9]?)?$')"><xsl:value-of select="fn:replace($fixed-value, ',', '.')"/></xsl:when>
+			<!-- space as thousands separator: ## ### ###.## or ## ### ###.# -->
+			<xsl:when test="fn:matches($fixed-value, '^[0-9]{1,3}([ ][0-9][0-9][0-9])*([.][0-9][0-9]?)?$')"><xsl:value-of select="fn:replace($fixed-value, ' ', '')"/></xsl:when>
+			<!-- space as thousands separator, comma as decimal separator: ## ### ###,## or ## ### ###,# -->
+			<xsl:when test="fn:matches($fixed-value, '^[0-9]{1,3}([ ][0-9][0-9][0-9])*([,][0-9][0-9]?)?$')"><xsl:value-of select="fn:replace(fn:replace($fixed-value, ' ', ''), ',', '.')"/></xsl:when>
+			<!-- comma as thousands separator, period as decimal separator: ##,###,###.## or ##,###,###.# -->
+			<xsl:when test="fn:matches($fixed-value, '^[0-9]{1,3}([,][0-9][0-9][0-9])*([.][0-9][0-9]?)?$')"><xsl:value-of select="fn:replace($fixed-value, ',', '')"/></xsl:when>
+			<!-- period as thousands separator, comma as decimal separator: ##,###,###.## or ##,###,###.# -->
+			<xsl:when test="fn:matches($fixed-value, '^[0-9]{1,3}([.][0-9][0-9][0-9])*([,][0-9][0-9]?)?$')"><xsl:value-of select="fn:replace(fn:replace($fixed-value, '[.]', ''), ',', '.')"/></xsl:when>
+			<!-- normalized, but with multiple 0 after decimal separator: ########.0000 -->
+			<xsl:when test="fn:matches($fixed-value, '^[0-9]+([,.]0+)$')"><xsl:value-of select="fn:replace(fn:replace($fixed-value, '0+$', ''), ',', '.')"/></xsl:when>
+			<!-- some other value, not able to normalize -->
+			<xsl:otherwise><xsl:value-of select="$fixed-value"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="two-decimal-places">
+		<xsl:choose>
+			<!-- append 0 if normalized-value has only one digit after the decimal separator -->
+			<xsl:when test="fn:matches($normalized-value, '[.][0-9]$')"><xsl:value-of select="$normalized-value"/><xsl:text>0</xsl:text></xsl:when>
+			<xsl:otherwise><xsl:value-of select="$normalized-value"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:sequence select="$two-decimal-places"/>
+</xsl:function>
+
 
 <!-- FORM TYPES AND SUBTYPES -->
 
@@ -448,11 +502,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 			</xsl:element>
 		</xsl:otherwise>
 	</xsl:choose>
-<!--
-			<cbc:paul><xsl:value-of select="$context"/></cbc:paul>
-			<cbc:paul><xsl:value-of select="$ted-form-element-xpath"/></cbc:paul>
-			<cbc:paul><xsl:value-of select="$relative-context"/></cbc:paul>
--->
 </xsl:template>
 
 </xsl:stylesheet>

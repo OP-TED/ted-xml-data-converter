@@ -301,12 +301,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 <xsl:template name="terms-financial">
 	<!-- Terms Financial (BT-77): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Terms Financial (BT-77)'"/></xsl:call-template>
-	<xsl:variable name="text" select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:LEFTI_PRIOR_INFORMATION/*:MAIN_FINANCING_CONDITIONS/fn:normalize-space(fn:string-join(*:P, ' '))"/>
+	<xsl:variable name="text" select="$ted-form-lefti-element/*:MAIN_FINANCING_CONDITIONS/fn:normalize-space(fn:string-join(*:P, ' '))"/>
 	<xsl:choose>
 		<xsl:when test="$text ne ''">
 			<cac:PaymentTerms>
 				<xsl:call-template name="multilingual">
-					<xsl:with-param name="contexts" select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:LEFTI_PRIOR_INFORMATION/*:MAIN_FINANCING_CONDITIONS"/>
+					<xsl:with-param name="contexts" select="$ted-form-lefti-element/*:MAIN_FINANCING_CONDITIONS"/>
 					<xsl:with-param name="local" select="'P'"/>
 					<xsl:with-param name="element" select="'cbc:Note'"/>
 				</xsl:call-template>
@@ -352,11 +352,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 	<!-- Reserved Participation (BT-71): eForms documentation cardinality (Lot) = + | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Participation (BT-71)'"/></xsl:call-template>
 	<!-- reserved-procurement code res-pub-ser is RESERVED_ORGANISATIONS_SERVICE_MISSION in TED XML, used only in F21 -->
-	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:LEFTI_PRIOR_INFORMATION/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_SHELTERED_WORKSHOPS">
+	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-lefti-element/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_SHELTERED_WORKSHOPS">
 		<cac:TendererQualificationRequest>
 			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:LEFTI_PRIOR_INFORMATION/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_SHELTERED_WORKSHOPS)">
-					<xsl:apply-templates select="$ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:LEFTI_PRIOR_INFORMATION/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_SHELTERED_WORKSHOPS"/>
+				<xsl:when test="fn:boolean($ted-form-lefti-element/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_SHELTERED_WORKSHOPS)">
+					<xsl:apply-templates select="$ted-form-lefti-element/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_SHELTERED_WORKSHOPS"/>
 				</xsl:when>
 				<xsl:otherwise>
 					<cac:SpecificTendererRequirement>
@@ -383,10 +383,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 <xsl:template name="reserved-execution">
 	<!-- Reserved Execution (BT-736): eForms documentation cardinality (Lot) = ? | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3, CM subtypes 38-40; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Execution (BT-736)'"/></xsl:call-template>
-	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:LEFTI_PRIOR_INFORMATION/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_FRAMEWORK">
+	<xsl:if test="$eforms-notice-subtype = ('7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22') or $ted-form-lefti-element/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_FRAMEWORK">
 		<xsl:variable name="is-reserved-execution">
 			<xsl:choose>
-				<xsl:when test="fn:boolean($ted-form-main-element/*:FD_PRIOR_INFORMATION_DEFENCE/*:LEFTI_PRIOR_INFORMATION/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_FRAMEWORK)">yes</xsl:when>
+				<xsl:when test="fn:boolean($ted-form-lefti-element/*:RESERVED_CONTRACTS/*:RESTRICTED_TO_FRAMEWORK)">yes</xsl:when>
 				<xsl:otherwise>no</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
