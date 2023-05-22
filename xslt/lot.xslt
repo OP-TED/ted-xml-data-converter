@@ -1148,10 +1148,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts-codes(*:NUTS/@CODE)"/>
 	<xsl:variable name="main-nuts" select="$valid-nuts[1]"/>
 	<xsl:variable name="rest-nuts" select="functx:value-except($valid-nuts, $main-nuts)"/>
-	<xsl:if test="fn:normalize-space(*:MAIN_SITE) or fn:not(fn:empty($valid-nuts)) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
+	<xsl:variable name="main-site-text" select="fn:normalize-space(*:MAIN_SITE)"/>
+	<xsl:if test="$main-site-text or fn:not(fn:empty($valid-nuts)) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)'"/></xsl:call-template>
 		<xsl:choose>
-			<xsl:when test="fn:not(fn:normalize-space(*:MAIN_SITE)) and fn:empty($valid-nuts)">
+			<xsl:when test="fn:not($main-site-text) and fn:empty($valid-nuts)">
 				<!-- No valid MAIN_SITE and no valid NUTS codes -->
 				<cac:RealizedLocation>
 					<cac:Address>
@@ -1160,7 +1161,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				</cac:RealizedLocation>
 			</xsl:when>
 			<!-- Valid MAIN_SITE and no valid NUTS codes -->
-			<xsl:when test="fn:normalize-space(*:MAIN_SITE) and fn:empty($valid-nuts)">
+			<xsl:when test="$main-site-text and fn:empty($valid-nuts)">
 				<!-- valid MAIN_SITE exists but no valid NUTS codes -->
 				<xsl:call-template name="main-site">
 					<xsl:with-param name="nuts-code" select="''"/>
@@ -1204,10 +1205,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 				</cbc:CountrySubentityCode>
 			</xsl:if>
 			<xsl:if test="$valid-main-site-paragraphs[3]">
-				<xsl:variable name="adress-line" select="fn:string-join(($valid-main-site-paragraphs[fn:position() &gt; 2]), ' ')"/>
+				<xsl:variable name="address-line" select="fn:string-join(($valid-main-site-paragraphs[fn:position() &gt; 2]), ' ')"/>
 				<cac:AddressLine>
 					<cbc:Line>
-						<xsl:value-of select="$adress-line"/>
+						<xsl:value-of select="$address-line"/>
 					</cbc:Line>
 				</cac:AddressLine>
 			</xsl:if>

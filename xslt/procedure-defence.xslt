@@ -206,4 +206,14 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 	</cac:RequestedTenderTotal>
 </xsl:template>
 
+<xsl:template name="place-performance-procedure">
+	<!-- Place of Performance Additional Information (BT-728) -->
+	<xsl:variable name="location-element" select="$ted-form-object-element//(*:F10_TYPE_OF_WORKS_CONTRACT|*:LOCATION_NUTS|*:SITE_OR_LOCATION)"/>
+	<xsl:if test="$location-element">
+		<xsl:call-template name="place-performance">
+			<xsl:with-param name="location-element" select="$location-element"/>
+		</xsl:call-template>
+	</xsl:if>
+</xsl:template>
+
 </xsl:stylesheet>

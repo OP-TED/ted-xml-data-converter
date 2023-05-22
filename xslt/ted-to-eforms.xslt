@@ -398,22 +398,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:apply-templates select="*:OBJECT_CONTRACT/*:CPV_MAIN"/>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML at Procedure level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
-
 		<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
-		<!-- Place of Performance Additional Information (BT-728) -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
-		<!-- Place Performance City (BT-5131): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance City (BT-5131)'"/></xsl:call-template>
-		<!-- Place Performance Post Code (BT-5121): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Post Code (BT-5121)'"/></xsl:call-template>
-		<!-- Place Performance Country Subdivision (BT-5071): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Subdivision (BT-5071)'"/></xsl:call-template>
-		<!-- Place Performance Services Other (BT-727): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Services Other (BT-727)'"/></xsl:call-template>
-		<!-- Place Performance Street (BT-5101): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
-		<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
+		<xsl:call-template name="place-performance-procedure"/>
 	</cac:ProcurementProject>
 </xsl:template>
 
@@ -429,5 +415,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:apply-templates select="*:OBJECT_CONTRACT/*:OBJECT_DESCR"/>
 </xsl:template>
 
+<xsl:template name="place-performance-procedure">
+	<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
+	<!-- Place of Performance Additional Information (BT-728) -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
+	<!-- Place Performance City (BT-5131): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance City (BT-5131)'"/></xsl:call-template>
+	<!-- Place Performance Post Code (BT-5121): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Post Code (BT-5121)'"/></xsl:call-template>
+	<!-- Place Performance Country Subdivision (BT-5071): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Subdivision (BT-5071)'"/></xsl:call-template>
+	<!-- Place Performance Services Other (BT-727): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Services Other (BT-727)'"/></xsl:call-template>
+	<!-- Place Performance Street (BT-5101): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
+	<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
+</xsl:template>
 
 </xsl:stylesheet>

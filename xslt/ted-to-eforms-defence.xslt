@@ -373,29 +373,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 		<!-- Classification Type (BT-26): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<!-- Main Classification Code (BT-262): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Classification Code (BT-262)'"/></xsl:call-template>
-		<xsl:apply-templates select="$ted-form-object-element/*:CPV/*:CPV_MAIN"/>
+		<xsl:apply-templates select="$ted-form-object-element/(.|*)/*:CPV/*:CPV_MAIN"/>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Procedure) = * -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
-		<xsl:apply-templates select="$ted-form-object-element/*:CPV/*:CPV_ADDITIONAL"/>
+		<xsl:apply-templates select="$ted-form-object-element/(.|*)/*:CPV/*:CPV_ADDITIONAL"/>
 
 		<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
-		<!-- No location elements exist in TED F02 schema at Procedure level. TBD: Question: if NO_LOT_DIVISION, should we copy the location details from the single Lot in OBJECT_DESCR? -->
-			<!-- Place of Performance Additional Information (BT-728) -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
-			<xsl:apply-templates select="$ted-form-object-element/*:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/*:SITE_OR_LOCATION[not(*:NUTS)]/*:LABEL"/>
-			<!-- Place Performance City (BT-5131): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance City (BT-5131)'"/></xsl:call-template>
-			<!-- Place Performance Post Code (BT-5121): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Post Code (BT-5121)'"/></xsl:call-template>
-			<!-- Place Performance Country Subdivision (BT-5071): eForms documentation cardinality (Procedure) = ? -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Subdivision (BT-5071)'"/></xsl:call-template>
-			<xsl:apply-templates select="$ted-form-object-element/*:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/*:SITE_OR_LOCATION/*:NUTS[opfun:is-valid-nuts-code(@CODE)]"/>
-			<!-- Place Performance Services Other (BT-727): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Services Other (BT-727)'"/></xsl:call-template>
-			<!-- Place Performance Street (BT-5101): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
-			<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
+		<xsl:call-template name="place-performance-procedure"/>
 	</cac:ProcurementProject>
 </xsl:template>
 

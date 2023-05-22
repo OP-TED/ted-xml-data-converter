@@ -1089,7 +1089,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
 		<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Lot) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
-		<xsl:call-template name="place-performance"/>
+		<xsl:call-template name="place-performance-lot"/>
 
 		<!-- Duration Start Date (BT-536): eForms documentation cardinality (Lot) = ? | Mandatory for CM subtype E5; Forbidden for CN subtypes 23 and 24, CAN subtypes 36 and 37; Optional for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Duration Start Date (BT-536)'"/></xsl:call-template>
@@ -1111,6 +1111,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 	</cac:ProcurementProject>
 </xsl:template>
 
+<xsl:template name="place-performance-lot">
+	<!-- Place of Performance Additional Information (BT-728) -->
+	<!-- TBD: identify XPaths of location elements within Lots for R2.0.8 -->
+	<xsl:variable name="location-element" select="$ted-form-object-element//(*:F10_TYPE_OF_WORKS_CONTRACT|*:LOCATION_NUTS|*:SITE_OR_LOCATION)"/>
+	<xsl:if test="$location-element">
+		<xsl:call-template name="place-performance">
+			<xsl:with-param name="location-element" select="$location-element"/>
+		</xsl:call-template>
+	</xsl:if>
+</xsl:template>
+
+
 <xsl:template match="*:ADDITIONAL_INFORMATION">
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:P, ' '))"/>
 	<xsl:if test="$text ne ''">
@@ -1131,77 +1143,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 			<xsl:with-param name="element" select="'cbc:Name'"/>
 		</xsl:call-template>
 	</xsl:if>
-</xsl:template>
-
-
-<xsl:template name="place-performance">
-	<!-- the BG-708 Place of Performance is Mandatory for most form subtypes, but none of its child BTs are Mandatory -->
-	<!-- Note: it is not possible to convert the content of MAIN_SITE to any eForms elements that will pass the business rules validation. -->
-	<!-- It is also not possible to recognise any part of the content of MAIN_SITE and assign it to a particular eForms BT -->
-	<!-- To maintain any existing separation of the address in P elements: -->
-	<!--    the first P element will be converted to a cac:AddressLine/cbc:StreetName element -->
-	<!--    the second P element will be converted to a cac:AddressLine/cbc:AdditionalStreetName element -->
-	<!--    the remaining P elements will be converted to separate cac:AddressLine/cbc:Line elements -->
-	<!-- get list of only NUTS level 3 codes -->
-	<xsl:variable name="valid-nuts" select="opfun:get-valid-nuts-codes(*:NUTS/@CODE)"/>
-	<xsl:variable name="main-nuts" select="$valid-nuts[1]"/>
-	<xsl:variable name="rest-nuts" select="functx:value-except($valid-nuts, $main-nuts)"/>
-	<xsl:if test="fn:normalize-space(*:MAIN_SITE) or fn:not(fn:empty($valid-nuts)) or $eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')">
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)'"/></xsl:call-template>
-		<xsl:choose>
-			<xsl:when test="fn:not(fn:normalize-space(*:MAIN_SITE)) and fn:empty($valid-nuts)">
-				<!-- No valid MAIN_SITE and no valid NUTS codes -->
-				<cac:RealizedLocation>
-					<cac:Address>
-						<cbc:Region>anyw</cbc:Region>
-					</cac:Address>
-				</cac:RealizedLocation>
-			</xsl:when>
-				<!-- Valid MAIN_SITE and no valid NUTS codes -->
-			<xsl:when test="fn:normalize-space(*:MAIN_SITE) and fn:empty($valid-nuts)">
-				<!-- valid MAIN_SITE exists but no valid NUTS codes -->
-				<xsl:call-template name="main-site">
-					<xsl:with-param name="nuts-code" select="''"/>
-					<xsl:with-param name="main-site" select="*:MAIN_SITE"/>
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<!-- valid MAIN_SITE exists and at least one valid NUTS code exists, create a <cac:RealizedLocation><cac:Address> for each NUTS code -->
-				<xsl:variable name="main-site" select="*:MAIN_SITE"/>
-				<xsl:for-each select="$valid-nuts">
-					<xsl:call-template name="main-site">
-						<xsl:with-param name="nuts-code" select="."/>
-						<xsl:with-param name="main-site" select="$main-site"/>
-					</xsl:call-template>
-				</xsl:for-each>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:if>
-</xsl:template>
-
-<xsl:template name="main-site">
-	<xsl:param name="nuts-code"/>
-	<xsl:param name="main-site"/>
-	<xsl:variable name="valid-main-site-paragraphs" select="$main-site/*:P[fn:normalize-space(.) != '']/fn:normalize-space()"/>
-	<cac:RealizedLocation>
-		<cac:Address>
-			<!-- need to follow order of elements defined in the eForms schema -->
-			<xsl:if test="$valid-main-site-paragraphs[1]">
-				<cbc:StreetName><xsl:value-of select="$valid-main-site-paragraphs[1]"/></cbc:StreetName>
-			</xsl:if>
-			<xsl:if test="$valid-main-site-paragraphs[2]">
-				<cbc:AdditionalStreetName><xsl:value-of select="$valid-main-site-paragraphs[2]"/></cbc:AdditionalStreetName>
-			</xsl:if>
-			<xsl:if test="$nuts-code != ''">
-				<cbc:CountrySubentityCode listName="nuts"><xsl:value-of select="$nuts-code"/></cbc:CountrySubentityCode>
-			</xsl:if>
-			<xsl:for-each select="$valid-main-site-paragraphs[fn:position() &gt; 2]">
-				<cac:AddressLine>
-					<cbc:Line><xsl:value-of select="."/></cbc:Line>
-				</cac:AddressLine>
-			</xsl:for-each>
-		</cac:Address>
-	</cac:RealizedLocation>
 </xsl:template>
 
 <xsl:template match="*:DAYS">
