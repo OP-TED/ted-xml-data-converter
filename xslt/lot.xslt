@@ -653,6 +653,10 @@
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Information Deadline (BT-13)'"/></xsl:call-template>
 			<!-- Previous Planning Identifier (BT-125): eForms documentation cardinality (Lot) = ? | The equivalent element(s) in TED are at TED_EXPORT/CODED_DATA_SECTION/NOTICE_DATA/REF_NOTICE/NO_DOC_OJS -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Planning Identifier (BT-125)'"/></xsl:call-template>
+			<xsl:if test="$eforms-form-type = 'competition'">
+				<xsl:apply-templates select="*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
+			</xsl:if>
+			
 			<!-- Submission Nonelectronic Justification (BT-19): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Submission Nonelectronic Justification (BT-19)'"/></xsl:call-template>
 			<!-- Submission Nonelectronic Description (BT-745): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
