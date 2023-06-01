@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
-<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-                xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
-                xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
-                xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2">
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -38,7 +38,8 @@
    <!--Procedure Identifier (BT-04)-->
    <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
    <!--Notice Dispatch Date (BT-05)-->
-   <!--WARNING: Notice Dispatch Date (BT-05) is Mandatory for all eForms subtypes, but no NOTICE_DISPATCH_DATE was found in TED XML.-->
+   <cbc:IssueDate>2021-07-08+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
    <!--Notice Version (BT-757)-->
    <cbc:VersionID>R2.0.8.S05.E01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
@@ -69,6 +70,16 @@
       <!--Previous Planning Identifier (BT-125)-->
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
-   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)--><!--Description (BT-24)--><!--Main Nature (BT-23)--><!--Additional Information (BT-300)--><!--Estimated Value (BT-27)--><!--Main Classification Code (BT-262)--><!--Additional Classification Code (BT-263)--><!--Place of Performance Additional Information (BT-728)--><!--Place Performance City (BT-5131)--><!--Place Performance Post Code (BT-5121)--><!--Place Performance Country Subdivision (BT-5071)--><!--Place Performance Services Other (BT-727)--><!--Place Performance Street (BT-5101)--><!--Place Performance Country Code (BT-5141)--></cac:ProcurementProject>
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)--><!--Description (BT-24)--><!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="FRA">Les entreprises nouvellement créées sont autorisées à présenter leur candidature. Si elles ne sont pas en mesure de produire certains des documents demandés dans le présent avis de marché, elles peuvent justifier de leurs capacités financières et professionnelles par d’autres moyens que ceux indiqués dans le présent avis et notamment par la présentation de titres ou de l’expérience professionnelle du ou de leurs responsables. Ce marché est un marché classifié de niveau «Secret» au sens de l’arrêté du 13.11.2020 portant approbation de l'instruction générale interministérielle nº 1300 sur la protection du secret de la défense nationale. Il ne nécessite pas la détention d’informations et/ou de supports classifiés par le titulaire dans ses locaux. Les candidats doivent impérativement fournir les documents relatifs à l’habilitation indiqués à la rubrique III.2.1) du présent avis /dans le DCE. Les prestations considérées a priori comme étant concernées par l’habilitation secret (ou de niveau de sensibilité DR) sont: missions rattachées aux études d’exécution, aux approvisionnements, travaux et installations des équipements de courant fort et foudre et notamment ceux se trouvant dans des locaux CFA sensibles (conformément à l’annexe de sécurité jointe au dossier d'AAPC disponible sur PLACE).</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">45311000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+   </cac:ProcurementProject>
    <!-- multiple cac:ProcurementProjectLot -->
 </ContractNotice>

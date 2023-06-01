@@ -440,7 +440,6 @@ These instructions can be un-commented to show the variables holding the organiz
 
 
 <xsl:template name="tax-legislation">
-	<pmd-tax-legislation/>
 	<xsl:variable name="tax-legislation-element" select="$ted-form-complementary-element/*:INFORMATION_REGULATORY_FRAMEWORK/*:TAX_LEGISLATION"/>
 	<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:contains(., 'TAX_LEGISLATION')]/../orgid"/>
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join($tax-legislation-element/*:TAX_LEGISLATION_VALUE/(*:P|*:FT), ' '))"/>

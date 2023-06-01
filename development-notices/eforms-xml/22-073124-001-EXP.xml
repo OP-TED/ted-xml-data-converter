@@ -372,7 +372,7 @@
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
    <!-- cac:ContractingParty -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)--><!--WARNING: Buyer Legal Type (BT-11) is Mandatory for eForms subtypes 1, 4, 7, 10, 14, 16, 19, 23, 29, 32, 35, and 36, but no CA_TYPE was found in TED XML.--><!--Buyer Contracting Entity (BT-740)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)--><!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
          <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
