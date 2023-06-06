@@ -160,7 +160,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:variable name="url-national-procedure" select="fn:normalize-space(*:PROCEDURE/*:URL_NATIONAL_PROCEDURE)"/>
 	<xsl:if test="($info-add ne '') or ($url-national-procedure ne '')">
 		<xsl:choose>
-			<xsl:when test="fn:false()">
+			<xsl:when test="$ted-form-additional-elements">
 				<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
 					<xsl:variable name="form-element" select="."/>
 					<xsl:variable name="ted-language" select="fn:string(@LG)"/>
