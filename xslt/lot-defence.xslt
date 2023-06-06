@@ -1084,93 +1084,77 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 	</cac:ProcurementProject>
 </xsl:template>
 
-
 <xsl:template name="lot-description">
 	<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
+	<xsl:variable name="lot-description-element" select="*:LOT_DESCRIPTION"/>
+	<xsl:variable name="total-quantity-or-scope-element" select="*/(.|*)/*:TOTAL_QUANTITY_OR_SCOPE"/>
+	<xsl:variable name="lot-description" select="fn:normalize-space(fn:string-join($lot-description-element/*, ' '))"/>
+	<xsl:variable name="total-quantity-or-scope" select="fn:normalize-space(fn:string-join($total-quantity-or-scope-element/*, ' '))"/>
 	<xsl:choose>
-		<xsl:when test="$multiple-lots">
-			<xsl:variable name="lot-description" select="fn:normalize-space(fn:string-join(*:LOT_DESCRIPTION/*, ' '))"/>
-			<xsl:variable name="total-quantity-or-scope" select="fn:normalize-space(fn:string-join(*/*:TOTAL_QUANTITY_OR_SCOPE/*, ' '))"/>
+		<xsl:when test="($lot-description ne '') or ($total-quantity-or-scope ne '')">
 			<xsl:choose>
-				<xsl:when test="($lot-description ne '') or ($total-quantity-or-scope ne '')">
-					<xsl:choose>
-						<xsl:when test="$ted-form-additional-elements">
-							<xsl:variable name="lot-description-relative-path" select="fn:substring-after(functx:path-to-node-with-pos(*:LOT_DESCRIPTION), fn:concat($ted-form-element-xpath, '/'))"/>
-							<xsl:variable name="total-quantity-or-scope-relative-path" select="fn:substring-after(functx:path-to-node-with-pos(*/*:TOTAL_QUANTITY_OR_SCOPE), fn:concat($ted-form-element-xpath, '/'))"/>
-							<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
-								<xsl:variable name="form-element" select="."/>
-								<xsl:variable name="ted-language" select="fn:string(@LG)"/>
-								<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
-								<xsl:variable name="lot-description-lang" as="xs:string">
-									<xsl:if test="$lot-description">
-										<xsl:variable name="parent">
-											<xsl:call-template name="find-element">
-												<xsl:with-param name="context" select="$form-element"/>
-												<xsl:with-param name="relative-context" select="$lot-description-relative-path"/>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
-									</xsl:if>
+				<xsl:when test="$ted-form-additional-elements">
+					<xsl:variable name="lot-description-relative-path" select="fn:substring-after(functx:path-to-node-with-pos($lot-description-element), fn:concat($ted-form-element-xpath, '/'))"/>
+					<xsl:variable name="total-quantity-or-scope-relative-path" select="fn:substring-after(functx:path-to-node-with-pos($total-quantity-or-scope-element), fn:concat($ted-form-element-xpath, '/'))"/>
+					<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
+						<xsl:variable name="form-element" select="."/>
+						<xsl:variable name="ted-language" select="fn:string(@LG)"/>
+						<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
+						<xsl:variable name="lot-description-lang">
+							<xsl:if test="$lot-description">
+								<xsl:variable name="parent">
+									<xsl:call-template name="find-element">
+										<xsl:with-param name="context" select="$form-element"/>
+										<xsl:with-param name="relative-context" select="$lot-description-relative-path"/>
+									</xsl:call-template>
 								</xsl:variable>
-								<xsl:variable name="total-quantity-or-scope-lang">
-									<xsl:if test="$total-quantity-or-scope">
-										<xsl:variable name="parent">
-											<xsl:call-template name="find-element">
-												<xsl:with-param name="context" select="$form-element"/>
-												<xsl:with-param name="relative-context" select="$total-quantity-or-scope-relative-path"/>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:variable name="text">
-									<xsl:value-of select="$lot-description-lang"/>
-									<xsl:if test="$total-quantity-or-scope-lang ne ''">
-										<xsl:if test="$lot-description-lang"><xsl:text> </xsl:text></xsl:if>
-										<xsl:value-of select="$total-quantity-or-scope-lang"/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:if test="$text ne ''">
-									<cbc:Description languageID="{$language}"><xsl:value-of select="$text"/></cbc:Description>
-								</xsl:if>
-							</xsl:for-each>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:variable name="text">
-								<xsl:value-of select="$lot-description"/>
-								<xsl:if test="$total-quantity-or-scope">
-									<xsl:if test="$lot-description"><xsl:text> </xsl:text></xsl:if>
-									<xsl:value-of select="$total-quantity-or-scope"/>
-								</xsl:if>
-							</xsl:variable>
-							<xsl:if test="$text ne ''">
-								<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+								<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
 							</xsl:if>
-						</xsl:otherwise>
-					</xsl:choose>
+						</xsl:variable>
+						<xsl:variable name="total-quantity-or-scope-lang">
+							<xsl:if test="$total-quantity-or-scope">
+								<xsl:variable name="parent">
+									<xsl:call-template name="find-element">
+										<xsl:with-param name="context" select="$form-element"/>
+										<xsl:with-param name="relative-context" select="$total-quantity-or-scope-relative-path"/>
+									</xsl:call-template>
+								</xsl:variable>
+								<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
+							</xsl:if>
+						</xsl:variable>
+						<xsl:variable name="text">
+							<xsl:value-of select="$lot-description-lang"/>
+							<xsl:if test="$total-quantity-or-scope-lang ne ''">
+								<xsl:if test="$lot-description-lang"><xsl:text> </xsl:text></xsl:if>
+								<xsl:value-of select="$total-quantity-or-scope-lang"/>
+							</xsl:if>
+						</xsl:variable>
+						<xsl:if test="$text ne ''">
+							<cbc:Description languageID="{$language}"><xsl:value-of select="$text"/></cbc:Description>
+						</xsl:if>
+					</xsl:for-each>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML.</xsl:variable>
-					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+					<xsl:variable name="text">
+						<xsl:value-of select="$lot-description"/>
+						<xsl:if test="$total-quantity-or-scope">
+							<xsl:if test="$lot-description"><xsl:text> </xsl:text></xsl:if>
+							<xsl:value-of select="$total-quantity-or-scope"/>
+						</xsl:if>
+					</xsl:variable>
+					<xsl:if test="$text ne ''">
+						<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+					</xsl:if>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:variable name="total-quantity-or-scope" select="fn:normalize-space(fn:string-join(*/(.|*)/*:TOTAL_QUANTITY_OR_SCOPE/*, ' '))"/>
-			<xsl:choose>
-				<xsl:when test="($total-quantity-or-scope ne '')">
-					<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$total-quantity-or-scope"/></cbc:Description>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but TOTAL_QUANTITY_OR_SCOPE does not contained text in TED XML.</xsl:variable>
-					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contain text in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-
 
 <xsl:template name="place-performance-lot">
 	<!-- Place of Performance Additional Information (BT-728) -->

@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<PriorInformationNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
+                         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                         xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                         xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                         xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                         xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">7</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>true</efbc:AcquiringCPBIndicator>
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>www.studentenwerk-wuerzburg.de</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>Studentenwerk Würzburg</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Am Studentenhaus</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Würzburg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>97072</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Herrn Beckhoff Einkauf HSG</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>m.beckhoff@studentenwerk-wuerzburg.de</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>STW Augsburg</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Eichleitner-Straße 30</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Augsburg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>86156</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>STW Erlangen-Nürnberg</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Hofmannstraße 27</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Erlangen</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>91052</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>STW Oberfranken</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Universitätsstraße 30</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Bayreuth</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>95547</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>STW München</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Leopoldstraße 15</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>München</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>80802</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>STW Würzburg</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Am Studentenhaus</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Würzburg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>97072</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <!--Organization Contact Point (BT-502)-->
+                        <!--Organization Contact Telephone Number (BT-503)-->
+                        <!--Organization Contact Fax (BT-739)-->
+                        <!--Organization Contact Email Address (BT-506)-->
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2018-05-11+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>R2.0.8.S03.E01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">education</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Type (BT-105)-->
+      <!--Lots All Required (BT-763)-->
+      <!--Previous Planning Identifier (BT-125)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
+      <cbc:Name languageID="DEU">Rahmenvereinbarung mit den Studentenwerken der Einkaufskooperation (Ekoop) Bayern</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="DEU">Rahmenvereinbarung über die Belieferung mit Fetten, Ölen und Feinkostartikeln mit den Studentenwerken der Einkaufskooperation (Ekoop) Bayern für maximal 4 Jahre. Anhand der eingereichten Angebote werden die 3 wirtschaftlichsten Angebote ermittelt. Diese Unternehmen befinden sich dann für die Laufzeit von 4 Jahren im Firmenpool der genannten Leistungen. Im Ersten Jahr werden ausschließlich Einzelaufträge von dem Unternehmen abgerufen, welches das wirtschaftlichste Angebot abgegeben hat. Vor Ablauf des ersten Jahres wird der Leistungskatalog erneut preislich bei allem im Pool befindlichen Unternehmen abgefragt. Das daraus ermittelte wirtschaftlichste Angebot erhält den Zuschlag für die folgenden 12 Monate innerhalb des Vertragszeitraumes. Dieses Prozedere wird jährlich wiederholt, bis die maximale Vertragslaufzeit von 4 Jahren abgelaufen ist. Einzig die Preise der einzelnen Positionen werden hierbei abgefragt – die restlichen Konditionen (Leistungsbeschreibung, Vertragsbedingungen etc.) bleiben bestehen. Folglich existiert eine Preisbindung zu Beginn für maximal 12 Monate im ersten Vertragsjahr. Danach jährlich. Ändert sich der Leistungsinhalt und/ oder ändert sich der Firmenpool wesentlich, wird ein neues förmliches Vergabeverfahren durchgeführt. Wird bei erneuter Preisabfrage festgestellt, dass die Angebote unangemessen sind, wird ebenfalls ein erneutes Vergabeverfahren durchgeführt. Es kommt dann nicht zur Vertragsverlängerung.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="DEU">Sehr geehrte Damen &amp; Herren, Das Studentenwerk Würzburg führt im Folgenden und im Sinne eines lauteren Wettbewerb sowie der erforderlichen Transparenz laut GWB/VgV diese Ausschreibung durch. Es handelt sich hierbei um eine Rahmenvereinbarung, die mit mehreren Auftragnehmern über die Dauer von 4 Jahren geschlossen wird. Anhand der eingereichten Angebote werden die 3 wirtschaftlichsten Angebote ermittelt. Diese Unternehmen befinden sich dann für die Laufzeit von 4 Jahren im Firmenpool der genannten Leistungen. Die Studentenwerke der Ekoop Bayern sind: — Studentenwerk Augsburg, — Studentenwerk Erlangen-Nürnberg, — Studentenwerk München, — Studentenwerk Oberfranken, — Studentenwerk Würzburg. Unter folgendem Link stehen Ihnen alle relevanten Unterlagen zum Download zur Verfügung: https://www.studentenwerk-wuerzburg.de/infos/projekte-ausschreibungen.html Allgemeine Leistungsbeschreibung. 1) Allgemeine Vorbemerkungen 1.1) Das Studentenwerk Würzburg führt im Auftrag der Einkaufskooperation der bayerischen Studentenwerke (Ekoop) die o.g. Ausschreibung durch. Die Ekoop besteht dabei aus den folgenden teilnehmenden Studentenwerken: — Studentenwerk Augsburg – Studentenwerk Erlangen – Nürnberg - Studentenwerk München – Studentenwerk Oberfranken – Studentenwerk Würzburg. 1.2) Gegenstand dieser Ausschreibung ist die Belieferung gemäß Leistungsverzeichnis auf Grundlage des GWB/VgV durch Vergabe an einen oder mehrere Auftragnehmer. 1.3) Die im Leistungsverzeichnis oder den Anlagen zum Leistungsverzeichnis beschriebenen Ausführungen sind anzubieten. Es dürfen nur Produkte angeboten werden, welche diesen Beschreibungen entsprechen oder gleichwertig bzw. oder gleichwertiger Art sind insofern dies vom Auftraggeber vorgegeben wird. 1.4) Eine Übertragung von Arbeiten aus diesem Vertrag an Dritte durch den Auftragnehmer bedarf der vorherigen Zustimmung des Auftraggebers. 1.5) Mögliche, im Leistungsverzeichnis durch den Auftraggeber vorgegebene Qualitätsbeschreibungen auch in Form von Hersteller- und Produktempfehlungen sind durch den Bieter zu beachten. 1.6) Die im Text im Leistungsverzeichnis, sowie sämtlicher Anlagen, des Auftraggebers offengelassenen Stellen sind vollständig auszufüllen. Unvollständig ausgefüllte Angebote werden nicht gewertet und führen zum Ausschluss bei der Vergabe. 1.7) Es werden keine Nebenangebote zugelassen. 1.8 Für eventuelle Planungs- und Beratungsleistungen dürfen keine zusätzlichen Kosten erhoben werden und sind daher mit den zu beschaffenden Artikeln bzw. mit der auszuführenden Leistung abgegolten. 1.9) Die Angebotsabgabe ist für den Auftraggeber kostenlos und unverbindlich. Er behält sich vor, gemäß den Vergabebestimmungen eine Auswahl unter den Bietern zu treffen. Bei der Auswahl des Bieters muss der Preis nicht das allein entscheidende Kriterium sein. Etwaige andere Wertungskriterien werden bereits innerhalb der Bekanntmachung genannt und finden sich innerhalb der Vergabeunterlagen wieder. 1.10) Die Angebotspreise sind zu kalkulieren für Preisgültigkeit bis Ende Auftragsabwicklung/Leistungszeitraum. Alle in den Vorbemerkungen und im Leistungsverzeichnis genannten Angaben sind vom Bieter zu prüfen, da dieser im Auftragsfalle die Gewährleistung für die richtige, ordnungsgemäße und den gesetzlichen Vorschriften entsprechende Lieferung und Leistung zu übernehmen hat. 1.11) Bei zertifizierten Produkten und/oder Lebensmitteln (z.B. MSC, BIO, Rainforest, Fairtrade) hat der Auftragnehmer die Pflicht, die Nachweise zu beschaffen und vorzulegen. Bei ausländischen Erzeugnissen sind diese Bedingungen im Rahmen des Angebots mittels Prüfbescheinigung nachzuweisen. Der Auftraggeber behält sich vor, bei Bedarf nach seiner Entscheidung, Rückfragen bezüglich neuer/aktueller Zertifizierungen zu stellen. Die dabei gemachten Angaben werden zum Vertragsbestandteil. 1.12) Alle Lieferleistungen sind für den Auftraggeber kostenfrei „Frei Verwendungsstelle (Frei Raum)“ inklusive Vertragen zu liefern. 1.13) Der angegebene Mengenbedarf wurde aus Erfahrungswerten der Vorjahre ermittelt. Aus diesen Angaben kann kein Anspruch auf Abnahme einer Mindest- oder Höchstmenge hergeleitet werden. Die Zahlen sind Kalkulationshilfsmittel für den jeweiligen Bieter. 1.14) Bei einer Zuschlagserteilung, sind alle vom Auftraggeber in dieser Ausschreibung geforderten Lieferungen/Leistungen vor Auftragsbeginn, falls erforderlich, mit diesem im Detail vorab zu besprechen. 2) Angebotsinhalt 2.1) Die Angebotsabgabe hat ausschließlich unter folgenden Kriterien zu erfolgen: 2.2) Preise für jede Position sind anzugeben. Beim Hauptsortiment müssen 100 % der abgefragten Artikel von Ihnen lieferbar sein, beim Nebensortiment 80 %. 2.3) Bei fehlenden Preisen im Nebensortiment, wird der jeweils teuerste abgegebene Preis aller Bieter zur Grundlage der Berechnung herangezogen. 2.4) Die Preise sind in Euro ohne Umsatzsteuer anzugeben: die Umsatzsteuer (Mehrwertsteuer) sowie Skonti und Nachlässe sind separat einzutragen. Die Angaben müssen zweifelsfrei sein. 2.5) Das Angebot ist dokumentenecht auszufüllen. 2.6) Der Bieter ist verpflichtet, alle verlangten Nachweise und Erklärungen vorzulegen sowie alle verlangten Angaben zu machen. 2.7) Beabsichtigt der Bieter, Angaben aus seinem Angebot für die Anmeldung eines gewerblichen Schutzrechtes zu verwerten, hat er in seinem Angebot darauf hinzuweisen. 3) Bezeichnung, Menge und Umfang der Lieferung/Leistung/Lieferort Die Bezeichnung, Menge und Umfang der Lieferung/Leistung erfolgt gemäß dem Leistungsverzeichnis mit den darin festgelegten Vorgaben an die in der Anlage „Lieferadressen EKOOP Bayern“ und „Betriebsstellen-Beschreibung München“ aufgeführten Orte. ZUSÄTZLICHE VERTRAGSBEDINGUNGEN. 1) Vertragsabschluss 1.1) Den Vertrag betreffende Vereinbarungen werden schriftlich getroffen. Abrufe aus dem Rahmenvertrag werden in Textform getätigt. 2) Qualitätssicherung/Güteprüfung 2.1) Die Anforderungen an das betriebliche Qualitätssicherungssystem sind in der Leistungsbeschreibung enthalten. 2.2) Der Auftragnehmer gewährleistet gegenüber dem Auftraggeber, vorgesehene Verfahren zur Qualitätssicherung einzuhalten und Änderungen anzuzeigen. 2.3) Der Auftraggeber behält sich vor, das vom Auftragnehmer praktizierte Qualitäts-Management-System zu prüfen. 2.4) Der Auftraggeber ist im Rahmen der Güteprüfung berechtigt, sich vor Ort beim Auftragnehmer über die vertragsgemäße Ausführung der Leistungen auch während der laufenden Produktion zu informieren, in die Ausführungsunterlagen Einsicht zu nehmen und alle sonstigen erforderlichen Auskünfte zu verlangen. 2.5) Der Auftraggeber kann die Vorlage eines Qualitätsprüfzertifikats vom Auftragnehmer verlangen. 2.6) Es gelten die Bestimmungen des § 12 VOL/B. Die Kosten einer Güteprüfung sind vom Auftragnehmer zu tragen (§12 Nr. 2 g VOL/B). 3) Verpackung/Entsorgung/Transport/Transportkosten 3.1) Es gelten die Bestimmungen der Verpackungsverordnung. Der Auftragnehmer soll bei Bedarf dem Auftraggeber ein mit der Verpackungsordnung konformes Verpackungs-/ Entsorgungskonzept vorlegen. 3.2) Die Kosten der Verpackung trägt ausschließlich der Auftragnehmer. Die Verpackung ist auf den unbedingt notwendigen Umfang zu beschränken; sie soll wiederverwertbar bzw. stofflich verwertbar sein. 3.3) Der Auftragnehmer hat zum sicheren Transport die geeigneten Packmittel unter Berücksichtigung der Anforderungen nach Art und Gewicht der Ware, sowie des eingesetzten Beförderungsmittels zu verwenden. Bei Lebensmitteln sind die jeweiligen Gesetze strikt einzuhalten. 3.4) Die Kosten für Packmittel und Transport trägt grundsätzlich der Auftragnehmer. Dies gilt auch für Nebenkosten wie z. B. Versicherungsgebühren, Zölle, Nachnahmeprovisionen, Gebühr für Transportkostenbescheinigungen, Gefahrgutzuschläge, Maut etc.. 5) Proben/Muster 5.1) Der Auftraggeber behält sich grundsätzlich vor, Muster oder Proben für die angebotenen Produkte anzufordern. 5.2) Muster- / Probenlieferungen haben grundsätzlich in Absprache mit dem beteiligten Studentenwerk zu erfolgen. 5.3) Auf Verlangen des Auftraggebers hat der Auftragnehmer diesem Proben und Muster in ausreichender Menge kostenfrei zur Verfügung zu stellen. 5.4) Auf Wunsch des Auftragnehmers erfolgt eine Rücksendung auf dessen Kosten und Gefahr. 5.5) Bei Verträgen über Fertigung in Serie ist das Serienmuster vorzustellen. Die Serienfertigung hat der Beschaffenheit und Güte des vorgestellten Musters zu entsprechen. Dies gilt selbstverständlich auch bei Lebensmitteln. 5.6) Eine Serienfertigung erfolgt erst nach Freigabe des Auftraggebers. 5.7) Leistungsmerkmale genehmigter Musterstücke stellen eine Konkretisierung der Leistungsbeschreibung dar. 6) Lieferscheine 6.1) Der Auftragnehmer fertigt die Lieferscheine an. 6.2) Die Erstellung eines Lieferscheines hat in 2-facher Ausfertigung zu erfolgen. 6.3) Im Lieferschein müssen zwingend enthalten sein: — Nummer und Datum des Lieferscheins. — Adresse und Kundennummer der Lieferstelle. — Artikelbezeichnung. — Liefermengen mit Mengeneinheiten entsprechend der Bestellung. — Auftragsnummer des Studentenwerks. 6.4) Lieferscheine und/oder Abnahmebelege ohne Unterschrift eines zeichnungsberechtigen Mitarbeiters des Studentenwerks werden grundsätzlich nicht anerkannt. 7) Anlieferzeiten 7.1) Der vertraglich vereinbarte Leistungsgegenstand muss zu den bekannten Anlieferzeiten des Auftraggebers durch den Auftragnehmer angeliefert werden. 7.2) Ausnahmen hiervon sind im Vorhinein mit dem Auftraggeber abzusprechen. 8) Übergabe/Abnahme/Annahme der Leistung 8.1) Soweit nichts anderes vereinbart ist, erfolgt die Übergabe des geschuldeten Leistungsgegenstandes an den vertraglich bestimmten Empfänger in dessen Räumlichkeiten an Werktagen gemäß den genannten Anlieferzeiten. 8.2) Bei Übergabe hat sich der Auftragnehmer den Empfang des Leistungsgegenstandes auf dem Satz Lieferscheine bestätigen zu lassen. Eine Ausfertigung des Lieferscheines verbleibt beim Auftraggeber, eine weitere behält der Auftragnehmer. 8.3) Abnahme ist die Erklärung des Auftraggebers, dass der Vertrag der Hauptsache nach erfüllt ist. § 13 VOL/B bleibt unberührt. Sofern keine anderweitige Vereinbarung getroffen wurde, sind Lieferung und/oder Leistungen förmlich abzunehmen. 8.4) Liegt ein wesentlicher Sach-, Qualitäts- oder Rechtsmangel vor oder fehlt die Eignung für die nach dem Vertrag vorausgesetzte Verwendung, kann der Auftraggeber oder der von ihm Beauftragte unter Beachtung der Voraussetzungen des § 13 Nr. 2 (1) VOL/B die Abnahme der Leistung verweigern. 8.5) Die Annahme der Leistung erfolgt zunächst unter dem Vorbehalt der späteren Überprüfung durch den Nutzer hinsichtlich ihrer Vertragskonformität (Übereinstimmung mit Proben, Muster, Zeichnungen usw.). Die Annahme der Leistung ersetzt nicht die Abnahme. 8.6) Für die Feststellung der gelieferten Menge ist allein die Verwendungsstelle des Auftraggebers zuständig. Dem Auftragnehmer steht es frei, bei der Ermittlung der gelieferten Mengen zugegen zu sein. 8.7) Die Entscheidung darüber, ob die gelieferte Leistung qualitativ vertragsgemäß ist, wird vom Auftraggeber bzw. dem jeweiligen Nutzer getroffen. Die Tatsache, dass der Auftraggeber die Leistung in Benutzung bzw. bei Lebensmittel bereits in den Verkauf genommen hat, stellt keine Abnahme dar, und ersetzt auch nicht die Funktionsabnahme. § 13 Nr. 2 Abs. 3 VOL/B ist insoweit nicht anwendbar. 8.8) Teillieferungen und Aliudlieferungen sind nicht vertragsgemäß sofern nicht Abweichendes vereinbart wurde. Mit eventuell anfallenden Kosten wird der Auftragnehmer belastet. 8.9) Die Erfüllung der Lieferverpflichtung tritt mit dem Tag der erfolgreichen Abnahme ein. 8.10) Ist eine Einweisung vereinbart, so hat der Auftragnehmer das Personal zu einem mit dem Auftraggeber abzustimmenden Termin kostenfrei in die Bedienung der gelieferten Geräte bzw. bei Lebensmitteln in den Umgang mit diesen, Zubereitung etc. einzuweisen. Die Einweisung des Personals ist mit der Funktionsabnahme zu verknüpfen. 9) Liefertermin/Lieferverzug 9.1) Die vereinbarten Liefer- und Montagetermine sind Fixtermine. Überschreitet der Auftragnehmer die vereinbarte Lieferzeit, so kann der Auftraggeber unbeschadet der Rechte aus § 9 VOL/B vom Auftragnehmer gemäß den Bestimmungen der Ziffer 30 eine Vertragsstrafe fordern. 9.2) Wenn vereinbarte Liefertermine nicht eingehalten werden können, ist der Auftragnehmer zur Vermeidung eines weitergehenden Schadens verpflichtet, den Auftraggeber hiervon unverzüglich zu unterrichten. Werden dem Auftragnehmer Umstände bekannt, die die Einhaltung der fristgerechten Lieferung oder Leistung, auch teilweise gefährdet erscheinen lassen, so hat er dem Auftraggeber hierüber unverzüglich ebenfalls Mitteilung zu machen. Eine ordnungsgemäße Mitteilung erfolgt mittels Telefonat, E-Mail oder Telefax. Zusatz: Studentenwerk Würzburg ausschließlich per Mail an den jeweiligen Besteller 9.3) Die Mitteilung einer verspäteten Lieferung befreit den Auftragnehmer nicht von einem eventuellen Schadenersatzanspruch wegen Verzugs. Der Auftraggeber kann außerdem Mehrarbeit durch erhöhten Arbeitseinsatz ohne besondere Vergütung verlangen, damit der Liefertermin eingehalten wird. Erklärt der Auftragnehmer, dass die ihm obliegende Lieferung / Leistung auch durch eigene Mehrarbeit nicht termingerecht erbracht werden kann, so kann der Auftraggeber auf Kosten des Auftragnehmers die zur termingerechten Fertigstellung nötigen Arbeiten vergeben. 10) Leistungsumfang/Preise/Mehr- und Minderleistungen 10.1) Die vereinbarten und dem Zuschlag damit zugrunde gelegten Preise sind Festpreise bis zur Fertigstellung bzw. Abnahme der Leistung und für den individuell vereinbarten Zeitraum. Bei Rahmenvereinbarungen sind die vereinbarten Festpreise bis zum vereinbarten Vertragsende gültig, es sei denn, eine Preisgleitklausel wurde vereinbart 10.2) Die Umsatzsteuer ist gesondert auszuweisen. 10.3) Die Leistungspflicht und der vereinbarte Preis umfassen sämtliche Lieferungen und Leistungen die erforderlich sind, um die beauftragte Leistung vollständig, qualitäts- und termingerecht zu erbringen. Der Auftragnehmer versichert ausdrücklich, zur fachgerechten und ordnungsgemäßen Lieferung und / oder Durchführung der Arbeiten in der Lage zu sein und über die hierzu erforderlichen Gerätschaften, technischen Mittel und entsprechendes (Fach-)Personal zu verfügen. 10.4) Der Auftragnehmer bestätigt, dass er die Vertragsbestandteile eigenverantwortlich auf ihre Vollständigkeit geprüft hat und dass die zur Verfügung gestellten Unterlagen ausreichend sind, um sämtliche zur Preisbildung erforderlichen Umstände zu erfassen. 10.5 Mehrleistungen oder sachliche Leistungsabweichungen gegenüber der vertraglichen Festlegung darf der Auftragnehmer nur nach vorheriger schriftlicher Zustimmung des Auftraggebers, die unter Angabe eines Nachtragsangebotes zu beantragen ist, ausführen. 10.6) Ohne schriftliche Zustimmung oder schriftliche Beauftragung durch den Auftraggeber gleichwohl ausgeführte Leistungen, führen nicht zu Ansprüchen auf Mehrvergütung gegenüber dem vertraglich vereinbarten Preis. Auch bei erfolgter schriftlicher Zustimmung bleibt eine Prüfung des Nachtragsangebotes auf der Grundlage der vertraglichen Vereinbarungen vorbehalten. 11) Nachweis einer Haftpflichtversicherung 11.1) Der Auftragnehmer hat auf Verlangen des Auftraggebers nachzuweisen, dass er für mögliche Haftpflichtansprüche, die sich aufgrund der zu erbringenden Leistung ergeben können, entsprechende Haftpflichtversicherungen in ausreichender Höhe abgeschlossen hat und auch laufend unterhält. Die Festlegung der Höhe der Versicherungssummen bleibt der besonderen Leistungsbeschreibung vorbehalten. 11.2) Weist der Auftragnehmer auf Verlangen des ausschreibenden Studentenwerkes keinen ausreichenden Versicherungsschutz nach, so ist das Studentenwerk berechtigt, vom Vertrag zurückzutreten oder den Vertrag zu kündigen. 12) Mindestlohngesetz 12.1) Der Auftragnehmer ist verpflichtet, den bei ihm beschäftigten Arbeitnehmern mindestens den gesetzlich vorgeschriebenen Mindestlohn zu zahlen. Diese Verpflichtung gilt auch für mögliche Nachunternehmer. 12.2) Der Auftraggeber ist berechtigt, bei Bedarf entsprechende Kontrollen durchzuführen. 12.3) Der Auftraggeber ist berechtigt, von seinem besonderen Kündigungsrecht Gebrauch zu machen, den Ersatz und die Freistellung von etwaigen Schäden zu verlangen. 13) Einreichung der Rechnung 13.1) Der Auftragnehmer soll die Rechnung in 2-facher Ausfertigung einreichen. § 15 VOL/B bleibt unberührt. 13.2) Die Rechnung ist getrennt nach Lieferort- und Kostenstelle des Auftraggebers auszustellen. 13.3) Sind Teilleistungen zu einem Auftrag (z. B. Lieferung zu verschiedenen Zeiten) vereinbart, darf für jede Teilleistung eine gesonderte Rechnung eingereicht werden. 13.4) Sammelrechnungen sind nur nach Vereinbarung möglich. 13.5) Grundsätzlich muss jede ausgestellte Rechnung folgende Angaben enthalten: — Vollständiger Name und Anschrift des leistenden Unternehmers und des Leistungsempfängers — Steuernummer oder Umsatzsteueridentifikationsnummer — Ausstellungsdatum der Rechnung — Fortlaufende Rechnungsnummer — Menge und handelsübliche Bezeichnung der gelieferten Produkte einschließlich Lieferanten-Artikelnummer. — Tag der Lieferung inkl. Nennung der Lieferscheinnummer(n), sowie Nennung des Lieferortes (Betriebsstelle) und die vom Studentenwerk angegebene interne Kostenstelle. — nach Steuersätzen und –befreiungen aufgeschlüsseltes Entgelt. — im Voraus vereinbarte Minderungen des Entgelts. — Entgelt und hierauf entfallender Steuerbetrag sowie Hinweis auf Steuerbefreiung. 14) Zahlung der Rechnung 14.1) Die Begleichung der Rechnungen erfolgt gemäß den vertraglichen Vereinbarungen, spätestens 30 Tage nach Fälligkeit und Eingang der prüfbaren Rechnung. Fälligkeit tritt erst nach vertragsgemäßer Leistungserbringung ein. Besonderen Vertragsbedingungen. 1) Allgemeines/Vertragslaufzeit und Optionen 1.1) Es handelt sich hierbei um eine Rahmenvereinbarung, die mit mehreren Auftragnehmern über die Dauer von 4 Jahren geschlossen wird. Anhand der eingereichten Angebote werden die 3 wirtschaftlichsten Angebote ermittelt. Diese Unternehmen befinden sich dann für die Laufzeit von 4 Jahren im Firmenpool der genannten Leistungen 2) Preise 2.1) Die im Leistungsverzeichnis vereinbarten Preise sind Festpreise und für den gesamten Vertragszeitraum gültig. Sie enthalten auch die Kosten für Verpackung, Aufladen, Beförderung bis zur Anlieferungs- oder Annahmestelle und Abladen, wenn in der Leistungsbeschreibung nichts anderes angegeben ist. 2.2) Im Ersten Jahr werden ausschließlich Einzelaufträge von dem Unternehmen abgerufen, welches das wirtschaftlichste Angebot abgegeben hat. Vor Ablauf des ersten Jahres wird der Leistungskatalog erneut preislich bei allem im Pool befindlichen Unternehmen abgefragt. Das daraus ermittelte wirtschaftlichste Angebot erhält den Zuschlag für die folgenden 12 Monate innerhalb des Vertragszeitraumes. Dieses Prozedere wird jährlich wiederholt, bis die maximale Vertragslaufzeit von 4 Jahren abgelaufen ist. Einzig die Preise der einzelnen Positionen werden hierbei abgefragt – die restlichen Konditionen (Leistungsbeschreibung, Vertragsbedingungen etc.) bleiben bestehen. Folglich existiert eine Preisbindung zu Beginn für maximal 12 Monate im ersten Vertragsjahr. Danach jährlich. Ändert sich der Leistungsinhalt und/ oder ändert sich der Firmenpool wesentlich, wird ein neues förmliches Vergabeverfahren durchgeführt. Wird bei erneuter Preisabfrage festgestellt, dass die Angebote unangemessen sind, wird ebenfalls ein erneutes Vergabeverfahren durchgeführt. Es kommt dann nicht zur Vertragsverlängerung. 2.3) Mindermengenzuschläge und Mindestauftragswerte werden prinzipiell nicht akzeptiert. 3) Bestellung und Lieferung 3.1) Der Auftrag gilt als zu den gestellten Bedingungen angenommen, wenn dem Auftraggeber nicht innerhalb von 2 Arbeitstagen nach Aufgabe der Bestellung eine ablehnende Erklärung des Auftragnehmers zugeht. Auf die Bestellnummer muss in allen Vorgängen Bezug genommen werden. 3.2) Der Abruf der Artikel erfolgt in der Regel EDV-gestützt auf elektronischem Weg selbstständig durch das jeweilige Studentenwerk. 3.3) Der Teilnehmer verfügt über einen eigenen, geeigneten Fuhrpark zur Auslieferung. Alternativ kann die Auslieferung über einen geeigneten Nachauftragnehmer erfolgen. 3.4) Es dürfen über den gesamten Ausschreibungszeitraum nur die angebotenen Artikel, für die auch der Zuschlag erteilt wurde, geliefert werden. Ersatzprodukte oder eine Umstellung auf Eigenmarken ist nur nach Rücksprache und mit Genehmigung des Auftraggebers zulässig. 3.5) Erfüllungsort und Ort des Gefahrenüberganges ist der auf der Bestellung genannte Lieferort (Annahmestelle). 3.6) Lieferorte, Anlieferzeiten, Ansprechpartner sind in der Anlage „Liste Lieferorte und Zeiten EKOOP aufgeführt und sind einzuhalten. 3.7) Auf Verlangen des Auftraggebers hat der Auftragnehmer alle in der Verpackungsverordnung festgelegten Verpackungen von der Empfangsstelle abzuholen und zu entsorgen. Etwaige Patentgebühren und Lizenzvergütungen sind durch den Preis für die Leistung abgegolten. 3.8) Jeder Warenlieferung ist ein Lieferschein in einfacher Ausführung beizulegen. 3.9) Sämtliche Lieferungen erfolgen frei Verwendungsstelle/ frei Raum beim Auftraggeber. 3.10) Aufgrund von Aufgrund von Erweiterungen/Neueröffnungen kann es innerhalb der Vertragslaufzeit dazu kommen, dass zusätzliche Betriebsstellen, welche bei Vertragsbeginn noch nicht feststanden, zusätzlich beliefert werden müssen. Der Auftragnehmer verpflichtet sich zur Belieferung bei gleichbleibenden Konditionen. Eine Erweiterung betrifft ausschließlich den Einzugsbereich des jeweiligen Studentenwerkes. Der Auftraggeber teilt etwaige Änderungen ausreichend vorher dem Auftragnehmer mit. 4) Ausführung der Leistungen und Reklamationen 4.1) Der Auftraggeber ist berechtigt, sich von der vertragsgemäßen Ausführung der Leistung zu unterrichten. Dazu sind ihm auf Wunsch die erforderlichen Auskünfte zu erteilen, sowie Zutritt zu den in Betracht kommenden Arbeitsplätzen und Lagerräumen zu gewähren. 4.2) Die vereinbarten Ausführungsfristen sind verbindlich. Umstände, die der fristgerechten Fertigstellung der Leistung oder Einhaltung der Lieferfrist entgegenstehen, hat der Auftragnehmer unter Angabe der Gründe und der zur Behebung getroffenen Maßnahmen, dem Auftraggeber, ohne Ausnahme, unverzüglich schriftlich anzuzeigen. Dies gilt auch dann, wenn der Auftraggeber nicht Empfänger der Leistung ist. 4.3) Änderungen am Leistungszustand, wie Änderungen in den Verpackungseinheiten, Herstellerwechsel und sonstige Artikeländerungen gegenüber den vertraglich vereinbarten Artikeln, bedürfen der Zustimmung der ausschreibenden Stelle. Sondervereinbarungen mit einzelnen Kooperationspartnern sind unzulässig. 4.4) Sind bestellte Artikel vorübergehend aus vom Bieter nicht zu vertretenden Gründen nicht lieferbar, können in Einzelfällen mindestens gleichwertige Ersatzartikel geliefert werden. Die Lieferung dieser Ersatzartikel bedarf der Zustimmung des Auftraggebers. Die Preise der Ersatzartikel dürfen die Ausschreibungspreise des bestellten Artikels nicht übersteigen. 4.5) Reklamationen nach der Sachmängelhaftung und in Bezug auf Preis, Verpackung usw. erfolgen durch die im jeweiligen Einzelliefervertrag benannten Studentenwerke. 4.6) Bei Reklamationen bezüglich Menge oder Qualität erfolgt die Information an den Bieter binnen 24 Stunden nach Lieferung. Verdeckte Mängel können jederzeit reklamiert werden. Die reklamierte Ware wird aufbewahrt und kann durch den Lieferanten begutachtet werden. Die berechtigt reklamierte Ware wird spätestens bei der nächsten Lieferung oder maximal innerhalb von 5 Arbeitstagen durch den Auftragnehmer kostenlos zurückgenommen. Reklamierte Ware wird in geeigneter Weise gekennzeichnet. 4.7) Nach einer Reklamation erfolgt die Rechnungslegung auf der Basis der korrigierten Lieferscheine. 4.8) Sollten berechtigte Reklamationen nicht zeitnah und qualitativ befriedigend abgestellt werden oder sollten bestimmte Beanstandungen mehrfach festgestellt werden, erfolgt durch den Auftraggeber eine schriftliche Mängelrüge an den Auftragnehmer und eine Mitteilung an das ausschreibende Studentenwerk. 4.9) Falls der Auftragnehmer mehrfach nicht rechtzeitig oder nicht vertragsgemäß geliefert hat, kann nach erfolgter Abmahnung eine fristlose Kündigung des Vertrages erfolgen. Dabei kann das betroffene Studentenwerk seinen Einzelliefervertrag oder die ausschreibende Stelle die Rahmenvereinbarung kündigen. Die Kündigung der Rahmenvereinbarung zieht die Beendigung der Einzellieferverträge aller teilnehmenden Studentenwerke nach sich. Die Gesamtabnahmemenge verringert sich bei einer Einzelkündigung entsprechend des Bedarfs des kündigenden Studentenwerkes und dem anteiligen Zeitablauf. Etwaige Schadensersatzansprüche bleiben davon unberührt. 5) Einhaltung rechtlicher Bestimmungen und Vorschriften 5.1) Die gelieferten Produkte entsprechen den in Deutschland und der EU geltenden gesetzlichen Regelungen in der jeweils gültigen Fassung, insbesondere der VO (EG) Nr. 178/2002, der VO (EG) Nr. 852/2004, der VO (EG) 853/2004 und Lebensmittelinformationsverordnung LMIV (EU) Nr: 1169/2011 und deren Folgeverordnungen. 5.2) Es gelten die Leitsätze des deutschen Lebensmittelhandbuches in der aktuellsten Version. 5.3) Lebensmittel sind nach den gesetzlichen Vorgaben zu kennzeichnen. 5.4) Die Eigenschaften vorgelegter Proben und Muster sowie die im Angebot bzw. in den Produktspezifikationen und Datenblättern genannten Eigenschaften der angebotenen Artikel bzw. Dienstleistungen gelten für den gesamten Vertragszeitraum als zugesichert. Lebensmittel mit veränderten Rezepturen dürfen nur ausgeliefert werden, wenn die Bedingungen und Fristen nach 4.3 und 4.4 eingehalten werden. Die geforderten Produktspezifikationen für Lebensmittel müssen in deutscher Sprache mindestens folgende Angaben enthalten: — Produktbezeichnung und Verkehrsbezeichnung — vollständige Zutatenliste (ggf. QUID, wenn Produkt in QUID-Regelung fällt) — Produktbeschreibung (Qualitätsmerkmale / Sensorik) — Produktspezifische, physikalische Parameter (Abmessungen, Ausmahlgrade, Gewicht,...) — Allergenliste — Abpackung (Gebindegröße) — Lagerbedingungen — Mindesthaltbarkeitsdauer — ggf. Zubereitungshinweis (produktabhängig) — gültige Unterschrift oder Gültigkeitserklärung durch einen anderen Nachweis — Revisionsnummer oder Erstellungsdatum 5.5) Angebotene Garantien über eine bestimmte Dauer stellen eine Haltbarkeitsgarantie im Sinne des § 443 BGB dar. 5.6) Besondere mikrobiologische Anforderungen (gilt nur für tierische Lebensmittel): Die an uns gelieferten Lebensmittel entsprechen in ihrem mikrobiologischen Status der VO (EG) Nr. Nr. 2073/2005 über mikrobiologische Kriterien für Lebensmittel in der derzeit gültigen Fassung 5.7) Besondere Anforderungen zu Rückständen, Kontaminanten und pharmakologischen Stoffen (gilt nur für Lebensmittel): Die gelieferten Lebensmittel entsprechen den nachstehend genannten Verordnungen und den daraus folgenden Folgeverordnungen: — VO (EU) Nr.: 1881/2006 zur Festsetzung der Höchstmenge für bestimmte Kondominaten in Lebensmitteln. — VO (EU) Nr.: 470/2009 – Höchstmenge an pharmakologisch wirksamen Stoffen in Lebensmittel tierischen Ursprungs. — VO (EU) Nr.: 396/2005 – Höchstmengen an Pestizidrückständen in Lebens-und Futtermitteln. — Nationale Kontaminanten-Verordnung (KmV). — Nationale Rückstandshöchstmengen-Verordnung (RHmV). 5.8) Bestrahlte Lebensmittel: Die gelieferten Lebensmittel sind gemäß der Lebensmittelbestrahlungs-verordnung (LMBestrV), sowie der EU-Richtlinie 1999/2/EG und 1999/3/EG nicht mit ionisierenden Strahlen behandelt und enthalten keine Zutaten, die mit ionisierenden Strahlen bestrahlt wurden. Es besteht für den Auftraggeber keine Kennzeichnungspflicht gemäß der Lebensmittelbestrahlungs-verordnung (LMBestrV) 5.9) Genetisch veränderte Lebensmittel (gilt nur für Lebensmittel): Produkte, die gemäß den Verordnungen 1829/2003 der EU über genetisch veränderte Lebensmittel und Futtermittel und 1830/2003 über die Rückverfolgbarkeit und Kennzeichnung von genetisch veränderten Organismen und über die Rückverfolgbarkeit von aus genetisch veränderten Organismen hergestellten Lebensmitteln und Futtermitteln kennzeichnungspflichtig sind, werden nicht geliefert. Ausgenommen davon sind zufällig oder technisch unvermeidbare Spuren, die den Wert von 0.9 % nicht übersteigen 6) Vertragsstrafe 6.1) Werden Ausführungsfristen überschritten, ist der Auftraggeber berechtigt, eine Vertragsstrafe in Höhe von 0,5 vom Hundert pro Woche, höchstens jedoch 5 vom Hundert des gesamten Auftragspreises ausschließlich der gesetzlichen Umsatzsteuer zu verlangen. 6.2) Der Auftraggeber ist berechtigt, die Vertragsstrafe neben der Erfüllung geltend zu machen. 6.3) Weitergehende Ansprüche und Rechte, insbesondere das Recht auf Schadenersatz wegen Nichterfüllung, bleiben vorbehalten. 7) Verzug 7.1) Kommt der Auftragnehmer mit der Leistung/Lieferung in Verzug, so ist der Auftraggeber berechtigt, nach seiner Wahl Ersatz des Verzugsschadens oder nach Ablauf einer von ihm gesetzten Nachfrist Schadenersatz wegen Nichterfüllung zu verlangen oder vom Vertrag zurückzutreten. Wird die Leistung bis zum Ablauf der Frist teilweise nicht bewirkt, oder hat der Auftraggeber in Folge des Verzugs kein Interesse mehr an der Erfüllung des Vertrages, so gelten die Vorschriften des § 326 Abs. 1 Satz 3, Abs. 2 des Bürgerlichen Gesetzbuches. Der Auftragnehmer hat ein Verschulden seiner Erfüllungsgehilfen und der Unterlieferer, soweit letztere nicht vom Auftraggeber vorgeschrieben sind, in gleicher Weise wie eigenes Verschulden zu vertreten. 7.2) Bei Ankündigung eines Liefer- oder Leistungsausfalls oder zur Abwendung von drohenden Schäden ist der Auftraggeber auch berechtigt, den noch nicht vollendeten Teil der Leistungen durch einen Dritten ausführen zu lassen und Ersatz der hierdurch entstehenden angemessenen Mehrkosten von dem Auftragnehmer zu fordern. Der Auftraggeber hat unverzüglich eine Aufstellung über die Art seiner Ansprüche dem Auftragnehmer mitzuteilen. Die endgültige Aufstellung über die entstandenen Mehrkosten und über seine anderen Ansprüche hat der Auftraggeber dem Auftragnehmer spätestens binnen 12 Werktagen nach Abrechnung mit dem Dritten zuzustellen.</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">15000000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE211</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE212</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE213</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE219</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE241</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE243</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE244</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE246</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE247</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE251</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE252</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE254</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE261</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE262</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE263</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE21B</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE271</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE273</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+            <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+            <cbc:CountrySubentityCode listName="nuts">DE279</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+               <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+            </cac:AddressLine>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)-->
+         <efac:Funding>
+            <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         </efac:Funding>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--URL to Fiscal Legislation (OPT-110-Lot-FiscalLegis)-->
+         <!--Fiscal Legislation Organization Technical Identifier Reference (OPT-301-Lot-FiscalLegis)-->
+         <!--URL to Environmental Legislation (OPT-120-Lot-EnvironLegis)-->
+         <!--Environmental Legislation Organization Technical Identifier Reference (OPT-301-Lot-EnvironLegis)-->
+         <!--URL to Employment Legislation (OPT-130-Lot-EmployLegis)-->
+         <!--Employment Legislation Organization Technical Identifier Reference (OPT-301-Lot-EmployLegis)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <!--Submission Language (BT-97)-->
+         <!--WARNING: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. In order to obtain valid XML for this notice, ENG is used.-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="DEU">Rahmenvereinbarung über die Belieferung mit Fetten, Ölen und Feinkostartikeln mit den Studentenwerken der Einkaufskooperation (Ekoop) Bayern für maximal 4 Jahre. Anhand der eingereichten Angebote werden die 3 wirtschaftlichsten Angebote ermittelt. Diese Unternehmen befinden sich dann für die Laufzeit von 4 Jahren im Firmenpool der genannten Leistungen. Im Ersten Jahr werden ausschließlich Einzelaufträge von dem Unternehmen abgerufen, welches das wirtschaftlichste Angebot abgegeben hat. Vor Ablauf des ersten Jahres wird der Leistungskatalog erneut preislich bei allem im Pool befindlichen Unternehmen abgefragt. Das daraus ermittelte wirtschaftlichste Angebot erhält den Zuschlag für die folgenden 12 Monate innerhalb des Vertragszeitraumes. Dieses Prozedere wird jährlich wiederholt, bis die maximale Vertragslaufzeit von 4 Jahren abgelaufen ist. Einzig die Preise der einzelnen Positionen werden hierbei abgefragt – die restlichen Konditionen (Leistungsbeschreibung, Vertragsbedingungen etc.) bleiben bestehen. Folglich existiert eine Preisbindung zu Beginn für maximal 12 Monate im ersten Vertragsjahr. Danach jährlich. Ändert sich der Leistungsinhalt und/ oder ändert sich der Firmenpool wesentlich, wird ein neues förmliches Vergabeverfahren durchgeführt. Wird bei erneuter Preisabfrage festgestellt, dass die Angebote unangemessen sind, wird ebenfalls ein erneutes Vergabeverfahren durchgeführt. Es kommt dann nicht zur Vertragsverlängerung.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <!--Main Classification Code (BT-262)-->
+         <!--Additional Classification Code (BT-263)-->
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE211</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE212</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE213</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE219</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE241</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE243</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE244</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE246</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE247</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE251</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE252</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE254</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE261</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE262</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE263</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE21B</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE271</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE273</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Augsburg/ Ulm, Kempten</cbc:StreetName>
+               <cbc:AdditionalStreetName>Erlangen-Nürnberg/ Ansbach, Eichstätt, Ingolstadt</cbc:AdditionalStreetName>
+               <cbc:CountrySubentityCode listName="nuts">DE279</cbc:CountrySubentityCode>
+               <cac:AddressLine>
+                  <cbc:Line>Bayreuth/ Coburg, Amberg, Hof, Weiden München/ Rosenheim, Benediktbeuren; Garching, Freising, Rosenheim Würzburg/ Bamberg, Schweinfurt, Aschaffenburg</cbc:Line>
+               </cac:AddressLine>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</PriorInformationNotice>

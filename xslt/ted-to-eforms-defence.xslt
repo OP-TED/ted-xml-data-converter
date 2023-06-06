@@ -348,9 +348,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 		<!-- Title (BT-21): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes, except Optional for CM Notice subtypes 38-40 -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Title (BT-21)'"/></xsl:call-template>
 		<xsl:apply-templates select="($ted-form-object-element/*:TITLE_CONTRACT|$ted-form-object-element/*[not(preceding-sibling::* or following-sibling::*)]/*:TITLE_CONTRACT)[1]"/>
-		<!-- Description (BT-24): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-		<xsl:apply-templates select="$ted-form-object-element/(*:QUANTITY_SCOPE_WORKS_DEFENCE|*:QUANTITY_SCOPE_WORKS)/*:TOTAL_QUANTITY_OR_SCOPE"/>
+		<xsl:call-template name="procedure-description"/>
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Procedure) = 1 | Optional for ALL Notice subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:call-template name="main-nature"/>
@@ -380,6 +378,80 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 
 		<xsl:call-template name="place-performance-procedure"/>
 	</cac:ProcurementProject>
+</xsl:template>
+
+<xsl:template name="procedure-description">
+	<!-- Description (BT-24): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL Notice subtypes -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
+	<xsl:variable name="description-element" select="$ted-form-object-element/(.|*)/(*:DESCRIPTION_OF_CONTRACT|*:SHORT_CONTRACT_DESCRIPTION|*:SHORT_DESCRIPTION_CONTRACT|*:SHORT_DESCRIPTION)"/>
+	<xsl:variable name="description" select="fn:normalize-space(fn:string-join($description-element/*, ' '))"/>
+	<xsl:variable name="total-quantity-or-scope-element" select="$ted-form-object-element/*/(.|*)/*:TOTAL_QUANTITY_OR_SCOPE"/>
+	<xsl:variable name="total-quantity-or-scope" select="fn:normalize-space(fn:string-join($total-quantity-or-scope-element/*, ' '))"/>
+	<xsl:choose>
+		<xsl:when test="($description ne '') or ($total-quantity-or-scope ne '')">
+			<xsl:choose>
+				<xsl:when test="$ted-form-additional-elements">
+					<xsl:variable name="description-relative-path" select="fn:substring-after(functx:path-to-node-with-pos($description-element), fn:concat($ted-form-element-xpath, '/'))"/>
+					<xsl:variable name="total-quantity-or-scope-relative-path" select="fn:substring-after(functx:path-to-node-with-pos($total-quantity-or-scope-element), fn:concat($ted-form-element-xpath, '/'))"/>
+					<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
+						<xsl:variable name="form-element" select="."/>
+						<xsl:variable name="ted-language" select="fn:string(@LG)"/>
+						<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
+						<xsl:variable name="description-lang">
+							<xsl:if test="$description">
+								<xsl:variable name="parent">
+									<xsl:call-template name="find-element">
+										<xsl:with-param name="context" select="$form-element"/>
+										<xsl:with-param name="relative-context" select="$description-relative-path"/>
+									</xsl:call-template>
+								</xsl:variable>
+								<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
+							</xsl:if>
+						</xsl:variable>
+						<xsl:variable name="total-quantity-or-scope-lang">
+							<xsl:if test="$total-quantity-or-scope">
+								<xsl:variable name="parent">
+									<xsl:call-template name="find-element">
+										<xsl:with-param name="context" select="$form-element"/>
+										<xsl:with-param name="relative-context" select="$total-quantity-or-scope-relative-path"/>
+									</xsl:call-template>
+								</xsl:variable>
+								<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
+							</xsl:if>
+						</xsl:variable>
+						<xsl:variable name="text">
+							<xsl:value-of select="$description-lang"/>
+							<xsl:if test="$total-quantity-or-scope-lang ne ''">
+								<xsl:if test="$description-lang"><xsl:text> </xsl:text></xsl:if>
+								<xsl:value-of select="$total-quantity-or-scope-lang"/>
+							</xsl:if>
+						</xsl:variable>
+						<xsl:if test="$text ne ''">
+							<cbc:Description languageID="{$language}"><xsl:value-of select="$text"/></cbc:Description>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:variable name="text">
+						<xsl:value-of select="$description"/>
+						<xsl:if test="$total-quantity-or-scope">
+							<xsl:if test="$description"><xsl:text> </xsl:text></xsl:if>
+							<xsl:value-of select="$total-quantity-or-scope"/>
+						</xsl:if>
+					</xsl:variable>
+					<xsl:if test="$text ne ''">
+						<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+					</xsl:if>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:when>
+
+		<xsl:otherwise>
+			<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but no description element at Procedure level was found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:otherwise>
+	</xsl:choose>
+
 </xsl:template>
 
 <xsl:template name="main-nature">

@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+<PriorInformationNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
+                         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                         xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                         xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                         xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                         xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">7</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://www.europarl.europa.eu/tenders/invitations.htm</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Parliament — Directorate-General for Finance</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>BP 1601</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>2929</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Lorenzo MANNELLI José Luis Acedo Castro</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>dgfins.Marches@ep.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-0.1</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID>f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2018-05-02+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>R2.0.8.S03.E01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <cbc:PlannedDate>2020-12-31+01:00</cbc:PlannedDate>
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DAN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DEU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SPA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FIN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FRA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ELL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ITA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NLD</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SWE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EST</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HUN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LIT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LAV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MLT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GLE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BUL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RON</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HRV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Type (BT-105)-->
+      <!--Lots All Required (BT-763)-->
+      <!--Previous Planning Identifier (BT-125)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">Insurance for MEPs covering risks linked to carrying out their parliamentary duties and assistance during official travel</cbc:Name>
+      <cbc:Name languageID="DAN">Forsikring til MEP'er, der dækker risici knyttet til udførelsen af deres parlamentariske pligter og bistand ved embedsrejser</cbc:Name>
+      <cbc:Name languageID="DEU">Versicherung für Mitglieder des Europäischen Parlaments, die die Risiken im Zusammenhang mit der Erfüllung ihrer parlamentarischen Aufgaben und Unterstützung bei Dienstreisen abdeckt</cbc:Name>
+      <cbc:Name languageID="SPA">Seguros para diputados al Parlamento Europeo, que cubran riesgos relacionados con el cumplimiento de sus deberes parlamentarios y asistencia durante viajes oficiales</cbc:Name>
+      <cbc:Name languageID="FIN">Euroopan parlamentin jäsenten vakuutussuoja näiden hoitaessa parlamentaarikon tehtäviään sekä apu virkamatkojen aikana</cbc:Name>
+      <cbc:Name languageID="FRA">Une assurance des députés du Parlement européen couvrant les risques liés à leurs missions de parlementaires et une assistance lors des déplacements officiels</cbc:Name>
+      <cbc:Name languageID="ELL">Παροχή ασφάλισης για βουλευτές του Ευρωπαϊκού Κοινοβουλίου η οποία καλύπτει τους κινδύνους που συνδέονται με την εκτέλεση των κοινοβουλευτικών καθηκόντων τους και την παροχή βοήθειας κατά τη διάρκεια των επίσημων ταξιδιών</cbc:Name>
+      <cbc:Name languageID="ITA">Assicurazione per i membri del Parlamento europeo a copertura dei rischi legati all'esercizio delle loro funzioni parlamentari e all’assistenza durante i viaggi ufficiali</cbc:Name>
+      <cbc:Name languageID="NLD">Verzekering voor leden van het Europees Parlement voor het dekken van risico's die gerelateerd zijn aan het uitoefenen van hun parlementaire taken en ondersteuning tijdens officiële reizen</cbc:Name>
+      <cbc:Name languageID="POR">Seguro para os deputados do Parlamento Europeu cobrindo os riscos relacionados com o desempenho dos seus deveres parlamentares e assistência durante viagens oficiais</cbc:Name>
+      <cbc:Name languageID="SWE">Försäkring för Europaparlamentets ledamöter med täckning för risker i anknytning till utförandet av parlamentariska tjänster samt assistans under tjänsteresor.</cbc:Name>
+      <cbc:Name languageID="CES">Pojištění pro poslance Evropského parlamentu na pokrytí rizik souvisejících s plněním jejich parlamentárních povinností a s pomocí na služebních cestách</cbc:Name>
+      <cbc:Name languageID="EST">Kindlustus Euroopa Parlamendi liikmetele parlamentaarsete kohustuste täitmisega seotud riskide katteks ja neile ametireiside ajal abi osutamine</cbc:Name>
+      <cbc:Name languageID="HUN">Parlamenti képviselők számára nyújtandó, a hivatalos útjaik során ellátandó képviselői feladataikkal összefüggő kockázatokra kiterjedő biztosítás és segítségnyújtás</cbc:Name>
+      <cbc:Name languageID="LIT">Europos Parlamento narių draudimas nuo rizikos, susijusios su jų parlamentinių pareigų vykdymu, ir pagalba tarnybinių kelionių metu</cbc:Name>
+      <cbc:Name languageID="LAV">Eiropas Parlamenta deputātu apdrošināšana risku segšanai saistībā ar to parlamentāro pienākumu izpildi un palīdzība komandējumu laikā</cbc:Name>
+      <cbc:Name languageID="MLT">Assigurazzjoni għall-MPEs (Il-Membri tal-Parlament Ewropew) li tkopri r-riskji marbuta mat-twettiq tad-doveri parlamentari u għajnuna matul l-ivvjaġġar uffiċjali</cbc:Name>
+      <cbc:Name languageID="POL">Ubezpieczenie posłów do Parlamentu Europejskiego od zagrożeń związanych z wykonywaniem obowiązków parlamentarnych oraz wsparcie w trakcie podróży służbowych</cbc:Name>
+      <cbc:Name languageID="SLK">Poistenie poslancov Európskeho parlamentu pokrývajúce riziká spojené s výkonom parlamentných povinností a pomoc počas oficiálnych služobných ciest</cbc:Name>
+      <cbc:Name languageID="SLV">Zavarovanje za poslance Evropskega parlamenta, ki pokriva tveganja, povezana z opravljanjem njihovih parlamentarnih dolžnosti, in pomoč med službenimi potovanji</cbc:Name>
+      <cbc:Name languageID="GLE">Árachas na bhFPEanna ag clúdach rioscaí i ndáil le beartú a ndualgas parlaiminteach agus cúnamh le linn an taistil oifigiúil</cbc:Name>
+      <cbc:Name languageID="BUL">Застраховка за членовете на Европейския парламент срещу рискове, свързани с изпълнението на техните парламентарни задължения, и помощ по време на официални пътувания</cbc:Name>
+      <cbc:Name languageID="RON">Asigurarea pentru membrii Parlamentului European care acoperă riscurile legate de îndeplinirea îndatoririlor parlamentare ale acestora și de asistență în timpul călătoriilor oficiale</cbc:Name>
+      <cbc:Name languageID="HRV">Osiguranje za članove Parlamenta (MEP-e) kojima se pokrivaju rizici povezani s izvršavanjem parlamentarnih obveza i pomoć tijekom službenih putovanja</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="ENG"> Provision of accident, loss and theft insurance service and assistance during official travel for members of the European Parliament</cbc:Description>
+      <cbc:Description languageID="DAN"> Levering af ulykkes-, kasko- og tyveriforsikring og bistand ved embedsrejser til medlemmer af Europa-Parlamentet</cbc:Description>
+      <cbc:Description languageID="DEU"> Bereitstellung von Unfall-, Verlust- und Diebstahlversicherungsdiensten und Unterstützung bei Dienstreisen für Mitglieder des Europäischen Parlaments</cbc:Description>
+      <cbc:Description languageID="SPA"> Prestación de servicios de seguros para accidente, pérdida o robo y asistencia durante viajes oficiales para miembros del Parlamento Europeo</cbc:Description>
+      <cbc:Description languageID="FIN"> Vakuutuspalvelun tarjoaminen Euroopan parlamentin jäsenille tapaturmien, esineiden kadottamisen ja varkauksien varalta sekä avun tarjoaminen virkamatkojen aikana</cbc:Description>
+      <cbc:Description languageID="FRA"> Prestation de service d’assurance des accidents, des pertes et des vols et une assistance lors des déplacements officiels des membres du Parlement européen</cbc:Description>
+      <cbc:Description languageID="ELL"> Παροχή υπηρεσιών ασφάλισης κατά ατυχημάτων, απώλειας και κλοπής και συνδρομή κατά τη διάρκεια των επίσημων ταξιδιών των βουλευτών του Ευρωπαϊκού Κοινοβουλίου</cbc:Description>
+      <cbc:Description languageID="ITA"> Prestazione di servizi assicurativi contro gli infortuni, smarrimento e furto e assistenza durante i viaggi ufficiali per i membri del Parlamento europeo</cbc:Description>
+      <cbc:Description languageID="NLD"> Verstrekking van verzekeringsdiensten in het kader van ongevallen, verlies, diefstal en het bieden van ondersteuning tijdens officiële reizen voor leden van het Europees Parlement</cbc:Description>
+      <cbc:Description languageID="POR"> Prestação de serviços de seguro contra acidente, perda e roubo e assistência durante viagens oficiais para membros do Parlamento Europeu</cbc:Description>
+      <cbc:Description languageID="SWE"> Tillhandahållande av tjänster avseende olycksfallsförsäkring, försäkring som täcker förlust och stöld samt stöd under tjänsteresor för Europaparlamentets ledamöter</cbc:Description>
+      <cbc:Description languageID="CES"> Poskytnutí služeb úrazového pojištění, pojištění proti ztrátě a krádeži a pomoci na služebních cestách pro poslance Evropského parlamentu</cbc:Description>
+      <cbc:Description languageID="EST"> Euroopa Parlamendi liikmetele õnnetusjuhtumi, kahju ja varguse korral kindlustusteenuse osutamine ja neile ametireiside ajal abi osutamine</cbc:Description>
+      <cbc:Description languageID="HUN"> Baleset-biztosítás, lopás elleni/kárbiztosítás és segítségnyújtás a hivatalos utakra vonatkozóan az Európai Parlament tagjai számára</cbc:Description>
+      <cbc:Description languageID="LIT"> Europos Parlamento narių draudimo nuo nelaimingų atsitikimų, praradimo ir vagystės paslaugų teikimas ir pagalba jų tarnybinių kelionių metu</cbc:Description>
+      <cbc:Description languageID="LAV"> Eiropas Parlamenta deputātu apdrošināšanas pret nelaimes gadījumiem, zaudējumiem un zādzību pakalpojuma nodrošināšana un palīdzības sniegšana komandējumu laikā</cbc:Description>
+      <cbc:Description languageID="MLT"> Il-provvista ta' servizz ta' assigurazzjoni kontra inċidenti, telf u serq u għajnuna matul l-ivjaġġar uffiċjali għall-membri tal-Parlament Ewropew</cbc:Description>
+      <cbc:Description languageID="POL"> Zapewnienie ubezpieczenia od ryzyka wypadku, utraty i kradzieży mienia oraz wsparcia w trakcie podróży służbowych posłów do Parlamentu Europejskiego</cbc:Description>
+      <cbc:Description languageID="SLK"> Poskytovanie poistenia pre prípad nehody, straty a odcudzenia a pomoc počas oficiálnych služobných ciest členov Európskeho parlamentu</cbc:Description>
+      <cbc:Description languageID="SLV"> Zagotavljanje storitev zavarovanja za primere nezgode, izgube in tatvine ter pomoči med službenimi potovanji za poslance Evropskega parlamenta</cbc:Description>
+      <cbc:Description languageID="GLE"> Soláthar seirbhíse árachais um thionóiscí, caillteanas agus goid; agus cúnamh le linn taistil oifigiúil d’fheisirí Pharlaimint na hEorpa</cbc:Description>
+      <cbc:Description languageID="BUL"> Предоставяне на услуга по застраховане срещу злополука, загуба и кражба и помощ по време на официални пътувания за членовете на Европейския парламент</cbc:Description>
+      <cbc:Description languageID="RON"> Furnizarea de servicii de asigurare a accidentelor, pierderilor și furturilor și asistență în timpul călătoriilor oficiale pentru membrii Parlamentului European</cbc:Description>
+      <cbc:Description languageID="HRV"> Pružanje usluga osiguranja u slučaju nesreće, gubitka i pljačke te pomoć tijekom službenog putovanja za članove Europskog parlamenta</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">66510000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">66512000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">66512100</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">66515000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Brussels</cbc:StreetName>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)--><!--WARNING: EU Funds (BT-60) is Mandatory for eForms subtype 7, 10, 16, 19, 23, 29, 32, 36, but neither RELATES_TO_EU_PROJECT_YES nor RELATES_TO_EU_PROJECT_NO  were found in TED XML.--><!--Performing Staff Qualification (BT-79)--><!--Recurrence (BT-94)--><!--Recurrence Description (BT-95)--><!--Security Clearance Deadline (BT-78)--><!--Multiple Tenders (BT-769)--><!--URL to Fiscal Legislation (OPT-110-Lot-FiscalLegis)--><!--Fiscal Legislation Organization Technical Identifier Reference (OPT-301-Lot-FiscalLegis)--><!--URL to Environmental Legislation (OPT-120-Lot-EnvironLegis)--><!--Environmental Legislation Organization Technical Identifier Reference (OPT-301-Lot-EnvironLegis)--><!--URL to Employment Legislation (OPT-130-Lot-EmployLegis)--><!--Employment Legislation Organization Technical Identifier Reference (OPT-301-Lot-EmployLegis)--><!--Documents Restricted Justification (BT-707)--><!--Documents Official Language (BT-708)--><!--Documents Unofficial Language (BT-737)--><!--Terms Financial (BT-77)--><!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <!--Submission Language (BT-97)-->
+         <!--WARNING: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. In order to obtain valid XML for this notice, ENG is used.-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Accident insurance for members of the European Parliament</cbc:Name>
+         <cbc:Name languageID="DAN">Ulykkesforsikring til medlemmer af Europa-Parlamentet</cbc:Name>
+         <cbc:Name languageID="DEU">Unfallversicherung für Mitglieder des Europäischen Parlaments</cbc:Name>
+         <cbc:Name languageID="SPA">Seguros de accidentes para miembros del Parlamento Europeo</cbc:Name>
+         <cbc:Name languageID="FIN">Euroopan parlamentin jäsenten tapaturmavakuutus</cbc:Name>
+         <cbc:Name languageID="FRA">Assurance d’accidents pour les membres du Parlement européen</cbc:Name>
+         <cbc:Name languageID="ELL">Ασφάλιση ατυχημάτων για βουλευτές του Ευρωπαϊκού Κοινοβουλίου</cbc:Name>
+         <cbc:Name languageID="ITA">Assicurazione contro gli infortuni per i membri del Parlamento europeo</cbc:Name>
+         <cbc:Name languageID="NLD">Ongevallenverzekering voor leden van het Europees Parlement</cbc:Name>
+         <cbc:Name languageID="POR">Seguro contra acidentes para membros do Parlamento Europeu</cbc:Name>
+         <cbc:Name languageID="SWE">Olycksfallsförsäkring för Europaparlamentets ledamöter</cbc:Name>
+         <cbc:Name languageID="CES">Úrazové pojištění pro poslance Evropského parlamentu</cbc:Name>
+         <cbc:Name languageID="EST">Õnnetusjuhtumikindlustus Euroopa Parlamendi liikmetele</cbc:Name>
+         <cbc:Name languageID="HUN">Baleset-biztosítás az Európai Parlament tagjai számára</cbc:Name>
+         <cbc:Name languageID="LIT">Europos Parlamento narių draudimas nuo nelaimingų atsitikimų</cbc:Name>
+         <cbc:Name languageID="LAV">Eiropas Parlamenta deputātu apdrošināšana pret nelaimes gadījumiem</cbc:Name>
+         <cbc:Name languageID="MLT">Assigurazzjoni kontra inċidenti għall-membri tal-Parlament Ewropew</cbc:Name>
+         <cbc:Name languageID="POL">Ubezpieczenie od ryzyka wypadku dla posłów do Parlamentu Europejskiego</cbc:Name>
+         <cbc:Name languageID="SLK">Poistenie členov Európskeho parlamentu v prípade nehody</cbc:Name>
+         <cbc:Name languageID="SLV">Nezgodno zavarovanje za poslance Evropskega parlamenta</cbc:Name>
+         <cbc:Name languageID="GLE">Árachas tionóisce d’fheisirí Pharlaimint na hEorpa</cbc:Name>
+         <cbc:Name languageID="BUL">Застраховка срещу злополука за членовете на Европейския парламент</cbc:Name>
+         <cbc:Name languageID="RON">Asigurarea de accidente pentru membrii Parlamentului European</cbc:Name>
+         <cbc:Name languageID="HRV">Osiguranje u slučaju nesreće za članove Europskog parlamenta</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">Provision of insurance services covering the risk of accidents which may happen to members of the European Parliament anywhere in the world, during their term of office.</cbc:Description>
+         <cbc:Description languageID="DAN">Levering af forsikring, der dækker risikoen for ulykker, der kan påfalde medlemmer af Europa-Parlamentet hvor som helst i verden i deres mandatperiode.</cbc:Description>
+         <cbc:Description languageID="DEU">Bereitstellung von Versicherungsdienstleistungen, die das Unfallrisiko abdecken, das Mitgliedern des Europäischen Parlaments während ihrer Amtszeit auf der ganzen Welt zustoßen könnte.</cbc:Description>
+         <cbc:Description languageID="SPA">Prestación de servicios de seguros que cubran riesgos de accidentes que puedan ocurrir a miembros del Parlamento Europeo en cualquier parte del mundo, durante su período de mandato.</cbc:Description>
+         <cbc:Description languageID="FIN">Vakuutuspalvelujen tarjoaminen tapaturmien varalta, joita voi tapahtua Euroopan parlamentin jäsenille missä tahansa maailmassa heidän virkakautensa aikana.</cbc:Description>
+         <cbc:Description languageID="FRA">Prestation de services d’assurance couvrant les risques d’accidents éventuels des membres du Parlement européen dans n’importe quel lieu du monde, au cours de leur mandat.</cbc:Description>
+         <cbc:Description languageID="ELL">Παροχή ασφαλιστικών υπηρεσιών που καλύπτουν τον κίνδυνο ατυχημάτων που ενδέχεται να συμβούν σε βουλευτές του Ευρωπαϊκού Κοινοβουλίου οπουδήποτε στον κόσμο κατά τη διάρκεια της θητείας τους.</cbc:Description>
+         <cbc:Description languageID="ITA">Fornitura di servizi di assicurazione per la copertura del rischio di incidenti che possano accadere ai membri del Parlamento europeo in qualsiasi parte del mondo, durante l’esercizio del proprio mandato.</cbc:Description>
+         <cbc:Description languageID="NLD">Verstrekking van verzekeringsdiensten voor het dekken van risico's die gerelateerd zijn aan ongevallen, waar leden van het Europees Parlement mogelijk mee in aanraking komen tijdens hun ambtsperiode, overal ter wereld.</cbc:Description>
+         <cbc:Description languageID="POR">Prestação de serviços de seguro cobrindo o risco de acidentes que possam ocorrer a membros do Parlamento Europeu em qualquer local do mundo, durante o seu mandato.</cbc:Description>
+         <cbc:Description languageID="SWE">Tillhandahållande av försäkringstjänster som täcker de olycksfallsrisker som uppkommer när Europaparlamentets ledamöter reser i världen under mandatperioden.</cbc:Description>
+         <cbc:Description languageID="CES">Poskytnutí pojistných služeb pokrývajících riziko úrazu, které hrozí poslancům Evropského parlamentu kdekoliv na světě v době trvání jejich mandátu.</cbc:Description>
+         <cbc:Description languageID="EST">Kindlustusteenuste osutamine Euroopa Parlamendi liikmetele nende ametiaja jooksul kõikjal maailmas juhtuda võivate õnnetusjuhtumite riski katteks.</cbc:Description>
+         <cbc:Description languageID="HUN">Biztosítási szolgáltatások nyújtása az Európai Parlament tagjai számára azon baleseti kockázatokra, amelyek hivatali idejük alatt, a világ bármely pontján bekövetkezhetnek.</cbc:Description>
+         <cbc:Description languageID="LIT">Draudimo nuo nelaimingų atsitikimų, kurie gali nutikti Europos Parlamento nariams jų kadencijos laikotarpiu bet kurioje pasaulio šalyje, paslaugų teikimas.</cbc:Description>
+         <cbc:Description languageID="LAV">Apdrošināšanas pakalpojumu nodrošināšana, sedzot nelaimes gadījumu risku, ar kādu Eiropas Parlamenta deputāti var saskarties visā pasaulē sava amata pienākumu izpildes laikā.</cbc:Description>
+         <cbc:Description languageID="MLT">Il-provvista ta' servizzi ta' assigurazzjoni li tkopri r-riskji ta' inċidenti li jistgħu jiġru lil membri tal-Parlament Ewropew kullimkien fid-dinja, matul il-mandat tagħhom.</cbc:Description>
+         <cbc:Description languageID="POL">Usługi ubezpieczenia od ryzyka wypadku dla posłów do Parlamentu Europejskiego obejmujące cały świat oraz czas trwania ich kadencji.</cbc:Description>
+         <cbc:Description languageID="SLK">Poistenie poslancov Európskeho parlamentu pokrývajúce riziká nehody kdekoľvek na svete, počas ich funkčného obdobia.</cbc:Description>
+         <cbc:Description languageID="SLV">Zagotavljanje zavarovalnih storitev, ki pokrivajo tveganje nezgod, ki so mu v času opravljanja svojega mandata izpostavljeni poslanci Evropskega parlamenta kjer koli na svetu.</cbc:Description>
+         <cbc:Description languageID="GLE">Soláthar seirbhísí árachais ag clúdach riosca na dtionóiscí a d’fhéadfadh tarlú d’fheisirí Pharlaimint na hEorpa áit ar bith ar domhan, le linn a dtéarma oifige.</cbc:Description>
+         <cbc:Description languageID="BUL">Предоставяне на услуги по застраховане срещу риск от злополука, който може да възникне за членовете на Европейския парламент навсякъде по света за продължителността на техния мандат.</cbc:Description>
+         <cbc:Description languageID="RON">Furnizarea de servicii de asigurare care acoperă riscul de accidente ce li se pot întâmpla membrilor Parlamentului European oriunde în lume, în timpul mandatului lor.</cbc:Description>
+         <cbc:Description languageID="HRV">Pružanje usluga osiguranja koje pokrivaju rizik od nesreća koje se mogu dogoditi članovima Europskog parlamenta bilo gdje u svijetu, za vrijeme njihovog mandata.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">902 000,00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">66512000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">66512100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Brussels</cbc:StreetName>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)--><!--WARNING: EU Funds (BT-60) is Mandatory for eForms subtype 7, 10, 16, 19, 23, 29, 32, 36, but neither RELATES_TO_EU_PROJECT_YES nor RELATES_TO_EU_PROJECT_NO  were found in TED XML.--><!--Performing Staff Qualification (BT-79)--><!--Recurrence (BT-94)--><!--Recurrence Description (BT-95)--><!--Security Clearance Deadline (BT-78)--><!--Multiple Tenders (BT-769)--><!--URL to Fiscal Legislation (OPT-110-Lot-FiscalLegis)--><!--Fiscal Legislation Organization Technical Identifier Reference (OPT-301-Lot-FiscalLegis)--><!--URL to Environmental Legislation (OPT-120-Lot-EnvironLegis)--><!--Environmental Legislation Organization Technical Identifier Reference (OPT-301-Lot-EnvironLegis)--><!--URL to Employment Legislation (OPT-130-Lot-EmployLegis)--><!--Employment Legislation Organization Technical Identifier Reference (OPT-301-Lot-EmployLegis)--><!--Documents Restricted Justification (BT-707)--><!--Documents Official Language (BT-708)--><!--Documents Unofficial Language (BT-737)--><!--Terms Financial (BT-77)--><!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <!--Submission Language (BT-97)-->
+         <!--WARNING: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. In order to obtain valid XML for this notice, ENG is used.-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Insurance covering loss and theft of personal effects and property of members of the European Parliament</cbc:Name>
+         <cbc:Name languageID="DAN">Forsikring, der dækker tab eller tyveri af personlige effekter og ejendele for medlemmer af Europa-Parlamentet</cbc:Name>
+         <cbc:Name languageID="DEU">Versicherung über Verlust und Diebstahl von persönlichen Gegenständen und Eigentum von Mitgliedern des Europäischen Parlaments</cbc:Name>
+         <cbc:Name languageID="SPA">Seguro que cubra la pérdida o robo de efectos personales y propiedades de miembros del Parlamento Europeo</cbc:Name>
+         <cbc:Name languageID="FIN">Vakuutus, josta korvataan Euroopan parlamentin jäsenten henkilökohtaisten tavaroiden ja omaisuuden menetykset niiden kadotessa tai tultua varastetuiksi</cbc:Name>
+         <cbc:Name languageID="FRA">Assurance couvrant la perte et le vol de biens personnels et la propriété des membres du Parlement européen</cbc:Name>
+         <cbc:Name languageID="ELL">Ασφαλιστική κάλυψη για απώλεια και κλοπή προσωπικών αντικειμένων και περιουσιακών στοιχείων των βουλευτών του Ευρωπαϊκού Κοινοβουλίου</cbc:Name>
+         <cbc:Name languageID="ITA">Assicurazione per la copertura della perdita e il furto di effetti personali e beni dei membri del Parlamento europeo</cbc:Name>
+         <cbc:Name languageID="NLD">Verzekering voor leden van het Europees Parlement voor het dekken van verlies en diefstal van persoonlijke bezittingen en eigendommen</cbc:Name>
+         <cbc:Name languageID="POR">Seguro que abranja a perda e roubo de objetos e bens pessoais de membros do Parlamento Europeu</cbc:Name>
+         <cbc:Name languageID="SWE">Försäkring som täcker förlust och stöld av personliga tillhörigheter och egendom tillhörande Europaparlamentets ledamöter</cbc:Name>
+         <cbc:Name languageID="CES">Pojištění pokrývající ztrátu a krádež věcí osobní potřeby a majetku poslanců Evropského parlamentu</cbc:Name>
+         <cbc:Name languageID="EST">Euroopa Parlamendi liikmete isiklike asjade ja vara kaotust ja vargust kattev kindlustus</cbc:Name>
+         <cbc:Name languageID="HUN">Lopás elleni és kárbiztosítás a személyes használati tárgyakra az Európai Parlament tagjai számára</cbc:Name>
+         <cbc:Name languageID="LIT">Draudimas nuo Europos Parlamento narių asmeninių daiktų ir turto praradimo ir vagystės</cbc:Name>
+         <cbc:Name languageID="LAV">Apdrošināšana Eiropas Parlamenta deputātu personiskā īpašuma un personiskās lietošanas priekšmetu zaudējuma un zādzības segšanai</cbc:Name>
+         <cbc:Name languageID="MLT">Assigurazzjoni li tkopri r-riskju ta' telf u serq ta' oġġetti personali u proprjetà tal-membri tal-Parlament Ewropew</cbc:Name>
+         <cbc:Name languageID="POL">Usługi ubezpieczenia od ryzyka utraty i kradzieży rzeczy osobistych i mienia posłów do Parlamentu Europejskiego</cbc:Name>
+         <cbc:Name languageID="SLK">Poistenie pokrývajúce stratu a krádež osobných vecí a majetok poslancov Európskeho parlamentu</cbc:Name>
+         <cbc:Name languageID="SLV">Zavarovanje, ki pokriva izgubo in krajo osebnih predmetov ter lastnine poslancev Evropskega parlamenta</cbc:Name>
+         <cbc:Name languageID="GLE">Árachas ag clúdach caillteanais agus gada giuirléidí agus maoine pearsanta le feisirí Pharlaimint na hEorpa</cbc:Name>
+         <cbc:Name languageID="BUL">Застраховка срещу загуба и кражба на лични вещи и имущество на членовете на Европейския парламент</cbc:Name>
+         <cbc:Name languageID="RON">Asigurare care acoperă pierderile și furtul de efecte personale și bunuri ale membrilor Parlamentului European</cbc:Name>
+         <cbc:Name languageID="HRV">Osiguranje koje pokriva gubitak i pljačku osobnih stvari i imovine članova Europskog parlamenta</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">Provision of insurance services covering the risks of loss and theft of personal effects and property of members of the European Parliament anywhere in the world, during official travel, during their term of office.</cbc:Description>
+         <cbc:Description languageID="DAN">Levering af forsikring, der dækker risikoen for tab og tyveri af personlige effekter og ejendele for medlemmer af Europa-Parlamentet hvor som helst i verden, ved embedsrejser, i deres mandatperiode.</cbc:Description>
+         <cbc:Description languageID="DEU">Bereitstellung von Versicherungsdienstleistungen, die die Risiken des Verlustes und Diebstahls von persönlichen Gegenständen und Eigentum von Mitgliedern des Europäischen Parlaments in der ganzen Welt während einer Dienstreise während ihrer gesamten Amtszeit abdecken.</cbc:Description>
+         <cbc:Description languageID="SPA">Prestación de servicios de seguros que cubran riesgos de pérdida y robo de efectos personales y propiedades de miembros del Parlamento Europeo en cualquier parte del mundo, durante viajes oficiales, durante su período de mandato.</cbc:Description>
+         <cbc:Description languageID="FIN">Vakuutuspalvelujen tarjoaminen Euroopan parlamentin jäsenten henkilökohtaisten tavaroiden ja omaisuuden menetysten varalta katoamis- ja varkaustapauksissa missä tahansa maailmassa heidän virkakautensa aikana.</cbc:Description>
+         <cbc:Description languageID="FRA">Prestation de services d’assurance couvrant les risque de perte et de vol de biens personnels et de la propriété des membres du Parlement européen dans n’importe quel lieu du monde, lors d’un déplacement officiel, au cours de leur mandat.</cbc:Description>
+         <cbc:Description languageID="ELL">Παροχή ασφαλιστικών υπηρεσιών που καλύπτουν τον κίνδυνο απώλειας και κλοπής προσωπικών αντικειμένων και περιουσιακών στοιχείων των βουλευτών του Ευρωπαϊκού Κοινοβουλίου οπουδήποτε στον κόσμο, κατά τη διάρκεια επίσημου ταξιδιού, κατά τη διάρκεια της θητείας τους.</cbc:Description>
+         <cbc:Description languageID="ITA">Fornitura di servizi assicurativi per la copertura del rischio di perdita o furto di effetti personali e beni dei membri del Parlamento europeo in qualsiasi parte del mondo, nei viaggi ufficiali, durante l’esercizio del proprio mandato.</cbc:Description>
+         <cbc:Description languageID="NLD">Verstrekking van verzekeringsdiensten voor het dekken van risico's die gerelateerd zijn aan verlies en diefstal van persoonlijke bezittingen en eigendommen, waar leden van het Europees Parlement mogelijk mee in aanraking komen tijdens officiële reizen, binnen hun ambtsperiode, overal ter wereld.</cbc:Description>
+         <cbc:Description languageID="POR">Prestação de serviços de seguro cobrindo os riscos de perda e roubo de objetos e bens pessoais de membros do Parlamento Europeu em qualquer local do mundo, durante viagens oficiais, durante o seu mandato.</cbc:Description>
+         <cbc:Description languageID="SWE">Tillhandahållande av försäkringstjänster som täcker förlust och stöld av personliga tillhörigheter och egendom tillhörande Europaparlamentets ledamöter var som helst i världen, under tjänsteresor och under mandatperioden.</cbc:Description>
+         <cbc:Description languageID="CES">Poskytnutí pojistných služeb pokrývajících riziko ztráty a krádeže věcí osobní potřeby a majetku poslanců Evropského parlamentu kdekoliv na světě na služebních cestách v době trvání jejich mandátu.</cbc:Description>
+         <cbc:Description languageID="EST">Kindlustusteenuste osutamine Euroopa Parlamendi liikmetele nende ametiaja jooksul ametireisil olles kõikjal maailmas juhtuda võiva isiklike asjade ja vara kaotamise ja varguse katteks.</cbc:Description>
+         <cbc:Description languageID="HUN">Lopás elleni és kárbiztosítás nyújtása a személyes használati tárgyakra az Európai Parlament tagjai számára a hivatali idejük alatt tett hivatalos utazások során, a világ bármely pontján.</cbc:Description>
+         <cbc:Description languageID="LIT">Draudimo nuo Europos Parlamento narių asmeninių daiktų ir turto praradimo ir vagystės tarnybinių kelionių metu Europos Parlamento narių kadencijos laikotarpiu bet kurioje pasaulio šalyje paslaugų teikimas.</cbc:Description>
+         <cbc:Description languageID="LAV">Apdrošināšanas pakalpojumu nodrošināšana, sedzot personiskā īpašuma un personiskās lietošanas priekšmetu zaudējuma un zādzības riskus, ar kādiem Eiropas Parlamenta deputāti var saskarties visā pasaulē komandējumu laikā sava amata pienākumu izpildes ietvaros.</cbc:Description>
+         <cbc:Description languageID="MLT">Il-provvista ta' servizzi ta' assigurazzjoni li tkopri r-riskji ta' telf u serq ta' oġġetti personali u proprjetà tal-membri tal-Parlament Ewropew kullimkien fid-dinja, matul l-ivvjaġġar uffiċjali, matul il-mandat tagħhom.</cbc:Description>
+         <cbc:Description languageID="POL">Usługi ubezpieczenia od ryzyka utraty i kradzieży rzeczy osobistych i mienia posłów do Parlamentu Europejskiego obejmujące cały świat oraz czas trwania ich kadencji.</cbc:Description>
+         <cbc:Description languageID="SLK">Poskytovanie poistenia poslancov Európskeho parlamentu pokrývajúceho stratu a krádež osobných vecí a majetok, kdekoľvek na svete, počas oficiálnych služobných ciest, v priebehu ich funkčného obdobia.</cbc:Description>
+         <cbc:Description languageID="SLV">Zagotavljanje zavarovalnih storitev, ki pokrivajo tveganje izgube in kraje osebnih predmetov ter lastnine poslancev Evropskega parlamenta kjer koli na svetu med službenimi potovanji v času opravljanja njihovega mandata.</cbc:Description>
+         <cbc:Description languageID="GLE">Soláthar seirbhísí árachais ag clúdach rioscaí chaillteanas agus ghoid na ngiuirléidí agus na maoine pearsanta le feisirí Pharlaimint na hEorpa áit ar bith ar domhan, le linn taistil oifigiúil, le linn a dtéarma oifige.</cbc:Description>
+         <cbc:Description languageID="BUL">Предоставяне на услуги по застраховане срещу рискове от загуба и кражба на лични вещи и имущество на членовете на Европейския парламент навсякъде по света за продължителността на техния мандат.</cbc:Description>
+         <cbc:Description languageID="RON">Furnizarea de servicii de asigurare care acoperă riscurile de pierdere și furt de efecte personale și de bunuri ale membrilor Parlamentului European oriunde în lume, în timpul deplasărilor oficiale, în timpul mandatului lor.</cbc:Description>
+         <cbc:Description languageID="HRV">Pružanje usluga osiguranja koje pokriva rizik od gubitka i pljačke osobnih stvari i imovine članova Europskog parlamenta bilo gdje u svijetu, tijekom službenih putovanja, za vrijeme njihovog mandata.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">286 000,00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">66515000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Brussels</cbc:StreetName>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)-->
+      <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)--><!--WARNING: EU Funds (BT-60) is Mandatory for eForms subtype 7, 10, 16, 19, 23, 29, 32, 36, but neither RELATES_TO_EU_PROJECT_YES nor RELATES_TO_EU_PROJECT_NO  were found in TED XML.--><!--Performing Staff Qualification (BT-79)--><!--Recurrence (BT-94)--><!--Recurrence Description (BT-95)--><!--Security Clearance Deadline (BT-78)--><!--Multiple Tenders (BT-769)--><!--URL to Fiscal Legislation (OPT-110-Lot-FiscalLegis)--><!--Fiscal Legislation Organization Technical Identifier Reference (OPT-301-Lot-FiscalLegis)--><!--URL to Environmental Legislation (OPT-120-Lot-EnvironLegis)--><!--Environmental Legislation Organization Technical Identifier Reference (OPT-301-Lot-EnvironLegis)--><!--URL to Employment Legislation (OPT-130-Lot-EmployLegis)--><!--Employment Legislation Organization Technical Identifier Reference (OPT-301-Lot-EmployLegis)--><!--Documents Restricted Justification (BT-707)--><!--Documents Official Language (BT-708)--><!--Documents Unofficial Language (BT-737)--><!--Terms Financial (BT-77)--><!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <!--Terms Performance (BT-70)-->
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <!--Submission URL (BT-18)-->
+         <!--Tender Validity Deadline (BT-98)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <!--Submission Language (BT-97)-->
+         <!--WARNING: Submission Language (BT-97) is Mandatory for eForms subtype 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, but no LANGUAGE was found in TED XML. In order to obtain valid XML for this notice, ENG is used.-->
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <!--Participant Name (BT-47)-->
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)--></efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <!--Electronic Auction (BT-767)-->
+         <!--Electronic Auction Description (BT-122)-->
+         <!--Electronic Auction URL (BT-123)-->
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Estimated Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Insurance and assistance for members of the European Parliament during official travel</cbc:Name>
+         <cbc:Name languageID="DAN">Forsikring og bistand til medlemmer af Europa-Parlamentet ved embedsrejser</cbc:Name>
+         <cbc:Name languageID="DEU">Versicherung und Unterstützung für Mitglieder des Europäischen Parlaments während der Dienstreise</cbc:Name>
+         <cbc:Name languageID="SPA">Seguros y asistencia para miembros del Parlamento Europeo durante viajes oficiales</cbc:Name>
+         <cbc:Name languageID="FIN">Matkavakuutus ja apu Euroopan parlamentin jäsenille virkamatkojen aikana</cbc:Name>
+         <cbc:Name languageID="FRA">Assurance et assistance pour les membres du Parlement européen lors de leurs déplacements officiels</cbc:Name>
+         <cbc:Name languageID="ELL">Παροχή ασφάλισης και βοήθειας για βουλευτές του Ευρωπαϊκού Κοινοβουλίου κατά τη διάρκεια επίσημων ταξιδιών</cbc:Name>
+         <cbc:Name languageID="ITA">Assicurazione e assistenza per i membri del Parlamento europeo nei viaggi ufficiali</cbc:Name>
+         <cbc:Name languageID="NLD">Verzekering en ondersteuning voor leden van het Europees Parlement tijdens officiële reizen</cbc:Name>
+         <cbc:Name languageID="POR">Seguro e assistência a membros do Parlamento Europeu durante viagens oficiais</cbc:Name>
+         <cbc:Name languageID="SWE">Försäkring och stöd till Europaparlamentets ledamöter under tjänsteresor</cbc:Name>
+         <cbc:Name languageID="CES">Pojištění a pomoc pro poslance Evropského parlamentu na služebních cestách</cbc:Name>
+         <cbc:Name languageID="EST">Kindlustus ja abi Euroopa Parlamendi liikmetele nende ametireiside ajal</cbc:Name>
+         <cbc:Name languageID="HUN">Hivatalos utakra vonatkozó biztosítás és segítségnyújtás az Európai Parlament tagjai számára</cbc:Name>
+         <cbc:Name languageID="LIT">Europos Parlamento narių draudimas ir pagalba jiems tarnybinių kelionių metu</cbc:Name>
+         <cbc:Name languageID="LAV">Eiropas Parlamenta deputātu apdrošināšana un palīdzības sniegšana komandējumu laikā</cbc:Name>
+         <cbc:Name languageID="MLT">Assigurazzjoni u għajnuna għall-membri tal-Parlament Ewropew matul l-ivjaġġar uffiċjali</cbc:Name>
+         <cbc:Name languageID="POL">Usługi ubezpieczenia oraz wsparcia dla posłów do Parlamentu Europejskiego w trakcie podróży służbowych</cbc:Name>
+         <cbc:Name languageID="SLK">Poistenie a pomoc pre členov Európskeho parlamentu počas oficiálnych služobných ciest</cbc:Name>
+         <cbc:Name languageID="SLV">Zavarovanje in pomoč za poslance Evropskega parlamenta med službenimi potovanji</cbc:Name>
+         <cbc:Name languageID="GLE">Árachas agus cúnamh d’fheisirí Pharlaimint na hEorpa le linn taistil oifigiúil</cbc:Name>
+         <cbc:Name languageID="BUL">Застраховка и помощ за членовете на Европейския парламент по време на официални пътувания</cbc:Name>
+         <cbc:Name languageID="RON">Asigurare și asistență pentru membrii Parlamentului European în timpul călătoriilor oficiale</cbc:Name>
+         <cbc:Name languageID="HRV">Osiguranje i pomoć članovima Europskog parlamenta tijekom službenog putovanja</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">Provision of insurance services and assistance services in the case of an illness or accident requiring urgent assistance, for members of the European Parliament anywhere in the world, during official travel. The assistance also covers the organisation of repatriation and payment of ancillary costs.</cbc:Description>
+         <cbc:Description languageID="DAN">Levering af forsikring og bistandstjenester i tilfælde af sygdom eller ulykke, der kræver hurtig bistand, til medlemmer af Europa-Parlamentet, hvor som helst i verden, ved embedsrejser. Bistanden dækker også tilrettelæggelsen af hjemsendelse og betaling af ekstraudgifter.</cbc:Description>
+         <cbc:Description languageID="DEU">Bereitstellung von Versicherungsdienstleistungen und Unterstützungsdiensten im Falle einer Krankheit oder eines Unfalls, die dringende Hilfe erfordern, für Mitglieder des Europäischen Parlaments überall auf der Welt während der Dienstreise. Die Unterstützung umfasst auch die Organisation der Auslandsrückführung und die Zahlung von Nebenkosten.</cbc:Description>
+         <cbc:Description languageID="SPA">Prestación de servicios de seguros y asistencia en caso de enfermedad o accidente que requiera asistencia urgente, para miembros del Parlamento Europeo en cualquier parte del mundo, durante viaje oficial. La asistencia también cubre la repatriación y el pago de gastos accesorios.</cbc:Description>
+         <cbc:Description languageID="FIN">Vakuutus- sekä avustuspalvelun tarjoaminen Euroopan parlamentin jäsenille sellaisen sairastumisen tai onnettomuuden varalta, joka vaatii pikaista apua, missä tahansa maailmassa virkamatkojen aikana. Avun piiriin kuuluu myös kotiinpaluun järjestäminen ulkomailta sekä näistä toimista aiheutuneiden lisäkustannusten korvaaminen.</cbc:Description>
+         <cbc:Description languageID="FRA">Prestation de services d’assurance et de services d’assistance en cas de maladie ou d’accident exigeant une assistance urgente, pour les membres du Parlement européen en tout lieu du monde, lors d’un déplacement officiel. L’assistance couvre également l’organisation de la rapatriement et le paiement des coûts auxiliaires.</cbc:Description>
+         <cbc:Description languageID="ELL">Παροχή υπηρεσιών ασφάλισης και υπηρεσιών παροχής βοήθειας σε περίπτωση ασθένειας ή ατυχήματος που απαιτεί επείγουσα βοήθεια, για βουλευτές του Ευρωπαϊκού Κοινοβουλίου οπουδήποτε στον κόσμο, κατά τη διάρκεια επίσημων ταξιδιών. Η παροχή βοήθειας καλύπτει επίσης την οργάνωση του επαναπατρισμού και την πληρωμή των παρεπόμενων εξόδων.</cbc:Description>
+         <cbc:Description languageID="ITA">Fornitura di servizi assicurativi e di assistenza in caso di malattia o infortunio che richiedano assistenza urgente, per i membri del Parlamento europeo in qualsiasi parte del mondo, durante i viaggi ufficiali. L’assistenza coprirà anche l’organizzazione del rimpatrio e il pagamento degli oneri accessori.</cbc:Description>
+         <cbc:Description languageID="NLD">Verstrekking van verzekerings- en ondersteunende diensten in geval van een ziekte of ongeval, waarbij dringende ondersteuning is vereist tijdens officiële reizen van leden van het Europees Parlement, overal ter wereld. Deze ondersteuning dekt ook de kosten van de organisatie van repatriëring en bijkomende onkosten.</cbc:Description>
+         <cbc:Description languageID="POR">Prestação de serviços de seguro e serviços de assistência em caso de doença ou acidente que requeiram assistência urgente, para membros do Parlamento Europeu em qualquer local do mundo durante viagens oficiais. A assistência também cobre a organização de repatriação e pagamento de custos associados.</cbc:Description>
+         <cbc:Description languageID="SWE">Tillhandahållande av försäkringstjänster och assistanstjänster i fall av sjukdom eller olycka som kräver akut assistans, för Europaparlamentets ledamöter var som helst i världen, under tjänsteresor. Stödet täcker även organisation av repatriering och betalning för tillkommande kostnader.</cbc:Description>
+         <cbc:Description languageID="CES">Poskytnutí pojistných služeb a asistenčních služeb v případě nemoci nebo nehody vyžadující urgentní pomoc, pro poslance Evropského parlamentu kdekoliv na světě na služebních cestách. Pomoc se rovněž týká organizování repatriace a úhrady vedlejších nákladů.</cbc:Description>
+         <cbc:Description languageID="EST">Kindlustusteenuste ja abiteenuste osutamine Euroopa Parlamendi liikmetele nende ametiaja jooksul ametireisil olles kõikjal maailmas juhtuda võiva edasilükkamatut abi nõudva haiguse või õnnetusjuhtumi korral. Nimetatud abi hõlmab ka kodumaale naasmise korraldamist ja lisakulude tasumist.</cbc:Description>
+         <cbc:Description languageID="HUN">Hivatalos utakra vonatkozó biztosítás és segítségnyújtás biztosítása az Európai Parlament tagjai számára sürgős segítségnyújtást igénylő megbetegedés vagy baleset esetén, bárhol a világban, hivatali idejük során. A segítségnyújtás a hazautaztatás megszervezésére és a járulékos költségek kifizetésére egyaránt kiterjed.</cbc:Description>
+         <cbc:Description languageID="LIT">Draudimo ir pagalbos paslaugų teikimas Europos Parlamento nariams jų tarnybinių kelionių metu bet kurioje pasaulio šalyje jiems susirgus arba įvykus nelaimingam atsitikimui, kai reikalinga skubi pagalba. Pagalba taip pat apima repatriacijos organizavimą ir papildomų išlaidų apmokėjimą.</cbc:Description>
+         <cbc:Description languageID="LAV">Apdrošināšanas pakalpojumu un palīdzības sniegšana Eiropas Parlamenta deputātiem slimības vai nelaimes gadījumā, kad nepieciešama tūlītēja palīdzība, visā pasaulē komandējumu laikā. Palīdzības pakalpojumos ir ietverta arī repatriācija un papildu izmaksu segšana.</cbc:Description>
+         <cbc:Description languageID="MLT">Il-provvista ta' servizzi ta' assigurazzjoni u servizzi ta' għajnuna fil-każ ta' mard jew inċidenti li jkunu jeħtieġu għajnuna urġenti, għall-membri tal-Parlament Ewropew kullimkien fid-dinja, matul l-ivjaġġar uffiċjali. L-għajnuna tkopri wkoll l-organizzazzjoni tar-ripatrijazzjoni u l-ħlas ta' spejjeż anċillari.</cbc:Description>
+         <cbc:Description languageID="POL">Usługi ubezpieczenia oraz wsparcia dla posłów do Parlamentu Europejskiego w trakcie podróży służbowych, na wypadek choroby lub wypadku wymagającego pilnej pomocy, obejmujące cały świat oraz czas trwania ich kadencji. W zakres wsparcia wchodzi również organizacja powrotu i pokrycie dodatkowych kosztów.</cbc:Description>
+         <cbc:Description languageID="SLK">Poskytovanie poistenia poslancov Európskeho parlamentu v prípade ochorenia alebo nehody vyžadujúcej okamžitú pomoc, kdekoľvek na svete, počas oficiálnych služobných ciest. Poistenie pokrýva tiež organizáciu repatriácie a vedľajšie náklady.</cbc:Description>
+         <cbc:Description languageID="SLV">Zagotavljanje zavarovalnih storitev in storitev pomoči za primer bolezni ali nezgode, ki zahteva nujno pomoč, za poslance Evropskega parlamenta kjer koli na svetu med službenimi potovanji. Pomoč zajema tudi organizacijo vrnitve in plačilo dodatnih stroškov.</cbc:Description>
+         <cbc:Description languageID="GLE">Seirbhísí árachais agus seirbhísí cúnaimh a sholáthar i gcás breoiteachta nó tionóisce óna dteastaíonn cúnamh práinneach, d’fheisirí Pharlaimint na hEorpa áit ar bith ar domhan, le linn taistil oifigiúil. Clúdaíonn an cúnamh freisin eagrú aisdúichiú agus íoc na gcostas coimhdeach.</cbc:Description>
+         <cbc:Description languageID="BUL">Предоставяне на услуги по застраховане и услуги по оказване на помощ в случай на заболяване или злополука, които налагат незабавна помощ за членовете на Европейския парламент навсякъде по света, по време на официални пътувания. Помощта обхваща също така организирането на репатриране и възстановяването на свързаните с това разходи.</cbc:Description>
+         <cbc:Description languageID="RON">Furnizarea de servicii de asigurare și de asistență în caz de boală sau accident care necesită asistență urgentă pentru membrii Parlamentului European oriunde în lume, în timpul deplasărilor oficiale. Asistența acoperă, de asemenea, organizarea repatrierii și plata costurilor auxiliare.</cbc:Description>
+         <cbc:Description languageID="HRV">Pružanje usluga osiguranja i pružanja pomoći u slučaju bolesti ili nesreće koja zahtijeva hitnu pomoć, za članove Europskog parlamenta bilo gdje u svijetu, za vrijeme službenog putovanja. Pomoć također pokriva organizaciju repatrijacije i plaćanje dodatnih troškova.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Innovative Procurement (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">354 000,00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">66512000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">66512100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>Brussels</cbc:StreetName>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">60</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</PriorInformationNotice>

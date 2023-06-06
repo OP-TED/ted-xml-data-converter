@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TED_EXPORT xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ted/R2.0.8.S03/publication" xmlns:n2016="ted/2016/nuts" xsi:schemaLocation="ted/R2.0.8.S03/publication TED_EXPORT.xsd" DOC_ID="145742-2018" EDITION="2018065">
+   <TECHNICAL_SECTION>
+      <RECEPTION_ID>18-147661-001</RECEPTION_ID>
+      <DELETION_DATE>20180514</DELETION_DATE>
+      <FORM_LG_LIST>RO </FORM_LG_LIST>
+      <COMMENTS>From Convertor</COMMENTS>
+   </TECHNICAL_SECTION>
+   <LINKS_SECTION>
+      <XML_SCHEMA_DEFINITION_LINK xlink:type="simple" xlink:href="http://ted.europa.eu" xlink:title="TED WEBSITE"/>
+      <OFFICIAL_FORMS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <FORMS_LABELS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+      <ORIGINAL_CPV_LINK xlink:type="simple " xlink:href="http://ted.europa.eu"/>
+      <ORIGINAL_NUTS_LINK xlink:type="simple" xlink:href="http://ted.europa.eu"/>
+   </LINKS_SECTION>
+   <CODED_DATA_SECTION>
+      <REF_OJS>
+         <COLL_OJ>S</COLL_OJ>
+         <NO_OJ>65</NO_OJ>
+         <DATE_PUB>20180404</DATE_PUB>
+      </REF_OJS>
+      <NOTICE_DATA>
+         <NO_DOC_OJS>2018/S 065-145742</NO_DOC_OJS>
+         <URI_LIST>
+            <URI_DOC LG="RO">http://ted.europa.eu/udl?uri=TED:NOTICE:145742-2018:TEXT:RO:HTML</URI_DOC>
+         </URI_LIST>
+         <LG_ORIG>RO</LG_ORIG>
+         <ISO_COUNTRY VALUE="RO"/>
+         <IA_URL_GENERAL>www.dgaspctm.ro</IA_URL_GENERAL>
+         <ORIGINAL_CPV CODE="15110000">Meat</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="15111100">Beef</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="15112000">Poultry</ORIGINAL_CPV>
+         <ORIGINAL_CPV CODE="15113000">Pork</ORIGINAL_CPV>
+         <n2016:PERFORMANCE_NUTS CODE="RO424">Timiş</n2016:PERFORMANCE_NUTS>
+         <VALUES_LIST>
+            <VALUES TYPE="GLOBAL">
+               <RANGE_VALUE>
+                  <VALUE CURRENCY="RON">559 456,99</VALUE>
+                  <VALUE CURRENCY="RON">839 225,41</VALUE>
+               </RANGE_VALUE>
+            </VALUES>
+            <VALUES TYPE="PER_LOT">
+               <RANGE_VALUE>
+                  <VALUE CURRENCY="RON">99 597,65</VALUE>
+                  <VALUE CURRENCY="RON">149 396,11</VALUE>
+               </RANGE_VALUE>
+            </VALUES>
+            <VALUES TYPE="PER_LOT">
+               <RANGE_VALUE>
+                  <VALUE CURRENCY="RON">266 614,00</VALUE>
+                  <VALUE CURRENCY="RON">399 919,30</VALUE>
+               </RANGE_VALUE>
+            </VALUES>
+            <VALUES TYPE="PER_LOT">
+               <RANGE_VALUE>
+                  <VALUE CURRENCY="RON">193 245,34</VALUE>
+                  <VALUE CURRENCY="RON">289 910,00</VALUE>
+               </RANGE_VALUE>
+            </VALUES>
+         </VALUES_LIST>
+      </NOTICE_DATA>
+      <CODIF_DATA>
+         <DS_DATE_DISPATCH>20180402</DS_DATE_DISPATCH>
+         <DD_DATE_REQUEST_DOCUMENT>20180504 15:00</DD_DATE_REQUEST_DOCUMENT>
+         <DT_DATE_FOR_SUBMISSION>20180514 16:00</DT_DATE_FOR_SUBMISSION>
+         <AA_AUTHORITY_TYPE CODE="R">Regional or local Agency/Office</AA_AUTHORITY_TYPE>
+         <TD_DOCUMENT_TYPE CODE="3">Contract notice</TD_DOCUMENT_TYPE>
+         <NC_CONTRACT_NATURE CODE="2">Supplies</NC_CONTRACT_NATURE>
+         <PR_PROC CODE="1">Open procedure</PR_PROC>
+         <RP_REGULATION CODE="4">European Union</RP_REGULATION>
+         <TY_TYPE_BID CODE="3">Submission for one or more lots</TY_TYPE_BID>
+         <AC_AWARD_CRIT CODE="1">Lowest price</AC_AWARD_CRIT>
+         <MA_MAIN_ACTIVITIES CODE="B">Social protection</MA_MAIN_ACTIVITIES>
+         <HEADING>01202</HEADING>
+         <DIRECTIVE VALUE="2004/18/EC"/>
+      </CODIF_DATA>
+   </CODED_DATA_SECTION>
+   <TRANSLATION_SECTION>
+      <ML_TITLES>
+         <ML_TI_DOC LG="BG">
+            <TI_CY>Pyмъния</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Месо</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="CS">
+            <TI_CY>Rumunsko</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Maso</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="DA">
+            <TI_CY>Rumænien</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Kød</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="DE">
+            <TI_CY>Rumänien</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Fleisch</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="EL">
+            <TI_CY>Ρουμανία</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Κρέας</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="EN">
+            <TI_CY>Romania</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Meat</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="ES">
+            <TI_CY>Rumanía</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Carne</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="ET">
+            <TI_CY>Rumeenia</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Liha</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="FI">
+            <TI_CY>Romania</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Liha</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="FR">
+            <TI_CY>Roumanie</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Viande</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="GA">
+            <TI_CY>Rómáin, an</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Meat</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="HR">
+            <TI_CY>Rumunjska</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Meso</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="HU">
+            <TI_CY>Románia</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Hús</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="IT">
+            <TI_CY>Romania</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Carne</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="LT">
+            <TI_CY>Rumunija</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Mėsa</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="LV">
+            <TI_CY>Rumānija</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Gaļa</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="MT">
+            <TI_CY>ir-Rumanija</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Laħam</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="NL">
+            <TI_CY>Roemenië</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Vlees</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="PL">
+            <TI_CY>Rumunia</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Mięso</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="PT">
+            <TI_CY>Roménia</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Carne</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="RO">
+            <TI_CY>România</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Carne</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SK">
+            <TI_CY>Rumunsko</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Mäso</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SL">
+            <TI_CY>Romunija</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Meso</TI_TEXT>
+         </ML_TI_DOC>
+         <ML_TI_DOC LG="SV">
+            <TI_CY>Rumänien</TI_CY>
+            <TI_TOWN>Timişoara</TI_TOWN>
+            <TI_TEXT>Kött</TI_TEXT>
+         </ML_TI_DOC>
+      </ML_TITLES>
+      <ML_AA_NAMES>
+         <AA_NAME LG="RO">Direcţia Generală de Asistenţă Socială şi Protecţia Copilului Timiş</AA_NAME>
+      </ML_AA_NAMES>
+   </TRANSLATION_SECTION>
+   <FORM_SECTION>
+      <CONTRACT CATEGORY="ORIGINAL" FORM="2" LG="RO" VERSION="R2.0.8.S03.E01">
+         <FD_CONTRACT CTYPE="SUPPLIES">
+            <CONTRACTING_AUTHORITY_INFORMATION>
+               <NAME_ADDRESSES_CONTACT_CONTRACT>
+                  <CA_CE_CONCESSIONAIRE_PROFILE>
+                     <ORGANISATION>
+                        <OFFICIALNAME>Direcţia Generală de Asistenţă Socială şi Protecţia Copilului Timiş</OFFICIALNAME>
+                     </ORGANISATION>
+                     <ADDRESS>Piaţa Regina Maria nr. 3</ADDRESS>
+                     <TOWN>Timişoara</TOWN>
+                     <POSTAL_CODE>300004</POSTAL_CODE>
+                     <COUNTRY VALUE="RO"/>
+                     <CONTACT_POINT>Daniel Julan</CONTACT_POINT>
+                     <ATTENTION>Doina Carabet</ATTENTION>
+                     <PHONE>+40 256490281</PHONE>
+                     <E_MAILS>
+                        <E_MAIL>siapdgaspctm@yahoo.com</E_MAIL>
+                     </E_MAILS>
+                     <FAX>+40 256407066</FAX>
+                  </CA_CE_CONCESSIONAIRE_PROFILE>
+                  <INTERNET_ADDRESSES_CONTRACT>
+                     <URL_GENERAL>www.dgaspctm.ro</URL_GENERAL>
+                     <URL_BUYER>www1.e-licitatie.ro</URL_BUYER>
+                  </INTERNET_ADDRESSES_CONTRACT>
+                  <FURTHER_INFORMATION>
+                     <IDEM/>
+                  </FURTHER_INFORMATION>
+                  <SPECIFICATIONS_AND_ADDITIONAL_DOCUMENTS>
+                     <IDEM/>
+                  </SPECIFICATIONS_AND_ADDITIONAL_DOCUMENTS>
+                  <TENDERS_REQUESTS_APPLICATIONS_MUST_BE_SENT_TO>
+                     <IDEM/>
+                  </TENDERS_REQUESTS_APPLICATIONS_MUST_BE_SENT_TO>
+               </NAME_ADDRESSES_CONTACT_CONTRACT>
+               <TYPE_AND_ACTIVITIES_AND_PURCHASING_ON_BEHALF>
+                  <TYPE_AND_ACTIVITIES>
+                     <TYPE_OF_CONTRACTING_AUTHORITY VALUE="REGIONAL_AGENCY"/>
+                     <TYPE_OF_ACTIVITY VALUE="SOCIAL_PROTECTION"/>
+                  </TYPE_AND_ACTIVITIES>
+                  <PURCHASING_ON_BEHALF>
+                     <PURCHASING_ON_BEHALF_NO/>
+                  </PURCHASING_ON_BEHALF>
+               </TYPE_AND_ACTIVITIES_AND_PURCHASING_ON_BEHALF>
+            </CONTRACTING_AUTHORITY_INFORMATION>
+            <OBJECT_CONTRACT_INFORMATION>
+               <DESCRIPTION_CONTRACT_INFORMATION>
+                  <TITLE_CONTRACT>
+                     <P>Furnizare de carne</P>
+                  </TITLE_CONTRACT>
+                  <TYPE_CONTRACT_LOCATION>
+                     <TYPE_CONTRACT VALUE="SUPPLIES"/>
+                     <TYPE_SUPPLIES_CONTRACT VALUE="PURCHASE"/>
+                  </TYPE_CONTRACT_LOCATION>
+                  <LOCATION_NUTS>
+                     <LOCATION>
+                        <P>Centrele din subordinea D.G.A.S.P.C. Timis.</P>
+                     </LOCATION>
+                     <n2016:NUTS CODE="RO424"/>
+                  </LOCATION_NUTS>
+                  <NOTICE_INVOLVES>
+                     <PUBLIC_CONTRACT/>
+                  </NOTICE_INVOLVES>
+                  <SHORT_CONTRACT_DESCRIPTION>
+                     <P>Achizitia de „Carne": valoarea estimata minima a intervalului reprezinta valoarea estimata a contractului ce face obiectul prezentei proceduri, valoare in functie de care se vor elabora si evalua ofertele, iar valoarea maxima reprezinta valoarea estimata totala ce cuprinde si valoarea suplimentarilor. Suplimentarea cantitatilor de produse este conditionata de existenta resurselor financiare alocate cu aceasta destinatie. Optiuni: aplicarea prevederilor art. 165 alin. (1) din H.G. 395/2016.</P>
+                     <P>Pot fi solicitate clarificari inainte de data limita de depunere a ofertelor/candidaturilor cu 13 zile, iar autoritatea contractanta va raspunde tuturor solicitarilor de clarificari pana in a 10-a zi inainte de data limita de depunere a ofertelor.</P>
+                  </SHORT_CONTRACT_DESCRIPTION>
+                  <CPV>
+                     <CPV_MAIN>
+                        <CPV_CODE CODE="15110000"/>
+                     </CPV_MAIN>
+                  </CPV>
+                  <CONTRACT_COVERED_GPA VALUE="NO"/>
+                  <F02_DIVISION_INTO_LOTS>
+                     <F02_DIV_INTO_LOT_YES VALUE="ONE_OR_MORE_LOT">
+                        <F02_ANNEX_B>
+                           <LOT_NUMBER>1</LOT_NUMBER>
+                           <LOT_TITLE>Carne de vită</LOT_TITLE>
+                           <LOT_DESCRIPTION>
+                              <P>Cantitatea totala contractata pana la 31.12.2018 este de 5 188 U.M., la care se adauga posibilitatea de prelungire cu 4 luni, prin act aditional, conform H.G. 395/2016, art. 165 alin. (1) lit. b), suplimentarea cantitatilor este conditionata de existenta resurselor financiare alocate cu aceasta destinatie, cu o cantitate de 2 595 U.M., rezultand astfel o cantitate totala de 7 783 U.M. Valoarea estimata pana la 31.12.2018 este de 99 597,65 RON fara TVA (la care se vor raporta ofertele), la care se adauga posibilitatea de prelungire (cu 4 luni) conditionata de existenta resurselor financiare alocate cu aceasta destinatie, cu o valoare estimata de 49 798,46 RON fara TVA, rezultand o valoare estimata a prezentului contract de 149 396,11 RON fara TVA. Valoarea este intre 99 597,65 RON fara TVA si 149 396,11 RON fara TVA, unde valoarea minima reprezinta valoarea la care se vor raporta si evalua ofertele, iar valoarea maxima reprezinta valoarea estimata globala ce cuprinde si valoarea suplimentarilor. Suplimentarea cantitatilor este conditionata de existenta resurselor financiare alocate cu aceasta destinatie. Optiuni: aplicarea prevederilor art. 165 din H.G. 395/2016, actualizata.</P>
+                           </LOT_DESCRIPTION>
+                           <CPV>
+                              <CPV_MAIN>
+                                 <CPV_CODE CODE="15111100"/>
+                              </CPV_MAIN>
+                           </CPV>
+                           <NATURE_QUANTITY_SCOPE>
+                              <TOTAL_QUANTITY_OR_SCOPE>
+                                 <P>Minim — maxim: 5 188 kg — 7 783 kg.</P>
+                              </TOTAL_QUANTITY_OR_SCOPE>
+                              <COSTS_RANGE_AND_CURRENCY CURRENCY="RON">
+                                 <RANGE_VALUE_COST>
+                                    <LOW_VALUE FMTVAL="99597.65">99 597,65</LOW_VALUE>
+                                    <HIGH_VALUE FMTVAL="149396.11">149 396,11</HIGH_VALUE>
+                                 </RANGE_VALUE_COST>
+                              </COSTS_RANGE_AND_CURRENCY>
+                           </NATURE_QUANTITY_SCOPE>
+                           <PERIOD_WORK_DATE_STARTING>
+                              <MONTHS>8</MONTHS>
+                           </PERIOD_WORK_DATE_STARTING>
+                           <ADDITIONAL_INFORMATION_ABOUT_LOTS>
+                              <P>Valoarea garantiei de participare este: 995,97 RON.</P>
+                           </ADDITIONAL_INFORMATION_ABOUT_LOTS>
+                        </F02_ANNEX_B>
+                        <F02_ANNEX_B>
+                           <LOT_NUMBER>2</LOT_NUMBER>
+                           <LOT_TITLE>Carne de pasăre</LOT_TITLE>
+                           <LOT_DESCRIPTION>
+                              <P>Cantitatea totala contractata pana la 31.12.2018 este de 20 901 U.M. la care se adauga posibilitatea de prelungire cu 4 luni, prin act aditional, conform H.G. 395/2016, art. 165 alin. (1) lit. b), suplimentarea cantitatilor este conditionata de existenta resurselor financiare alocate cu aceasta destinatie, cu o cantitate de 10 449 U.M., rezultand astfel o cantitate totala de 31 350 U.M. Valoarea estimata pana la 31.12.2018 este de 266 614 RON fara TVA (la care se vor raporta ofertele), la care se adauga posibilitatea de prelungire (cu 4 luni) conditionata de existenta resurselor financiare alocate cu aceasta destinatie, cu o valoare estimata de 133 305,30 RON fara TVA, rezultand o valoare estimata a prezentului contract de 399 913,30 RON fara TVA. Valoarea este intre 266 614 RON fara TVA si 399 919,30 RON fara TVA, unde valoarea minima reprezinta valoarea la care se vor raporta si evalua ofertele, iar valoarea maxima reprezinta valoarea estimata globala ce cuprinde si valoarea suplimentarilor. Suplimentarea cantitatilor este conditionata de existenta resurselor financiare alocate cu aceasta destinatie. Optiuni: aplicarea prevederilor art. 165 din H.G. 395/2016, actualizata.</P>
+                           </LOT_DESCRIPTION>
+                           <CPV>
+                              <CPV_MAIN>
+                                 <CPV_CODE CODE="15112000"/>
+                              </CPV_MAIN>
+                           </CPV>
+                           <NATURE_QUANTITY_SCOPE>
+                              <TOTAL_QUANTITY_OR_SCOPE>
+                                 <P>Minim — maxim: 20 901 kg — 31 350 kg.</P>
+                              </TOTAL_QUANTITY_OR_SCOPE>
+                              <COSTS_RANGE_AND_CURRENCY CURRENCY="RON">
+                                 <RANGE_VALUE_COST>
+                                    <LOW_VALUE FMTVAL="266614.00">266 614,00</LOW_VALUE>
+                                    <HIGH_VALUE FMTVAL="399919.30">399 919,30</HIGH_VALUE>
+                                 </RANGE_VALUE_COST>
+                              </COSTS_RANGE_AND_CURRENCY>
+                           </NATURE_QUANTITY_SCOPE>
+                           <PERIOD_WORK_DATE_STARTING>
+                              <MONTHS>8</MONTHS>
+                           </PERIOD_WORK_DATE_STARTING>
+                           <ADDITIONAL_INFORMATION_ABOUT_LOTS>
+                              <P>Valoarea garantiei de participare este: 2 666,10 RON.</P>
+                           </ADDITIONAL_INFORMATION_ABOUT_LOTS>
+                        </F02_ANNEX_B>
+                        <F02_ANNEX_B>
+                           <LOT_NUMBER>3</LOT_NUMBER>
+                           <LOT_TITLE>Carne de porc</LOT_TITLE>
+                           <LOT_DESCRIPTION>
+                              <P>Cantitatea totala contractata pana la 31.12.2018 este de 10 758 U.M., la care se adauga posibilitatea de prelungire cu 4 luni, prin act aditional, conform H.G. 395/2016, art. 165 alin. (1) lit. b), suplimentarea cantitatilor este conditionata de existenta resurselor financiare alocate cu aceasta destinatie, cu o cantitate de 5 382 U.M., rezultand astfel o cantitate totala de 16 140 U.M. Valoarea estimata pana la 31.12.2018 este de 193 245,34 RON fara TVA (la care se vor raporta ofertele), la care se adauga posibilitatea de prelungire (cu 4 luni), conditionata de existenta resurselor financiare alocate cu aceasta destinatie, cu o valoare estimata de 96 664,66 RON fara TVA, rezultand o valoare estimata a prezentului contract de 289 910 RON fara TVA. Valoarea este intre 193 245,34 RON fara TVA si 289 910 RON fara TVA, unde valoarea minima reprezinta valoarea la care se vor raporta si evalua ofertele, iar valoarea maxima reprezinta valoarea estimata globala ce cuprinde si valoarea suplimentarilor. Suplimentarea cantitatilor este conditionata de existenta resurselor financiare alocate cu aceasta destinatie. Optiuni: aplicarea prevederilor art. 165 din H.G. 395/2016, actualizata.</P>
+                           </LOT_DESCRIPTION>
+                           <CPV>
+                              <CPV_MAIN>
+                                 <CPV_CODE CODE="15113000"/>
+                              </CPV_MAIN>
+                           </CPV>
+                           <NATURE_QUANTITY_SCOPE>
+                              <TOTAL_QUANTITY_OR_SCOPE>
+                                 <P>Minim — maxim: 10 758 kg — 16 140 kg.</P>
+                              </TOTAL_QUANTITY_OR_SCOPE>
+                              <COSTS_RANGE_AND_CURRENCY CURRENCY="RON">
+                                 <RANGE_VALUE_COST>
+                                    <LOW_VALUE FMTVAL="193245.34">193 245,34</LOW_VALUE>
+                                    <HIGH_VALUE FMTVAL="289910.00">289 910,00</HIGH_VALUE>
+                                 </RANGE_VALUE_COST>
+                              </COSTS_RANGE_AND_CURRENCY>
+                           </NATURE_QUANTITY_SCOPE>
+                           <PERIOD_WORK_DATE_STARTING>
+                              <MONTHS>8</MONTHS>
+                           </PERIOD_WORK_DATE_STARTING>
+                           <ADDITIONAL_INFORMATION_ABOUT_LOTS>
+                              <P>Valoarea garantiei de participare este: 1 932,45 RON.</P>
+                           </ADDITIONAL_INFORMATION_ABOUT_LOTS>
+                        </F02_ANNEX_B>
+                     </F02_DIV_INTO_LOT_YES>
+                  </F02_DIVISION_INTO_LOTS>
+                  <ACCEPTED_VARIANTS VALUE="NO"/>
+               </DESCRIPTION_CONTRACT_INFORMATION>
+               <QUANTITY_SCOPE>
+                  <NATURE_QUANTITY_SCOPE>
+                     <TOTAL_QUANTITY_OR_SCOPE>
+                        <P>Furnizare carne, conform cantitatilor din Anexa B — Informatii privind loturile — in valoare de 559 456,99 RON fara TVA. In eventualitatea suplimentarii produselor, in conditiile art. 165 alin. (1) din H.G. 395/2016, cu modificarile si completarile ulterioare, valoarea totala a contractului este de 839 225,41 RON fara TVA. Valoarea estimata pentru care vor fi intocmite si evaluate ofertele este de 559 456,99 RON fara TVA. Suplimentarea cantitatilor de produse este conditionata de existenta resurselor financiare alocate cu aceasta destinatie.</P>
+                     </TOTAL_QUANTITY_OR_SCOPE>
+                     <COSTS_RANGE_AND_CURRENCY CURRENCY="RON">
+                        <RANGE_VALUE_COST>
+                           <LOW_VALUE FMTVAL="559456.99">559 456,99</LOW_VALUE>
+                           <HIGH_VALUE FMTVAL="839225.41">839 225,41</HIGH_VALUE>
+                        </RANGE_VALUE_COST>
+                     </COSTS_RANGE_AND_CURRENCY>
+                  </NATURE_QUANTITY_SCOPE>
+                  <OPTIONS>
+                     <OPTION_DESCRIPTION>
+                        <P>Aplicarea prevederilor art. 165 alin. (1) din H.G. 395/2016.</P>
+                     </OPTION_DESCRIPTION>
+                     <PROVISIONAL_TIMETABLE_MONTH>4</PROVISIONAL_TIMETABLE_MONTH>
+                  </OPTIONS>
+                  <RECURRENT_CONTRACT>
+                     <NUMBER_POSSIBLE_RENEWALS>1</NUMBER_POSSIBLE_RENEWALS>
+                     <TIME_FRAME_SUBSEQUENT_CONTRACTS_MONTH>8</TIME_FRAME_SUBSEQUENT_CONTRACTS_MONTH>
+                  </RECURRENT_CONTRACT>
+               </QUANTITY_SCOPE>
+               <PERIOD_WORK_DATE_STARTING>
+                  <MONTHS>8</MONTHS>
+               </PERIOD_WORK_DATE_STARTING>
+            </OBJECT_CONTRACT_INFORMATION>
+            <LEFTI_CONTRACT>
+               <CONTRACT_RELATING_CONDITIONS>
+                  <DEPOSITS_GUARANTEES_REQUIRED>
+                     <P>Ofertantul va constitui o garantie de participare conform Anexei B — Informatii privind loturile (In cazul in care la procedura de achizitie participa si operatori economici straini, acestia vor constitui garantia de participare la cursul RON/valuta comunicat de BNR si valabil la data publicarii in SEAP a anuntului de participare). Garantia de participare se constituie in conformitate cu prevederile art. 36 din H.G. 395/2016, actualizata, si va avea mentionate in mod obligatoriu numarul/numerele curent/e al lotului/loturilor pentru care se depune oferta. Garantia de participare se constituie prin virament bancar sau printr-un instrument de garantare emis in conditiile legii de o societate bancara sau o societate de asigurari, care nu se afla in situatii speciale privind autorizarea ori supravegherea, in conditiile legii. Garantia de participare se poate depune si la casieria autoritatii contractante. Contul in care se va constitui garantia de participare este RO 47TREZ6215006XXX005136, Trezoreria Timisoara. Garantia trebuie sa fie irevocabila. Instrumentul de garantare trebuie sa prevada ca plata garantiei de participare se va executa neconditionat, respectiv la prima cerere a beneficiarului, pe baza declaratiei acestuia cu privire la culpa persoanei garantate. Perioada de valabilitate a garantiei pentru participare: 90 de zile de la data limita stabilita pentru primirea ofertelor. Important: Operatorii economici vor depune dovada constituirii garantiei de participare, scanata, in SEAP, semnata cu semnatura electronica extinsa, pana la data limita a primirii ofertelor. Garantia de participare emisa in alta limba decat cea romana va fi prezentata si va fi insotita de traducerea autorizata in limba romana.</P>
+                     <P>5 % din pretul contractului fara T.V.A. Modul de constituire a garantiei de buna executie a contractului: dupa semnarea contractului, în conformitate cu art. 39 si art. 40 din H.G. 395/2016. Garantia de buna executie se constituie în termen de 5 zile lucratoare de la semnarea contractului de achizitie publica. Modalitati de constituire:</P>
+                     <P>— instrument de garantare emis in conditiile legii de o societate bancara sau de o societate de asigurari,</P>
+                     <P>— virament bancar,</P>
+                     <P>— numerar la casieria autoritatii contractante (pentru valori ale garantiei mai mici de 5 000 RON).</P>
+                     <P>În situatia executarii garantiei de buna executie, partial sau total, contractantul are obligatia de a reîntregi garantia în cauza raportat la restul ramas de executat. În cazul suplimentarii valorii contractului pe parcursul executarii acestuia, contractantul are obligatia de a completa garantia în corelatie cu noua valoare.</P>
+                  </DEPOSITS_GUARANTEES_REQUIRED>
+                  <MAIN_FINANCING_CONDITIONS>
+                     <P>Buget local.</P>
+                  </MAIN_FINANCING_CONDITIONS>
+                  <LEGAL_FORM>
+                     <P>1) Asociere conform art. 53 din Legea privind achizitiile publice nr. 98/2016; </P>
+                     <P>2) Asociere conform art. 66 din Legea privind achizitiile sectoriale nr. 99/2016; </P>
+                     <P>3) Asociere conform art. 39 din Legea privind concesiunile de lucrari si concesiunile de servicii nr. 100/2016.</P>
+                  </LEGAL_FORM>
+                  <NO_EXISTENCE_OTHER_PARTICULAR_CONDITIONS/>
+               </CONTRACT_RELATING_CONDITIONS>
+               <F02_CONDITIONS_FOR_PARTICIPATION>
+                  <ECONOMIC_OPERATORS_PERSONAL_SITUATION>
+                     <P>Ofertantii, tertii sustinatori si subcontractantii nu trebuie sa se regaseasca in situatiile prevazute la art. 164, 165 si 167 din Legea 98/2016.</P>
+                     <P>Pentru cerintele solicitate se va prezenta DUAE.</P>
+                     <P>Conform art. 196 alin. (2) din Legea 98/2016, inainte de atribuirea contractului, se va solicita ofertantului clasat pe primul loc dupa aplicarea criteriului de atribuire sa prezinte documentele justificative actualizate, prin care sa demonstreze indeplinirea tuturor criteriilor de calificare si selectie, in conformitate cu DUAE.</P>
+                     <P>Aceste documente pot fi:</P>
+                     <P>— certificate constatatoare privind lipsa datoriilor restante cu privire la plata impozitelor, taxelor sau a contributiilor la bugetul general consolidat (buget local, buget de stat) — acestea trebuie sa fie valabile la momentul prezentarii,</P>
+                     <P>— cazierul judiciar al operatorului economic si al membrilor organului de administrare, de conducere sau de supraveghere respectivului operator economic sau al celor ce au putere de reprezentare, de decizie sau de control in cadrul acestuia, asa cum rezulta din certificatul constatator emis de ONRC/actul constitutiv,</P>
+                     <P>— dupa caz, documente prin care se demostreaza faptul ca operatorul economic poate beneficia si de derogarile prevazute la art. 166 alin. (2), art. 167 alin. (2) si art. 171 din Legea nr. 98/2016 privind achizitiile publice,</P>
+                     <P>— alte documente edificatoare, dupa caz.</P>
+                     <P>Ofertantul, inclusiv subcontractantul si/sau tertul sustinator — trebuie sa completeze declaratia privind neincadrarea in prevederile art. 60 alin. (1) din Legea nr. 98/2016. Persoanele cu functie de decizie din cadrul D.G.A.S.P.C. Timis (precizate conform art. 63 din Legea nr. 98/2016), in ceea ce priveste organizarea, derularea si finalizarea procedurii de atribuire, sunt:</P>
+                     <P>— Director General — Milutinovici Emilia,</P>
+                     <P>— Director General Adjunct Protectie Sociala — Anucin Bogo,</P>
+                     <P>— Director General Adjunct Economic — Voichescu Gheorghe Florin,</P>
+                     <P>— Director Executiv Protectia Drepturilor Copiilor — Trusca Monica,</P>
+                     <P>— Director Executiv Protectia Persoanelor Adulte — Ilcau Dana,</P>
+                     <P>— Sef Serviciu Investitii, Achizitii si Contractari Servicii Sociale — Julan Daniel.</P>
+                     <P>Functii de executie in cadrul Serviciul Investitii, Achizitii si Contractari Servicii Sociale: Balint Verginica, Popescu Mihaela, Carabet Doina, Rotaru Andreea. </P>
+                     <P>Operatorii economici ce depun oferta trebuie sa dovedeasca o forma de inregistrare in conditiile legii din tara de rezidenta, sa reiasa ca operatorul economic este legal constituit, ca nu se afla in niciuna dintre situatiile de anulare a constituirii, precum si faptul ca are capacitatea profesionala de a realiza activitatile care fac obiectul contractului.</P>
+                     <P>Modalitatea prin care poate fi demonstrata indeplinirea cerintei: Se va prezenta DUAE pentru cerintele solicitate. Documentele justificative care probeaza indeplinirea celor asumate prin completarea DUAE, respectiv certificat constatator emis de ORC sau, in cazul ofertantilor straini, documente echivalente emise in tara de rezidenta, urmeaza sa fie prezentate, la solicitarea autoritatii contractante, doar de catre ofertantul (inclusiv de catre ofertantul asociat, tert sustinator sau subcontractant dupa caz) clasat pe locul 1 in clasamentul intermediar intocmit la finalizarea evaluarii ofertelor [conform art. 196 alin. (2) din Legea 98/2016].</P>
+                  </ECONOMIC_OPERATORS_PERSONAL_SITUATION>
+                  <TECHNICAL_CAPACITY_LEFTI>
+                     <T_CAPACITY_INFORMATION>
+                        <P>Pentru demostrarea experientei similare (capacitate tehnica si/sau profesionala):</P>
+                        <P>Ofertantul va prezenta o lista a principalelor livrari de produse similare efectuate în cursul unei perioade care acopera cel mult ultimii 3 ani, cu indicarea valorilor, datelor si a beneficiarilor publici sau privati; se solicita prezentarea de documente justificative din care sa rezulte livrari de produse similare in valoare cumulata, dupa cum urmeaza:</P>
+                        <P>— de minim 49 800 RON fara TVA pentru lotul 1,</P>
+                        <P>— de minim 133 350 RON fara TVA pentru lotul 2,</P>
+                        <P>— si de minim 96 650 RON fara TVA pentru lotul 3.</P>
+                        <P>Ofertantul trebuie sa prezinte documente doveditoare a indeplinirii cerintei de calificare pentru fiecare lot pentru care depune oferta.</P>
+                        <P>In cazul subcontractantilor propusi, se ia în considerare capacitatea tehnica si profesionala pentru partea lor de implicare în contractul care urmeaza sa fie îndeplinit, daca documentele prezentate sunt relevante în acest sens [art. 172 alin. (4) din Legea 98/2016].</P>
+                        <P>Ofertantii vor prezenta, odata cu DUAE, angajamentul ferm al tertului sustinator din care rezulta modul efectiv în care se va materializa sustinerea acestuia sau, dupa caz, acordul de subcontractare. Documentele justificative care probeaza cele asumate in angajamente/acorduri urmeaza a fi prezentate, la solicitarea autoritatii contractante, doar de catre ofertantul clasat pe locul 1 in clasamentul intermediar intocmit la finalizarea evaluarii ofertelor.</P>
+                     </T_CAPACITY_INFORMATION>
+                     <T_CAPACITY_MIN_LEVEL>
+                        <P>Modalitatea de indeplinire a cerintei: completarea DUAE. Documentele justificative care probeaza indeplinirea celor asumate prin completarea DUAE urmeaza a fi prezentate, la solicitarea autoritatii contractante, doar de catre ofertantul clasat pe locul 1 in clasamentul intermediar intocmit la finalizarea evaluarii ofertelor.</P>
+                        <P>Documentele justificative care probeaza indeplinirea celor asumate prin completarea DUAE pot fi: certificate/documente (contracte de furnizare, documente constatatoare, proces verbal de receptie etc.).</P>
+                     </T_CAPACITY_MIN_LEVEL>
+                  </TECHNICAL_CAPACITY_LEFTI>
+               </F02_CONDITIONS_FOR_PARTICIPATION>
+               <SERVICES_CONTRACTS_SPECIFIC_CONDITIONS>
+                  <NO_EXEC_SERVICE_RESERVED_PARTICULAR_PROFESSION/>
+                  <REQUESTS_NAMES_PROFESSIONAL_QUALIFICATIONS VALUE="NO"/>
+               </SERVICES_CONTRACTS_SPECIFIC_CONDITIONS>
+            </LEFTI_CONTRACT>
+            <PROCEDURE_DEFINITION_CONTRACT_NOTICE>
+               <TYPE_OF_PROCEDURE>
+                  <TYPE_OF_PROCEDURE_DETAIL_FOR_CONTRACT_NOTICE>
+                     <PT_OPEN/>
+                  </TYPE_OF_PROCEDURE_DETAIL_FOR_CONTRACT_NOTICE>
+               </TYPE_OF_PROCEDURE>
+               <AWARD_CRITERIA_CONTRACT_NOTICE_INFORMATION>
+                  <AWARD_CRITERIA_DETAIL>
+                     <LOWEST_PRICE/>
+                  </AWARD_CRITERIA_DETAIL>
+                  <IS_ELECTRONIC_AUCTION_USABLE>
+                     <NO_USE_ELECTRONIC_AUCTION/>
+                  </IS_ELECTRONIC_AUCTION_USABLE>
+               </AWARD_CRITERIA_CONTRACT_NOTICE_INFORMATION>
+               <ADMINISTRATIVE_INFORMATION_CONTRACT_NOTICE>
+                  <PREVIOUS_PUBLICATION_INFORMATION_NOTICE_F2>
+                     <NO_PREVIOUS_PUBLICATION_EXISTS_F2/>
+                  </PREVIOUS_PUBLICATION_INFORMATION_NOTICE_F2>
+                  <CONDITIONS_OBTAINING_SPECIFICATIONS>
+                     <TIME_LIMIT>
+                        <DAY>04</DAY>
+                        <MONTH>05</MONTH>
+                        <YEAR>2018</YEAR>
+                        <TIME>15:00</TIME>
+                     </TIME_LIMIT>
+                     <NO_PAYABLE_DOCUMENTS/>
+                  </CONDITIONS_OBTAINING_SPECIFICATIONS>
+                  <RECEIPT_LIMIT_DATE>
+                     <DAY>14</DAY>
+                     <MONTH>05</MONTH>
+                     <YEAR>2018</YEAR>
+                     <TIME>16:00</TIME>
+                  </RECEIPT_LIMIT_DATE>
+                  <LANGUAGE>
+                     <LANGUAGE_EC VALUE="RO"/>
+                  </LANGUAGE>
+                  <MINIMUM_TIME_MAINTAINING_TENDER>
+                     <PERIOD_DAY>90</PERIOD_DAY>
+                  </MINIMUM_TIME_MAINTAINING_TENDER>
+                  <CONDITIONS_FOR_OPENING_TENDERS>
+                     <DATE_TIME>
+                        <DAY>13</DAY>
+                        <MONTH>08</MONTH>
+                        <YEAR>2018</YEAR>
+                        <TIME>18:00</TIME>
+                     </DATE_TIME>
+                     <PLACE_OPENING>
+                        <PLACE_NOT_STRUCTURED>
+                           <P>În SEAP.</P>
+                        </PLACE_NOT_STRUCTURED>
+                     </PLACE_OPENING>
+                     <NO_EXISTENCE_AUTHORISED_PERSONS/>
+                  </CONDITIONS_FOR_OPENING_TENDERS>
+               </ADMINISTRATIVE_INFORMATION_CONTRACT_NOTICE>
+            </PROCEDURE_DEFINITION_CONTRACT_NOTICE>
+            <COMPLEMENTARY_INFORMATION_CONTRACT_NOTICE>
+               <NO_RECURRENT_PROCUREMENT/>
+               <RELATES_TO_EU_PROJECT_NO/>
+               <ADDITIONAL_INFORMATION>
+                  <P>Interactiunea cu ofertantii, respectiv procesul de evaluare a ofertelor se vor desfasura dupa urmatoarele reguli:</P>
+                  <P>— Pentru vizualizarea documentatiei de atribuire incarcate in SEAP este necesar ca operatorii economici sa detina/instaleze pe statia de lucru aplicatia care permite verificarea semnaturii electronice si vizualizarea documentelor semnate electronic (disponibile pe site-urile furnizorilor de semnatura electronica),</P>
+                  <P>— Formularul DUAE va fi completat in format editabil,</P>
+                  <P>— Pentru transmiterea solicitarilor de clarificari privind documentatia de atribuire, operatorii economici se vor inregistra in SEAP (www.elicitatie.ro) ca operator economic, conform prevederilor art. 5 alin. (1) din H.G. nr. 395/2016 si vor transmite solicitarile avand in vedere termenele de raspuns ale autoritatii contractante, prevazute la art. 160–161 din Legea nr. 98/2016,</P>
+                  <P>— In urma finalizarii fiecareia dintre fazele de verificare, autoritatea/entitatea contractanta comunica fiecarui ofertant ce a fost respins motivele care au stat la baza acestei decizii, iar celorlalti faptul ca se trece la faza urmatoare de verificare, cu respectarea prevederilor Capitolului IV, Sectiunea a 13-a din Legea nr. 98/2016.</P>
+               </ADDITIONAL_INFORMATION>
+               <PROCEDURES_FOR_APPEAL>
+                  <APPEAL_PROCEDURE_BODY_RESPONSIBLE>
+                     <CONTACT_DATA_WITHOUT_RESPONSIBLE_NAME>
+                        <ORGANISATION>
+                           <OFFICIALNAME>Consiliul Naţional de Soluţionare a Contestaţiilor</OFFICIALNAME>
+                        </ORGANISATION>
+                        <ADDRESS>Str. Stavropoleos nr. 6, sector 3</ADDRESS>
+                        <TOWN>Bucureşti</TOWN>
+                        <POSTAL_CODE>030084</POSTAL_CODE>
+                        <COUNTRY VALUE="RO"/>
+                        <E_MAILS>
+                           <E_MAIL>office@cnsc.ro</E_MAIL>
+                        </E_MAILS>
+                        <PHONE>+40 213104641</PHONE>
+                        <URL>http://www.cnsc.ro</URL>
+                        <FAX>+40 213104642 / +40 218900745</FAX>
+                     </CONTACT_DATA_WITHOUT_RESPONSIBLE_NAME>
+                  </APPEAL_PROCEDURE_BODY_RESPONSIBLE>
+                  <LODGING_OF_APPEALS>
+                     <LODGING_OF_APPEALS_PRECISION>
+                        <P>În conformitate cu art. 6, coroborat cu art. 8 din Legea 101/2016.</P>
+                     </LODGING_OF_APPEALS_PRECISION>
+                  </LODGING_OF_APPEALS>
+                  <LODGING_INFORMATION_FOR_SERVICE>
+                     <CONTACT_DATA_WITHOUT_RESPONSIBLE_NAME>
+                        <ORGANISATION>
+                           <OFFICIALNAME>Serviciul Juridic şi Contencios</OFFICIALNAME>
+                        </ORGANISATION>
+                        <ADDRESS>Piaţa Regina Maria nr. 3</ADDRESS>
+                        <TOWN>Timişoara</TOWN>
+                        <POSTAL_CODE>300004</POSTAL_CODE>
+                        <COUNTRY VALUE="RO"/>
+                        <E_MAILS>
+                           <E_MAIL>juridic.dgaspctm@yahoo.com</E_MAIL>
+                        </E_MAILS>
+                        <PHONE>+40 256490281</PHONE>
+                        <URL>www.dgaspctm.ro</URL>
+                        <FAX>+40 256407066</FAX>
+                     </CONTACT_DATA_WITHOUT_RESPONSIBLE_NAME>
+                  </LODGING_INFORMATION_FOR_SERVICE>
+               </PROCEDURES_FOR_APPEAL>
+               <NOTICE_DISPATCH_DATE>
+                  <DAY>02</DAY>
+                  <MONTH>04</MONTH>
+                  <YEAR>2018</YEAR>
+               </NOTICE_DISPATCH_DATE>
+            </COMPLEMENTARY_INFORMATION_CONTRACT_NOTICE>
+         </FD_CONTRACT>
+      </CONTRACT>
+   </FORM_SECTION>
+</TED_EXPORT>

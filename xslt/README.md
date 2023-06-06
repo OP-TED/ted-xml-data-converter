@@ -17,7 +17,8 @@ This folder contains the converteer code: XSLT and data files.
 |  [procedure.xslt](procedure.xslt) | Templates for converting information at Procedure level |
 | [create-ted-map.xslt](create-ted-map.xslt) | XSLT to create languages-map.xml and countries-map.xml from the EU Vocabularies files |
 | Mapping files |
-| [notice-type-mapping.xml](notice-type-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content |
+| [notice-type-mapping.xml](notice-type-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content for R2.0.9 schema |
+| [notice-type-mapping-r208.xml](notice-type-mapping.xml) | Mapping file to determine eForms Notice Subtype from TED XML content for R2.0.8 schema |
 | [eforms-notice-subtypes.xml](eforms-notice-subtypes.xml) | Mapping file to determine BT-02 Notice Type and BT-03 Form Type from Notice Subtype |
 | [languages.xml](languages.xml) | The "Language" codelist XML file, downloaded from https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables |
 | [languages-map.xml](languages-map.xml) | Mapping of Language codes in TED to eForms, derived from the "Language" codelist XML file |
