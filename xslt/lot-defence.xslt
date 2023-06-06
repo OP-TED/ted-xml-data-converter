@@ -12,7 +12,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- template for a single Lot -->
-<xsl:template match="*:LOT_PRIOR_INFORMATION|*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION">
+<xsl:template name="lot">
 	<cac:ProcurementProjectLot>
 		<!-- For form F16, a lot is represented by the element LOT_PRIOR_INFORMATION when F16_DIV_INTO_LOT_YES exists, otherwise a lot is represented by OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION -->
 		<!-- But, for eForms, one Lot is given lot ID LOT-0000, whereas the first of many lots is given lot ID LOT-0001 -->
@@ -1003,36 +1003,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 			<xsl:when test="fn:normalize-space(*:LOT_TITLE)"><xsl:apply-templates select="*:LOT_TITLE"/></xsl:when>
 			<xsl:otherwise><xsl:apply-templates select="(../../../..|.)/*:TITLE_CONTRACT"/></xsl:otherwise>
 		</xsl:choose>
-		<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
-
-		<xsl:if test="fn:local-name(.)='OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION'">
-			<xsl:choose>
-				<xsl:when test="fn:normalize-space(*:QUANTITY_SCOPE_WORKS_DEFENCE/*:TOTAL_QUANTITY_OR_SCOPE)">
-					<xsl:apply-templates select="*:QUANTITY_SCOPE_WORKS_DEFENCE/*:TOTAL_QUANTITY_OR_SCOPE"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but TOTAL_QUANTITY_OR_SCOPE does not contained text in TED XML. -->
-					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but TOTAL_QUANTITY_OR_SCOPE does not contained text in TED XML.</xsl:variable>
-					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:if>
-
-		<xsl:if test="fn:local-name(.)='LOT_PRIOR_INFORMATION'">
-			<xsl:choose>
-				<xsl:when test="fn:normalize-space(*:LOT_DESCRIPTION) or fn:normalize-space(*:NATURE_QUANTITY_SCOPE/*:TOTAL_QUANTITY_OR_SCOPE)">
-					<xsl:apply-templates select="(*:LOT_DESCRIPTION|*:NATURE_QUANTITY_SCOPE/*:TOTAL_QUANTITY_OR_SCOPE)"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<!-- WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML. -->
-					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML.</xsl:variable>
-					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:if>
-
-
+		
+		<xsl:call-template name="lot-description"/>
+		
 		<!-- Main Nature (BT-23): eForms documentation cardinality (Lot) = 1 | Optional for ALL Notice subtypes Equivalent element TYPE_CONTRACT in TED does not exist in OBJ_DESCR, so use TYPE_CONTRACT in OBJECT_CONTRACT parent -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Main Nature (BT-23)'"/></xsl:call-template>
 		<xsl:apply-templates select="(../../../..|.)/*:TYPE_CONTRACT_PLACE_DELIVERY_DEFENCE/*:TYPE_CONTRACT_PI_DEFENCE/*:TYPE_CONTRACT"/>
@@ -1110,6 +1083,94 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 		<xsl:call-template name="contract-extension"/>
 	</cac:ProcurementProject>
 </xsl:template>
+
+
+<xsl:template name="lot-description">
+	<!-- Description (BT-24): eForms documentation cardinality (Lot) = 1 | Mandatory for ALL Notice subtypes -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Description (BT-24)'"/></xsl:call-template>
+	<xsl:choose>
+		<xsl:when test="$multiple-lots">
+			<xsl:variable name="lot-description" select="fn:normalize-space(fn:string-join(*:LOT_DESCRIPTION/*, ' '))"/>
+			<xsl:variable name="total-quantity-or-scope" select="fn:normalize-space(fn:string-join(*/*:TOTAL_QUANTITY_OR_SCOPE/*, ' '))"/>
+			<xsl:choose>
+				<xsl:when test="($lot-description ne '') or ($total-quantity-or-scope ne '')">
+					<xsl:choose>
+						<xsl:when test="$ted-form-additional-elements">
+							<xsl:variable name="lot-description-relative-path" select="fn:substring-after(functx:path-to-node-with-pos(*:LOT_DESCRIPTION), fn:concat($ted-form-element-xpath, '/'))"/>
+							<xsl:variable name="total-quantity-or-scope-relative-path" select="fn:substring-after(functx:path-to-node-with-pos(*/*:TOTAL_QUANTITY_OR_SCOPE), fn:concat($ted-form-element-xpath, '/'))"/>
+							<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
+								<xsl:variable name="form-element" select="."/>
+								<xsl:variable name="ted-language" select="fn:string(@LG)"/>
+								<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
+								<xsl:variable name="lot-description-lang" as="xs:string">
+									<xsl:if test="$lot-description">
+										<xsl:variable name="parent">
+											<xsl:call-template name="find-element">
+												<xsl:with-param name="context" select="$form-element"/>
+												<xsl:with-param name="relative-context" select="$lot-description-relative-path"/>
+											</xsl:call-template>
+										</xsl:variable>
+										<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
+									</xsl:if>
+								</xsl:variable>
+								<xsl:variable name="total-quantity-or-scope-lang">
+									<xsl:if test="$total-quantity-or-scope">
+										<xsl:variable name="parent">
+											<xsl:call-template name="find-element">
+												<xsl:with-param name="context" select="$form-element"/>
+												<xsl:with-param name="relative-context" select="$total-quantity-or-scope-relative-path"/>
+											</xsl:call-template>
+										</xsl:variable>
+										<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*, ' '))"/>
+									</xsl:if>
+								</xsl:variable>
+								<xsl:variable name="text">
+									<xsl:value-of select="$lot-description-lang"/>
+									<xsl:if test="$total-quantity-or-scope-lang ne ''">
+										<xsl:if test="$lot-description-lang"><xsl:text> </xsl:text></xsl:if>
+										<xsl:value-of select="$total-quantity-or-scope-lang"/>
+									</xsl:if>
+								</xsl:variable>
+								<xsl:if test="$text ne ''">
+									<cbc:Description languageID="{$language}"><xsl:value-of select="$text"/></cbc:Description>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:variable name="text">
+								<xsl:value-of select="$lot-description"/>
+								<xsl:if test="$total-quantity-or-scope">
+									<xsl:if test="$lot-description"><xsl:text> </xsl:text></xsl:if>
+									<xsl:value-of select="$total-quantity-or-scope"/>
+								</xsl:if>
+							</xsl:variable>
+							<xsl:if test="$text ne ''">
+								<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$text"/></cbc:Description>
+							</xsl:if>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but neither LOT_DESCRIPTION nor TOTAL_QUANTITY_OR_SCOPE contained text in TED XML.</xsl:variable>
+					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:variable name="total-quantity-or-scope" select="fn:normalize-space(fn:string-join(*/(.|*)/*:TOTAL_QUANTITY_OR_SCOPE/*, ' '))"/>
+			<xsl:choose>
+				<xsl:when test="($total-quantity-or-scope ne '')">
+					<cbc:Description languageID="{$eforms-first-language}"><xsl:value-of select="$total-quantity-or-scope"/></cbc:Description>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:variable name="message">WARNING: Description (BT-24) is Mandatory for all eForms subtypes but TOTAL_QUANTITY_OR_SCOPE does not contained text in TED XML.</xsl:variable>
+					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:template>
+
 
 <xsl:template name="place-performance-lot">
 	<!-- Place of Performance Additional Information (BT-728) -->

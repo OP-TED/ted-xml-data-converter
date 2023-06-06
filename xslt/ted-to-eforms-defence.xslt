@@ -378,7 +378,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
 		<xsl:apply-templates select="$ted-form-object-element/(.|*)/*:CPV/*:CPV_ADDITIONAL"/>
 
-		<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
 		<xsl:call-template name="place-performance-procedure"/>
 	</cac:ProcurementProject>
 </xsl:template>
@@ -407,11 +406,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 -->
 
 	<xsl:choose>
-		<xsl:when test="$ted-form-object-element/*:QUANTITY_SCOPE_WORKS_DEFENCE/*:F16_DIVISION_INTO_LOTS/*:F16_DIV_INTO_LOT_YES">
-			<xsl:apply-templates select="//*:F16_DIV_INTO_LOT_YES/*:LOT_PRIOR_INFORMATION"/>
+		<xsl:when test="$multiple-lots">
+			<xsl:for-each select="$multiple-lots">
+				<xsl:call-template name="lot"/>
+			</xsl:for-each>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:apply-templates select="*:FD_PRIOR_INFORMATION_DEFENCE/*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION"/>
+			<xsl:for-each select="$ted-form-object-element">
+				<xsl:call-template name="lot"/>
+			</xsl:for-each>
 		</xsl:otherwise>
 	</xsl:choose>
 

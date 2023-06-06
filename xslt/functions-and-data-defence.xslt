@@ -129,29 +129,31 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 		<xsl:otherwise><xsl:value-of select="'UNKNOWN'"/></xsl:otherwise>
 	</xsl:choose>
 </xsl:variable>
+
+<xsl:variable name="multiple-lots" select="$ted-form-object-element//(*:F01_DIV_INTO_LOT_YES|*:F01_DIV_INTO_LOT_YES|*:F02_DIV_INTO_LOT_YES|*:F04_DIV_INTO_LOT_YES|*:F05_DIV_INTO_LOT_YES|*:F16_DIV_INTO_LOT_YES|*:F17_DIV_INTO_LOT_YES)/*"/>
+
 <xsl:variable name="lots">
-	<xsl:variable name="multiple-lots" select="$ted-form-object-element//*:F16_DIV_INTO_LOT_YES/*:LOT_PRIOR_INFORMATION"/>
 	<lots>
 		<xsl:choose>
-				<xsl:when test="$multiple-lots">
-					<xsl:for-each select="$multiple-lots">
-					<lot>
-						<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
-						<path><xsl:value-of select="$path"/></path>
-						<xsl:copy-of select="."></xsl:copy-of>
-					</lot>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:for-each select="$ted-form-object-element">
-					<lot>
-						<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
-						<path><xsl:value-of select="$path"/></path>
-						<xsl:copy-of select="."></xsl:copy-of>
-					</lot>
-					</xsl:for-each>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:when test="$multiple-lots">
+				<xsl:for-each select="$multiple-lots">
+				<lot>
+					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+					<path><xsl:value-of select="$path"/></path>
+					<xsl:copy-of select="."></xsl:copy-of>
+				</lot>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="$ted-form-object-element">
+				<lot>
+					<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
+					<path><xsl:value-of select="$path"/></path>
+					<xsl:copy-of select="."></xsl:copy-of>
+				</lot>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 	</lots>
 </xsl:variable>
 <!-- Variable number-of-lots holds the number of Lots of the notice being converted -->
@@ -160,7 +162,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-2 gc n2016 n20
 <!-- Variable lot-numbers-map holds a mapping of the TED XML Lots to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
 	<lots>
-		<xsl:for-each select="$lots/lots/lot/(*:LOT_PRIOR_INFORMATION|*:OBJECT_WORKS_SUPPLIES_SERVICES_PRIOR_INFORMATION)">
+		<xsl:for-each select="$lots/lots/lot/*[not(self::path)]">
 			<lot>
 				<xsl:variable name="lot-no"><xsl:value-of select="*:LOT_NUMBER"/></xsl:variable>
 				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
