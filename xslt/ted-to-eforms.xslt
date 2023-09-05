@@ -84,14 +84,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:template match="*[@CATEGORY='ORIGINAL']">
 
-	<!-- NOTE: all eForms dates and times should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
-	<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
-	<!-- Therefore for complete accuracy, a mapping of country codes to UTC timezone offsets would be required -->
-	<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
-
-	<xsl:variable name="message">WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 </xsl:variable>
-	<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-
 	<!-- root element of output XML -->
 	<xsl:element name="{$eforms-element-name}" namespace="{$eforms-xmlns}">
 		<xsl:namespace name="cac" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'"/>
@@ -101,6 +93,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:namespace name="efbc" select="'http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1'"/>
 		<xsl:namespace name="efext" select="'http://data.europa.eu/p27/eforms-ubl-extensions/1'"/>
 		<xsl:namespace name="ccts" select="'urn:un:unece:uncefact:documentation:2'"/>
+
+		<!-- NOTE: all eForms dates and times should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
+		<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
+		<!-- Therefore for complete accuracy, a mapping of country codes to UTC timezone offsets would be required -->
+		<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
+	
+		<xsl:variable name="message">WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 </xsl:variable>
+		<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+	
 		<xsl:call-template name="root-extensions"/>
 		<xsl:call-template name="notice-information"/>
 		<xsl:call-template name="contracting-party"/>
