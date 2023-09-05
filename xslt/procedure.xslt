@@ -94,7 +94,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:template match="*:NOTICE_NUMBER_OJ">
 	<xsl:variable name="text" select="fn:normalize-space(.)"/>
 	<cac:NoticeDocumentReference>
-		<cbc:ID schemeName="ojs-notice-id"><xsl:value-of select="$text"/></cbc:ID>
+		<cbc:ID schemeName="ojs-notice-id"><xsl:value-of select="concat(concat(format-number(number(tokenize($text, '-')[2]), '00000000'), '-'), substring($text, 1, 4))"/></cbc:ID>
 	</cac:NoticeDocumentReference>
 </xsl:template>
 

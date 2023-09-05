@@ -335,13 +335,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<!-- PIN Competition Termination (BT-756): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
 		<xsl:call-template name="pin-competition-termination"/>
 
-		<!-- Previous Planning Identifier (BT-125): eForms documentation cardinality (Procedure) = - | Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Planning Identifier (BT-125)'"/></xsl:call-template>
-		<!-- TBD: Discussion about methods of linking to previous notices is ongoing. This mapping/conversion may change. -->
-		<!-- TBD: When the notice linked to is of type PIN Only, BT-125 and BT-1251 should be specified at Lot level, not at notice level. -->
-
-		<xsl:apply-templates select="*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
-
+		<!-- Previous Notice Identifier (OPP-090): Used for linking notices where no other linking mechanism is available -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Notice Identifier (OPP-090)'"/></xsl:call-template>
+		<xsl:if test="$eforms-form-type != 'competition'">
+			<xsl:apply-templates select="*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
+		</xsl:if>
 		<!-- Procedure Accelerated (BT-106): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<!-- Procedure Accelerated Justification (BT-1351): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:apply-templates select="*:PROCEDURE/*:ACCELERATED_PROC"/>
