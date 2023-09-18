@@ -126,8 +126,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
-					<xsl:if test="$eforms-document-type eq 'CAN'">
-					</xsl:if>
 					<xsl:if test="$ted-form-notice-type eq '14'">
 						<xsl:call-template name="changes"/>
 					</xsl:if>
@@ -223,14 +221,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<cbc:RegulatoryDomain><xsl:value-of select="$legal-basis"/></cbc:RegulatoryDomain>
 	<!-- Form Type (BT-03) and Notice Type (BT-02): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Form Type (BT-03) and Notice Type (BT-02)'"/></xsl:call-template>
-	<!-- TBD: hard-coded for now; to use tailored codelists -->
 	<cbc:NoticeTypeCode listName="{$eforms-form-type}"><xsl:value-of select="$eforms-notice-type"/></cbc:NoticeTypeCode>
 	<!-- Notice Official Language (BT-702) (first): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Official Language (BT-702) (first)'"/></xsl:call-template>
 	<cbc:NoticeLanguageCode><xsl:value-of select="$eforms-first-language"/></cbc:NoticeLanguageCode>
-	<xsl:for-each select="$ted-form-additional-languages">
 	<!-- Notice Official Language (BT-702) (additional): eForms documentation cardinality (Procedure) = * | Optional for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Official Language (BT-702) (additional)'"/></xsl:call-template>
+	<xsl:for-each select="$ted-form-additional-languages">
 		<cac:AdditionalNoticeLanguage>
 			<cbc:ID><xsl:value-of select="opfun:get-eforms-language(.)"/></cbc:ID>
 		</cac:AdditionalNoticeLanguage>
@@ -254,12 +251,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
 		<!-- OJEU Identifier (OPP-011): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'OJEU Identifier (OPP-011)'"/></xsl:call-template>
-		<!-- TBD: hard-coded for now -->
-		<efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+		<efbc:GazetteID schemeName="ojs-id"><xsl:value-of select="fn:concat($ojs, '/', substring($pubdate, 1,4))"/></efbc:GazetteID>
 		<!-- OJEU Publication Date (OPP-012): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'OJEU Publication Date (OPP-012)'"/></xsl:call-template>
-		<!-- TBD: hard-coded for now -->
-		<efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+		<!-- Assume CET time zone -->
+		<efbc:PublicationDate><xsl:value-of select="fn:concat(substring($pubdate, 1,4),'-', substring($pubdate, 5,2), '-', substring($pubdate, 7,2))"/><xsl:text>+01:00</xsl:text></efbc:PublicationDate>
 	</efac:Publication>
 </xsl:template>
 
@@ -397,23 +393,26 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:apply-templates select="*:OBJECT_CONTRACT/*:CPV_MAIN"/>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML at Procedure level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
-
-		<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
-		<!-- Place of Performance Additional Information (BT-728) -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
-		<!-- Place Performance City (BT-5131): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance City (BT-5131)'"/></xsl:call-template>
-		<!-- Place Performance Post Code (BT-5121): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Post Code (BT-5121)'"/></xsl:call-template>
-		<!-- Place Performance Country Subdivision (BT-5071): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Subdivision (BT-5071)'"/></xsl:call-template>
-		<!-- Place Performance Services Other (BT-727): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Services Other (BT-727)'"/></xsl:call-template>
-		<!-- Place Performance Street (BT-5101): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
-		<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
+		<xsl:call-template name="place-performance-procedure"/>
 	</cac:ProcurementProject>
+</xsl:template>
+
+<xsl:template name="place-performance-procedure">
+	<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
+	<!-- Place of Performance Additional Information (BT-728) -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
+	<!-- Place Performance City (BT-5131): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance City (BT-5131)'"/></xsl:call-template>
+	<!-- Place Performance Post Code (BT-5121): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Post Code (BT-5121)'"/></xsl:call-template>
+	<!-- Place Performance Country Subdivision (BT-5071): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Subdivision (BT-5071)'"/></xsl:call-template>
+	<!-- Place Performance Services Other (BT-727): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Services Other (BT-727)'"/></xsl:call-template>
+	<!-- Place Performance Street (BT-5101): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
+	<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
 </xsl:template>
 
 <!-- end of Procedure-level templates for Procurement Project -->
@@ -427,6 +426,5 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' multiple cac:ProcurementProjectLot '"/></xsl:call-template>
 	<xsl:apply-templates select="*:OBJECT_CONTRACT/*:OBJECT_DESCR"/>
 </xsl:template>
-
 
 </xsl:stylesheet>

@@ -52,6 +52,10 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:variable name="ted-notice-namespace" select="/*/fn:namespace-uri()"/>
 
+<!-- Variable ojs holds the OJS number  -->
+<xsl:variable name="ojs" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:REF_OJS/fn:string(*:NO_OJ)"/>
+<!-- Variable pubdate holds the publication date  -->
+<xsl:variable name="pubdate" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:REF_OJS/fn:string(*:DATE_PUB)"/>
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
@@ -70,7 +74,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:variable name="ted-form-element-xpath" select="functx:path-to-node-with-pos($ted-form-main-element)"/>
 <!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element -->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(*:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
-<!-- Variable document-code holds the value of the @TYPE attribute of the NOTICE element -->
+<!-- Variable document-code holds the value of the @CODE attribute of the TD_DOCUMENT_TYPE element -->
 <xsl:variable name="document-code" select="/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
@@ -209,7 +213,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:sequence select="fn:string-length($nuts-code) &gt; 4"/>
 </xsl:function>
 
-<!-- FORM SUBTYPE -->
+<!-- FORM TYPES AND SUBTYPES -->
 
 <!-- Function opfun:get-eforms-notice-subtype computes the eForms notice subtype, using information from the TED notice -->
 <xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">

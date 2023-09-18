@@ -586,6 +586,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</cac:PostAwardProcess>
 	</xsl:if>
 </xsl:template>
+
+
 <!-- end of Lot Tendering Terms templates -->
 
 
@@ -1010,6 +1012,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</cac:ContractingSystem>
 	</xsl:if>
 </xsl:template>
+
 <!-- end of Lot Tendering Process templates -->
 
 
