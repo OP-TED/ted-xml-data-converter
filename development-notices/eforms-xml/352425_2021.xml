@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
                       xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                       xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,7 +6,7 @@
                       xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                       xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                       xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -234,9 +233,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">133/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2021-07-13+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -266,91 +265,69 @@
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DAN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DEU</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SPA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FIN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FRA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ELL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ITA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>NLD</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POR</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SWE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>CES</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>EST</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HUN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LIT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LAV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>MLT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLK</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>GLE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>BUL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>RON</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HRV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
@@ -397,7 +374,7 @@
       <cbc:ProcedureCode listName="procurement-procedure-type">neg-wo-call</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Notice Identifier (OPP-090)-->
       <cac:ProcessJustification><!--Direct Award Justification (BT-136)-->
          <cbc:ProcessReasonCode listName="direct-award-justification">technical</cbc:ProcessReasonCode>
          <!--Direct Award Justification (BT-135)-->
@@ -484,7 +461,30 @@
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
-      <cbc:Note languageID="ENG">This notice is published in accordance with point 2.4(a) of Annex I to Regulation (EU, Euratom) No 2018/1046 of 18 July 2018 on the financial rules applicable to the general budget of the Union. The date indicated in Section V.2.1) of this notice is the date of the award decision – no contract has been signed at the time of publication. The contracting authority shall not sign the contract with the successful tenderer until 10 calendar days have elapsed, running from the day after the notice has been published.</cbc:Note>
+      <cbc:Note languageID="ENG">This notice is published in accordance with point 2.4(a) of Annex I to Regulation (EU, Euratom) No 2018/1046 of 18 July 2018 on the financial rules applicable to the general budget of the Union. The date indicated in Section V.2.1) of this notice is the date of the award decision – no contract has been signed at the time of publication. The contracting authority shall not sign the contract with the successful tenderer until 10 calendar days have elapsed, running from the day after the notice has been published. Information about national procedures is available at: </cbc:Note>
+      <cbc:Note languageID="DAN">Denne bekendtgørelse offentliggøres i overensstemmelse med punkt 2.4, litra a), i bilag I til forordning (EU, Euratom) nr. 2018/1046 af 18. juli 2018 om de finansielle regler vedrørende Unionens almindelige budget. Den dato, der er anført i punkt V.2.1) i denne bekendtgørelse, er datoen for beslutningen om tildeling — ingen kontrakt blev underskrevet på tidspunktet for offentliggørelsen. Den ordregivende myndighed indgår først kontrakten med den valgte tilbudsgiver efter 10 kalenderdage at regne fra dagen efter, bekendtgørelsen er blevet offentliggjort. Oplysninger om nationale udbud er tilgængelig på: </cbc:Note>
+      <cbc:Note languageID="DEU">Diese Bekanntmachung wird in Übereinstimmung mit Ziffer 2.4 (a) des Anhangs I der Verordnung (EU, EURATOM) Nr. 2018/1046 vom 18.7.2018 über die Finanzvorschriften für den Gesamthaushaltsplan der Union veröffentlicht. Bei dem in Abschnitt V.2.1) dieser Bekanntmachung angegebenen Datum handelt es sich um das Datum der Zuschlagsentscheidung — zum Zeitpunkt der Veröffentlichung wurde noch kein Vertrag unterzeichnet. Der öffentliche Auftraggeber darf erst nach Ablauf von 10 Kalendertagen ab dem Tag nach der Veröffentlichung der Bekanntmachung einen Vertrag mit dem erfolgreichen Bieter unterzeichnen. Angaben zu nationalen Verfahren sind erhältlich unter: </cbc:Note>
+      <cbc:Note languageID="SPA">El presente anuncio se publica de conformidad con el punto 2.4, letra a) del anexo I del Reglamento (UE, Euratom) n.º 2018/1046 de 18 de julio de 2018 sobre las normas financieras aplicables al presupuesto general de la Unión. La fecha indicada en el apartado V.2.1) del presente anuncio es la fecha de la decisión de adjudicación; no se ha firmado ningún contrato hasta el momento de la publicación. El órgano de contratación no deberá firmar el contrato con el adjudicatario hasta que hayan transcurrido 10 días naturales, a partir del día después de la publicación del anuncio. La información sobre los procedimientos a nivel nacional se encuentra disponible en: </cbc:Note>
+      <cbc:Note languageID="FIN">Tämä ilmoitus on julkaistu unionin yleiseen talousarvioon sovellettavista varainhoitosäännöistä 18.7.2018 annetun asetuksen (EU, Euratom) 2018/1046 liitteessä I olevan 2.4 kohdan a alakohdan mukaisesti. Tämän ilmoituksen kohdassa V.2.1) ilmoitettu päivä on sopimuksentekopäätöksen päivä – sopimusta ei ole allekirjoitettu julkaisuhetkellä. Hankintaviranomainen ei allekirjoita sopimusta valitun tarjoajan kanssa ennen kuin 10 kalenteripäivää on kulunut sen päivän jälkeisestä päivästä, jona kyseinen ilmoitus on julkaistu. Tietoa kansallisista menettelyistä on saatavilla: </cbc:Note>
+      <cbc:Note languageID="FRA">Cet avis est publié conformément au point 2.4(a) de l’annexe I du règlement (UE, Euratom) n° 2018/1046 du 18 juillet 2018 sur la réglementation financière applicable au budget général de l’Union. La date indiquée à la section V.2.1) du présent avis est la date de la décision d'attribution — aucun contrat n'a été signé au moment de la publication. Le pouvoir adjudicateur ne procède à la signature du contrat avec le soumissionnaire retenu qu'au terme d'une période de 10 jours de calendrier à compter du lendemain de la publication de l'avis. Des informations sur les procédures nationales sont disponibles sur: </cbc:Note>
+      <cbc:Note languageID="ELL">Αυτή η προκήρυξη δημοσιεύεται σύμφωνα με το σημείο 2.4 (α) του παραρτήματος Ι του κατ’ εξουσιοδότηση κανονισμού (ΕΕ Ευρατόμ) αριθ. 2018/1046 της 18ης Ιουλίου 2018, σχετικά με τους κανόνες που εφαρμόζονται στο γενικό προϋπολογισμό της Ένωσης. Η ημερομηνία που ορίζεται στο τμήμα V.2.1) της παρούσας προκήρυξης είναι η ημερομηνία της απόφασης ανάθεσης – τη στιγμή της δημοσίευσης ουδεμία σύμβαση έχει υπογραφεί. Η αναθέτουσα αρχή δεν θα υπογράψει τη σύμβαση με τον επιτυχόντα υποψήφιο προτού παρέλθουν 10 ημερολογιακές ημέρες, αρχής γενομένης από την επομένη της δημοσίευσης της γνωστοποίησης. Πληροφορίες για τις εθνικές διαδικασίες διατίθενται από: </cbc:Note>
+      <cbc:Note languageID="ITA">Il presente avviso è pubblicato conformemente al punto 2.4, lettera a) dell'allegato I del regolamento (UE, Euratom) n. 2018/1046, del 18 luglio 2018, che stabilisce le regole finanziarie applicabili al bilancio generale dell'Unione. La data indicata alla sezione V.2.1) del presente avviso è la data della decisione di aggiudicazione — nessun contratto è stato firmato al momento della pubblicazione. L'ente appaltante firmerà il contratto con l'aggiudicatario soltanto dopo che siano decorsi 10 giorni di calendario a partire dal giorno successivo alla pubblicazione dell'avviso. Le informazioni relative alle procedure nazionali sono disponibili all'indirizzo: </cbc:Note>
+      <cbc:Note languageID="NLD">Deze aankondiging wordt bekendgemaakt in overeenstemming met punt 2.4 (a) van bijlage I bij Verordening (EU, Euratom) nr. 2018/1046 van 18.7.2018 over de financiële regels die van toepassing zijn op de algemene begroting van de Unie. De datum vermeld in sectie V.2.1) van deze aankondiging is de datum van het gunningsbesluit — er is geen contract ondertekend op de datum van bekendmaking. De aanbestedende dienst ondertekent het contract met de geselecteerde inschrijver pas nadat 10 kalenderdagen zijn verstreken vanaf de dag na de bekendmaking van de aankondiging. Inlichtingen over nationale procedures zijn beschikbaar op: </cbc:Note>
+      <cbc:Note languageID="POR">Este anúncio é publicado de acordo com o ponto 2.4, alínea a) do Anexo I do Regulamento (UE, Euratom) N.º 2018/1046 de 18 de julho de 2018 sobre as normas financeiras aplicáveis ao orçamento geral da União. A data indicada no ponto V.2.1) do presente anúncio corresponde à data da decisão de adjudicação — à data da publicação não tinha sido celebrado qualquer contrato. A entidade adjudicante não celebrará o contrato com o proponente selecionado antes de decorrido um prazo de 10 dias de calendário, a contar do dia seguinte à publicação do anúncio. A informação relativa aos concursos nacionais está disponível em: </cbc:Note>
+      <cbc:Note languageID="SWE">Detta meddelande publiceras enligt punkt 2.4 a) i bilaga I till förordning (EU, Euratom) nr 2018/1046 av den 18 juli 2018 om finansiella regler för unionens allmänna budget. Det datum som anges i avsnitt V.2.1) i detta meddelande är datumet för tilldelningsbeslutet. Inget kontrakt har undertecknats vid tidpunkten för publikation. Den upphandlande myndigheten får inte underteckna ett kontrakt med den vinnande anbudsgivare förrän 10 kalenderdagar har förflutit, räknat från dagen efter att meddelandet har publicerats. Information om nationella förfaranden finns på: </cbc:Note>
+      <cbc:Note languageID="CES">Toto oznámení je zveřejněno v souladu s bodem 2.4 písm. a) přílohy I nařízení (EU, Euratom) 2018/1046 ze dne 18. července 2018, kterým se stanoví finanční pravidla pro souhrnný rozpočet Unie. Datum uvedené v oddílu V.2.1) tohoto oznámení je datem rozhodnutí o zadání zakázky – při uveřejnění nebyla podepsána žádná smlouva. Veřejný zadavatel nepodepíše smlouvu s úspěšným uchazečem, dokud neuplyne doba 10 kalendářních dnů ode dne po zveřejnění oznámení. Informace o národních řízeních jsou k dispozici na: </cbc:Note>
+      <cbc:Note languageID="EST">Käesolev teade on avaldatud kooskõlas liidu üldeelarve suhtes kohaldatavaid finantsreegleid käsitleva 18. juuli 2018 määruse (EL, Euratom) 2018/1046 I lisa punkti 2.4 punktiga a. Selle teate jaotises V.2.1) esitatud kuupäev on lepingu sõlmimise otsuse kuupäev – avaldamise ajal ei ole ühtegi lepingut sõlmitud. Avaliku sektori hankija ei kirjuta eduka pakkujaga lepingule alla enne 10 kalendripäeva möödumist lepingu sõlmimise teate avaldamisele järgnevast päevast. Teave riiklike menetluste kohta on avaldatud aadressil: </cbc:Note>
+      <cbc:Note languageID="HUN">A hirdetményt az Unió általános költségvetésére alkalmazandó pénzügyi szabályokról szóló (EU, Euratom) 2018/1046 rendelet (2018. július 18.) I. melléklete 2.4. cikke (a) bekezdésével összhangban tették közzé. A hirdetmény V.2.1) szakaszában megadott időpont az odaítélési határozat időpontja – a közzététel időpontjáig nem került sor szerződés aláírására. Az ajánlatkérő a hirdetmény közzétételétől számított 10 naptári nap elteltével írhatja alá a szerződést a sikeres pályázóval. A nemzeti eljárásokról a következő helyen található információ: </cbc:Note>
+      <cbc:Note languageID="LIT">Šis skelbimas publikuojamas vadovaujantis 2018 m. liepos 18 d. Reglamento (ES, Euratomas) Nr. 2018/1046 I priedo 2.4 punkto a) papunkčiu dėl finansinių taisyklių, taikomų Sąjungos bendram biudžetui. V.2.1) dalyje nurodyta šio skelbimo data yra sutarties paskyrimo data – paskelbimo metu jokia sutartis pasirašyta nebuvo. Perkančioji organizacija nepasirašo sutarties su konkursą laimėjusiu dalyviu, kol nepraeina 10 kalendorinių dienų nuo dienos, kai buvo paskelbtas skelbimas. Informacija apie nacionalines procedūras pateikiama: </cbc:Note>
+      <cbc:Note languageID="LAV">Šis paziņojums ir publicēts saskaņā ar Regulas (ES, Euratom) 2018/1046 (2018. gada 18. jūlijs) par finanšu noteikumiem, ko piemēro Savienības vispārējam budžetam, I pielikuma 2.4. punkta a) apakšpunktu. Šā paziņojuma V.2.1) iedaļā norādītais datums ir piešķiršanas lēmuma datums; publicēšanas brīdī līgums vēl nav noslēgts. Līgumslēdzēja iestāde nedrīkst noslēgt līgumu ar izraudzīto pretendentu, kamēr nebūs pagājušas 10 kalendārās dienas no nākamās dienas pēc paziņojuma publicēšanas. Informācija par valsts procedūrām ir pieejama šeit: </cbc:Note>
+      <cbc:Note languageID="MLT">Dan l-avviż huwa ppubblikat skont il-punt 2.4(a) tal-Anness I għar-Regolament (UE, Euratom) Nru 2018/1046 tat-18 ta’ Lulju 2018 dwar ir-regoli finanzjarji applikabbli għall-baġit ġenerali tal-Unjoni. Id-data indikata fit-Taqsima V.2.1) ta' dan l-avviż hija d-data tad-deċiżjoni tal-għoti – l-ebda kuntratt ma kien iffirmat fil-ħin tal-pubblikazzjoni. L-awtorità li qiegħda toħroġ il-kuntratt m'għandhiex tiffirma l-kuntratt ma' dak li jirbaħ l-offerta sakemm jgħaddu 10 ijiem kalendarji, li jibdew mill-jum wara li jkun ġie ppubblikat l-avviż. Informazzjoni dwar proċeduri nazzjonali hija disponibbli fuq: </cbc:Note>
+      <cbc:Note languageID="POL">Niniejsze zawiadomienie jest publikowane zgodnie z pkt 2.4 lit. a) załącznika I do rozporządzenia (UE, Euratom) nr 2018/1046 z 18 lipca 2018 r. w sprawie przepisów finansowych mających zastosowanie do budżetu ogólnego Unii. Data wskazana w sekcji V.2.1) niniejszego ogłoszenia to data decyzji o udzieleniu zamówienia – w chwili publikacji nie była podpisana umowa. Instytucja zamawiająca nie zawrze umowy z wybranym wykonawcą przed upływem terminu 10 dni kalendarzowych, rozpoczynającego bieg od dnia następującego po publikacji ogłoszenia. Informacje o krajowych procedurach można znaleźć pod adresem: </cbc:Note>
+      <cbc:Note languageID="SLK">Toto oznámenie sa uverejňuje v súlade s bodom 2.4 písm. a) prílohy I k nariadeniu (EÚ, EURATOM) č. 2018/1046 z 18. júla 2018 o rozpočtových pravidlách, ktoré sa vzťahujú na všeobecný rozpočet Únie. Dátum uvedený v oddiele V.2.1) tohto oznámenia je dátumom rozhodnutia o pridelení obstarávania – v čase uverejnenia nebola podpísaná žiadna zmluva. Verejný obstarávateľ nepodpíše zmluvu s úspešným uchádzačom do uplynutia 10 kalendárnych dní odo dňa po uverejnení tohto oznámenia. Informácie o vnútroštátnych postupoch sú k dispozícii na: </cbc:Note>
+      <cbc:Note languageID="SLV">To obvestilo je objavljeno v skladu s točko 2.4(a) Priloge I k Uredbi (EU, Euratom) 2018/1046 Evropskega parlamenta in Sveta z dne 18. julija 2018 o finančnih pravilih, ki se uporabljajo za splošni proračun Unije. Datum, naveden v oddelku V.2.1) tega obvestila, je datum sklepa o oddaji naročila – ob času objave še ni bila sklenjena nobena pogodba. Naročnik ne bo sklenil pogodbe z izbranim ponudnikom, dokler ne preteče 10 koledarskih dni, ki začnejo teči z dnem po objavi obvestila. Informacije o nacionalnih postopkih so na voljo na: </cbc:Note>
+      <cbc:Note languageID="GLE">Foilsítear an fógra seo i gcomhréir le pointe 2.4(a) a ghabhann le hIarscríbhinn I le Rialachán (AE, EURATOM) Uimh. 2018/1046 an 18.7.2018 maidir leis na rialacha airgeadais is infheidhme ar bhuiséad ginearálta an Aontais. Is ionann an dáta atá léirithe in Alt V.2.1) den fhógra seo agus dáta chinneadh na dámhachtana – níor síníodh aon chonradh ag am an fhoilsithe. Ní dhéanfaidh an t-údarás conarthach an conradh a shíniú leis an tairgeoir rathúil go dtí go mbeidh 10 lá féilire caite, ag rith ón lá tar éis fhoilsiú an fhógra. Tá faisnéis maidir le nósanna imeachta náisiúnta ar fáil ag: </cbc:Note>
+      <cbc:Note languageID="BUL">Настоящото обявление е публикувано в съответствие с точка 2.4, буква а) от приложение I към Регламент (ЕС, Евратом) 2018/1046 от 18 юли 2018 г. за финансовите правила, приложими за общия бюджет на Съюза. Датата, посочена в раздел V.2.1) на настоящото обявление, е датата на решението за възлагане — по време на публикуването не беше подписан нито един договор. Възлагащият орган няма да подпише договора с одобрения оферент преди изтичането на 10 календарни дни, считано от деня след публикуването на обявлението. Информация относно национални процедури, налични на: </cbc:Note>
+      <cbc:Note languageID="RON">Prezentul anunț este publicat în conformitate cu punctul 2.4 litera (a) din anexa I la Regulamentul (UE, EURATOM) nr. 2018/1046 din 18 iulie 2018 privind normele financiare aplicabile bugetului general al Uniunii. Data indicată în secțiunea V.2.1) din acest anunț este data deciziei de atribuire – nu a fost semnat niciun contract la data publicării. Autoritatea contractantă nu va semna contractul cu ofertantul câștigător decât după trecerea a 10 zile calendaristice, începând din ziua ulterioară publicării anunțului. Informaţii privind procedurile naţionale sunt disponibile la: </cbc:Note>
+      <cbc:Note languageID="HRV">Ova je obavijest objavljena u skladu s točkom 2.4 (a) Priloga I. Uredbe (EU, Euratom) br. 2018/1046 od 18. srpnja 2018. o financijskim pravilima koja se primjenjuju na opći proračun Unije. Datum naveden u odjeljku V.2.1) ove obavijesti datum je odluke o sklapanju ugovora — nikakav ugovor nije potpisan u vrijeme objavljivanja. Javni naručitelj neće potpisati ugovor s uspješnim ponuditeljem prije isteka 10 kalendarskih dana, s početkom od dana nakon objave obavijesti. Podaci o nacionalnim postupcima dostupni su na: </cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>

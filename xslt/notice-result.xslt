@@ -15,15 +15,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 
-<!-- Create XML structure to hold all the TED CONTRACTORS elements, with the XPath for each -->
+<!-- Create XML structure to hold all the TED CONTRACTOR elements, with the XPath for each -->
 <xsl:variable name="ted-contractor-groups" as="element()">
 	<ted-contractor-groups>
-		<xsl:for-each select="$ted-form-main-element/*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:CONTRACTORS">
+		<xsl:for-each select="$ted-form-main-element/(*:AWARD_CONTRACT/(*:AWARDED_CONTRACT/*:CONTRACTORS|*:AWARDED_CONTRACT[*:CONTRACTOR])|*:RESULTS/*:AWARDED_PRIZE/(.|*:WINNERS)/*:WINNER)">
 			<ted-contractor-group>
 				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 				<path><xsl:value-of select="$path"/></path>
 				<contractor-group>
-					<xsl:for-each select="*:CONTRACTOR">
+					<xsl:for-each select="*:CONTRACTOR|.[self::*:WINNER]">
 						<xsl:variable name="contractor-path" select="functx:path-to-node-with-pos(.)"/>
 						<xsl:variable name="orgid" select="$ted-addresses-unique-with-id//ted-org/path[fn:starts-with(.,$contractor-path)]/fn:string(../orgid)"/>
 						<ted-contractor><xsl:value-of select="$orgid"/></ted-contractor>
@@ -86,9 +86,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <!-- Create XML structure to hold the unique tenders in TED XML. Tenders are only relevant in TED XML where element AWARDED_CONTRACT is present -->
 <xsl:variable name="lot-tenders-unique-with-id" as="element()">
 	<lot-tenders>
-		<xsl:for-each select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT]">
+		<xsl:for-each select="$ted-form-main-element/(*:AWARD_CONTRACT[*:AWARDED_CONTRACT]|*:RESULTS/*:AWARDED_PRIZE/(.|*:WINNERS)/*:WINNER)">
 			<!-- The Tender Technical Identifier (OPT-321) is determined from the number of preceding AWARD_CONTRACT with AWARDED_CONTRACT -->
-			<xsl:variable name="this-tender-number" select="fn:count(./preceding-sibling::*:AWARD_CONTRACT[*:AWARDED_CONTRACT]) + 1"/>
+			<xsl:variable name="this-tender-number" select="fn:count(./preceding-sibling::*:AWARD_CONTRACT[*:AWARDED_CONTRACT]|./preceding-sibling::*:WINNER) + 1"/>
 			<lot-tender>
 				<xsl:variable name="typepos" select="functx:pad-integer-to-length(($this-tender-number), 4)"/>
 				<lot-tender-id><xsl:text>TEN-</xsl:text><xsl:value-of select="$typepos"/></lot-tender-id>
@@ -120,6 +120,17 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 				</awards>
 			</contract>
 		</xsl:for-each-group>
+		<xsl:for-each select="$ted-form-main-element/*:RESULTS/*:AWARDED_PRIZE/(.|*:WINNERS)/*:WINNER">
+			<xsl:variable name="contract-number" select="fn:count(preceding-sibling::*:WINNER) + 1"/>
+			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
+			<contract number="{$contract-number}" contract-number="{$contract-number}" award-count="'1'">
+				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
+				<awards>
+					<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+					<xsl:copy-of select="." copy-namespaces="no"/>
+				</awards>
+			</contract>
+		</xsl:for-each>
 	</contracts>
 </xsl:variable>
 
@@ -145,9 +156,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 					</lot-result>
 				</xsl:for-each-group>
 			</xsl:when>
-			<!-- Where no DPS or FRAMEWORK, create a LotResult for each AWARD_CONTRACT -->
+			<!-- Where no DPS or FRAMEWORK, create a LotResult for each AWARD_CONTRACT or RESULTS -->
 			<xsl:otherwise>
-				<xsl:for-each select="$ted-form-main-element/*:AWARD_CONTRACT">
+				<xsl:for-each select="$ted-form-main-element/(*:AWARD_CONTRACT|*:RESULTS)">
 					<xsl:variable name="lot-number" select="fn:string(*:LOT_NO)"/>
 					<xsl:variable name="award-count" select="'1'"/>
 					<xsl:variable name="this-award-number" select="fn:position()"/>
@@ -228,7 +239,7 @@ These instructions can be un-commented to show the variables
 					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 				</xsl:if>
 				<xsl:choose>
-					<xsl:when test="awards/*:AWARD_CONTRACT/*:AWARDED_CONTRACT">
+					<xsl:when test="awards/(*:AWARD_CONTRACT/*:AWARDED_CONTRACT|*:RESULTS/*:AWARDED_PRIZE)">
 						<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
 					</xsl:when>
 					<xsl:otherwise>
@@ -247,11 +258,11 @@ These instructions can be un-commented to show the variables
 				<!-- Buyer Review Requests Count (BT-635): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 				<!-- Not Awarded Reason (BT-144): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Not Awarded Reason (BT-144)'"/></xsl:call-template>
-				<xsl:apply-templates select="awards/*:AWARD_CONTRACT[1]/*:NO_AWARDED_CONTRACT/(*:PROCUREMENT_DISCONTINUED|*:PROCUREMENT_UNSUCCESSFUL)"/>
+				<xsl:apply-templates select="awards/(*:AWARD_CONTRACT[1]/*:NO_AWARDED_CONTRACT|*:RESULTS/*:NO_AWARDED_PRIZE)/(*:PROCUREMENT_DISCONTINUED|*:PROCUREMENT_UNSUCCESSFUL)"/>
 
 				<!-- Tender Identifier Reference (OPT-320): eForms documentation cardinality (LotResult) = * -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Tender Identifier Reference (OPT-320)'"/></xsl:call-template>
-				<xsl:variable name="lot-tender-ids" select="$lot-tenders-unique-with-id//lot-tender[path = $paths]/lot-tender-id/fn:string()"/>
+				<xsl:variable name="lot-tender-ids" select="$lot-tenders-unique-with-id//lot-tender[some $path in $paths satisfies fn:starts-with(path, $path)]/lot-tender-id/fn:string()"/>
 
 				<xsl:for-each select="$lot-tender-ids">
 					<efac:LotTender>
@@ -378,53 +389,53 @@ These instructions can be un-commented to show the variables
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Technical Identifier (OPT-316)'"/></xsl:call-template>
 				<cbc:ID schemeName="contract"><xsl:value-of select="contract-id"/></cbc:ID>
 				<!-- Winner Decision Date (BT-1451): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtype 36, Optional (O or EM or CM) for CAN subtypes 25-35, 37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
-				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Winner Decision Date (BT-1451)'"/></xsl:call-template>
-			<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes-->
-			<xsl:call-template name="contract-conclusion-date"/>
-			<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Title (BT-721)'"/></xsl:call-template>
-			<xsl:call-template name="settled-contract-title"/>
-
-			<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
-
-			<!-- Contract Framework Agreement (BT-768): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-35 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Framework Agreement (BT-768)'"/></xsl:call-template>
-			<xsl:if test="$ted-form-main-element/*:PROCEDURE/*:FRAMEWORK">
-				<!-- WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default. -->
-				<xsl:variable name="message">
-					<xsl:text>WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.</xsl:text>
-				</xsl:variable>
-				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-				<efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
-			</xsl:if>
-
-			<!-- Framework Notice Identifier (OPT-100): eForms documentation cardinality (SettledContract) = ? -->
-			<!-- Signatory Identifier Reference (OPT-300): eForms documentation cardinality (SettledContract) = + -->
-			<!-- Contract Identifier (BT-150): eForms documentation cardinality (SettledContract) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Identifier (BT-150)'"/></xsl:call-template>
-			<efac:ContractReference>
-				<cbc:ID><xsl:value-of select="@contract-number"/></cbc:ID>
-			</efac:ContractReference>
-
-			<!-- Assets related contract extension indicator (OPP-020): eForms documentation cardinality (SettledContract) = 1 (T02 form only) -->
-			<!-- Used asset (OPP-021): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
-			<!-- Significance (%) (OPP-022): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
-			<!-- Predominance (%) (OPP-023): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
-			<!-- Contract Tender Identifier (BT-3202): eForms documentation cardinality (SettledContract) = + | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Tender Identifier (BT-3202)'"/></xsl:call-template>
-			<xsl:for-each select="awards/path">
-				<xsl:variable name="path" select="fn:string(.)"/>
-				<efac:LotTender>
-					<xsl:variable name="lot-tender-id" select="$lot-tenders-unique-with-id//lot-tender[path = $path]/lot-tender-id"/>
-					<cbc:ID schemeName="tender"><xsl:value-of select="$lot-tender-id"/></cbc:ID>
-				</efac:LotTender>
-			</xsl:for-each>
-			<!-- Contract EU Financing Identifier (BT-5011): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
-			<!-- Contract EU Funds Programme (BT-722): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
-			<!-- Contract EU Funds Details (BT-6110): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+				<xsl:call-template name="winner-decision-date"/>
+				<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes-->
+				<xsl:call-template name="contract-conclusion-date"/>
+				<!-- Contract Title (BT-721): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Title (BT-721)'"/></xsl:call-template>
+				<xsl:call-template name="settled-contract-title"/>
+	
+				<!-- Contract URL (BT-151): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+	
+				<!-- Contract Framework Agreement (BT-768): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 29-35 and E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Framework Agreement (BT-768)'"/></xsl:call-template>
+				<xsl:if test="$ted-form-main-element/*:PROCEDURE/*:FRAMEWORK">
+					<!-- WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default. -->
+					<xsl:variable name="message">
+						<xsl:text>WARNING: source TED XML notice does not contain information for Contract Framework Agreement (BT-768). The value "true" has been used as a default.</xsl:text>
+					</xsl:variable>
+					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+					<efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+				</xsl:if>
+	
+				<!-- Framework Notice Identifier (OPT-100): eForms documentation cardinality (SettledContract) = ? -->
+				<!-- Signatory Identifier Reference (OPT-300): eForms documentation cardinality (SettledContract) = + -->
+				<!-- Contract Identifier (BT-150): eForms documentation cardinality (SettledContract) = 1 | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Identifier (BT-150)'"/></xsl:call-template>
+				<xsl:if test="$eforms-notice-subtype = ('25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '38', '39', '40')">
+					<efac:ContractReference>
+						<cbc:ID><xsl:value-of select="@contract-number"/></cbc:ID>
+					</efac:ContractReference>
+				</xsl:if>
+				<!-- Assets related contract extension indicator (OPP-020): eForms documentation cardinality (SettledContract) = 1 (T02 form only) -->
+				<!-- Used asset (OPP-021): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
+				<!-- Significance (%) (OPP-022): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
+				<!-- Predominance (%) (OPP-023): eForms documentation cardinality (SettledContract) = * (T02 form only) -->
+				<!-- Contract Tender Identifier (BT-3202): eForms documentation cardinality (SettledContract) = + | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 25-35 and E4, CM subtype E5; Optional (O or EM or CM) for CM subtypes 38-40; Forbidden (blank) for all other subtypes -->
+				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Tender Identifier (BT-3202)'"/></xsl:call-template>
+				<xsl:for-each select="awards/path">
+					<xsl:variable name="path" select="fn:string(.)"/>
+					<efac:LotTender>
+						<xsl:variable name="lot-tender-id" select="$lot-tenders-unique-with-id//lot-tender[path = $path]/lot-tender-id"/>
+						<cbc:ID schemeName="tender"><xsl:value-of select="$lot-tender-id"/></cbc:ID>
+					</efac:LotTender>
+				</xsl:for-each>
+				<!-- Contract EU Financing Identifier (BT-5011): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+				<!-- Contract EU Funds Programme (BT-722): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+				<!-- Contract EU Funds Details (BT-6110): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
 			</efac:SettledContract>
 		</xsl:for-each>
-
 
 		<!-- Tendering Parties -->
 		<xsl:for-each select="$ted-contractor-groups-unique-with-id//contractor-group">
@@ -500,6 +511,28 @@ These instructions can be un-commented to show the variables
 	</xsl:choose>
 </xsl:template>
 
+<xsl:template name="winner-decision-date">
+	<!-- Winner Decision Date (BT-1451): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtype 36, Optional (O or EM or CM) for CAN subtypes 25-35, 37 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Winner Decision Date (BT-1451)'"/></xsl:call-template>
+	<!-- Get list of unique values for DATE_DECISION_JURY for this Winner -->
+	<xsl:variable name="date-winner-decision-list" select="fn:distinct-values($ted-form-main-element/*:RESULTS/*:AWARDED_PRIZE/*:DATE_DECISION_JURY)" as="xs:string*"/>
+	<xsl:choose>
+		<xsl:when test="fn:count($date-winner-decision-list) = 1">
+			<cbc:IssueDate><xsl:value-of select="$date-winner-decision-list[1]"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
+		</xsl:when>
+		<xsl:when test="fn:count($date-winner-decision-list) &gt; 1">
+			<!-- WARNING: Multiple different dates were found in DATE_DECISION_JURY in the AWARDED_PRIZEs in the TED notice -->
+			<xsl:variable name="message">
+				<xsl:text>WARNING: Multiple different dates were found in DATE_DECISION_JURY in the AWARDED_PRIZEs in the TED notice.</xsl:text>
+			</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+			<xsl:for-each select="$date-winner-decision-list">
+				<cbc:IssueDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
+			</xsl:for-each>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
 <xsl:template name="contract-conclusion-date">
 	<!-- Contract Conclusion Date (BT-145): eForms documentation cardinality (SettledContract) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CM subtypes 38-40 and E5; Optional (O or EM or CM) for CAN subtypes 29-37 and E4; Forbidden (blank) for all other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Conclusion Date (BT-145)'"/></xsl:call-template>
@@ -531,11 +564,23 @@ These instructions can be un-commented to show the variables
 	<xsl:variable name="text" select="fn:normalize-space(fn:string-join(awards/*:AWARD_CONTRACT/*:TITLE/*:P, ' '))"/>
 	<xsl:if test="$text ne ''">
 		<xsl:variable name="award-ids" select="awards/*:AWARD_CONTRACT/fn:string(@ITEM)"/>
-		<xsl:call-template name="multilingual">
-			<xsl:with-param name="contexts" select="$ted-form-main-element/*:AWARD_CONTRACT[@ITEM=$award-ids]/*:TITLE"/>
-			<xsl:with-param name="local" select="'P'"/>
-			<xsl:with-param name="element" select="'cbc:Title'"/>
-		</xsl:call-template>
+		<!-- xsl:choose used to cater for cases where AWARD_CONTRACT does not have the ITEM attribute -->
+		<xsl:choose>
+			<xsl:when test="awards/*:AWARD_CONTRACT[not(@ITEM)]">
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="$ted-form-main-element/*:AWARD_CONTRACT[not(@ITEM) or @ITEM=$award-ids]/*:TITLE"/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Title'"/>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:call-template name="multilingual">
+					<xsl:with-param name="contexts" select="$ted-form-main-element/*:AWARD_CONTRACT[@ITEM=$award-ids]/*:TITLE"/>
+					<xsl:with-param name="local" select="'P'"/>
+					<xsl:with-param name="element" select="'cbc:Title'"/>
+				</xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:if>
 </xsl:template>
 
@@ -608,9 +653,10 @@ These instructions can be un-commented to show the variables
 <xsl:template name="received-submissions-type">
 	<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 	<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
+	<xsl:variable name="submission-types" select="awards/(*:AWARD_CONTRACT[1]/*:AWARDED_CONTRACT//*[fn:starts-with(fn:local-name(), 'NB_TENDERS')] | *:RESULTS/*:AWARDED_PRIZE//*[fn:starts-with(fn:local-name(), 'NB_PARTICIPANTS')])"/>
 	<xsl:choose>
-		<xsl:when test="awards/*:AWARD_CONTRACT[1]/*:AWARDED_CONTRACT/*:TENDERS/*">
-			<xsl:for-each select="awards/*:AWARD_CONTRACT[1]/*:AWARDED_CONTRACT/*:TENDERS/*">
+		<xsl:when test="$submission-types">
+			<xsl:for-each select="$submission-types">
 				<xsl:variable name="element-name" select="fn:local-name(.)"/>
 				<xsl:variable name="submission-type" select="$mappings//received-submission-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
 				<efac:ReceivedSubmissionsStatistics>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
                       xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                       xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,7 +6,7 @@
                       xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                       xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                       xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -295,9 +294,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">6/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2021-01-11+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -327,91 +326,69 @@
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DAN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DEU</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SPA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FIN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FRA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ELL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ITA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>NLD</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POR</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SWE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>CES</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>EST</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HUN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LIT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LAV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>MLT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLK</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>GLE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>BUL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>RON</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HRV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
@@ -458,9 +435,9 @@
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Notice Identifier (OPP-090)-->
       <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2020/S 161-391292</cbc:ID>
+         <cbc:ID schemeName="ojs-notice-id">00391292-2020</cbc:ID>
       </cac:NoticeDocumentReference>
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -522,7 +499,30 @@
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
-      <cbc:Note languageID="ENG">See internet address provided in section I.3).</cbc:Note>
+      <cbc:Note languageID="ENG">See internet address provided in section I.3). Information about national procedures is available at: </cbc:Note>
+      <cbc:Note languageID="DAN">Se internetadressen anført i afsnit I.3). Oplysninger om nationale udbud er tilgængelig på: </cbc:Note>
+      <cbc:Note languageID="DEU">Siehe die in Abschnitt I.3) angegebene Internetadresse. Angaben zu nationalen Verfahren sind erhältlich unter: </cbc:Note>
+      <cbc:Note languageID="SPA">Véase la dirección de internet que figura en el apartado I.3). La información sobre los procedimientos a nivel nacional se encuentra disponible en: </cbc:Note>
+      <cbc:Note languageID="FIN">katso kohdassa I.3) annettu internetosoite. Tietoa kansallisista menettelyistä on saatavilla: </cbc:Note>
+      <cbc:Note languageID="FRA">Voir adresse internet indiquée à la section I.3). Des informations sur les procédures nationales sont disponibles sur: </cbc:Note>
+      <cbc:Note languageID="ELL">Βλέπε διαδικτυακή διεύθυνση που παρέχεται στο τμήμα I.3). Πληροφορίες για τις εθνικές διαδικασίες διατίθενται από: </cbc:Note>
+      <cbc:Note languageID="ITA">Cfr. indirizzo Internet indicato alla sezione I.3). Le informazioni relative alle procedure nazionali sono disponibili all'indirizzo: </cbc:Note>
+      <cbc:Note languageID="NLD">Zie het internetadres vermeld in sectie I.3). Inlichtingen over nationale procedures zijn beschikbaar op: </cbc:Note>
+      <cbc:Note languageID="POR">Ver endereço Internet indicado no ponto I.3). A informação relativa aos concursos nacionais está disponível em: </cbc:Note>
+      <cbc:Note languageID="SWE">Se internetadressen som anges i avsnitt I.3). Information om nationella förfaranden finns på: </cbc:Note>
+      <cbc:Note languageID="CES">Viz internetová adresa uvedená v oddíle I.3). Informace o národních řízeních jsou k dispozici na: </cbc:Note>
+      <cbc:Note languageID="EST">vt punktis I.3) nimetatud internetiaadressi. Teave riiklike menetluste kohta on avaldatud aadressil: </cbc:Note>
+      <cbc:Note languageID="HUN">Lásd az I.3) szakaszban megadott internetcímet. A nemzeti eljárásokról a következő helyen található információ: </cbc:Note>
+      <cbc:Note languageID="LIT">Žr. interneto adresą, nurodytą I.3) dalyje. Informacija apie nacionalines procedūras pateikiama: </cbc:Note>
+      <cbc:Note languageID="LAV">Skatīt interneta adresi, kas minēta I.3) iedaļā. Informācija par valsts procedūrām ir pieejama šeit: </cbc:Note>
+      <cbc:Note languageID="MLT">Ara l-indirizz tal-Internet ipprovdut fit-taqsima I.3). Informazzjoni dwar proċeduri nazzjonali hija disponibbli fuq: </cbc:Note>
+      <cbc:Note languageID="POL">Zob. adres internetowy w pkt I.3). Informacje o krajowych procedurach można znaleźć pod adresem: </cbc:Note>
+      <cbc:Note languageID="SLK">Pozri internetovú adresu uvedenú v oddiele I.3). Informácie o vnútroštátnych postupoch sú k dispozícii na: </cbc:Note>
+      <cbc:Note languageID="SLV">Glejte spletni naslov v oddelku I.3). Informacije o nacionalnih postopkih so na voljo na: </cbc:Note>
+      <cbc:Note languageID="GLE">Féach an seoladh idirlín atá curtha ar fáil in Alt I.3). Tá faisnéis maidir le nósanna imeachta náisiúnta ar fáil ag: </cbc:Note>
+      <cbc:Note languageID="BUL">Вж. интернет адреса, посочен в раздел I.3). Информация относно национални процедури, налични на: </cbc:Note>
+      <cbc:Note languageID="RON">A se vedea adresa de internet indicată în secțiunea I.3). Informaţii privind procedurile naţionale sunt disponibile la: </cbc:Note>
+      <cbc:Note languageID="HRV">Vidjeti internetsku adresu navedenu u odjeljku I.3). Podaci o nacionalnim postupcima dostupni su na: </cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>

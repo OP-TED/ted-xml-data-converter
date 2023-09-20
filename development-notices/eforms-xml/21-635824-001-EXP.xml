@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
                       xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                       xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,7 +6,7 @@
                       xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                       xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                       xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -419,9 +418,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">238/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2021-12-08+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -451,91 +450,69 @@
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DAN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DEU</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SPA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FIN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FRA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ELL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ITA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>NLD</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POR</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SWE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>CES</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>EST</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HUN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LIT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LAV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>MLT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLK</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>GLE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>BUL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>RON</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HRV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
@@ -582,9 +559,9 @@
       <cbc:ProcedureCode listName="procurement-procedure-type">UNKNOWN</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Notice Identifier (OPP-090)-->
       <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2020/S 251-626986</cbc:ID>
+         <cbc:ID schemeName="ojs-notice-id">00626986-2020</cbc:ID>
       </cac:NoticeDocumentReference>
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
@@ -647,6 +624,29 @@
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <cbc:Note languageID="ENG">The procurement procedure has been conducted in accordance with Art. 35 and 36 Decision ECB/2016/2 of 9 February 2016 laying down the rules on procurement, OJ L 45, 20.2.2016, p. 15 (as amended) available on the ECB website: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html The total values of the procurement and contract(s) indicated in Section II.1.7) and Section(s) V.2.4) are an indicative non-binding spending estimate at the time of contract award. The estimated value indicated per contract for multi-supplier framework agreements in each case represents the total value of the overall procurement/lot as the value of orders awarded per contractor may not be determined upfront. The actual value of the contract(s) may differ and will be determined by actual business needs. Information about national procedures is available at: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="DAN">Udbudsproceduren er udført i overensstemmelse med afgørelse artikel 35 og 36 af ECB/2016/2 af 9.2.2016 om fastsættelse af udbudsregler, EUT L 45, 20.2.2016, s. 15, som ændret, der er tilgængelig på ECB's websted: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Udbuddets og kontraktens/kontrakternes samlede værdi, der er anført i afsnit II.1.7) og afsnit V.2.4), er et vejledende, ikke-bindende udgiftsskøn på tidspunktet for tildeling af kontrakten. I tilfælde af rammeaftaler med flere leverandører vil den anslåede værdi pr. kontrakt ikke nødvendigvis fremgå af den overordnede værdi af det samlede indkøb/de samlede partier, som tildeles pr. kontrahent. Kontraktens/kontrakternes faktiske værdi kan variere og vil afhænge af de faktiske behov. Oplysninger om nationale udbud er tilgængelig på: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="DEU">Das Ausschreibungsverfahren wird im Einklang mit dem Art. 35 und 36 Beschluss ECB/2016 9.2.2016 über die Festlegung der Vergaberegeln, ABl. L 45 vom 20.2.2016, S. 15, in geänderter Fassung, durchgeführt, der auf der EZB-Website zur Verfügung steht: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html Die in Abschnitt II.1.7) und Abschnitt(en) V.2.4) angegebenen Gesamtwerte der Beschaffung und des Auftrags/der Aufträge sind indikative unverbindliche Ausgaben, die zum Zeitpunkt der Auftragsvergabe veranschlagt werden. Der veranschlagte Wert pro Auftrag für Rahmenvereinbarungen mit mehreren Lieferanten stellt in jedem Fall den Gesamtwert der gesamten Beschaffung/des gesamten Loses dar, da der Wert der pro Auftragnehmer vergebenen Aufträge nicht im Voraus festgelegt werden darf. Der tatsächliche Wert des Auftrags bzw. der Aufträge kann davon abweichen und ist von den tatsächlichen geschäftlichen Bedürfnissen abhängig. Angaben zu nationalen Verfahren sind erhältlich unter: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="SPA">El procedimiento de licitación se ha realizado de conformidad con los artículos 35 y 36 de la Decisión ECB/2016/2 de 9 de febrero de 2016, por la que se establece su reglamento de adquisiciones, DO L 45, 20.2.2016, p.15, en su versión modificada, disponible en el sitio web del BCE: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html Los valores totales de la contratación y del (de los) contrato(s) indicados en el apartado II.1.7) y en el apartado(s) V.2.4) son una estimación indicativa y no vinculante de los gastos realizada en el momento de la adjudicación del contrato. El valor estimado indicado por contrato para acuerdos marco con múltiples proveedores en cada caso representa el valor total del procedimiento/lote general como valor de pedidos adjudicados por contratista podría no ser determinado por adelantado. El valor real del contrato podrá diferir y se determinará por las necesidades reales de la actividad. La información sobre los procedimientos a nivel nacional se encuentra disponible en: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="FIN">Hankintamenettely on toteutettu hankintoja koskevista säännöistä 9.2.2016 annetun päätöksen EKP/2016/2 (EUVL L 45, s. 15, 20.2.2016) 35 ja 36 artiklan, sellaisena kuin se on muutettuna, mukaisesti (saatavilla EKP:n verkkosivustolla osoitteessa http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html). Kohdissa II.1.7) ja V.2.4) ilmoitettu hankintojen ja sopimuksen (sopimusten) kokonaisarvo on sopimuksentekohetken ohjeellinen menoarvio, joka ei ole sitova. Useiden toimittajien kanssa tehtäviä puitesopimuksia koskeva sopimuskohtainen arvioitu arvo vastaa koko hankinnan eräkohtaista kokonaisarvoa, sillä sopimusosapuolta kohti tehtyjen tilausten arvoa ei voida määrittää etukäteen. Sopimuksen (sopimusten) tosiasiallinen arvo voi muuttua, ja se määritetään tosiasiallisten toimintatarpeiden mukaan. Tietoa kansallisista menettelyistä on saatavilla: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="FRA">La procédure d'appel d'offres se déroulera conformément à l’article 35 et 36 relatif à la décision BCE/2016/2 du 9 février 2016 fixant les règles de passation des marchés, JO L 45, 20.2.2016, p.15 (telle que modifiée), disponible sur le site Internet de la BCE, à l'adresse: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html La valeur totale du/des marché(s) indiquée dans les sections II.1.7) et V.2.4) est une estimation indicative et non contraignante des dépenses au moment de l’attribution du contrat. La valeur estimée indiquée par contrat pour les accords-cadres à fournisseurs multiples représente dans chaque cas la valeur totale de l’ensemble du marché/lot car la valeur des demandes attribuées par contractant ne peut pas être déterminée d’avance. La valeur réelle du/des marché(s) pourrait être différente et dépendra des véritables besoins opérationnels. Des informations sur les procédures nationales sont disponibles sur: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="ELL">Η διαδικασία διαγωνισμού έχει διεξαχθεί σύμφωνα με το άρθρο 35 και 36 της απόφασης της EKT/2016/2 της 9ης Φεβρουαρίου 2016 για τη θέσπιση των κανόνων περί ανάθεσης συμβάσεων, ΕΕ L 45, 20.2.2016 σελ. 15 (όπως τροποποιήθηκε), η οποία διατίθεται στον δικτυακό τόπο της ΕΚΤ στη διεύθυνση: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Οι συνολικές αξίες της προμήθειας και της (των) σύμβασης(άσεων) που αναφέρονται στο τμήμα II.1.7) και στο τμήμα(τα) V.2.4) αποτελούν ενδεικτική μη δεσμευτική εκτίμηση δαπανών κατά τον χρόνο ανάθεσης της σύμβασης. Η εκτιμώμενη συνολική αξία ανά σύμβαση για συμφωνίες-πλαίσιο πολλαπλών προμηθευτών σε κάθε περίπτωση αντιστοιχεί στη συνολική αξία ολόκληρης της σύμβασης/παρτίδας καθώς η αξία των παραγγελιών που ανατέθηκαν ανά ανάδοχο ενδέχεται να μην προσδιοριστεί αρχικά. Η πραγματική αξία της σύμβασης/των συμβάσεων ενδέχεται να διαφέρει(ουν) και θα καθοριστεί(ούν) βάσει των πραγματικών επιχειρηματικών αναγκών. Πληροφορίες για τις εθνικές διαδικασίες διατίθενται από: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="ITA">La procedura d'appalto è stata condotta in conformità agli articoli 35 e 36 della decisione BCE/2016/2 del 9 febbraio 2016 recante la disciplina sugli appalti, GU L 45 del 20.2.2016, pag. 15 (come modificata), disponibile sul sito web della BCE all'indirizzo http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.it.html. I valori totali degli appalti e dei contratti indicati alla sezione II.1.7) e alla sezione V.2.4) sono una stima indicativa non vincolante della spesa al momento dell'aggiudicazione del contratto. Il valore stimato indicato per contratto per i contratti quadro multi-fornitore rappresenta in ogni caso il valore totale dell'appalto totale o del lotto, poiché il valore degli ordini aggiudicati per contraente non può essere determinato in anticipo. Il valore effettivo dei contratti potrà essere diverso e sarà stabilito in base alle effettive esigenze di lavoro. Le informazioni relative alle procedure nazionali sono disponibili all'indirizzo: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="NLD">De aanbestedingsprocedure vond plaats in overeenstemming met artikel 35 en 36 van Besluit ECB/2016/2 van 9.2.2016 tot vaststelling van de regels inzake aanbesteding, PB L 45, 20.2.2016, blz. 15 (als gewijzigd), beschikbaar op de ECB-website: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html De totale waarde van de aanbesteding en de opdracht(en) vermeld in sectie II.1.7) en sectie(s) V.2.4) is een indicatieve, niet-bindende raming van de uitgaven op het ogenblik van gunning van de opdracht. De geraamde waarde die per opdracht voor raamovereenkomsten met meerdere leveranciers wordt vermeld, komt telkens overeen met de totale waarde van de totale aanbesteding/perceel, aangezien de waarde van de per contractant gegunde opdrachten niet altijd vooraf kan worden vastgesteld. De werkelijke waarde van de opdracht(en) kan verschillen en zal worden vastgesteld op basis van de werkelijke bedrijfsbehoeften. Inlichtingen over nationale procedures zijn beschikbaar op: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="POR">O concurso foi realizado em conformidade com o Art. 35.º e 36.º da Decisão BCE/2016/2 de 9 de fevereiro de 2016 que estabelece as regras relativas ao regime de aquisições, JO L 45, 20.2.2016, p.15 (conforme retificada) disponível no sítio Web do BCE em http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Os valores totais do(s) concurso(s) e do(s) contrato(s) indicados no ponto II.1.7) e no ponto V.2.4) constituem uma estimativa indicativa não vinculativa de despesas no momento da adjudicação do contrato. O valor estimado indicado por contrato para contratos-quadro com vários fornecedores representa, em cada caso, o valor total do concurso/lote geral, pois o valor dos pedidos adjudicados por contratante pode não ser determinado antecipadamente. O valor real do(s) contrato(s) pode ser diferente e será determinado pelas necessidades efetivas da empresa. A informação relativa aos concursos nacionais está disponível em: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="SWE">Upphandlingsförfarandet har genomförts i enlighet med artikel 35 och 36 i Europeiska centralbankens beslut ECB/2016/2 av den 9 februari 2016 om regler för upphandling EUT L 45, 20.2.2016, s. 15 (enligt tillägg), vilken finns tillgänglig på ECB:s webbplats: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html De totala värdena för upphandlingen och kontraktet/kontrakten som anges i avsnitt II.1.7) och avsnitt/avsnitten V.2.4) är en preliminär icke-bindande kostnadsberäkning vid tidpunkten för kontraktstilldelningen. Det uppskattade angivna värdet per kontrakt för ramavtal med flera leverantörer motsvarar i varje enskilt fall det totala värdet för den övergripande upphandlingen/delen, eftersom beställningsvärdet per uppdragstagare inte kan fastställas på förhand. Kontraktets/kontraktens faktiska värde kan variera och kommer att fastställas utifrån faktiska affärsbehov. Information om nationella förfaranden finns på: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="CES">Toto výběrové řízení je prováděno v souladu s článkem 35 a článkem 36 rozhodnutí ECB/2016/2 ze dne 9. února 2016, kterým se stanoví pravidla pro veřejné zakázky, Úř. věst. L 45, 20.2.2016, s. 15 (v aktuálním znění), které je k dispozici na internetové stránce ECB na adrese http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html Celkové hodnoty této zakázky a smlouvy (smluv) uvedené v oddílu II.1.7) a oddílu V.2.4) představují orientační nezávazný odhad výdajů v době zadání zakázky. Odhadovaná hodnota uvedená na každou smlouvu v případě rámcových smluv uzavřených s více dodavateli v každém případě představuje souhrnnou hodnotu celkového nákupu/položky, neboť hodnotu objednávek zadaných každému dodavateli nelze stanovit předem. Skutečná hodnota smlouvy (smluv) se může lišit a stanoví se na základě skutečných obchodních potřeb. Informace o národních řízeních jsou k dispozici na: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="EST">Hankemenetlus korraldati kooskõlas hangete teostamise korra kehtestamist käsitleva Euroopa Keskpanga 9.2.2016 otsuse EKP/2016/2 artiklitega 35 ja 36 (ELT L 45, 20.2.2016, lk 15 (muudetud kujul)), mis on avaldatud EKP veebisaidil aadressil http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html II.1.7) ja V.2.4) punktis esitatud hanke ja lepingu(te) kogumaksumus on lepingu sõlmimise ajal hinnanguline mittesiduv eelarve. Mitme tarnijaga raamlepingutes näidatud hinnanguline maksumus lepingu kohta on kõigil juhtudel kogu hanke / osa kogumaksumus, kuna tellimuste maksumust töövõtja kohta ei ole võimalik eelnevalt kindlaks määrata. Lepingu(te) tegelik maksumus võib erineda ja see määratletakse tegelike tegevusega seotud vajaduste põhjal. Teave riiklike menetluste kohta on avaldatud aadressil: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="HUN">A közbeszerzési eljárást a beszerzési szabályok meghatározásáról szóló EKB/2016/2 határozat (2016. február 9.) 35. és 36. cikke (HL L 45., 2016.2.20., 15. o.) és annak módosításai szerint folytatták le, az EKB weboldalán megtekinthető az alábbi címen: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. A II.1.7) és az V.2.4) szakaszban említett közbeszerzés és szerződés(ek) teljes értéke nem kötelező érvényű becslés a szerződés odaítélésének időpontjában. A többszolgáltatós keretmegállapodásokra vonatkozóan szerződésenként feltüntetett becsült érték minden esetben a teljes közbeszerzés/tétel összértékét tükrözi, minthogy a nyertes ajánlattevőnként odaítélt megrendelések értéke nem állapítható meg előre. A szerződés(ek) tényleges értéke a tényleges üzleti igények alapján kerül meghatározásra, így ettől eltérhet. A nemzeti eljárásokról a következő helyen található információ: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="LIT">Pirkimo procedūra vykdoma vadovaujantis 9 m. vasario 2016/2 d. sprendimo ECB/36/2016 35 str., nustatančiu pirkimo taisykles (OL L 45, 2016 m. vasario 20 d., 15 p.), su pakeitimais, pateiktais ECB svetainėje http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Bendros pirkimo ir sutarties (-čių) vertės, nurodytos II.1.7) ir V.2.4) dalyse, yra preliminari neįpareigojanti išlaidų sąmata sutarties skyrimo metu. Preliminari vertė, nurodyta kiekvienai preliminariajai sutarčiai su keliais tiekėjais kiekvienu atveju reiškia bendrą pirkimo / dalies vertę, kadangi kiekvienam rangovui skirtų užsakymų vertė negali būti nustatyta iš anksto. Faktinė sutarties (-čių) vertė gali skirtis ir bus nustatyta atsižvelgiant į realias verslo reikmes. Informacija apie nacionalines procedūras pateikiama: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="LAV">Iepirkuma procedūra notika saskaņā ar Eiropas Centrālās bankas grozītā Lēmuma ECB/2016/2 (2016. gada 9. februāris) 35. un 36. pantu, ar ko nosaka iepirkuma noteikumus (OV L 45, 20.2.2016, 15. lpp.) un kas ir pieejami ECB tīmekļa vietnē: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Iepirkuma un līguma(-u) kopējās vērtības, kas norādītas II.1.7) iedaļā un V.2.4) iedaļā, ir provizorisks izdevumu aprēķins, kas nav saistošs līguma slēgšanas tiesību piešķiršanas brīdī. Paredzamā vērtība, kas norādīta par katru līgumu attiecībā uz vairāku pakalpojumu sniedzēju pamatnolīgumiem, katrā gadījumā norāda uz visa iepirkuma/daļas kopējo vērtību, jo katram darbuzņēmējam piešķirto pasūtījumu vērtību nevar noteikt iepriekš. Līguma(-u) faktiskā vērtība var atšķirties un tiks noteikta, pamatojoties uz faktiskajām uzņēmējdarbības vajadzībām. Informācija par valsts procedūrām ir pieejama šeit: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="MLT">Il-proċedura tal-ksib twettqet skont l-Artikolu 35 u 36, id-Deċiżjoni BĊE/2016/2 tad-9 ta’ Frar 2016 li tistabbilixxi r-regoli dwar l-ksib, ĠU L 45, tal-20 ta’ Frar 2016, p. 15, (kif emendata) disponibbli fuq is-sit web tal-BĊE: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html Il-valuri totali tal-ksib u l-kuntratt(i) indikati fit-Taqsima II.1.7) u t-Taqsima(iet) V.2.4) huma stima indikattiva tal-infiq li ma torbotx fil-ħin tal-għoti tal-kuntratt. Il-valur stmat indikat għal kull kuntratt għal oqfsa ta' ftehimiet ma' fornituri multipli f'kull każ jirrappreżenta l-valur totali tal-ksib/tal-lott ġenerali bħala l-valur ta' ordnijiet mogħtija lil kull kuntrattur ma jistax ikun magħruf minn qabel. Il-valur attwali tal-kuntratt/i jista' jvarja u se jkun iddeterminat skont ħtiġijiet attwali tan-negozju. Informazzjoni dwar proċeduri nazzjonali hija disponibbli fuq: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="POL">Procedura przetargowa prowadzona jest zgodnie z art. 35 i 36 decyzji Europejskiego Banku Centralnego nr EBC/2016/2 z dnia 9 lutego 2016 r. określającą zasady udzielania zamówień publicznych, Dz. U. L45 z 20.2.2016 r., s. 15 (ze zmianami), dostępną w witrynie internetowej EBC pod adresem: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Całkowita wartość zamówienia (zamówień) wskazana w pkt II.1.7) i V.2.4) stanowi niewiążącą orientacyjną prognozę wydatków w momencie udzielania zamówienia. Szacowana wartość określona dla umowy w ramach porozumień ramowych z wieloma dostawcami w każdym przypadku jest równa łącznej wartości całego zamówienia/części, ponieważ nie da się z góry określić wartości zamówień udzielanych danemu wykonawcy. Rzeczywista wartość umowy może być odmienna i zostanie określona na podstawie rzeczywistych potrzeb biznesowych. Informacje o krajowych procedurach można znaleźć pod adresem: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="SLK">Obstarávacie konanie sa vykonáva v súlade s článkami 35 a 36 rozhodnutia ECB/2016/2 z 9. februára 2016, ktorým sa ustanovujú pravidlá obstarávania, Ú. v. EÚ L 45, 20.2.2016, s. 15 (v znení zmien), dostupné na internetovej stránke ECB: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html Celkové hodnoty obstarávania a zmluvy uvedené v oddiele II.1.7) a oddiele V.2.4) sú orientačný nezáväzný odhad výdavkov v čase pridelenia zákazky. Odhadovaná hodnota uvedená na základe zmluvy o rámcových dohodách s viacerými dodávateľmi v každom prípade predstavuje celkovú hodnotu celkového obstarávania/časti, pretože hodnotu objednávok zadaných dodávateľovi nie je možné stanoviť vopred. Skutočná hodnota obstarávania (obstarávaní) sa môže líšiť a stanoví sa na základe skutočných obchodných potrieb. Informácie o vnútroštátnych postupoch sú k dispozícii na: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="SLV">Postopek javnega naročila je bil izveden v skladu s členoma 35 in 36 Sklepa ECB/2016/2 z dne 9. februarja 2016 o določitvi pravil za oddajo naročil (UL L 45, 20.2.2016, str. 15) (kakor je bil spremenjen), na voljo na spletnem mestu ECB: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Skupne vrednosti javnega naročila in pogodbe(-) iz oddelka II.1.7) in oddelka V.2.4) so okvirna nezavezujoča ocena porabe v času oddaje naročila. Ocenjena vrednost, navedena na pogodbo za okvirne sporazume z več dobavitelji, v vsakem primeru predstavlja skupno vrednost celotnega javnega naročila/sklopa, saj vrednosti naročil, oddanih na izvajalca, ni mogoče določiti vnaprej. Dejanska vrednost naročila se lahko razlikuje in bo določena na podlagi dejanskih poslovnih potreb. Informacije o nacionalnih postopkih so na voljo na: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="GLE">Tá an nós imeachta tairisceana arna stiúradh i gcomhréir le hAirt. 35 agus Airt. 36 Cinneadh BCE/2016/2 an 9.2.2016 lena leagtar síos na rialacha maidir le soláthar, IO L 45, 20.2.2016, lch. 15 (arna leasú) atá ar fáil ar láithreán gréasáin BCE: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Is meastachán caiteachais neamhcheangailteach táscach é luachanna iomlána an chonartha (na gconarthaí) atá léirithe in Alt II.1.7) agus in A(i)lt V.2.4) tráth dhámhachtain an chonartha. Is ionann an luach measta a thugtar in aghaidh an chonartha le haghaidh creat-chomhaontuithe il-soláthraithe i ngach cás agus luach iomlán an tsoláthair/bhirt toisc nach féidir luach na n-orduithe a dhámhtar in aghaidh an chonraitheora a chinneadh roimh ré. D'fhéadfadh luach iarbhír an chonartha/na gconarthaí a bheith éagsúil agus déanfar é a chinneadh faoi réir ag riachtanais iarbhír gnó. Tá faisnéis maidir le nósanna imeachta náisiúnta ar fáil ag: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="BUL">Процедурата по обществена поръчка е проведена в съответствие с чл. 35 и 36 на Решение ЕЦБ/2016/2 от 9.2.2016 г. за определяне на правилата за възлагане на поръчки, OВ L 45, 20.2.2016 г., стр. 15 (изменено), достъпно на уебсайта на ЕЦБ на: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html. Общите стойности на обществената поръчка и поръчката(ите), посочена(и) в раздел II.1.7) и раздел(и) V.2.4), са индикативна незадължителна оценка на разходите към момента на възлагане на поръчката. Общата стойност, посочена за поръчка по рамкови споразумения с няколко доставчика, представлява във всеки случай общата стойност на цялата поръчка/обособена позиция, тъй като стойността на поръчките, възложени на всеки изпълнител, не може да се определи предварително. Действителната стойност на поръчката(-ите) може да се различава и ще бъде определена според реалните работни нужди. Информация относно национални процедури, налични на: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="RON">Procedura de achiziții publice se derulează în conformitate cu articolul 35 și articolul 36 Decizia BCE/2016/2 din 9 februarie 2016 de stabilire a normelor privind achizițiile, JO L 45, 20.2.2016, p. 15 (astfel cum a fost modificată) disponibilă pe site-ul BCE la adresa: http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html Valorile totale ale achiziției și contractului (contractelor) indicat(e) în secțiunea II.1.7) și secțiunea (secțiunile) V.2.4) sunt o valoare indicativă fără caracter obligatoriu a cheltuielilor la momentul atribuirii contractului. Valoarea estimată indicată per contract pentru acordurile-cadru cu mai mulți furnizori în fiecare caz reprezintă valoarea totală a achiziției / lotului total, deoarece valoarea comenzilor acordate pentru fiecare contractant nu poate fi determinată în avans. Valoarea reală a contractului poate fi diferită și va fi determinată de nevoile comerciale reale. Informaţii privind procedurile naţionale sunt disponibile la: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
+      <cbc:Note languageID="HRV">Postupak nabave provodi se u skladu s člancima 35. i 36. Odluke ECB/2016/2. od 9. veljače 2016. o utvrđivanju pravila o nabavi, SL L 45., 20.2.2016., str. 15 (kako je izmijenjena) koja je dostupna na mrežnoj stranici ESB-a na http://www.ecb.europa.eu/ecb/jobsproc/tenders/html/index.en.html Ukupne vrijednosti nabave i ugovora iz odjeljka II.1.7) i odjeljka V.2.4) indikativne su neobvezujuće procjene izdataka u trenutku dodjele ugovora. Procijenjena vrijednost navedena po ugovoru za okvirne sporazume s više dobavljača u svakom slučaju predstavlja ukupnu vrijednost cjelokupne nabave/grupe jer se vrijednost dodijeljenih narudžbi po ugovoru ne može unaprijed odrediti. Ukupna vrijednost ugovora može se razlikovati te će biti određena trenutačnim poslovnim potrebama. Podaci o nacionalnim postupcima dostupni su na: http://www.dummy.org/fake-url-national-procedure</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>

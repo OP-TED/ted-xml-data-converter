@@ -67,3 +67,6 @@ This table lists the TED XML files selected to test development of the Converter
 | 19-289373-001-EXP.xml | F22 | CN | Subtype mapping | Notice type QSU_CALL_COMPETITION |
 | 20-318547-001-EXP.xml | F22 | CN | Lot | QS/INDEFINITE_DURATION |
 | 21-048169-001-EXP.xml | F03 | CAN | Lot | EU_PROGR_RELATED |
+| 18-536293-001-EXP.xml | F13 | CAN | Design Result | Multiple WINNER elements |
+| 19-111211-001-EXP.xml | F13 | CAN | Design Result | NO_AWARDED_PRIZE |
+

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
                       xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                       xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,7 +6,7 @@
                       xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                       xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                       xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                      xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -181,9 +180,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">23/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2021-02-03+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -213,91 +212,69 @@
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DAN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DEU</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SPA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FIN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FRA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ELL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>ITA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>NLD</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POR</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SWE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>CES</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>EST</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HUN</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LIT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>LAV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>MLT</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>POL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLK</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>SLV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>GLE</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>BUL</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>RON</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>HRV</cbc:ID>
    </cac:AdditionalNoticeLanguage>
@@ -344,7 +321,7 @@
       <cbc:ProcedureCode listName="procurement-procedure-type">neg-wo-call</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Notice Identifier (OPP-090)-->
       <cac:ProcessJustification><!--Direct Award Justification (BT-136)-->
          <cbc:ProcessReasonCode listName="direct-award-justification">technical</cbc:ProcessReasonCode>
          <!--Direct Award Justification (BT-135)-->
@@ -429,7 +406,30 @@
       <!--Main Nature (BT-23)-->
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
-      <cbc:Note languageID="ENG">Due to the fact, that a negotiated procedure without publication of a contract notice based on point 11.1 (b) Annex I FR is concerned, the contract has not been signed yet. The date of signature of the contract under this section is the date of the award decision.</cbc:Note>
+      <cbc:Note languageID="ENG">Due to the fact, that a negotiated procedure without publication of a contract notice based on point 11.1 (b) Annex I FR is concerned, the contract has not been signed yet. The date of signature of the contract under this section is the date of the award decision. Information about national procedures is available at: </cbc:Note>
+      <cbc:Note languageID="DAN">Da der er tale om et udbud efter forhandling uden offentliggørelse af en udbudsbekendtgørelse baseret på punkt 11.1, litra b), i bilag I til finansforordningen, er kontrakten endnu ikke underskrevet. Datoen for underskrivelse af dette kontraktpunkt er datoen for tildelingsbeslutningen. Oplysninger om nationale udbud er tilgængelig på: </cbc:Note>
+      <cbc:Note languageID="DEU">Da es sich um ein Verhandlungsverfahren ohne Veröffentlichung einer Auftragsbekanntmachung auf der Grundlage von Ziffer 11.1 b) Anhang I der Haushaltsordnung handelt, wurde der Vertrag noch nicht unterzeichnet. Das Datum der Unterzeichnung des Vertrags in diesem Abschnitt ist das Datum der Vergabeentscheidung. Angaben zu nationalen Verfahren sind erhältlich unter: </cbc:Note>
+      <cbc:Note languageID="SPA">Debido a que se trata de un procedimiento negociado sin publicación de un anuncio de licitación basado en el punto 11, apartado 1 (b) del anexo I del Reglamento Financiero, el contrato todavía no se ha firmado. La fecha de la firma del contrato en el marco de este apartado es la fecha de la decisión de adjudicación. La información sobre los procedimientos a nivel nacional se encuentra disponible en: </cbc:Note>
+      <cbc:Note languageID="FIN">Sopimusta ei ole vielä allekirjoitettu, koska käytetään varainhoitoasetuksen liitteessä I olevan 11.1 kohdan b alakohdan mukaista neuvottelumenettelyä julkaisematta etukäteen hankintailmoitusta. Tässä kohdassa ilmoitettu sopimuksen allekirjoittamispäivämäärä on sopimuksentekopäätöksen päivämäärä. Tietoa kansallisista menettelyistä on saatavilla: </cbc:Note>
+      <cbc:Note languageID="FRA">En raison du fait qu'une procédure négociée sans publication d'un avis de marché sur la base du point 11.1 b) de l'annexe I du RF est concernée, le contrat n'a pas encore été signé. La date de signature du contrat au titre de cette section est la date de la décision d'attribution. Des informations sur les procédures nationales sont disponibles sur: </cbc:Note>
+      <cbc:Note languageID="ELL">Λόγω του γεγονότος ότι πρόκειται για διαδικασία με διαπραγμάτευση χωρίς δημοσίευση προκήρυξης σύμβασης, βάσει του σημείου 11.1 στοιχείο β) του Παραρτήματος Ι του δημοσιονομικού κανονισμού, η σύμβαση δεν έχει ακόμη υπογραφεί. Η ημερομηνία υπογραφής της σύμβασης βάσει αυτής της ενότητας είναι η ημερομηνία της απόφασης ανάθεσης. Πληροφορίες για τις εθνικές διαδικασίες διατίθενται από: </cbc:Note>
+      <cbc:Note languageID="ITA">Poiché si tratta di una procedura negoziata senza pubblicazione di un bando di gara d'appalto ai sensi del punto 11.1, lettera b), dell'allegato I del regolamento finanziario, il contratto non è ancora stato firmato. La data della firma del contratto ai sensi della presente sezione è la data della decisione di aggiudicazione. Le informazioni relative alle procedure nazionali sono disponibili all'indirizzo: </cbc:Note>
+      <cbc:Note languageID="NLD">Aangezien het gaat om een onderhandelingsprocedure zonder bekendmaking van een aankondiging van opdracht op grond van punt 11.1, onder b), van bijlage I FR, is het contract nog niet ondertekend. De datum van ondertekening van het contract in het kader van deze sectie is de datum van het gunningsbesluit. Inlichtingen over nationale procedures zijn beschikbaar op: </cbc:Note>
+      <cbc:Note languageID="POR">Dado que se trata de um procedimento por negociação sem publicação de um anúncio de concurso com base no ponto 11.1, alínea b), anexo I do RF, o contrato ainda não foi celebrado. A data de assinatura do contrato no âmbito desta secção é a data da decisão de adjudicação. A informação relativa aos concursos nacionais está disponível em: </cbc:Note>
+      <cbc:Note languageID="SWE">Eftersom det rör sig om ett förhandlat förfarande utan offentliggörande av ett meddelande om upphandling baserat på punkt 11.1 b) i bilaga I till budgetförordningen, har kontraktet inte undertecknats ännu. Datumet för undertecknande av kontraktet i detta avsnitt är datumet för tilldelningsbeslutet. Information om nationella förfaranden finns på: </cbc:Note>
+      <cbc:Note languageID="CES">Vzhledem k tomu, že se jedná o jednací řízení bez zveřejnění oznámení o zakázce na základě bodu 11.1 písm. b) přílohy I finančního nařízení, smlouva ještě nebyla podepsána. Datum podpisu smlouvy dle tohoto oddílu je datem rozhodnutí o zadání zakázky. Informace o národních řízeních jsou k dispozici na: </cbc:Note>
+      <cbc:Note languageID="EST">Kuna tegu on väljakuulutamiseta läbirääkimistega hankemenetlusega finantsmääruse I lisa artikli 11.1(b) alusel, pole lepingut veel allkirjastatud. Selles jaotises esitatud lepingu allkirjastamise kuupäev on lepingu sõlmimise otsuse kuupäev. Teave riiklike menetluste kohta on avaldatud aadressil: </cbc:Note>
+      <cbc:Note languageID="HUN">Mivel a költségvetési rendelet I. melléklete 11. cikke (1) bekezdése b) pontja alapján ajánlati felhívás közzététele nélküli tárgyalásos eljárásról van szó, a szerződés aláírására még nem került sor. A jelen szakasz szerint a szerződés aláírásának dátuma az odaítélésről szóló határozat dátuma. A nemzeti eljárásokról a következő helyen található információ: </cbc:Note>
+      <cbc:Note languageID="LIT">Kadangi tai susiję su derybų procedūra neskelbiant skelbimo apie pirkimą pagal Finansinio reglamento I priedo 11.1 dalies b punktą, sutartis dar nepasirašyta. Sutarties pasirašymo data pagal šią dalį yra sprendimo dėl sutarties skyrimo data. Informacija apie nacionalines procedūras pateikiama: </cbc:Note>
+      <cbc:Note languageID="LAV">Tā kā ir runa par sarunu procedūru bez paziņojuma par līgumu publicēšanas, pamatojoties uz Finanšu regulas I pielikuma 11.1. punkta b) apakšpunktu, līgums vēl nav parakstīts. Līguma parakstīšanas datums saskaņā ar šo iedaļu ir piešķiršanas lēmuma datums. Informācija par valsts procedūrām ir pieejama šeit: </cbc:Note>
+      <cbc:Note languageID="MLT">Minħabba l-fatt, li hija kkonċernata proċedura nnegozjata mingħajr pubblikazzjoni ta’ avviż dwar kuntratt fuq punt 11.1(b) Anness I RF, il-kuntratt għadu ma ġiex iffirmat. Id-data tal-firma tal-kuntratt taħt din it-taqsima hija d-data tad-deċiżjoni tal-għoti. Informazzjoni dwar proċeduri nazzjonali hija disponibbli fuq: </cbc:Note>
+      <cbc:Note languageID="POL">Ze względu na fakt, że dotyczy to procedury negocjacyjnej bez publikacji ogłoszenia o zamówieniu na podstawie pkt 11.1 lit. b) załącznika I do rozporządzenia finansowego, zamówienie nie zostało jeszcze podpisane. Data podpisania umowy podana w niniejszym punkcie jest datą decyzji o udzieleniu zamówienia. Informacje o krajowych procedurach można znaleźć pod adresem: </cbc:Note>
+      <cbc:Note languageID="SLK">Vzhľadom na to, že ide o rokovacie konanie bez uverejnenia oznámenia o vyhlásení verejného obstarávania na základe bodu 11.1 písm. b) prílohy I nariadenia o rozpočtových pravidlách, zmluva ešte nebola podpísaná. Dátum podpisu zmluvy v rámci tohto oddielu je dátumom rozhodnutia o pridelení. Informácie o vnútroštátnych postupoch sú k dispozícii na: </cbc:Note>
+      <cbc:Note languageID="SLV">Ker gre za postopek s pogajanji brez objave obvestila o naročilu v skladu s točko 11.1(b) Priloge I k finančni uredbi, pogodba še ni bila sklenjena. Datum podpisa pogodbe v okviru tega oddelka je datum sklepa o oddaji. Informacije o nacionalnih postopkih so na voljo na: </cbc:Note>
+      <cbc:Note languageID="GLE">Mar gheall gurb é nós imeachta idirbheartaithe gan fógra conartha a fhoilsiú roimh ré bunaithe ar phointe 11.1 (b) d’Iarscríbhinn I den RA atá i gceist, níor síníodh an conradh go fóill. Is ionann dáta sínithe an chonartha faoin alt seo agus dáta an chinnidh dhámhachtana. Tá faisnéis maidir le nósanna imeachta náisiúnta ar fáil ag: </cbc:Note>
+      <cbc:Note languageID="BUL">Поради факта, че се отнася до процедура на договаряне без публикуване на обявление за поръчка въз основа на точка 11.1, буква б) от приложение I към Финансовия регламент, договорът все още не е подписан. Датата на подписване на договора в този раздел е датата на решението за възлагане. Информация относно национални процедури, налични на: </cbc:Note>
+      <cbc:Note languageID="RON">Din cauza faptului că este vizată o procedură negociată fără publicarea unui anunț de participare în temeiul punctului 11.1 (b) din anexa I la Regulamentul financiar, contractul nu a fost încă semnat. Data semnării contractului în cadrul acestei secțiuni este data deciziei de atribuire. Informaţii privind procedurile naţionale sunt disponibile la: </cbc:Note>
+      <cbc:Note languageID="HRV">Zbog činjenice da se radi o pregovaračkom postupku bez objave poziva na nadmetanje temeljem točke 11.1 (b) Priloga I. Financijskoj uredbi, ugovor još nije potpisan. Datum potpisivanja ugovora u okviru ovog odjeljka datum je odluke o sklapanju ugovora. Podaci o nacionalnim postupcima dostupni su na: </cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
