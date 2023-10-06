@@ -74,3 +74,9 @@ This table lists the TED XML files selected to test development of the Converter
 | 19-318420-001-EXP.xml | F25 | CAN | Result | CALCULATION_METHOD, INFO_ADD_VALUE, VAL_PRICE_PAYMENT, VAL_REVENUE |
 | 18-151256-001-EXP.xml | F12 | CN | Design | DIRECTIVE, NB_MAX_PARTICIPANTS, NB_MIN_PARTICIPANTS, PARTICIPANT_NAME |
 | 23-119901-001-EXP.xml | F14 | XX | Corrigendum | F14 notices cannot be converted |
+| 18-156915-001-EXP.xml | F13 | CAN | Result | NB_PARTICIPANTS_OTHER_EU, NB_PARTICIPANTS_SME |
+| 18-168448-001-EXP.xml | F02 | CN | Lot | INFO_ADD_EAUCTION |
+
+
+
+
