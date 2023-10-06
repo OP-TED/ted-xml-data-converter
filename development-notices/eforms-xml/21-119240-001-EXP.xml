@@ -262,7 +262,6 @@
             <cbc:Note languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Note>
          </cac:PaymentTerms>
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -347,7 +346,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -389,6 +387,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>4</cbc:MaximumQuantity>
@@ -551,7 +550,6 @@
             <cbc:Note languageID="ENG">See RFI available at www.etenders.gov.ie</cbc:Note>
          </cac:PaymentTerms>
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -636,7 +634,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -678,6 +675,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>4</cbc:MaximumQuantity>

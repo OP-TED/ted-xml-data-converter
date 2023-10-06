@@ -249,7 +249,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -325,7 +324,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -364,6 +362,9 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
             <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->

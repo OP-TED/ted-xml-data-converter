@@ -39,8 +39,11 @@
                      <efac:FrameworkAgreementValues>
                         <efbc:ReestimatedValueAmount currencyID="EUR">214000.00</efbc:ReestimatedValueAmount>
                      </efac:FrameworkAgreementValues>
-                     <!--WARNING: Received Submissions Type (BT-760) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
-                     <!--WARNING: Received Submissions Count (BT-759) is Mandatory for eForms subtypes 29-37, but no NB_TENDERS_RECEIVED_* element was found in TED XML.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>7</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
                      <efac:SettledContract>
                         <cbc:ID schemeName="contract">CON-0001</cbc:ID>
@@ -1367,7 +1370,6 @@
          <!--Documents Unofficial Language (BT-737)-->
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -1399,7 +1401,6 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1428,6 +1429,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1517,7 +1519,6 @@
          <!--Documents Unofficial Language (BT-737)-->
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -1549,7 +1550,6 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1578,6 +1578,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1667,7 +1668,6 @@
          <!--Documents Unofficial Language (BT-737)-->
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -1699,7 +1699,6 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1728,6 +1727,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1817,7 +1817,6 @@
          <!--Documents Unofficial Language (BT-737)-->
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -1849,7 +1848,6 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1878,6 +1876,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1967,7 +1966,6 @@
          <!--Documents Unofficial Language (BT-737)-->
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -1999,7 +1997,6 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2028,6 +2025,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
