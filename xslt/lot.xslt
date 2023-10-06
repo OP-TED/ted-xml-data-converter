@@ -94,7 +94,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Terms Financial (BT-77): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17, 18, 22; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-21, E3; Forbidden for other subtypes -->
 		<xsl:call-template name="terms-financial"/>
 		<!-- Reserved Participation (BT-71): eForms documentation cardinality (Lot) = + | Mandatory for PIN subtypes 7-9, CN subtypes 10-22; Optional for PIN subtypes 4-6 and E2, CN subtype E3; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Reserved Participation (BT-71)'"/></xsl:call-template>
 		<xsl:call-template name="reserved-participation"/>
 		<!-- Tenderer Legal Form (BT-761): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtypes 17 and 18; Optional for PIN subtypes 7-9, CN subtypes 10-16, 19-22, and E3, CM subtypes 38-40; Forbidden for other subtypes -->
 		<!-- Tenderer Legal Form Description (BT-76): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-22 and E3, CM subtypes 38-40; Forbidden for other subtypes -->
@@ -143,8 +142,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="submission-language"/>
 		<!-- Electronic Ordering (BT-92) and Electronic Payment (BT-93) -->
 		<xsl:call-template name="post-award-processing"/>
-		<!-- Participant Name (BT-47): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Participant Name (BT-47)'"/></xsl:call-template>
 		<!-- Security Clearance Code (BT-578): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Security Clearance Code (BT-578)'"/></xsl:call-template>
 		<!-- Security Clearance Description (BT-732): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
@@ -663,12 +660,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Submission Nonelectronic Justification (BT-19)'"/></xsl:call-template>
 		<!-- Submission Nonelectronic Description (BT-745): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Submission Nonelectronic Description (BT-745)'"/></xsl:call-template>
+		
 		<!-- Maximum Candidates Indicator (BT-661): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Maximum Candidates Indicator (BT-661)'"/></xsl:call-template>
 		<!-- Maximum Candidates (BT-51): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-18, 20-24, and E3; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Maximum Candidates (BT-51)'"/></xsl:call-template>
 		<!-- Minimum Candidates (BT-50): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Minimum Candidates (BT-50)'"/></xsl:call-template>
+		<!-- Participant Name (BT-47): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<xsl:call-template name="participants"/>
 		<xsl:call-template name="limit-candidate"/>
 		<!-- Public Opening Date (BT-132): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 16, 17, 20, 21, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Public Opening Date (BT-132)'"/></xsl:call-template>
@@ -791,6 +788,52 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		</cbc:StartDate>
 	</cac:InvitationSubmissionPeriod>
 </xsl:template>
+
+<xsl:template name="participants">
+		<!-- Maximum Candidates Indicator (BT-661): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Maximum Candidates Indicator (BT-661)'"/></xsl:call-template>
+		<!-- Maximum Candidates (BT-51): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-18, 20-24, and E3; Forbidden for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Maximum Candidates (BT-51)'"/></xsl:call-template>
+		<!-- Minimum Candidates (BT-50): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Minimum Candidates (BT-50)'"/></xsl:call-template>
+		<!-- Participant Name (BT-47): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Participant Name (BT-47)'"/></xsl:call-template>
+	<xsl:choose>
+		<xsl:when test="../../*:PROCEDURE/(*:NB_PARTICIPANTS|*:NB_MAX_PARTICIPANTS|*:NB_MIN_PARTICIPANTS)">
+			<cac:EconomicOperatorShortList>
+				<xsl:choose>
+					<xsl:when test="../../*:PROCEDURE/(*:NB_PARTICIPANTS|*:NB_MAX_PARTICIPANTS)">
+						<cbc:LimitationDescription>true</cbc:LimitationDescription>
+						<cbc:MaximumQuantity><xsl:value-of select="../../*:PROCEDURE/(*:NB_PARTICIPANTS|*:NB_MAX_PARTICIPANTS)"/></cbc:MaximumQuantity>
+					</xsl:when>
+					<xsl:otherwise>
+						<cbc:LimitationDescription>false</cbc:LimitationDescription>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="../../*:PROCEDURE/(*:NB_PARTICIPANTS|*:NB_MIN_PARTICIPANTS)">
+						<cbc:MinimumQuantity><xsl:value-of select="../../*:PROCEDURE/(*:NB_PARTICIPANTS|*:NB_MIN_PARTICIPANTS)"/></cbc:MinimumQuantity>
+					</xsl:when>
+					<xsl:otherwise>
+						<!-- WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML. -->
+						<xsl:variable name="message">WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.</xsl:variable>
+						<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:apply-templates select="../../*:PROCEDURE/*:PARTICIPANT_NAME"/>
+			</cac:EconomicOperatorShortList>
+		</xsl:when>
+		<xsl:when test="($eforms-notice-subtype = ('16'))">
+			<!-- WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+			<!-- WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML. -->
+			<xsl:variable name="message">WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.</xsl:variable>
+			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
 
 <xsl:template name="limit-candidate">
 	<xsl:if test="*:NB_MAX_LIMIT_CANDIDATE or *:NB_MIN_LIMIT_CANDIDATE or *:NB_ENVISAGED_CANDIDATE or $eforms-notice-subtype = '16'">
