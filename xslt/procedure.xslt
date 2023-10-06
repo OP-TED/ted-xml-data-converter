@@ -164,7 +164,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 					<xsl:variable name="ted-language" select="fn:string(@LG)"/>
 						<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
 						<xsl:variable name="info-add-lang" as="xs:string">
-							<xsl:if test="$info-add">
+							<xsl:if test="$info-add ne ''">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
 										<xsl:with-param name="context" select="$form-element"/>
@@ -175,7 +175,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 							</xsl:if>
 						</xsl:variable>
 						<xsl:variable name="url-national-procedure-lang">
-							<xsl:if test="$url-national-procedure">
+							<xsl:if test="$url-national-procedure ne ''">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
 										<xsl:with-param name="context" select="$form-element"/>
@@ -187,7 +187,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 						</xsl:variable>
 					<xsl:variable name="text">
 						<xsl:value-of select="$info-add-lang"/>
-						<xsl:if test="$url-national-procedure-lang">
+						<xsl:if test="$url-national-procedure-lang ne ''">
 							<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-language]/fn:string()"/>
 							<xsl:if test="$info-add-lang"><xsl:text> </xsl:text></xsl:if>
 							<xsl:value-of select="$form-text"/>
