@@ -619,7 +619,7 @@ These instructions can be un-commented to show the variables
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Framework Re-estimated Value (BT-660)'"/></xsl:call-template>
 	<!-- if there is at least one VAL_ESTIMATED_TOTAL within this lot-result element -->
 	<xsl:if test="$lot-result-val-estimated-total">
-		<!-- When FRAMEWORK exists, VALUES/VAL_ESTIMATED_TOTAL maps to Framework Re-estimated Value (BT-660) -->
+		<!-- When FRAMEWORK exists, VALUE(S)/VAL_ESTIMATED_TOTAL maps to Framework Re-estimated Value (BT-660) -->
 		<xsl:choose>
 			<xsl:when test="$ted-form-main-element/*:PROCEDURE/*:FRAMEWORK">
 				<!-- If there is only one unique value of VALUES/VAL_ESTIMATED_TOTAL within the AWARDED_CONTRACT elements for this lot-result element -->
@@ -653,17 +653,19 @@ These instructions can be un-commented to show the variables
 <xsl:template name="received-submissions-type">
 	<!-- Received Submissions Type (BT-760): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
 	<!-- Received Submissions Count (BT-759): eForms documentation cardinality (LotResult) = * | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 29-37; Optional (O or EM or CM) for CAN subtype E4, CM subtype E5; Forbidden (blank) for all other subtypes -->
-	<xsl:variable name="submission-types" select="awards/(*:AWARD_CONTRACT[1]/*:AWARDED_CONTRACT//*[fn:starts-with(fn:local-name(), 'NB_TENDERS')] | *:RESULTS/*:AWARDED_PRIZE//*[fn:starts-with(fn:local-name(), 'NB_PARTICIPANTS')])"/>
+	<xsl:variable name="submission-types-group" select="awards/(*:AWARD_CONTRACT/*:AWARDED_CONTRACT//*[fn:starts-with(fn:local-name(), 'NB_TENDERS')] | *:RESULTS/*:AWARDED_PRIZE//*[fn:starts-with(fn:local-name(), 'NB_PARTICIPANTS')])"/>
+	<xsl:variable name="submission-type-elements" select="fn:distinct-values($submission-types-group/fn:local-name())"/>
 	<xsl:choose>
-		<xsl:when test="$submission-types">
-			<xsl:for-each select="$submission-types">
-				<xsl:variable name="element-name" select="fn:local-name(.)"/>
-				<xsl:variable name="submission-type" select="$mappings//received-submission-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
+		<xsl:when test="fn:count($submission-type-elements) > 0">
+			<xsl:for-each select="$submission-type-elements">
+				<xsl:variable name="element-name" select="."/>
+				<xsl:variable name="eforms-submission-type" select="$mappings//received-submission-types/mapping[ted-value eq $element-name]/fn:string(eforms-value)"/>
+				<xsl:variable name="submission-type-value" select="fn:normalize-space($submission-types-group[fn:local-name() eq $element-name][1])"/>
 				<efac:ReceivedSubmissionsStatistics>
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Received Submissions Type (BT-760)'"/></xsl:call-template>
-					<efbc:StatisticsCode listName="received-submission-type"><xsl:value-of select="$submission-type"/></efbc:StatisticsCode>
+					<efbc:StatisticsCode listName="received-submission-type"><xsl:value-of select="$eforms-submission-type"/></efbc:StatisticsCode>
 					<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Received Submissions Count (BT-759)'"/></xsl:call-template>
-					<efbc:StatisticsNumeric><xsl:value-of select="."/></efbc:StatisticsNumeric>
+					<efbc:StatisticsNumeric><xsl:value-of select="$submission-type-value"/></efbc:StatisticsNumeric>
 				</efac:ReceivedSubmissionsStatistics>
 			</xsl:for-each>
 		</xsl:when>
@@ -683,10 +685,9 @@ These instructions can be un-commented to show the variables
 </xsl:template>
 
 
-
 <xsl:template name="concession">
 	<xsl:choose>
-		<xsl:when test="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VAL_REVENUE|*:VAL_PRICE_PAYMENT|*:INFO_ADD_VALUE) or ($eforms-notice-subtype = ('32','35'))">
+		<xsl:when test="(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VAL_REVENUE|*:VAL_PRICE_PAYMENT|*:INFO_ADD_VALUE)|$ted-form-main-element/*:OBJECT_CONTRACT/*:CALCULATION_METHOD) or ($eforms-notice-subtype = ('32','35'))">
 		<efac:ConcessionRevenue>
 			<!-- Concession Revenue Buyer (BT-160): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue Buyer (BT-160)'"/></xsl:call-template>
@@ -720,20 +721,20 @@ These instructions can be un-commented to show the variables
 
 			<!-- Concession Value Description (BT-163): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Value Description (BT-163)'"/></xsl:call-template>
-			<xsl:variable name="text" select="fn:normalize-space(fn:string-join(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:INFO_ADD_VALUE/*:P, ' '))"/>
+			<xsl:variable name="text" select="fn:normalize-space(fn:string-join($ted-form-main-element/*:OBJECT_CONTRACT/*:CALCULATION_METHOD|*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:INFO_ADD_VALUE/*:P, ' '))"/>
 			<xsl:choose>
 				<xsl:when test="$text ne ''">
 					<!-- as the context of this template is within a variable, to process multilingual versions of the context, it is required to find the same element within the context of the $ted-form-main-element variable -->
 					<xsl:variable name="award-id" select="*:AWARD_CONTRACT/fn:string(@ITEM)"/>
 					<xsl:call-template name="multilingual">
-						<xsl:with-param name="contexts" select="$ted-form-main-element/*:AWARD_CONTRACT[@ITEM=$award-id]/*:AWARDED_CONTRACT/*:INFO_ADD_VALUE"/>
+						<xsl:with-param name="contexts" select="$ted-form-main-element/*:OBJECT_CONTRACT/*:CALCULATION_METHOD|$ted-form-main-element/*:AWARD_CONTRACT[@ITEM=$award-id]/*:AWARDED_CONTRACT/*:INFO_ADD_VALUE"/>
 						<xsl:with-param name="local" select="'P'"/>
 						<xsl:with-param name="element" select="'efbc:ValueDescription'"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="$eforms-notice-subtype = ('32','35')">
 					<!-- WARNING: Concession Value Description (BT-163) is Mandatory for eForms subtypes 32 and 35, but no INFO_ADD_VALUE was found in TED XML. -->
-					<xsl:variable name="message">WARNING: Concession Value Description (BT-163) is Mandatory for eForms subtypes 32 and 35, but no INFO_ADD_VALUE was found in TED XML.</xsl:variable>
+					<xsl:variable name="message">WARNING: Concession Value Description (BT-163) is Mandatory for eForms subtypes 32 and 35, but no CALCULATION_METHOD or INFO_ADD_VALUE was found in TED XML.</xsl:variable>
 					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 				</xsl:when>
 			</xsl:choose>
@@ -868,7 +869,7 @@ These instructions can be un-commented to show the variables
 	</xsl:choose>
 </xsl:template>
 
-<xsl:template match="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/VAL_SUBCONTRACTING">
+<xsl:template match="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VAL_SUBCONTRACTING">
 	<xsl:variable name="ted-value" select="fn:normalize-space(.)"/>
 	<xsl:variable name="currency" select="fn:normalize-space(@CURRENCY)"/>
 	<efbc:TermAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></efbc:TermAmount>
