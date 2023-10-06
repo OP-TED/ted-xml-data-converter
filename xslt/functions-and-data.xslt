@@ -26,12 +26,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:param name="includecomments" select="1" as="xs:integer"/>
 
 <!-- external conversion parameters -->
-<!-- Value for BT-701 Notice Identifier -->
-<xsl:param name="notice-identifier" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'" as="xs:string"/>
-<!-- Value for BT-04 Procedure Identifier -->
-<xsl:param name="procedure-identifier" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'" as="xs:string"/>
+<!-- User-supplied value for BT-701 Notice Identifier -->
+<xsl:param name="notice-identifier" select="''" as="xs:string"/>
+<!-- User-supplied for BT-04 Procedure Identifier -->
+<xsl:param name="procedure-identifier" select="''" as="xs:string"/>
 <!-- Value for SDK version -->
 <xsl:param name="sdk-version" select="$sdk-version-default" as="xs:string"/>
+
+<!-- default value for BT-701 Notice Identifier -->
+<xsl:variable name="notice-identifier-default" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'"/>
+
+<!-- default value for BT-04 Procedure Identifier -->
+<xsl:variable name="procedure-identifier-default" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'"/>
 
 <!-- MAPPING FILES -->
 

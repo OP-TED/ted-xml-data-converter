@@ -179,11 +179,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<cbc:CustomizationID><xsl:value-of select="$sdk-version-value"/></cbc:CustomizationID>
 	<!-- Notice Identifier (BT-701): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Identifier (BT-701)'"/></xsl:call-template>
-	<cbc:ID schemeName="notice-id"><xsl:value-of select="$notice-identifier"/></cbc:ID>
+	<!-- use the "notice-identifier" parameter if supplied, otherwise set a fixed value -->
+	<cbc:ID schemeName="notice-id">
+		<xsl:choose>
+			<xsl:when test="$notice-identifier ne ''"><xsl:value-of select="$notice-identifier"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="$notice-identifier-default"/></xsl:otherwise>
+		</xsl:choose>
+	</cbc:ID>
 	<xsl:if test="not($eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9'))">
 		<!-- Procedure Identifier (BT-04): eForms documentation cardinality (Procedure) = * | Forbidden for PIN subtypes 1-9, E1 and E2; Mandatory for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Identifier (BT-04)'"/></xsl:call-template>
-		<cbc:ContractFolderID><xsl:value-of select="$procedure-identifier"/></cbc:ContractFolderID>
+		<cbc:ContractFolderID>
+			<xsl:choose>
+				<xsl:when test="$procedure-identifier ne ''"><xsl:value-of select="$procedure-identifier"/></xsl:when>
+				<xsl:otherwise><xsl:value-of select="$procedure-identifier-default"/></xsl:otherwise>
+			</xsl:choose>
+		</cbc:ContractFolderID>
 	</xsl:if>
 	<!-- Notice Dispatch Date (BT-05): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Dispatch Date (BT-05)'"/></xsl:call-template>
@@ -221,9 +232,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<cbc:RegulatoryDomain>
 		<xsl:choose>
 			<xsl:when test="$legal-basis ne ''"><xsl:value-of select="$legal-basis"/></xsl:when>
+			<xsl:when test="$directive ne ''"><xsl:value-of select="$mappings//directives/mapping[directive=$directive]/fn:string(legal-basis)"/></xsl:when>
 			<xsl:otherwise><xsl:value-of select="'OTHER'"/></xsl:otherwise>
 		</xsl:choose>
 	</cbc:RegulatoryDomain>
+
 	<!-- Form Type (BT-03) and Notice Type (BT-02): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Form Type (BT-03) and Notice Type (BT-02)'"/></xsl:call-template>
 	<cbc:NoticeTypeCode listName="{$eforms-form-type}"><xsl:value-of select="$eforms-notice-type"/></cbc:NoticeTypeCode>
