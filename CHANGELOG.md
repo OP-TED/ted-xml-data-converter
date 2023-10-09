@@ -1,42 +1,23 @@
 
-# TED XML Data Converter 0.6.0 Release Notes
+# TED XML Data Converter 1.0.0 Release Notes
 
-## Prior Information Notices - TED forms F01, F04, F08, F21, F22, F23
-Templates have been added to convert elements in TED XML Prior Information 
-Notice forms F01, F04, F08, F21, F22, F23.
+This is the first production-ready release of the TED XML Data Converter. It can convert notices published in the R2.0.9 TED schema, versions S01 to S05. It is not able to convert notices published in the R2.0.8 schema, or notices published under the 1370/2007 ("Transport") Regulation.
 
-## Previous versions of R2.0.9 schema
+It is not possible to convert F14 (Corrigendum) notices, due to their text-based format. F20 (Contract Modification) notices can be converted, but only the original contract information will be included, the modifications will be excluded.
 
-In some previous versions of the R2.0.9 schema, different namespace URIs were used. To allow processing of XML files using these schemas without requiring extensive changes to the XSLT code, the "ted" namespace prefix used to reference TED elements was replaced by the * wildcard. Similarly, the "nuts" namespace prefix was replaced by the * wildcard to reference prior versions of the NUTS schema.
+## Code changes
 
-The different namspaces were declared with prefixes as follows:
+* Improved reporting of errors for notices which cannot be converted
+* Fixed subtype mapping for form F15
+* Added mapping from DIRECTIVE to Procedure Legal Basis (BT-01)
+* Derived OJEU Identifier (OPP-011) and OJEU Publication Date (OPP-012) from TED XML
+* Added Description elements to countries-map.xml and languages-map.xml
+* Added new test notices to cover all convertible forms and elements
+WINNER, ADDRESS_WINNER, AWARDED_PRIZE, NO_AWARDED_PRIZE, DATE_DECISION_JURY, NB_PARTICIPANTS, NB_MAX_PARTICIPANTS, NB_MIN_PARTICIPANTS
 
-| prefix | namespace URI |
-| --- | --- |
-| ted | http://publications.europa.eu/resource/schema/ted/R2.0.9/publication | 
-| ted-1 | http://formex.publications.europa.eu/ted/schema/export/R2.0.9.S01.E01 |
-| ted-2 | ted/R2.0.9.S02/publication |
-| n2021 | http://publications.europa.eu/resource/schema/ted/2021/nuts |
-| n2016 | http://publications.europa.eu/resource/schema/ted/2016/nuts |
-| n2016-1 | ted/2016/nuts |
+## Bug fixes
 
-
-* added new namespace declarations
-* changed references to TED elements to use the * wildcard for the namespace prefix
-
-## 2022 Amendment to the eForms Regulation
-
-The amendment to the 2019 eForms Implementing Regulation published in November 2022 [http://data.europa.eu/eli/reg_impl/2022/2303/oj](http://data.europa.eu/eli/reg_impl/2022/2303/oj)  changed and added several business terms.
-
-
-## New parameters to set values for Business Terms
-
-* `"notice-identifier"` for `BT-701 Notice Identifier` 
-* `"procedure-identifier"` for `BT-04 Procedure Identifier` 
-* `"sdk-version"` for the SDK version 
-
-eforms-notice-subtypes.xml
-
-## Minor changes
-* Added mapping file eforms-notice-subtypes.xml to define BT-02 Notice Type and BT-03 Form Type
-* The format of the LotResult Technical ID (OPT-322) was corrected
+* Where INFO_ADD and URL_NATIONAL_PROCEDURE exist together
+* Mapping for F15, Directive 2014/25/EU
+* BT-163 Concession Value Description
+* Links to previous notices: Previous Planning Identifier (BT-125(i)) and Previous Notice Identifier (OPP-090)
