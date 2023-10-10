@@ -316,8 +316,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>1</document-code>
       <document-type>Corrigendum</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="60">
       <form-element>F14_2014</form-element>
@@ -327,8 +327,19 @@
       <legal-basis>ANY</legal-basis>
       <document-code>2</document-code>
       <document-type>Additional information</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
+   </row>
+   <row rowpos="74">
+      <form-element>F14_2014</form-element>
+      <form-number>F14</form-number>
+      <notice-type/>
+      <directive>ANY</directive>
+      <legal-basis>ANY</legal-basis>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="82">
       <form-element>F15_2014</form-element>
@@ -415,8 +426,8 @@
       <legal-basis/>
       <document-code>V</document-code>
       <document-type>Voluntary ex ante transparency notice</document-type>
-      <eforms-subtype>28</eforms-subtype>
-      <notice-description>Voluntary ex-ante transparency notice – concession directive</notice-description>
+      <eforms-subtype>26</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – sectoral directive</notice-description>
    </row>
    <row rowpos="90">
       <form-element>F20_2014</form-element>
@@ -448,7 +459,7 @@
       <legal-basis>32007R1370</legal-basis>
       <document-code>K</document-code>
       <document-type>Modification of a contract/concession during its term</document-type>
-      <eforms-subtype>MOVE</eforms-subtype>
+      <eforms-subtype>T02</eforms-subtype>
       <notice-description/>
    </row>
    <row rowpos="93">
@@ -756,8 +767,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>0</document-code>
       <document-type>Prior information notice without call for competition</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>7</eforms-subtype>
+      <notice-description>Prior information notice used to shorten time limits for receipt of tenders – general directive</notice-description>
    </row>
    <row rowpos="133">
       <form-element>CONTRACT</form-element>
@@ -767,8 +778,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>3</document-code>
       <document-type>Contract notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>16</eforms-subtype>
+      <notice-description>Contract notice – general directive, standard regime</notice-description>
    </row>
    <row rowpos="134">
       <form-element>CONTRACT</form-element>
@@ -778,8 +789,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>Y</document-code>
       <document-type>Dynamic purchasing system</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>16</eforms-subtype>
+      <notice-description>Contract notice – general directive, standard regime</notice-description>
    </row>
    <row rowpos="135">
       <form-element>CONTRACT_AWARD</form-element>
@@ -789,8 +800,10 @@
       <legal-basis>ANY</legal-basis>
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>29</eforms-subtype>
+      <notice-description>Contract award notice – general directive, standard regime</notice-description>
+   </row>
+   <row rowpos="135">
    </row>
    <row rowpos="136">
       <form-element>PERIODIC_INDICATIVE_UTILITIES</form-element>
@@ -800,7 +813,7 @@
       <legal-basis>ANY</legal-basis>
       <document-code>0</document-code>
       <document-type>Prior information notice without call for competition</document-type>
-      <eforms-subtype/>
+      <eforms-subtype>ERROR</eforms-subtype>
       <notice-description/>
    </row>
    <row rowpos="137">
@@ -811,8 +824,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>M</document-code>
       <document-type>Periodic indicative notice with call for competition</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>11</eforms-subtype>
+      <notice-description>Periodic indicative notice used as a call for competition - sectoral directive, standard regime</notice-description>
    </row>
    <row rowpos="138">
       <form-element>PERIODIC_INDICATIVE_UTILITIES</form-element>
@@ -822,8 +835,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>P</document-code>
       <document-type>Periodic indicative notice without call for competition</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>5</eforms-subtype>
+      <notice-description>Periodic indicative notice used only for information – sectoral directive</notice-description>
    </row>
    <row rowpos="139">
       <form-element>CONTRACT_UTILITIES</form-element>
@@ -833,8 +846,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>3</document-code>
       <document-type>Contract notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>17</eforms-subtype>
+      <notice-description>Contract notice – sectoral directive, standard regime</notice-description>
    </row>
    <row rowpos="140">
       <form-element>CONTRACT_UTILITIES</form-element>
@@ -844,8 +857,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>Y</document-code>
       <document-type>Dynamic purchasing system</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>17</eforms-subtype>
+      <notice-description>Contract notice – sectoral directive, standard regime</notice-description>
    </row>
    <row rowpos="141">
       <form-element>CONTRACT_AWARD_UTILITIES</form-element>
@@ -855,8 +868,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>30</eforms-subtype>
+      <notice-description>Contract award notice – sectoral directive, standard regime</notice-description>
    </row>
    <row rowpos="142">
       <form-element>QUALIFICATION_SYSTEM_UTILITIES</form-element>
@@ -866,8 +879,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>O</document-code>
       <document-type>Qualification system with call for competition</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>15</eforms-subtype>
+      <notice-description>Notice on the existence of a qualification system — sectoral directive</notice-description>
    </row>
    <row rowpos="143">
       <form-element>QUALIFICATION_SYSTEM_UTILITIES</form-element>
@@ -877,8 +890,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>Q</document-code>
       <document-type>Qualification system without call for competition</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>15</eforms-subtype>
+      <notice-description>Notice on the existence of a qualification system — sectoral directive</notice-description>
    </row>
    <row rowpos="144">
       <form-element>BUYER_PROFILE</form-element>
@@ -888,19 +901,30 @@
       <legal-basis>ANY</legal-basis>
       <document-code>B</document-code>
       <document-type>Buyer profile</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>3</eforms-subtype>
+      <notice-description>Notice of the publication of a prior information notice on a buyer profile - defence directive</notice-description>
    </row>
    <row rowpos="147">
       <form-element>SIMPLIFIED_CONTRACT</form-element>
       <form-number>9</form-number>
       <notice-type/>
-      <directive>ANY</directive>
-      <legal-basis>ANY</legal-basis>
+      <directive>2004/17/EC</directive>
+      <legal-basis/>
       <document-code>3</document-code>
       <document-type>Contract notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>17</eforms-subtype>
+      <notice-description>Contract notice – sectoral directive, standard regime</notice-description>
+   </row>
+   <row rowpos="148">
+      <form-element>SIMPLIFIED_CONTRACT</form-element>
+      <form-number>9</form-number>
+      <notice-type/>
+      <directive>2004/18/EC</directive>
+      <legal-basis/>
+      <document-code>3</document-code>
+      <document-type>Contract notice</document-type>
+      <eforms-subtype>16</eforms-subtype>
+      <notice-description>Contract notice – general directive, standard regime</notice-description>
    </row>
    <row rowpos="149">
       <form-element>CONCESSION</form-element>
@@ -910,8 +934,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>C</document-code>
       <document-type>Works concession</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>19</eforms-subtype>
+      <notice-description>Concession notice – concessions directive, standard regime</notice-description>
    </row>
    <row rowpos="150">
       <form-element>CONTRACT_CONCESSIONAIRE</form-element>
@@ -921,41 +945,85 @@
       <legal-basis>ANY</legal-basis>
       <document-code>E</document-code>
       <document-type>Works contracts awarded by the concessionnaire</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>19</eforms-subtype>
+      <notice-description>Concession notice – concessions directive, standard regime</notice-description>
    </row>
    <row rowpos="151">
       <form-element>DESIGN_CONTEST</form-element>
       <form-number>12</form-number>
       <notice-type/>
-      <directive>ANY</directive>
-      <legal-basis>ANY</legal-basis>
+      <directive>2004/17/EC</directive>
+      <legal-basis/>
       <document-code>D</document-code>
       <document-type>Design contest</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>24</eforms-subtype>
+      <notice-description>Design contest notice – sectoral directive, design</notice-description>
+   </row>
+   <row rowpos="152">
+      <form-element>DESIGN_CONTEST</form-element>
+      <form-number>12</form-number>
+      <notice-type/>
+      <directive>2004/18/EC</directive>
+      <legal-basis/>
+      <document-code>D</document-code>
+      <document-type>Design contest</document-type>
+      <eforms-subtype>23</eforms-subtype>
+      <notice-description>Design contest notice – general directive, design</notice-description>
    </row>
    <row rowpos="153">
       <form-element>RESULT_DESIGN_CONTEST</form-element>
       <form-number>13</form-number>
       <notice-type/>
-      <directive>ANY</directive>
-      <legal-basis>ANY</legal-basis>
+      <directive>2004/17/EC</directive>
+      <legal-basis/>
       <document-code>R</document-code>
       <document-type>Results of design contests</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>37</eforms-subtype>
+      <notice-description>Design contest result notice – sectoral directive, design</notice-description>
+   </row>
+   <row rowpos="154">
+      <form-element>RESULT_DESIGN_CONTEST</form-element>
+      <form-number>13</form-number>
+      <notice-type/>
+      <directive>2004/18/EC</directive>
+      <legal-basis/>
+      <document-code>R</document-code>
+      <document-type>Results of design contests</document-type>
+      <eforms-subtype>36</eforms-subtype>
+      <notice-description>Design contest result notice – general directive, design</notice-description>
    </row>
    <row rowpos="155">
       <form-element>VOLUNTARY_EX_ANTE_TRANSPARENCY_NOTICE</form-element>
       <form-number>15</form-number>
       <notice-type/>
-      <directive>ANY</directive>
-      <legal-basis>ANY</legal-basis>
+      <directive>2004/17/EC</directive>
+      <legal-basis/>
       <document-code>V</document-code>
       <document-type>Voluntary ex ante transparency notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>26</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – sectoral directive</notice-description>
+   </row>
+   <row rowpos="156">
+      <form-element>VOLUNTARY_EX_ANTE_TRANSPARENCY_NOTICE</form-element>
+      <form-number>15</form-number>
+      <notice-type/>
+      <directive>2004/18/EC</directive>
+      <legal-basis/>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>25</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – general directive</notice-description>
+   </row>
+   <row rowpos="157">
+      <form-element>VOLUNTARY_EX_ANTE_TRANSPARENCY_NOTICE</form-element>
+      <form-number>15</form-number>
+      <notice-type/>
+      <directive>2009/81/EC</directive>
+      <legal-basis/>
+      <document-code>V</document-code>
+      <document-type>Voluntary ex ante transparency notice</document-type>
+      <eforms-subtype>27</eforms-subtype>
+      <notice-description>Voluntary ex-ante transparency notice – defence directive</notice-description>
    </row>
    <row rowpos="158">
       <form-element>PRIOR_INFORMATION_DEFENCE</form-element>
@@ -1010,7 +1078,7 @@
       <document-code>0</document-code>
       <document-type>Prior information notice without call for competition</document-type>
       <eforms-subtype>T01</eforms-subtype>
-      <notice-description/>
+      <notice-description>Planning notice for public passenger transport services by rail and by road</notice-description>
    </row>
    <row rowpos="163">
       <form-element>PRIOR_INFORMATION_MOVE</form-element>
@@ -1021,7 +1089,7 @@
       <document-code>3</document-code>
       <document-type>Contract notice</document-type>
       <eforms-subtype>T01</eforms-subtype>
-      <notice-description/>
+      <notice-description>Planning notice for public passenger transport services by rail and by road</notice-description>
    </row>
    <row rowpos="164">
       <form-element>CONTRACT_MOVE</form-element>
@@ -1032,7 +1100,7 @@
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
       <eforms-subtype>T02</eforms-subtype>
-      <notice-description/>
+      <notice-description>Result notice for public passenger transport services by rail and by road</notice-description>
    </row>
    <row rowpos="165">
       <form-element>MOVE</form-element>
@@ -1043,7 +1111,7 @@
       <document-code>0</document-code>
       <document-type>Prior information notice without call for competition</document-type>
       <eforms-subtype>T01</eforms-subtype>
-      <notice-description/>
+      <notice-description>Planning notice for public passenger transport services by rail and by road</notice-description>
    </row>
    <row rowpos="166">
       <form-element>MOVE</form-element>
@@ -1054,7 +1122,7 @@
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
       <eforms-subtype>T02</eforms-subtype>
-      <notice-description/>
+      <notice-description>Result notice for public passenger transport services by rail and by road</notice-description>
    </row>
    <row rowpos="167">
       <form-element>EEIG</form-element>
@@ -1064,7 +1132,7 @@
       <legal-basis>ANY</legal-basis>
       <document-code>G</document-code>
       <document-type>European economic interest grouping (EEIG)</document-type>
-      <eforms-subtype/>
+      <eforms-subtype>X01 / X02</eforms-subtype>
       <notice-description/>
    </row>
    <row rowpos="168">
@@ -1075,8 +1143,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>0</document-code>
       <document-type>Prior information notice without call for competition</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="169">
       <form-element>OTH_NOT</form-element>
@@ -1086,8 +1154,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>1</document-code>
       <document-type>Corrigendum</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="170">
       <form-element>OTH_NOT</form-element>
@@ -1097,8 +1165,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>2</document-code>
       <document-type>Additional information</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="171">
       <form-element>OTH_NOT</form-element>
@@ -1108,8 +1176,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>3</document-code>
       <document-type>Contract notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="172">
       <form-element>OTH_NOT</form-element>
@@ -1119,8 +1187,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>4</document-code>
       <document-type>Prequalification notices</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="173">
       <form-element>OTH_NOT</form-element>
@@ -1130,8 +1198,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>5</document-code>
       <document-type>Request for proposals</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="174">
       <form-element>OTH_NOT</form-element>
@@ -1141,8 +1209,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>7</document-code>
       <document-type>Contract award notice</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="175">
       <form-element>OTH_NOT</form-element>
@@ -1152,8 +1220,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>9</document-code>
       <document-type>Not applicable</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="176">
       <form-element>OTH_NOT</form-element>
@@ -1163,8 +1231,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>I</document-code>
       <document-type>Call for expressions of interest</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="177">
       <form-element>OTH_NOT</form-element>
@@ -1174,8 +1242,8 @@
       <legal-basis>ANY</legal-basis>
       <document-code>P</document-code>
       <document-type>Periodic indicative notice without call for competition</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
    <row rowpos="178">
       <form-element>OTH_NOT</form-element>
@@ -1185,7 +1253,7 @@
       <legal-basis>ANY</legal-basis>
       <document-code>S</document-code>
       <document-type>European company</document-type>
-      <eforms-subtype/>
-      <notice-description/>
+      <eforms-subtype>NOT_POSSIBLE</eforms-subtype>
+      <notice-description>Not possible to convert this notice</notice-description>
    </row>
 </mapping>
