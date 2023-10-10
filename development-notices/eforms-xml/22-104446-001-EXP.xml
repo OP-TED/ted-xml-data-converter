@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,7 +6,7 @@
                  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -118,9 +117,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">41/2022</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2022-02-28+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -150,7 +149,6 @@
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>FRA</cbc:ID>
    </cac:AdditionalNoticeLanguage>
-   <!--Notice Official Language (BT-702) (additional)-->
    <cac:AdditionalNoticeLanguage>
       <cbc:ID>DEU</cbc:ID>
    </cac:AdditionalNoticeLanguage>
@@ -205,7 +203,7 @@
       <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Notice Identifier (OPP-090)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
@@ -223,6 +221,8 @@
       <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <cbc:Note languageID="ENG">Partial offers are permitted. Conditions for tenderers from Non-Member States of the WTO Agreement on Government Procurement:none. Terms of business: General Terms and Conditions (AGB) of the ETH Domain for the procurement of services, latest version. Negotiations: No walk-through takes place. Essential requirements:1a. For services provided in Switzerland The contracting authority shall award public contracts for services in Switzerland only to a provider (hereinafter referred to as provider) which guarantees compliance with occupational health and safety regulations and working conditions for employees and equal pay for men and women. 1b. For services provided abroad If the service is provided abroad, the provider must at least ensure compliance with the following core conventions of the International Labour Organisation (ILO core conventions): - Convention No. 29 of 28 June 1930 concerning forced or compulsory labour (SR 0.822.713.9); - Convention No. 87 of 9 July 1948 concerning Freedom of Association and Protection of the Right to Organise (SR 0.822.719.7); - Convention No. 98 of 1 July 1949 concerning the Application of the Principles of the Right to Organise and to Bargain Collectively (SR 0.822.719.9); - Convention No. 100 of 29 June 1951 concerning Equal Remuneration of Men and Women Workers for Work of Equal Value (SR 0.822.720.0); - Convention No. 105 of 25 June 1957 concerning the Abolition of Forced Labour (SR 0.822.720.5); - Convention No. 111 of 25 June 1958 concerning Discrimination in Respect of Employment and Occupation (SR 0.822.721.1); - Convention No. 138 of 26 June 1973 concerning the minimum age for admission to employment (SR 0.822.723.8); - Convention No. 182 of 17 June 1999 concerning the prohibition and immediate action for the elimination of the worst forms of child labour (SR 0.822.728.2). 2. compliance with minimum social standards by subcontractors and subcontractors The client requires that the subcontractors and subcontractors also comply with the minimum social standards listed above. If a subcontractor or subcontractor provides its services in Switzerland, it must comply with the minimum social regulations applicable in Switzerland pursuant to section 1a; if it provides its services abroad, it must at least comply with the ILO core conventions pursuant to section 1b. A self-declaration must be submitted for confirmation. Additional information: Additional option according to specifications 7.2.3 Option "In vitro genotoxicity study" (independent of lots A, B &amp; C). Procedures for appeal:In accordance with Article 56 paragraph 1 of the Public Procurement Act (PPA), a written appeal against this decision can be lodged with the Federal Administrative Court, P.O. Box, 9023 St. Gallen, Switzerland, within 20 days of notification. Any appeal is to be submitted in duplicate and must include what is being sought, the grounds for appeal, evidence and the signature of the person lodging the appeal or his or her representative. A copy of this decision and available evidence must be included. The provisions of the Administrative Procedure Act (APA) on legal holidays do not apply in accordance with Article 56 paragraph 2 of the PPA. Based on Article 52 paragraph 2 of the PPA, the appeal can be used only to establish that this decision violates federal law, but not to apply for its cancellation. Foreign providers are permitted to appeal only to the extent that the state in which they are domiciled grants reciprocal rights. Deadline / Remarks: 1x electronically as PDF file by e-mail (size of max. 20 MB per e-mail message) or by post on USB stick. If the offer is submitted only by mail on a USB stick, please notify by e-mail to publictender@ethz.ch. Remarks (Desired deadline for questions in written form)Written questions will be accepted in the forum of www.simap.ch until the mentioned date. After this date, they will be anonymized and made available again on www.simap.ch together with the corresponding answers. National reference publication: Simap of 23.02.2022 , doc. 1247655Desired deadline for questions in written form: 08.03.2022. Conditions for obtaining the tendering documentation: Please send us an e-mail message to publictender@ethz.ch with the signed non-disclosure agreement (NDA) to request the tender documents. Conditions of paymentThe documents will only be handed over on request. To do so, please send an e-mail with the signed non-disclosure agreement (NDA) to publictender@ethz.ch and ask for the tender documents. We will then send them to you by e-mail.</cbc:Note>
+      <cbc:Note languageID="FRA">Des offres partielles sont admises. Conditions pour les soumissionnaires provenant d'États non membres de l'Accord sur les marchés publics de l'OMC: aucunes. Conditions générales: Conditions générales (CG) du Domaine des écoles polytechniques fédérales relatives à l’achat de services, version actuelle. Négociations: Il n'y a pas d'inspection. Exigences fondamentales:1a. Prestations fournies en Suisse Pour les prestations fournies en Suisse, l'adjudicateur n'adjuge les marchés publics qu'à des soumissionnaires qui garantissent le respect des dispositions sur la protection du travail et des conditions de travail ainsi que l'égalité salariale entre femmes et hommes. 1b. Prestations fournies à l’étranger Si la prestation est exécutée à l’étranger, le soumissionnaire doit garantir au moins le respect des conventions fondamentales de l’Organisation internationale du travail (conventions fondamentales de l'OIT), à savoir les conventions suivantes: - Convention no 29 du 28 juin 1930 concernant le travail forcé ou obligatoire (RS 0.822.713.9); - Convention no 87 du 9 juillet 1948 concernant la liberté syndicale et la protection du droit syndical (RS 0.822.719.7); - Convention n° 98 du 1er juillet 1949 concernant l’application des principes du droit d’organisation et de négociation collective (RS 0.822.719.9); - Convention no 100 du 29 juin 1951 concernant l’égalité de rémunération entre la maind’œuvre masculine et la main-d’oeuvre féminine pour un travail de valeur égale (RS 0.822.720.0); - Convention no 105 du 25 juin 1957 concernant l’abolition du travail forcé (RS 0.822.720.5); - Convention no 111 du 25 juin 1958 concernant la discrimination en matière d’emploi et de profession (RS 0.822.721.1); - Convention no 138 du 26 juin 1973 concernant l’âge minimum d’admission à l’emploi (RS 0.822.723.8); - Convention no 182 du 17 juin 1999 concernant l’interdiction des pires formes de travail des enfants et l’action immédiate en vue de leur élimination (RS 0.822.728.2). 2. Respect des normes sociales minimales par les sous-traitants L’adjudicateur exige que les sous-traitants respectent les normes sociales minimales susmentionnées. S'ils fournissent leur prestation en Suisse, les sous-traitants doivent observer les normes sociales minimales en vigueur en Suisse (chiffre 1a); s'ils fournissent leur prestation à l’étranger, ils sont tenus de respecter au moins les conventions fondamentales de l'OIT (chiffre 1b). A confirmer par une déclaration du soumissionnaire. Autres indications: Option supplémentaire selon les spécifications 7.2.3 Option "Étude de génotoxicité in vitro" (indépendante des lots A, B et C). Indication des voies de recours: Conformément à l'art. 56, al. 1, de la loi fédérale sur les marchés publics (LMP), la présente décision peut être attaquée, dans un délai de 20 jours à compter de sa notification, auprès du Tribunal administratif fédéral, case postale, 9023 Saint-Gall. Présenté en deux exemplaires, le mémoire de recours doit indiquer les conclusions, les motifs et les moyens de preuve et porter la signature de la partie recourante ou de son représentant ; y seront jointes une copie de la présente décision et les pièces invoquées comme moyens de preuve, lorsqu'elles sont disponibles. Conformément à l'art. 56, al. 2, LMP, les dispositions de la Loi fédérale sur la procédure administrative (PA) relatives à la suspension des délais ne s'appliquent pas. Conformément à l'art. 52, al. 2, LMP, les recours peuvent tendre uniquement à faire constater que ladite décision enfreint le droit fédéral, et non à son annulation. Les soumissionnaires étrangers ne peuvent faire recours que si l'État dans lequel ils ont leur siège accorde la réciprocité. Délai de clôture pour le dépôt des offres / Remarques: 1x elektronisch als PDF-Datei per E-Mail (Dateigrösse max. 20 MB pro E-Mail) oder per Post auf USB-Stick. Falls das Angebot nur per Post auf einem USB-Stick eingereicht wird, bitte Benachrichtigung per E-Mail an publictender@ethz.ch.1x électronique (pdf) par courriel (taille du fichier max. 20 MB par e-mail) ou par poste USB. Si l'offre est soumise uniquement par voie postale sur une clé USB, veuillez-nous en informer par e-mail à publictender@ethz.ch. Remarques (Délai souhaité pour poser des questions par écrit)Questions par écrit au forum sur www.simap.ch seront acceptées jusqu'à la date mentionnée. Elles seront rendues anonyme et publiées conjointement avec les réponses de nouveau sur www.simap.ch. Publication de référence nationale: Simap de la 23.02.2022 ,doc. 1247657Délai souhaité pour poser des questions par écrit: 08.03.2022. Conditions à l'obtention du dossier d'appel d'offres: Veuillez nous envoyer un message électronique à publictender@ethz.ch avec l'accord de non-divulgation (NDA) signé pour demander les documents d'appel d'offres. Conditions de paiement Les documents ne seront remis que sur demande. Pour ce faire, veuillez envoyer un e-mail avec l'accord de non-divulgation (NDA) signé à publictender@ethz.ch et demander les documents de l'appel d'offres. Nous vous les enverrons alors par e-mail.</cbc:Note>
+      <cbc:Note languageID="DEU">Teilangebote sind zugelassen. Voraussetzungen für Anbieter aus Staaten, die nicht dem WTO-Beschaffungsübereinkommen angehören: Keine. Geschäftsbedingungen: AGBs des ETH-Bereichs für die Beschaffung von Dienstleistungen. Verhandlungen: Es findet keine Begehung statt. Grundsätzliche Anforderungen: Die Auftraggeberin vergibt diesen Auftrag nur an Anbieter, welche die in den Ausschreibungsunterlagen und der Gesetzgebung festgelegten Teilnahmebedingungen einhalten. Dies betrifft insbesondere die Einhaltung der Arbeitsschutzbestimmungen, der Arbeitsbedingungen, der Lohngleichheit, des Umweltrechts und das wettbewerbskonforme und korruptionsfreie Verhalten. Sonstige Angaben: Zusätzliche Option gem. Pflichtenheft 7.2.3. Option “In vitro genotoxicity study” (unabhängig der Lose A, B &amp; C). Rechtsmittelbelehrung: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen. Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung. Gestützt auf Art. 52 Abs. 2 BöB kann mit der Beschwerde einzig die Feststellung, dass die vorliegende Verfügung Bundesrecht verletzt, nicht jedoch deren Aufhebung beantragt werden. Ausländische Anbieterinnen sind zur Beschwerde nur zugelassen, soweit der Staat, in dem sie ihren Sitz haben, Gegenrecht gewährt. Schlusstermin / Bemerkungen: 1x elektronisch als PDF-Datei per E-Mail (Dateigrösse max. 20 MB pro E-Mail) oder per Post auf USB-Stick. Falls das Angebot nur per Post auf einem USB-Stick eigereicht wird, bitte Benachrichtigung per E-Mail an publictender@ethz.ch. Bemerkungen (Termin für schriftliche Fragen)Bis zum genannten Datum werden schriftliche Fragen im Forum von www.simap.ch entgegengenommen. Danach werden Sie anonymisiert und zusammen mit den entsprechenden Antworten wiederum auf www.simap.ch zur Verfügung gestellt. Nationale Referenz-Publikation: Simap vom 23.02.2022 , Dok. 1247563Gewünschter Termin für schriftliche Fragen bis: 08.03.2022. Bedingungen zum Bezug der Ausschreibungsunterlagen: Bitte senden Sie uns eine E-Mail Nachricht mit unterzeichneter Geheimhaltungsvereinbarung (NDA) zu um die Ausschreibungsunterlagen zu verlangen. ZahlungsbedingungenDie Unterlagen werden nur auf Verlangen abgegeben. Dazu senden Sie bitte eine E-Mail an publictender@ethz.ch und verlangen nach den Ausschreibeunterlagen. Diese stellen wir Ihnen dann per E-Mail zu.</cbc:Note>
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
@@ -267,7 +267,6 @@
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
@@ -484,7 +483,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -523,6 +521,9 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
             <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
@@ -647,7 +648,6 @@
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
@@ -864,7 +864,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -903,6 +902,9 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
             <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
@@ -1027,7 +1029,6 @@
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
-         <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
@@ -1184,7 +1185,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1223,6 +1223,9 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>false</cbc:LimitationDescription>
             <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->

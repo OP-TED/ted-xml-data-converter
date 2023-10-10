@@ -38,6 +38,8 @@ Each folder also contains a README.md file listing the files in that folder and 
 
 Basic usage instructions for developers to run the code in their own system is available [here](usage-information.md).
 
+An API for this converter will be made available soon.
+
 
 ## Versioning scheme
 

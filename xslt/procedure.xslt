@@ -84,9 +84,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 			<xsl:otherwise>
 				<xsl:if test="*:PROCEDURE/*:TERMINATION_PIN">
 					<xsl:variable name="message"> WARNING: PIN Competition Termination (BT-756) is forbidden for this subtype but TERMINATION_PIN was found in the TED XML</xsl:variable>
-					<xsl:call-template name="report-warning">
-						<xsl:with-param name="message" select="$message"/>
-					</xsl:call-template>
+					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 				</xsl:if>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -96,7 +94,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:template match="*:NOTICE_NUMBER_OJ">
 	<xsl:variable name="text" select="fn:normalize-space(.)"/>
 	<cac:NoticeDocumentReference>
-		<cbc:ID schemeName="ojs-notice-id"><xsl:value-of select="$text"/></cbc:ID>
+		<cbc:ID schemeName="ojs-notice-id"><xsl:value-of select="concat(concat(format-number(number(tokenize($text, '-')[2]), '00000000'), '-'), substring($text, 1, 4))"/></cbc:ID>
 	</cac:NoticeDocumentReference>
 </xsl:template>
 
@@ -160,13 +158,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:variable name="url-national-procedure" select="fn:normalize-space(*:PROCEDURE/*:URL_NATIONAL_PROCEDURE)"/>
 	<xsl:if test="($info-add ne '') or ($url-national-procedure ne '')">
 		<xsl:choose>
-			<xsl:when test="fn:false()">
+			<xsl:when test="$ted-form-additional-elements">
 				<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
 					<xsl:variable name="form-element" select="."/>
 					<xsl:variable name="ted-language" select="fn:string(@LG)"/>
 						<xsl:variable name="language" select="opfun:get-eforms-language($ted-language)"/>
 						<xsl:variable name="info-add-lang" as="xs:string">
-							<xsl:if test="$info-add">
+							<xsl:if test="$info-add ne ''">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
 										<xsl:with-param name="context" select="$form-element"/>
@@ -177,7 +175,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 							</xsl:if>
 						</xsl:variable>
 						<xsl:variable name="url-national-procedure-lang">
-							<xsl:if test="$url-national-procedure">
+							<xsl:if test="$url-national-procedure ne ''">
 								<xsl:variable name="parent">
 									<xsl:call-template name="find-element">
 										<xsl:with-param name="context" select="$form-element"/>
@@ -189,7 +187,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 						</xsl:variable>
 					<xsl:variable name="text">
 						<xsl:value-of select="$info-add-lang"/>
-						<xsl:if test="$url-national-procedure-lang">
+						<xsl:if test="$url-national-procedure-lang ne ''">
 							<xsl:variable name="form-text" select="$translations//translation[@key='procedure-note']/text[@lang=$ted-language]/fn:string()"/>
 							<xsl:if test="$info-add-lang"><xsl:text> </xsl:text></xsl:if>
 							<xsl:value-of select="$form-text"/>

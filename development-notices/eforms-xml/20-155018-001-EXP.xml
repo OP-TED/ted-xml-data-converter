@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <PriorInformationNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
                          xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                          xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,7 +6,7 @@
                          xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                          xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                          xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -57,9 +56,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">63/2020</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2020-03-30+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -84,6 +83,7 @@
    <cbc:NoticeTypeCode listName="planning">pin-only</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
    <!-- cac:ContractingParty -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
@@ -126,7 +126,7 @@
       <!--Procedure Type (BT-105)-->
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <!--Previous Planning Identifier (BT-125)-->
+      <!--Previous Notice Identifier (OPP-090)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
@@ -157,7 +157,7 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
       <cbc:ID schemeName="Part">PAR-0000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
-      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)--><!--Performing Staff Qualification (BT-79)--><!--Recurrence (BT-94)--><!--Recurrence Description (BT-95)--><!--Security Clearance Deadline (BT-78)--><!--Multiple Tenders (BT-769)--><!--Documents Restricted Justification (BT-707)--><!--Documents Official Language (BT-708)--><!--Documents Unofficial Language (BT-737)--><!--Terms Financial (BT-77)--><!--Reserved Participation (BT-71)--><!--Reserved Participation (BT-71)--><!--Tenderer Legal Form (BT-761)--><!--Tenderer Legal Form Description (BT-76)--><!--Late Tenderer Information (BT-771)--><!--Subcontracting Tender Indication (BT-651)--><!--Subcontracting Obligation (BT-65)--><!--Subcontracting Obligation Maximum (BT-729)--><!--Subcontracting Obligation Minimum (BT-64)--><!--Reserved Execution (BT-736)--><!--Electronic Invoicing (BT-743)--><!--Terms Performance (BT-70)--><!--Submission Electronic Catalog (BT-764)--><!--Submission Electronic Signature (BT-744)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)--><!--EU Funds (BT-60)--><!--Performing Staff Qualification (BT-79)--><!--Recurrence (BT-94)--><!--Recurrence Description (BT-95)--><!--Security Clearance Deadline (BT-78)--><!--Multiple Tenders (BT-769)--><!--Documents Restricted Justification (BT-707)--><!--Documents Official Language (BT-708)--><!--Documents Unofficial Language (BT-737)--><!--Terms Financial (BT-77)--><!--Reserved Participation (BT-71)--><!--Tenderer Legal Form (BT-761)--><!--Tenderer Legal Form Description (BT-76)--><!--Late Tenderer Information (BT-771)--><!--Subcontracting Tender Indication (BT-651)--><!--Subcontracting Obligation (BT-65)--><!--Subcontracting Obligation Maximum (BT-729)--><!--Subcontracting Obligation Minimum (BT-64)--><!--Reserved Execution (BT-736)--><!--Electronic Invoicing (BT-743)--><!--Terms Performance (BT-70)--><!--Submission Electronic Catalog (BT-764)--><!--Submission Electronic Signature (BT-744)-->
          <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
@@ -172,7 +172,6 @@
          <!--Review organization-->
          <!--Mediation organization-->
          <!--Submission Language (BT-97)-->
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -201,6 +200,7 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

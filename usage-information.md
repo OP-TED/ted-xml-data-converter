@@ -9,7 +9,7 @@ Please see [development-methodology.md](development-methodology.md) for the appr
 
 Please see [installation.md](installation.md) for installation and usage instructions.
 
-An API for the converter is being developed which will allow conversion of notices via HTTPS requests.
+An API for the converter will be made available soon which will allow conversion of notices via HTTPS requests.
 <br>
 
 <br>
@@ -56,5 +56,6 @@ Parameters passed to the XSLT processor may be used to set values for some Busin
 
 ### Parameters to change display of Warnings and Business Term comments
 
+* Set parameter `"includecomments"` to 0 to suppress Business Terms as HTML comments 
 * Set parameter `"includewarnings"` to 0 to suppress Warnings as HTML comments 
 * Set parameter `"showwarnings"` to 0 to suppress Warnings as application messages 
