@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,19 +6,19 @@
                  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode listName="notice-subtype">17</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>www.giessen.de</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -27,98 +26,55 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Skive Fjernvarme A.m.b.A.</cbc:Name>
+                           <cbc:Name>Magistrat der Universitätsstadt Gießen - Hochbauamt -</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Marius Jensens Vej 3</cbc:StreetName>
+                           <cbc:StreetName>Berliner Platz 1</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Skive</cbc:CityName>
+                           <cbc:CityName>Gießen</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>7800</cbc:PostalZone>
+                           <cbc:PostalZone>35390</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">DK050</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">DNK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:PartyLegalEntity>
-                           <cbc:CompanyID>68326214</cbc:CompanyID>
-                        </cac:PartyLegalEntity>
-                        <cac:Contact><!--Organization Contact Point (BT-502)-->
-                           <cbc:Name>Niels Otto Clausen</cbc:Name>
-                           <!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+45 24696712</cbc:Telephone>
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+49 6413061420</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+49 6413062661</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>ncl@cowi.com</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>submissionsstelle@giessen.de</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>https://naevneneshus.dk/start-din-klage/klagenaevnet-for-udbud/</cbc:WebsiteURI>
-                        <!--Winner Size (BT-165)-->
-                        <!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Klagenævnet for Udbud</cbc:Name>
+                           <cbc:Name>Vergabekammer des Landes Hessen beim Regierungspräsidium Darmstadt</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Toldboden 2</cbc:StreetName>
+                           <cbc:StreetName>Dienstgebäude: Wilhelminenstraße 1-3; Fristenbriefkasten: Luisenplatz 2</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Viborg</cbc:CityName>
+                           <cbc:CityName>Darmstadt</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>8800</cbc:PostalZone>
+                           <cbc:PostalZone>64283</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">DNK</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+45 72405600</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+49 6151125816 / +49 6151126834</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>klfu@naevneneshus.dk</cbc:ElectronicMail>
-                        </cac:Contact>
-                     </efac:Company>
-                  </efac:Organization>
-                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>www.kfst.dk</cbc:WebsiteURI>
-                        <!--Winner Size (BT-165)-->
-                        <!--Organization Technical Identifier (OPT-200)-->
-                        <cac:PartyIdentification>
-                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
-                        </cac:PartyIdentification>
-                        <!--Organization Name (BT-500)-->
-                        <cac:PartyName>
-                           <cbc:Name>Konkurrence- og Forbrugerstyrelsen</cbc:Name>
-                        </cac:PartyName>
-                        <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>Carl Jacobsens Vej 35</cbc:StreetName>
-                           <!--Organization City (BT-513)-->
-                           <cbc:CityName>Valby</cbc:CityName>
-                           <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>2500</cbc:PostalZone>
-                           <!--Organization Country Subdivision (BT-507)-->
-                           <!--Organization Country Code (BT-514)-->
-                           <cac:Country>
-                              <cbc:IdentificationCode listName="country">DNK</cbc:IdentificationCode>
-                           </cac:Country>
-                        </cac:PostalAddress>
-                        <!--Organization Identifier (BT-501)-->
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+45 41715000</cbc:Telephone>
-                           <!--Organization Contact Fax (BT-739)-->
-                           <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>kfst@kfst.dk</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -127,9 +83,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">133/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2021-07-13+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -150,24 +106,26 @@
    <cbc:VersionID>01</cbc:VersionID>
    <!--Future Notice (BT-127)-->
    <!--Procedure Legal Basis (BT-01)-->
-   <cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>DAN</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
    <!-- cac:ContractingParty -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
-      <cbc:BuyerProfileURI>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10)-->
-      <!--Activity Entity (BT-610)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode listName="entity-activity">gas-heat</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
          <cac:PartyIdentification>
             <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -204,18 +162,18 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">A225983</cbc:ID>
+      <cbc:ID schemeName="InternalID">65.21.106</cbc:ID>
       <!--Title (BT-21)-->
-      <cbc:Name languageID="DAN">Skive Biomassevarme - flisfyret kedelanlæg til fjernvarmeproduktion</cbc:Name>
+      <cbc:Name languageID="DEU">Fachplanungsleistung Heizung/Lüftung/Klimatisierung/Sanitär für Neukonzeption des Oberhessischen Museums Gießen, Georg-Schlosser-Straße 2 (LH), Kirchenplatz 6 (WH), 35390 Gießen</cbc:Name>
       <!--Description (BT-24)-->
-      <cbc:Description languageID="DAN">Totalentreprise vedrørende levering, montering, idriftssættelse af flisfyret kedelcentral med fjernvarmeproduktion og med træflis som brændsel.</cbc:Description>
+      <cbc:Description languageID="DEU">Das Oberhessische Museum Gießen präsentiert an den drei Standorten Altes Schloss (AS), Leib’sches Haus (LH) und Wallenfels’sches Haus (WH) (alle Kulturdenkmäler) eine umfassende Sammlung. Der bereits abgeschlossene Realisierungswettbewerb diente unter Berücksichtigung eines neuen Raumprogrammes und des Denkmalschutzes u. a. der Umsetzung baulicher Maßnahmen zur Barrierefreiheit und zur Einhaltung des Brandschutzes. Gegenstand dieses VgV-Verfahrens sind hinsichtlich der Fachplanerleistungen HLS die LPH 1 bis 4, d. h. die Grundlagenermittlung, die Vorplanung, die Entwurfs- und (sofern und soweit erforderlich) die Genehmigungsplanung. Eine Bauantragserstellung ist erforderlich. Weiterhin sind die Durchführung der LPH 5 bis 9 für die Gesamtmaßnahme, d. h. die Ausführungsplanung, die Vorbereitung und die Mitwirkung bei der Vergabe, die Objektüberwachung und die Objektbetreuung und Dokumentation Bestandteil der Fachplanerleistung.</cbc:Description>
       <!--Main Nature (BT-23)-->
-      <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
       <!--Estimated Value (BT-27)-->
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -236,34 +194,10 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension><!--EU Funds Financing Identifier (BT-5010)--><!--EU Funds Programme (BT-7220)--><!--EU Funds Details (BT-6140)-->
                      <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+                        <cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
                         <!--Selection Criteria Name (BT-749)-->
                         <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="DAN">Ansøger skal oplyse følgende vedrørende ansøgers økonomiske og finansielle formåen (i ESPD-dokumentet Del IV, pkt. B): - Soliditetsgrad, defineret som egenkapital/(Aktiver i alt) x 100, i det seneste afsluttede regnskabsår.</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
-                     </efac:SelectionCriteria>
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="DAN">Soliditetsgrad på minimum 10 % i det seneste afsluttede regnskabsår.</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
-                     </efac:SelectionCriteria>
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="DAN">Ansøgeren skal oplyse referencer på levering af en tilsvarende eller lignende komplette maskinentrepriser i totalentreprise for kedelcentraler med en tilsvarende kedelydelse og med træflis som brændsel, indenfor de seneste 10 år. Anlæggene skal i længere perioder har kørt med et bredt sortiment af brændsler i forskellige grovheder og fugtigheder. Der skal angives kontaktoplysninger på driftspersonale som bygherren kan kontakte for nærmere oplysninger.</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
-                     </efac:SelectionCriteria>
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="DAN">- Minimum 2 referencer i henhold til ovenstående kriterie.</cbc:Description>
+                        <cbc:Description languageID="DEU">Eignungskriterien gemäß Auftragsunterlagen</cbc:Description>
                         <!--Selection Criteria Used (BT-748)-->
                         <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
                      </efac:SelectionCriteria>
@@ -289,12 +223,6 @@
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
-         <!--Guarantee Required (BT-751)-->
-         <!--Guarantee Required Description (BT-75)-->
-         <cac:RequiredFinancialGuarantee>
-            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
-            <cbc:Description languageID="DAN">Sikkerhedsstillelse og garantier i henhold til udbudsmaterialet.</cbc:Description>
-         </cac:RequiredFinancialGuarantee>
          <!--Documents Restricted Justification (BT-707)-->
          <!--Documents Official Language (BT-708)-->
          <!--Documents Unofficial Language (BT-737)-->
@@ -305,15 +233,11 @@
             <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:URI>
+                  <cbc:URI>http://www.subreport.de/E79877888</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
-         <!--WARNING: Terms Financial (BT-77) is Mandatory for eForms subtypes 17, 18 and 22, but no MAIN_FINANCING_CONDITION was found in TED XML.-->
-         <cac:PaymentTerms>
-            <cbc:Note languageID="DAN"/>
-         </cac:PaymentTerms>
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
@@ -323,9 +247,6 @@
          </cac:TendererQualificationRequest>
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
-         <cac:TendererQualificationRequest>
-            <cbc:CompanyLegalFormCode listName="required">false</cbc:CompanyLegalFormCode>
-         </cac:TendererQualificationRequest>
          <!--Late Tenderer Information (BT-771)-->
          <!--Subcontracting Tender Indication (BT-651)-->
          <!--Subcontracting Obligation (BT-65)-->
@@ -333,28 +254,33 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">yes</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
-         <!--WARNING: Terms Performance (BT-70) is Mandatory for eForms subtypes 17, 18 and 22, but no PERFORMANCE_CONDITIONS was found in TED XML.-->
-         <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
-            <cbc:Description languageID="DAN"/>
-         </cac:ContractExecutionRequirement>
          <!--Submission Electronic Catalog (BT-764)-->
          <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
          <cac:ContractExecutionRequirement>
             <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
          </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)-->
+            <cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
+            <!--Award Criteria Order Justification (BT-733)-->
+            <!--Award Criteria Complicated (BT-543)-->
+            <!--Award Criterion Number (BT-541)-->
+            <!--Award Criterion Number Weight (BT-5421)-->
+            <!--Award Criterion Number Fixed (BT-5422)-->
+            <!--Award Criterion Number Threshold (BT-5423)-->
+            <!--Award Criterion Type (BT-539)-->
+            <!--Award Criterion Name (BT-734)-->
+            <!--Award Criterion Description (BT-540)-->
             <cac:AwardingCriterion>
                <cac:SubordinateAwardingCriterion><!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="DAN">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
+                  <cbc:Description languageID="DEU">Price is not the only award criterion and all criteria are stated only in the procurement documents.</cbc:Description>
                </cac:SubordinateAwardingCriterion>
             </cac:AwardingCriterion>
             <!--Jury Member Name (BT-46)-->
@@ -370,14 +296,11 @@
          </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
-            <cbc:EndpointID>https://www.ethics.dk/ethics/ca#/tender/03b6690c-e73b-41da-8fbf-a8209bc23064/home</cbc:EndpointID>
-            <cac:PartyIdentification>
-               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
-            </cac:PartyIdentification>
+            <cbc:EndpointID>http://www.subreport.de/E79877888</cbc:EndpointID>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
          <cac:TenderValidityPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">3</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="DAY">112</cbc:DurationMeasure>
          </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
          <!--Review Deadline Description (BT-99)-->
@@ -385,11 +308,9 @@
          <!--Review organization-->
          <!--Mediation organization-->
          <cac:AppealTerms>
-            <cac:AppealInformationParty>
-               <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
-               </cac:PartyIdentification>
-            </cac:AppealInformationParty>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="DEU">Ergeht eine Mitteilung des Auftraggebers, der Rüge nicht abhelfen zu wollen, kann der Bieter wegen Nichtbeachtung der Vergabevorschriften ein Nachprüfungsverfahren nur innerhalb von 15 Kalendertagen nach Eingang vor der Vergabekammer beantragen. Nach Ablauf der Frist ist der Antrag unzulässig. (§ 160 Abs. 3 Nr. 4 GWB)</cbc:Description>
+            </cac:PresentationPeriod>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
                   <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -398,9 +319,11 @@
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>
-            <cbc:ID>DAN</cbc:ID>
+            <cbc:ID>DEU</cbc:ID>
          </cac:Language>
-         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)--><!--Electronic Payment (BT-93)-->
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
@@ -414,8 +337,8 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
                      <efac:InterestExpressionReceptionPeriod>
-                        <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
-                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                        <cbc:EndDate>2021-08-10+01:00</cbc:EndDate>
+                        <cbc:EndTime>10:00:00+01:00</cbc:EndTime>
                      </efac:InterestExpressionReceptionPeriod>
                   </efext:EformsExtension>
                </ext:ExtensionContent>
@@ -424,17 +347,18 @@
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
          <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
-         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
          <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
-            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+            <cbc:EndDate>2021-08-10+01:00</cbc:EndDate>
+            <cbc:EndTime>10:00:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
          <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2021-08-16+01:00</cbc:StartDate>
+            <cbc:StartDate>2021-08-27+01:00</cbc:StartDate>
          </cac:InvitationSubmissionPeriod>
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
@@ -446,8 +370,9 @@
          <!--Minimum Candidates (BT-50)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
-            <cbc:MaximumQuantity>4</cbc:MaximumQuantity>
-            <cbc:MinimumQuantity>4</cbc:MinimumQuantity>
+            <cbc:MaximumQuantity>5</cbc:MaximumQuantity>
+            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
@@ -475,11 +400,11 @@
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="DAN">Skive Biomassevarme - flisfyret kedelanlæg til fjernvarmeproduktion</cbc:Name>
+         <cbc:Name languageID="DEU">Fachplanungsleistung Heizung/Lüftung/Klimatisierung/Sanitär für Neukonzeption des Oberhessischen Museums Gießen, Georg-Schlosser-Straße 2 (LH), Kirchenplatz 6 (WH), 35390 Gießen</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="DAN">Totalentreprise vedrørende levering, montering, idriftssættelse af flisfyret kedelcentral med fjernvarmeproduktion og med træflis som brændsel.</cbc:Description>
+         <cbc:Description languageID="DEU">Die Universitätsstadt Gießen plant die Neukonzeption des Oberhessischen Museums. Gegenstand des Auftrags ist die Sanierung und der Umbau des Wallenfels´schen und Leib´schen Hauses. Der Fachplaner HLS muss unter Berücksichtigung der denkmalpflegerischen Aspekte (s. o.) den Entwurf in technischer Hinsicht in den beiden Bestandsgebäuden sowie dem neu hinzuzufügenden Zwischenbau planen und umsetzen. Wichtig sind hierbei insbesondere eine große Erfahrung mit Instandsetzungen und Bauen im Bestand im Allgemeinen, mit museumstechnischer Ausstattung und den speziellen Anforderungen eines Museums an die Klimatisierung im Besonderen. Die bisher vorhandenen Anlagen, Leitungen etc. werden vollständig bis zum Hausanschluss entfernt. Gegenstand dieses VgV-Verfahrens ist hinsichtlich der Fachplanerleistungen Heizung/Lüftung/Sanitär/Klimatisierung (Anlagengruppen 1 bis 3 und 8 + KG 480) die Durchführung der LPH 1-4 und 5 bis 9, für die Gesamtmaßnahme, d.h. die Grundlagenermittlung, die Vorplanung, die Entwurfs- und (sofern und soweit erforderlich) die Genehmigungsplanung zu erbringen, sowie die Ausführungsplanung, die Vorbereitung und die Mitwirkung bei der Vergabe, die Objektüberwachung und ggf. die Objektbetreuung und Dokumentation.</cbc:Description>
          <!--Main Nature (BT-23)-->
-         <cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
          <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -493,14 +418,23 @@
          <!--Suitable for SMEs (BT-726)-->
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
-         <cac:RequestedTenderTotal>
-            <cbc:EstimatedOverallContractAmount currencyID="DKK">40000000</cbc:EstimatedOverallContractAmount>
-         </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">45000000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71240000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71250000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71321000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71321200</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
          <!--Place Performance Post Code (BT-5121)-->
@@ -511,7 +445,7 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:StreetName>Holstebrovej 101, 7800 Skive</cbc:StreetName>
+               <cbc:StreetName>Gießen</cbc:StreetName>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
@@ -519,14 +453,11 @@
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
          <cac:PlannedPeriod>
-            <cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
+            <cbc:DurationMeasure unitCode="MONTH">36</cbc:DurationMeasure>
          </cac:PlannedPeriod>
-         <cac:ContractExtension><!--Options Description (BT-54)-->
-            <cbc:OptionsDescription languageID="DAN">Optionspris vedrørende: 1) Levering, montering og idriftssættelse af en ekstra fliskran 2) Strategiske reservedele 3) AMS måling af NOx 4) SNCR anlæg.</cbc:OptionsDescription>
-            <!--Renewal Maximum (BT-58)-->
-            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
-            <!--Renewal Description (BT-57)-->
-         </cac:ContractExtension>
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
 </ContractNotice>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,19 +6,19 @@
                  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
             <efext:EformsExtension><!--Notice SubType (OPP-070)-->
                <efac:NoticeSubType>
-                  <cbc:SubTypeCode listName="notice-subtype">23</cbc:SubTypeCode>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
                </efac:NoticeSubType>
                <!-- efac:Organizations -->
                <efac:Organizations>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
                      <efac:Company><!--Organization Internet Address (BT-505)-->
-                        <cbc:WebsiteURI>http://www.mp74.fr</cbc:WebsiteURI>
+                        <cbc:WebsiteURI>https://uu.se/</cbc:WebsiteURI>
                         <!--Winner Size (BT-165)-->
                         <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
@@ -27,58 +26,66 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Commune de Vétraz-Monthoux</cbc:Name>
+                           <cbc:Name>Uppsala universitet</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>1 place de la Mairie</cbc:StreetName>
+                           <cbc:StreetName>Uppsala universitet Dag Hammarskjölds väg 7</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Vétraz-Monthoux</cbc:CityName>
+                           <cbc:CityName>Uppsala</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>74100</cbc:PostalZone>
+                           <cbc:PostalZone>752 37</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
-                           <cbc:CountrySubentityCode listName="nuts">FRK28</cbc:CountrySubentityCode>
+                           <cbc:CountrySubentityCode listName="nuts">SE121</cbc:CountrySubentityCode>
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">SWE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
                         <cac:PartyLegalEntity>
-                           <cbc:CompanyID>21740298100013</cbc:CompanyID>
+                           <cbc:CompanyID>202100-2932</cbc:CompanyID>
                         </cac:PartyLegalEntity>
-                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)--><!--Organization Contact Fax (BT-739)--><!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>marches.publics@vetraz-monthoux.fr</cbc:ElectronicMail>
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Monica Söder</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+46 184711941</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>monica.soder@uadm.uu.se</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
                   <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
-                     <efac:Company><!--Organization Internet Address (BT-505)--><!--Winner Size (BT-165)--><!--Organization Technical Identifier (OPT-200)-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>www.forvaltningsratteniuppsala.domstol.se</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
                         <cac:PartyIdentification>
                            <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Tribunal administratif de Grenoble</cbc:Name>
+                           <cbc:Name>Förvaltningsrätten i Uppsala</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
-                           <cbc:StreetName>2 place de Verdun</cbc:StreetName>
+                           <cbc:StreetName>Kungsgatan 49</cbc:StreetName>
                            <!--Organization City (BT-513)-->
-                           <cbc:CityName>Grenoble</cbc:CityName>
+                           <cbc:CityName>Uppsala</cbc:CityName>
                            <!--Organization Post Code (BT-512)-->
-                           <cbc:PostalZone>38022</cbc:PostalZone>
+                           <cbc:PostalZone>753 21</cbc:PostalZone>
                            <!--Organization Country Subdivision (BT-507)-->
                            <!--Organization Country Code (BT-514)-->
                            <cac:Country>
-                              <cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+                              <cbc:IdentificationCode listName="country">SWE</cbc:IdentificationCode>
                            </cac:Country>
                         </cac:PostalAddress>
                         <!--Organization Identifier (BT-501)-->
                         <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
-                           <cbc:Telephone>+33 476429000</cbc:Telephone>
+                           <cbc:Telephone>+46 184316300</cbc:Telephone>
                            <!--Organization Contact Fax (BT-739)-->
-                           <cbc:Telefax>+33 476422269</cbc:Telefax>
+                           <cbc:Telefax>+46 18100034</cbc:Telefax>
                            <!--Organization Contact Email Address (BT-506)-->
-                           <cbc:ElectronicMail>greffe.ta-grenoble@juradm.fr</cbc:ElectronicMail>
+                           <cbc:ElectronicMail>forvaltningsratteniuppsala@dom.se</cbc:ElectronicMail>
                         </cac:Contact>
                      </efac:Company>
                   </efac:Organization>
@@ -87,9 +94,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">133/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2021-07-13+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -112,15 +119,14 @@
    <!--Procedure Legal Basis (BT-01)-->
    <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
    <!--Form Type (BT-03) and Notice Type (BT-02)-->
-   <cbc:NoticeTypeCode listName="competition">cn-desg</cbc:NoticeTypeCode>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
-   <cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+   <cbc:NoticeLanguageCode>SWE</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
    <!-- cac:ContractingParty -->
-   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
-      <cbc:BuyerProfileURI>http://www.mp74.fr</cbc:BuyerProfileURI>
-      <!--Buyer Legal Type (BT-11)-->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)--><!--Buyer Legal Type (BT-11)-->
       <cac:ContractingPartyType>
-         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
+         <cbc:PartyTypeCode listName="buyer-legal-type">cga</cbc:PartyTypeCode>
       </cac:ContractingPartyType>
       <!--Buyer Contracting Entity (BT-740)-->
       <cac:ContractingPartyType>
@@ -128,7 +134,7 @@
       </cac:ContractingPartyType>
       <!--Activity Authority (BT-10)-->
       <cac:ContractingActivity>
-         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+         <cbc:ActivityTypeCode listName="authority-activity">education</cbc:ActivityTypeCode>
       </cac:ContractingActivity>
       <!--Activity Entity (BT-610)-->
       <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
@@ -157,7 +163,7 @@
       </ext:UBLExtensions>
       <!--Procedure Features (BT-88)-->
       <!--Procedure Type (BT-105)-->
-      <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
       <!--Previous Planning Identifier (BT-125)-->
@@ -167,18 +173,21 @@
    </cac:TenderingProcess>
    <!-- cac:ProcurementProject -->
    <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
-      <cbc:ID schemeName="InternalID">2021-09</cbc:ID>
+      <cbc:ID schemeName="InternalID">UH 2021/77</cbc:ID>
       <!--Title (BT-21)-->
-      <cbc:Name languageID="FRA">Marché de maîtrise d'œuvre de niveau Esquisse + pour la construction du nouveau groupe scolaire René Cassin concours restreint</cbc:Name>
+      <cbc:Name languageID="SWE">Laboratorieinredning Hus 6 och 7 Ångström</cbc:Name>
       <!--Description (BT-24)-->
-      <!--WARNING: Description (BT-24) is Mandatory for all eForms subtypes, but no SHORT_DESCR was found in TED XML.-->
+      <cbc:Description languageID="SWE">Laboratorieinredning</cbc:Description>
       <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
       <!--Additional Information (BT-300)-->
-      <cbc:Note languageID="FRA">Les dépôts de plis doivent être impérativement remis par voie dématérialisée. Cette consultation bénéficie du service DUME. Pour retrouver cet avis intégral, accéder au DCE, poser des questions à l'acheteur, déposer un pli, allez sur http://www.mp74.fr — Mission de maîtrise d'œuvre de base (articles R. 2431-4 et R. 2431-5 du code de la commande publique) incluant l'EXE. Le marché comprend également une autre mission de maîtrise d'œuvre dans le cadre d'une Prestation supplémentaire éventuelle (PSE): Ordonnancement pilotage coordination (OPC). Candidat (ou un groupement candidat) disposant, a minima, des compétences suivantes: — architecture (en application de la loi nº 77-2 du 3.1.1977 modifiée sur l'architecture); — technique: structures; — technique: fluides; — technique: thermique; — technique: courants forts et faibles; — économie de la construction; — paysagiste; — Haute qualité environnementale (HQE); — acousticien; — Ordonnancement pilotage coordination (OPC) = prestation supplémentaire éventuelle.</cbc:Note>
       <!--Estimated Value (BT-27)-->
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="SEK">2000000.00</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
       <!--Main Classification Code (BT-262)-->
       <cac:MainCommodityClassification>
-         <cbc:ItemClassificationCode listName="cpv">71200000</cbc:ItemClassificationCode>
+         <cbc:ItemClassificationCode listName="cpv">39180000</cbc:ItemClassificationCode>
       </cac:MainCommodityClassification>
       <!--Additional Classification Code (BT-263)-->
       <!--Place of Performance Additional Information (BT-728)-->
@@ -193,36 +202,13 @@
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
       <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
-      <cac:TenderingTerms>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--EU Funds Financing Identifier (BT-5010)--><!--EU Funds Programme (BT-7220)--><!--EU Funds Details (BT-6140)-->
-                     <efac:SelectionCriteria><!--Selection Criteria Type (BT-747)-->
-                        <cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
-                        <!--Selection Criteria Name (BT-749)-->
-                        <!--Selection Criteria Description (BT-750)-->
-                        <cbc:Description languageID="FRA">Le jury examinera les candidatures à l'une des critères de sélection des candidatures hiérarchisés suivants cités par ordre décroissant d'importance: — capacités professionnelles évaluées au regard de la qualité (notamment architecturale) et la pertinence des références présentées par le candidat ou le groupement candidat, compte tenu de la nature et de la complexité du marché; — capacités techniques évaluées au regard des compétences proposées et des moyens en personnel du candidat ou du groupement candidat affectés au projet; — capacités financières du candidat ou du groupement candidat. Détaillé dans le règlement de concours.</cbc:Description>
-                        <!--Selection Criteria Used (BT-748)-->
-                        <cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
-                     </efac:SelectionCriteria>
-                     <!--Selection Criteria Type (BT-747)-->
-                     <!--Selection Criteria Name (BT-749)-->
-                     <!--Selection Criteria Description (BT-750)-->
-                     <!--Selection Criteria Used (BT-748)-->
-                     <!--Selection Criteria Second Stage Invite (BT-40)-->
-                     <!--Selection Criteria Second Stage Invite Number Weight (BT-7531)-->
-                     <!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)-->
-                     <!--Selection Criteria Second Stage Invite Number (BT-752)-->
-                  </efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--Variants (BT-63)-->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
          <!--EU Funds (BT-60)-->
          <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
          <!--Performing Staff Qualification (BT-79)-->
          <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
          <!--Recurrence Description (BT-95)-->
          <!--Security Clearance Deadline (BT-78)-->
          <!--Multiple Tenders (BT-769)-->
@@ -236,13 +222,18 @@
             <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
             <cac:Attachment>
                <cac:ExternalReference>
-                  <cbc:URI>http://www.mp74.fr</cbc:URI>
+                  <cbc:URI>https://www.kommersannons.se/elite/Notice/NoticeDispatch.aspx?NoticeId=59970</cbc:URI>
                </cac:ExternalReference>
             </cac:Attachment>
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
          <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
          <!--Tenderer Legal Form (BT-761)-->
          <!--Tenderer Legal Form Description (BT-76)-->
          <!--Late Tenderer Information (BT-771)-->
@@ -252,53 +243,19 @@
          <!--Subcontracting Obligation Minimum (BT-64)-->
          <!--Reserved Execution (BT-736)-->
          <cac:ContractExecutionRequirement>
-            <cbc:ExecutionRequirementCode listName="reserved-execution">yes</cbc:ExecutionRequirementCode>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
          </cac:ContractExecutionRequirement>
          <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
          <!--Terms Performance (BT-70)-->
          <!--Submission Electronic Catalog (BT-764)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
          <!--Submission Electronic Signature (BT-744)-->
-         <cac:AwardingTerms><!--Following Contract (BT-41)-->
-            <cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
-            <!--Jury Decision Binding (BT-42)-->
-            <cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
-            <!--No Negotiation Necessary (BT-120)-->
-            <!--Award Criteria Order Justification (BT-733)-->
-            <!--Award Criteria Complicated (BT-543)-->
-            <!--Award Criterion Number (BT-541)-->
-            <!--Award Criterion Number Weight (BT-5421)-->
-            <!--Award Criterion Number Fixed (BT-5422)-->
-            <!--Award Criterion Number Threshold (BT-5423)-->
-            <!--Award Criterion Type (BT-539)-->
-            <!--Award Criterion Name (BT-734)-->
-            <!--Award Criterion Description (BT-540)-->
-            <cac:AwardingCriterion><!--WARNING: The content of TED XML element CRITERIA_EVALUATION has been copied to three Award Criterion Description (BT-540), to assist with editing and correction.-->
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
-                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
-                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-               <cac:SubordinateAwardingCriterion><!--Award Criterion Type (BT-539)-->
-                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
-                  <!--Award Criterion Description (BT-540)-->
-                  <cbc:Description languageID="FRA">1) Qualité de la réponse au regard des exigences fonctionnelles, techniques et environnementales: 40 %. Le respect du programme fonctionnel autant dans ses principes généraux (position et liaisons avec l'existant, hiérarchisation des espaces, gestion des accès et des flux du personnel, et des visiteurs) que dans les besoins fonctionnels spécifiques de chacun des espaces: 50 points. L'efficacité organisationnelle à travers le respect des surfaces ainsi que l'analyse et la comparaison des surfaces SDO et SU: 30 points. Le respect du programme technique au regard du niveau et de la qualité des prestations décrites dans la notice technique: 20 points; 2) Respect de l'enveloppe financière prévisionnelle affectée aux travaux: 30 %; 3) Qualité architecturale du projet: 25 %; 4) Délais de réalisation des études et des travaux: 5 % (critères détaillés dans le règlement de concours).</cbc:Description>
-               </cac:SubordinateAwardingCriterion>
-            </cac:AwardingCriterion>
-            <!--Jury Member Name (BT-46)-->
-            <!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))-->
-            <cac:Prize><!--Prize Rank (BT-44)--><!--WARNING: Prize information requires a Prize Rank (BT-44), but no equivalent information is specified in the TED XML schema. In order to obtain valid XML for this notice, a fixed value of "1" was used.-->
-               <cbc:RankCode>1</cbc:RankCode>
-               <!--Value Prize (BT-644)-->
-               <!--WARNING: Prize information allows a Value Prize (BT-644), but no explicit equivalent information is specified in the TED XML schema. Implicit information might be extracted from the Prize description.-->
-               <!--Rewards Other (Prize Description) (BT-45): may contain content from both NUMBER_VALUE_PRIZE and DETAILS_PAYMENT-->
-               <cbc:Description languageID="FRA">Chaque concurrent ayant remis une prestation conforme au règlement du concours recevra une prime d'un montant de 50 000 EUR HT (non révisable et non actualisable), TVA en sus au taux de la réglementation en vigueur. La rémunération du contrat de maîtrise d'œuvre tiendra compte de la prime reçue par le lauréat. Le versement de la prime aux candidats s'effectuera sur la base de la proposition du jury dans un délai de 30 jours suivant la date de notification du courrier de rejet aux candidats dont les projets n'auront pas été retenus.</cbc:Description>
-            </cac:Prize>
-         </cac:AwardingTerms>
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
          <cac:AdditionalInformationParty>
             <cac:PartyIdentification>
                <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -306,20 +263,21 @@
          </cac:AdditionalInformationParty>
          <!--Submission URL (BT-18)-->
          <cac:TenderRecipientParty>
-            <cbc:EndpointID>http://www.mp74.fr</cbc:EndpointID>
+            <cbc:EndpointID>https://www.kommersannons.se/elite/Notice/NoticeDispatch.aspx?NoticeId=59970</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
          </cac:TenderRecipientParty>
          <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="DAY">135</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
          <!--Review Deadline Description (BT-99)-->
          <!--Review Deadline Description (BT-99)-->
          <!--Review Information Providing Organization-->
          <!--Review organization-->
          <!--Mediation organization-->
          <cac:AppealTerms>
-            <cac:AppealInformationParty>
-               <cac:PartyIdentification>
-                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
-               </cac:PartyIdentification>
-            </cac:AppealInformationParty>
             <cac:AppealReceiverParty>
                <cac:PartyIdentification>
                   <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -328,8 +286,13 @@
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
          <cac:Language>
-            <cbc:ID>FRA</cbc:ID>
+            <cbc:ID>SWE</cbc:ID>
          </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
          <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
@@ -341,8 +304,8 @@
                <ext:ExtensionContent>
                   <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
                      <efac:InterestExpressionReceptionPeriod>
-                        <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
-                        <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
+                        <cbc:EndDate>2021-08-18+01:00</cbc:EndDate>
+                        <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
                      </efac:InterestExpressionReceptionPeriod>
                   </efext:EformsExtension>
                </ext:ExtensionContent>
@@ -351,12 +314,15 @@
          <!--SubmissionElectronic (BT-17)-->
          <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
          <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
          <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
          <!--Tool Atypical URL (BT-124)-->
+         <cbc:AccessToolsURI>https://www.kommersannons.se/elite/Account/CreateAccount.aspx</cbc:AccessToolsURI>
          <!--Deadline Receipt Tenders (BT-131)-->
          <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2021-08-09+01:00</cbc:EndDate>
-            <cbc:EndTime>16:00:00+01:00</cbc:EndTime>
+            <cbc:EndDate>2021-08-18+01:00</cbc:EndDate>
+            <cbc:EndTime>23:59:00+01:00</cbc:EndTime>
          </cac:TenderSubmissionDeadlinePeriod>
          <!--Dispatch Invitation Tender (BT-130)-->
          <!--Deadline Receipt Requests (BT-1311)-->
@@ -367,27 +333,46 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>false</cbc:LimitationDescription>
+            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
-         <!--Electronic Auction (BT-767)-->
-         <!--Electronic Auction Description (BT-122)-->
-         <!--Electronic Auction URL (BT-123)-->
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2021-08-19+01:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>12:00:00+01:00</cbc:OccurrenceTime>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <!--Electronic Auction URL (BT-123)-->
+         </cac:AuctionTerms>
          <!--Framework Maximum Participants Number (BT-113)-->
          <!--Framework Duration Justification (BT-109)-->
          <!--Group Framework Maximum Value (BT-157)-->
          <!--Framework Buyer Categories (BT-111)-->
          <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
          <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
       </cac:TenderingProcess>
       <!-- cac:ProcurementProject -->
       <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
          <cbc:ID schemeName="InternalID"/>
          <!--Title (BT-21)-->
-         <cbc:Name languageID="FRA">Marché de maîtrise d'œuvre de niveau Esquisse + pour la construction du nouveau groupe scolaire René Cassin concours restreint</cbc:Name>
+         <cbc:Name languageID="SWE">Laboratorieinredning Hus 6 och 7 Ångström</cbc:Name>
          <!--Description (BT-24)-->
-         <cbc:Description languageID="FRA">La Commune de Vétraz-Monthoux a décidé de reconstruire le groupe scolaire René Cassin dans le centre-bourg de Vétraz-Monthoux pour une capacité de 20 classes comprenant: — un pôle maternelle de huit classes; — un pôle élémentaire de onze classes + une Ulis; — un restaurant scolaire; — un Centre de loisirs sans hébergement (CLSH) (actuellement situé dans le groupe scolaire F Dolto) de 200 enfants; — un parking souterrain d'environ 100 places. La commune souhaite réaliser ce groupe scolaire en deux phases: — phase 1 = construction d'un groupe scolaire complet pouvant accueillir 17 classes à la rentrée 2024; — phase 2 = extension du groupe scolaire de trois classes supplémentaires avec une échéance de livraison sur 2025. Détaillé dans la note de présentation.</cbc:Description>
+         <cbc:Description languageID="SWE">Laboratorieinredning</cbc:Description>
          <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
          <!--Additional Nature (BT-531)-->
          <!--Strategic Procurement (BT-06)-->
          <!--Strategic Procurement Description (BT-777)-->
@@ -401,13 +386,16 @@
          <!--Suitable for SMEs (BT-726)-->
          <!--Additional Information (BT-300)-->
          <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="SEK">2000000.00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
          <!--Main Classification Code (BT-262)-->
          <cac:MainCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">71200000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">39180000</cbc:ItemClassificationCode>
          </cac:MainCommodityClassification>
          <!--Additional Classification Code (BT-263)-->
          <cac:AdditionalCommodityClassification>
-            <cbc:ItemClassificationCode listName="cpv">71240000</cbc:ItemClassificationCode>
+            <cbc:ItemClassificationCode listName="cpv">39180000</cbc:ItemClassificationCode>
          </cac:AdditionalCommodityClassification>
          <!--Place of Performance Additional Information (BT-728)-->
          <!--Place Performance City (BT-5131)-->
@@ -419,13 +407,18 @@
          <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
          <cac:RealizedLocation>
             <cac:Address>
-               <cbc:Region>anyw</cbc:Region>
+               <cbc:StreetName>Uppsala län</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">SE121</cbc:CountrySubentityCode>
             </cac:Address>
          </cac:RealizedLocation>
          <!--Duration Start Date (BT-536)-->
          <!--Duration End Date (BT-537)-->
          <!--Duration Period (BT-36)-->
          <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:StartDate>2021-09-10+01:00</cbc:StartDate>
+            <cbc:EndDate>2022-08-18+01:00</cbc:EndDate>
+         </cac:PlannedPeriod>
          <!--Options Description (BT-54)-->
          <!--Renewal Maximum (BT-58)-->
          <!--Renewal Description (BT-57)-->
