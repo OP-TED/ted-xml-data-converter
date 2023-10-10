@@ -14,7 +14,6 @@ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:gc="http://docs.oasis-o
 exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n2016-1 n2016 n2021 pin cn can ccts ext" >
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-
 <!-- ADDRESSES -->
 
 <!-- #### DEDUPLICATE AND ASSIGN ID TO EACH GROUP OF TED XML ADDRESS ELEMENTS #### -->
@@ -22,7 +21,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <!-- Create temporary XML structure to hold all the TED address elements, with the XPath for each -->
 <xsl:variable name="ted-addresses" as="element()">
 	<ted-orgs>
-		<xsl:for-each select="$ted-form-main-element/(*:CONTRACTING_BODY/(*:ADDRESS_CONTRACTING_BODY | *:ADDRESS_CONTRACTING_BODY_ADDITIONAL | *:ADDRESS_FURTHER_INFO | *:ADDRESS_PARTICIPATION) | *:COMPLEMENTARY_INFO/(*:ADDRESS_REVIEW_BODY | *:ADDRESS_MEDIATION_BODY | *:ADDRESS_REVIEW_INFO) | *:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:CONTRACTORS/*:CONTRACTOR/(*:ADDRESS_CONTRACTOR | *:ADDRESS_PARTY))">
+		<xsl:for-each select="$ted-form-main-element/(*:CONTRACTING_BODY/(*:ADDRESS_CONTRACTING_BODY | *:ADDRESS_CONTRACTING_BODY_ADDITIONAL | *:ADDRESS_FURTHER_INFO | *:ADDRESS_PARTICIPATION) | *:COMPLEMENTARY_INFO/(*:ADDRESS_REVIEW_BODY | *:ADDRESS_MEDIATION_BODY | *:ADDRESS_REVIEW_INFO) | *:AWARD_CONTRACT/*:AWARDED_CONTRACT/(.|*:CONTRACTORS)/*:CONTRACTOR/(*:ADDRESS_CONTRACTOR | *:ADDRESS_PARTY) | *:RESULTS/*:AWARDED_PRIZE/(.|*:WINNERS)/*:WINNER/*:ADDRESS_WINNER)">
 			<ted-org>
 				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 				<path><xsl:value-of select="$path"/></path>
@@ -136,7 +135,7 @@ These instructions can be un-commented to show the variables holding the organiz
 		<!-- Organization Internet Address (BT-505): eForms documentation cardinality (Organization) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Organization Internet Address (BT-505)'"/></xsl:call-template>
 		<xsl:apply-templates select="*:URL_GENERAL|*:URL"/>
-		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
+		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Winner Size (BT-165)'"/></xsl:call-template>
 		<xsl:call-template name="winner-size"/>
 		<!-- Organization Technical Identifier (OPT-200) -->
@@ -154,8 +153,8 @@ These instructions can be un-commented to show the variables holding the organiz
 </xsl:template>
 
 <xsl:template name="winner-size">
-		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | eForms Regulation Annex requirements = Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
-		<xsl:if test="../path[fn:ends-with(., 'ADDRESS_CONTRACTOR')]">
+		<!-- Winner Size (BT-165): eForms documentation cardinality (Organization) = ? | Mandatory (M) for CAN subtypes 29, 30, 32, 33-37; Optional (O or EM or CM) for CAN subtypes 25-28, 31 and E4, CM subtype E5; Forbidden (blank) for all other subtypes | Allowed only for Organisation type Winner or Tenderer -->
+		<xsl:if test="../path[fn:ends-with(., 'ADDRESS_CONTRACTOR') or fn:ends-with(., 'ADDRESS_WINNER')]">
 			<xsl:choose>
 				<xsl:when test="*:SME">
 					<efbc:CompanySizeCode listName="economic-operator-size">sme</efbc:CompanySizeCode>

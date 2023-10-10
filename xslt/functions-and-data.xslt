@@ -26,12 +26,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:param name="includecomments" select="1" as="xs:integer"/>
 
 <!-- external conversion parameters -->
-<!-- Value for BT-701 Notice Identifier -->
-<xsl:param name="notice-identifier" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'" as="xs:string"/>
-<!-- Value for BT-04 Procedure Identifier -->
-<xsl:param name="procedure-identifier" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'" as="xs:string"/>
+<!-- User-supplied value for BT-701 Notice Identifier -->
+<xsl:param name="notice-identifier" select="''" as="xs:string"/>
+<!-- User-supplied for BT-04 Procedure Identifier -->
+<xsl:param name="procedure-identifier" select="''" as="xs:string"/>
 <!-- Value for SDK version -->
 <xsl:param name="sdk-version" select="$sdk-version-default" as="xs:string"/>
+
+<!-- default value for BT-701 Notice Identifier -->
+<xsl:variable name="notice-identifier-default" select="'f252f386-55ac-4fa8-9be4-9f950b9904c8'"/>
+
+<!-- default value for BT-04 Procedure Identifier -->
+<xsl:variable name="procedure-identifier-default" select="'aff2863e-b4cc-4e91-baba-b3b85f709117'"/>
 
 <!-- MAPPING FILES -->
 
@@ -40,6 +46,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:variable name="translations" select="fn:document('translations.xml')"/>
 <xsl:variable name="country-codes-map" select="fn:document('countries-map.xml')"/>
 <xsl:variable name="language-codes-map" select="fn:document('languages-map.xml')"/>
+<xsl:variable name="notice-mapping" select="fn:document('notice-type-mapping.xml')"/>
 
 
 <!-- #### GLOBAL VARIABLES #### -->
@@ -48,6 +55,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:variable name="tab" select="'&#09;'"/>
 
 <xsl:variable name="source-document" select="fn:base-uri()"/>
+
+<xsl:variable name="ted-notice-namespace" select="/*/fn:namespace-uri()"/>
+
+<!-- Variable ojs holds the OJS number  -->
+<xsl:variable name="ojs" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:REF_OJS/fn:string(*:NO_OJ)"/>
+<!-- Variable pubdate holds the publication date  -->
+<xsl:variable name="pubdate" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:REF_OJS/fn:string(*:DATE_PUB)"/>
 
 <!-- Apart from <NOTICE_UUID>, all direct children of FORM_SECTION have the same element name / form type -->
 <!-- Variable ted-form-elements holds all the form elements (in alternate languages) -->
@@ -66,7 +80,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:variable name="ted-form-element-xpath" select="functx:path-to-node-with-pos($ted-form-main-element)"/>
 <!-- Variable ted-form-notice-type holds the value of the @TYPE attribute of the NOTICE element -->
 <xsl:variable name="ted-form-notice-type" select="$ted-form-main-element/fn:string(*:NOTICE/@TYPE)"/><!-- '' or PRI_ONLY or AWARD_CONTRACT ... -->
-<!-- Variable document-code holds the value of the @TYPE attribute of the NOTICE element -->
+<!-- Variable document-code holds the value of the @CODE attribute of the TD_DOCUMENT_TYPE element -->
 <xsl:variable name="document-code" select="/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:TD_DOCUMENT_TYPE/fn:string(@CODE)"/><!-- 0 or 6 or A or H ... -->
 <!-- Variable ted-form-first-language holds the value of the @LG attribute of the first form element with @CATEGORY='ORIGINAL' -->
 <xsl:variable name="ted-form-first-language" select="$ted-form-main-element/fn:string(@LG)"/>
@@ -77,13 +91,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <!-- Variable eforms-first-language holds the eForms three-letter code for the first language -->
 <xsl:variable name="eforms-first-language" select="opfun:get-eforms-language($ted-form-first-language)"/>
 
-<!-- Variable legal-basis holds the value of the @VALUE attribute of the element LEGAL_BASIS, if it exists. If element LEGAL_BASIS does not exist, it holds the value "OTHER" -->
-<xsl:variable name="legal-basis">
-	<xsl:choose>
-		<xsl:when test="$ted-form-main-element/*:LEGAL_BASIS"><xsl:value-of select="$ted-form-main-element/*:LEGAL_BASIS/@VALUE"/></xsl:when>
-		<xsl:otherwise><xsl:text>OTHER</xsl:text></xsl:otherwise>
-	</xsl:choose>
-</xsl:variable>
+<!-- Variable legal-basis holds the value of the @VALUE attribute of the element LEGAL_BASIS, if it exists. -->
+<xsl:variable name="legal-basis" as="xs:string"><xsl:value-of select="$ted-form-main-element/*:LEGAL_BASIS/@VALUE"/></xsl:variable>
 
 <!-- Variable directive holds the value of the @VALUE attribute of the element DIRECTIVE, if it exists. Othewise it holds the empty string -->
 <xsl:variable name="directive" select="fn:string(/*/*:CODED_DATA_SECTION/*:CODIF_DATA/*:DIRECTIVE/@VALUE)"/>
@@ -205,7 +214,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:sequence select="fn:string-length($nuts-code) &gt; 4"/>
 </xsl:function>
 
-<!-- FORM SUBTYPE -->
+<!-- FORM TYPES AND SUBTYPES -->
 
 <!-- Function opfun:get-eforms-notice-subtype computes the eForms notice subtype, using information from the TED notice -->
 <xsl:function name="opfun:get-eforms-notice-subtype" as="xs:string">
@@ -215,57 +224,76 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:param name="legal-basis"/><!-- could be value 'ANY' -->
 	<xsl:param name="directive"/><!-- could be value 'ANY' -->
 	<xsl:param name="ted-form-document-code"/>
-	<xsl:variable name="notice-mapping-file" select="fn:document('notice-type-mapping.xml')"/>
-	<!-- get rows from notice-type-mapping.xml with values matching the given parameters -->
-	<xsl:variable name="mapping-row" select="$notice-mapping-file/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $legal-basis) or (legal-basis eq 'ANY')][(directive eq $directive) or (directive eq 'ANY')][(document-code eq $ted-form-document-code) or (document-code eq 'ANY')]"/>
-	<!-- exit with an error if there is not exactly one matching row -->
-	<xsl:if test="fn:count($mapping-row) != 1">
-		<xsl:message terminate="yes">
-			<xsl:text>ERROR: found </xsl:text>
-			<xsl:choose>
-				<xsl:when test="fn:count($mapping-row) = 0">no</xsl:when>
-				<xsl:otherwise><xsl:value-of select="fn:count($mapping-row)"/> different</xsl:otherwise>
-			</xsl:choose>
-			<xsl:text> eForms subtype mappings for this Notice: </xsl:text><xsl:value-of select="$source-document"/><xsl:value-of select="$newline"/>
-			<xsl:text>TED form element name: </xsl:text><xsl:value-of select="$ted-form-element"/><xsl:value-of select="$newline"/>
-			<xsl:text>TED form name: </xsl:text><xsl:value-of select="$ted-form-name"/><xsl:value-of select="$newline"/>
-			<xsl:text>TED form notice type: </xsl:text><xsl:value-of select="$ted-form-notice-type"/><xsl:value-of select="$newline"/>
-			<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$legal-basis"/><xsl:value-of select="$newline"/>
-			<xsl:text>TED form directive: </xsl:text><xsl:value-of select="$directive"/><xsl:value-of select="$newline"/>
-			<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
-		</xsl:message>
-	</xsl:if>
+	<!-- get rows from the notice mapping with values matching the given parameters -->
+	<xsl:variable name="mapping-row" select="$notice-mapping/mapping/row[form-element eq $ted-form-element][form-number eq $ted-form-name][notice-type eq $ted-form-notice-type][(legal-basis eq $legal-basis) or (legal-basis eq 'ANY')][(directive eq $directive) or (directive eq 'ANY')][(document-code eq $ted-form-document-code) or (document-code eq 'ANY')]"/>
 	<!-- read the eForms notice subtype from the row -->
 	<xsl:variable name="eforms-subtype" select="$mapping-row/fn:string(eforms-subtype)"/>
+	<xsl:variable name="common-message">
+		<xsl:text>TED form element name: </xsl:text><xsl:value-of select="$ted-form-element"/><xsl:value-of select="$newline"/>
+		<xsl:text>TED form name: </xsl:text><xsl:value-of select="$ted-form-name"/><xsl:value-of select="$newline"/>
+		<xsl:text>TED form notice type: </xsl:text><xsl:value-of select="$ted-form-notice-type"/><xsl:value-of select="$newline"/>
+		<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$legal-basis"/><xsl:value-of select="$newline"/>
+		<xsl:text>TED form directive: </xsl:text><xsl:value-of select="$directive"/><xsl:value-of select="$newline"/>
+		<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
+	</xsl:variable>
 	<!-- exit with an error if the eForms notice subtype is not a recognised value for the converter -->
 	<xsl:choose>
+		<!-- exit with an error if the namespace is R2.0.8 -->
+		<xsl:when test="fn:contains($ted-notice-namespace, 'R2.0.8')">
+			<xsl:message terminate="yes">
+				<xsl:text>ERROR: Notices using schema R2.0.8 ("Defence" schema) cannot be converted by this version of the TED XML Data Converter.</xsl:text>
+			</xsl:message>
+		</xsl:when>
+		<!-- exit with an error if the namespace is not R2.0.9 -->
+		<xsl:when test="fn:not(fn:contains($ted-notice-namespace, 'R2.0.9'))">
+			<xsl:message terminate="yes">
+				<xsl:text>ERROR: This notice cannot be converted: unrecognised notice namespace: </xsl:text><xsl:value-of select="$ted-notice-namespace"/>
+			</xsl:message>
+		</xsl:when>
+		<!-- exit with an error if the form element is MOVE -->
+		<xsl:when test="$ted-form-element eq 'MOVE'">
+			<xsl:message terminate="yes">
+				<xsl:text>ERROR: MOVE (T01 / T02 - Regulation 1370/2007) notices cannot be converted by this version of the TED XML Data Converter.</xsl:text>
+			</xsl:message>
+		</xsl:when>
+		<!-- exit with an error if the form name is F14 -->
+		<xsl:when test="$ted-form-name eq 'F14'">
+			<xsl:message terminate="yes">
+				<xsl:text>ERROR: F14 (Corrigendum) notices cannot be converted</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:value-of select="$common-message"/>
+			</xsl:message>
+		</xsl:when>
+		<!-- exit with an error if there is not exactly one matching row -->
+		<xsl:when test="fn:count($mapping-row) != 1">
+			<xsl:message terminate="yes">
+				<xsl:text>ERROR: found </xsl:text>
+				<xsl:choose>
+					<xsl:when test="fn:count($mapping-row) = 0">no</xsl:when>
+					<xsl:otherwise><xsl:value-of select="fn:count($mapping-row)"/> different</xsl:otherwise>
+				</xsl:choose>
+				<xsl:text> eForms subtype mappings for this Notice</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:value-of select="$common-message"/>
+			</xsl:message>
+		</xsl:when>
+	<!-- exit with an error if the eForms subtype is not a recognised value for the converter -->
 		<xsl:when test="$eforms-subtype eq ''">
 			<xsl:message terminate="yes">
-				<xsl:text>ERROR: no eForms subtype mapping available for this Notice:</xsl:text><xsl:value-of select="$source-document"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form element name: </xsl:text><xsl:value-of select="$ted-form-element"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form name: </xsl:text><xsl:value-of select="$ted-form-name"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form notice type: </xsl:text><xsl:value-of select="$ted-form-notice-type"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$legal-basis"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form directive: </xsl:text><xsl:value-of select="$directive"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
+				<xsl:text>ERROR: no eForms subtype mapping available for this Notice:</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:value-of select="$common-message"/>
 			</xsl:message>
 		</xsl:when>
 		<xsl:when test="$eforms-subtype eq 'ERROR'">
 			<xsl:message terminate="yes">
-				<xsl:text>ERROR: The combination of data in this Notice is considered an error:</xsl:text><xsl:value-of select="$source-document"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form element name: </xsl:text><xsl:value-of select="$ted-form-element"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form name: </xsl:text><xsl:value-of select="$ted-form-name"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form notice type: </xsl:text><xsl:value-of select="$ted-form-notice-type"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form legal basis: </xsl:text><xsl:value-of select="$legal-basis"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form directive: </xsl:text><xsl:value-of select="$directive"/><xsl:value-of select="$newline"/>
-				<xsl:text>TED form document code: </xsl:text><xsl:value-of select="$ted-form-document-code"/><xsl:value-of select="$newline"/>
+				<xsl:text>ERROR: The combination of data in this Notice is considered an error:</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:value-of select="$common-message"/>
 			</xsl:message>
 		</xsl:when>
 		<xsl:when test="fn:not(fn:matches($eforms-subtype, '^[1-9]|[1-3][0-9]|40*$'))">
 			<xsl:message terminate="yes">
 				<xsl:text>ERROR: Conversion for eForms subtype </xsl:text>
 				<xsl:value-of select="$eforms-subtype"/>
-				<xsl:text> is not supported by this version of the converter</xsl:text>
+				<xsl:text> is not supported by this version of the converter</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:value-of select="$common-message"/>
 			</xsl:message>
 		</xsl:when>
 	</xsl:choose>
