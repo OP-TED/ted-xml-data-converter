@@ -12,13 +12,10 @@ This table lists the TED XML files selected to test development of the Converter
 | 21-064844-001-EXP.xml | F02 | CN | Addresses | All 7 Address elements, 1 duplicated address |
 | 20-587026-001-EXP.xml | F02 | CN | Procurement | PROCUREMENT_LAW -> BT-01 Legal Basis Local - Text |
 | 20-260117-001-EXP.xml | F02 | CN | Procurement | ACCELERATED_PROC -> BT-106 Procedure Accelerated |
-| 20-213571-001-EXP.xml | F02 | CN | Procurement | CPV_CODE -> BT-262 Main Classification Codes |
-| 21-120407-001-EXP.xml | F02 | CN | Lot | DATE_TENDER_VALID |
 | 20-162034-001-EXP.xml | F02 | CN | Lot | Multiple Tendering languages |
 | 20-156049-001-EXP.xml | F02 | CN | Addresses | multiple URL_BUYER |
 | 20-377805-001-EXP.xml | F02 | CN | Lot | TIME_RECEIPT_TENDERS with one digit for hour |
-| 21-119240-001-EXP.xml | F02 | CN | Lot | REDUCTION_RECOURSE |
-| 21-119240-001-EXP.xml | F02 | CN | Lot Selection Criteria | RULES_CRITERIA |
+| 21-119240-001-EXP.xml | F05 | CN | Lot Selection Criteria | RULES_CRITERIA and REDUCTION_RECOURSE |
 | 20-566267-001-EXP.xml | F02 | CN | Lot | FRAMEWORK and DPS_ADDITIONAL_PURCHASERS |
 | 20-295737-001-EXP.xml | F21 | CN | Procedure | MAIN_FEATURES_AWARD |
 | 21-120407-001-EXP.xml | F02 | CN | Dates | DATE_TENDER_VALID |
@@ -33,17 +30,16 @@ This table lists the TED XML files selected to test development of the Converter
 | 20-343258-001-EXP.xml | F02 | CN | NUTS | 5 NUTS3 codes, MAIN_SITE with 5 P |
 | 21-363118-001-EXP.xml | F12 | CN | Lot Selection Criteria | CRITERIA_SELECTION |
 | 20-179994-001-EXP.xml | F12 | CN | Prize | NUMBER_VALUE_PRIZE and DETAILS_PAYMENT |
-| 352907_2021.xml | F02 | CN |  |  |
-| 353820_2021.xml | F02 | CN |  |  |
-| 352444_2021.xml | F02 | CN |  |  |
-| 352458_2021.xml | F02 | CN |  |  |
-| 354625_2021.xml | F12 | CN | Award Criteria | MEMBER_NAME |
-| 354626_2021.xml | F12 | CN |  |  |
-| 354823_2021.xml | F12 | CN |  |  |
-| 352425_2021.xml | F03 | CAN | Contract award | PT_AWARD_CONTRACT_WITHOUT_CALL |
-| 353237_2021.xml | F03 | CAN | Contract award | TERMINATION_PIN |
-| 352732_2021.xml | F03 | CAN |  |  |
-| 354339_2021.xml | F03 | CAN |  |  |
+| 21-364236-001-EXP.xml | F02 | CN |  |  |
+| 21-363066-001-EXP.xml | F02 | CN |  |  |
+| 21-363062-001-EXP.xml | F02 | CN |  |  |
+| 21-362774-001-EXP.xml | F02 | CN |  |  |
+| 21-364516-001-EXP.xml | F12 | CN | Award Criteria | MEMBER_NAME |
+| 21-364082-001-EXP.xml | F05 | CN |  |  | 
+| 21-357646-001-EXP.xml | F03 | CAN | Contract award | PT_AWARD_CONTRACT_WITHOUT_CALL |
+| 21-362579-001-EXP.xml | F03 | CAN | Contract award | TERMINATION_PIN |
+| 21-364180-001-EXP.xml | F03 | CAN |  |  |
+| 21-364240-001-EXP.xml | F03 | CAN |  |  |
 | 20-157399-001-EXP.xml | F03 | CAN | SettledContract | No DPS, no FRAMEWORK |
 | 20-157543-001-EXP.xml | F03 | CAN | SettledContract | FRAMEWORK |
 | 22-086633-001-EXP.xml | F03 | CAN | SettledContract | Multiple AWARD_CONTRACT collated into one SettledContract |
@@ -54,7 +50,7 @@ This table lists the TED XML files selected to test development of the Converter
 | 21-149886-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2014_23_EU |
 | 21-298854-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2009_81_EC/AC/AC_PRICE |
 | 22-073124-001-EXP.xml | F15 | CAN | Award Criteria | DIRECTIVE_2009_81_EC/AC/AC_CRITERIA |
-| 21-119282-001-EXP.xml | F24 | CAN | Award Criteria | AC/AC_CRITERION |
+| 21-119282-001-EXP.xml | F24 | CN | Award Criteria | AC/AC_CRITERION |
 | 21-205737-001-EXP.xml | F25 | CAN | Award Criteria | AC/AC_CRITERION |
 | 19-271873-001-EXP.xml | F03 | CAN | Framework | 109 Lots, 5 Awards |
 | 20-168879-001-EXP.xml | F03 | CAN | Performance analysis | 652 Lots, 1105 Awards |
@@ -67,3 +63,20 @@ This table lists the TED XML files selected to test development of the Converter
 | 19-289373-001-EXP.xml | F22 | CN | Subtype mapping | Notice type QSU_CALL_COMPETITION |
 | 20-318547-001-EXP.xml | F22 | CN | Lot | QS/INDEFINITE_DURATION |
 | 21-048169-001-EXP.xml | F03 | CAN | Lot | EU_PROGR_RELATED |
+| 18-536293-001-EXP.xml | F13 | CAN | Design Result | Multiple WINNER elements |
+| 19-111211-001-EXP.xml | F13 | CAN | Design Result | NO_AWARDED_PRIZE |
+| 20-620029-001-EXP.xml | F07 | CN | Qualification System | Call for competition |
+| 20-271232-001-EXP.xml | F07 | CN | Qualification System | Call for competition |
+| 19-099886-001-EXP.xml | F08 | PIN | Buyer Profile | Example of F08 | 
+| 18-412273-001-EXP.xml | F06 | CAN | Result | VAL_SUBCONTRACTING |
+| 22-434184-001-EXP.xml | F04 | PIN | PIN RTL | LOT_MAX_NUMBER |
+| 19-090974-001-EXP.xml | F21 | CN | Lot | RESERVED_ORGANISATIONS_SERVICE_MISSION, RESTRICTED_SHELTERED_PROGRAM, RESTRICTED_SHELTERED_WORKSHOP |
+| 19-318420-001-EXP.xml | F25 | CAN | Result | CALCULATION_METHOD, INFO_ADD_VALUE, VAL_PRICE_PAYMENT, VAL_REVENUE |
+| 18-151256-001-EXP.xml | F12 | CN | Design | DIRECTIVE, NB_MAX_PARTICIPANTS, NB_MIN_PARTICIPANTS, PARTICIPANT_NAME |
+| 23-119901-001-EXP.xml | F14 | XX | Corrigendum | F14 notices cannot be converted |
+| 18-156915-001-EXP.xml | F13 | CAN | Result | NB_PARTICIPANTS_OTHER_EU, NB_PARTICIPANTS_SME |
+| 18-168448-001-EXP.xml | F02 | CN | Lot | INFO_ADD_EAUCTION |
+
+
+
+

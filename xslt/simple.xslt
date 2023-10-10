@@ -16,24 +16,24 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:template match="*:OFFICIALNAME">
 	<cac:PartyName>
-		<cbc:Name><xsl:apply-templates/></cbc:Name>
+		<cbc:Name><xsl:value-of select="fn:normalize-space(.)"/></cbc:Name>
 	</cac:PartyName>
 </xsl:template>
 
 <xsl:template match="*:URL_GENERAL|*:URL">
-	<cbc:WebsiteURI><xsl:apply-templates/></cbc:WebsiteURI>
+	<cbc:WebsiteURI><xsl:value-of select="fn:normalize-space(.)"/></cbc:WebsiteURI>
 </xsl:template>
 
 <xsl:template match="*:ADDRESS">
-	<cbc:StreetName><xsl:apply-templates/></cbc:StreetName>
+	<cbc:StreetName><xsl:value-of select="fn:normalize-space(.)"/></cbc:StreetName>
 </xsl:template>
 
 <xsl:template match="*:TOWN">
-	<cbc:CityName><xsl:apply-templates/></cbc:CityName>
+	<cbc:CityName><xsl:value-of select="fn:normalize-space(.)"/></cbc:CityName>
 </xsl:template>
 
 <xsl:template match="*:POSTAL_CODE">
-	<cbc:PostalZone><xsl:apply-templates/></cbc:PostalZone>
+	<cbc:PostalZone><xsl:value-of select="fn:normalize-space(.)"/></cbc:PostalZone>
 </xsl:template>
 
 <xsl:template match="*:NUTS">
@@ -42,36 +42,36 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:template match="*:NATIONALID">
 	<cac:PartyLegalEntity>
-		<cbc:CompanyID><xsl:apply-templates/></cbc:CompanyID>
+		<cbc:CompanyID><xsl:value-of select="fn:normalize-space(.)"/></cbc:CompanyID>
 	</cac:PartyLegalEntity>
 </xsl:template>
 
 <xsl:template match="*:CONTACT_POINT">
-	<cbc:Name><xsl:apply-templates/></cbc:Name>
+	<cbc:Name><xsl:value-of select="fn:normalize-space(.)"/></cbc:Name>
 </xsl:template>
 
 <xsl:template match="*:PHONE">
-	<cbc:Telephone><xsl:apply-templates/></cbc:Telephone>
+	<cbc:Telephone><xsl:value-of select="fn:normalize-space(.)"/></cbc:Telephone>
 </xsl:template>
 
 <xsl:template match="*:FAX">
-	<cbc:Telefax><xsl:apply-templates/></cbc:Telefax>
+	<cbc:Telefax><xsl:value-of select="fn:normalize-space(.)"/></cbc:Telefax>
 </xsl:template>
 
 <xsl:template match="*:E_MAIL">
-	<cbc:ElectronicMail><xsl:apply-templates/></cbc:ElectronicMail>
+	<cbc:ElectronicMail><xsl:value-of select="fn:normalize-space(.)"/></cbc:ElectronicMail>
 </xsl:template>
 
 <xsl:template match="*:URL_BUYER">
-	<cbc:BuyerProfileURI><xsl:apply-templates/></cbc:BuyerProfileURI>
+	<cbc:BuyerProfileURI><xsl:value-of select="fn:normalize-space(.)"/></cbc:BuyerProfileURI>
 </xsl:template>
 
 <xsl:template match="*:REFERENCE_NUMBER">
-	<cbc:ID schemeName="InternalID"><xsl:apply-templates/></cbc:ID>
+	<cbc:ID schemeName="InternalID"><xsl:value-of select="fn:normalize-space(.)"/></cbc:ID>
 </xsl:template>
 
 <xsl:template match="*:LOT_MAX_ONE_TENDERER">
-	<cbc:MaximumLotsAwardedNumeric><xsl:apply-templates/></cbc:MaximumLotsAwardedNumeric>
+	<cbc:MaximumLotsAwardedNumeric><xsl:value-of select="fn:normalize-space(.)"/></cbc:MaximumLotsAwardedNumeric>
 </xsl:template>
 
 <xsl:template match="*:LOT_ALL">
@@ -79,7 +79,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 </xsl:template>
 
 <xsl:template match="*:LOT_MAX_NUMBER">
-	<cbc:MaximumLotsSubmittedNumeric><xsl:apply-templates/></cbc:MaximumLotsSubmittedNumeric>
+	<cbc:MaximumLotsSubmittedNumeric><xsl:value-of select="fn:normalize-space(.)"/></cbc:MaximumLotsSubmittedNumeric>
 </xsl:template>
 
 <xsl:template match="*:LOT_ONE_ONLY">
@@ -130,11 +130,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 </xsl:template>
 
 <xsl:template match="*:URL_PARTICIPATION">
-	<cbc:EndpointID><xsl:apply-templates/></cbc:EndpointID>
+	<cbc:EndpointID><xsl:value-of select="fn:normalize-space(.)"/></cbc:EndpointID>
 </xsl:template>
 
 <xsl:template match="*:URL_TOOL">
-	<cbc:AccessToolsURI><xsl:apply-templates/></cbc:AccessToolsURI>
+	<cbc:AccessToolsURI><xsl:value-of select="fn:normalize-space(.)"/></cbc:AccessToolsURI>
 </xsl:template>
 
+<xsl:template match="*:PARTICIPANT_NAME">
+	<cac:PreSelectedParty>
+		<cac:PartyName>
+			<cbc:Name><xsl:value-of select="fn:normalize-space(.)"/></cbc:Name>
+		</cac:PartyName>
+	</cac:PreSelectedParty>
+</xsl:template>
 </xsl:stylesheet>

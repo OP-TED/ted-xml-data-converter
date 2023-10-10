@@ -23,8 +23,10 @@ exclude-result-prefixes=" xs xsl fn ">
 	<xsl:element name="{$singular-element-name}">
 				<xsl:variable name="ted-form" select="fn:string(op-mapped-code[@source='TED'])"/>
 				<xsl:variable name="eforms-form" select="fn:string(authority-code)"/>
+				<xsl:variable name="english-label" select="fn:string(label/lg.version[@lg='eng'])"/>
 				<ted><xsl:value-of select="$ted-form"/></ted>
 				<eforms><xsl:value-of select="$eforms-form"/></eforms>
+				<description><xsl:value-of select="$english-label"/></description>
 	</xsl:element>
 </xsl:template>
 

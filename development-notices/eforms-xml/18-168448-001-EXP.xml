@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+                 xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                 xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                 xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension><!--Notice SubType (OPP-070)-->
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <!-- efac:Organizations -->
+               <efac:Organizations>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>www.echa.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Chemicals Agency (ECHA)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Annankatu 18</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Helsinki</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>00121</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <cbc:CountrySubentityCode listName="nuts">FI1B1</cbc:CountrySubentityCode>
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FIN</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)-->
+                           <cbc:Name>Finance Unit</cbc:Name>
+                           <!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+358 9686180</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>procurement@echa.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://curia.europa.eu</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>General Court</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>rue du Fort Niedergrünewald</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>L -2925</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+358 4303-1</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <cbc:Telefax>+358 4303-2100</cbc:Telefax>
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>GeneralCourt.Registry@curia.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization><!--Organization Subrole (BT-770) : Group leader (Buyer)--><!--Organization Role : Acquiring CPB-->
+                     <efac:Company><!--Organization Internet Address (BT-505)-->
+                        <cbc:WebsiteURI>http://echa.europa.eu/web/guest/about-us/procurement</cbc:WebsiteURI>
+                        <!--Winner Size (BT-165)-->
+                        <!--Organization Technical Identifier (OPT-200)-->
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <!--Organization Name (BT-500)-->
+                        <cac:PartyName>
+                           <cbc:Name>European Chemicals Agency (ECHA)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress><!--Organization Street (BT-510)-->
+                           <cbc:StreetName>Annankatu 18</cbc:StreetName>
+                           <!--Organization City (BT-513)-->
+                           <cbc:CityName>Helsinki</cbc:CityName>
+                           <!--Organization Post Code (BT-512)-->
+                           <cbc:PostalZone>00121</cbc:PostalZone>
+                           <!--Organization Country Subdivision (BT-507)-->
+                           <!--Organization Country Code (BT-514)-->
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">FIN</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <!--Organization Identifier (BT-501)-->
+                        <cac:Contact><!--Organization Contact Point (BT-502)--><!--Organization Contact Telephone Number (BT-503)-->
+                           <cbc:Telephone>+358 9686180</cbc:Telephone>
+                           <!--Organization Contact Fax (BT-739)-->
+                           <!--Organization Contact Email Address (BT-506)-->
+                           <cbc:ElectronicMail>procurement@echa.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+               <!-- efac:Publication -->
+               <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <!--OJEU Identifier (OPP-011)-->
+                  <efbc:GazetteID schemeName="ojs-id">80/2018</efbc:GazetteID>
+                  <!--OJEU Publication Date (OPP-012)-->
+                  <efbc:PublicationDate>2018-04-25+01:00</efbc:PublicationDate>
+               </efac:Publication>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <!--UBL version ID (UBL)-->
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <!--Customization ID (UBL)-->
+   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <!--Notice Identifier (BT-701)-->
+   <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
+   <!--Procedure Identifier (BT-04)-->
+   <cbc:ContractFolderID>aff2863e-b4cc-4e91-baba-b3b85f709117</cbc:ContractFolderID>
+   <!--Notice Dispatch Date (BT-05)-->
+   <cbc:IssueDate>2018-04-13+01:00</cbc:IssueDate>
+   <cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+   <!--Notice Version (BT-757)-->
+   <cbc:VersionID>01</cbc:VersionID>
+   <!--Future Notice (BT-127)-->
+   <!--Procedure Legal Basis (BT-01)-->
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <!--Form Type (BT-03) and Notice Type (BT-02)-->
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <!--Notice Official Language (BT-702) (first)-->
+   <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DAN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>DEU</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SPA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FIN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>FRA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ELL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>ITA</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>NLD</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POR</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SWE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>CES</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>EST</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HUN</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LIT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>LAV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>MLT</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>POL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLK</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>SLV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>GLE</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>BUL</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>RON</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <cac:AdditionalNoticeLanguage>
+      <cbc:ID>HRV</cbc:ID>
+   </cac:AdditionalNoticeLanguage>
+   <!-- cac:ContractingParty -->
+   <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
+      <cbc:BuyerProfileURI>http://echa.europa.eu/about-us/procurement</cbc:BuyerProfileURI>
+      <!--Buyer Legal Type (BT-11)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Buyer Contracting Entity (BT-740)-->
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <!--Activity Authority (BT-10)-->
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <!--Activity Entity (BT-610)-->
+      <cac:Party><!--Buyer Technical Identifier Reference (OPT-300)-->
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <!--Reference (Technical ID) to the legal organization acting as a PSP.-->
+         <!--The service provider is an eSender-->
+         <!--Reference (Tech. ID) to the legal organization acting as an eSender.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+         <!--Service Provider Technical Identifier Reference (OPT-300)-->
+         <!--Reference (Technical ID) to the legal organization acting as a Buyer.-->
+      </cac:Party>
+   </cac:ContractingParty>
+   <!-- cac:TenderingTerms -->
+   <cac:TenderingTerms><!--Cross Border Law (BT-09)--><!--Legal Basis (BT-01) Local - Text--><!--Exclusion Grounds (BT-67)--><!--Lots Max Awarded (BT-33)--><!--Lots Max Allowed (BT-31)--><!--Group Identifier (BT-330)--><!--Group Lot Identifier (BT-1375)--></cac:TenderingTerms>
+   <!-- cac:TenderingProcess -->
+   <cac:TenderingProcess>
+      <ext:UBLExtensions>
+         <ext:UBLExtension>
+            <ext:ExtensionContent>
+               <efext:EformsExtension><!--Procurement Relaunch (BT-634)--></efext:EformsExtension>
+            </ext:ExtensionContent>
+         </ext:UBLExtension>
+      </ext:UBLExtensions>
+      <!--Procedure Features (BT-88)-->
+      <!--Procedure Type (BT-105)-->
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <!--Lots All Required (BT-763)-->
+      <!--PIN Competition Termination (BT-756)-->
+      <!--Previous Notice Identifier (OPP-090)-->
+      <!--Direct Award Justification (BT-136)-->
+      <!--Direct Award Justification (BT-135)-->
+      <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
+   </cac:TenderingProcess>
+   <!-- cac:ProcurementProject -->
+   <cac:ProcurementProject><!--Internal Identifier (BT-22)-->
+      <cbc:ID schemeName="InternalID">ECHA/2018/100</cbc:ID>
+      <!--Title (BT-21)-->
+      <cbc:Name languageID="ENG">Public sale of ECHA Service Car (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="DAN">Offentligt salg af ECHA-tjenestebil (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="DEU">Öffentlicher Verkauf eines Dienstwagens der ECHA (BMW Sedan Active Hybrid 5)</cbc:Name>
+      <cbc:Name languageID="SPA">Venta pública del coche oficial de la ECHA (BMW Active híbrido 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="FIN">ECHAn virka-auton (BMW ActiveHybrid 5 sedan) julkinen myynti</cbc:Name>
+      <cbc:Name languageID="FRA">Vente publique de la voiture de service de l'ECHA (BMW ActiveHybrid 5)</cbc:Name>
+      <cbc:Name languageID="ELL">Δημόσια πώληση του υπηρεσιακού αυτοκινήτου του ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="ITA">Vendita pubblica di ECHA Service Car (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="NLD">Openbare verkoop van een ECHA-dienstwagen (BMW Active Hybrid 5 Sedan).</cbc:Name>
+      <cbc:Name languageID="POR">Venda pública de um automóvel de serviço da Agência Europeia dos Produtos Químicos (ECHA) (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="SWE">Offentlig auktion på Echas tjänstebil (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="CES">Veřejný prodej služebního vozidla agentury ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="EST">ECHA ametiauto (BMW ActiveHybrid 5 sedaan) avalik müük</cbc:Name>
+      <cbc:Name languageID="HUN">Az ECHA szolgálati autójának (BMW Active Hybrid 5 szedán) nyilvános értékesítése</cbc:Name>
+      <cbc:Name languageID="LIT">ECHA tarnybinio automobilio (BMW ActiveHybrid 5 sedano) viešas pardavimas</cbc:Name>
+      <cbc:Name languageID="LAV">ECHA dienesta automobiļa (sedana tipa BMW Active Hybrid 5) publiska izsole</cbc:Name>
+      <cbc:Name languageID="MLT">Bejgħ pubbliku ta' Karozza tas-Servizz tal-ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="POL">Sprzedaż publiczna samochodu służbowego ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="SLK">Verejný predaj služobného vozidla agentúry ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="SLV">Javna prodaja službenega vozila agencije ECHA (aktivne hibridne limuzine BMW serije 5)</cbc:Name>
+      <cbc:Name languageID="GLE">Díol poiblí Charr Seirbhíse ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="BUL">Публична продажба на служебен автомобил на ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="RON">Vânzarea publică a autovehiculului de serviciu ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+      <cbc:Name languageID="HRV">Javna prodaja službenog automobila ECHA-e (BMW aktivna hibridna limuzina serije 5)</cbc:Name>
+      <!--Description (BT-24)-->
+      <cbc:Description languageID="ENG">ECHA is selling, via public auction, an ecological and powerful 5-class BMW Active Hybrid Sedan with full detailed service history. The vehicle has been used solely as an official representation vehicle with 12 000 km. ECHA purchased the vehicle in August 2014.</cbc:Description>
+      <cbc:Description languageID="DAN">ECHA sælger, via offentlig auktion, en miljøvenlig og kraftfuld 5-klasse BMW Active Hybrid Sedan med en fuldt detaljeret servicehistorik. Køretøjet er kun blevet brugt som officielt repræsentationskøretøj med 12 000 km. ECHA købte køretøjet i august 2014.</cbc:Description>
+      <cbc:Description languageID="DEU">Die ECHA verkauft im Rahmen einer öffentlichen Auktion einen ökologischen und leistungsstarken BMW Sedan Active Hybrid 5 mit vollständiger Servicehistorie. Das Fahrzeug wurde ausschließlich zu offiziellen Repräsentationszwecken eingesetzt und weist einen Kilometerstand von 12 000 km auf. Die ECHA hat das Fahrzeug im August 2014 erworben.</cbc:Description>
+      <cbc:Description languageID="SPA">La ECHA está vendiendo, a través de una subasta pública, un BMW Active híbrido Sedan, clase 5, ecológico y de gran potencia con un historial de servicio completo y detallado. El vehículo se ha utilizado únicamente como vehículo de representación oficial, con 12 000 km. La ECHA compró el vehículo en agosto de 2014.</cbc:Description>
+      <cbc:Description languageID="FIN">ECHA myy julkisella huutokaupalla ekologisen ja tehokkaan 5-sarjan BMW ActiveHybrid sedan-mallisen henkilöauton kattavalla yksityiskohtaisella huoltohistorialla. Ajoneuvoa on käytetty ainoastaan virallisena edustusautona, ja sillä on ajettu 12 000 km. ECHA osti ajoneuvon elokuussa 2014.</cbc:Description>
+      <cbc:Description languageID="FRA">L'ECHA vends, par le biais d'une vente aux enchères publique, une BMW Activehybrid 5 écologique et puissante, avec son carnet d'entretien complet et détaillé. Le véhicule a été utilisé uniquement en tant que véhicule de représentation officiel, et n’affiche que 12 000 km au compteur. L'ECHA l’avait acheté en août 2014.</cbc:Description>
+      <cbc:Description languageID="ELL">Ο ECHA πωλεί, μέσω δημόσιου πλειστηριασμού, ένα οικολογικό και ισχυρό BMW Active Hybrid Sedan 5-class με πλήρες λεπτομερές ιστορικό συντήρησης. Το όχημα χρησιμοποιήθηκε αποκλειστικά ως επίσημο όχημα εκπροσώπησης με 12 000 χλμ. Ο ECHA αγόρασε το όχημα τον Αύγουστο του 2014.</cbc:Description>
+      <cbc:Description languageID="ITA">ECHA ha messo in vendita, mediante asta pubblica, una BMW Active Hybrid Sedan ecologica classe di potenza 5, con una cronologia completa di servizio. La vettura è stata utilizzata solo come veicolo di rappresentanza ufficiale con una percorrenza di 12 000 km. ECHA ha acquistato il veicolo nell’Agosto del 2014.</cbc:Description>
+      <cbc:Description languageID="NLD">Via een openbare veiling verkoopt ECHA een ecologische en krachtige 5-klasse BMW Active Hybrid Sedan, inclusief een volledig gedetailleerd onderhoudsoverzicht. Het voertuig werd uitsluitend gebruikt als officieel representatievoertuig en heeft een kilometerstand van 12 000 km. ECHA heeft het voertuig in augustus 2014 aangeschaft.</cbc:Description>
+      <cbc:Description languageID="POR">A ECHA pretende vender, através de leilão público, um automóvel BMW Active Hybrid Sedan série 5, ecológico e potente, com um histórico de serviço detalhado. O veículo com 12 000 km tem sido utilizado apenas como veículo para representação oficial. A ECHA adquiriu o veículo em agosto de 2014.</cbc:Description>
+      <cbc:Description languageID="SWE">Echa säljer på offentlig auktion en ekologisk och kraftfull 5-klassig BMW Active Hybrid Sedan med en helt detaljerad service-historik. Fordonet har använts endast som officiell representationsbil i 12 000 km. Echa förvärvade fordonet i augusti 2014.</cbc:Description>
+      <cbc:Description languageID="CES">Agentura ECHA prodává prostřednictvím veřejné aukce ekologické a výkonné vozidlo třídy 5 BMW Active Hybrid Sedan s podrobnou servisní knížkou. Vozidlo bylo používáno výhradně jako vozidlo pro oficiální zastoupení s 12 000 km. ECHA koupila vozidlo v srpnu 2014.</cbc:Description>
+      <cbc:Description languageID="EST">ECHA müüb avaliku oksjoni teel keskkonnasäästliku ja võimsa 5. seeria BMW ActiveHybrid sedaani, millel on täielik üksikasjalik teeninduse ajalugu. Seda sõidukit on kasutatud üksnes ametliku esindusautona ja selle läbisõit on 12 000 km. ECHA ostis sõiduki 2014. aasta augustis.</cbc:Description>
+      <cbc:Description languageID="HUN">Az ECHA nyilvános árverésen értékesít egy környezetbarát és erős 5-ös sorozatú BMW Active Hybrid szedánt részletes szervizkönyvvel. A járművet kizárólag hivatalos reprezentációs járműként használták, és 12 000 km-t futott. Az ECHA 2014 augusztusában vásárolta meg a járművet.</cbc:Description>
+      <cbc:Description languageID="LIT">ECHA viešame aukcione parduoda ekologišką ir galingą 5 klasės BMW ActiveHybrid sedaną, apie kurį pateikiama išsami atliktos techninės priežiūros informacija. Transporto priemonė buvo naudojami tik kaip oficialus reprezentacinis automobilis; jo rida – 12 000 km. ECHA transporto priemonę įsigijo 2014 m. rugpjūčio mėn.</cbc:Description>
+      <cbc:Description languageID="LAV">ECHA publiskajā izsolē pārdod ekoloģisku un jaudīgu 5. sērijas sedana tipa BMW Active Hybrid modeli, norādot pilnu nobraukuma vēsturi. Transportlīdzeklis ir izmantots tikai oficiāliem nolūkiem ar 12 000 km lielu nobraukumu. ECHA transportlīdzekli iegādājās 2014. gada augustā.</cbc:Description>
+      <cbc:Description languageID="MLT">L-ECHA qed tbigħ, permezz ta' rkant pubbliku, BMW Active Hybrid Sedan Klassi-5 ekoloġika u b'saħħitha bl-istorja sħiħa ddettaljata tas-servizz. Il-vettura ntużat biss bħala vettura ta' rappreżentanza uffiċjali bi 12 000 km. L-ECHA xtrat il-vettura f'Awwissu 2014.</cbc:Description>
+      <cbc:Description languageID="POL">ECHA sprzedaje w drodze aukcji publicznej ekologiczny BMW Active Hybrid Sedan serii 5 o dużej mocy, wraz ze szczegółową historią użytkowania. Pojazd był używany wyłącznie jako oficjalny pojazd reprezentacyjny, jego przebieg wynosi 12 000 km. ECHA nabyła ten pojazd w sierpniu 2014 r.</cbc:Description>
+      <cbc:Description languageID="SLK">ECHA predáva prostredníctvom verejnej aukcie ekologické a výkonné vozidlo BMW Active Hybrid Sedan triedy 5 s podrobným záznamom o histórii servisných služieb. Vozidlo sa používalo výlučne ako oficiálne reprezentatívne vozidlo a má najazdených 12 000 km. Agentúra ECHA si vozidlo zakúpila v auguste 2014.</cbc:Description>
+      <cbc:Description languageID="SLV">Agencija prek javne dražbe prodaja ekološko in zmogljivo aktivno hibridno limuzino BMW serije 5 z v celoti navedeno zgodovino delovanja. Vozilo se je uporabljajo zgolj za uradne službene namene in je prevozilo 12 000 km. Agencija ECHA je vozilo kupila avgusta 2014.</cbc:Description>
+      <cbc:Description languageID="GLE">Tá an ECHA chun BMW Active Hybrid Sedan 5-class a dhíol trí cheant poiblí, ar gluaisteán éiceolaíoch agus cumhachtach é le stair seirbhíse mhionsonraithe iomlán. Baineadh leas as an bhfeithicil mar fheithicil ionadaíochta oifigiúil amháin le 12 000 km curtha di. Ba thiar i mí Lúnasa 2014 a cheannaigh an ECHA an fheithicil.</cbc:Description>
+      <cbc:Description languageID="BUL">ECHA продава чрез публичен търг екологичен и мощен автомобил 5-class BMW Active Hybrid Sedan с пълна подробна сервизна история. Автомобилът е бил използван единствено като превозно средство за официално представителство и е с километраж от 12 000 км. Автомобилът е закупен от ECHA през август 2014 г.</cbc:Description>
+      <cbc:Description languageID="RON">ECHA vinde, prin licitație publică, un autovehicul ecologic și puternic BMW Active Hybrid Sedan din clasa 5 cu un istoric complet al serviciilor. Vehiculul a fost utilizat exclusiv ca autovehicul pentru reprezentanță oficială, având 12 000 km la bord. ECHA a achiziționat autovehiculul în august 2014.</cbc:Description>
+      <cbc:Description languageID="HRV">ECHA prodaje, putem javne aukcije, ekološko i snažno vozilo BMW aktivnu hibridnu limuzinu serije 5 s potpunom detaljnom povijesti usluga. Vozilo je korišteno isključivo kao vozilo za službeno zastupništvo koje je prešlo 12 000 km. ECHA je kupila vozilo u kolovozu 2014.</cbc:Description>
+      <!--Main Nature (BT-23)-->
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <!--Additional Information (BT-300)-->
+      <cbc:Note languageID="ENG">This sale procedure is divided in 2 steps: — submission of the initial bid: during the first stage the Agency will assess the information provided by the bidders and draw a list of eligible bids to be invited to the online auction phase, — Online auction for the final bid: all eligible initial bids will be invited to participate to the online auction at a specified date and time. Bidders will have the possibility to increase their initial bid as originally submitted.</cbc:Note>
+      <cbc:Note languageID="DAN">Dette udbud er opdelt i 2 trin: — Indsendelse af det indledende bud: I den første fase vil agenturet vurdere oplysningerne, som de bydende har indgivet, og udarbejde en liste over valgbare bydere, som vil blive inviteret til fasen med online-auktion. — Online-auktion for det endelige bud: Alle valgbare indledende bud vil blive inviteret til at deltage i den online-auktion på en bestemt dato og tidspunkt. Tilbudsgiverne vil få mulighed for at øge deres bud, som de oprindeligt fremlagde.</cbc:Note>
+      <cbc:Note languageID="DEU">Dieses Verkaufsverfahren ist in 2 Stufen unterteilt: — Während der ersten Phase bewertet die Agentur die von den Bietern bereitgestellten Informationen und erstellt eine Liste mit teilnahmeberechtigten Angeboten, die zur Online-Versteigerungsphase eingeladen werden, — Online-Versteigerung für das endgültige Angebot: alle teilnahmeberechtigten Anfangsangebote erhalten eine Einladung zur Teilnahme an der Online-Versteigerung, die an einem bestimmten Tag zu einer bestimmten Uhrzeit stattfindet. Die Bieter erhalten die Möglichkeit, ihr ursprünglich abgegebenes Anfangsangebot anzuheben.</cbc:Note>
+      <cbc:Note languageID="SPA">Este procedimiento de venta se divide en 2 fases: — presentación de la oferta inicial: durante la primera fase, la Agencia evaluará la información proporcionada por los candidatos y elaborará una lista de ofertas elegibles a cuyos candidatos se invitará a participar en la fase de subasta en línea, — subasta en línea para la oferta final: todos los candidatos de las ofertas iniciales elegibles serán invitados a participar en la subasta en línea en una fecha y a una hora determinadas. Los licitadores podrán aumentar las ofertas que presentaron inicialmente.</cbc:Note>
+      <cbc:Note languageID="FIN">Myyntimenettely on jaettu 2 vaiheeseen seuraavasti: — alustavan tarjouksen jättäminen: ensimmäisen vaiheen aikana virasto arvioi tarjoajien toimittamat tiedot ja laatii luettelon hyväksyttävistä tarjouksista, joiden jättäjät kutsutaan verkossa suoritettavaan huutokauppavaiheeseen, — verkossa suoritettava huutokauppa lopullista tarjousta varten: kaikki tarjoajat, jotka ovat jättäneet hyväksyttävän alustavan tarjouksen, kutsutaan osallistumaan verkossa suoritettavaan huutokauppaan määritettynä päivänä ja aikana. Tarjoajilla on mahdollisuus nostaa alun perin jättämäänsä alustavaa tarjousta.</cbc:Note>
+      <cbc:Note languageID="FRA">La procédure de vente est divisée en 2 étapes : - Présentation de l'offre initiale : au cours de la 1e phase, l'Agence évaluera les informations fournies par les soumissionnaires et dressera une liste des offres recevables dont les soumissionnaires seront invités à participer à la phase d'enchère en ligne, - Enchère en ligne pour l'offre définitive : tous les soumissionnaires ayant présenté des offres initiales recevables seront invités à participer à l'enchère en ligne à la date et à l'heure indiquées. Les soumissionnaires pourront augmenter la valeur de l'offre initiale qu'ils ont présentée.</cbc:Note>
+      <cbc:Note languageID="ELL">Η διαδικασία πώλησης διαιρείται σε 2 στάδια: — υποβολή της αρχικής προσφοράς: κατά το πρώτο στάδιο ο Οργανισμός θα αξιολογήσει τις πληροφορίες που θα παρασχεθούν από τους προσφέροντες και θα καταρτίσει έναν κατάλογο επιλέξιμων προσφορών που θα κληθούν στη φάση της διαδικτυακής δημοπρασίας, — διαδικτυακή δημοπρασία για την τελική προσφορά: όλες οι επιλέξιμες αρχικές προσφορές θα κληθούν να συμμετάσχουν στη διαδικτυακή δημοπρασία σε καθορισμένη ημερομηνία και ώρα. Οι προσφέροντες θα έχουν τη δυνατότητα να αυξήσουν την αρχική προσφορά τους που υποβλήθηκε αρχικά.</cbc:Note>
+      <cbc:Note languageID="ITA">La procedura sarà suddivisa in 2 fasi: — presentazione di un'offerta iniziale: durante la prima fase l'Agenzia valuterà le informazioni fornite dagli offerenti e stilerà un elenco di offerte ammissibili da invitare alla fase di asta online, — asta online per l'offerta finale: tutte le offerte iniziali ammissibili saranno invitate a partecipare all'asta online alla data e ora che verranno specificate. Gli offerenti avranno la possibilità di aumentare la propria offerta inizialmente presentata.</cbc:Note>
+      <cbc:Note languageID="NLD">De verkoopprocedure is in 2 stappen verdeeld: — indiening van het eerste bod: tijdens de eerste fase beoordeelt het Agentschap de informatie die door de bieders is verstrekt en stelt het een lijst op van geschikte biedingen die moeten worden uitgenodigd voor de fase van de online veiling; — online veiling voor het laatste bod: alle geschikte eerste biedingen zullen worden uitgenodigd deel te nemen aan de online veiling op een aangegeven datum en tijdstip. Bieders hebben de mogelijkheid om hun eerste bod, zoals zij het oorspronkelijk hebben ingediend, te verhogen.</cbc:Note>
+      <cbc:Note languageID="POR">O presente processo de venda está dividido em 2 fases: — apresentação da proposta inicial: durante a primeira fase, a Agência avaliará as informações fornecidas pelos proponentes e elaborará uma lista das propostas elegíveis dos proponentes que serão convidados a participar na fase do leilão em linha, — leilão em linha para a proposta final: todos os proponentes que tenham apresentado propostas iniciais elegíveis serão convidados a participar no leilão em linha na data e hora indicadas. Os proponentes poderão aumentar o valor da proposta inicial que apresentaram.</cbc:Note>
+      <cbc:Note languageID="SWE">Försäljningsförfarandet är uppdelat i 2 steg. - Inlämning av utgångsbud: Under den första etappen kommer myndigheten att bedöma de uppgifter, som har lämnats av budgivarna och att utforma en förteckning över godtagbara bud, som ska bjudas in till etappen för internetauktionen. - Internetauktion avseende det slutgiltiga budet: Alla godtagbara utgångsbud kommer att inbjudas att delta i internetauktionen ett bestämt datum och klockslag. Budgivare kommer att ha möjlighet att höja de utgångsbud, som de ursprungligen lämnade in.</cbc:Note>
+      <cbc:Note languageID="CES">Toto řízení o prodeji je rozděleno do 2 kroků: — předložení počáteční nabídky: během první fáze agentura posoudí informace poskytnuté uchazeči a vypracuje seznam způsobilých nabídek, jež budou vyzvány k účasti do fáze on-line dražby, — on-line dražba za účelem konečné nabídky: všechny způsobilé počáteční nabídky budou vyzvány k účasti v on-line dražbě v konkrétní datum a čas. Předkladatelé nabídek budou mít možnost zvýšit svou počáteční nabídku, kterou původně předložili.</cbc:Note>
+      <cbc:Note languageID="EST">Käesolev müügiprotseduur on jagatud 2 etapiks: — esialgse pakkumise esitamine: amet hindab esimeses etapis pakkujate esitatud teavet ning koostab loendi nõuetele vastavate pakkumiste pakkujatest, keda kutsutakse võrgus toimuva oksjoni etappi; — võrgus toimuv oksjon lõpliku pakkumise esitamiseks: kõiki nõuetele vastavate esialgsete pakkumistega pakkujaid kutsutakse määratud kuupäeval ja ajal osalema võrgus toimuval oksjonil. Pakkujatel on võimalik oma esialgset pakkumist suurendada.</cbc:Note>
+      <cbc:Note languageID="HUN">Az értékesítései eljárás 2 lépésre van bontva: — az induló ajánlat benyújtása: az ügynökség az első szakasz során értékeli az ajánlattevők által benyújtott információkat és elkészíti az elfogadható ajánlatok listáját, amelyeknek benyújtóit felkérik arra, hogy részt vegyenek az online árverés szakaszában, — a végleges ajánlat kiválasztására irányuló online árverés: valamennyi elfogadható kiinduló ajánlat benyújtóját felkérik a meghatározott napon és időpontban tartandó online árverésen való részvételre. Az ajánlattevőknek lehetőségük lesz arra, hogy az eredetileg benyújtottak szerinti kiinduló ajánlatukat növeljék.</cbc:Note>
+      <cbc:Note languageID="LIT">Pardavimo procedūra padalyta į 2 etapus: — pradinio pasiūlymo pateikimas: pirmuoju etapu agentūra įvertins informaciją, kurią pateikė dalyviai, ir parengs tinkamų pasiūlymų teikėjų, kurie bus pakviesti į internetinį aukciono etapą, sąrašą; — internetinis galutinio pasiūlymo aukcionas: visi tinkamų pasiūlymų teikėjai bus pakviesti dalyvauti internetiniame aukcione nurodytą dieną ir nurodytu laiku. Dalyviai turės galimybę padidinti savo pradinius pasiūlymus, kurie buvo pateikti iš pradžių.</cbc:Note>
+      <cbc:Note languageID="LAV">Izsoles procedūra ir sadalīta 2 posmos: — sākotnējā piedāvājuma iesniegšana — pirmajā posmā aģentūra novērtēs pretendentu sniegto informāciju un sagatavos to atbilstīgo piedāvājumu sarakstu, kuru iesniedzēji tiks aicināti piedalīties tiešsaistes izsoles posmā, — tiešsaistes izsole galīgā piedāvājuma saņemšanai — visu atbilstīgo sākotnējo piedāvājumu iesniedzēji tiks uzaicināti piedalīties tiešsaistes izsolē noteiktā dienā un laikā. Pretendentiem būs iespēja palielināt savu iesniegto sākotnējo piedāvājumu.</cbc:Note>
+      <cbc:Note languageID="MLT">Din il-proċedura ta' bejgħ hija maqsuma f'2 stadji: — it-tfigħ tal-offerta inizjali: waqt l-ewwel stadju l-Aġenzija se tivvaluta t-tagħrif ipprovdut mit-teffiegħa tal-offerti u jisiltu lista ta' offerti eliġibbli biex ikunu mistiedna għall-fażi tal-irkant onlajn, — Irkant onlajn għall-offerta finali: l-offerti inizjali eliġibbli kollha se jkunu mistiedna jieħdu sehem fl-irkant onlajn f'data u ħin speċifikati. It-teffiegħa tal-offerti se jkollhom il-possibbiltà li jżidu l-offerta inizjali tagħhom kif oriġinalment mitfugħa.</cbc:Note>
+      <cbc:Note languageID="POL">Procedura sprzedaży jest podzielona na 2 etapy: — złożenie wstępnej oferty: na pierwszym etapie Agencja oceni informacje podane przez oferentów oraz sporządzi listę oferentów zakwalifikowanych do etapu aukcji internetowej, — aukcja internetowa w celu złożenia ostatecznej oferty cenowej: wszyscy zakwalifikowani oferenci zostaną zaproszeni do udziału w aukcji internetowej, która odbędzie się we wskazanym dniu i o wskazanej godzinie. Oferenci będą mogli podnieść swoje pierwotne oferty cenowe.</cbc:Note>
+      <cbc:Note languageID="SLK">Toto predajné konanie je rozdelené do 2 krokov: — predloženie počiatočnej ponuky: počas prvej fázy agentúra posúdi informácie poskytnuté uchádzačmi a vypracuje zoznam akceptovateľných ponúk, ktoré budú vyzvané na účasť vo fáze online dražby, — online dražba pre konečnú ponuku: všetky oprávnené počiatočné ponuky budú vyzvané na účasť v online dražbe v stanovený deň a v určenom čase. Uchádzači budú mať možnosť zvýšiť svoju počiatočnú ponuku oproti pôvodne predloženej ponuke.</cbc:Note>
+      <cbc:Note languageID="SLV">Prodajni postopek je razdeljen na 2 koraka: — predložitev začetne ponudbe: v prvi fazi bo agencija ocenila informacije, ki jih zagotovijo ponudniki, in pripravila seznam ustreznih ponudb, ki bodo povabljene k fazi spletne dražbe, — spletna dražba za končno ponudbo: vse upravičene začetne ponudbe bodo povabljene k sodelovanju na spletni dražbi ob določenem datumu in času. Ponudniki bodo imeli možnost zvišanja začetne, prvotno predložene ponudbe.</cbc:Note>
+      <cbc:Note languageID="GLE">Tá an nós imeachta díola seo roinnte ina 2 chéim: — cur isteach na tairisceana tosaigh: déanfaidh an Ghníomhaireacht measúnú le linn na chéad chéime ar an bhfaisnéis arna cur ar fáil ag na tairgeoirí, agus dréachtófar liosta tairiscintí incháilithe dá dtabharfar cuireadh chuig céim an cheant ar líne, — ceant ar líne don tairiscint dheireanach: tabharfar cuireadh do gach tairiscint tosaigh incháilithe bheith rannpháirteach sa cheant ar líne ag dáta agus am sainithe. Beidh deis ag tairgeoirí a dtairiscint thosaigh mar a cuireadh isteach ar dtús í a mhéadú.</cbc:Note>
+      <cbc:Note languageID="BUL">Тази процедура за продажба е разделена на 2 етапа: — подаване на първоначалната оферта: по време на първия етап Агенцията ще оцени информацията, предоставена от оферентите, и ще изготви списък на подходящите оферти, които да бъдат поканени в етапа на онлайн търга, — онлайн търг за окончателната оферта: всички подходящи първоначални оферти ще бъдат поканени да участват в онлайн търга на определена дата и час. Оферентите ще имат възможност да увеличат своята първоначална оферта, както е предоставена първоначално.</cbc:Note>
+      <cbc:Note languageID="RON">Procedura de vânzare este împărțită în 2 etape: — depunerea ofertei inițiale: în prima etapă, agenția va evalua informațiile furnizate de ofertanți și va întocmi o listă a ofertelor eligibile, care vor fi invitate să participe la etapa licitației online; — licitația online pentru oferta finală: toate ofertele inițiale eligibile vor fi invitate să participe la licitația online, la o dată și o oră indicate. Ofertanții vor avea posibilitatea de a-și crește oferta inițială pe care au depus-o anterior.</cbc:Note>
+      <cbc:Note languageID="HRV">Postupak prodaje podijeljen je u 2 koraka: — podnošenje početne ponude: tijekom prve faze Agencija će procijeniti informacije koje su pružili ponuditelji i sastaviti popis prihvatljivih ponuda koje će biti pozvane na sudjelovanje u fazi aukcije putem interneta, — aukcija putem interneta za konačnu ponudu: sve prihvatljive početne ponude bit će pozvane na sudjelovanje u aukciji putem interneta određenog dana i u određeno vrijeme. Ponuditelji će imati mogućnost povećati svoju početnu ponudu koju su izvorno podnijeli.</cbc:Note>
+      <!--Estimated Value (BT-27)-->
+      <!--Main Classification Code (BT-262)-->
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">34100000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <!--Additional Classification Code (BT-263)-->
+      <!--Place of Performance Additional Information (BT-728)-->
+      <!--Place Performance City (BT-5131)-->
+      <!--Place Performance Post Code (BT-5121)-->
+      <!--Place Performance Country Subdivision (BT-5071)-->
+      <!--Place Performance Services Other (BT-727)-->
+      <!--Place Performance Street (BT-5101)-->
+      <!--Place Performance Country Code (BT-5141)-->
+   </cac:ProcurementProject>
+   <!-- multiple cac:ProcurementProjectLot -->
+   <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!--Only one Lot in the TED notice-->
+      <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+      <!-- Lot cac:TenderingTerms -->
+      <cac:TenderingTerms><!--Selection Criteria Type (BT-747)--><!--Selection Criteria Name (BT-749)--><!--Selection Criteria Description (BT-750)--><!--Selection Criteria Used (BT-748)--><!--Selection Criteria Second Stage Invite (BT-40)--><!--Selection Criteria Second Stage Invite Number Weight (BT-7531)--><!--Selection Criteria Second Stage Invite Number Threshold (BT-7532)--><!--Selection Criteria Second Stage Invite Number (BT-752)--><!--Variants (BT-63)-->
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <!--EU Funds (BT-60)-->
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <!--Performing Staff Qualification (BT-79)-->
+         <!--Recurrence (BT-94)-->
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <!--Recurrence Description (BT-95)-->
+         <!--Security Clearance Deadline (BT-78)-->
+         <!--Multiple Tenders (BT-769)-->
+         <!--Documents Restricted Justification (BT-707)-->
+         <!--Documents Official Language (BT-708)-->
+         <!--Documents Unofficial Language (BT-737)-->
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>DOCUMENT_ID_REQUIRED_HERE</cbc:ID>
+            <!--Documents Restricted (BT-14)-->
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <!--Documents URL (BT-15) or Documents Restricted URL (BT-615)-->
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://hanki.tarjouspalvelu.fi</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <!--Terms Financial (BT-77)-->
+         <!--Reserved Participation (BT-71)-->
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <!--Tenderer Legal Form (BT-761)-->
+         <!--Tenderer Legal Form Description (BT-76)-->
+         <!--Late Tenderer Information (BT-771)-->
+         <!--Subcontracting Tender Indication (BT-651)-->
+         <!--Subcontracting Obligation (BT-65)-->
+         <!--Subcontracting Obligation Maximum (BT-729)-->
+         <!--Subcontracting Obligation Minimum (BT-64)-->
+         <!--Reserved Execution (BT-736)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Electronic Invoicing (BT-743)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <!--Terms Performance (BT-70)-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ENG">In submitting his bid, the bidder accepts in full and without restriction the requirements for this procedure and the conditions governing the sale contract as the sole basis of this procedure, whatever his own conditions may be, which he hereby waives.</cbc:Description>
+            <cbc:Description languageID="DAN">Ved afgivelse af bud accepterer den bydende til fulde og uden begrænsninger kravene til denne procedure og betingelserne for salgskontrakten, som er det eneste grundlag for denne procedure, uanset hvad den bydendes egne betingelser er, som denne hermed giver afkald på.</cbc:Description>
+            <cbc:Description languageID="DEU">Mit der Einreichung seines Angebots akzeptiert der Bieter die Anforderungen für dieses Verfahren in vollem Umfang und ohne Einschränkung sowie die Bedingungen des Kaufvertrags als einzige Grundlage für dieses Verfahren, unabhängig von seinen eigenen Bedingungen, auf die er hiermit verzichtet.</cbc:Description>
+            <cbc:Description languageID="SPA">Al presentar su oferta, el licitador acepta plenamente y sin restricciones los requisitos del presente procedimiento, así como las condiciones que rigen el contrato de venta como única base de este procedimiento, independientemente de cuáles seas sus propias condiciones, a las que renuncia por la presente.</cbc:Description>
+            <cbc:Description languageID="FIN">Tarjouksen jättäminen tarkoittaa, että tarjoaja hyväksyy täysin ja rajoituksetta tämän menettelyn vaatimukset sekä myyntisopimusta koskevat ehdot ainoana perustana tälle menettelylle riippumatta tarjoajan mahdollisista omista ehdoista, joista tämä näin ollen luopuu.</cbc:Description>
+            <cbc:Description languageID="FRA">En soumettant son offre, le soumissionnaire déclare accepter en totalité et sans restriction les exigences de la présente procédure et les conditions régissant le contrat de vente comme seules bases de la présente procédure, quelles que soient ses propres conditions, auxquelles il renonce ici.</cbc:Description>
+            <cbc:Description languageID="ELL">Μέσω της υποβολής της προσφοράς του, ο προσφέρων αποδέχεται πλήρως και χωρίς περιορισμό τις απαιτήσεις για την εν λόγω διαδικασία, καθώς και τους όρους που διέπουν τη σύμβαση πώλησης ως αποκλειστική βάση της εν λόγω διαδικασίας, ανεξάρτητα από τους δικούς του όρους, τους οποίους αποποιείται διά του παρόντος.</cbc:Description>
+            <cbc:Description languageID="ITA">Presentando la propria offerta, l'offerente accetta senza riserve e senza restrizioni i requisiti di tale procedura e le condizioni che disciplinano il contratto di vendita come unica base di tale procedura, a prescindere dalle proprie condizioni, alle quali egli rinuncia.</cbc:Description>
+            <cbc:Description languageID="NLD">Door zijn bod uit te brengen, aanvaardt de bieder volledig en zonder beperking de vereisten voor deze procedure, en de voorschriften met betrekking tot de verkoopovereenkomst als de enige basis van deze procedure ongeacht zijn eigen voorwaarden, waarvan hij hierbij afstand doet.</cbc:Description>
+            <cbc:Description languageID="POR">Ao apresentar a sua proposta, o proponente declara que aceita na totalidade e sem limitações os requisitos do presente concurso, bem como as condições que regem o contrato de venda como bases únicas do presente concurso, independentemente das suas próprias condições, às quais renuncia pelo presente.</cbc:Description>
+            <cbc:Description languageID="SWE">Genom att lämna in ett bud godtar budgivaren till fullo och utan begränsning kraven för detta förfarande samt villkoren avseende försäljningskontraktet, som enda grundval för detta förfarande, oavsett vilka dennes egna villkor kan vara, och vilka denne härmed avstår från.</cbc:Description>
+            <cbc:Description languageID="CES">Podáním své nabídky uchazeč přijímá v plném rozsahu a bez omezení požadavky tohoto řízení a podmínky, kterými se upravuje prodejní smlouva, jakožto jediný základ tohoto řízení bez ohledu na své vlastní podmínky, které se tímto ruší.</cbc:Description>
+            <cbc:Description languageID="EST">Oma pakkumist esitades nõustub pakkuja täielikult ja piiranguteta selle menetluse nõudmiste ning müügilepingu tingimustega, mis on menetluse ainus alus, ja loobub kõigis omapoolsetest tingimustest.</cbc:Description>
+            <cbc:Description languageID="HUN">Ajánlatának benyújtásával az ajánlattevő teljes egészében és korlátozások nélkül elfogadja az eljárásra vonatkozó követelményeket és az eljárás kizárólagos alapját képező értékesítési szerződést szabályozó feltételeket, függetlenül a saját maga által támasztott feltételekről, melyekről ezennel lemond.</cbc:Description>
+            <cbc:Description languageID="LIT">Teikdamas šį pasiūlymą, dalyvis visiškai ir be apribojimų sutinka su šios procedūros reikalavimais bei sąlygomis, kuriomis reglamentuojama pardavimo sutartis kaip šios procedūros pagrindas, kad ir kokios būtų jo paties sąlygos, kurių jis šiuo pasiūlymu atsisako.</cbc:Description>
+            <cbc:Description languageID="LAV">Iesniedzot savu piedāvājumu, pretendents pilnā apmērā un bez ierobežojumiem pieņem šīs procedūras prasības un pārdošanas līguma nosacījumus kā vienīgo šīs procedūras pamatu neatkarīgi no tā, kādi ir pretendenta paša nosacījumi, no kuriem tas tādējādi atkāpjas.</cbc:Description>
+            <cbc:Description languageID="MLT">Meta jitfa' l-offerta tiegħu, it-teffiegħ tal-offerta jaċċetta bis-sħiħ mingħajr restrizzjoni l-ħtiġijiet għal din il-proċedura u l-kundizzjonijiet li jiggvernaw il-kuntratt ta' bejgħ bħala l-unika bażi ta' din il-proċedura, huma x'inhuma l-kundizzjonijiet tiegħu, li permezz tagħha jirrinunzja għalihom.</cbc:Description>
+            <cbc:Description languageID="POL">Składając ofertę, oferent w pełni i bez zastrzeżeń akceptuje warunki tej procedury oraz warunki umowy sprzedaży jako jedyną podstawę prawną procedury, bez względu na to, jakie są jego własne warunki, od których odstępuje.</cbc:Description>
+            <cbc:Description languageID="SLK">Predložením ponuky uchádzač úplne a bez obmedzení súhlasí s požiadavkami pre tento postup a s podmienkami upravujúcimi predajnú zmluvu ako jediný základ tohto postupu, bez ohľadu na to, aké sú jeho vlastné podmienky, ktorých sa týmto zrieka.</cbc:Description>
+            <cbc:Description languageID="SLV">S predložitvijo svoje ponudbe ponudnik v celoti in brez omejitev sprejema zahteve za ta postopek in pogoje, ki urejajo prodajno pogodbo kot edino podlago za ta postopek, ne glede na lastne pogoje, od katerih s tem odstopa.</cbc:Description>
+            <cbc:Description languageID="GLE">Glacann an tairgeoir, ach a thairiscint a chur isteach, le riachtanais an nós imeachta seo go hiomlán agus gan srianadh, mar aon leis na coinníollacha lena rialaítear an conradh díola mar bhunús aonair don nós imeachta seo, beag beann ar a choinníollacha féin, a tharscaoileann sé leis seo.</cbc:Description>
+            <cbc:Description languageID="BUL">Чрез подаването на своята оферта, оферентът приема изцяло и без ограничение изискванията за тази процедура и условията, регулиращи договора за продажба, като единствената основа на тази процедура, независимо от това какви могат да бъдат неговите собствени условия, от които той се отказва с настоящото.</cbc:Description>
+            <cbc:Description languageID="RON">Prin depunerea unei oferte, ofertantul acceptă pe deplin și fără restricții cerințele acestei proceduri, precum și condițiile care guvernează contractul de vânzare ca unică bază a acestei proceduri, indiferent de condițiile sale proprii, la care renunță pe această cale.</cbc:Description>
+            <cbc:Description languageID="HRV">Podnošenjem svoje ponude, ponuditelj prihvaća u cijelosti i bez ograničenja zahtjeve za ovaj postupak te uvjete kojima se uređuje ugovor o prodaji kao jedini temelj ovog postupka, bez obzira na njegove vlastite uvjete, kojih se ovim putem odriče.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Catalog (BT-764)-->
+         <!--WARNING: Submission Electronic Catalog (BT-764) is Mandatory for eForms subtypes 16, 17, 18 and 22, but no ECATALOGUE_REQUIRED was found in TED XML.-->
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission"/>
+         </cac:ContractExecutionRequirement>
+         <!--Submission Electronic Signature (BT-744)-->
+         <cac:AwardingTerms><!--Following Contract (BT-41)--><!--Jury Decision Binding (BT-42)--><!--No Negotiation Necessary (BT-120)--><!--Award Criteria Order Justification (BT-733)--><!--Award Criteria Complicated (BT-543)--><!--Award Criterion Number (BT-541)--><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number Fixed (BT-5422)--><!--Award Criterion Number Threshold (BT-5423)--><!--Award Criterion Type (BT-539)--><!--Award Criterion Name (BT-734)--><!--Award Criterion Description (BT-540)--><!--Jury Member Name (BT-46)--><!--Prize information (Prize Rank (BT-44), Rewards Other (BT-45), Value Prize (BT-644))--><!--Prize Rank (BT-44)--><!--Value Prize (BT-644)--><!--Rewards Other (Prize Description) (BT-45)--></cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <!--Submission URL (BT-18)-->
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://hanki.tarjouspalvelu.fi</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <!--Tender Validity Deadline (BT-98)-->
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">2</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Deadline Description (BT-99)-->
+         <!--Review Information Providing Organization-->
+         <!--Review organization-->
+         <!--Mediation organization-->
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ENG">You may submit any observations concerning the award procedure to the contracting authority indicated under Heading I.1. If you believe that there was maladministration, you may lodge a complaint to the European Ombudsman within two years of the date when you became aware of the facts on which the complaint is based(see http://www.ombudsman.europa.eu). Such complaint does not have as an effect either to suspend the time-limit to launch an appeal or to open a new period for lodging an appeal. Within two months of the notification of the decision you may lodge an appeal to the body referred to in VI.4.1.</cbc:Description>
+               <cbc:Description languageID="DAN">De kan fremsætte bemærkninger vedrørende tildelingsproceduren til den ordregivende myndighed anført i punkt I.1. Hvis der menes at være tale om fejl og forsømmelser, kan der indgives en klage til Den Europæiske Ombudsmand i 2 år efter, der er opnået kendskab til de forhold, som klagen vedrører (se http://www.ombudsman.europa.eu). En klage bevirker ikke, at perioden for indgivelse af en klage afbrydes, eller at der påbegyndes en ny periode for indgivelse af klage. Senest 2 måneder efter underrettelsen om beslutningen kan der indgives klage til det organ, der er omhandlet i punkt VI.4.1.</cbc:Description>
+               <cbc:Description languageID="DEU">Bemerkungen zum Vergabeverfahren können an den in Abschnitt I.1 angegebenen öffentlichen Auftraggeber übermittelt werden. Bei Verdacht auf Missstände in der Verwaltungstätigkeit kann beim Europäischen Bürgerbeauftragten eine Beschwerde eingereicht werden, und zwar innerhalb von zwei Jahren ab dem Zeitpunkt der Kenntnisnahme der Tatsachen, auf denen die Beschwerde beruht (siehe http://www.ombudsman.europa.eu). Eine solche Beschwerde bewirkt weder die Aussetzung der Frist noch den Beginn eines neuen Zeitraums für die Einlegung von Rechtsbehelfen. Rechtsbehelfe können innerhalb von 2 Monaten nach der Mitteilung der Entscheidung bei der unter VI.4.1 genannten Stelle eingelegt werden.</cbc:Description>
+               <cbc:Description languageID="SPA">Puede comunicar cualquier observación relativa al procedimiento de adjudicación al órgano de contratación indicado en el apartado I.1. Si considera que se ha realizado una mala administración, puede presentar una reclamación ante el Defensor del Pueblo Europeo en un plazo de 2 años a partir de la fecha en la que tuvo conocimiento de los hechos en que se basa la reclamación (consulte http://www.ombudsman.europa.eu). Dicha reclamación no tendrá como efecto la suspensión del plazo para presentar un recurso ni la apertura de un nuevo plazo de presentación de recursos. En un plazo de 2 meses a partir de la fecha de notificación de la decisión, puede presentar un recurso ante el organismo indicado en el apartado VI.4.1.</cbc:Description>
+               <cbc:Description languageID="FIN">Tarjoajat voivat toimittaa mahdolliset sopimuksentekomenettelyä koskevat huomautukset kohdassa I.1 ilmoitetulle hankintaviranomaiselle. Epäiltäessä hallinnollista epäkohtaa (väärää, virheellistä tai puutteellista hallintomenettelyä) asiasta voidaan tehdä kantelu Euroopan oikeusasiamiehelle 2 vuoden kuluessa siitä päivämäärästä, jona kantelun perusteena olevat seikat havaittiin (katso http://www.ombudsman.europa.eu). Kantelu ei vaikuta muutoksenhaun määräaikaan, eikä sen vuoksi muutoksenhaulle määrätä uutta määräaikaa. Muutosta on haettava kohdassa VI.4.1 mainitulta elimeltä 2 kuukauden kuluessa sopimuksentekoa koskevan päätöksen ilmoittamisesta.</cbc:Description>
+               <cbc:Description languageID="FRA">Toute observation concernant la procédure d'attribution peut être adressée au pouvoir adjudicateur indiqué au point I.1. Si vous estimez que la gestion a été défaillante, vous pouvez déposer une plainte auprès du Médiateur européen dans un délai de 2 ans à compter de la date à laquelle vous avez eu connaissance des faits sur lesquels porte la plainte (voir http://www.ombudsman.europa.eu). L'introduction d'une telle plainte n'a pour effet ni la suspension du délai de recours, ni l'ouverture d'un nouveau délai de dépôt d’un recours. Les recours peuvent être déposés auprès de l'organe visé au point VI.4.1 dans les 2 mois à compter de la notification de la décision d'attribution.</cbc:Description>
+               <cbc:Description languageID="ELL">Οι υποψήφιοι μπορούν να υποβάλουν τυχόν παρατηρήσεις σχετικά με τη διαδικασία ανάθεσης στην αναθέτουσα αρχή που αναφέρεται στο σημείο I.1. Εάν πιστεύετε ότι υπήρξε ζήτημα κακής διοίκησης, μπορείτε να υποβάλετε καταγγελία στον Ευρωπαίο Διαμεσολαβητή εντός δύο ετών από την ημερομηνία κατά την οποία λάβατε γνώση των γεγονότων στα οποία βασίζεται η καταγγελία (βλέπε http://www.ombudsman.europa.eu). Η εν λόγω καταγγελία δεν έχει ως αποτέλεσμα ούτε την αναστολή της προθεσμίας για την υποβολή προσφυγών ούτε την έναρξη νέας περιόδου για την υποβολή προσφυγών. Εντός δύο μηνών από την κοινοποίηση της απόφασης μπορείτε να υποβάλετε προσφυγή στον φορέα που αναφέρεται στο σημείο VI.4.1.</cbc:Description>
+               <cbc:Description languageID="ITA">si possono presentare osservazioni relative alla procedura di aggiudicazione all'ente appaltante indicato al punto I.1). Se, a parere del ricorrente, vi è stata cattiva amministrazione, questi potrà presentare una denuncia al Mediatore europeo entro due anni dalla data in cui è venuto a conoscenza dei fatti cui si riferisce la denuncia (cfr. http://www.ombudsman.europa.eu). Tale denuncia non produce né l'effetto di sospendere il termine ultimo per la presentazione di ricorsi, né di aprirne uno nuovo. Entro 2 mesi dalla notifica della decisione di aggiudicazione si può presentare ricorso all'organismo di cui al punto VI.4.1).</cbc:Description>
+               <cbc:Description languageID="NLD">Eventuele opmerkingen in verband met de gunningsprocedure mogen worden verstuurd naar de aanbestedende dienst vermeld in I.1. Indien u van mening bent dat er sprake is van onbehoorlijk bestuur, dan mag u binnen 2 jaar na de datum waarop u de desbetreffende feiten waarop deze klacht is gebaseerd, te weten bent gekomen, een klacht indienen bij de Europese Ombudsman (ga naar http://www.ombudsman.europa.eu). Een dergelijke klacht leidt niet tot een opschorting van de periode voor het instellen van een beroep, noch tot de opening van een nieuwe periode voor het instellen van een beroep. Binnen 2 maanden na de kennisgeving van het gunningsbesluit kan een beroep worden ingesteld bij de dienst vermeld in VI.4.1.</cbc:Description>
+               <cbc:Description languageID="POR">Pode apresentar quaisquer observações relativas ao procedimento de adjudicação à entidade adjudicante indicada no ponto I.1. Caso acredite na existência de má administração, pode apresentar uma queixa ao Provedor de Justiça Europeu num prazo de dois anos a contar da data em que tomou conhecimento dos factos em que se baseia a queixa (consultar http://www.ombudsman.europa.eu). A queixa em questão não tem como efeito a suspensão da data-limite para interpor um recurso nem a abertura de um novo prazo de interposição de recursos. Num prazo de dois meses a contar da notificação da decisão, pode apresentar um recurso ao organismo indicado no ponto VI.4.1.</cbc:Description>
+               <cbc:Description languageID="SWE">Observationer om tilldelningsförfarandet kan lämnas till den upphandlande myndighet, som anges i rubrik I.1. Vid misstanke om ett administrativt missförhållande kan klagomål anföras till Europeiska ombudsmannen inom två år från det datum, då de fakta som klagomålet bygger på blev kända (se http://www.ombudsman.europa.eu). Ett sådant överklagande leder varken till att tidsfristen för att lämna in ett överklagande skjuts upp eller till att en ny period för att anföra ett överklagande inleds. Överklagande kan lämnas till det organ som nämns i punkt VI.4.1 inom två månader efter meddelandet om tilldelningsbeslut.</cbc:Description>
+               <cbc:Description languageID="CES">Veškeré připomínky týkající se zadávacího řízení můžete předložit veřejnému zadavateli uvedenému v bodě I.1. Pokud si myslíte, že došlo k nesprávnému administrativnímu postupu, můžete podat stížnost evropskému veřejnému ochránci práv ve lhůtě 2 let od data, kdy jste se dozvěděli o skutečnostech, na nichž se stížnost zakládá (viz http://www.ombudsman.europa.eu). Tato stížnost nebude mít za následek ani pozastavení lhůty pro podání odvolání, ani započetí nové lhůty pro podání odvolání. Ve lhůtě 2 měsíců od oznámení rozhodnutí o zadání zakázky můžete podat odvolání k instituci uvedené v bodě VI.4.1.</cbc:Description>
+               <cbc:Description languageID="EST">Lepingu sõlmimise menetluse kohta võib esitada tähelepanekuid punktis I.1 nimetatud avaliku sektori hankijale. Juhul kui kogetakse haldusomavoli, võib Euroopa Ombudsmanile esitada kaebuse kahe aasta jooksul päevast, mil saadakse teada faktid, millel kaebus põhineb (vt http://www.ombudsman.europa.eu). Nimetatud kaebuse esitamine ei too kaasa vaidlustuste esitamise tähtaja peatamist ega uue tähtaja määramist. Punktis VI.4.1 nimetatud asutusele võib apellatsioone esitada kahe kuu jooksul lepingu sõlmimise otsusest teavitamisest.</cbc:Description>
+               <cbc:Description languageID="HUN">Az odaítélési eljárással kapcsolatos észrevételeit az I.1. pontban feltüntetett ajánlatkérőnek nyújthatja be. Amennyiben az ajánlattevő úgy véli, hogy hivatali visszásságra került sor, panaszt tehet az európai ombudsmannál attól a naptól számított két éven belül, hogy a panaszra okot adó tényről tudomást szerzett (lásd a http://www.ombudsman.europa.eu oldalon). A benyújtott panasz nem eredményezi sem a fellebbezési időszak felfüggesztését, sem új fellebbezési időszak megnyílását. Jogorvoslati kérelem benyújtására a határozatra vonatkozó értesítést követő két hónapon belül van lehetőség a VI.4.1. pontban feltüntetett jogorvoslati szervnek.</cbc:Description>
+               <cbc:Description languageID="LIT">Galite pateikti bet kokias pastabas dėl sutarties skyrimo procedūros I.1. dalyje nurodytai perkančiajai organizacijai. Jeigu manote, kad buvo blogai administruojama, galite pateikti skundą Europos ombudsmenui per 2 metus nuo dienos, kai tapo žinomi faktai, kuriais grindžiamas skundas (žr. http://www.ombudsman.europa.eu). Dėl tokio skundo nebus sustabdytas apeliacijų teikimo laikotarpis ar pradėtas naujas apeliacijų teikimo laikotarpis. Per 2 mėnesius nuo pranešimo apie sprendimą galima pateikti apeliaciją VI.4.1. punkte nurodytai institucijai.</cbc:Description>
+               <cbc:Description languageID="LAV">piezīmes par piešķiršanas procedūru var iesniegt I.1. iedaļā minētajai līgumslēdzējai iestādei. Ja uzskatāt, ka pieļauta administratīva kļūme, varat iesniegt sūdzību Eiropas Ombudam 2 gadu laikā no dienas, kad esat uzzinājis par faktiem, uz kuriem balstīta sūdzība (skatīt http://www.ombudsman.europa.eu). Šādas sūdzības iesniegšana nevar ne atlikt pārsūdzību iesniegšanas termiņu, ne arī noteikt jaunu periodu pārsūdzību iesniegšanai. Pārsūdzību var iesniegt VI.4.1. iedaļā minētajai struktūrai 2 mēnešu laikā no lēmuma paziņošanas.</cbc:Description>
+               <cbc:Description languageID="MLT">Tista' tissottometti kwalunkwe osservazzjonijiet li jikkonċernaw il-proċedura tal-għoti lill-awtorità li qiegħda toħroġ il-kuntratt indikata taħt it-Titlu l.1. Jekk temmen li kien hemm amministrazzjoni ħażina, tista' tressaq ilment lill-Ombudsman Ewropew fi żmien sentejn (2) mid-data li fiha sirt taf dwar il-fatti li fuqhom huwa bbażat l-ilment (ara http://www.ombudsman.europa.eu). Ilment bħal dan mhux se jwassal biex jew ikun sospiż il-limitu taż-żmien għat-tressiq ta' appell jew biex jinfetaħ perijodu ġdid għat-tressiq ta' appell. Fi żmien xahrejn (2) min-notifika dwar id-deċiżjoni inti tista' tressaq appell quddiem il-korp li għalih hemm referenza f'VI.4.1.</cbc:Description>
+               <cbc:Description languageID="POL">uwagi dotyczące procedury udzielania zamówienia można przesyłać do instytucji zamawiającej wskazanej w pkt I.1. W przypadku stwierdzenia niewłaściwego administrowania istnieje możliwość złożenia skargi do Europejskiego Rzecznika Praw Obywatelskich w ciągu 2 lat od powzięcia wiadomości o faktach będących podstawą skargi (zob. http://www.ombudsman.europa.eu). Taka skarga nie skutkuje zawieszeniem ani rozpoczęciem na nowo biegu terminu składania odwołań. Odwołanie do organu, o którym mowa w pkt VI.4.1, można złożyć w ciągu 2 miesięcy od zawiadomienia o decyzji.</cbc:Description>
+               <cbc:Description languageID="SLK">Prípadné pripomienky týkajúce sa výberového konania môžete predložiť obstarávateľovi uvedenému v bode I.1. Ak sa domnievate, že došlo k nesprávnemu úradnému postupu, môžete podať sťažnosť európskemu ombudsmanovi do 2 rokov od dátumu, keď ste sa dozvedeli o skutočnosti, na ktorej sa táto sťažnosť zakladá (pozri http://www.ombudsman.europa.eu). Táto sťažnosť nebude mať za následok prerušenie lehoty na podanie odvolania, ani stanovenie novej lehoty na podanie odvolania. Odvolanie môžete podať orgánu uvedenému v bode VI.4.1 do 2 mesiacov od oznámenia o rozhodnutí.</cbc:Description>
+               <cbc:Description languageID="SLV">Morebitne pripombe v zvezi s postopkom oddaje naročila lahko pošljete naročniku na naslov iz oddelka I.1. Če menite, da je prišlo do nepravilnosti, lahko vložite pritožbo pri Evropskem varuhu človekovih pravic v 2 letih od datuma, ko ste bili obveščeni o dejstvih, ki predstavljajo podlago za pritožbo (glejte http://www.ombudsman.europa.eu). Pritožba ne prekine roka za vložitev pritožb niti ne začne novega obdobja za vložitev pritožb. Pritožbo lahko vložite pri organu iz točke VI.4.1 v 2 mesecih od obvestila o sklepu.</cbc:Description>
+               <cbc:Description languageID="GLE">Is féidir leat aon tuairimí maidir leis an nós imeachta dámhachtana a chur isteach chuig an údarás conarthach atá léirithe faoi Cheannteideal I.1. Má chreideann tú go raibh míriarachán i gceist, féadfaidh tú gearán a chur chuig an Ombudsman Eorpach laistigh de dhá bhliain ón dáta a d'éirigh tú feasach ar na fíricí a bhfuil an gearán bunaithe orthu (féach http://www.ombudsman.europa.eu). Ní dhéanfar an teorainn ama a chur ar fionraí ná achomharc a thionscnamh ná tréimhse nua taiscthe achomhairc a oscailt mar thoradh ar ghearán den sórt sin. Laistigh de dhá mhí óna gcuirtear cinneadh na dámhachtana in iúl is féidir leat achomharc a thaisceadh leis an gcomhlacht dá dtagraítear in VI.4.1.</cbc:Description>
+               <cbc:Description languageID="BUL">Може да подавате всякакви коментари относно процедурата по възлагане до възлагащия орган, посочен в точка I.1). Ако считате, че е имало лошо управление, Вие можете да подадете жалба до Европейския омбудсман в рамките на 2 години от датата, на която сте узнали за фактите, на които се основава жалбата (вж. http://www.ombudsman.europa.eu). Такава жалба нито спира срока за отправяне на жалба, нито води до откриване на нов срок за подаване на жалба. В рамките на два месеца от уведомяването за решението за възлагане, Вие можете да подадете жалба до органа, посочен в точка VI.4.1.</cbc:Description>
+               <cbc:Description languageID="RON">Eventualele observații privind procedura de atribuire se pot depune la autoritatea contractantă indicată la punctul I.1). În cazul unei presupuse administrări necorespunzătoare, se poate depune o plângere la Ombudsmanul European în termen de 2 ani de la data la care s-a luat cunoștință de faptele pe care se bazează plângerea (a se vedea http://www.ombudsman.europa.eu). O astfel de plângere nu are drept efect suspendarea acestui termen sau deschiderea unui nou termen pentru utilizarea căilor de atac. În termen de 2 luni de la notificarea deciziei se poate depune o plângere la organismul menționat la punctul VI.4.1.</cbc:Description>
+               <cbc:Description languageID="HRV">Možete dostaviti komentare u vezi s postupkom sklapanja ugovora javnom naručitelju iz točke I.1. Ako smatrate da je došlo do nepravilnosti, možete podnijeti pritužbu Europskom ombudsmanu u roku od 2 godine od datuma kad ste doznali za okolnosti koje su uzrok pritužbi (vidi http://www.ombudsman.europa.eu). Takvom se pritužbom ne obustavlja vremenski rok za ulaganje žalbe i ne otvara se novo razdoblje za ulaganje žalbe. Žalbu možete uložiti tijelu iz točke VI.4.1. unutar 2 mjeseca od obavijesti o odluci.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <!--Submission Language (BT-97)-->
+         <cac:Language>
+            <cbc:ID>BUL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>CES</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>DAN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>DEU</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ENG</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SPA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>EST</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>FIN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>FRA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>GLE</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>HRV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>HUN</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>ITA</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>LIT</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>LAV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>MLT</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>NLD</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>POL</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>POR</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>RON</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SLK</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SLV</cbc:ID>
+         </cac:Language>
+         <cac:Language>
+            <cbc:ID>SWE</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess><!--Electronic Ordering (BT-92)-->
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <!--Electronic Payment (BT-93)-->
+            <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2018-05-28+01:00</cbc:EndDate>
+                        <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <cbc:CandidateReductionConstraintIndicator>false</cbc:CandidateReductionConstraintIndicator>
+         <!--GPA Coverage (BT-115)-->
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2018-05-28+01:00</cbc:EndDate>
+            <cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>false</cbc:LimitationDescription>
+            <!--WARNING: Minimum Candidates (BT-50) is mandatory for eForms subtype 16, but no value was given in the source TED XML. The value "0" has been used.-->
+            <cbc:MinimumQuantity>0</cbc:MinimumQuantity>
+         </cac:EconomicOperatorShortList>
+         <!--Public Opening Date (BT-132)-->
+         <!--Public Opening Description (BT-134)-->
+         <!--Public Opening Place (BT-133)-->
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2018-05-28+01:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>14:30:00+01:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ENG">No public opening is foreseen.</cbc:Description>
+               <cbc:Description languageID="DAN">Der er ingen hensigt om at holde en offentlig åbning af bud.</cbc:Description>
+               <cbc:Description languageID="DEU">Eine öffnung der Angebote ist nicht vorgesehen.</cbc:Description>
+               <cbc:Description languageID="SPA">No se prevé apertura pública.</cbc:Description>
+               <cbc:Description languageID="FIN">Julkista avaamista ei ole suunnitteilla.</cbc:Description>
+               <cbc:Description languageID="FRA">Aucune ouverture publique n'est prévue.</cbc:Description>
+               <cbc:Description languageID="ELL">Δεν προβλέπεται δημόσια δημοπρασία.</cbc:Description>
+               <cbc:Description languageID="ITA">Non è prevista alcuna apertura pubblica.</cbc:Description>
+               <cbc:Description languageID="NLD">Er is geen publieke opening gepland.</cbc:Description>
+               <cbc:Description languageID="POR">Não está prevista uma sessão de abertura pública.</cbc:Description>
+               <cbc:Description languageID="SWE">Inget offentligt öppnande planeras.</cbc:Description>
+               <cbc:Description languageID="CES">Neočekává se veřejné otevírání nabídek.</cbc:Description>
+               <cbc:Description languageID="EST">Pakkumiste avalikku avamist ei ole ette nähtud.</cbc:Description>
+               <cbc:Description languageID="HUN">Nyilvános ajánlatbontást nem terveznek.</cbc:Description>
+               <cbc:Description languageID="LIT">Atvira vokų su pasiūlymais atplėšimo procedūra nenumatyta.</cbc:Description>
+               <cbc:Description languageID="LAV">publiska atvēršana nav paredzēta.</cbc:Description>
+               <cbc:Description languageID="MLT">L-ebda ftuħ għall-pubbliku mhuwa previst.</cbc:Description>
+               <cbc:Description languageID="POL">Nie przewiduje się otwarcia.</cbc:Description>
+               <cbc:Description languageID="SLK">Nepredpokladá sa verejné otváranie ponúk.</cbc:Description>
+               <cbc:Description languageID="SLV">Javno odpiranje ponudb ni predvideno.</cbc:Description>
+               <cbc:Description languageID="GLE">Ní shamhlaítear oscailt phoiblí ar bith.</cbc:Description>
+               <cbc:Description languageID="BUL">Не се предвижда публично отваряне.</cbc:Description>
+               <cbc:Description languageID="RON">Nu este prevăzută nicio deschidere publică.</cbc:Description>
+               <cbc:Description languageID="HRV">Ne predviđa se javno otvaranje.</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms><!--Electronic Auction (BT-767)-->
+            <cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+            <!--Electronic Auction Description (BT-122)-->
+            <cbc:Description languageID="ENG">If interested to participate in this Auction, bidders need to quote their initial bidding price in their offer.This starting price is the minimum price bidders needs to commit to for the purchase of the assets. As a result of the auction (second step) the starting price can be increased (or remain equal) but never decrease. The final price will be binding for the successful bidder.</cbc:Description>
+            <cbc:Description languageID="DAN">Hvis de er interesseret i at deltage i denne auktion, skal tilbudsgivere angive deres indledende budpris i deres tilbud. Denne startpris er minimumsprisen, som tilbudsgiverne skal forpligte sig til for at købe aktiverne. Som følge af auktionen (andet trin) kan startprisen øges (eller forblive på samme niveau), men aldrig mindskes. Den endelige pris vil være bindende for den valgte tilbudsgiver.</cbc:Description>
+            <cbc:Description languageID="DEU">Bei Interesse für eine Teilnahme an dieser Auktion reichen die Bieter ihr Ausgangsangebot gleichzeitig mit ihren Angebotsunterlagen ein. Bei diesem Startpreis handelt es sich um den Mindestpreis, zu dessen Leistung sich die Bieter für den Erwerb von Vermögenswerten verpflichten. Infolge der Versteigerung (zweite Stufe) kann der Ausgangspreis angehoben werden (oder gleich bleiben), aber niemals gesenkt werden. Der Endpreis ist für den erfolgreichen Bieter bindend.</cbc:Description>
+            <cbc:Description languageID="SPA">Los licitadores interesados en participar en esta subasta, deben establecer el precio inicial en su oferta. Este precio inicial será el precio mínimo al que los licitadores se comprometen para la compra de los activos. Como resultado de la subasta (segunda fase), el precio inicial podrá aumentar (o seguir igual), pero nunca disminuir. El precio final será vinculante para el licitador que resulte adjudicatario.</cbc:Description>
+            <cbc:Description languageID="FIN">Tähän huutokauppaan osallistumisesta kiinnostuneiden hakijoiden on ilmoitettava alustava tarjoushintansa hakemuksessaan. Aloitushinta on vähimmäishinta, johon hakijan on sitouduttava kyseessä olevan käyttöomaisuuden ostamista varten. Julkisen huutokaupan seurauksena (toinen vaihe) aloitushintaa voidaan nostaa (tai se voidaan pitää samana), muttei missään tapauksessa laskea. Lopullinen hinta on valitulle tarjoajalle sitova.</cbc:Description>
+            <cbc:Description languageID="FRA">S’ils sont intéressés par la participation à cette enchère, les soumissionnaires doivent indiquer leur prix d'offre initial dans leur offre. Ce prix de départ est le prix minimum auquel les soumissionnaires doivent s'engager pour l'achat des actifs. À la suite de l'enchère (seconde étape), le prix de départ pourra être augmenté (ou rester le même), mais en aucun cas être diminué. Le prix définitif sera contraignant pour le soumissionnaire retenu.</cbc:Description>
+            <cbc:Description languageID="ELL">Οι ενδιαφερόμενοι για αυτήν τη δημοπρασία υποψήφιοι πρέπει να παραθέσουν την αρχική τιμή υποβολής προσφοράς στην προσφορά τους. Η εν λόγω τιμή εκκίνησης είναι η ελάχιστη τιμή για την οποία οι υποψήφιοι πρέπει να δεσμευτούν για την αγορά του περιουσιακού στοιχείου. Ως αποτέλεσμα της δημοπρασίας (δεύτερο στάδιο) η τιμή εκκίνησης μπορεί να αυξηθεί (ή να παραμείνει ίδια) αλλά δεν μπορεί σε καμία περίπτωση να μειωθεί. Η τελική τιμή θα είναι δεσμευτική για τον επιλεγέντα προσφέροντα.</cbc:Description>
+            <cbc:Description languageID="ITA">Se interessati a partecipare a questa asta, gli offerenti dovranno indicare nella propria offerta il prezzo di offerta iniziale. Tale prezzo di partenza sarà il prezzo minimo che gli offerenti dovranno impegnarsi a pagare per l'acquisto del bene in oggetto. Come risultato dell'asta (seconda fase) il prezzo di partenza potrà essere aumentato (o rimanere uguale), senza mai diminuire. Il prezzo finale sarà vincolante per l'aggiudicatario.</cbc:Description>
+            <cbc:Description languageID="NLD">Indien er interesse is om aan deze veiling deel te nemen, moeten bieders een initieel bod in hun voorstel vermelden. Deze startprijs is de minimumprijs waaraan bieders zich moeten verbinden in de aankoop van de activa. Als gevolg van de veiling (tweede stap) kan de startprijs worden verhoogd (of gelijk blijven), maar nooit worden verlaagd. De eindprijs is bindend voor de geselecteerde bieder.</cbc:Description>
+            <cbc:Description languageID="POR">Se tiverem interesse em participar neste leilão, os proponentes devem indicar o seu valor da proposta inicial na sua proposta. Este preço de partida é o preço mínimo com o qual os proponentes se devem comprometer para a aquisição dos ativos. Como resultado do leilão (segunda fase), o preço de partida pode ser aumentado (ou permanecer igual), mas nunca diminuído. O preço final será vinculativo para o proponente selecionado.</cbc:Description>
+            <cbc:Description languageID="SWE">Vid intresse för deltagande i auktionen måste budgivarna uppge sitt utgångspris i budet. Detta utgångspris är det minimipris, som budgivarna måste lämna för inköp av tillgångarna. Till följd av auktionen (andra etappen) kan utgångspriset höjas (eller förbli oförändrat) men aldrig sänkas. Det slutgiltiga priset kommer att vara bindande för den vinnande budgivaren.</cbc:Description>
+            <cbc:Description languageID="CES">V případě zájmu zúčastnit se této dražby musí uchazeči ve své nabídce uvést výši počáteční cenové nabídky. Tato počáteční cena je minimální cena, kterou se zaváže uchazeč uhradit při nákupu majetku. V důsledku dražby (druhý krok) může dojít ke zvýšení této počáteční ceny (nebo k jejímu zachování), ale nikdy ne k jejímu snížení. Konečná cena bude pro úspěšného předkladatele nabídky závazná.</cbc:Description>
+            <cbc:Description languageID="EST">Käesoleval oksjonil osalemisest huvitatud pakkujad peavad oma pakkumises esitama esialgse pakkumishinna. See alghind on minimaalne hind, mille pakkujad peavad varade ostmiseks tagama. Oksjoni tulemusel (teine samm) saab alghinda suurendada (või jätta see samaks), kuid mitte vähendada. Lõplik hind on eduka pakkuja jaoks siduv.</cbc:Description>
+            <cbc:Description languageID="HUN">Az árverésen részt venni kívánó ajánlattevőknek az ajánlatban fel kell tüntetniük a kiinduló ajánlattételi árukat. Ez a kiinduló ár az a minimális ár, amelynek kifizetését az ajánlattevőknek vállalniuk kell az eszközök megvásárlásáért. Az árverés (második lépés) eredményeként a kiinduló ár növekedhet (vagy változatlan maradhat), azonban sosem csökkenhet. A végleges ár a nyertes ajánlattevőre nézve kötelező erejű lesz.</cbc:Description>
+            <cbc:Description languageID="LIT">Susidomėję dalyvavimu šiame aukcione dalyviai savo pasiūlyme turi nurodyti pradinę kainą. Ši pradinė kaina yra mažiausia kaina, kurią dalyviai turi įsipareigoti sumokėti už įsigyjamą turtą. Įvykus aukcionui (antrasis etapas), pradinė kaina gali būti padidinta (arba nekisti), bet niekada nesumažinta. Laimėjęs dalyvis privalės sumokėti galutinę kainą.</cbc:Description>
+            <cbc:Description languageID="LAV">ja pretendents ir ieinteresēts piedalīties izsolē, savā piedāvājumā tam ir jānorāda sākotnējā solīšanas cena. Šī sākotnējā cena ir minimālā summa, kādu pretendents ir gatavs maksāt par īpašuma iegādi. Izsoles gaitā (otrajā posmā) sākuma cenu varēs palielināt (vai uzturēt nemainīgu), bet nekādā gadījumā nevarēs samazināt. Galīgā cena veiksmīgajam pretendentam būs saistoša.</cbc:Description>
+            <cbc:Description languageID="MLT">Jekk ikunu interessati jipparteċipaw f'dan l-Irkant, dawk li jitfgħu l-offerti jeħtieġ li jikkwotaw il-prezz tal-bidu tagħhom fl-offerta tagħhom. Dan il-prezz tal-bidu huwa l-prezz minimu li dawk li jitfgħu l-offerti jeħtieġ li jikkommettu għalih għax-xiri tal-assi. Bħala riżultat tal-irkant (it-tieni pass) il-prezz inizjali jista' jkun miżjud (jew jibqa' ugwali) iżda qatt imnaqqas. Il-prezz finali se jorbot lit-teffiegħ tal-offerta li jintagħżel.</cbc:Description>
+            <cbc:Description languageID="POL">Oferenci zainteresowani udziałem w Aukcji proszeni są o podanie w swojej ofercie ceny wywoławczej. Cena wywoławcza jest ceną minimalną, do której oferenci muszą się zobowiązać przy zakupie aktywów. W wyniku akcji (drugi etap) cena wyjściowa może wzrosnąć (lub pozostać niezmieniona), ale nie może ulec zmniejszeniu. Ostateczna cena będzie wiążąca dla zwycięskiego oferenta.</cbc:Description>
+            <cbc:Description languageID="SLK">V prípade záujmu zúčastniť sa na tejto aukcii musia uchádzači uviesť vo svojej ponuke počiatočnú ponukovú cenu.Táto počiatočná cena je minimálnou cenou, ku ktorej sa uchádzači musia pri nákupe majetku zaviazať. Dražba (druhý krok) môže vyústiť do zvýšenia počiatočnej ceny (alebo zachovania rovnakej ceny), ale nikdy nie do jej zníženia. Konečná cena bude pre úspešného uchádzača záväzná.</cbc:Description>
+            <cbc:Description languageID="SLV">Ponudniki, ki želijo sodelovati na tej dražbi, morajo v svoji ponudbi navesti začetno ponujeno ceno. Ta začetna cena je najnižja cena, ki jo morajo ponudniki zajamčiti za nakup premoženja. Kot rezultat dražbe (drugi korak) se lahko začetna cena poviša (ali ostane enaka), ni pa je mogoče znižati. Končna cena bo za izbranega ponudnika zavezujoča.</cbc:Description>
+            <cbc:Description languageID="GLE">Más spéis leo bheith rannpháirteach sa Cheant seo, ní foláir do thairgeoirí a bpraghas tairisceana tosaigh a lua ina gcuid tairisceana. Is ionann an praghas tosaigh agus an praghas íosta nach foláir do thairgeoirí praghais a ghealladh chun na sócmhainní a cheannach. Mar gheall ar an gceant (an dara céim) is féidir an praghas tosaigh a mhéadú (nó a fhágáil mar an gcéanna) ach ní féidir é a laghdú riamh. Beidh an praghas deiridh ina cheangal don tairgeoir rathúil.</cbc:Description>
+            <cbc:Description languageID="BUL">Ако са заинтересовани да участват в този публичен търг, оферентите трябва да посочат първоначалната си тръжна цена в своята оферта. Тази начална цена е минималната цена, с която участниците в търга се ангажират за закупуването на активите. В резултат на търга (втори етап), началната цена може да се увеличи (или да остане непроменена), но никога да не се намали. Крайната цена ще бъде обвързваща за одобрения оферент.</cbc:Description>
+            <cbc:Description languageID="RON">Dacă sunt interesați să participe la această licitație, ofertanții trebuie să specifice prețul inițial al ofertei în oferta acestora. Acest preț de pornire este prețul minim necesar ofertanților care doresc să se angajeze în achiziționarea activelor. În urma licitației (a doua etapă), prețul de pornire poate crește (sau poate rămâne același), însă în niciun caz nu poate scădea. Prețul final va avea caracter obligatoriu pentru ofertantul câștigător.</cbc:Description>
+            <cbc:Description languageID="HRV">Ako su zainteresirani za sudjelovanje u ovoj aukciji, ponuditelji moraju navesti početnu cijenu u svojoj ponudi. Ta početna cijena najmanja je cijena na koju se ponuditelji obvezuju za kupnju imovine. Nakon aukcije (drugi korak), početna se cijena može povećati (ili ostati jednaka), ali se ne može smanjiti. Konačna cijena bit će obvezujuća za uspješnog ponuditelja.</cbc:Description>
+            <!--Electronic Auction URL (BT-123)-->
+            <!--WARNING: source TED XML notice does not contain information for Electronic Auction URL (BT-123).-->
+            <cbc:AuctionURI/>
+         </cac:AuctionTerms>
+         <!--Framework Maximum Participants Number (BT-113)-->
+         <!--Framework Duration Justification (BT-109)-->
+         <!--Group Framework Maximum Value (BT-157)-->
+         <!--Framework Buyer Categories (BT-111)-->
+         <!--Framework Agreement (BT-765)-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <!--Dynamic Purchasing System (BT-766)-->
+         <!--WARNING: Dynamic Purchasing System (BT-766) is specified at Procedure level in TED XML. It has been copied to Lot level in this eForms XML.-->
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <!-- cac:ProcurementProject -->
+      <cac:ProcurementProject><!--Internal Identifier (BT-22)--><!--WARNING: Internal ID (BT-22) is required but there is no equivalent element in TED XML.-->
+         <cbc:ID schemeName="InternalID"/>
+         <!--Title (BT-21)-->
+         <cbc:Name languageID="ENG">Public sale of ECHA Service Car (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="DAN">Offentligt salg af ECHA-tjenestebil (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="DEU">Öffentlicher Verkauf eines Dienstwagens der ECHA (BMW Sedan Active Hybrid 5)</cbc:Name>
+         <cbc:Name languageID="SPA">Venta pública del coche oficial de la ECHA (BMW Active híbrido 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="FIN">ECHAn virka-auton (BMW ActiveHybrid 5 sedan) julkinen myynti</cbc:Name>
+         <cbc:Name languageID="FRA">Vente publique de la voiture de service de l'ECHA (BMW ActiveHybrid 5)</cbc:Name>
+         <cbc:Name languageID="ELL">Δημόσια πώληση του υπηρεσιακού αυτοκινήτου του ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="ITA">Vendita pubblica di ECHA Service Car (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="NLD">Openbare verkoop van een ECHA-dienstwagen (BMW Active Hybrid 5 Sedan).</cbc:Name>
+         <cbc:Name languageID="POR">Venda pública de um automóvel de serviço da Agência Europeia dos Produtos Químicos (ECHA) (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="SWE">Offentlig auktion på Echas tjänstebil (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="CES">Veřejný prodej služebního vozidla agentury ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="EST">ECHA ametiauto (BMW ActiveHybrid 5 sedaan) avalik müük</cbc:Name>
+         <cbc:Name languageID="HUN">Az ECHA szolgálati autójának (BMW Active Hybrid 5 szedán) nyilvános értékesítése</cbc:Name>
+         <cbc:Name languageID="LIT">ECHA tarnybinio automobilio (BMW ActiveHybrid 5 sedano) viešas pardavimas</cbc:Name>
+         <cbc:Name languageID="LAV">ECHA dienesta automobiļa (sedana tipa BMW Active Hybrid 5) publiska izsole</cbc:Name>
+         <cbc:Name languageID="MLT">Bejgħ pubbliku ta' Karozza tas-Servizz tal-ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="POL">Sprzedaż publiczna samochodu służbowego ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="SLK">Verejný predaj služobného vozidla agentúry ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="SLV">Javna prodaja službenega vozila agencije ECHA (aktivne hibridne limuzine BMW serije 5)</cbc:Name>
+         <cbc:Name languageID="GLE">Díol poiblí Charr Seirbhíse ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="BUL">Публична продажба на служебен автомобил на ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="RON">Vânzarea publică a autovehiculului de serviciu ECHA (BMW Active Hybrid 5 Sedan)</cbc:Name>
+         <cbc:Name languageID="HRV">Javna prodaja službenog automobila ECHA-e (BMW aktivna hibridna limuzina serije 5)</cbc:Name>
+         <!--Description (BT-24)-->
+         <cbc:Description languageID="ENG">ECHA is launching an invitation to bid in the public sale of the service car (BMW Active Hybrid 5 Sedan). The car was purchased in August 2014 and the Agency aims to sell it through a public auction. Article 252 of the Rules of Application of the Financial Regulation applicable to ECHA establishes the procedure for the sale of tangible assets of the Agency.</cbc:Description>
+         <cbc:Description languageID="DAN">ECHA lancerer en indbydelse til bud på det offentlige salg af tjenestebilen (BMW Active Hybrid 5 Sedan). Bilen blev købt i august 2014 og agenturet har til hensigt at sælge den via en offentlig auktion. Artikel 252 i ECHA’s finansforordnings gennemførelsesbestemmelser fastlægger proceduren for salg af agenturets materielle aktiver.</cbc:Description>
+         <cbc:Description languageID="DEU">Die ECHA leitet eine Aufforderung zur Angebotseinreichung für den öffentlichen Verkauf eines Dienstwagen (BWM Sedan Active Hybrid 5) ein. Das Fahrzeug wurde im August 2014 erworben und die Agentur plant, dieses Fahrzeug im Rahmen einer öffentlichen Auktion zu verkaufen. Im Artikel 252 der Anwendungsbestimmungen der Haushaltsordnung der ECHA wird das Verfahren für den Verkauf von materiellen Vermögenswerten der Agentur festgelegt.</cbc:Description>
+         <cbc:Description languageID="SPA">La ECHA lanza una invitación para pujar en la subasta pública del vehículo oficial (BMW Active híbrido 5 Sedan). El vehículo fue comprado en agosto de 2014 y la Agencia pretende venderlo mediante subasta pública. El artículo 252 de las normas de desarrollo del Reglamento Financiero aplicable a la ECHA establece el procedimiento para la venta de activos tangibles de la Agencia.</cbc:Description>
+         <cbc:Description languageID="FIN">ECHA käynnistää tarjouspyynnön virka-auton (BMW ActiveHybrid 5 sedan) julkisesta myynnistä. Auto ostettiin elokuussa 2014, ja virasto aikoo myydä sen julkisella huutokaupalla. ECHAn varainhoitoasetusta koskevien soveltamissääntöjen 252 artiklassa määritetään menettely viraston aineellisen käyttöomaisuuden myyntiä varten.</cbc:Description>
+         <cbc:Description languageID="FRA">L'ECHA lance un appel d'offres pour la vente publique de la voiture de service (BMW ActiveHybrid 5). Le véhicule avait été acheté en août 2014, et l’Agence souhaite la vendre par le biais d'une vente aux enchères publique. L'article 252 des règles d'application du règlement financier de l'ECHA établit la procédure applicable à la vente d'actifs corporels de l'Agence.</cbc:Description>
+         <cbc:Description languageID="ELL">Ο ECHA προκηρύσσει πρόσκληση υποβολής προσφορών για τη δημόσια πώληση του υπηρεσιακού αυτοκινήτου (BMW Active Hybrid 5 Sedan). Το εν λόγω αυτοκίνητο αγοράστηκε τον Αύγουστο του 2014 και ο Οργανισμός στοχεύει στην πώλησή του μέσω δημόσιου πλειστηριασμού. Το άρθρο 252 των κανόνων εφαρμογής του δημοσιονομικού κανονισμού που εφαρμόζεται στον ECHA καθορίζει τη διαδικασία για την πώληση υλικών περιουσιακών στοιχείων του Οργανισμού.</cbc:Description>
+         <cbc:Description languageID="ITA">ECHA lancia un invito a presentare un'offerta per la vendita pubblica dell'auto di servizio (BMW Active Hybrid 5 Sedan). L’auto è stata acquistata nell’Agosto 2014 e l’Agenzia intende venderla ricorrendo ad una procedura di asta pubblica. L'articolo 252, paragrafo 2, del regolamento finanziario dell'ECHA e l'articolo 105 delle relative modalità di applicazione stabiliscono la procedura per la vendita di beni materiali di proprietà dell'Agenzia.</cbc:Description>
+         <cbc:Description languageID="NLD">ECHA start een uitnodiging om een bod uit te brengen in de openbare verkoop van de dienstwagen (BMW Active Hybrid 5 Sedan). Het voertuig werd in augustus 2014 aangeschaft en het Agentschap wil dit verkopen via een openbare veiling. Artikel 252 van de uitvoeringsvoorschriften van het Financieel Reglement die van toepassing zijn op ECHA stelt de procedure vast voor de verkoop van materiële activa van het Agentschap.</cbc:Description>
+         <cbc:Description languageID="POR">A ECHA lança um convite à apresentação de propostas relativo à venda pública do automóvel de serviço (BMW Active Hybrid 5 Sedan). O automóvel foi adquirido em agosto de 2014 e a Agência visa vendê-lo através de um leilão público. O artigo 252.º das normas de execução do Regulamento Financeiro aplicável à ECHA estabelecem o procedimento aplicável à venda de ativos tangíveis da Agência.</cbc:Description>
+         <cbc:Description languageID="SWE">Echa lanserar ett offentligt anbud om försäljning av tjänstebilen (BMW Active Hybrid 5 Sedan). Bilen inköptes i augusti 2014, och myndigheten ämnar sälja den på offentlig auktion. Förfarandet för försäljning av myndighetens materiella tillgångar fastställs genom artikel 252 i Echas budgetförordning.</cbc:Description>
+         <cbc:Description languageID="CES">ECHA zahajuje výzvu k účasti v nabídkovém řízení na veřejný prodej služebního vozidla (BMW Active Hybrid 5 Sedan). Automobil byl zakoupen v srpnu 2014 a agentura se snaží jej prodat prostřednictvím veřejné aukce. Postup prodeje hmotných statků agentury se stanoví v článku 252 finančního nařízení ECHA a jeho prováděcích pravidel.</cbc:Description>
+         <cbc:Description languageID="EST">ECHA algatab kutse pakkumiste tegemiseks ametiauto (BMW ActiveHybrid 5 sedaan) avalikul müügil. Auto osteti 2014. aasta augustis ja ameti eesmärk on müüa see avaliku oksjoni teel. ECHA materiaalsete varade müümise kord on kehtestatud ametile rakendatava finantsmääruse kohaldamise eeskirjade artikliga 252.</cbc:Description>
+         <cbc:Description languageID="HUN">Az ECHA ajánlattételi felhívást indít a szolgálati autó (BMW Active Hybrid 5 szedán) nyilvános árverésére vonatkozóan. Az autót 2014 augusztusában vásárolták, és az ügynökség nyilvános árverésen kívánja eladni. Az Európai Vegyianyag-ügynökség (ECHA) költségvetési rendelete alkalmazási szabályainak 252. cikke állapítja meg az ügynökség tárgyi eszközeinek értékesítésére vonatkozó eljárást.</cbc:Description>
+         <cbc:Description languageID="LIT">ECHA skelbia kvietimą pateikti pasiūlymus viešame tarnybinio automobilio (BMW ActiveHybrid 5 sedano) pardavime. Automobilis įsigytas 2014 m. rugpjūčio mėn.; agentūra siekia jį parduoti viešame aukcione. ECHA taikomo Finansinio reglamento taikymo taisyklių 252 straipsnyje nustatyta agentūros materialiojo turto pardavimo procedūra.</cbc:Description>
+         <cbc:Description languageID="LAV">ECHA izsludina aicinājumu iesniegt piedāvājumus dalībai dienesta automobiļa (sedana tipa BMW Active Hybrid 5) publiskajā izsolē. Transportlīdzeklis tika iegādāts 2014. gada augustā, un aģentūra vēlas to pārdot publiskajā izsolē. Aģentūras materiālo īpašumu pārdošanas kārtība ir noteikta ECHA Finanšu regulas Piemērošanas noteikumu 252. pantā.</cbc:Description>
+         <cbc:Description languageID="MLT">L-ECHA qed tniedi stedina għall-offerti fil-bejgħ pubbliku tal-karozza tas-servizz (BMW Active Hybrid 5 Sedan). Il-karozza nxtrat f'Awwissu 2014 u l-Aġenzija għandha l-għan li tbigħha permezz ta' rkant pubbliku. L-Artikolu 252 tar-Regoli tal-Applikazzjoni tar-Regolament Finanzjarju applikabbli għall-ECHA jistabbilixxi l-proċedura għall-bejgħ ta' assi tanġibbli tal-Aġenzija.</cbc:Description>
+         <cbc:Description languageID="POL">ECHA ogłasza zaproszenie do składania ofert w ramach publicznej sprzedaży samochodu służbowego (BMW Active Hybrid 5 Sedan). Samochód został zakupiony w sierpniu 2014 r., a Agencja zamierza sprzedać go w drodze aukcji publicznej. Artykuł 252 zasad stosowania do rozporządzenia finansowego, mającego zastosowanie do ECHA, określa procedurę sprzedaży rzeczowych aktywów trwałych Agencji.</cbc:Description>
+         <cbc:Description languageID="SLK">Agentúra ECHA vypisuje výzvu na predloženie ponuky ohľadom verejného predaja služobného vozidla (BMW Active Hybrid 5 Sedan). Vozidlo bolo zakúpené v auguste 2014 a agentúra ho chce predať prostredníctvom verejnej aukcie. Článok 252 pravidiel uplatňovania rozpočtových pravidiel, ktoré sa vzťahujú na agentúru ECHA, stanovuje postup predaja hmotného majetku agentúry.</cbc:Description>
+         <cbc:Description languageID="SLV">Agencija ECHA objavlja povabilo k oddaji ponudb v okviru javne prodaje službenega vozila (aktivne hibridne limuzine BMW serije 5). Avtomobil je bil kupljen avgusta 2014, agencija pa ga želi prodati prek javne dražbe. V členu 252 pravil uporabe finančne uredbe agencije ECHA je določen postopek za prodajo opredmetenih sredstev agencije.</cbc:Description>
+         <cbc:Description languageID="GLE">Tá ECHA ag seoladh cuiridh chun tairiscint a dhéanamh i ndíol poiblí an ghluaisteáin seirbhíse (BMW Active Hybrid 5 Sedan). Ba thiar i mí Lúnasa 2014 a ceannaíodh an gluaisteán, agus is í aidhm na Gníomhaireachta é a dhíol trí cheant poiblí. Bunaítear le hAirteagal 252 de Rialacháin maidir le Cur i bhFeidhm an Rialacháin Airgeadais is infheidhme ar ECHA an nós imeachta le haghaidh sócmhainní inláimhsithe na Gníomhaireachta a dhíol.</cbc:Description>
+         <cbc:Description languageID="BUL">ECHA стартира покана за подаване на оферта за публичната продажба на служебен автомобил (BMW Active Hybrid 5 Sedan). Автомобилът е закупен през август 2014 г. и Агенцията има за цел да го продаде чрез публичен търг. Член 252 от правилата за прилагане на Финансовия регламент, приложим за ECHA, установява процедурата за продажба на материални активи на Агенцията.</cbc:Description>
+         <cbc:Description languageID="RON">ECHA lansează o invitație la licitație pentru vânzarea publică a autovehiculului de serviciu (BMW Active Hybrid 5 Sedan). Autovehiculul a fost achiziționat în august 2014, iar agenția dorește să îl vândă printr-o licitație publică. Articolul 252 din Normele de aplicare a Regulamentului financiar aplicabil ECHA stabilește procedura de vânzare a activelor corporale ale agenției.</cbc:Description>
+         <cbc:Description languageID="HRV">ECHA pokreće poziv na podnošenje ponuda u javnoj prodaji službenog automobila (BMW aktivna hibridna limuzina serije 5). Automobil je kupljen u kolovozu 2014. i Agencija ga želi prodati putem javne aukcije. Člankom 252 pravila za primjenu Financijske uredbe primjenjive na ECHA-u uspostavlja se postupak za prodaju materijalne imovine Agencije.</cbc:Description>
+         <!--Main Nature (BT-23)-->
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <!--Additional Nature (BT-531)-->
+         <!--Strategic Procurement (BT-06)-->
+         <!--Strategic Procurement Description (BT-777)-->
+         <!--Green Procurement (BT-774)-->
+         <!--Social Procurement (BT-775)-->
+         <!--Procurement of Innovation (BT-776)-->
+         <!--Accessibility Justification (BT-755)-->
+         <!--Accessibility (BT-754)-->
+         <!--Quantity (BT-25)-->
+         <!--Unit (BT-625)-->
+         <!--Suitable for SMEs (BT-726)-->
+         <!--Additional Information (BT-300)-->
+         <cbc:Note languageID="ENG">The contract will be awarded to the bid presenting the highest final price. The estimated value indicated in Section II.2.6 is the minimum bid in the public auction. Please also refer to the auction documents available on https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="DAN">Kontrakten vil blive tildelt det bud, der fremfører den største endelige pris. Den anslåede værdi angivet i punkt II.2.6 er det mindste bud i den offentlige auktion. Se venligst også auktionsdokumenterne, der er tilgængelige på https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="DEU">Der Zuschlag wird für das Angebot mit dem höchsten Endpreis erteilt. Der in Abschnitt II.2.6 angegebene veranschlagte Wert stellt das Mindestangebot für die öffentliche Versteigerung dar. Siehe auch die unter https://hanki.tarjouspalvelu.fi verfügbaren Auktionsdokumente.</cbc:Note>
+         <cbc:Note languageID="SPA">El contrato se adjudicará a la oferta que presente el precio final más alto. El valor estimado indicado en el apartado II.2.6 es la oferta mínima en la subasta pública. Consulte también los documentos de la subasta disponibles en https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="FIN">Sopimus tehdään sen tarjoajan kanssa, jonka tarjouksessa esitetään korkein lopullinen hinta. Kohdassa II.2.6 ilmoitettu arvioitu arvo on julkisen huutokaupan vähimmäistarjous. Katso huutokauppa-asiakirjat, jotka ovat saatavilla osoitteessa https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="FRA">Le marché sera attribué à l'offre proposant le prix définitif le plus élevé. La valeur estimée indiquée à la section II.2.6 est le montant de l'offre minimale dans l'enchère publique. Veuillez également vous référer aux documents d'enchères disponibles à l'adresse https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="ELL">Η σύμβαση θα ανατεθεί στην προσφορά που παρουσιάζει την υψηλότερη τελική τιμή. Η εκτιμώμενη αξία που αναφέρεται στο τμήμα II.2.6 αποτελεί την ελάχιστη προσφορά στη δημοπρασία. Ανατρέξτε επίσης στα έγγραφα δημοπρασίας που είναι διαθέσιμα στο https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="ITA">Il contratto verrà aggiudicato all'offerta che presenterà il prezzo finale più alto. Il valore stimato indicato nella sezione II.2.6 rappresenta l'offerta minima nell'ambito dell'asta pubblica. Consultare la documentazione d’asta disponibile su https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="NLD">De opdracht zal worden gegund aan het bod met de hoogste eindprijs. De geraamde waarde vermeld in II.2.6 is het minimumbod in de openbare veiling. Zie ook de veilingdocumenten die beschikbaar zijn op https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="POR">O contrato será adjudicado à proposta que apresente o preço final mais elevado. O valor estimado indicado no ponto II.2.6 é o montante da proposta mínima no leilão público. Consultar também a documentação relativa ao leilão disponível em https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="SWE">Kontraktet kommer att tilldelas budet med högsta slutgiltiga pris. Det uppskattade värde som anges i avsnitt II.2.6 är minimibudet i den offentliga auktionen. Ytterligare upplysningar finns i auktionsdokumenten på https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="CES">Zakázka bude zadána nabídce nabízející nejvyšší konečnou cenu. Odhadovaná hodnota uvedená v oddíle II.2.6 je minimální nabídkou ve zmíněné veřejné dražbě. Nahlédněte prosím také do dražební dokumentace dostupné na https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="EST">Leping sõlmitakse pakkujaga, kes pakub kõige suuremat lõplikku hinda. Punktis II.2.6 esitatud hinnanguline maksumus on avaliku enampakkumise minimaalne pakkumine. Vt ka oksjoni dokumente, mis on kättesaadavad aadressil https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="HUN">A szerződést a legmagasabb végleges árat ajánlónak ítélik oda. A II.2.6. szakaszban feltüntetett becsült érték a nyilvános árverésen alkalmazott minimális ajánlat. Lásd az árverési dokumentációt: https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="LIT">Sutartis bus paskirta asmeniui, pateikusiam aukščiausios galutinės kainos pasiūlymą. II.2.6. punkte nurodyta numatoma vertė yra mažiausias pasiūlymas viešame aukcione. Aukciono dokumentus rasite adresu https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="LAV">Līguma slēgšanas tiesības tiks piešķirtas tā piedāvājuma iesniedzējam, kurā tiks piedāvāta augstākā galīgā cena. Paredzamā vērtība, kas norādīta II.2.6. iedaļā, ir minimālā piedāvājuma summa publiskajā izsolē. Lūdzam arī skatīt izsoles dokumentus, kas pieejami vietnē https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="MLT">Il-kuntratt se jingħata lill-offerta li tippreżenta l-ogħla prezz finali. Il-valur stmat indikat fit-Taqsima II.2.6 hu l-inqas offerta fl-irkant pubbliku. Jekk jogħġbok irreferi wkoll għad-dokumenti tal-irkant disponibbli fuq https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="POL">Zamówienie zostanie udzielone oferentowi, który zaoferuje najwyższą ostateczną cenę. Szacunkowa wartość wskazana w pkt II.2.6 jest równowartością minimalnej oferty na aukcji publicznej. Prosimy o zapoznanie się z dokumentacją towarzysząca aukcji dostępną pod adresem: https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="SLK">Zmluva bude pridelená ponuke, ktorá predstavuje najvyššiu konečnú cenu. Predpokladaná hodnota uvedená v oddiele II.2.6 predstavuje minimálnu ponuku vo verejnej dražbe. Prečítajte si tiež dokumenty týkajúce sa aukcie dostupné na https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="SLV">Naročilo bo oddano ponudniku, ki ponudi najvišjo končno ceno. Ocenjena vrednost, navedena v oddelku II.2.6, je minimalna ponudba na javni dražbi. Glejte tudi dražbene dokumente na strani https://hanki.tarjouspalvelu.fi</cbc:Note>
+         <cbc:Note languageID="GLE">Dámhfar an conradh don tairiscint ina gcuirtear an praghas deiridh is airde i láthair. Is ionann an luach measta arna léiriú in Alt II.2.6 agus an tairiscint íosta sa cheant poiblí. Déan tagairt freisin do na doiciméid cheant atá ar fáil ar https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="BUL">Поръчката ще бъде възложена на офертата, която представлява най-високата крайна цена. Прогнозната стойност, посочена в раздел II.2.6, е минималната оферта в публичния търг. Моля, направете също справка с тръжните документи, налични на: https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="RON">Contractul va fi atribuit ofertei care prezintă cel mai mare preț final. Valoarea estimată indicată în secțiunea II.2.6 reprezintă oferta minimă în cadrul licitației publice. De asemenea, consultați documentele de licitație disponibile la https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <cbc:Note languageID="HRV">Ugovor će biti dodijeljen ponudi s najvećom konačnom cijenom. Procijenjena vrijednost navedena u odjeljku II.2.6. najmanja je ponuda u okviru javne aukcije. Molimo pogledajte i dokumentaciju o aukciji dostupnu na https://hanki.tarjouspalvelu.fi.</cbc:Note>
+         <!--Estimated Value (BT-27)-->
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">31000.00</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <!--Main Classification Code (BT-262)-->
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">34100000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <!--Additional Classification Code (BT-263)-->
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">34110000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <!--Place of Performance Additional Information (BT-728)-->
+         <!--Place Performance City (BT-5131)-->
+         <!--Place Performance Post Code (BT-5121)-->
+         <!--Place Performance Country Subdivision (BT-5071)-->
+         <!--Place Performance Services Other (BT-727)-->
+         <!--Place Performance Street (BT-5101)-->
+         <!--Place Performance Country Code (BT-5141)-->
+         <!--Place of performance (BG-708) : Place Performance: Additional Information (BT-728), City (BT-5131), Post Code (BT-5121), Country Subdivision (BT-5071), Services Other (as a codelist) (BT-727), Street (BT-5101), Code (BT-5141)-->
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ECHA's premises.</cbc:StreetName>
+               <cbc:CountrySubentityCode listName="nuts">FI1B1</cbc:CountrySubentityCode>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <!--Duration Start Date (BT-536)-->
+         <!--Duration End Date (BT-537)-->
+         <!--Duration Period (BT-36)-->
+         <!--Duration Other (BT-538)-->
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="DAY">30</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <!--Options Description (BT-54)-->
+         <!--Renewal Maximum (BT-58)-->
+         <!--Renewal Description (BT-57)-->
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
 <ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7,7 +6,7 @@
                  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
                  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
                  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
-                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+                 xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"><!--WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 -->
    <ext:UBLExtensions>
       <ext:UBLExtension>
          <ext:ExtensionContent>
@@ -194,9 +193,9 @@
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
                   <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
-                  <efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+                  <efbc:GazetteID schemeName="ojs-id">64/2020</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
-                  <efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+                  <efbc:PublicationDate>2020-03-31+01:00</efbc:PublicationDate>
                </efac:Publication>
             </efext:EformsExtension>
          </ext:ExtensionContent>
@@ -222,6 +221,7 @@
    <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
    <!--Notice Official Language (BT-702) (first)-->
    <cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+   <!--Notice Official Language (BT-702) (additional)-->
    <!-- cac:ContractingParty -->
    <cac:ContractingParty><!--Buyer Profile URL (BT-508)-->
       <cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA14482</cbc:BuyerProfileURI>
@@ -357,10 +357,7 @@
       <cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
       <!--Lots All Required (BT-763)-->
       <!--PIN Competition Termination (BT-756)-->
-      <!--Previous Planning Identifier (BT-125)-->
-      <cac:NoticeDocumentReference>
-         <cbc:ID schemeName="ojs-notice-id">2019/S 090-214462</cbc:ID>
-      </cac:NoticeDocumentReference>
+      <!--Previous Notice Identifier (OPP-090)-->
       <!--Direct Award Justification (BT-136)-->
       <!--Direct Award Justification (BT-135)-->
       <!--Direct Award Justification Previous Procedure Identifier (BT-1252)-->
@@ -463,7 +460,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -541,7 +537,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -578,11 +573,17 @@
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
+         <cac:NoticeDocumentReference>
+            <cbc:ID schemeName="ojs-notice-id">00214462-2019</cbc:ID>
+         </cac:NoticeDocumentReference>
          <!--Submission Nonelectronic Justification (BT-19)-->
          <!--Submission Nonelectronic Description (BT-745)-->
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
@@ -754,7 +755,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -832,7 +832,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -869,11 +868,17 @@
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
+         <cac:NoticeDocumentReference>
+            <cbc:ID schemeName="ojs-notice-id">00214462-2019</cbc:ID>
+         </cac:NoticeDocumentReference>
          <!--Submission Nonelectronic Justification (BT-19)-->
          <!--Submission Nonelectronic Description (BT-745)-->
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
@@ -1045,7 +1050,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -1123,7 +1127,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1160,11 +1163,17 @@
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
+         <cac:NoticeDocumentReference>
+            <cbc:ID schemeName="ojs-notice-id">00214462-2019</cbc:ID>
+         </cac:NoticeDocumentReference>
          <!--Submission Nonelectronic Justification (BT-19)-->
          <!--Submission Nonelectronic Description (BT-745)-->
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
@@ -1336,7 +1345,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -1414,7 +1422,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1451,11 +1458,17 @@
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
+         <cac:NoticeDocumentReference>
+            <cbc:ID schemeName="ojs-notice-id">00214462-2019</cbc:ID>
+         </cac:NoticeDocumentReference>
          <!--Submission Nonelectronic Justification (BT-19)-->
          <!--Submission Nonelectronic Description (BT-745)-->
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
@@ -1627,7 +1640,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -1705,7 +1717,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1742,11 +1753,17 @@
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
+         <cac:NoticeDocumentReference>
+            <cbc:ID schemeName="ojs-notice-id">00214462-2019</cbc:ID>
+         </cac:NoticeDocumentReference>
          <!--Submission Nonelectronic Justification (BT-19)-->
          <!--Submission Nonelectronic Description (BT-745)-->
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
@@ -1918,7 +1935,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -1996,7 +2012,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2033,11 +2048,17 @@
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
+         <cac:NoticeDocumentReference>
+            <cbc:ID schemeName="ojs-notice-id">00214462-2019</cbc:ID>
+         </cac:NoticeDocumentReference>
          <!--Submission Nonelectronic Justification (BT-19)-->
          <!--Submission Nonelectronic Description (BT-745)-->
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
@@ -2203,7 +2224,6 @@
          </cac:CallForTendersDocumentReference>
          <!--Terms Financial (BT-77)-->
          <!--Reserved Participation (BT-71)-->
-         <!--Reserved Participation (BT-71)-->
          <cac:TendererQualificationRequest>
             <cac:SpecificTendererRequirement>
                <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
@@ -2281,7 +2301,6 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
-         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2318,11 +2337,17 @@
          <!--Deadline Receipt Requests (BT-1311)-->
          <!--Additional Information Deadline (BT-13)-->
          <!--Previous Planning Identifier (BT-125)-->
+         <cac:NoticeDocumentReference>
+            <cbc:ID schemeName="ojs-notice-id">00214462-2019</cbc:ID>
+         </cac:NoticeDocumentReference>
          <!--Submission Nonelectronic Justification (BT-19)-->
          <!--Submission Nonelectronic Description (BT-745)-->
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
+         <!--Participant Name (BT-47)-->
+         <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
+         <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>6</cbc:MaximumQuantity>
