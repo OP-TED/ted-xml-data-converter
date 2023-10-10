@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mappings>
 
+<directives>
+	<description>Mapping for eForms from DIRECTIVE to Legal Basis</description>
+	<mapping>
+		<directive>2014/23/EU</directive>
+		<legal-basis>32014L0023</legal-basis>
+	</mapping>
+	<mapping>
+		<directive>2014/24/EU</directive>
+		<legal-basis>32014L0024</legal-basis>
+	</mapping>
+	<mapping>
+		<directive>2014/25/EU</directive>
+		<legal-basis>32014L0025</legal-basis>
+	</mapping>
+	<mapping>
+		<directive>2009/81/EC</directive>
+		<legal-basis>32009L0081</legal-basis>
+	</mapping>
+</directives>
+
 <form-types>
 	<description>Mapping for eForms schema documents root element name and namespace</description>
 	<mapping>
@@ -499,7 +519,7 @@
 
 <non-award-justifications>
 	<description>Not Awarded Reason (BT-144)</description>
-	<ted-context>/TED_EXPORT/FORM_SECTION/*/AWARD_CONTRACT/NO_AWARDED_CONTRACT/(PROCUREMENT_DISCONTINUED|PROCUREMENT_UNSUCCESSFUL)/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/(AWARD_CONTRACT/NO_AWARDED_CONTRACT|RESULTS/NO_AWARDED_PRIZE)/(PROCUREMENT_DISCONTINUED|PROCUREMENT_UNSUCCESSFUL)/fn:local-name()</ted-context>
 	<eforms-context>/ContractAwardNotice/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:DecisionReason/efbc:DecisionReasonCode</eforms-context>
 	<eforms-codelist>non-award-justification</eforms-codelist>
 	<mapping>
@@ -517,11 +537,16 @@
 
 <received-submission-types>
 	<description>Received Submissions Type (BT-760)</description>
-	<ted-context>/TED_EXPORT/FORM_SECTION/*/AWARD_CONTRACT/AWARDED_CONTRACT/TENDERS/*/fn:local-name()</ted-context>
+	<ted-context>/TED_EXPORT/FORM_SECTION/*/(AWARD_CONTRACT/AWARDED_CONTRACT//*[fn:starts-with(fn:local-name(), 'NB_TENDERS')] | RESULTS/AWARDED_PRIZE//*[fn:starts-with(fn:local-name(), 'NB_PARTICIPANTS')])/fn:local-name()</ted-context>
 	<eforms-context>/ContractAwardNotice/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:ReceivedSubmissionsStatistics/efbc:StatisticsCode</eforms-context>
 	<eforms-codelist>received-submission-type</eforms-codelist>
 	<mapping>
 		<ted-value>NB_TENDERS_RECEIVED</ted-value>
+		<eforms-value>tenders</eforms-value>
+		<eforms-label>Tenders</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_PARTICIPANTS</ted-value>
 		<eforms-value>tenders</eforms-value>
 		<eforms-label>Tenders</eforms-label>
 	</mapping>
@@ -531,7 +556,17 @@
 		<eforms-label>Tenders from micro, small or medium tenderers</eforms-label>
 	</mapping>
 	<mapping>
+		<ted-value>NB_PARTICIPANTS_SME</ted-value>
+		<eforms-value>t-sme</eforms-value>
+		<eforms-label>Tenders from micro, small or medium tenderers</eforms-label>
+	</mapping>
+	<mapping>
 		<ted-value>NB_TENDERS_RECEIVED_OTHER_EU</ted-value>
+		<eforms-value>t-oth-eea</eforms-value>
+		<eforms-label>Tenders from tenderers registered in other European Economic Area countries than the country of the buyer</eforms-label>
+	</mapping>
+	<mapping>
+		<ted-value>NB_PARTICIPANTS_OTHER_EU</ted-value>
 		<eforms-value>t-oth-eea</eforms-value>
 		<eforms-label>Tenders from tenderers registered in other European Economic Area countries than the country of the buyer</eforms-label>
 	</mapping>

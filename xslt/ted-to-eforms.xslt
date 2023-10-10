@@ -84,14 +84,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:template match="*[@CATEGORY='ORIGINAL']">
 
-	<!-- NOTE: all eForms dates and times should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
-	<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
-	<!-- Therefore for complete accuracy, a mapping of country codes to UTC timezone offsets would be required -->
-	<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
-
-	<xsl:variable name="message">WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 </xsl:variable>
-	<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-
 	<!-- root element of output XML -->
 	<xsl:element name="{$eforms-element-name}" namespace="{$eforms-xmlns}">
 		<xsl:namespace name="cac" select="'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'"/>
@@ -101,6 +93,15 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:namespace name="efbc" select="'http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1'"/>
 		<xsl:namespace name="efext" select="'http://data.europa.eu/p27/eforms-ubl-extensions/1'"/>
 		<xsl:namespace name="ccts" select="'urn:un:unece:uncefact:documentation:2'"/>
+
+		<!-- NOTE: all eForms dates and times should contain ISO-8601 format dates, i.e. expressed as UTC with offsets. -->
+		<!-- TED date elements have no time zone associated, and TED time elements have "local time". -->
+		<!-- Therefore for complete accuracy, a mapping of country codes to UTC timezone offsets would be required -->
+		<!-- In this initial conversion, no such mapping is used, and TED dates and times are assumed to be CET, i.e. UTC+01:00 -->
+	
+		<xsl:variable name="message">WARNING: TED date elements have no time zone associated. For all dates in this notice, the time zone is assumed to be CET, i.e. UTC+01:00 </xsl:variable>
+		<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+	
 		<xsl:call-template name="root-extensions"/>
 		<xsl:call-template name="notice-information"/>
 		<xsl:call-template name="contracting-party"/>
@@ -125,8 +126,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
-					<xsl:if test="$eforms-document-type eq 'CAN'">
-					</xsl:if>
 					<xsl:if test="$ted-form-notice-type eq '14'">
 						<xsl:call-template name="changes"/>
 					</xsl:if>
@@ -180,11 +179,22 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<cbc:CustomizationID><xsl:value-of select="$sdk-version-value"/></cbc:CustomizationID>
 	<!-- Notice Identifier (BT-701): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Identifier (BT-701)'"/></xsl:call-template>
-	<cbc:ID schemeName="notice-id"><xsl:value-of select="$notice-identifier"/></cbc:ID>
+	<!-- use the "notice-identifier" parameter if supplied, otherwise set a fixed value -->
+	<cbc:ID schemeName="notice-id">
+		<xsl:choose>
+			<xsl:when test="$notice-identifier ne ''"><xsl:value-of select="$notice-identifier"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="$notice-identifier-default"/></xsl:otherwise>
+		</xsl:choose>
+	</cbc:ID>
 	<xsl:if test="not($eforms-notice-subtype = ('1', '2', '3', '4', '5', '6', '7', '8', '9'))">
 		<!-- Procedure Identifier (BT-04): eForms documentation cardinality (Procedure) = * | Forbidden for PIN subtypes 1-9, E1 and E2; Mandatory for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Identifier (BT-04)'"/></xsl:call-template>
-		<cbc:ContractFolderID><xsl:value-of select="$procedure-identifier"/></cbc:ContractFolderID>
+		<cbc:ContractFolderID>
+			<xsl:choose>
+				<xsl:when test="$procedure-identifier ne ''"><xsl:value-of select="$procedure-identifier"/></xsl:when>
+				<xsl:otherwise><xsl:value-of select="$procedure-identifier-default"/></xsl:otherwise>
+			</xsl:choose>
+		</cbc:ContractFolderID>
 	</xsl:if>
 	<!-- Notice Dispatch Date (BT-05): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Dispatch Date (BT-05)'"/></xsl:call-template>
@@ -219,17 +229,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	</xsl:if>
 	<!-- Procedure Legal Basis (BT-01): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Procedure Legal Basis (BT-01)'"/></xsl:call-template>
-	<cbc:RegulatoryDomain><xsl:value-of select="$legal-basis"/></cbc:RegulatoryDomain>
+	<cbc:RegulatoryDomain>
+		<xsl:choose>
+			<xsl:when test="$legal-basis ne ''"><xsl:value-of select="$legal-basis"/></xsl:when>
+			<xsl:when test="$directive ne ''"><xsl:value-of select="$mappings//directives/mapping[directive=$directive]/fn:string(legal-basis)"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="'OTHER'"/></xsl:otherwise>
+		</xsl:choose>
+	</cbc:RegulatoryDomain>
+
 	<!-- Form Type (BT-03) and Notice Type (BT-02): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Form Type (BT-03) and Notice Type (BT-02)'"/></xsl:call-template>
-	<!-- TBD: hard-coded for now; to use tailored codelists -->
 	<cbc:NoticeTypeCode listName="{$eforms-form-type}"><xsl:value-of select="$eforms-notice-type"/></cbc:NoticeTypeCode>
 	<!-- Notice Official Language (BT-702) (first): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Official Language (BT-702) (first)'"/></xsl:call-template>
 	<cbc:NoticeLanguageCode><xsl:value-of select="$eforms-first-language"/></cbc:NoticeLanguageCode>
-	<xsl:for-each select="$ted-form-additional-languages">
 	<!-- Notice Official Language (BT-702) (additional): eForms documentation cardinality (Procedure) = * | Optional for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Official Language (BT-702) (additional)'"/></xsl:call-template>
+	<xsl:for-each select="$ted-form-additional-languages">
 		<cac:AdditionalNoticeLanguage>
 			<cbc:ID><xsl:value-of select="opfun:get-eforms-language(.)"/></cbc:ID>
 		</cac:AdditionalNoticeLanguage>
@@ -253,12 +269,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
 		<!-- OJEU Identifier (OPP-011): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'OJEU Identifier (OPP-011)'"/></xsl:call-template>
-		<!-- TBD: hard-coded for now -->
-		<efbc:GazetteID schemeName="ojs-id">123/2023</efbc:GazetteID>
+		<efbc:GazetteID schemeName="ojs-id"><xsl:value-of select="fn:concat($ojs, '/', substring($pubdate, 1,4))"/></efbc:GazetteID>
 		<!-- OJEU Publication Date (OPP-012): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'OJEU Publication Date (OPP-012)'"/></xsl:call-template>
-		<!-- TBD: hard-coded for now -->
-		<efbc:PublicationDate>2023-03-14+01:00</efbc:PublicationDate>
+		<!-- Assume CET time zone -->
+		<efbc:PublicationDate><xsl:value-of select="fn:concat(substring($pubdate, 1,4),'-', substring($pubdate, 5,2), '-', substring($pubdate, 7,2))"/><xsl:text>+01:00</xsl:text></efbc:PublicationDate>
 	</efac:Publication>
 </xsl:template>
 
@@ -334,13 +349,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<!-- PIN Competition Termination (BT-756): eForms documentation cardinality (Procedure) = ? | Optional for CAN subtypes 29, 30, 33, and 34; Forbidden for other subtypes -->
 		<xsl:call-template name="pin-competition-termination"/>
 
-		<!-- Previous Planning Identifier (BT-125): eForms documentation cardinality (Procedure) = - | Forbidden for CM subtypes 38-40 and E5; Optional for other subtypes. -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Planning Identifier (BT-125)'"/></xsl:call-template>
-		<!-- TBD: Discussion about methods of linking to previous notices is ongoing. This mapping/conversion may change. -->
-		<!-- TBD: When the notice linked to is of type PIN Only, BT-125 and BT-1251 should be specified at Lot level, not at notice level. -->
-
-		<xsl:apply-templates select="*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
-
+		<!-- Previous Notice Identifier (OPP-090): Used for linking notices where no other linking mechanism is available -->
+		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Notice Identifier (OPP-090)'"/></xsl:call-template>
+		<xsl:if test="$eforms-form-type != 'competition'">
+			<xsl:apply-templates select="*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
+		</xsl:if>
 		<!-- Procedure Accelerated (BT-106): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<!-- Procedure Accelerated Justification (BT-1351): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:apply-templates select="*:PROCEDURE/*:ACCELERATED_PROC"/>
@@ -398,21 +411,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:apply-templates select="*:OBJECT_CONTRACT/*:CPV_MAIN"/>
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Procedure) = * | No equivalent element in TED XML at Procedure level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
-		<!-- Place of Performance (*) -> RealizedLocation | No equivalent element in TED XML at Procedure level -->
 		<xsl:call-template name="place-performance-procedure"/>
 	</cac:ProcurementProject>
-</xsl:template>
-
-<!-- end of Procedure-level templates for Procurement Project -->
-
-
-<!-- Initial template to process each Lot -->
-
-<xsl:template name="procurement-project-lots">
-<!-- The following line can be un-commented to show the variable lot-numbers-map -->
-<!-- <xsl:copy-of select="$lot-numbers-map" copy-namespaces="no"/> -->
-	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' multiple cac:ProcurementProjectLot '"/></xsl:call-template>
-	<xsl:apply-templates select="*:OBJECT_CONTRACT/*:OBJECT_DESCR"/>
 </xsl:template>
 
 <xsl:template name="place-performance-procedure">
@@ -431,6 +431,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Street (BT-5101)'"/></xsl:call-template>
 	<!-- Place Performance Country Code (BT-5141): eForms documentation cardinality (Procedure) = ? | No equivalent element in TED XML at Procedure level -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place Performance Country Code (BT-5141)'"/></xsl:call-template>
+</xsl:template>
+
+<!-- end of Procedure-level templates for Procurement Project -->
+
+
+<!-- Initial template to process each Lot -->
+
+<xsl:template name="procurement-project-lots">
+<!-- The following line can be un-commented to show the variable lot-numbers-map -->
+<!-- <xsl:copy-of select="$lot-numbers-map" copy-namespaces="no"/> -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' multiple cac:ProcurementProjectLot '"/></xsl:call-template>
+	<xsl:apply-templates select="*:OBJECT_CONTRACT/*:OBJECT_DESCR"/>
 </xsl:template>
 
 </xsl:stylesheet>
