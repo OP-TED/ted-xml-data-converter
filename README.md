@@ -38,8 +38,7 @@ Each folder also contains a README.md file listing the files in that folder and 
 
 Basic usage instructions for developers to run the code in their own system is available [here](usage-information.md).
 
-An API for this converter will be made available soon.
-
+An API for the converter is temporarily available as part of the eNotices2 Publication API. Documentation is available at [TED API Documentation](https://docs.ted.europa.eu/api/endpoints/enotices2-ted-europa-eu-esenders.html) or the [eNotices2 Public API endpoints Documentation](https://enotices2.ted.europa.eu/esenders/webjars/swagger-ui/index.html).
 
 ## Versioning scheme
 
