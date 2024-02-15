@@ -16,7 +16,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <xsl:template match="*:OFFICIALNAME">
 	<cac:PartyName>
-		<cbc:Name><xsl:value-of select="fn:normalize-space(.)"/></cbc:Name>
+		<cbc:Name languageID="{$eforms-first-language}"><xsl:value-of select="fn:normalize-space(.)"/></cbc:Name>
 	</cac:PartyName>
 </xsl:template>
 
@@ -137,11 +137,4 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<cbc:AccessToolsURI><xsl:value-of select="fn:normalize-space(.)"/></cbc:AccessToolsURI>
 </xsl:template>
 
-<xsl:template match="*:PARTICIPANT_NAME">
-	<cac:PreSelectedParty>
-		<cac:PartyName>
-			<cbc:Name><xsl:value-of select="fn:normalize-space(.)"/></cbc:Name>
-		</cac:PartyName>
-	</cac:PreSelectedParty>
-</xsl:template>
 </xsl:stylesheet>

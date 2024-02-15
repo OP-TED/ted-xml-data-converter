@@ -199,7 +199,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>EC 2020 2</cbc:ID>
+                        <cbc:ID schemeName="contract">EC 2020 2</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -243,7 +243,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Secretario General del Departamento de la Vicepresidencia y de Economía y Hacienda de la Generalidad de Cataluña</cbc:Name>
+                           <cbc:Name languageID="SPA">Secretario General del Departamento de la Vicepresidencia y de Economía y Hacienda de la Generalidad de Cataluña</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Rambla de Cataluña, 19-21</cbc:StreetName>
@@ -276,7 +276,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Ernst &amp; Young, S. L., Faura-Casas Auditors Consultors, S. L., Gesem Auditores y Consultores, S. L. P., GNC Assurance &amp; Advisory, S. L., Auren Auditores SP, S. L. P., KMPG Auditores, S. L.</cbc:Name>
+                           <cbc:Name languageID="SPA">Ernst &amp; Young, S. L., Faura-Casas Auditors Consultors, S. L., Gesem Auditores y Consultores, S. L. P., GNC Assurance &amp; Advisory, S. L., Auren Auditores SP, S. L. P., KMPG Auditores, S. L.</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Barcelona</cbc:CityName>
@@ -304,7 +304,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Ernst &amp; Young, S. L., Faura-Casas Auditors Consultors, S. L., Auren Auditores SP, S. L. P., KPMG Auditores, S. L.</cbc:Name>
+                           <cbc:Name languageID="SPA">Ernst &amp; Young, S. L., Faura-Casas Auditors Consultors, S. L., Auren Auditores SP, S. L. P., KPMG Auditores, S. L.</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Barcelona</cbc:CityName>
@@ -332,7 +332,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Tribunal Catalán de Contratos del Sector Público</cbc:Name>
+                           <cbc:Name languageID="SPA">Tribunal Catalán de Contratos del Sector Público</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Vía Laietana, 14, edificio Princesa</cbc:StreetName>
@@ -361,7 +361,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Asesoría Jurídica del Departamento de la Vicepresidencia y de Economía y Hacienda</cbc:Name>
+                           <cbc:Name languageID="SPA">Asesoría Jurídica del Departamento de la Vicepresidencia y de Economía y Hacienda</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Rambla de Cataluña, 19-21</cbc:StreetName>
@@ -386,7 +386,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">153579-2020</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">64/2020</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -399,7 +399,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -558,6 +558,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -586,7 +587,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -709,6 +709,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -737,7 +738,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -860,6 +860,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -888,7 +889,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

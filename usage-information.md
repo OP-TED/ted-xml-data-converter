@@ -9,7 +9,7 @@ Please see [development-methodology.md](development-methodology.md) for the appr
 
 Please see [installation.md](installation.md) for installation and usage instructions.
 
-An API for the converter will be made available soon which will allow conversion of notices via HTTPS requests.
+An API for the converter is temporarily available as part of the eNotices2 Publication API. Documentation is available at [TED API Documentation](https://docs.ted.europa.eu/api/endpoints/enotices2-ted-europa-eu-esenders.html) or the [eNotices2 Public API endpoints Documentation](https://enotices2.ted.europa.eu/esenders/webjars/swagger-ui/index.html).
 <br>
 
 <br>

@@ -26,7 +26,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Gemeinde Balzers</cbc:Name>
+                           <cbc:Name languageID="DEU">Gemeinde Balzers</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Fürstenstrasse 50</cbc:StreetName>
@@ -58,7 +58,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Beschwerdekommission für Verwaltungsangelegenheiten (VBK)</cbc:Name>
+                           <cbc:Name languageID="DEU">Beschwerdekommission für Verwaltungsangelegenheiten (VBK)</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Peter-Kaiser-Platz 1</cbc:StreetName>
@@ -85,7 +85,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">150049-2018</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">67/2018</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -98,7 +98,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -349,50 +349,8 @@
          <cac:Language>
             <cbc:ID>DEU</cbc:ID>
          </cac:Language>
-         <!--Security Clearance Code (BT-578)-->
-         <!--Security Clearance Description (BT-732)-->
-      </cac:TenderingTerms>
-      <!-- cac:TenderingProcess -->
-      <cac:TenderingProcess>
-         <ext:UBLExtensions>
-            <ext:UBLExtension>
-               <ext:ExtensionContent>
-                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
-                     <efac:InterestExpressionReceptionPeriod>
-                        <cbc:EndDate>2018-05-07+01:00</cbc:EndDate>
-                        <cbc:EndTime>17:00:00+01:00</cbc:EndTime>
-                     </efac:InterestExpressionReceptionPeriod>
-                  </efext:EformsExtension>
-               </ext:ExtensionContent>
-            </ext:UBLExtension>
-         </ext:UBLExtensions>
-         <!--SubmissionElectronic (BT-17)-->
-         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
-         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
-         <!--GPA Coverage (BT-115)-->
-         <!--Tool Atypical URL (BT-124)-->
-         <!--Deadline Receipt Tenders (BT-131)-->
-         <cac:TenderSubmissionDeadlinePeriod>
-            <cbc:EndDate>2018-05-07+01:00</cbc:EndDate>
-            <cbc:EndTime>17:00:00+01:00</cbc:EndTime>
-         </cac:TenderSubmissionDeadlinePeriod>
-         <!--Dispatch Invitation Tender (BT-130)-->
-         <cac:InvitationSubmissionPeriod>
-            <cbc:StartDate>2018-05-30+01:00</cbc:StartDate>
-         </cac:InvitationSubmissionPeriod>
-         <!--Deadline Receipt Requests (BT-1311)-->
-         <!--Additional Information Deadline (BT-13)-->
-         <!--Previous Planning Identifier (BT-125)-->
-         <!--Submission Nonelectronic Justification (BT-19)-->
-         <!--Submission Nonelectronic Description (BT-745)-->
-         <!--Maximum Candidates Indicator (BT-661)-->
-         <!--Maximum Candidates (BT-51)-->
-         <!--Minimum Candidates (BT-50)-->
          <!--Participant Name (BT-47)-->
          <cac:EconomicOperatorShortList>
-            <cbc:LimitationDescription>true</cbc:LimitationDescription>
-            <cbc:MaximumQuantity>28</cbc:MaximumQuantity>
-            <cbc:MinimumQuantity>15</cbc:MinimumQuantity>
             <cac:PreSelectedParty>
                <cac:PartyName>
                   <cbc:Name>ArchitekturAtelier AG, LI-Vaduz</cbc:Name>
@@ -458,6 +416,50 @@
                   <cbc:Name>Vogt Architekten, LI- Balzers</cbc:Name>
                </cac:PartyName>
             </cac:PreSelectedParty>
+         </cac:EconomicOperatorShortList>
+         <!--Security Clearance Code (BT-578)-->
+         <!--Security Clearance Description (BT-732)-->
+      </cac:TenderingTerms>
+      <!-- cac:TenderingProcess -->
+      <cac:TenderingProcess>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension><!--Procurement Relaunch (BT-634)--><!--Tool Name (BT-632)--><!--Deadline Receipt Expressions (BT-630)-->
+                     <efac:InterestExpressionReceptionPeriod>
+                        <cbc:EndDate>2018-05-07+01:00</cbc:EndDate>
+                        <cbc:EndTime>17:00:00+01:00</cbc:EndTime>
+                     </efac:InterestExpressionReceptionPeriod>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!--SubmissionElectronic (BT-17)-->
+         <cbc:SubmissionMethodCode listName="esubmission">not-allowed</cbc:SubmissionMethodCode>
+         <!--Successive Reduction Indicator (Procedure) (BT-52)-->
+         <!--GPA Coverage (BT-115)-->
+         <!--Tool Atypical URL (BT-124)-->
+         <!--Deadline Receipt Tenders (BT-131)-->
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2018-05-07+01:00</cbc:EndDate>
+            <cbc:EndTime>17:00:00+01:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <!--Dispatch Invitation Tender (BT-130)-->
+         <cac:InvitationSubmissionPeriod>
+            <cbc:StartDate>2018-05-30+01:00</cbc:StartDate>
+         </cac:InvitationSubmissionPeriod>
+         <!--Deadline Receipt Requests (BT-1311)-->
+         <!--Additional Information Deadline (BT-13)-->
+         <!--Previous Planning Identifier (BT-125)-->
+         <!--Submission Nonelectronic Justification (BT-19)-->
+         <!--Submission Nonelectronic Description (BT-745)-->
+         <!--Maximum Candidates Indicator (BT-661)-->
+         <!--Maximum Candidates (BT-51)-->
+         <!--Minimum Candidates (BT-50)-->
+         <cac:EconomicOperatorShortList>
+            <cbc:LimitationDescription>true</cbc:LimitationDescription>
+            <cbc:MaximumQuantity>28</cbc:MaximumQuantity>
+            <cbc:MinimumQuantity>15</cbc:MinimumQuantity>
          </cac:EconomicOperatorShortList>
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->

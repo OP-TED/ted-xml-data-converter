@@ -18,7 +18,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 <xsl:include href="lib/functx-1.0.1-doc.xsl"/>
 
 <!-- default SDK version -->
-<xsl:variable name="sdk-version-default" select="'eforms-sdk-1.7'"/>
+<xsl:variable name="sdk-version-default" select="'eforms-sdk-1.10'"/>
 
 <!-- application parameters -->
 <xsl:param name="showwarnings" select="1" as="xs:integer"/>
@@ -60,6 +60,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <!-- Variable ojs holds the OJS number  -->
 <xsl:variable name="ojs" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:REF_OJS/fn:string(*:NO_OJ)"/>
+<!-- Variable docid holds the notice publication number  -->
+<xsl:variable name="docid" select="/*:TED_EXPORT/fn:string(@DOC_ID)"/>
 <!-- Variable pubdate holds the publication date  -->
 <xsl:variable name="pubdate" select="/*:TED_EXPORT/*:CODED_DATA_SECTION/*:REF_OJS/fn:string(*:DATE_PUB)"/>
 
@@ -121,6 +123,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 <!-- Variable number-of-lots holds the number of Lots (element OBJECT_DESCR) of the notice being converted -->
 <xsl:variable name="number-of-lots" select="$ted-form-main-element/*:OBJECT_CONTRACT/fn:count(*:OBJECT_DESCR)"/>
+
+<!-- Variable lot-numbers holds the list of TED XML Lot numbers (OBJECT_DESCR/LOT_NO) -->
+<xsl:variable name="lot-numbers" as="xs:string*" select="$ted-form-main-element/*:OBJECT_CONTRACT/*:OBJECT_DESCR/*:LOT_NO"/>
 
 <!-- Variable lot-numbers-map holds a mapping of the TED XML Lots (OBJECT_DESCR XPath) to the calculated eForms Purpose Lot Identifier (BT-137) -->
 <xsl:variable name="lot-numbers-map">
@@ -396,7 +401,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 			<xsl:for-each select="($ted-form-main-element, $ted-form-additional-elements)">
 				<xsl:variable name="language" select="opfun:get-eforms-language(@LG)"/>
 				<xsl:variable name="form-element" select="."/>
-				<xsl:variable name="text-content">
+				<xsl:variable name="text-content" as="xs:string*">
 				<xsl:for-each select="$relative-contexts">
 					<xsl:variable name="relative-context" select="."/>
 					<xsl:variable name="this-context" select="fn:concat(functx:path-to-node-with-pos($form-element), .)"/>
@@ -408,18 +413,18 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 					</xsl:variable>
 					<xsl:choose>
 						<xsl:when test="$local eq ''">
-							<xsl:value-of select="fn:normalize-space($parent/*)"/>
+							<xsl:value-of select="fn:concat(fn:normalize-space($parent/*), ' ')"/>
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:value-of select="fn:normalize-space(fn:string-join($parent/*/*[fn:local-name() = $local], ' '))"/>
+							<xsl:value-of select="fn:concat(fn:normalize-space(fn:string-join($parent/*/*[fn:local-name() = $local], ' ')), ' ')"/>
 						</xsl:otherwise>
 					</xsl:choose>
-					<xsl:text> </xsl:text>
 				</xsl:for-each>
 				</xsl:variable>
 				<xsl:element name="{$element}">
 					<xsl:attribute name="languageID" select="$language"/>
-					<xsl:value-of select="fn:normalize-space(fn:string-join($text-content, ' '))"/>
+					<!--<xsl:value-of select="fn:normalize-space(fn:string-join($text-content, ' '))"/>-->
+					<xsl:value-of select="fn:normalize-space(fn:string-join(fn:distinct-values($text-content), ' '))"/>
 				</xsl:element>
 			</xsl:for-each>
 		</xsl:when>
