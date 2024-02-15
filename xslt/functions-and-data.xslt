@@ -159,7 +159,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 									<xsl:value-of select="fn:concat($lot-prefix, functx:pad-integer-to-length(*:LOT_NO, 4))"/>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="fn:concat($lot-prefix, *:LOT_NO)"/>
+									<xsl:value-of select="fn:concat($lot-prefix, functx:pad-integer-to-length(fn:position(), 4))"/>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>

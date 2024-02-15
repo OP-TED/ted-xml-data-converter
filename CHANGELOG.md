@@ -1,5 +1,5 @@
 
-# TED XML Data Converter 1.0.1 Release Notes
+# TED XML Data Converter 1.0.2 Release Notes
 
 This is a bugfix release of the TED XML Data Converter.
 
@@ -8,6 +8,7 @@ This is a bugfix release of the TED XML Data Converter.
 
 ## Bug fixes
 
+* Fixed invalid Purpose Lot Identifier (BT-137) when LOT_NO is not a number
 * Notice Publication Identifier (OPP-010): replaced hard-coded value with value from TED_EXPORT/@DOC_ID
 * Contract Conclusion Date (BT-145): only output first date found when different dates were found in DATE_CONCLUSION_CONTRACT sharing the same CONTRACT_NO
 * Fixed invalid eForms generation of Award Criterion Number (BT-541) efbc:ParameterNumeric from text in AC_WEIGHTING
