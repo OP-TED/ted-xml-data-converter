@@ -1,24 +1,28 @@
 
-# TED XML Data Converter 1.0.0 Release Notes
+# TED XML Data Converter 1.0.1 Release Notes
 
-This is the first production-ready release of the TED XML Data Converter. It can convert notices published in the R2.0.9 TED schema, versions S01 to S05. It is not able to convert notices published in the R2.0.8 schema, or notices published under the 1370/2007 ("Transport") Regulation.
+This is a bugfix release of the TED XML Data Converter.
 
-It is not possible to convert F14 (Corrigendum) notices, due to their text-based format. F20 (Contract Modification) notices can be converted, but only the original contract information will be included, the modifications will be excluded.
-
-## Code changes
-
-* Conversion of Design Contest forms F12 and F13
-* Improved reporting of errors for notices which cannot be converted
-* Fixed subtype mapping for form F15
-* Added mapping from DIRECTIVE to Procedure Legal Basis (BT-01)
-* Derived OJEU Identifier (OPP-011) and OJEU Publication Date (OPP-012) from TED XML
-* Added Description elements to countries-map.xml and languages-map.xml
-* Added new test notices to cover all convertible forms and elements
+## SDK version
+* Updated version of converted eForms notices to SDK-1.10
 
 ## Bug fixes
 
-* Where INFO_ADD and URL_NATIONAL_PROCEDURE exist together
-* Mapping for F15, Directive 2014/25/EU
-* BT-163 Concession Value Description
-* Links to previous notices: Previous Planning Identifier (BT-125(i)) and Previous Notice Identifier (OPP-090)
+* Notice Publication Identifier (OPP-010): replaced hard-coded value with value from TED_EXPORT/@DOC_ID
+* Contract Conclusion Date (BT-145): only output first date found when different dates were found in DATE_CONCLUSION_CONTRACT sharing the same CONTRACT_NO
+* Fixed invalid eForms generation of Award Criterion Number (BT-541) efbc:ParameterNumeric from text in AC_WEIGHTING
+* Fixed invalid order of Concession Revenue User (BT-162) efbc:RevenueUserAmount and Concession Revenue Buyer (BT-160) efbc:RevenueBuyerAmount
+* Changed content of Framework Maximum Participants Number (BT-113) cbc:MaximumOperatorQuantity to "1" when no value is found in the TED XML
+* Moved Participant Name (BT-47) from cac:ProcurementProject to cac:TenderingTerms
+* Subtype 36: included Contract IDs in LotResults
+* Improved detection of Lots referenced from AWARD_CONTRACT
+* Created separate contracts for AWARD_CONTRACT elements which do not contain CONTRACT_NO.
+
+
+
+## Notes
+This release of the TED XML Data Converter can convert notices published in the R2.0.9 TED schema, versions S01 to S05. It is not able to convert notices published in the R2.0.8 schema, or notices published under the 1370/2007 ("Transport") Regulation.
+
+It is not possible to convert F14 (Corrigendum) notices, due to their text-based format. F20 (Contract Modification) notices can be converted, but only the original contract information will be included, the modifications will be excluded.
+
 

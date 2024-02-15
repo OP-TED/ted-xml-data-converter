@@ -153,7 +153,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>1</cbc:ID>
+                        <cbc:ID schemeName="contract">1</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -195,7 +195,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>2</cbc:ID>
+                        <cbc:ID schemeName="contract">2</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -233,7 +233,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>European Central Bank</cbc:Name>
+                           <cbc:Name languageID="ENG">European Central Bank</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Sonnemannstrasse 22</cbc:StreetName>
@@ -269,7 +269,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Krisolis Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Krisolis Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>28-32 Pembroke Street Upper</cbc:StreetName>
@@ -298,7 +298,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>IE University</cbc:Name>
+                           <cbc:Name languageID="ENG">IE University</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Calle Cardinal Zuniga</cbc:StreetName>
@@ -330,7 +330,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Procurement Review Body of the European Central Bank, c/o Legal Advice Team</cbc:Name>
+                           <cbc:Name languageID="ENG">Procurement Review Body of the European Central Bank, c/o Legal Advice Team</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Sonnemannstrasse 22</cbc:StreetName>
@@ -360,7 +360,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>European Ombudsman</cbc:Name>
+                           <cbc:Name languageID="ENG">European Ombudsman</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>1 avenue du Président Robert Schuman</cbc:StreetName>
@@ -391,7 +391,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Central Procurement Office</cbc:Name>
+                           <cbc:Name languageID="ENG">Central Procurement Office</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Sonnemannstrasse 22</cbc:StreetName>
@@ -416,7 +416,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">625923-2021</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">238/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -429,7 +429,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -741,6 +741,7 @@
             </cac:MediationParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -768,7 +769,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

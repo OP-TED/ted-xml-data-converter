@@ -72,11 +72,911 @@
                      </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
-                        <cbc:ID schemeName="Lot">1.2.3.4.5.6.7.8.9.10.11.12.13.14.15.16.17.18.19.20.21.22.23.24.25.26.27.28.29.30.31</cbc:ID>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
                   <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
                      <cbc:ID schemeName="result">RES-0003</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0004</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0005</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0006</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0007</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0008</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0009</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0008</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0010</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0009</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0011</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0010</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0012</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0011</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0013</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0012</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0014</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0013</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0015</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0014</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0016</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0015</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0017</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0016</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0018</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0017</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0019</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0018</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0020</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0019</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0021</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0020</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0022</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0021</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0023</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0022</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0024</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0023</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0025</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0024</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0026</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0025</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0027</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0026</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0028</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0027</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0029</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0028</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0030</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0029</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0031</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0030</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0032</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">475600.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1400.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0031</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0033</cbc:ID>
                      <!--Tender Value Highest (BT-711)-->
                      <cbc:HigherTenderAmount currencyID="MKD">978912.00</cbc:HigherTenderAmount>
                      <!--Tender Value Lowest (BT-710)-->
@@ -101,12 +1001,12 @@
                         <cbc:ID schemeName="contract">CON-0003</cbc:ID>
                      </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
-                     <efac:TenderLot><!--WARNING: No association to a Lot was found for LotResult RES-0003. The value "MISSING" was used.-->
+                     <efac:TenderLot><!--WARNING: No association to a Lot was found for LotResult RES-0033. The value "MISSING" was used.-->
                         <cbc:ID schemeName="Lot">MISSING</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
                   <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
-                     <cbc:ID schemeName="result">RES-0004</cbc:ID>
+                     <cbc:ID schemeName="result">RES-0034</cbc:ID>
                      <!--Tender Value Highest (BT-711)-->
                      <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
                      <!--Tender Value Lowest (BT-710)-->
@@ -132,11 +1032,311 @@
                      </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
-                        <cbc:ID schemeName="Lot">33.34.35.36.37.38.39.40.41.42.43</cbc:ID>
+                        <cbc:ID schemeName="Lot">LOT-0033</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
                   <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
-                     <cbc:ID schemeName="result">RES-0005</cbc:ID>
+                     <cbc:ID schemeName="result">RES-0035</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0034</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0036</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0035</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0037</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0036</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0038</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0037</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0039</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0038</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0040</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0039</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0041</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0040</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0042</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0041</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0043</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0042</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0044</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">15000.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">260.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0004</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0043</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0045</cbc:ID>
                      <!--Tender Value Highest (BT-711)-->
                      <cbc:HigherTenderAmount currencyID="MKD">7800.00</cbc:HigherTenderAmount>
                      <!--Tender Value Lowest (BT-710)-->
@@ -162,7 +1362,127 @@
                      </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
-                        <cbc:ID schemeName="Lot">32.45.46.47.48</cbc:ID>
+                        <cbc:ID schemeName="Lot">LOT-0032</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0046</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">7800.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1200.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0005</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0045</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0047</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">7800.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1200.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0005</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0046</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0048</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">7800.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1200.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0005</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0047</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult><!--LotResult Technical ID (OPT-322)-->
+                     <cbc:ID schemeName="result">RES-0049</cbc:ID>
+                     <!--Tender Value Highest (BT-711)-->
+                     <cbc:HigherTenderAmount currencyID="MKD">7800.00</cbc:HigherTenderAmount>
+                     <!--Tender Value Lowest (BT-710)-->
+                     <cbc:LowerTenderAmount currencyID="MKD">1200.00</cbc:LowerTenderAmount>
+                     <!--Winner Chosen (BT-142)-->
+                     <cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+                     <!--Dynamic Purchasing System Termination (BT-119)-->
+                     <!--Not Awarded Reason (BT-144)-->
+                     <!--Tender Identifier Reference (OPT-320)-->
+                     <efac:LotTender>
+                        <cbc:ID schemeName="tender">TEN-0005</cbc:ID>
+                     </efac:LotTender>
+                     <!--Framework Re-estimated Value (BT-660)-->
+                     <!--WARNING: VAL_ESTIMATED_TOTAL exists in the TED notice within AWARDED_CONTRACT and FRAMEWORK does not exist within PROCEDURE. There is no mapping for this case.-->
+                     <efac:ReceivedSubmissionsStatistics><!--Received Submissions Type (BT-760)-->
+                        <efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+                        <!--Received Submissions Count (BT-759)-->
+                        <efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0005</cbc:ID>
+                     </efac:SettledContract>
+                     <!--Result Lot Identifier (BT-13713)-->
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0048</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
                   <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
@@ -289,7 +1609,7 @@
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>05-13/10</cbc:ID>
+                        <cbc:ID schemeName="contract">05-13/10</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -305,7 +1625,7 @@
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>05-13/12</cbc:ID>
+                        <cbc:ID schemeName="contract">05-13/12</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -322,7 +1642,7 @@
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>05-13/8</cbc:ID>
+                        <cbc:ID schemeName="contract">05-13/8</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -338,7 +1658,7 @@
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>05-13/9</cbc:ID>
+                        <cbc:ID schemeName="contract">05-13/9</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -354,7 +1674,7 @@
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>05-13/11</cbc:ID>
+                        <cbc:ID schemeName="contract">05-13/11</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -413,7 +1733,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>PHI Clinical Hospital Shtip</cbc:Name>
+                           <cbc:Name languageID="ENG">PHI Clinical Hospital Shtip</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ul.Ljuben Ivanov br.25 Shtip</cbc:StreetName>
@@ -450,7 +1770,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Vesta Drogerija</cbc:Name>
+                           <cbc:Name languageID="ENG">Vesta Drogerija</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Jani Lukrovski 2</cbc:StreetName>
@@ -478,7 +1798,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Farmahem Dooel</cbc:Name>
+                           <cbc:Name languageID="ENG">Farmahem Dooel</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Kicevska 1 Skopje</cbc:StreetName>
@@ -506,7 +1826,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Biotek Doo</cbc:Name>
+                           <cbc:Name languageID="ENG">Biotek Doo</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Zagrebska 28-B</cbc:StreetName>
@@ -534,7 +1854,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>BI-EL Inzinering</cbc:Name>
+                           <cbc:Name languageID="ENG">BI-EL Inzinering</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ILO Sopov 92</cbc:StreetName>
@@ -562,7 +1882,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Ahema Doo</cbc:Name>
+                           <cbc:Name languageID="ENG">Ahema Doo</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Zagrebska 28B</cbc:StreetName>
@@ -590,7 +1910,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>State Commission for Appeals of the</cbc:Name>
+                           <cbc:Name languageID="ENG">State Commission for Appeals of the</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>bul.Ilinden br.63a</cbc:StreetName>
@@ -624,7 +1944,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Bureau of Public Procurement</cbc:Name>
+                           <cbc:Name languageID="ENG">Bureau of Public Procurement</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Skopje</cbc:CityName>
@@ -646,7 +1966,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">270492-2019</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">110/2019</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -659,7 +1979,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -801,6 +2121,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -829,7 +2150,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -954,6 +2274,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -982,7 +2303,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1107,6 +2427,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1135,7 +2456,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1260,6 +2580,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1288,7 +2609,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1413,6 +2733,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1441,7 +2762,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1566,6 +2886,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1594,7 +2915,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1719,6 +3039,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1747,7 +3068,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1872,6 +3192,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1900,7 +3221,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -2025,6 +3345,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2053,7 +3374,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -2178,6 +3498,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2206,7 +3527,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -2331,6 +3651,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2359,7 +3680,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -2484,6 +3804,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2512,7 +3833,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -2637,6 +3957,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2665,7 +3986,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -2790,6 +4110,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2818,7 +4139,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -2943,6 +4263,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2971,7 +4292,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -3096,6 +4416,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3124,7 +4445,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -3249,6 +4569,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3277,7 +4598,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -3402,6 +4722,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3430,7 +4751,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -3555,6 +4875,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3583,7 +4904,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -3708,6 +5028,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3736,7 +5057,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -3861,6 +5181,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3889,7 +5210,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -4014,6 +5334,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4042,7 +5363,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -4167,6 +5487,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4195,7 +5516,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -4320,6 +5640,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4348,7 +5669,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -4473,6 +5793,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4501,7 +5822,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -4626,6 +5946,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4654,7 +5975,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -4779,6 +6099,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4807,7 +6128,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -4932,6 +6252,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4960,7 +6281,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -5085,6 +6405,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5113,7 +6434,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -5238,6 +6558,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5266,7 +6587,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -5391,6 +6711,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5419,7 +6740,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -5544,6 +6864,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5572,7 +6893,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -5697,6 +7017,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5725,7 +7046,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -5850,6 +7170,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5878,7 +7199,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -6003,6 +7323,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6031,7 +7352,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -6156,6 +7476,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6184,7 +7505,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -6309,6 +7629,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6337,7 +7658,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -6462,6 +7782,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6490,7 +7811,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -6615,6 +7935,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6643,7 +7964,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -6768,6 +8088,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6796,7 +8117,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -6921,6 +8241,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6949,7 +8270,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -7074,6 +8394,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7102,7 +8423,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -7227,6 +8547,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7255,7 +8576,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -7380,6 +8700,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7408,7 +8729,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -7533,6 +8853,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7561,7 +8882,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -7686,6 +9006,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7714,7 +9035,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -7839,6 +9159,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7867,7 +9188,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -7992,6 +9312,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8020,7 +9341,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -8145,6 +9465,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8173,7 +9494,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -8298,6 +9618,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8326,7 +9647,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -8451,6 +9771,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8479,7 +9800,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -8604,6 +9924,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8632,7 +9953,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -8757,6 +10077,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8785,7 +10106,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -8910,6 +10230,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8938,7 +10259,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -9063,6 +10383,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -9091,7 +10412,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -9216,6 +10536,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -9244,7 +10565,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -9369,6 +10689,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -9397,7 +10718,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -9522,6 +10842,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -9550,7 +10871,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -9675,6 +10995,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -9703,7 +11024,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -9828,6 +11148,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -9856,7 +11177,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -9981,6 +11301,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -10009,7 +11330,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -10134,6 +11454,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -10162,7 +11483,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -10287,6 +11607,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -10315,7 +11636,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -10440,6 +11760,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -10468,7 +11789,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -10593,6 +11913,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -10621,7 +11942,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -10746,6 +12066,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -10774,7 +12095,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -10899,6 +12219,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -10927,7 +12248,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -11052,6 +12372,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -11080,7 +12401,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -11205,6 +12525,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -11233,7 +12554,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -11358,6 +12678,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -11386,7 +12707,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -11511,6 +12831,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -11539,7 +12860,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -11664,6 +12984,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -11692,7 +13013,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -11817,6 +13137,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -11845,7 +13166,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -11970,6 +13290,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -11998,7 +13319,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -12123,6 +13443,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -12151,7 +13472,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -12276,6 +13596,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -12304,7 +13625,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -12429,6 +13749,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -12457,7 +13778,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -12582,6 +13902,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -12610,7 +13931,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -12735,6 +14055,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -12763,7 +14084,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -12888,6 +14208,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -12916,7 +14237,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -13041,6 +14361,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -13069,7 +14390,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -13194,6 +14514,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -13222,7 +14543,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -13347,6 +14667,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -13375,7 +14696,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -13500,6 +14820,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -13528,7 +14849,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -13653,6 +14973,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -13681,7 +15002,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -13806,6 +15126,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -13834,7 +15155,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -13959,6 +15279,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -13987,7 +15308,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -14112,6 +15432,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -14140,7 +15461,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -14265,6 +15585,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -14293,7 +15614,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -14418,6 +15738,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -14446,7 +15767,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -14571,6 +15891,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -14599,7 +15920,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -14724,6 +16044,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -14752,7 +16073,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -14877,6 +16197,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -14905,7 +16226,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -15030,6 +16350,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -15058,7 +16379,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -15183,6 +16503,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -15211,7 +16532,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -15336,6 +16656,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -15364,7 +16685,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -15489,6 +16809,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -15517,7 +16838,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -15642,6 +16962,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -15670,7 +16991,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -15795,6 +17115,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -15823,7 +17144,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -15948,6 +17268,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -15976,7 +17297,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -16101,6 +17421,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -16129,7 +17450,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -16254,6 +17574,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -16282,7 +17603,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -16407,6 +17727,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -16435,7 +17756,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -16560,6 +17880,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -16588,7 +17909,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -16713,6 +18033,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -16741,7 +18062,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -16866,6 +18186,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -16894,7 +18215,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -17019,6 +18339,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -17047,7 +18368,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -17172,6 +18492,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -17200,7 +18521,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -17325,6 +18645,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -17353,7 +18674,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

@@ -519,7 +519,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>1A</cbc:ID>
+                        <cbc:ID schemeName="contract">1A</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -538,7 +538,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>1B</cbc:ID>
+                        <cbc:ID schemeName="contract">1B</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -557,7 +557,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>1C</cbc:ID>
+                        <cbc:ID schemeName="contract">1C</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -576,7 +576,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>1D</cbc:ID>
+                        <cbc:ID schemeName="contract">1D</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -595,7 +595,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>1E</cbc:ID>
+                        <cbc:ID schemeName="contract">1E</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -614,7 +614,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>1F</cbc:ID>
+                        <cbc:ID schemeName="contract">1F</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -633,7 +633,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>2A</cbc:ID>
+                        <cbc:ID schemeName="contract">2A</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -652,7 +652,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>2B</cbc:ID>
+                        <cbc:ID schemeName="contract">2B</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -671,7 +671,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>2C</cbc:ID>
+                        <cbc:ID schemeName="contract">2C</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -690,7 +690,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>2D</cbc:ID>
+                        <cbc:ID schemeName="contract">2D</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -709,7 +709,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>2E</cbc:ID>
+                        <cbc:ID schemeName="contract">2E</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -728,7 +728,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>2F</cbc:ID>
+                        <cbc:ID schemeName="contract">2F</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -847,7 +847,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Highways England</cbc:Name>
+                           <cbc:Name languageID="ENG">Highways England</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>The Cube, 199 Wharfside Street</cbc:StreetName>
@@ -874,7 +874,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Amey OW Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Amey OW Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Chancery Exchange, 10 Furnival Street</cbc:StreetName>
@@ -902,7 +902,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>ATKINS Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">ATKINS Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Woodcote Grove, Ashley Road</cbc:StreetName>
@@ -930,7 +930,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Jacobs UK Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Jacobs UK Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>1180 Eskdale Road, Winnersh</cbc:StreetName>
@@ -958,7 +958,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Costain Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Costain Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Costain House, Vanwall Business Park</cbc:StreetName>
@@ -986,7 +986,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Arcadis Consulting (UK) Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Arcadis Consulting (UK) Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Arcadis House, 34 York Way</cbc:StreetName>
@@ -1014,7 +1014,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Pell Frischmann Consulting Engineers Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Pell Frischmann Consulting Engineers Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>5 Manchester Square</cbc:StreetName>
@@ -1042,7 +1042,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>TRL Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">TRL Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Crowthorne House, Nine Mile Ride</cbc:StreetName>
@@ -1070,7 +1070,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Ove Arup and Partners Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Ove Arup and Partners Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>13 Fitzroy Street</cbc:StreetName>
@@ -1098,7 +1098,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>WSP UK Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">WSP UK Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>WSP House, 70 Chancery Lane</cbc:StreetName>
@@ -1126,7 +1126,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Pricewaterhousecoopers LLP</cbc:Name>
+                           <cbc:Name languageID="ENG">Pricewaterhousecoopers LLP</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>1 Embankment Place</cbc:StreetName>
@@ -1156,7 +1156,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Rowsell Wright Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Rowsell Wright Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>3 Greengate, Cardale Park</cbc:StreetName>
@@ -1184,7 +1184,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Turner and Townsend Contract Services Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Turner and Townsend Contract Services Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Low Hall, Calverley Lane, Horsforth</cbc:StreetName>
@@ -1212,7 +1212,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>See details at VI.4.3)</cbc:Name>
+                           <cbc:Name languageID="ENG">See details at VI.4.3)</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>See details at VI.4.3)</cbc:CityName>
@@ -1233,7 +1233,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">003543-2021</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">3/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -1246,7 +1246,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -1537,6 +1537,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1565,7 +1566,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1848,6 +1848,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1876,7 +1877,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

@@ -26,7 +26,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Københavns Universitet</cbc:Name>
+                           <cbc:Name languageID="ENG">Københavns Universitet</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Nørregade 10</cbc:StreetName>
@@ -65,7 +65,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Klagenævnet for Udbud</cbc:Name>
+                           <cbc:Name languageID="ENG">Klagenævnet for Udbud</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Toldboden 1</cbc:StreetName>
@@ -91,7 +91,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">161232-2020</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">68/2020</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -104,7 +104,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -305,6 +305,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -343,7 +344,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>

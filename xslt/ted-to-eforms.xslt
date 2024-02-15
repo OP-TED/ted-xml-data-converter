@@ -126,12 +126,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
-					<xsl:if test="$ted-form-notice-type eq '14'">
-						<xsl:call-template name="changes"/>
-					</xsl:if>
-					<xsl:if test="$eforms-notice-subtype = ('38', '39', '40')">
-						<xsl:call-template name="contract-modification"/>
-					</xsl:if>
 					<xsl:if test="$eforms-document-type eq 'CAN'">
 						<xsl:call-template name="notice-result"/>
 					</xsl:if>
@@ -211,7 +205,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	</xsl:choose>
 	<!-- Notice Version (BT-757): eForms documentation cardinality (Procedure) = 1 | Mandatory for ALL subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Version (BT-757)'"/></xsl:call-template>
-	<!-- TBD: hard-coded for now -->
+	<!-- Hard-coded: this feature does not exist in TED XML -->
 	<cbc:VersionID>01</cbc:VersionID>
 	<!-- Future Notice (BT-127): eForms documentation cardinality (Procedure) = * | Mandatory for PIN subtypes 4 and 6; Optional for PIN subtypes 5, 7-9, E1 and E2; Forbidden for other subtypes -->
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Future Notice (BT-127)'"/></xsl:call-template>
@@ -233,7 +227,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:choose>
 			<xsl:when test="$legal-basis ne ''"><xsl:value-of select="$legal-basis"/></xsl:when>
 			<xsl:when test="$directive ne ''"><xsl:value-of select="$mappings//directives/mapping[directive=$directive]/fn:string(legal-basis)"/></xsl:when>
-			<xsl:otherwise><xsl:value-of select="'OTHER'"/></xsl:otherwise>
+			<xsl:otherwise><xsl:value-of select="'other'"/></xsl:otherwise>
 		</xsl:choose>
 	</cbc:RegulatoryDomain>
 
@@ -252,21 +246,12 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	</xsl:for-each>
 </xsl:template>
 
-<xsl:template name="changes">
-	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' efac:changes '"/></xsl:call-template>
-</xsl:template>
-
-<xsl:template name="contract-modification">
-	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' efac:ContractModification '"/></xsl:call-template>
-</xsl:template>
-
 <xsl:template name="publication">
 	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="' efac:Publication '"/></xsl:call-template>
 	<efac:Publication>
 		<!-- Notice Publication Identifier (OPP-010): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Notice Publication Identifier (OPP-010)'"/></xsl:call-template>
-		<!-- TBD: hard-coded for now -->
-		<efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+		<efbc:NoticePublicationID schemeName="ojs-notice-id"><xsl:value-of select="$docid"/></efbc:NoticePublicationID>
 		<!-- OJEU Identifier (OPP-011): eForms documentation cardinality (Procedure) = ? -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'OJEU Identifier (OPP-011)'"/></xsl:call-template>
 		<efbc:GazetteID schemeName="ojs-id"><xsl:value-of select="fn:concat($ojs, '/', substring($pubdate, 1,4))"/></efbc:GazetteID>

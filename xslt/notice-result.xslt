@@ -101,11 +101,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 </xsl:variable>
 
 <!-- Create XML structure to hold the unique (grouped by their CONTRACT_NO) contracts in TED XML. Each contract includes all the source AWARD_CONTRACT elements, and their XPATHs -->
-<xsl:variable name="contracts-unique-with-id" as="element()">
+<xsl:variable name="contracts-unique-with-id-zzz" as="element()">
 	<contracts>
-		<!-- process AWARD_CONTRACT containing both AWARDED_CONTRACT grouped by CONTRACT_NO -->
+		<!-- process AWARD_CONTRACT containing both AWARDED_CONTRACT and CONTRACT_NO grouped by CONTRACT_NO -->
 		<!-- TBD: Decide whether to consider AWARD_CONTRACT without CONTRACT_NO as a Contract, and if so, whether to output a WARNING that the ContractReference is missing -->
-		<xsl:for-each-group select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT]" group-by="fn:string(*:CONTRACT_NO)">
+		<xsl:for-each-group select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT][*:CONTRACT_NO]" group-by="fn:string(*:CONTRACT_NO)">
 			<xsl:variable name="contract-number" select="fn:current-grouping-key()"/>
 			<xsl:variable name="award-count" select="fn:count(fn:current-group())"/>
 			<xsl:variable name="this-group-number" select="fn:position()"/>
@@ -120,6 +120,21 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 				</awards>
 			</contract>
 		</xsl:for-each-group>
+		<!-- process AWARD_CONTRACT containing AWARDED_CONTRACT but not CONTRACT_NO individually -->
+		<!-- TBD: Decide whether to consider AWARD_CONTRACT without CONTRACT_NO as a Contract, and if so, whether to output a WARNING that the ContractReference is missing -->
+		<xsl:for-each select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT][not(*:CONTRACT_NO)]">
+			<xsl:variable name="contract-number" select="''"/>
+			<xsl:variable name="award-count" select="'1'"/>
+			<xsl:variable name="this-group-number" select="fn:position()"/>
+			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
+			<contract number="{$this-group-number}" contract-number="{$contract-number}" award-count="{$award-count}">
+				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
+				<awards>
+					<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+					<xsl:copy-of select="." copy-namespaces="no"/>
+				</awards>
+			</contract>
+		</xsl:for-each>
 		<xsl:for-each select="$ted-form-main-element/*:RESULTS/*:AWARDED_PRIZE/(.|*:WINNERS)/*:WINNER">
 			<xsl:variable name="contract-number" select="fn:count(preceding-sibling::*:WINNER) + 1"/>
 			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
@@ -133,6 +148,96 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		</xsl:for-each>
 	</contracts>
 </xsl:variable>
+
+
+
+
+
+
+
+
+<!-- Create XML structure to hold the unique (grouped by their CONTRACT_NO) contracts in TED XML. Each contract includes all the source AWARD_CONTRACT elements, and their XPATHs -->
+<xsl:variable name="contracts-contractno-unique-with-id" as="element()">
+	<contracts>
+		<!-- process AWARD_CONTRACT containing both AWARDED_CONTRACT and CONTRACT_NO grouped by CONTRACT_NO -->
+		<!-- TBD: Decide whether to consider AWARD_CONTRACT without CONTRACT_NO as a Contract, and if so, whether to output a WARNING that the ContractReference is missing -->
+		<xsl:for-each-group select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT][*:CONTRACT_NO]" group-by="fn:string(*:CONTRACT_NO)">
+			<xsl:variable name="contract-number" select="fn:current-grouping-key()"/>
+			<xsl:variable name="award-count" select="fn:count(fn:current-group())"/>
+			<xsl:variable name="this-group-number" select="fn:position()"/>
+			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
+			<contract number="{$this-group-number}" contract-number="{$contract-number}" award-count="{$award-count}">
+				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
+				<awards>
+					<xsl:for-each select="fn:current-group()">
+						<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+						<xsl:copy-of select="." copy-namespaces="no"/>
+					</xsl:for-each>
+				</awards>
+			</contract>
+		</xsl:for-each-group>
+	</contracts>
+</xsl:variable>
+
+<xsl:variable name="count-contracts-contractno" select="count($contracts-contractno-unique-with-id/contract)"/>
+
+<xsl:variable name="contracts-no-contractno-unique-with-id" as="element()">
+	<contracts>
+		<!-- process AWARD_CONTRACT containing AWARDED_CONTRACT but not CONTRACT_NO individually -->
+		<!-- TBD: Decide whether to consider AWARD_CONTRACT without CONTRACT_NO as a Contract, and if so, whether to output a WARNING that the ContractReference is missing -->
+		<xsl:for-each select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT][not(*:CONTRACT_NO)]">
+			<xsl:variable name="contract-number" select="''"/>
+			<xsl:variable name="award-count" select="'1'"/>
+			<xsl:variable name="this-group-number" select="fn:position()"/>
+			<xsl:variable name="typepos" select="functx:pad-integer-to-length(sum(($count-contracts-contractno, $this-group-number)), 4)"/>
+			<contract number="{$this-group-number}" contract-number="{$contract-number}" award-count="{$award-count}">
+				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
+				<awards>
+					<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+					<xsl:copy-of select="." copy-namespaces="no"/>
+				</awards>
+			</contract>
+		</xsl:for-each>
+		<xsl:for-each select="$ted-form-main-element/*:RESULTS/*:AWARDED_PRIZE/(.|*:WINNERS)/*:WINNER">
+			<xsl:variable name="contract-number" select="fn:count(preceding-sibling::*:WINNER) + 1"/>
+			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
+			<contract number="{$contract-number}" contract-number="{$contract-number}" award-count="'1'">
+				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
+				<awards>
+					<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+					<xsl:copy-of select="." copy-namespaces="no"/>
+				</awards>
+			</contract>
+		</xsl:for-each>
+	</contracts>
+</xsl:variable>
+
+<xsl:variable name="contracts-unique-with-id" as="element()">
+	<contracts>
+		<xsl:for-each select="$contracts-contractno-unique-with-id/contract">
+			<xsl:copy-of select="."/>
+		</xsl:for-each>
+		<xsl:for-each select="$contracts-no-contractno-unique-with-id/contract">
+			<xsl:copy-of select="."/>
+		</xsl:for-each>
+	</contracts>
+</xsl:variable>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- create XML structure to hold LotResults from AWARD_CONTRACT, grouped by LOT_NO -->
 <xsl:variable name="lot-results">
@@ -159,18 +264,58 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 			<!-- Where no DPS or FRAMEWORK, create a LotResult for each AWARD_CONTRACT or RESULTS -->
 			<xsl:otherwise>
 				<xsl:for-each select="$ted-form-main-element/(*:AWARD_CONTRACT|*:RESULTS)">
-					<xsl:variable name="lot-number" select="fn:string(*:LOT_NO)"/>
+					<xsl:variable name="lot-number-string" select="fn:string(*:LOT_NO)"/>
 					<xsl:variable name="award-count" select="'1'"/>
 					<xsl:variable name="this-award-number" select="fn:position()"/>
 					<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
-					<lot-result number="{$this-award-number}" lot-number="{$lot-number}" award-count="{$award-count}">
-						<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
-						<lot-result-id><xsl:text>RES-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
-						<awards>
-							<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
-							<xsl:copy-of select="." copy-namespaces="no"/>
-						</awards>
-					</lot-result>
+					<xsl:variable name="this" select="."/>
+					<!-- analyse content of LOT_NO and try to match it to one or more LOTs -->
+					<xsl:variable name="lot-numbers-list" select="fn:tokenize($lot-number-string, '[.,\s]')"/>
+					<xsl:choose>
+						<xsl:when test="$lot-number-string = ''">
+							<lot-result number="{$this-award-number}" lot-number="{$lot-number-string}" award-count="{$award-count}">
+								<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
+								<lot-result-id><xsl:text>RES-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
+								<awards>
+									<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+									<xsl:copy-of select="." copy-namespaces="no"/>
+								</awards>
+							</lot-result>
+						</xsl:when>
+						<xsl:when test="$lot-number-string = $lot-numbers">
+							<lot-result number="{$this-award-number}" lot-number="{$lot-number-string}" award-count="{$award-count}">
+								<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
+								<lot-result-id><xsl:text>RES-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
+								<awards>
+									<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+									<xsl:copy-of select="." copy-namespaces="no"/>
+								</awards>
+							</lot-result>
+						</xsl:when>
+						<!-- if the LOT_NO contains only lot numbers separated by (period,comma,whitespace), create a LotResult for each -->
+						<xsl:when test="fn:count(functx:value-except($lot-numbers-list, $lot-numbers) = 0)">
+							<xsl:for-each select="$lot-numbers-list">
+								<lot-result number="{$this-award-number}" lot-number="{.}" award-count="{$award-count}">
+									<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
+									<lot-result-id><xsl:text>RES-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
+									<awards>
+										<path><xsl:value-of select="functx:path-to-node-with-pos($this)"/></path>
+										<xsl:copy-of select="$this" copy-namespaces="no"/>
+									</awards>
+								</lot-result>
+							</xsl:for-each>
+						</xsl:when>
+						<xsl:otherwise>
+							<lot-result number="{$this-award-number}" lot-number="{$lot-number-string}" award-count="{$award-count}">
+								<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->
+								<lot-result-id><xsl:text>RES-</xsl:text><xsl:value-of select="$typepos"/></lot-result-id>
+								<awards>
+									<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
+									<xsl:copy-of select="." copy-namespaces="no"/>
+								</awards>
+							</lot-result>
+						</xsl:otherwise>
+					</xsl:choose>
 				</xsl:for-each>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -185,10 +330,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 These instructions can be un-commented to show the variables
 <xsl:copy-of select="$ted-contractor-groups" copy-namespaces="no"/>
 <xsl:copy-of select="$ted-contractor-groups-unique" copy-namespaces="no"/>
+<xsl:copy-of select="$ted-contractor-groups-unique-with-id" copy-namespaces="no"/>
 <xsl:copy-of select="$lot-tenders-unique-with-id" copy-namespaces="no"/>
 <xsl:copy-of select="$contracts-unique-with-id" copy-namespaces="no"/>
 <xsl:copy-of select="$lot-results" copy-namespaces="no"/>
-<xsl:copy-of select="$ted-contractor-groups-unique-with-id" copy-namespaces="no"/>
+<xsl:copy-of select="$lot-numbers-map" copy-namespaces="no"/>
 -->
 
 		<!-- Notice Value (BT-161): eForms documentation cardinality (LotResult) = 1 | eForms Regulation Annex table conditions = Optional (O or EM or CM) for CAN subtypes 25-35 and E4, CM subtypes 38-40 and E5; Forbidden (blank) for all other subtypes -->
@@ -217,8 +363,9 @@ These instructions can be un-commented to show the variables
 				</xsl:choose>
 			</xsl:variable>
 
+			<xsl:variable name="lot-result-id" select="fn:concat('RES-', functx:pad-integer-to-length(fn:position(), 4))"/>
 			<efac:LotResult>
-				<xsl:variable name="lot-result-id" select="lot-result-id"/>
+				<!--<xsl:variable name="lot-result-id" select="lot-result-id"/>-->
 				<!-- LotResult Technical ID (OPT-322) -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'LotResult Technical ID (OPT-322)'"/></xsl:call-template>
 				<cbc:ID schemeName="result"><xsl:value-of select="$lot-result-id"/></cbc:ID>
@@ -283,7 +430,9 @@ These instructions can be un-commented to show the variables
 
 				<!-- Contract Identifier Reference (OPT-315): eForms documentation cardinality (LotResult) = * -->
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Identifier Reference (OPT-315)'"/></xsl:call-template>
-				<xsl:variable name="contract-ids" select="$contracts-unique-with-id//contract[awards/path = $paths]/contract-id/fn:string()"/>
+				<!--<xsl:variable name="contract-ids" select="$contracts-unique-with-id//contract[awards/path = $paths]/contract-id/fn:string()"/>-->
+				<xsl:variable name="contract-ids" select="$contracts-unique-with-id//contract[awards/path[some $path in $paths satisfies fn:starts-with(., $path)]]/contract-id/fn:string()"/>
+
 				<xsl:for-each select="$contract-ids">
 					<efac:SettledContract>
 						<cbc:ID schemeName="contract"><xsl:value-of select="."/></cbc:ID>
@@ -415,7 +564,7 @@ These instructions can be un-commented to show the variables
 				<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Contract Identifier (BT-150)'"/></xsl:call-template>
 				<xsl:if test="$eforms-notice-subtype = ('25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '38', '39', '40')">
 					<efac:ContractReference>
-						<cbc:ID><xsl:value-of select="@contract-number"/></cbc:ID>
+						<cbc:ID schemeName="contract"><xsl:value-of select="@contract-number"/></cbc:ID>
 					</efac:ContractReference>
 				</xsl:if>
 				<!-- Assets related contract extension indicator (OPP-020): eForms documentation cardinality (SettledContract) = 1 (T02 form only) -->
@@ -543,16 +692,14 @@ These instructions can be un-commented to show the variables
 			<cbc:IssueDate><xsl:value-of select="$date-conclusion-contract-list[1]"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
 		</xsl:when>
 		<xsl:when test="fn:count($date-conclusion-contract-list) &gt; 1">
-			<!-- WARNING: Multiple different dates were found in DATE_CONCLUSION_CONTRACT in the AWARD_CONTRACTs sharing the same CONTRACT_NO value -->
+			<!-- WARNING: Multiple different dates were found in DATE_CONCLUSION_CONTRACT in the AWARD_CONTRACTs sharing the same CONTRACT_NO value. The first date found has been used. -->
 			<xsl:variable name="message">
 				<xsl:text>WARNING: Multiple different dates were found in DATE_CONCLUSION_CONTRACT in the AWARD_CONTRACTs sharing the same CONTRACT_NO value of </xsl:text>
 				<xsl:value-of select="@contract-number"/>
-				<xsl:text>.</xsl:text>
+				<xsl:text>. The first date found has been used.</xsl:text>
 			</xsl:variable>
 			<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-			<xsl:for-each select="$date-conclusion-contract-list">
-				<cbc:IssueDate><xsl:value-of select="."/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
-			</xsl:for-each>
+			<cbc:IssueDate><xsl:value-of select="$date-conclusion-contract-list[1]"/><xsl:text>+01:00</xsl:text></cbc:IssueDate>
 		</xsl:when>
 	</xsl:choose>
 </xsl:template>
@@ -689,21 +836,6 @@ These instructions can be un-commented to show the variables
 	<xsl:choose>
 		<xsl:when test="(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/(*:VAL_REVENUE|*:VAL_PRICE_PAYMENT|*:INFO_ADD_VALUE)|$ted-form-main-element/*:OBJECT_CONTRACT/*:CALCULATION_METHOD) or ($eforms-notice-subtype = ('32','35'))">
 		<efac:ConcessionRevenue>
-			<!-- Concession Revenue Buyer (BT-160): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
-			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue Buyer (BT-160)'"/></xsl:call-template>
-			<xsl:choose>
-				<xsl:when test="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VAL_REVENUE">
-					<xsl:variable name="ted-value" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VAL_REVENUE)"/>
-					<xsl:variable name="currency" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VAL_REVENUE/@CURRENCY)"/>
-					<efbc:RevenueUserAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></efbc:RevenueUserAmount>
-				</xsl:when>
-				<xsl:when test="$eforms-notice-subtype = ('32','35')">
-					<!-- WARNING: Concession Revenue Buyer (BT-160) is Mandatory for eForms subtypes 32 and 35, but no VAL_REVENUE was found in TED XML. -->
-					<xsl:variable name="message">WARNING: Concession Revenue Buyer (BT-160) is Mandatory for eForms subtypes 32 and 35, but no VAL_REVENUE was found in TED XML.</xsl:variable>
-					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-				</xsl:when>
-			</xsl:choose>
-
 			<!-- Concession Revenue User (BT-162): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
 			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue User (BT-162)'"/></xsl:call-template>
 			<xsl:choose>
@@ -715,6 +847,21 @@ These instructions can be un-commented to show the variables
 				<xsl:when test="$eforms-notice-subtype = ('32','35')">
 					<!-- WARNING: Concession Revenue User (BT-162) is Mandatory for eForms subtypes 32 and 35, but no VAL_PRICE_PAYMENT was found in TED XML. -->
 					<xsl:variable name="message">WARNING: Concession Revenue User (BT-162) is Mandatory for eForms subtypes 32 and 35, but no VAL_PRICE_PAYMENT was found in TED XML.</xsl:variable>
+					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
+				</xsl:when>
+			</xsl:choose>
+
+			<!-- Concession Revenue Buyer (BT-160): eForms documentation cardinality (LotTender) = ? | eForms Regulation Annex table conditions = Mandatory (M) for CAN subtypes 32 and 35; Optional (O or EM or CM) for CAN subtypes 28 and E4, CM subtypes 40 and E5; Forbidden (blank) for all other subtypes -->
+			<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Concession Revenue Buyer (BT-160)'"/></xsl:call-template>
+			<xsl:choose>
+				<xsl:when test="*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VAL_REVENUE">
+					<xsl:variable name="ted-value" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VAL_REVENUE)"/>
+					<xsl:variable name="currency" select="fn:normalize-space(*:AWARD_CONTRACT/*:AWARDED_CONTRACT/*:VAL_REVENUE/@CURRENCY)"/>
+					<efbc:RevenueUserAmount currencyID="{$currency}"><xsl:value-of select="$ted-value"/></efbc:RevenueUserAmount>
+				</xsl:when>
+				<xsl:when test="$eforms-notice-subtype = ('32','35')">
+					<!-- WARNING: Concession Revenue Buyer (BT-160) is Mandatory for eForms subtypes 32 and 35, but no VAL_REVENUE was found in TED XML. -->
+					<xsl:variable name="message">WARNING: Concession Revenue Buyer (BT-160) is Mandatory for eForms subtypes 32 and 35, but no VAL_REVENUE was found in TED XML.</xsl:variable>
 					<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 				</xsl:when>
 			</xsl:choose>
