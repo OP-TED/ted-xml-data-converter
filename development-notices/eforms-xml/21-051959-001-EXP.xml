@@ -26,7 +26,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Landesinstitut für Schulqualität und Lehrerbildung Sachsen Anhalt (LISA)</cbc:Name>
+                           <cbc:Name languageID="DEU">Landesinstitut für Schulqualität und Lehrerbildung Sachsen Anhalt (LISA)</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Riebeckplatz 9</cbc:StreetName>
@@ -58,7 +58,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Landesverwaltungsamt Sachsen-Anhalt 1., 2. und 3. Vergabekammer</cbc:Name>
+                           <cbc:Name languageID="DEU">Landesverwaltungsamt Sachsen-Anhalt 1., 2. und 3. Vergabekammer</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Ernst - Kamieth - Straße 2</cbc:StreetName>
@@ -81,7 +81,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">052928-2021</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">22/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -94,7 +94,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -335,6 +335,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -373,7 +374,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -611,6 +611,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -649,7 +650,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -887,6 +887,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -925,7 +926,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -1163,6 +1163,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1201,7 +1202,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -1439,6 +1439,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1477,7 +1478,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -1715,6 +1715,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1753,7 +1754,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -1991,6 +1991,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2029,7 +2030,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -2267,6 +2267,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2305,7 +2306,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -2543,6 +2543,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2581,7 +2582,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -2819,6 +2819,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2857,7 +2858,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -3095,6 +3095,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3133,7 +3134,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -3371,6 +3371,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3409,7 +3410,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -3504,7 +3504,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 11000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-11000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0013</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -3647,6 +3647,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3685,7 +3686,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -3780,7 +3780,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 12000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-12000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0014</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -3923,6 +3923,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -3961,7 +3962,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -4056,7 +4056,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 21000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-21000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0015</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -4199,6 +4199,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4237,7 +4238,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -4332,7 +4332,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 22000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-22000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0016</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -4475,6 +4475,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4513,7 +4514,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -4608,7 +4608,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 31000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-31000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0017</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -4751,6 +4751,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -4789,7 +4790,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -4884,7 +4884,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 33000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-33000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0018</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -5027,6 +5027,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5065,7 +5066,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -5160,7 +5160,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 41000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-41000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0019</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -5303,6 +5303,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5341,7 +5342,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -5436,7 +5436,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 42000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-42000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0020</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -5579,6 +5579,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5617,7 +5618,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -5712,7 +5712,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 51000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-51000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0021</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -5855,6 +5855,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -5893,7 +5894,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -5988,7 +5988,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 52000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-52000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0022</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -6131,6 +6131,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6169,7 +6170,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -6264,7 +6264,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 61000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-61000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0023</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -6407,6 +6407,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6445,7 +6446,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -6540,7 +6540,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 62000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-62000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0024</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -6683,6 +6683,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6721,7 +6722,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -6816,7 +6816,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 71000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-71000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0025</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -6959,6 +6959,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -6997,7 +6998,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -7092,7 +7092,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 81000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-81000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0026</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -7235,6 +7235,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7273,7 +7274,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -7368,7 +7368,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 91000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-91000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0027</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -7511,6 +7511,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7549,7 +7550,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -7644,7 +7644,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 101000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-101000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0028</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -7787,6 +7787,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -7825,7 +7826,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -7920,7 +7920,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 111000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-111000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0029</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -8063,6 +8063,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8101,7 +8102,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>
@@ -8196,7 +8196,7 @@
       </cac:ProcurementProject>
    </cac:ProcurementProjectLot>
    <cac:ProcurementProjectLot><!--Purpose Lot Identifier (BT-137)--><!-- WARNING: Cannot convert original TED lot or part number of 121000 to eForms -->
-      <cbc:ID schemeName="Lot">LOT-121000</cbc:ID>
+      <cbc:ID schemeName="Lot">LOT-0030</cbc:ID>
       <!-- Lot cac:TenderingTerms -->
       <cac:TenderingTerms>
          <ext:UBLExtensions>
@@ -8339,6 +8339,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -8377,7 +8378,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--WARNING: Maximum Candidates Indicator (BT-661) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <!--WARNING: Minimum Candidates (BT-50) is Mandatory for eForms notice subtype 16, but no equivalent element was found in TED XML.-->
          <cac:EconomicOperatorShortList>

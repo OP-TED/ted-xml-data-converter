@@ -26,7 +26,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>DAA plc</cbc:Name>
+                           <cbc:Name languageID="ENG">DAA plc</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Dublin Airport, Co. Dublin</cbc:StreetName>
@@ -55,7 +55,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Martin Acton</cbc:Name>
+                           <cbc:Name languageID="ENG">Martin Acton</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Dublin Airport</cbc:CityName>
@@ -76,7 +76,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">119025-2021</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">47/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -89,7 +89,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -346,6 +346,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -387,7 +388,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>4</cbc:MaximumQuantity>
@@ -634,6 +634,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -675,7 +676,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <cac:EconomicOperatorShortList>
             <cbc:LimitationDescription>true</cbc:LimitationDescription>
             <cbc:MaximumQuantity>4</cbc:MaximumQuantity>

@@ -290,7 +290,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>11</cbc:ID>
+                        <cbc:ID schemeName="contract">11</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -309,7 +309,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>12</cbc:ID>
+                        <cbc:ID schemeName="contract">12</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -328,7 +328,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>13</cbc:ID>
+                        <cbc:ID schemeName="contract">13</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -347,7 +347,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>15</cbc:ID>
+                        <cbc:ID schemeName="contract">15</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -366,7 +366,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>16</cbc:ID>
+                        <cbc:ID schemeName="contract">16</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -385,7 +385,7 @@
                      <efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID>17</cbc:ID>
+                        <cbc:ID schemeName="contract">17</cbc:ID>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -452,7 +452,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK Baden-Württemberg</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK Baden-Württemberg</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Presselstr. 19</cbc:StreetName>
@@ -488,7 +488,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK Bayern - Die Gesundheitskasse</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK Bayern - Die Gesundheitskasse</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Carl-Wery-Str. 28</cbc:StreetName>
@@ -520,7 +520,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK - Die Gesundheitskasse in Hessen</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK - Die Gesundheitskasse in Hessen</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Basler Straße 2</cbc:StreetName>
@@ -552,7 +552,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK PLUS - Die Gesundheitskasse für Sachsen und Thüringen</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK PLUS - Die Gesundheitskasse für Sachsen und Thüringen</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Sternplatz 7</cbc:StreetName>
@@ -584,7 +584,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK NordWest - Die Gesundheitskasse</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK NordWest - Die Gesundheitskasse</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Kopenhagener Straße 1</cbc:StreetName>
@@ -616,7 +616,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK Rheinland/Hamburg - Die Gesundheitskasse</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK Rheinland/Hamburg - Die Gesundheitskasse</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Kasernenstraße 61</cbc:StreetName>
@@ -648,7 +648,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK Bremen/Bremerhaven</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK Bremen/Bremerhaven</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Bürgermeister-Smidt-Straße 95</cbc:StreetName>
@@ -680,7 +680,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK - Die Gesundheitskasse für Niedersachsen</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK - Die Gesundheitskasse für Niedersachsen</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Hildesheimer Straße 273</cbc:StreetName>
@@ -712,7 +712,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK Sachsen-Anhalt - Die Gesundheitskasse</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK Sachsen-Anhalt - Die Gesundheitskasse</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Lüneburger Straße 4</cbc:StreetName>
@@ -744,7 +744,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK Nordost - Die Gesundheitskasse</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK Nordost - Die Gesundheitskasse</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Brandenburger Straße 72</cbc:StreetName>
@@ -776,7 +776,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>AOK Rheinland-Pfalz/Saarland - Die Gesundheitskasse</cbc:Name>
+                           <cbc:Name languageID="DEU">AOK Rheinland-Pfalz/Saarland - Die Gesundheitskasse</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Virchowstr. 30</cbc:StreetName>
@@ -805,7 +805,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Ascend GmbH</cbc:Name>
+                           <cbc:Name languageID="DEU">Ascend GmbH</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Frankfurt am Main</cbc:CityName>
@@ -830,7 +830,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Aristo Pharma GmbH</cbc:Name>
+                           <cbc:Name languageID="DEU">Aristo Pharma GmbH</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Berlin</cbc:CityName>
@@ -855,7 +855,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>PUREN Pharma GmbH &amp; Co. KG</cbc:Name>
+                           <cbc:Name languageID="DEU">PUREN Pharma GmbH &amp; Co. KG</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>München</cbc:CityName>
@@ -880,7 +880,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Heumann Pharma GmbH &amp; Co. Generica KG (BG Heumann / Heunet GbR)</cbc:Name>
+                           <cbc:Name languageID="DEU">Heumann Pharma GmbH &amp; Co. Generica KG (BG Heumann / Heunet GbR)</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Nürnberg</cbc:CityName>
@@ -905,7 +905,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Heunet Pharma GmbH (BG Heumann / Heunet GbR)</cbc:Name>
+                           <cbc:Name languageID="DEU">Heunet Pharma GmbH (BG Heumann / Heunet GbR)</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Nürnberg</cbc:CityName>
@@ -930,7 +930,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>ALIUD PHARMA GmbH</cbc:Name>
+                           <cbc:Name languageID="DEU">ALIUD PHARMA GmbH</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Laichingen</cbc:CityName>
@@ -955,7 +955,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Vergabekammer des Bundes beim Bundeskartellamt</cbc:Name>
+                           <cbc:Name languageID="DEU">Vergabekammer des Bundes beim Bundeskartellamt</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>Bonn</cbc:CityName>
@@ -977,7 +977,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">092731-2022</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">36/2022</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -990,7 +990,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -1401,6 +1401,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1429,7 +1430,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1550,6 +1550,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1578,7 +1579,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1699,6 +1699,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1727,7 +1728,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1848,6 +1848,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -1876,7 +1877,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
@@ -1997,6 +1997,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -2025,7 +2026,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
