@@ -203,6 +203,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	<xsl:variable name="text" select="fn:normalize-space(.)"/>
 	<xsl:variable name="part1" select="fn:substring-before($text, ' ')"/>
 	<xsl:variable name="rest" select="fn:lower-case(fn:normalize-space(fn:substring-after($text, ' ')))"/>
+	<xsl:variable name="firstdigits">
+		<xsl:analyze-string select="$text" regex="^([0-9]+)">
+			<xsl:matching-substring><xsl:value-of select="regex-group(1)"/></xsl:matching-substring>
+		</xsl:analyze-string>
+	</xsl:variable>
 	<ext:UBLExtensions>
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
@@ -269,13 +274,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 								<efbc:ParameterCode listName="number-weight">poi-exa</efbc:ParameterCode>
 								<efbc:ParameterNumeric><xsl:value-of select="$part1"/></efbc:ParameterNumeric>
 							</xsl:when>
+							<!-- digits, followed by /100 -->
+							<xsl:when test="fn:matches($text, '^[0-9]+/100')">
+								<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+								<efbc:ParameterNumeric><xsl:value-of select="$firstdigits"/></efbc:ParameterNumeric>
+							</xsl:when>
+							<!-- digits, followed by unknown text -->
+							<xsl:when test="$firstdigits ne ''">
+								<efbc:ParameterCode listName="number-weight">poi-exa</efbc:ParameterCode>
+								<efbc:ParameterNumeric><xsl:value-of select="$firstdigits"/></efbc:ParameterNumeric>
+							</xsl:when>
 							<!-- miscellaneous unparseable values here -->
 							<xsl:otherwise>
-								<!-- WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed. -->
-								<xsl:variable name="message">WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.</xsl:variable>
+								<!-- WARNING: Award Criterion Number (BT-541) requires a positive integer, but the content of AC_WEIGHTING could not be parsed. The value "1" has been used as a default, and Award Criterion Number Weight (BT-5421) set to "ord-imp". -->
+								<xsl:variable name="message">WARNING: Award Criterion Number (BT-541) requires a positive integer, but the content of AC_WEIGHTING could not be parsed. The value "1" has been used as a default, and Award Criterion Number Weight (BT-5421) set to "ord-imp".</xsl:variable>
 								<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 								<efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-								<efbc:ParameterNumeric><xsl:value-of select="$text"/></efbc:ParameterNumeric>
+								<efbc:ParameterNumeric>1</efbc:ParameterNumeric>
 							</xsl:otherwise>
 						</xsl:choose>
 					</efac:AwardCriterionParameter>
