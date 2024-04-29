@@ -142,6 +142,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="submission-language"/>
 		<!-- Electronic Ordering (BT-92) and Electronic Payment (BT-93) -->
 		<xsl:call-template name="post-award-processing"/>
+		<xsl:call-template name="participant-name"/>
 		<!-- Security Clearance Code (BT-578): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Security Clearance Code (BT-578)'"/></xsl:call-template>
 		<!-- Security Clearance Description (BT-732): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
@@ -169,7 +170,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<efext:EformsExtension>
 							<!-- EU Funds Financing Identifier (BT-5010): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
 							<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Financing Identifier (BT-5010)'"/></xsl:call-template>
-							<!-- EU Funds Programme (BT-7220: eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
+							<!-- EU Funds Programme (BT-7220): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
 							<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Programme (BT-7220)'"/></xsl:call-template>
 							<!-- EU Funds Details (BT-6140): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
 							<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Details (BT-6140)'"/></xsl:call-template>
@@ -584,6 +585,23 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</xsl:if>
 </xsl:template>
 
+<xsl:template name="participant-name">
+	<!-- Participant Name (BT-47): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
+	<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Participant Name (BT-47)'"/></xsl:call-template>
+	<xsl:if test="../../*:PROCEDURE/*:PARTICIPANT_NAME">
+		<cac:EconomicOperatorShortList>
+			<xsl:apply-templates select="../../*:PROCEDURE/*:PARTICIPANT_NAME"/>
+		</cac:EconomicOperatorShortList>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="*:PARTICIPANT_NAME">
+	<cac:PreSelectedParty>
+		<cac:PartyName>
+			<cbc:Name><xsl:value-of select="fn:normalize-space(.)"/></cbc:Name>
+		</cac:PartyName>
+	</cac:PreSelectedParty>
+</xsl:template>
 
 <!-- end of Lot Tendering Terms templates -->
 
@@ -664,8 +682,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Maximum Candidates Indicator (BT-661): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
 		<!-- Maximum Candidates (BT-51): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-18, 20-24, and E3; Forbidden for other subtypes -->
 		<!-- Minimum Candidates (BT-50): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
-		<!-- Participant Name (BT-47): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-		<xsl:call-template name="participants"/>
+		<xsl:call-template name="participants-number"/>
 		<xsl:call-template name="limit-candidate"/>
 		<!-- Public Opening Date (BT-132): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 16, 17, 20, 21, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Public Opening Date (BT-132)'"/></xsl:call-template>
@@ -789,15 +806,13 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 	</cac:InvitationSubmissionPeriod>
 </xsl:template>
 
-<xsl:template name="participants">
+<xsl:template name="participants-number">
 		<!-- Maximum Candidates Indicator (BT-661): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Maximum Candidates Indicator (BT-661)'"/></xsl:call-template>
 		<!-- Maximum Candidates (BT-51): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-14, 16-18, 20-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Maximum Candidates (BT-51)'"/></xsl:call-template>
 		<!-- Minimum Candidates (BT-50): eForms documentation cardinality (Lot) = ? | Mandatory for CN subtype 16; Optional for PIN subtypes 7-9, CN subtypes 10-14, 17, 18, 20-24, and E3; Forbidden for other subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Minimum Candidates (BT-50)'"/></xsl:call-template>
-		<!-- Participant Name (BT-47): eForms documentation cardinality (Lot) = ? | Optional for CN subtypes 23 and 24; Forbidden for other subtypes -->
-		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Participant Name (BT-47)'"/></xsl:call-template>
 	<xsl:choose>
 		<xsl:when test="../../*:PROCEDURE/(*:NB_PARTICIPANTS|*:NB_MAX_PARTICIPANTS|*:NB_MIN_PARTICIPANTS)">
 			<cac:EconomicOperatorShortList>
@@ -820,7 +835,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
 					</xsl:otherwise>
 				</xsl:choose>
-				<xsl:apply-templates select="../../*:PROCEDURE/*:PARTICIPANT_NAME"/>
 			</cac:EconomicOperatorShortList>
 		</xsl:when>
 		<xsl:when test="($eforms-notice-subtype = ('16'))">
@@ -1011,9 +1025,9 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113). -->
-				<xsl:variable name="message">WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113).</xsl:variable>
+				<xsl:variable name="message">WARNING: Framework with Multiple Operators is specified in the source TED XML, but no value is given for Framework Maximum Participants Number (BT-113). The value "1" has been used as a default.</xsl:variable>
 				<xsl:call-template name="report-warning"><xsl:with-param name="message" select="$message"/></xsl:call-template>
-				<cbc:MaximumOperatorQuantity></cbc:MaximumOperatorQuantity>
+				<cbc:MaximumOperatorQuantity>1</cbc:MaximumOperatorQuantity>
 			</xsl:otherwise>
 		</xsl:choose>
 		<!-- Framework Duration Justification (BT-109): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9, CN subtypes 10-13, 16-18, 20-22, and E3; Forbidden for other subtypes -->
@@ -1123,7 +1137,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Lot) = * | Optional for ALL Notice subtypes, No equivalent element in TED XML at Lot level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
 		<xsl:apply-templates select="*:CPV_ADDITIONAL"/>
-		<!-- Place of Performance (BG-708) -> RealizedLocation | Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
+		<!-- Place of Performance (BG-708): -> RealizedLocation | Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
 		<!-- Place of Performance Additional Information (BT-728): eForms documentation cardinality (Lot) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
 		<!-- Place Performance City (BT-5131): eForms documentation cardinality (Lot) = ? | Optional for ALL subtypes -->
