@@ -101,62 +101,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 </xsl:variable>
 
 <!-- Create XML structure to hold the unique (grouped by their CONTRACT_NO) contracts in TED XML. Each contract includes all the source AWARD_CONTRACT elements, and their XPATHs -->
-<xsl:variable name="contracts-unique-with-id-zzz" as="element()">
-	<contracts>
-		<!-- process AWARD_CONTRACT containing both AWARDED_CONTRACT and CONTRACT_NO grouped by CONTRACT_NO -->
-		<!-- TBD: Decide whether to consider AWARD_CONTRACT without CONTRACT_NO as a Contract, and if so, whether to output a WARNING that the ContractReference is missing -->
-		<xsl:for-each-group select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT][*:CONTRACT_NO]" group-by="fn:string(*:CONTRACT_NO)">
-			<xsl:variable name="contract-number" select="fn:current-grouping-key()"/>
-			<xsl:variable name="award-count" select="fn:count(fn:current-group())"/>
-			<xsl:variable name="this-group-number" select="fn:position()"/>
-			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
-			<contract number="{$this-group-number}" contract-number="{$contract-number}" award-count="{$award-count}">
-				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
-				<awards>
-					<xsl:for-each select="fn:current-group()">
-						<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
-						<xsl:copy-of select="." copy-namespaces="no"/>
-					</xsl:for-each>
-				</awards>
-			</contract>
-		</xsl:for-each-group>
-		<!-- process AWARD_CONTRACT containing AWARDED_CONTRACT but not CONTRACT_NO individually -->
-		<!-- TBD: Decide whether to consider AWARD_CONTRACT without CONTRACT_NO as a Contract, and if so, whether to output a WARNING that the ContractReference is missing -->
-		<xsl:for-each select="$ted-form-main-element/*:AWARD_CONTRACT[*:AWARDED_CONTRACT][not(*:CONTRACT_NO)]">
-			<xsl:variable name="contract-number" select="''"/>
-			<xsl:variable name="award-count" select="'1'"/>
-			<xsl:variable name="this-group-number" select="fn:position()"/>
-			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
-			<contract number="{$this-group-number}" contract-number="{$contract-number}" award-count="{$award-count}">
-				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
-				<awards>
-					<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
-					<xsl:copy-of select="." copy-namespaces="no"/>
-				</awards>
-			</contract>
-		</xsl:for-each>
-		<xsl:for-each select="$ted-form-main-element/*:RESULTS/*:AWARDED_PRIZE/(.|*:WINNERS)/*:WINNER">
-			<xsl:variable name="contract-number" select="fn:count(preceding-sibling::*:WINNER) + 1"/>
-			<xsl:variable name="typepos" select="functx:pad-integer-to-length(fn:position(), 4)"/>
-			<contract number="{$contract-number}" contract-number="{$contract-number}" award-count="'1'">
-				<contract-id><xsl:text>CON-</xsl:text><xsl:value-of select="$typepos"/></contract-id>
-				<awards>
-					<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
-					<xsl:copy-of select="." copy-namespaces="no"/>
-				</awards>
-			</contract>
-		</xsl:for-each>
-	</contracts>
-</xsl:variable>
-
-
-
-
-
-
-
-
-<!-- Create XML structure to hold the unique (grouped by their CONTRACT_NO) contracts in TED XML. Each contract includes all the source AWARD_CONTRACT elements, and their XPATHs -->
 <xsl:variable name="contracts-contractno-unique-with-id" as="element()">
 	<contracts>
 		<!-- process AWARD_CONTRACT containing both AWARDED_CONTRACT and CONTRACT_NO grouped by CONTRACT_NO -->
@@ -223,22 +167,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 	</contracts>
 </xsl:variable>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- create XML structure to hold LotResults from AWARD_CONTRACT, grouped by LOT_NO -->
 <xsl:variable name="lot-results">
 	<lot-results>
@@ -293,7 +221,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 							</lot-result>
 						</xsl:when>
 						<!-- if the LOT_NO contains only lot numbers separated by (period,comma,whitespace), create a LotResult for each -->
-						<xsl:when test="fn:count(functx:value-except($lot-numbers-list, $lot-numbers) = 0)">
+						<xsl:when test="fn:count(functx:value-except($lot-numbers-list, $lot-numbers)) = 0">
 							<xsl:for-each select="$lot-numbers-list">
 								<lot-result number="{$this-award-number}" lot-number="{.}" award-count="{$award-count}">
 									<!-- TBD: use correct identifier format for a LotResult ID when it has been specified -->

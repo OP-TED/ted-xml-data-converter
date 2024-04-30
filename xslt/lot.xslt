@@ -142,13 +142,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<xsl:call-template name="submission-language"/>
 		<!-- Electronic Ordering (BT-92) and Electronic Payment (BT-93) -->
 		<xsl:call-template name="post-award-processing"/>
-
 		<xsl:call-template name="participant-name"/>
-
-
-
-
-
 		<!-- Security Clearance Code (BT-578): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Security Clearance Code (BT-578)'"/></xsl:call-template>
 		<!-- Security Clearance Description (BT-732): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
@@ -176,7 +170,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 						<efext:EformsExtension>
 							<!-- EU Funds Financing Identifier (BT-5010): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
 							<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Financing Identifier (BT-5010)'"/></xsl:call-template>
-							<!-- EU Funds Programme (BT-7220: eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
+							<!-- EU Funds Programme (BT-7220): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
 							<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Programme (BT-7220)'"/></xsl:call-template>
 							<!-- EU Funds Details (BT-6140): eForms documentation cardinality (Lot) = ? | Optional for PIN subtypes 7-9 and CN subtypes 10-24; Forbidden for other subtypes -->
 							<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'EU Funds Details (BT-6140)'"/></xsl:call-template>
@@ -1143,7 +1137,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Additional Classification Code (BT-263): eForms documentation cardinality (Lot) = * | Optional for ALL Notice subtypes, No equivalent element in TED XML at Lot level -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Classification Code (BT-263)'"/></xsl:call-template>
 		<xsl:apply-templates select="*:CPV_ADDITIONAL"/>
-		<!-- Place of Performance (BG-708) -> RealizedLocation | Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
+		<!-- Place of Performance (BG-708): -> RealizedLocation | Mandatory for subtypes PIN 1-9, CN 10-24, CAN 29-37; Optional for VEAT 25-28, CM 38-40, E1, E2, E3, E4 and E5 -->
 		<!-- Place of Performance Additional Information (BT-728): eForms documentation cardinality (Lot) = ? | Optional for ALL subtypes -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Place of Performance Additional Information (BT-728)'"/></xsl:call-template>
 		<!-- Place Performance City (BT-5131): eForms documentation cardinality (Lot) = ? | Optional for ALL subtypes -->
