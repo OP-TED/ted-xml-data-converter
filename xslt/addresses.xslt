@@ -26,16 +26,6 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 				<xsl:variable name="path" select="functx:path-to-node-with-pos(.)"/>
 				<path><xsl:value-of select="$path"/></path>
 				<ted-address>
-<!--
-									<xsl:call-template name="multilingual">
-										<xsl:with-param name="contexts" select="*:OFFICIALNAME"/>
-										<xsl:with-param name="local" select="''"/>
-										<xsl:with-param name="element" select="'OFFICIALNAME'"/>
-									</xsl:call-template>
-									<xsl:for-each select="*[not(self::*:OFFICIALNAME)]">
-										<xsl:copy-of select="." copy-namespaces="no"/>
-									</xsl:for-each>
--->
 					<xsl:for-each select="*">
 						<xsl:copy-of select="." copy-namespaces="no"/>
 					</xsl:for-each>
