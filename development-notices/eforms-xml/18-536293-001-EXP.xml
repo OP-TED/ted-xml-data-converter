@@ -43,6 +43,21 @@
                         <efbc:StatisticsNumeric>9</efbc:StatisticsNumeric>
                      </efac:ReceivedSubmissionsStatistics>
                      <!--Contract Identifier Reference (OPT-315)-->
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0001</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0002</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0003</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0004</cbc:ID>
+                     </efac:SettledContract>
+                     <efac:SettledContract>
+                        <cbc:ID schemeName="contract">CON-0005</cbc:ID>
+                     </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
                         <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
@@ -287,7 +302,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Województwo Małopolskie</cbc:Name>
+                           <cbc:Name languageID="POL">Województwo Małopolskie</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ul. Basztowa 22</cbc:StreetName>
@@ -325,7 +340,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Gmina Miejska Kraków</cbc:Name>
+                           <cbc:Name languageID="POL">Gmina Miejska Kraków</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>pl. Wszystkich Świętych 3-4</cbc:StreetName>
@@ -360,7 +375,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>I Nagroda - SBS Engineering Group, oraz 3TI Progetti Italia – Ingegneria Integrata S.P.A.</cbc:Name>
+                           <cbc:Name languageID="POL">I Nagroda - SBS Engineering Group, oraz 3TI Progetti Italia – Ingegneria Integrata S.P.A.</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>al. Kasztanowa 80</cbc:StreetName>
@@ -390,7 +405,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>II nagroda - Metra et Associes – Brigitte Metra</cbc:Name>
+                           <cbc:Name languageID="POL">II nagroda - Metra et Associes – Brigitte Metra</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>33 avenue Paul Doumer</cbc:StreetName>
@@ -420,7 +435,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Wyróżnienie - Konior Studio Tomasz Konior</cbc:Name>
+                           <cbc:Name languageID="POL">Wyróżnienie - Konior Studio Tomasz Konior</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ul. Mariacka 7</cbc:StreetName>
@@ -450,7 +465,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Wyróżnienie - Plus3 Architekci Sp. z o.o.</cbc:Name>
+                           <cbc:Name languageID="POL">Wyróżnienie - Plus3 Architekci Sp. z o.o.</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ul. Chłopickiego 7/9</cbc:StreetName>
@@ -481,7 +496,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Wyróżnienie - WXCA Sp. z o.o.</cbc:Name>
+                           <cbc:Name languageID="POL">Wyróżnienie - WXCA Sp. z o.o.</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ul. Bracka 18/62</cbc:StreetName>
@@ -513,7 +528,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Krajowa Izba Odwoławcza</cbc:Name>
+                           <cbc:Name languageID="POL">Krajowa Izba Odwoławcza</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ul. Postępu 17a</cbc:StreetName>
@@ -547,7 +562,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Krajowa Izba Odwoławcza</cbc:Name>
+                           <cbc:Name languageID="POL">Krajowa Izba Odwoławcza</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>ul. Postępu 17a</cbc:StreetName>
@@ -574,7 +589,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">524498-2018</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">229/2018</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -587,7 +602,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -790,6 +805,7 @@
             </cac:MediationParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -817,7 +833,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

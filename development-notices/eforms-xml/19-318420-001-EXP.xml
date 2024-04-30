@@ -61,10 +61,10 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="EUR">6883000</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
-                     <efac:ConcessionRevenue><!--Concession Revenue Buyer (BT-160)-->
-                        <efbc:RevenueUserAmount currencyID="EUR">825600</efbc:RevenueUserAmount>
-                        <!--Concession Revenue User (BT-162)-->
+                     <efac:ConcessionRevenue><!--Concession Revenue User (BT-162)-->
                         <efbc:RevenueBuyerAmount currencyID="EUR">666000</efbc:RevenueBuyerAmount>
+                        <!--Concession Revenue Buyer (BT-160)-->
+                        <efbc:RevenueUserAmount currencyID="EUR">825600</efbc:RevenueUserAmount>
                         <!--Concession Value Description (BT-163)-->
                         <efbc:ValueDescription languageID="FRA">Ca total HT du concessionnaire pendant la durée du contrat, eu égard à la nature des prestations qui font l'objet de la concession. Le ca annuel est estimé à 1 300 000 EUR HT. Soit 6 500 000 EUR HT pour 5 ans. La valeur estimée comprend les recettes perçues sur les usagers des services, autres que celles collectées pour le compte de l'autorité concédante. Les recettes (paiement des redevances et d'amendes par les usagers): produits de location: 50 %, refacturation des charges: 29 %, recettes de bar: 3 %, services spécifiques 1,6 %, commissions de restauration 0,8 %, autres produits de locations 1,7 %, utilisation du gymnase, associations sportives niortaises 14 %. Compensation contrainte de service public: 551 000 EUR annuels HT.</efbc:ValueDescription>
                      </efac:ConcessionRevenue>
@@ -94,7 +94,7 @@
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID/>
+                        <cbc:ID schemeName="contract"/>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -125,7 +125,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Mairie de Niort</cbc:Name>
+                           <cbc:Name languageID="FRA">Mairie de Niort</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>place Martin Bastard, CS 58755</cbc:StreetName>
@@ -164,7 +164,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>SO Space</cbc:Name>
+                           <cbc:Name languageID="FRA">SO Space</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Société anonyme d'économie mixte (siège social) hôtel de ville</cbc:StreetName>
@@ -196,7 +196,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Tribunal administratif de Poitiers</cbc:Name>
+                           <cbc:Name languageID="FRA">Tribunal administratif de Poitiers</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>15 rue de Blossac — BP 541</cbc:StreetName>
@@ -224,7 +224,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Greffe du tribunal administratif de Poitiers</cbc:Name>
+                           <cbc:Name languageID="FRA">Greffe du tribunal administratif de Poitiers</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>15 rue de Blossac — BP 541</cbc:StreetName>
@@ -248,7 +248,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">315003-2019</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">128/2019</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -261,7 +261,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -433,6 +433,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -460,7 +461,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

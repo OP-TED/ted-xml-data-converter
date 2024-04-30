@@ -28,7 +28,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>SNCF</cbc:Name>
+                           <cbc:Name languageID="FRA">SNCF</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>2 place aux Étoiles</cbc:StreetName>
@@ -69,7 +69,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>SNCF Voyageurs</cbc:Name>
+                           <cbc:Name languageID="FRA">SNCF Voyageurs</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>9 rue Jean-Philippe Rameau</cbc:StreetName>
@@ -108,7 +108,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>SNCF</cbc:Name>
+                           <cbc:Name languageID="FRA">SNCF</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Campus Incity — 116 cours Lafayette — CS 13511</cbc:StreetName>
@@ -147,7 +147,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Tribunal administratif</cbc:Name>
+                           <cbc:Name languageID="FRA">Tribunal administratif</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>7 rue de Jouy</cbc:StreetName>
@@ -180,7 +180,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Greffe du tribunal administratif</cbc:Name>
+                           <cbc:Name languageID="FRA">Greffe du tribunal administratif</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>7 rue de Jouy</cbc:StreetName>
@@ -206,7 +206,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">265664-2020</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">109/2020</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -219,7 +219,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -412,9 +412,9 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number (BT-541) requires a positive integer, but the content of AC_WEIGHTING could not be parsed. The value "1" has been used as a default, and Award Criterion Number Weight (BT-5421) set to "ord-imp".-->
                                  <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>EDMA</efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>1</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -430,9 +430,9 @@
                      <ext:UBLExtension>
                         <ext:ExtensionContent>
                            <efext:EformsExtension>
-                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number Weight (BT-5421) requires a positive integer, but the content of AC_WEIGHTING could not be parsed.-->
+                              <efac:AwardCriterionParameter><!--Award Criterion Number Weight (BT-5421)--><!--Award Criterion Number (BT-541)--><!--WARNING: Award Criterion Number (BT-541) requires a positive integer, but the content of AC_WEIGHTING could not be parsed. The value "1" has been used as a default, and Award Criterion Number Weight (BT-5421) set to "ord-imp".-->
                                  <efbc:ParameterCode listName="number-weight">ord-imp</efbc:ParameterCode>
-                                 <efbc:ParameterNumeric>Conf Docs du marché</efbc:ParameterNumeric>
+                                 <efbc:ParameterNumeric>1</efbc:ParameterNumeric>
                               </efac:AwardCriterionParameter>
                            </efext:EformsExtension>
                         </ext:ExtensionContent>
@@ -491,6 +491,7 @@
             <!--Electronic Payment (BT-93)-->
             <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
          </cac:PostAwardProcess>
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -518,7 +519,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->

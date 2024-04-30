@@ -50,7 +50,7 @@
                      <cac:LegalMonetaryTotal>
                         <cbc:PayableAmount currencyID="GBP">118114040.00</cbc:PayableAmount>
                      </cac:LegalMonetaryTotal>
-                     <efac:ConcessionRevenue><!--Concession Revenue Buyer (BT-160)--><!--WARNING: Concession Revenue Buyer (BT-160) is Mandatory for eForms subtypes 32 and 35, but no VAL_REVENUE was found in TED XML.--><!--Concession Revenue User (BT-162)--><!--WARNING: Concession Revenue User (BT-162) is Mandatory for eForms subtypes 32 and 35, but no VAL_PRICE_PAYMENT was found in TED XML.--><!--Concession Value Description (BT-163)--><!--WARNING: Concession Value Description (BT-163) is Mandatory for eForms subtypes 32 and 35, but no CALCULATION_METHOD or INFO_ADD_VALUE was found in TED XML.--></efac:ConcessionRevenue>
+                     <efac:ConcessionRevenue><!--Concession Revenue User (BT-162)--><!--WARNING: Concession Revenue User (BT-162) is Mandatory for eForms subtypes 32 and 35, but no VAL_PRICE_PAYMENT was found in TED XML.--><!--Concession Revenue Buyer (BT-160)--><!--WARNING: Concession Revenue Buyer (BT-160) is Mandatory for eForms subtypes 32 and 35, but no VAL_REVENUE was found in TED XML.--><!--Concession Value Description (BT-163)--><!--WARNING: Concession Value Description (BT-163) is Mandatory for eForms subtypes 32 and 35, but no CALCULATION_METHOD or INFO_ADD_VALUE was found in TED XML.--></efac:ConcessionRevenue>
                      <!--Subcontracting (BT-773)-->
                      <!--Subcontracting Value (BT-553)-->
                      <!--Subcontracting Description (BT-554)-->
@@ -76,7 +76,7 @@
                      <!--Contract Framework Agreement (BT-768)-->
                      <!--Contract Identifier (BT-150)-->
                      <efac:ContractReference>
-                        <cbc:ID/>
+                        <cbc:ID schemeName="contract"/>
                      </efac:ContractReference>
                      <!--Contract Tender Identifier (BT-3202)-->
                      <efac:LotTender>
@@ -107,7 +107,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Network Rail Infrastructure Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Network Rail Infrastructure Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>1 Eversholt Street</cbc:StreetName>
@@ -139,7 +139,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>Cellnex UK Ltd</cbc:Name>
+                           <cbc:Name languageID="ENG">Cellnex UK Ltd</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)-->
                            <cbc:StreetName>Offices 132 Spaces Liverpool Street Station, 32 New Broad Street</cbc:StreetName>
@@ -167,7 +167,7 @@
                         </cac:PartyIdentification>
                         <!--Organization Name (BT-500)-->
                         <cac:PartyName>
-                           <cbc:Name>High Court</cbc:Name>
+                           <cbc:Name languageID="ENG">High Court</cbc:Name>
                         </cac:PartyName>
                         <cac:PostalAddress><!--Organization Street (BT-510)--><!--Organization City (BT-513)-->
                            <cbc:CityName>London</cbc:CityName>
@@ -189,7 +189,7 @@
                </efac:Organizations>
                <!-- efac:Publication -->
                <efac:Publication><!--Notice Publication Identifier (OPP-010)-->
-                  <efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2023</efbc:NoticePublicationID>
+                  <efbc:NoticePublicationID schemeName="ojs-notice-id">204820-2021</efbc:NoticePublicationID>
                   <!--OJEU Identifier (OPP-011)-->
                   <efbc:GazetteID schemeName="ojs-id">79/2021</efbc:GazetteID>
                   <!--OJEU Publication Date (OPP-012)-->
@@ -202,7 +202,7 @@
    <!--UBL version ID (UBL)-->
    <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
    <!--Customization ID (UBL)-->
-   <cbc:CustomizationID>eforms-sdk-1.7</cbc:CustomizationID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
    <!--Notice Identifier (BT-701)-->
    <cbc:ID schemeName="notice-id">f252f386-55ac-4fa8-9be4-9f950b9904c8</cbc:ID>
    <!--Procedure Identifier (BT-04)-->
@@ -360,6 +360,7 @@
             </cac:AppealReceiverParty>
          </cac:AppealTerms>
          <!--Submission Language (BT-97)-->
+         <!--Participant Name (BT-47)-->
          <!--Security Clearance Code (BT-578)-->
          <!--Security Clearance Description (BT-732)-->
       </cac:TenderingTerms>
@@ -388,7 +389,6 @@
          <!--Maximum Candidates Indicator (BT-661)-->
          <!--Maximum Candidates (BT-51)-->
          <!--Minimum Candidates (BT-50)-->
-         <!--Participant Name (BT-47)-->
          <!--Public Opening Date (BT-132)-->
          <!--Public Opening Description (BT-134)-->
          <!--Public Opening Place (BT-133)-->
