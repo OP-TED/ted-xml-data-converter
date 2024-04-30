@@ -145,9 +145,11 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<xsl:for-each select="$ted-form-main-element/*:OBJECT_CONTRACT/*:OBJECT_DESCR">
 			<lot>
 				<xsl:variable name="lot-no"><xsl:value-of select="*:LOT_NO"/></xsl:variable>
+				<xsl:variable name="item-no"><xsl:value-of select="@ITEM"/></xsl:variable>
 				<xsl:variable name="lot-no-is-convertible" select="(($lot-no eq '') or (fn:matches($lot-no, '^[1-9][0-9]{0,3}$')))"/>
 				<path><xsl:value-of select="functx:path-to-node-with-pos(.)"/></path>
 				<lot-no><xsl:value-of select="$lot-no"/></lot-no>
+				<item-no><xsl:value-of select="$item-no"/></item-no>
 				<xsl:if test="$lot-no-is-convertible"><is-convertible/></xsl:if>
 				<lot-id>
 					<xsl:choose>

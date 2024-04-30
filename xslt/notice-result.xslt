@@ -281,9 +281,13 @@ These instructions can be un-commented to show the variables
 			<xsl:variable name="result-lot-identifier">
 				<xsl:variable name="lot-no" select="@lot-number"/>
 				<xsl:variable name="lotid" select="$lot-numbers-map//lot[lot-no = $lot-no][1]/fn:string(lot-id)"/>
+				<xsl:variable name="lotidfromitem" select="$lot-numbers-map//lot[item-no = $lot-no][1]/fn:string(lot-id)"/>
 				<xsl:choose>
 					<xsl:when test="$lotid">
 						<xsl:value-of select="$lotid"/>
+					</xsl:when>
+					<xsl:when test="$lotidfromitem">
+						<xsl:value-of select="$lotidfromitem"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="$lot-no"/>

@@ -50,7 +50,7 @@
                      </efac:SettledContract>
                      <!--Result Lot Identifier (BT-13713)-->
                      <efac:TenderLot>
-                        <cbc:ID schemeName="Lot">1</cbc:ID>
+                        <cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
                      </efac:TenderLot>
                   </efac:LotResult>
                   <efac:LotTender><!--Tender Technical Identifier (OPT-321)-->
