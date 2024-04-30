@@ -6,6 +6,7 @@ This is a bugfix release of the TED XML Data Converter. Some cosmetic changes ar
 ## Bug fixes
 
 * Fatal error in "lot-results" template
+* Improved link between LotResult and Lot
 
 ## Mapping changes
 
