@@ -266,7 +266,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 		<!-- exit with an error if the form name is F14 -->
 		<xsl:when test="$ted-form-name eq 'F14'">
 			<xsl:message terminate="yes">
-				<xsl:text>ERROR: F14 (Corrigendum) notices cannot be converted</xsl:text><xsl:value-of select="$newline"/>
+				<xsl:text>ERROR: F14 notices cannot be converted. You may wish to convert the original notice, but please ensure all changes reported in subsequent F14 notices are included.</xsl:text><xsl:value-of select="$newline"/>
 				<xsl:value-of select="$common-message"/>
 			</xsl:message>
 		</xsl:when>

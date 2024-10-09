@@ -669,11 +669,8 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted gc n2016 n2021 pin
 		<!-- Additional Information Deadline (BT-13): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Additional Information Deadline (BT-13)'"/></xsl:call-template>
 		<!-- Previous Planning Identifier (BT-125): eForms documentation cardinality (Lot) = ? | Forbidden for PIN subtypes 1-3 and E1, CM subtypes 38-40 and E5; Optional for other subtypes -->
-		<!-- NOTICE_NUMBER_OJ maps to BT-125 only for Competition notices; for other notices, it maps to OPP-090 -->
+		<!-- NOTICE_NUMBER_OJ maps to OPP-090  as it is possible for a Competition notice to have a previous notice that is not of type PIN -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Planning Identifier (BT-125)'"/></xsl:call-template>
-		<xsl:if test="$eforms-form-type = 'competition'">
-			<xsl:apply-templates select="../../*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
-		</xsl:if>
 		<!-- Submission Nonelectronic Justification (BT-19): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Submission Nonelectronic Justification (BT-19)'"/></xsl:call-template>
 		<!-- Submission Nonelectronic Description (BT-745): eForms documentation cardinality (Lot) = ? | No equivalent element in TED XML -->

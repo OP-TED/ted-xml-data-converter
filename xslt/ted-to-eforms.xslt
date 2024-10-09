@@ -336,9 +336,7 @@ exclude-result-prefixes="xlink xs xsi fn functx doc opfun ted ted-1 ted-2 gc n20
 
 		<!-- Previous Notice Identifier (OPP-090): Used for linking notices where no other linking mechanism is available -->
 		<xsl:call-template name="include-comment"><xsl:with-param name="comment" select="'Previous Notice Identifier (OPP-090)'"/></xsl:call-template>
-		<xsl:if test="$eforms-form-type != 'competition'">
-			<xsl:apply-templates select="*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
-		</xsl:if>
+		<xsl:apply-templates select="*:PROCEDURE/*:NOTICE_NUMBER_OJ"/>
 		<!-- Procedure Accelerated (BT-106): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<!-- Procedure Accelerated Justification (BT-1351): eForms documentation cardinality (Procedure) = ? | Optional for CN subtypes 16-18 and E3, CAN subtypes 29-31 and E4, CM subtype E5; Forbidden for other subtypes -->
 		<xsl:apply-templates select="*:PROCEDURE/*:ACCELERATED_PROC"/>
